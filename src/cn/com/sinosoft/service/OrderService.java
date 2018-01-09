@@ -1,0 +1,101 @@
+package cn.com.sinosoft.service;
+
+import java.util.Date;
+import java.util.Map;
+
+import cn.com.sinosoft.bean.Pager;
+import cn.com.sinosoft.entity.Member;
+import cn.com.sinosoft.entity.Order;
+import cn.com.sinosoft.entity.OrderDutyFactor;
+
+/**
+ * Service接口 - 订单
+ * ============================================================================
+ *  
+ *
+ *  
+ *
+ *  
+ *
+ * KEY:SINOSOFTC25D50D18A27A8E1B4A11F7643DAA055
+ * ============================================================================
+ */
+
+public interface OrderService extends BaseService<Order, String> {
+
+	/**
+	 * 获取最后生成的订单编号
+	 * 
+	 * @return 订单编号
+	 */
+	public String getLastOrderSn();
+	
+	/**
+	 * 根据Member、Pager获取订单分页对象
+	 * 
+	 * @param member
+	 *            Member对象
+	 *            
+	 * @param pager
+	 *            Pager对象
+	 *            
+	 * @return 订单分页对象
+	 */
+	public Pager getOrderPager(Member member, Pager pager);
+	
+	/**
+	 * 获取未处理订单数
+	 *            
+	 * @return 未处理订单数
+	 */
+//	public Long getUnprocessedOrderCount();
+	
+	/**
+	 * 获取已支付未发货订单数（不包含已完成或已作废订单）
+	 *            
+	 * @return 已支付未发货订单数
+	 */
+//	public Long getPaidUnshippedOrderCount();
+
+	public Order getLastOrder();
+	//====吴高强添加开始===============
+	/**
+	 * 
+	 * @param orderSn 订单编号
+	 * @param orderStatus 订单状态
+	 * @param applicant  投保人
+	 * @param hdate     下单止期
+	 * @param ldate     下单起期
+	 * @param pager    Pager对象
+	 * @param member   Member对象
+	 * @return  根据条件筛选订单
+	 */
+	
+	public Pager getOrderPager(String orderSn,String orderStatus, String applicant,Date hdate,Date ldate, Pager pager,Member member) ;
+	public Order getOrderByOrderSn(String orderSn);
+	public Order getOrderById(String orderId);
+	//====吴高强添加结束===============
+	/**
+	 * 产品基本信息
+	 */
+	public Map<String,Object> getProductInformation(String productCode, String BU1);
+	/**
+	 * 产品保费计算
+	 */
+	public Map<String,Object> getProductPrem(Map<String,Object> mp);
+	/**
+	 * 产品保费计算(自动配置用)
+	 */
+	public Map<String,Object> getProductPremDutyAmounts(Map<String,Object> mp);
+	/**
+	 * 产品保费计算
+	 */
+	public String  getCompanyName(String comCode) ;
+
+	/**
+	 * 
+	 * 重新组装一个责任对象
+	 */
+	public OrderDutyFactor getNewDutyFactor(OrderDutyFactor df, String dutyValueTemp);   
+	
+}
