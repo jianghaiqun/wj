@@ -1798,11 +1798,11 @@ public class ActivityInfo extends Page {
 				}
 				String type = activityschema.gettype();
 				String activitysn=activityschema.getactivitysn();
-				if("1".equals(type)||"2".equals(type)||"3".equals(type)||"6".equals(type)||"7".equals(type)||"8".equals(type)||"9".equals(type)||"10".equals(type)||"11".equals(type)){
+				if("1".equals(type)||"2".equals(type)||"3".equals(type)||"6".equals(type)||"7".equals(type)||"8".equals(type)||"9".equals(type)||"10".equals(type)||"11".equals(type)||"12".equals(type)){
 					//根据险种、公司等条件筛选出全部productid
 					DataTable dt_products=getProductActivityLinkData(activityschema.getactivitysn(),activityschema.getinsurancecompany(),activityschema.getriskcode(),activityschema.getproduct());
 					String channel_str="'"+activityschema.getchannelsn().replace(",", "','")+"'";
-					if("3".equals(type)||"6".equals(type)){
+					if("3".equals(type)||"6".equals(type)||"12".equals(type)){
 						//校验满减或折扣活动同一时间段同一产品是否只有一个活动与之对应
 						boolean flag=checkActivitySingleton(String.valueOf(activityschema.getstarttime()),String.valueOf(activityschema.getendtime()), activityschema.getinsurancecompany(), activityschema.getriskcode(), activityschema.getproduct(), dt_products,channel_str,activityschema.getactivitysn());
 						if(!flag){
