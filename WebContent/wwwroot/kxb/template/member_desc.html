@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_help.css">
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!--导航开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+<!--导航结束-->
+<div class="grid-c3f help_m">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="help_bor_h">
+					<h3 class="help_titile2">会员说明</h3>
+                        <div class="help_con">
+                        
+                            <b>会员等级说明</b><br>
+                            1) 开心保会员等级适用于开心保的所有会员。<br>
+2) 开心保会员等级由3个级别构成，分别为：K1会员、K2会员和VIP会员。<br>
+3) K1会员、K2会员级别的升降由系统自动处理。VIP会员资质可申请。<br>
+4) 会员级别由累积保费贡献和购买次数决定，越高等级会员享受的会员权益越多。<br>
+5) 会员对应积分值为账户实际生效积分值，冻结积分不计入升级参考。<br>
+<br>
+  <b>会员升级标准</b><br>
+  会员等级根据分类标准划分为：K1会员、K2会员、VIP会员<br>
+会员等级分类标准：<br>
+1) 积分累积数额（累积购买消费贡献值）<br>
+2) 购买频次（累积订单数量）<br>
+<table width="100%" class="vip_s_table" >
+        <tr >
+            <th>会员等级</th>
+            <th>升级条件</th>
+            <th>对应累计保费贡献</th>
+            <th>购买次数</th>
+        </tr>
+        <tr>
+            <td>k1会员</td>
+            <td>发生1次有效订单</td>
+            <td></td>
+            <td>1次</td>
+        </tr>
+        <tr>
+            <td>k2会员</td>
+            <td>发生5次有效订单<br>且保费达到对应值</td>
+            <td>3000</td>
+            <td>5次</td>
+        </tr>
+</table>
+注：VIP会员身份为手动设置，VIP会员身份需提出申请，按用户价值和特殊贡献赋予其身份。VIP会员享受开心保提供的特权服务。<br>
+会员升级所需要的有效订单，是指购买并生效的订单。如一个订单内含多个保单，只要其中一个保单生效，该订单记为有效订单。全单退保、撤保的订单不记在有效订单内。<br>
+*24小时内购买多单的用户，计算为一个订单，判断依据同会员回购次数。保费累计计算。<br>
+<br>
+<b>会员特权</b><br><br>
+a.  生日月多倍积分<br>
+每月初为当月生日会员发送邮件提醒。会员生日当月所有订单都享受1.2倍积分返还；<br>
+备注：会员生日以会员中心的生日信息资料（若未填写生日信息，则无法参加）为依据，会员一年只能参加一次；符合会员生日多倍积分的订单，订单中所有产品都可享受此优惠。<br><br>
+b. 会员积分加成<br>
+不同等级会员购买开心保产品享受不同的积分返还比例。<br><br>
+
+c. 事项提示<br>
+根据用户购买产品提供出行/人身风险温馨提示（短信&邮件提醒）<br><br>
+
+d. 积分兑换礼品<br>
+目前积分商城面向所有会员开放。<br><br>
+
+e. 会员功能<br>
+用户订单管理模块，增加发票申请，增加发票开具管理功能，用户可申请补开发票。目前的保单管理和积分管理功能面向所有会员开放。<br><br>
+
+                         </div>
+                    </div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="help_right_box help_bor_h cf">
+					<h3 class="help_titile">开心保客户服务</h3>
+                    	<p class="help_d help_tel">4009-789-789</p>
+                        <p class="help_d help_time">8:30—23:30</p>
+                        <p class="help_d help_eml">kf@kaixinbao.com</p>
+                    <h3 class="help_titile h_bor_t">下载</h3>
+                    <div class="help_dow_list">
+                <a href="${Site.URL}/about/bdxz/index.shtml" class="help_down" title="《保单变更和退保申请》">《保单变更和退保申请书》</a>
+                <a href="${Site.URL}/about/bdxz/index.shtml" class="help_down" title="《理赔申请书》">《理赔申请书》</a>
+		       		</div>
+                    </div>
+                    
+                    <div class="help_right_box help_bor_h h_he_c cf">
+					<h3 class="help_titile">常见问题<a target="_blank" href="${Site.URL}/wenda/" class="help_more">更多</a></h3>
+					<ul class="help_list">
+					<cms:list item="article" level="all"  name="保险问答" count="8" type = "firstpublish">
+					   <% if("solve".equals(article.getString("isOk"))){ %>
+						 <li><a target="_blank" href="${article.link}">${article.title}</a></li>
+					   <%}%>
+					</cms:list>
+					</ul>
+                    </div>
+			</div>
+			<div class="col-extra">
+               <div class="help_left help_bor_h cf" id="sidebar_help">
+					<h3 class="help_titile">帮助中心</h3>
+                    <dl class="help_tree">
+                    	<dt>新手指南</dt>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn1">注册新用户</a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn2">用户登录</a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn3">找回密码</a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn4">网站购买流程</a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn5" rel="nofollow">积分商城 </a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/hysm/index.shtml">会员说明 </a></dd>
+                        <dt>业务相关</dt>
+                        <dd><a href="${Site.URL}/about/1/index.shtml#yxxg1">保单送达说明</a></dd>
+                        <dd><a href="${Site.URL}/about/1/index.shtml#yxxg2">保单变更说明</a></dd>
+                        <dd><a href="${Site.URL}/about/1/index.shtml#yxxg3">保单取消说明</a></dd>
+                        <dt>理赔帮助</dt>
+                        <dd><a href="${Site.URL}/about/2/index.shtml#lpbz1">理赔服务说明</a></dd>
+                        <dd><a href="${Site.URL}/about/2/index.shtml#lpbz2">理赔报案电话</a></dd>
+                        <dt>支付帮助</dt>
+                        <dd><a href="${Site.URL}/about/4/index.shtml#zfbz1">支付方式</a></dd>
+                        <dd><a href="${Site.URL}/about/4/index.shtml#zfbz2">支付说明</a></dd>
+                    </dl>
+               </div>
+               
+			</div>
+			</div>
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+ 
+
+<script src="${Site.JsResourcePath}/js/sidebar-follow-jquery.js"></script>
+<script>
+/*侧边栏跟随配置*/
+(new SidebarFollow()).init({
+	element: jQuery('#sidebar_help'),
+	distanceToTop: 10
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<div id="fix_vs" class="fix_vs">
+     <span class="g-vs-num" id="g-vs-num">0</span>
+      <div id="cpdiv" class="cpdiv">
+            <div class="comparediv">
+                <div class="closebtn">
+                    <span onclick="close_h()" class="close_compare"></span>
+                </div>
+                <div class="comparedivcont">
+                    <div class="comparedetail" style="display: none;" id="cpprodu1">
+
+                        <input type="hidden" name="productCodeA" id="productCodeA" />
+                        <p>
+                            <span id="productnameA" class="compare_name"></span>
+                            <span id="productPremA" class="compare_pric" id=""></span>
+                            <span class="dblue cpdelico" onclick="closecp1()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail" style="display:none;"  id="cpprodu2">
+
+                        <input type="hidden" name="productCodeB" id="productCodeB" />
+                       
+                        <p>
+                            <span id="productnameB" class="compare_name"></span>
+                            <span id="productPremB" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp2()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail"  style="display:none;" id="cpprodu3">
+                        <input type="hidden" name="productCodeC" id="productCodeC" />
+
+                        <p>
+                            <span id="productnameC"  class="compare_name"></span>
+                            <span id="productPremC" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp3()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail" style="display:none;"  id="cpprodu4">
+                        <input type="hidden" name="productCodeD" id="productCodeD" />
+
+                        <p>
+                            <span id="productnameD" class="compare_name"></span>
+                            <span id="productPremD" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp4()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparebtn">
+                        <a class="compare_submit" href="javascript:void(0);" vlpageid="tjdb01" exturl="http://www.kaixinbao.com/tjdb01" onClick="javascript:begincompare('http://localhost:8080/wj');subclosecp();return(VL_FileDL(this));return false;">提交对比</a>
+                        <span class="compare_none" onclick="close_all();">清空</span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <span class="cpdiv_jao"></span>
+            </div>
+        </div>
+      <a class="fixVs" href="javascript:void(0);" vlpageid="comp03" exturl="http://www.kaixinbao.com/comp03" onclick="return(VL_FileDL(this));return false;">
+          <img class="anim_fade_image" src="http://localhost:8080/images/wj_kxb/icon_fix_contrast.jpg" />
+          <img  src="http://localhost:8080/images/wj_kxb/icon_fix_contrast_on.jpg" />
+      </a>
+  </div>

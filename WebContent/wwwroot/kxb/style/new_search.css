@@ -1,0 +1,18 @@
+@charset "utf-8";
+/*
+#@des:搜索结果页面样式
+*@maker:dongqi.guo
+*@time:2013-4-3-15:20
+*/
+.search_key{ font-size:14px; border:1px solid #CCCCCC;  padding-top:15px; padding-left:15px; color:#666666; font-weight:bold; overflow:hidden; padding-bottom:18px;}
+.search_key span{ color:#F98504;}
+.search_l_box{ border:1px solid #CCCCCC;}
+.search_l_title{ border-left:3px solid #F98504; height:31px; padding-left:8px; line-height:31px; font-size:14px; color:#666666; font-weight:bold;}
+.search_l_box{ margin-bottom:10px;}
+.search_l_list li{ font-size:12px; line-height:1.6em; font-size:12px;  overflow:hidden; border-top:1px dotted #CCCCCC; padding:4px 0 4px 8px;}
+.search_l_list li a:link,.search_l_list li a:visited,.search_l_list li a:active{ color:#939292;}
+.search_l_list li a:hover{ color:#F98504;}
+.btn2{ display:none;}
+#products .product_info .prodcutMark .price { margin: 40px 0 0;}
+.search_l_box_up{ border:1px solid #CCCCCC; height:255px;}
+#products .CRiskAppFactor div span.product_ks{ font-weight:normal;} 

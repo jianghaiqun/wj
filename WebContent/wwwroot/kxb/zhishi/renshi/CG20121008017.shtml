@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb=“http://open.weibo.com/wb”>
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="艺术品保险 发展 私人收藏" />
+<meta name="description" content="故宫展览品被盗、文物受损事件的相继发生，这让鲜为人知的文物、艺术品保险成为公众关注焦点。在世界其他国家艺术品保险流行，但在中国艺术品保险还鲜为人知，艺术品顾名思义是多么的珍贵，我们需要为它们制造一份保障。" />
+<link href="http://localhost:8080/style/redesign/re_header.css?v=20150828" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/style/new_logo.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/style/new_information.css" rel="stylesheet" type="text/css" />
+<title>
+艺术品保险在中国的发展之路-开心保保险网yhy
+</title>
+<!-- <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDExODA2Nl8zMDEwNThfODAwMTE4MDY2Xw"></script> -->
+</head>
+<body> 
+<!--top头部-->
+        <div class="g-top">
+            <div class="g-weaper1200">
+                <div class="m-login">
+                <div id="NotLogin"><span class="m-login-p f-ib">您好，请</span><span class="m-login-a" id="NotLoginSpan"><a href="javascript:void(0);" id="headerShowLoginWindow"  onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">登录</a><em>/</em>
+                <a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">注册</a>
+                <span class="m-login-x" style="display:none"></span>
+                <!-- 未登录状态 显示图层 -->
+                    <div class="m-login-no" style="display:none;">
+                        <div class="m-lo-p">
+                            <div class="m-lo-img"></div>
+                            <img src="http://localhost:8080/images/redesign/photo_06.gif" alt="">
+                        </div>
+                        <div class="m-login-jf">
+                            <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag">会员专享，<br>积分换优惠</a>
+                        </div>
+                        <div class="clear h12"></div>
+                        <div class="m-integral">
+                            <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                        </div>
+                        <div class="m-Coupon">
+                        <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em>
+                        </div>
+                    </div>
+                <!-- 未登录状态 显示图层 end -->
+                </span></div>
+                <div id="YesLogin" style="display: none"><span class="m-login-p f-ib" id="YesLoginSpan">
+                                                         您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a>
+                                                         <i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                
+                <span class="m-login-x" style="display:none"></span>
+                <!--登录状态显示图层 -->
+                    <div class="m-login-yes z-hover-shadow"  style="display:none;">
+                           <div class="m-login-back">
+                               <span class="m-login-p m-login_p2">您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a><i id="headerLoginMemGradeIcon"  class="vip_k vip_top vip_k1" title=""></i></span><a href="javascript:void(0);" id="headerLogout" class="m-go-back">退出登录</a>
+                           </div> 
+                           <div class="m-lo-p">
+                            <div class="m-lo-img"><a href="###"></a></div>
+                            <img id="memberphoto" alt="">
+                           </div>
+                            <div class="m-login-user">
+                                <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="f_mi m-login-name2"></a><i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                                <p id="gradeinfo"></p>
+                            </div>
+                            <div class="clear h6"></div>
+                            <div class="m-integral2">
+                                <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                                <a id="memberPointsCount" href="http://localhost:8080/wj/shop/point!newList.action" class="m-jf-num"></a>
+                            </div>
+                            <div class="m-Coupon2">
+                            <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em><a id="CouponCount" href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="m-jf-num"></a>
+                            </div>
+                    </div>
+                <!--登录状态显示图层 end -->
+                </span></div>
+                </div>
+                <div class="m-top-fun">
+                      <span class="m-fun-span f-ib m-tel"><em class="i-tel"></em><i class="p-tel">4009-789-789</i></span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-WeChat" id="i-WeChat">
+                            <a href="###" class="m-fun-a hover"><em class="i-WeChat"></em></a>
+                            <div class="m-WeChatImg z-hover-shadow" style="display:none;">
+                                    <img src="http://localhost:8080/images/redesign/wechart.gif" alt="">
+                                    <p>关注微信公众号<br>轻松管理账单</p>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-service" id="i-service">
+                            <a href="###"  class="m-fun-a "><em class="i-service"></em></a>
+                            <div class="m-service_con z-hover-shadow" style="display:none;">
+                                 <ul class="m-service-li">
+                                <li><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单服务</a></li>
+                                <li><a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a></li>
+                                <li><a href="http://localhost:8080/lipei/" target="_blank" rel="nofollow">理赔申请</a></li>
+                            </ul>
+                            </div> 
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-cart" id="i-user-cart-span"><a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-fun-a " onclick="wxsend('gwclogin');">
+                            <em class="i-cart"></em><i class="m-cartNum" id="shopCartNo">0</i></a>
+                              <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-nologin" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>请先登录</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/gwclogin" vlpageid="gwclogin">登录</a>
+                            </div>
+                             <!-- 购物车为空 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>购物车中没有商品</span>
+                                    <a href="http://www.kaixinbao.com" class="m-btn-login">去选购商品</a>
+                            </div>
+                             <!-- 购物车不为空 -->
+                           <div class="m-cart_list z-hover-shadow" id="m-cart-yes" style="display:none;">
+                                <ul class="m-cart-ul" id="shopcartinfo">
+                                
+                                </ul>
+                                <div class="m-cart-go">
+                                    	共计<em id="shoptotal"></em> <a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-cart-to">去购物车</a>
+                                </div>
+                           </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-user" id="i-user-span"><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-fun-a " onclick="wxsend('memlogin');"><em class="i-user"></em></a>
+                            <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-user-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>会员中心</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/memlogin" vlpageid="memlogin">登录</a>
+                            </div>
+                            <!-- 用户已登录状态 -->
+                            <div class="m-user-yes z-hover-shadow" id="m-user-yes" style="display:none;">
+                              <dl class="m-order_dl m-order_dl1">
+                                  <dt>我的保单</dt>
+                                  <dd>
+	                                  <a id="prepay" href="http://localhost:8080/wj/shop/order_query!queryNoPayOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="preeffecitive" href="http://localhost:8080/wj/shop/order_query!queryNoEffectOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="effecitive" href="http://localhost:8080/wj/shop/order_query!queryEffectingOrder.action" class="f-ib" rel="nofollow"></a>
+                                  </dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>账户中心</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/profile!edit.action" class="f-ib" rel="nofollow">账户信息</a>
+                                  <a href="http://localhost:8080/wj/shop/point!newList.action" class="f-ib" rel="nofollow">我的积分</a>
+                                  <a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="f-ib" rel="nofollow">我的优惠券</a></dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>客户服务</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/stow!queryScan.action" class="f-ib" rel="nofollow">我的收藏</a>
+                                  <a href="http://localhost:8080/wj/shop/question!questionList.action" class="f-ib" rel="nofollow">保险问答</a>
+                                  <a href="http://localhost:8080/wj/shop/member_comment!queryComment.action" class="f-ib" rel="nofollow">商品评价</a><a href="http://localhost:8080/wj/shop/my_compare!show.action" class="f-ib">对比记录</a>
+                                  <a href="http://localhost:8080/wj/shop/my_consult!show.action" class="f-ib" rel="nofollow">我的咨询</a></dd>
+                              </dl>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                </div>
+            </div>
+        </div>
+   <!--top头部end-->
+   
+     <!-- header -->
+     <div class="g-header ">
+        <div class="g-weaper">
+        <a href="http://localhost:8080/" class="m-logo-a">
+            <img src="http://localhost:8080/images/redesign/logo.gif" height="70px" class="m-logo" alt="开心保保险网">
+        </a>
+        <img src="http://localhost:8080/images/redesign/f_logo.gif" class="m-flogo" height="70px" alt="保险服务">
+        <div class="clear"></div>
+        <!-- 导航开始 -->
+             <div class="g-nav">
+                <span class="g-nav-title"></span>
+             <div class="qs_boxs"   id="g-nav-box" class="qs_boxs" style="display:none;">
+                <dl class="que_dl que_dl_j1 que_nav_zk" id="que_lv_sf">    
+                <dt class="que_dl_dt"><em class="i-navicon i-nav1 f-ib"></em><a target="_blank" href="http://localhost:8080/lvyou-baoxian/">旅游保险</a><span class="z-que-zd"></span></dt>
+                    <dd class="que_dl_dd">
+                       <a target="_blank" href="http://localhost:8080/lvyou-baoxian/guonei/">境内</a>|<a target="_blank" href="http://localhost:8080/lvyou-baoxian/jingwai/">境外</a>|<a target="_blank" href="http://localhost:8080/lvyou-baoxian/shengenqianzheng/">申根</a>|<a target="_blank" href="http://localhost:8080/huixuan/0000000008.shtml">东南亚</a>
+                    </dd>
+  					 <dd class="que_dl_dd que_dl_dd2">
+                       <a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000024.shtml">美日加澳</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000010.shtml">亚洲</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000007.shtml">港澳</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000244.shtml">台湾</a>
+                    </dd>
+                  <!-- 旅游保险显示层-->
+                        <div class="m-travel-con z-hover-shadow tagshow"  style="display:none;"  id="que_lv_sf">
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">国内旅游险</dt>
+                                      <dd>
+                                         <!--循环：friendlink count：10-->
+
+
+										  		<a href="http://120.55.73.0:81/choose/0000000323.shtml" target="_blank" >户外运动</a>
+										  
+
+										  		<a href="http://120.55.73.0:81/choose/0000000331.shtml" target="_blank" >本市</a>
+										  
+
+										  		<a href="http://120.55.73.0:81/choose/0000000331.shtml" target="_blank" >境内旅游险</a>
+										                                        
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">境外旅游险</dt>
+                                      <dd>
+		                                   <!--循环：friendlink count：10-->
+
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >港澳游</a>
+										   
+
+												<a href="http://www.kaixinbao.com/huixuan/0000000244.shtml" target="_blank" >台湾游</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >东南亚</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >亚洲</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000224.shtml" target="_blank" >全球</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000269.shtml" target="_blank" >旅游险-申根签证</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                     <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特色保障</dt>
+                                      <dd>
+		                                   <!--循环：friendlink count：10-->
+
+
+												<a href="http://120.55.73.0:81/choose/0000000334.shtml" target="_blank" >海外务工</a>
+										   
+
+												<a href="http://" target="_blank" >住院津贴</a>
+										   
+
+												<a href="http://" target="_blank" >全年停留</a>
+										   
+
+												<a href="http://" target="_blank" >高原地区</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000333.shtml" target="_blank" >航班延误</a>
+										   
+
+												<a href="http://" target="_blank" >申根拒签</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000329.shtml" target="_blank" >自驾游</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000328.shtml" target="_blank" >东南亚</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000330.shtml" target="_blank" >安盛保险</a>
+										   
+
+												<a href="http://" target="_blank" >全年多次往返</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+                                       <!--循环：friendlink count：30-->
+
+
+									   		<a href="http://" target="_blank" >路华救援</a>
+									   
+
+									   		<a href="http://" target="_blank" >新华人寿</a>
+									   
+
+									   		<a href="http://" target="_blank" >华泰保险</a>
+									   
+
+									   		<a href="http://" target="_blank" >中国人保</a>
+									   
+
+									   		<a href="http://" target="_blank" >太平保险</a>
+									   
+
+									   		<a href="http://" target="_blank" >安盛天平</a>
+									   
+
+									   		<a href="http://" target="_blank" >太平洋财产险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >平安财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >安联财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/0000000325.shtml" target="_blank" >史带财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/0000000244.shtml" target="_blank" >美亚财险公司</a>
+									                                         
+                                      </dd>
+                                    </dl>
+                              </div>
+                              <div class="m-t-nav-right">
+                                     <dl class="m-travel-navDl">
+                                      <dt class="f-ib">推荐计划</dt>
+                                    </dl>
+                                    <div id="lvyouquick" >
+		                                
+
+											<div class="m-recommend-list">
+												<div class="clear"></div>
+					                            <a href="http://localhost:8080/lvyou-baoxian/282881.shtml" target="_blank" class="m-recommend-a">开心保安联“亚洲”豪华保障计划</a>
+			                                    <ul>
+			                                    	<li><span>紧急送返显关爱</span></li><li><span>旅程延误有补贴</span></li><li><span>宠物责任保障</span></li><li><span>家属探访有补贴</span></li>
+			                                    </ul>		
+			                                    <div class="clear h10"></div>		
+		                                        <div class="m-recommend-money">
+		                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+		                                            <span class="m-xj-money f-ib f_mi">￥20.00</span>
+		                                        </div>	
+		                                       	<a href="http://localhost:8080/lvyou-baoxian/282881.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+					                        </div>
+					                        <div class="clear h20"></div>
+							    		
+
+											<div class="m-recommend-list">
+												<div class="clear"></div>
+					                            <a href="http://localhost:8080/lvyou-baoxian/282838.shtml" target="_blank" class="m-recommend-a">平安畅游天下境外旅游全年保障计划</a>
+			                                    <ul>
+			                                    	<li><span>承保年龄到80岁</span></li><li><span>出行天数自由选</span></li><li><span>旅程延误给补偿</span></li><li><span>24小时紧急搜救</span></li><li><span>航班备降、迫降保险</span></li><li><span>旅行期间家庭财产保障</span></li>
+			                                    </ul>		
+			                                    <div class="clear h10"></div>		
+		                                        <div class="m-recommend-money">
+		                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+		                                            <span class="m-xj-money f-ib f_mi">￥475.00</span>
+		                                        </div>	
+		                                       	<a href="http://localhost:8080/lvyou-baoxian/282838.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+					                        </div>
+					                        <div class="clear h20"></div>
+							    		            
+                                    </div>
+                                    
+                              </div>
+                        </div>
+                  <!-- 旅游保险显示层end-->
+
+                </dl>
+                
+                <dl class="que_dl que_dl_j1 que_nav_zk">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav2 f-ib"></em><a target="_blank" href="http://localhost:8080/yiwai-baoxian/">意外保险</a><span class="z-que-zd"></span></dt>    
+                    <dd class="que_dl_dd">
+                        <a target="_blank" href="http://localhost:8080/yiwai-baoxian/renshen/">人身意外</a>|<a target="_blank" href="http://localhost:8080/yiwai-baoxian/jiaotong/">交通意外</a>|<a target="_blank" href="http://localhost:8080/yiwai-baoxian/hangkong/">航空意外</a>
+                    </dd>
+                    <dd class="que_dl_dd que_dl_dd2">
+                        <a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000014.shtml">少儿</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000015.shtml">老人</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000090.shtml">中青年</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000093.shtml">医疗补偿</a>
+                    </dd>
+                      <!-- 意外保险显示层 -->
+
+                        <div class="m-travel-con m-accident-con z-hover-shadow tagshow " style="display:none"  >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                      <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保障年龄</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特殊保障</dt>
+                                      <dd>
+					                       <!--循环：friendlink count：30-->
+
+
+										   <a href="http://120.55.73.0:81/choose/0000000341.shtml" target="_blank" >高额航空保险</a>
+										   
+
+										   <a href="http://120.55.73.0:81/choose/0000000340.shtml" target="_blank" >百万级综合意外</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000262.shtml" target="_blank" >太平洋财险</a>
+											
+
+											<a href="http://120.55.73.0:81/choose/0000000261.shtml" target="_blank" >太平养老</a>
+											
+
+											<a href="http://120.55.73.0:81/choose/0000000296.shtml" target="_blank" >中国人寿</a>
+											
+                                      </dd>
+                                    </dl>
+                              </div>
+
+                              <div class="m-t-nav-right">
+                                      <dl class="m-travel-navDl"><dt class="f-ib">推荐计划</dt></dl>
+                                    
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/283692.shtml" target="_blank" class="m-recommend-a">昆仑全年自驾无忧保障计划</a>
+		                                    <ul>
+		                                    	<li><span>打发时间佛啊监控</span></li><li><span>发斯蒂芬将阿里山的</span></li><li><span>阿斯顿飞九</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥13.85</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/283692.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/283597.shtml" target="_blank" class="m-recommend-a">富德交通工具空意外保障淘宝专用</a>
+		                                    <ul>
+		                                    	<li><span>fhissdfhsidf</span></li><li><span>dsufosdf</span></li><li><span>u9wrisi</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥4.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/283597.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		                                   
+                            </div>
+                        </div>
+                      <!-- 意外保险显示层 end -->
+                </dl> 
+                <dl class="que_dl que_dl_j1">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav3 f-ib"></em><a target="_blank" href="http://localhost:8080/jiankang-baoxian/">健康保险</a><span class="z-que-zd"></span></dt>        
+                    <dd class="que_dl_dd"><a href="http://www.kaixinbao.com/huixuan/0000000138.shtml" target="_blank">少儿重疾</a>|<a href="http://localhost:8080/jiankang-baoxian/tedingjibing/" target="_blank">特定疾病</a>|<a href="http://localhost:8080/jiankang-baoxian/zhuyuanyiliao/" target="_blank">住院治疗</a></dd>
+                	<dd class="que_dl_dd que_dl_dd2"><a href="http://www.kaixinbao.com/huixuan/0000000226.shtml" target="_blank">老年重疾</a>|<a href="http://www.kaixinbao.com/huixuan/0000000018.shtml" target="_blank">女性特定疾病</a></dd>
+                    <!-- 健康保险显示层 -->
+
+                        <div class="m-travel-con m-health-con z-hover-shadow tagshow " style="display:none"  >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                      <dl class="m-travel-navDl">
+                                      <dt class="f-ib">人群分类</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000339.shtml" target="_blank" >女性疾病保险</a>
+											
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特色保障</dt>
+                                      <dd>
+					                       <!--循环：friendlink count：30-->
+
+
+										   <a href="http://120.55.73.0:81/choose/0000000338.shtml" target="_blank" >低价保障型</a>
+										   
+
+										   <a href="http://120.55.73.0:81/choose/0000000335.shtml" target="_blank" >住院津贴</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000343.shtml" target="_blank" >平安财险</a>
+											
+
+											<a href="http://120.55.73.0:81/yiwai-baoxian/257766.shtml" target="_blank" >中国人寿</a>
+											
+                                      </dd>
+                                    </dl>
+                              </div>
+
+                              <div class="m-t-nav-right">
+                                      <dl class="m-travel-navDl"><dt class="f-ib">推荐计划</dt></dl> 
+                                    
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/282981.shtml" target="_blank" class="m-recommend-a">安联乐享人生幼儿意外健康计划一</a>
+		                                    <ul>
+		                                    	<li><span>意外健康综合保障</span></li><li><span>紧急救援</span></li><li><span>电话医生服务</span></li><li><span>儿童走失补偿</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥230.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/282981.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/jiankang-baoxian/282612.shtml" target="_blank" class="m-recommend-a">大众安享中老年重疾健康保障计划</a>
+		                                    <ul>
+		                                    	<li><span>老年专款意外保障</span></li><li><span>意外医疗住院津贴</span></li><li><span>救护车服务津贴</span></li><li><span>温馨关爱老人健康</span></li><li><span>重疾和意外双重保障</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥1280.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/jiankang-baoxian/282612.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		                                   
+                            </div>
+                        </div>
+                      <!-- 健康保险显示层 end -->
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav4 f-ib"></em><a target="_blank" href="http://localhost:8080/renshou-baoxian/">人寿保险</a></dt>            
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav5 f-ib"></em><a target="_blank" href="http://localhost:8080/jiacai-baoxian/">家财保险</a></dt>              
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav6 f-ib"></em><a target="_blank" href="http://localhost:8080/tx/">团体保险</a></dt>                 
+                </dl>
+                <dl class="que_dl que_nav_zk">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav7 f-ib"></em><a target="_blank" href="http://localhost:8080/chexian/">车辆保险</a><span class="z-que-zd"></span></dt> 
+                     <!-- 车辆险显示层 -->
+
+                        <div class="m-travel-con m-cars-con z-hover-shadow tagshow" style="display:none;" >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+                                      <a target="_blank" href="http://localhost:8080/chexian/yangguang.shtml">阳光车险</a>|<a target="_blank" href="http://localhost:8080/chexian/dadi.shtml">大地车险</a>
+                                      <a target="_blank" href="http://localhost:8080/chexian/taipingyang.shtml">太平洋车险</a>|<a target="_blank"  href="http://localhost:8080/chexian/tianping.shtml">安盛天平车险</a></dd>
+                                    </dl>
+                                  
+                                   
+                            
+                              </div>
+
+                        </div>
+                      <!-- 车辆保险显示层 end -->          
+                </dl>
+             </div>
+             </div>
+                <ul class="g-nav-main">
+                    <li class="f-ib"><a href="http://localhost:8080" class="nav_1">首页</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/daogou/" class="nav_2">保险快选</a><i class="header-hot"></i></li>
+                    <li class="f-ib"><a href="http://localhost:8080/youhui/" class="nav_3" rel="nofollow">限时抢购</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/jifen/" class="nav_4" rel="nofollow">积分商城</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/huiyuan/" class="nav_5" rel="nofollow">会员部落</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/lipei/" class="nav_6" rel="nofollow">理赔通道</a></li>
+                </ul> 
+                <div class="m-search">
+                	            <form action="http://localhost:8080/Search/Search.jsp">
+                       <span class="f-search-i" style="display: none;"></span> <div class="m-search-box"><input type="text" name="query" class="m-search-input"><i class="i-search"></i><span class="f-search"><input name="" type="submit" value="搜索" onclick="jQuery.ajaxLoadImg.show('searchLoad');"></span></div>
+                                       </form> 
+                </div> 
+                </div>
+        <!-- 导航结束 -->
+
+     </div>
+    <!-- header end -->
+<!--位置信息 开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../../' target='_self' ><span class="orange">您所在的位置：首页</span></a><span class="separator">></span><a href='../../zhishi/' target='_self'>保险知识</a><span class="separator">></span><a href='../../zhishi/renshi/' target='_self'>认识保险</a> <span class="separator">></span>艺术品保险在中国的发展之路
+		</div>
+	</div>
+<!--位置信息 结束-->
+<!--主体 开始-->
+<div class="wrap980 mainbgl644">
+	<!--左边 开始-->
+	<div class="left644 up_left">
+		<!--文章 开始-->
+		<div class="article">
+			<h1 class="articletit">艺术品保险在中国的发展之路</h1>
+			<div class="articledate02">发布日期：2012-10-08 14:27:37</div>
+			<div id="ajaxad"><p><span>故宫展览品被盗、文物受损事件的相继发生，这让鲜为人知的文物、艺术品保险成为公众关注焦点。在世界其他国家艺术品保险流行，但在中国艺术品保险还鲜为人知，艺术品顾名思义是多么的珍贵，我们需要为它们制造一份保障。</span></p><h2><span><span>　　</span></span><span>艺术品保险问世</span></h2><p><span><span>　　</span>2010</span><span>年，中国艺术品市场总成交额超过</span><span>500</span><span>亿元，但国内艺术品展览九成以上未买保险。而博物馆和美术馆，多数藏品也都处于无保状态。</span></p><p><span><span>　　</span></span><span>&ldquo;国内有些保险公司会说有艺术品保险产品，但真正却没有几家在做。&rdquo;上海市收藏协会副会长宣家鑫在接受第一财经日报《财商》采访时表示，一般只有国家级别的机构投艺术品保险，保险公司才会做。&ldquo;私人艺术品更是没有保险可以买，想买也买不到。&rdquo;</span></p><h2><span><span>　　</span></span><span>什么是艺术品保险？</span></h2><p><span><span>　　</span></span><span>艺术品保险是在传统的财产保险和货运保险的基础上演变和发展而来的，主要承保火灾以及其他自然灾害和意外事故造成的艺术品直接损失。保险标的包括投保人所有或代他人保管或其他人共有而由投保人负责保管、展览、装卸、运输的艺术品。</span></p><p><span><span>　　</span></span><span>艺术品保险，在国外已形成了较成熟的市场。而在中国，艺术品保险仍十分缺失。前段时间故宫博物院临时展出的现代工艺品展品失窃事件引起了业内对艺术品保险的关注，也再次反映出我国艺术品保险市场的空白。</span></p><p><span><span>　　</span></span><span>艺术品保险行业在中国有着巨大的潜力和市场，因为中国的艺术市场正在飞速发展，高风险、高价值的艺术品源源不断的进入中国，虽然中国盗窃率还是存在，可我们要防止的不仅仅是盗贼，还有各方面的损坏。</span></p><p><span><span>　　</span></span><span>但艺术品保险是一个仍未开发的巨大领域，文化部去年出台的促进文化产业事业的相关政策中曾提到对艺术品保险业的促进工作，而针对艺术品保险的单独针对政策并未出台。随着国内艺术品交易市场的不断发展和相应市场需求的增加，我们需要做更多的研究工作。</span></p><p><span><span>　　</span></span><span>中国艺术品保险市场是值得开拓的，但怎么去开拓是一个问题。</span></p><p><span><span>　　</span></span><span>&ldquo;国内保险公司才刚刚开展这个业务，还没有真正做起来，而且只针对机构投保。&rdquo;</span><span>AMRC</span><span>研究部总监马学东对记者表示，一些外资保险公司在国外有非常成熟的艺术品保险业务，但尚未批准进入国内市场。</span></p><p><span><span>　　</span></span><span>据了解，今年</span><span>1</span><span>月份，在保监会推动下，国内保险公司着手推出艺术品综合保险、演艺活动财产保险、动漫游戏企业关键人员意外和健康保险等第一批文化产业专属产品试点。并指定人保财险、太平洋财险和中国信保作为首批三家试点机构。但半年多的时间里，参加试点保险公司的相关文化产业险产品一直遭到冷遇。</span></p><p><span><span>　　</span></span><span>直到近期，人保财险才宣布签订首单艺术品综合保险。人保财险相关负责人表示，目前已由人保财险北京市分公司商务中心区营业部与某金融公司签署了第一份文化产业保险，将为其旗下拥有、保管的价值高达</span><span>1.2</span><span>亿元的艺术品，提供从馆藏、展览到运输各个环节的艺术品综合保险保障，涵盖艺术品因盗窃、火灾、自然灾害等各种风险导致的损失风险，确保该艺术品收藏与买卖活动的顺利进行，为其提供了必要的风险保障。</span></p><p><span><span>　　</span></span><span>此前，在颇为火爆的艺术品交易市场也曾首度引入了保险机制。成都文交所运营总监王小峰对记者表示，成都文交所上市的&ldquo;翰墨长安&rdquo;艺术品资产包经过平安财产保险四川分公司、再保险公司的多次磋商，达成了组包艺术品保险协议，为该资产包提供保额为</span><span>6000</span><span>万元的艺术品保险协议。</span></p><p><span><span>　　</span></span><span>&ldquo;我们主要是基于投资人利益角度考虑，艺术品在展览、保管过程中可能出现一些问题，所以引入了保险机制。&rdquo;王小峰表示，保费由组包方承担，是其保额的千分之六。</span></p><p><span><span>　　</span></span><span>根据平安财险工作人员介绍，艺术品保险期间一般为一年，在保险期内，被保险人所有或受托保管的艺术品在馆藏、展览、陈列期间因自然灾害或意外事故造成的直接物质损失，保险公司将负责赔偿。</span></p><h2><span><span>　　</span></span><span>为何难推广</span><span>?</span></h2><p><span><span>　　</span></span><span>事实上，艺术品最可能出现的风险主要有自然灾害、意外事故等，如地震、火灾等造成存放地的损失，还有就是展览过程中出现的被盗、受损等情况。根据法国</span><span>ARTPRICE</span><span>发布的</span><span>2010</span><span>年全球艺术市场趋势报告，</span><span>2010</span><span>年按照全球各国艺术品拍卖收益的统计数据，中国排名全球第一。但为何国内的艺术品保险领域却处于&ldquo;几乎空白&rdquo;的状态呢</span><span>?</span></p><p><span><span>　　</span></span><span>&ldquo;一个原因是艺术品的价值难以判断。&rdquo;宣家鑫对记者表示，艺术品究竟值多少钱，投保人和保险公司需要达成一致，但国内目前没有非常权威的艺术品估值机构。&ldquo;以浙江博物馆送往台湾展览的&lsquo;富春山居图&rsquo;为例，台湾方面对该画作出</span><span>1.5</span><span>亿元估计，并以此估价投保，但这幅画的价值远远超出</span><span>1.5</span><span>亿元，可能价值</span><span>5</span><span>亿元都不止。&rdquo;</span></p><p><span><span>　　</span></span><span>马学东也表示，艺术品的估值对于保险公司来说比较困难。&ldquo;保险公司是按照艺术品的估值来收取保费的，一般价值</span><span>1</span><span>亿元的艺术品，保费是</span><span>0.5%</span><span>～</span><span>1%</span><span>，但委托方和保险公司如何能协商一个双方满意的价格是难点。&rdquo;</span></p><p><span><span>　　</span></span><span>宣家鑫还指出，艺术品真伪难以辨别是艺术品保险难以推广的另一重要原因。&ldquo;真假问题保险公司很难鉴别，如果判断失误，会损失严重。&rdquo;</span></p><p><span><span>　　</span></span><span>&ldquo;保险公司一般不轻易给其投保，尤其是对艺术品所在环境的安全保障情况不确定。&rdquo;苏黎世保险公司相关负责人也对记者表示，但最主要的是国内缺乏完善的鉴定和定价体系，造成保额难以确定并导致无法开展此业务，比如服务商业的评估评鉴、鉴定鉴价、艺术品修复等几个环节都存在空缺。</span></p><p><span><span>　　</span></span><span>该负责人还表示，由于艺术品价值都比较高，巨大的保费也常让客户望而却步。</span></p><h2><span><span>　　</span></span><span>私人藏品难投保</span></h2><p><span><span>　　</span></span><span>事实上，在欧美艺术品保险已经相当成熟。据统计在国外每</span><span>100</span><span>美元的艺术品交易，保险公司就能从中获得</span><span>1</span><span>美元的保费收入。保险公司在接到保险申请后，会聘请独立的艺术行业顾问或评估机构进行商业价值评估</span><span>, </span><span>具体保价额由艺术品本身的价格、风险系数以及保险公司的运作成本而定。而且其承保对象非常广泛，包括个人收藏、企业收藏、艺术品经销商、博物馆和拍卖公司等类似机构或个人。</span></p><p><span><span>　　</span></span><span>但目前在国内私人藏品却无法投保。众多人士指出，一方面由于私人藏品的真伪更加难以判断和确认，保额的确定更为困难。另一方面保险公司对私人藏品所在环境的安全情况无法全面了解，很容易出现投保人故意损坏而骗保的纠纷产生。</span></p><p><span><span>　　</span></span><span>当然，即使在国外，要给自己的私人艺术藏品上一份保险也不是那么简单的事情。一方面，专业的保险公司会派专家到你家详细考虑，会在防盗、防水、防光等方面提出建议。而且对于艺术品因为时间流逝而发生的损坏不予承保。另一方面，由于艺术品价格不断上涨，你可能需要间隔三至五年要求保险公司对自己的艺术品价值进行重估，以免遭受损失。</span></p><p><span><span>　　</span></span><span>据传闻，纽约的一个私人收藏家曾经收藏了一幅油画，但由于渗水，油画被毁掉。保险公司最终按照合同规定，全额赔付其</span><span>300</span><span>万美元。但是他是十年前和保险公司签订的合同，到赔付的时候这幅画的市面价值已经飙升了好几倍，保险公司的全额赔付也只能是&ldquo;一点安慰&rdquo;。</span></p></div>
+		</div>
+		<!--文章 结束--> 
+		<!--推荐产品 开始-->
+		<input type="hidden" id="ArticleID" value="254940"/>
+		<input type="hidden" id="RiskType" value=""/>
+		<input type="hidden" id="RiskCompany" value=""/>
+		<input type="hidden" id="RiskProduct1" value=""/>
+		<input type="hidden" id="RiskProduct2" value=""/>
+		<div class="columntit up_columntit">相似产品推荐</div>
+		<div class="produlist" id="products">
+			<div align="center">
+	            <img src="http://localhost:8080/images/loading2.gif" width="70" height="70" />
+	        </div>
+		</div>
+
+		<!--推荐产品 结束-->
+		<div class="shareandkeyword">
+			<!--分享到 开始-->
+			<div class="articleshare">
+			<div class="bshare-custom icon-medium"><span class="articlekeyword"><font size="2">分享到:</font><a class="bshare-qzone" title="分享到QQ空间"></a>
+			<a class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+			<a class="bshare-renren" title="分享到人人网"></a>
+			<a class="bshare-douban" title="分享到豆瓣"></a>
+			<a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+			</span></div>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+			</div>
+			<!--分享到 结束-->
+			<!--关键词 开始-->
+			<div class="articlekeyword">关键词：<span>艺术品保险 保险发展 保险新品</span></div>
+			<!--关键词 结束-->
+		</div>
+		<!--上一篇下一篇 开始-->
+		<div class="articlepage"><a href="CD20121008019.shtml" target="_blank">←</a>&nbsp;&nbsp;下一篇：<a href="CD20121008019.shtml" target="_blank">重疾险我们不得不考虑的保障</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上一篇：<a href="AG20121008015.shtml" target="_blank">退保有风险 保险现金价值的计算方法</a>&nbsp;&nbsp;<a href="AG20121008015.shtml" target="_blank">→</a></div>
+		<!--上一篇下一篇 结束-->
+		<div class="inforandaq">
+			<!--相关资讯 开始-->
+			<div class="relatedinfor">
+				<div class="columntit">相关资讯</div>
+				<ul class="txtlist12">
+				  	
+
+						<li><a href="http://localhost:8080/zhishi/renshi/CG20121008017.shtml" target="_blank">艺术品保险在中国的发展之路</a></li>
+				  		
+				</ul>
+			</div>
+			<!--相关资讯 结束-->
+			<!--精彩问答 开始-->
+			<div class="wonderfulaq">
+				<div class="columntit">精彩问答</div>
+				<ul class="txtlist12">
+					
+
+						<li>问：<a href="http://localhost:8080/wenda/baoxian/zhishi/254699.shtml" target="_blank">8888888</a></li>
+					
+
+						<li>问：<a href="http://localhost:8080/wenda/baoxian/lipei/255831.shtml" target="_blank">车险哪家好2</a></li>
+					
+
+						<li>问：<a href="http://localhost:8080/wenda/xianzhong/lvyou/259394.shtml" target="_blank">爸爸60岁了 怎么买意外伤害保险呢？</a></li>
+					
+
+						<li>问：<a href="http://localhost:8080/wenda/baoxian/zhishi/255897.shtml" target="_blank">9999</a></li>
+					
+
+						<li>问：<a href="http://localhost:8080/wenda/baoxian/zhishi/255889.shtml" target="_blank">4444</a></li>
+					
+
+						<li>问：<a href="http://localhost:8080/wenda/baoxian/zhishi/254708.shtml" target="_blank">十一要去自驾游，需要做什么准备呢？ 十一要去自驾游</a></li>
+						
+				</ul>
+			</div>
+			<div class="h30"></div>
+			<!--精彩问答 结束-->
+		</div>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="right336 up_right">
+		<!--图片切换 开始-->
+        <script type="text/javascript" src="http://localhost:8080/wj/Services/dynImages.jsp?dynName=bxbk_detail_right&dynWidth=320&dynHeight=250&dynCount=null&dCharwidth=100"></script>
+
+		<!--图片切换 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			
+
+				<li>
+					<h4><a href="http://localhost:8080/yiwai-baoxian/284060.shtml" title="平安开心保航班延误保障"><img src="http://localhost:8080/eriskfile/ERiskPic/200701088.jpg" alt="平安开心保航班延误保障" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="http://localhost:8080/yiwai-baoxian/284060.shtml" title="平安开心保航班延误保障" >平安开心保航班延误保障</a></h5>
+						<h6>适合乘坐飞机出行的人士</h6>
+					</div>
+				</li>
+			
+
+				<li>
+					<h4><a href="http://localhost:8080/jiankang-baoxian/284020.shtml" title="史带众悦人生女性健康保障计划"><img src="http://localhost:8080/" alt="史带众悦人生女性健康保障计划" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="http://localhost:8080/jiankang-baoxian/284020.shtml" title="史带众悦人生女性健康保障计划" >史带众悦人生女性健康保障计划</a></h5>
+						<h6>女性办公室人员、城市白领。</h6>
+					</div>
+				</li>
+			
+
+				<li>
+					<h4><a href="http://localhost:8080/yiwai-baoxian/283704.shtml" title="平安短期7天交通意外保险"><img src="http://localhost:8080/" alt="平安短期7天交通意外保险" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="http://localhost:8080/yiwai-baoxian/283704.shtml" title="平安短期7天交通意外保险" >平安短期7天交通意外保险</a></h5>
+						<h6></h6>
+					</div>
+				</li>
+			
+
+				<li>
+					<h4><a href="http://localhost:8080/lvyou-baoxian/283371.shtml" title="史带境外旅游自选日本游保障计划"><img src="http://localhost:8080/eriskfile/ERiskPic/207101069.jpg" alt="史带境外旅游自选日本游保障计划" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="http://localhost:8080/lvyou-baoxian/283371.shtml" title="史带境外旅游自选日本游保障计划" >史带境外旅游自选日本游保障计划</a></h5>
+						<h6>前往申根国家旅游、探亲的人士</h6>
+					</div>
+				</li>
+			
+
+				<li>
+					<h4><a href="http://localhost:8080/lvyou-baoxian/283367.shtml" title="史带境外旅游自选台湾游保障计划"><img src="http://localhost:8080/eriskfile/ERiskPic/207101068.jpg" alt="史带境外旅游自选台湾游保障计划" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="http://localhost:8080/lvyou-baoxian/283367.shtml" title="史带境外旅游自选台湾游保障计划" >史带境外旅游自选台湾游保障计划</a></h5>
+						<h6>前往申根国家旅游、探亲的人士</h6>
+					</div>
+				</li>
+			
+		</ul>
+		<!--热销保险产品 结束-->
+		<!--热门文章推荐 开始-->     
+		<div class="columntit graybordert">热门文章推荐</div>
+		<ul class="txtlist hot_txtlist">
+			
+
+				<li><a href="http://localhost:8080/zhishi/" target="_blank">知识</a> |&nbsp;&nbsp;<a href="http://localhost:8080/zhishi/renshi/C04G20130910010.shtml" target="_blank">天津市住房公积金管理中心业务查询及办理</a></li>
+			
+
+				<li><a href="http://localhost:8080/zhishi/" target="_blank">知识</a> |&nbsp;&nbsp;<a href="http://localhost:8080/zhishi/renshi/C03G20130407049.shtml" target="_blank">开心保带您了解航空货运保险</a></li>
+			
+
+				<li><a href="http://localhost:8080/zhishi/" target="_blank">知识</a> |&nbsp;&nbsp;<a href="http://localhost:8080/zhishi/renshi/C05G20130922020.shtml" target="_blank">新农合制度日趋完善 政府补助日益提高</a></li>
+			
+			
+
+				<li><a href="http://localhost:8080/baike/" target="_blank">百科</a> |&nbsp;&nbsp;<a href="http://localhost:8080/baike/fagui/253795.shtml" target="_blank">保险契约</a></li>
+			
+
+				<li><a href="http://localhost:8080/baike/" target="_blank">百科</a> |&nbsp;&nbsp;<a href="http://localhost:8080/baike/yewu/254620.shtml" target="_blank">除外责任</a></li>
+			
+			
+
+				<li><a href="http://localhost:8080/zixun/" target="_blank">资讯</a> |&nbsp;&nbsp;<a href="http://localhost:8080/zixun/hangye/AG20160413010.shtml" target="_blank">美亚保险业务方案设计工具即将汉化</a></li>
+			
+
+				<li><a href="http://localhost:8080/zixun/" target="_blank">资讯</a> |&nbsp;&nbsp;<a href="http://localhost:8080/zixun/hangye/AG20160413005.shtml" target="_blank">各类奇葩保险盘点 高尔夫一杆进洞保险来赔</a></li>
+			
+		</ul>
+		<!--热门文章推荐 结束-->
+		<div class="h12"></div>	
+			<div class="columntit graybordert">热门标签</div>
+			<div class="news_rmbj news_bor_hui news_zsbj">
+				<ul>
+					<li>
+					<!--循环：hotlabels count：20-->
+
+						
+							<a class="news_color12" href="http://localhost:8080/tag/000154000001-30.html" >教育保险</a>
+						
+					
+						
+							<a class="news_color13" href="http://localhost:8080/tag/000114000001-30.html" >车辆理赔</a>
+						
+					
+						
+							<a class="news_color14" href="http://localhost:8080/tag/000123000001-30.html" >旅行保险</a>
+						
+					
+						
+							<a class="news_color12" href="http://localhost:8080/tag/000363000001-30.html" >test1223333333333</a>
+						
+					
+						
+							<a class="news_color13" href="http://localhost:8080/tag/000247000001-30.html" >haoren</a>
+						
+					
+						
+							<a class="news_color14" href="http://localhost:8080/tag/000357000001-30.html" >农民保险</a>
+						
+					
+						
+							<a class="news_color12" href="http://localhost:8080/tag/000177000001-30.html" >小休***</a>
+						
+					
+						
+							<a class="news_color13" href="http://localhost:8080/tag/000338000001-30.html" >大地车险</a>
+						
+					
+						
+							<a class="news_color14" href="http://localhost:8080/tag/000176000001-30.html" >保险纠纷</a>
+						
+					
+						
+							<a class="news_color12" href="http://localhost:8080/tag/000245000001-30.html" >vvvvv</a>
+						
+					
+						
+							<a class="news_color13" href="http://localhost:8080/tag/000324000001-30.html" >社会福利</a>
+						
+					
+						
+							<a class="news_color14" href="http://localhost:8080/tag/000021000001-30.html" >车险全险</a>
+						
+					
+						
+							<a class="news_color12" href="http://localhost:8080/tag/000335000001-30.html" >大地车险</a>
+						
+					
+						
+							<a class="news_color13" href="http://localhost:8080/tag/000105000001-30.html" >保险知识</a>
+						
+					
+						
+							<a class="news_color14" href="http://localhost:8080/tag/000189000001-30.html" >境外险</a>
+						
+					
+						
+							<a class="news_color12" href="http://localhost:8080/tag/000150000001-30.html" >交通强制险</a>
+						
+					
+						
+							<a class="news_color13" href="http://localhost:8080/tag/000024000001-30.html" >保单</a>
+						
+					
+						
+							<a class="news_color14" href="http://localhost:8080/tag/000259000001-30.html" >更新文章</a>
+						
+					
+						
+							<a class="news_color12" href="http://localhost:8080/tag/000060000001-30.html" >家庭财产险</a>
+						
+					
+						
+							<a class="news_color13" href="http://localhost:8080/tag/000144000001-30.html" >医疗责任保险</a>
+						
+					
+					</li>
+				</ul>
+			</div>
+		<div class="h12"></div>
+		<!--大家都关注 开始-->
+		<div class="columntit graybordert">大家都关注</div>
+		<ul class="txtlist txtlist_up">
+			
+
+				<li><a href="../../zhuanti/lc5/AG20140620001.shtml" target="_blank">测试一下啦</a></li>
+			
+
+				<li><a href="../../zhuanti/lc5/AG20140620001.shtml" target="_blank">test标题</a></li>
+			
+
+				<li><a href="../../zhuanti/zt1/AG20140528005.shtml" target="_blank">测试</a></li>
+			
+
+				<li><a href="../../zhuanti/zt3/AG20140509001.shtml" target="_blank">弟子规</a></li>
+			
+
+				<li><a href="../../zhuanti/zt2/AG20140508014.shtml" target="_blank">战争</a></li>
+			
+
+				<li><a href="../../zhuanti/zt1/AG20140508007.shtml" target="_blank">定律</a></li>
+			
+
+				<li><a href="../../huati/AG20140505001.shtml" target="_blank">现在最热门的话题就是即将到来的世界杯</a></li>
+				
+		</ul>
+		<!--大家都关注 结束-->
+		<!--广告 开始-->
+        <div class="ad300">
+        <script language='javascript' src='http://localhost:8080/js/340.js'></script>
+        </div>
+        <div class="ad300"> 
+        <script language='javascript' src='http://localhost:8080/js/339.js'></script>
+        </div>    
+		<!--加关注 开始-->
+		<div class="addattention">
+			<div class="addattentionleft"><a href="http://e.weibo.com/kaixinbao2012/profile" target="_blank"><img src="http://localhost:8080/images/addattentionlogo.gif" alt="开心保保险网" width="100" height="100" /></a></div>
+			<div class="addattentionright">
+				<h4><a href="http://e.weibo.com/kaixinbao2012/profile" target="_blank"><img src="http://localhost:8080/images/addattentiontxt.gif" width="84" height="16" alt="开心保保险网" align="absmiddle" /></a> 辽宁 大连</h4>
+				<h5>欢迎关注开心保微博</h5>
+				<h6>
+						<a href="http://e.weibo.com/kaixinbao2012" target="_blank"> <span>加关注</span></a>
+				</h6>
+			</div>
+		</div>
+		<!--加关注 结束-->
+		<!--关注微信 开始-->
+		<div class="micromsg">
+			<div class="micromsgleft"><img src="http://localhost:8080/images/mpvcode.gif" width="100" height="100" /></div>
+			<div class="micromsgright">
+				<h4>关注开心保微信</h4>
+				<h5>微信扫一下即可添加开心保<br/>官方微信，心动优惠及时掌握。</h5>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!--关注微信 结束-->
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<div class="part6">
+	<ul>
+	<!--循环：hotopic count：50-->
+	
+		<!--循环：hotopic count：50-->
+
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<!--循环：hotopic count：50-->
+
+	</div>
+</div>
+<!-- 公共底部 -->
+    <div class="g-main-con">
+       <div class="clear h20"></div>  
+            <!-- foot -->
+            <div class="g-weaper1200">
+                <div class="g-footer">
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon1 "></em>正品保险</dt>
+                      <dd>中国保监会监制</dd>
+                      <dd>保险公司专供</dd>
+                      <dd>高性价比产品</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon2 "></em>快捷投保</dt>
+                      <dd>全方位一键对比</dd>
+                      <dd>1对1保险顾问指导</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon3 "></em>省心服务</dt>
+                      <dd>电子保单快捷变更</dd>
+                      <dd>满200元发票包邮</dd>
+                      <dd>免费协助理赔无差异</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon4 "></em>安全可靠</dt>
+                      <dd>7x24小时客服不间断</dd>
+                      <dd>风险提示保障安全</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon5 "></em>品牌实力</dt>
+                      <dd>3年200万用户选择</dd>
+                      <dd>2013年最佳保险中介</dd>
+                      <dd>30家知名保险公司合作</dd>
+                    </dl>
+
+                    <div class="clear h20"></div>
+                </div>
+              </div>
+                  <div class="clear h20"></div>
+                        <div class="g-footer-bg">
+                <div class="g-weaper1200">
+                     <div class="g-footer2">
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon6 "></em>新手指南</dt>
+                            <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn1" target="_blank" rel="nofollow">如何注册</a>
+                            <a href="http://localhost:8080/about//xszn/index.shtml#xszn4" target="_blank" rel="nofollow">如何投保</a>
+                            <a href="http://localhost:8080/about/xszn/index.shtml#xszn3" target="_blank" rel="nofollow">找回密码</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon7 "></em>支付帮助</dt>
+                            <dd><a href="http://localhost:8080/about/4/index.shtml#zfbz2" target="_blank" rel="nofollow">支付方式</a><a href="http://localhost:8080/about/4/index.shtml#zfbz1" target="_blank" rel="nofollow">支付说明</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon8 "></em>保单服务</dt>
+                            <dd><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单查询</a>
+                            <a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg2" target="_blank" rel="nofollow">保单变更</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg3" target="_blank" rel="nofollow">保单取消</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg1" target="_blank" rel="nofollow">保单寄送</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon9 "></em>理赔服务</dt>
+                            <dd><a href="http://localhost:8080/about/2/index.shtml#lpbz1" target="_blank" rel="nofollow">理赔指南</a><a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔报案</a>
+                            <a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔案例</a></dd>
+                          </dl>
+                           <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon10 "></em>服务中心</dt>
+                            <dd><a href="http://localhost:8080/wj/shop/bill_query!queryBill.action" target="_blank" rel="nofollow">发票索取</a>
+                            <a href="http://localhost:8080/about/3/dayizonghui/index.shtml" target="_blank" rel="nofollow">常见问题</a></dd>
+                          </dl>
+                          <div class="clear h20"></div>
+                     </div>
+                     
+                    <div class="clear h20"></div>
+                     <!-- 热门专题 -->
+                </div>
+              </div>
+             <!-- 底部 -->
+                <div class="g-btn-footer">
+                <div class="g-weaper1200">
+                        <div class="g-f-left">
+                          <div class="botlink02">
+                <ul  class="clearfix">
+					<li><a href="http://localhost:8080/other/about/" rel="nofollow">关于开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/news/" rel="nofollow">开心保要闻</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/jobs/" rel="nofollow">加入开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/sitemap/" >网站地图</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/legal/" rel="nofollow">法律声明</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/contact/" rel="nofollow">联系我们</a></li>
+					<li>|</li>
+					<li><a href="http://u.kaixinbao.com/" target="_blank" rel="nofollow">分销联盟</a></li>
+					<li>|</li>
+					<!-- <li><a href="http://kaixinbao.tmall.com/" target="_blank" rel="nofollow">开心保天猫店</a></li>
+					<li>|</li>
+					<li><a href="http://temai.kaixinbao.com/" target="_blank" rel="nofollow">特价机票</a></li>
+					<li><a href="http://wap.kaixinbao.com/" target="_blank" >移动版</a></li> -->
+					<li><a href="http://www.kaixinbao.com/yxhd/isl-tra/" target="_blank" rel="nofollow">微信版</a></li>                
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="copyright">		
+				<div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+				<div class="copyrightleft">Copyright 2012-2016 版权所有 网金保险销售服务有限公司</div>
+			</div>
+                        </div>
+                        <div class="g-f-right">
+                            <ul class="sl-floatcenter">
+          					
+ 
+				      			<li class="sl-floatcenter-item" ><a href="../../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36" height="33"/></a></li>
+				    		
+ 
+				      			<li class="sl-floatcenter-item" ><a href="../../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69" height="33"/></a></li>
+				    		 
+                          </ul>
+                        </div>
+                        <div class="clear"></div>
+                </div>
+          </div>
+    </div>
+  <div id="fix_nav" class="fix_nav">
+       <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" >在线客服</a>
+       <span class="fix-RichScan ">保单查询<div style="display: none;" class="weixinDiv tagshow"><img src="http://localhost:8080/images/wxnew.png">微信查保单</div></span>
+       <span class="fix-top" id="gotop">回到顶部</span>
+  </div>
+    <!-- 公共底部 -->
+<script type="text/javascript" src="http://localhost:8080/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jqueryupdate.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_header.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/xiaoneng_CustomerService.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/artDialog.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/login.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/iframeTools.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+<script src="http://localhost:8080/js/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+jQuery().ready( function() {
+	var riskType = jQuery("#RiskType").val();
+	var riskCompany = jQuery("#RiskCompany").val();
+	var riskProduct1 = jQuery("#RiskProduct1").val();
+	var riskProduct2 = jQuery("#RiskProduct2").val();
+	jQuery.ajax({
+		url: "http://localhost:8080/wj/shop/article!ajaxProduct.action?riskType="+riskType+"&riskCompany="+riskCompany+"&riskProduct1="+riskProduct1+"&riskProduct2="+riskProduct2,
+		type: "post",
+		dataType: "json",
+		success: function(data){
+			var obj = eval(data);
+			 jQuery("#products").html(obj.products) ;
+	 	}
+	});
+});
+jQuery(function(){
+	jQuery('#change_33 div.changeDiv').soChange({
+        thumbObj: '#change_33 .ul_change_a2 span',
+        thumbNowClass: 'on',
+        changeTime: 4000
+    })
+})
+</script>
+</body>
+</html>

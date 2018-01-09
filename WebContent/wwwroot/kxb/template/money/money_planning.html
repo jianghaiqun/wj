@@ -1,0 +1,236 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+    <meta name="keywords" content="${catalog.Meta_Keywords}" />
+	<meta name="description" content="${catalog.Meta_Description}" />
+    <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+    <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/money/new_money.css"/>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" /> 
+<!--位置信息 开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link>
+		</div>
+	</div>
+<!--位置信息 结束-->
+    <div class="money_warper cf">
+		<div class="money_nav cf">
+			<ul class="money_main_nav cf">
+				<li class="mon_nav1">
+					<a href="${Site.URL}/touzi-licai/" >理财首页</a>
+				</li>
+				<li class="mon_nav2">
+					<a href="${Site.URL}/touzi-licai/zhishi/">如何理财</a>
+				</li>
+				<li class="mon_nav3">
+					<a href="${Site.URL}/touzi-licai/guihua/" class="active">理财规划</a>
+				</li>
+			</ul> 
+		</div>
+
+    <div class="money_warper_up">
+        <img src="${Site.StaticResourcePath}/${Catalog.advertisement}" width="980" height="150" class="planngingad"  alt=""/>
+        <div class="money_plan_box cf">
+            <div class="money_zt_box">
+                <ul class="money_zt_left jtlc_img1">
+                    <li class="zt_img_b">
+                        <img  id="zt_con1"  onclick="setTab('zt_con',1,9)" src="${Site.StaticResourcePath}/images/money/money_gh_10.jpg" width="189" height="189"  alt=""/>
+
+                    </li>
+                    <li class="zt_img_b" >
+                        <img  id="zt_con2"  onclick="setTab('zt_con',2,9)" src="${Site.StaticResourcePath}/images/money/money_gh_12.jpg" width="189" height="189"  alt=""/>
+
+                    </li>
+                    <li class="zt_img_b" >
+                        <img id="zt_con3"  onclick="setTab('zt_con',3,9)" src="${Site.StaticResourcePath}/images/money/money_gh_15.jpg" width="189" height="189"  alt=""/>
+
+                    </li>
+                </ul>
+
+                <div class="plannging_zt_r"> <b class="money_news_t"><a class="money_more_m" href="${Site.URL}/touzi-licai/zixun/xinwen/" target="_blank">理财新闻</a></b>
+                    <ul class="plannging_ul">
+                         <cms:list item="article" cmsorder="1" name="理财新闻" tag="理财规划" level="all" count="6">
+	                   	    <li class="plannging_listli">
+	                            <a target="_blank" href="${Site.URL}/${Article.URL}">${article.title|CharWidth=16}</a>
+	                        </li>
+	                    </cms:list>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="zt_sff cf">
+                    <div class="money_zt_des" id="con_zt_con_1" style="display:none">
+                        <p> <em class="sanjiao sanjiao1"></em>
+                            <cms:list item="article" cmsorder="2" name="工薪家庭" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                        </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/10000001/" class="go_tj_zt">进入专题</a>
+                    </div>
+                     <div class="money_zt_des" id="con_zt_con_2" style="display:none">
+                        <p>
+                            <em class="sanjiao sanjiao2"></em>
+                            <cms:list item="article" cmsorder="3" name="单身青年" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                        </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/10000002/" class="go_tj_zt">进入专题</a>
+                    </div>
+                    <div class="money_zt_des" id="con_zt_con_3" style="display:none">
+                        <p> <em class="sanjiao sanjiao3"></em>
+                            <cms:list item="article" cmsorder="4" name="退休家庭" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                        </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/10000003/" class="go_tj_zt">进入专题</a>
+                    </div>
+                </div>
+            </div>
+            <div class="money_zt_box">
+                <ul class="money_zt_left jtlc_img2">
+                    <li class="zt_img_b">
+                        <img  id="zt_con4"  onclick="setTab('zt_con',4,9)"  src="${Site.StaticResourcePath}/images/money/money_gh_26.jpg" width="189" height="189"  alt=""/>
+                    </li>
+                    <li class="zt_img_b">
+                        <img  id="zt_con5"  onclick="setTab('zt_con',5,9)"  src="${Site.StaticResourcePath}/images/money/money_gh_27.jpg" width="189" height="189"  alt=""/>
+
+                    </li>
+                    <li class="zt_img_b">
+                        <img  id="zt_con6"  onclick="setTab('zt_con',6,9)"  src="${Site.StaticResourcePath}/images/money/money_gh_28.jpg" width="189" height="189"  alt=""/>
+                    </li>
+                </ul>
+                <div class="plannging_zt_r">
+                    <b class="money_news_t"><a class="money_more_m" href="${Site.URL}/touzi-licai/zixun/changshi/" target="_blank">理财常识</a></b>
+                    <ul class="plannging_ul">
+                       <cms:list item="article" cmsorder="5" name="理财常识" tag="理财规划" level="all" count="6">
+	                   	    <li class="plannging_listli">
+	                            <a target="_blank" href="${Site.URL}/${Article.URL}">${article.title|CharWidth=16}</a>
+	                        </li>
+	                    </cms:list>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="zt_sff cf">
+                    <div class="money_zt_des" id="con_zt_con_4" style="display:none">
+                        <p>
+                            <em class="sanjiao sanjiao1"></em>
+                            <cms:list item="article" cmsorder="6" name="老人理财" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                        </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/20000001/" class="go_tj_zt">进入专题</a>
+                    </div>
+                    <div class="money_zt_des" id="con_zt_con_5" style="display:none">
+                        <p>
+                            <em class="sanjiao sanjiao2"></em>
+                            <cms:list item="article" cmsorder="7" name="少儿理财" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                        </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/20000002/" class="go_tj_zt">进入专题</a>
+                    </div>
+                    <div class="money_zt_des" id="con_zt_con_6" style="display:none">
+                        <p>
+                            <em class="sanjiao sanjiao3"></em>
+                            <cms:list item="article" cmsorder="8" name="女性理财" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                        </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/20000003/" class="go_tj_zt">进入专题</a>
+                    </div>
+                </div>
+            </div>
+            <div class="money_zt_box">
+                <ul class="money_zt_left jtlc_img3">
+                    <li class="zt_img_b">
+                        <img  id="zt_con7"  onclick="setTab('zt_con',7,9)"  src="${Site.StaticResourcePath}/images/money/money_gh_34.jpg" width="189" height="189"  alt=""/>
+
+                    </li>
+                    <li class="zt_img_b">
+                        <img id="zt_con8"  onclick="setTab('zt_con',8,9)"  src="${Site.StaticResourcePath}/images/money/money_gh_36.jpg" width="189" height="189"  alt=""/>
+
+                    </li>
+                    <li class="zt_img_b">
+                        <img id="zt_con9"  onclick="setTab('zt_con',9,9)"  src="${Site.StaticResourcePath}/images/money/money_gh_39.jpg" width="189" height="189"  alt=""/>
+
+                    </li>
+                </ul>
+                <div class="plannging_zt_r">
+                    <b class="money_news_t"><a class="money_more_m" href="${Site.URL}/touzi-licai/zixun/jiqiao/" target="_blank">理财技巧</a></b>
+                    <ul class="plannging_ul">
+	                    <cms:list item="article" cmsorder="9" name="理财技巧" level="all" tag="理财规划" count="6">
+	                   	    <li class="plannging_listli">
+	                            <a target="_blank" href="${Site.URL}/${Article.URL}">${article.title|CharWidth=16}</a>
+	                        </li>
+	                    </cms:list>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="zt_sff cf">
+                    <div class="money_zt_des" id="con_zt_con_7" style="display:none">
+                        <p>
+                            <em class="sanjiao sanjiao1"></em>
+                            <cms:list item="article" cmsorder="10" name="养老" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                        </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/30000001/" class="go_tj_zt">进入专题</a>
+                    </div>
+                    <div class="money_zt_des" id="con_zt_con_8" style="display:none">
+                        <p>
+                            <em class="sanjiao sanjiao2"></em>
+                            <cms:list item="article" cmsorder="11" name="教育" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                        </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/30000002/" class="go_tj_zt">进入专题</a>
+                    </div>
+                    <div class="money_zt_des" id="con_zt_con_9" style="display:none">
+                        <p>
+                            <em class="sanjiao sanjiao3"></em>
+                           <cms:list item="article" cmsorder="12" name="投资" level="all" count="1">
+	                            ${article.summary|CharWidth=105}
+	                       </cms:list>
+                        </p>
+                        <a target="_blank" href="${Site.URL}/touzi-licai/guihua/30000003/" class="go_tj_zt">进入专题</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="money_hot cf">热门推荐</h3>
+        <div class="money_tj_box money_tj_up cf">
+		  
+		   <cms:list item="article" cmsorder="13" level="all" count="2" hasAttribute="hot,newRecommend" name="理财保险">
+				<dl class="money_tj <% if(i==0) write("money_bor_bg");%>">
+				<dd>
+					<h2 class="money_tj_titile">
+						<a target="_blank" href="${Site.URL}/${Article.URL}">${article.title|CharWidth=15}</a>
+					</h2>
+					<p class="money_tj_des">${article.ERiskFeatures|CharWidth=60}</p>
+
+				</dd>
+				<dd class="money_tj_bom">
+					<p class="money_tj_sy">
+						预期年化收益率 <em>${article.ProfitRate}</em>
+					</p>
+					<a target="_blank" href="${Site.URL}/${Article.URL}" class="money_tj_go">查看详情</a>
+				</dd>
+				</dl>
+          	 </cms:list>
+			
+		</div>
+    </div>
+</div>
+    <div class="clear"></div>
+
+<cms:include file="block/kxb_footer_new_common.shtml"></cms:include>
+<cms:include file="block/community_v1.shtml" />
+
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+</body>
+</html>

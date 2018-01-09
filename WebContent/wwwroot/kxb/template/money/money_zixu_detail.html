@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb=“http://open.weibo.com/wb”>
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<cms:include file="block/kxb_header_new_css.shtml" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_information.css"  />
+
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body> 
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!--位置信息 开始--> 
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link> <span class="separator">></span>${Article.title}
+		</div>
+	</div>
+<!--位置信息 结束-->
+<!--主体 开始-->
+<div class="wrap980 mainbgl644">
+	<!--左边 开始-->
+	<div class="left644">
+		<!--文章 开始-->
+		<div class="article">
+			<h1 class="articletit">${article.title}</h1>
+			<div class="articledate02">发布日期：${Article.PublishDate|Format=yyyy-MM-dd}</div>
+			<div id="ajaxad">${article.content}</div>
+		</div>
+		<!--文章 结束--> 
+		<div class="shareandkeyword">
+			<!--分享到 开始-->
+			<div class="articleshare">
+			<div class="bshare-custom icon-medium"><span class="articlekeyword"><font size="2">分享到:</font><a class="bshare-qzone" title="分享到QQ空间"></a>
+			<a class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+			<a class="bshare-renren" title="分享到人人网"></a>
+			<a class="bshare-douban" title="分享到豆瓣"></a>
+			<a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+			</span></div>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+			</div>
+			<!--分享到 结束-->
+			<!--关键词 开始-->
+			<div class="articlekeyword">关键词：<span>${article.tag|taglink=Y}</span></div>
+			<!--关键词 结束-->
+		</div>
+		<!--上一篇下一篇 开始-->
+		<div class="articlepage"><a href="${Article.PrevLink}" target="_blank">←</a>&nbsp;&nbsp;下一篇：<a href="${Article.PrevLink}" target="_blank">${Article.PrevTitle}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上一篇：<a href="${Article.NextLink}" target="_blank">${Article.NextTitle}</a>&nbsp;&nbsp;<a href="${Article.NextLink}" target="_blank">→</a></div>
+		<!--上一篇下一篇 结束-->
+		<div class="inforandaq">
+			<!--相关资讯 开始-->
+			<div class="relatedinfor2">
+				<div class="columntit">相关资讯</div>
+				<ul class="txtlist12_listone">
+				  	<cms:list item="article" cmsorder="1" tag="${Article.tag}" level="all" 
+				  	type="rand" name="理财资讯" count="10" condition=" title !='${Article.title}' " >
+						<li><a href="${Site.URL}/${Article.URL}" target="_blank">${article.title|substrwidth=19}</a></li>
+				  	</cms:list>	
+				</ul>
+			</div>
+			<!--相关资讯 结束-->
+		</div>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="right336">
+		<!--图片切换 开始-->
+		<div id="KinSlideshow" style="width:300; height:250;">
+			<cms:imageplayer code="bxlc_detail_right" type="0" width="300" height="250" />
+        </div>
+		<!--图片切换 结束-->
+		<input type="hidden" id="ArticleID" value="${article.id}"/>
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			<cms:list item="article" cmsorder="2" level="all" count="2" hasAttribute="hot" name="理财保险">
+				<li>
+					<h4><a href="${Site.URL}/${Article.URL}" title="${article.title}"><img src="${Site.ProductResourcePath}${Article.ProductLogo}" alt="${Article.title}" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="${Site.URL}/${Article.URL}" title="${article.title}" >${article.title|substrwidth=24}</a></h5>
+					</div>
+				</li>
+			</cms:list>
+		</ul>
+		<!--热销保险产品 结束-->
+		<!--热门文章推荐 开始-->     
+		<div class="columntit graybordert">热门文章推荐</div>
+		<ul class="txtlist">
+			<cms:list item="article" cmsorder="3" level="all" type="rand" name="理财新闻" count="2" >
+				<li><a href="${Site.URL}/touzi-licai/zixun/xinwen/" target="_blank">新闻</a> |&nbsp;&nbsp;<a href="${Site.URL}/${Article.URL}" target="_blank">${article.title|substrwidth=16}</a></li>
+			</cms:list>
+			<cms:list item="article" cmsorder="4" level="all" type="rand" name="理财常识" count="2" >
+				<li><a href="${Site.URL}/touzi-licai/zixun/changshi/" target="_blank">常识</a> |&nbsp;&nbsp;<a href="${Site.URL}/${Article.URL}" target="_blank">${article.title|substrwidth=16}</a></li>
+			</cms:list>
+			<cms:list item="article" cmsorder="5" level="all" type="rand" name="理财技巧" count="2" >
+				<li><a href="${Site.URL}/touzi-licai/zixun/jiqiao/" target="_blank">技巧</a> |&nbsp;&nbsp;<a href="${Site.URL}/${Article.URL}" target="_blank">${article.title|substrwidth=16}</a></li>
+			</cms:list>
+		</ul>
+		<!--热门文章推荐 结束-->
+			<div class="columntit graybordert">热门标签</div>
+			<div class="news_rmbj news_bor_hui news_zsbj">
+				<ul>
+					<li>
+					<cms:list item="hotlabels" cmsorder="6"  name="热门标签" count="20" type="hot" tag="${Article.tag}">
+						<% if(i%7==0){%>
+								<a class="news_color12" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==1){%>
+								<a class="news_color14" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==2){%>
+								<a class="news_color19" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==3){%>
+								<a class="news_color13" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==4){%>
+								<a class="news_color15" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==5){%>
+								<a class="news_color16" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==6){%>
+								<a class="news_color14" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% } %>
+					</cms:list>
+					</li>
+				</ul>
+			</div>
+	
+		<!--大家都关注 开始-->
+		<div class="columntit graybordert">大家都关注</div>
+		<ul class="txtlist">
+			<cms:list item="attention" cmsorder="7" name="保险专题" count="7" tag="${Article.tag}">
+				<li><a href="${Site.URL}/${attention.url}" target="_blank">${attention.title}</a></li>
+			</cms:list>	
+		</ul>
+		<!--大家都关注 结束-->
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<script src="${Site.JsResourcePath}/js/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+jQuery().ready( function() {
+	var riskType = jQuery("#RiskType").val();
+	var riskCompany = jQuery("#RiskCompany").val();
+	jQuery.ajax({
+		url: "${Site.prop6}/shop/article!ajaxProduct.action?riskType="+riskType+"&riskCompany="+riskCompany+"",
+		type: "post",
+		dataType: "json",
+		success: function(data){
+			var obj = eval(data);
+			 jQuery("#products").html(obj.products) ;
+	 	}
+	});
+});
+jQuery(function(){
+	jQuery("#KinSlideshow").KinSlideshow({
+			moveStyle:"down",
+			intervalTime:8,
+			isHasTitleBar:false,
+			mouseEvent:"mouseover",
+			titleFont:{TitleFont_size:14,TitleFont_color:"#FF0000"}
+	});
+})
+</script>
+</body>
+</html>

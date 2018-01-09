@@ -1,0 +1,36 @@
+<% DataTable dt_1 = TemplateData.getDocList("article","公积金专题","current","null","null","1","null","null","null");
+  if(dt_1==null){write("没有找到栏目。parent：null  catalog："+"公积金专题");}else{
+ int rdCnt=dt_1.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_1  = dt_1.getDataRow(i);
+ int rdIdx=i;
+%>
+  
+		<h1  class="stencil_title">"${article_1.Title|CharWidth=26}"</h1>
+		<p class="stencil_min_des02">${article_1.Content}</p>
+		<ul class="stencil_nav_li sl-floatcenter clearfix">
+			<li class="sl-floatcenter-item"><a href="#part1"  >${article_1.Section1}</a></li>
+			<li class="sl-floatcenter-item"><a href="#part2"  >${article_1.Section2}</a></li>
+			<li class="sl-floatcenter-item"><a href="#part3"  >${article_1.Section3}</a></li>
+			<li class="sl-floatcenter-item"><a href="#part4"  >${article_1.Section4}</a></li>
+		</ul>
+		<h2 class="part_titles"  id="part1">${article_1.Section1}</h2>
+		<div class=" clearfix  fleft one_box02">
+			<div class="bor_s h280 padding11">
+				<span class="floatlpic"><a href="${article_1.Section1Title1Link}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${article_1.Section1Image1}" width="267" height="200" /></a></span>
+				<h3 class="zx_news_title"><a href="${article_1.Section1Title1Link}" target="_blank">${article_1.Section1Title1}</a></h3>
+				<p class="p02">${article_1.Section1Content1|CharWidth=70}</p>
+				<span class="more11 orange"><a href="${article_1.Section1Title1Link}" rel="nofollow" target="_blank">更多</a></span>	
+				<div class="dashbor_bnor"></div>
+				<h3 class="zx_news_title"><a href="${article_1.Section1Title2Link}" target="_blank">${article_1.Section1Title2}</a></h3>
+				<p class="p02">${article_1.Section1Content2|CharWidth=70}</p>
+				<span class="more11 orange"><a href="${article_1.Section1Title2Link}" rel="nofollow" target="_blank">更多</a></span>	
+				<div class="dashbor_bnor"></div>
+				<h3 class="zx_news_title"><a href="${article_1.Section1Title3Link}" target="_blank">${article_1.Section1Title3}</a></h3>
+				<p class="p02">${article_1.Section1Content3|CharWidth=120}</p>
+				<span class="more11 orange"><a href="${article_1.Section1Title3Link}" rel="nofollow" target="_blank">更多</a></span>	
+			</div>
+			<div class="bor_shadow_660"></div>
+		</div>
+	<%}}%>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+<cms:list item="article" level="current" name="公积金专题" count="1" >
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</cms:list>
+</title>
+
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/base.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body>
+<!--临时head 开始-->
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<!--临时head 结束-->
+<div class="wcont_body">
+<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a> 
+		</div>
+   <cms:list item="article" level="current" name="公积金专题" count="1" >  
+		<h1  class="stencil_title">"${Article.Title|CharWidth=26}"</h1>
+		<p class="stencil_min_des02">${Article.Content}</p>
+		<ul class="stencil_nav_li sl-floatcenter clearfix">
+			<li class="sl-floatcenter-item"><a href="#part1"  >${Article.Section1}</a></li>
+			<li class="sl-floatcenter-item"><a href="#part2"  >${Article.Section2}</a></li>
+			<li class="sl-floatcenter-item"><a href="#part3"  >${Article.Section3}</a></li>
+			<li class="sl-floatcenter-item"><a href="#part4"  >${Article.Section4}</a></li>
+		</ul>
+		<h2 class="part_titles"  id="part1">${Article.Section1}</h2>
+		<div class=" clearfix  fleft one_box02">
+			<div class="bor_s h280 padding11">
+				<span class="floatlpic"><a href="${Article.Section1Title1Link}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section1Image1}" width="267" height="200" /></a></span>
+				<h3 class="zx_news_title"><a href="${Article.Section1Title1Link}" target="_blank">${Article.Section1Title1}</a></h3>
+				<p class="p02">${Article.Section1Content1|CharWidth=70}</p>
+				<span class="more11 orange"><a href="${Article.Section1Title1Link}" rel="nofollow" target="_blank">更多</a></span>	
+				<div class="dashbor_bnor"></div>
+				<h3 class="zx_news_title"><a href="${Article.Section1Title2Link}" target="_blank">${Article.Section1Title2}</a></h3>
+				<p class="p02">${Article.Section1Content2|CharWidth=70}</p>
+				<span class="more11 orange"><a href="${Article.Section1Title2Link}" rel="nofollow" target="_blank">更多</a></span>	
+				<div class="dashbor_bnor"></div>
+				<h3 class="zx_news_title"><a href="${Article.Section1Title3Link}" target="_blank">${Article.Section1Title3}</a></h3>
+				<p class="p02">${Article.Section1Content3|CharWidth=120}</p>
+				<span class="more11 orange"><a href="${Article.Section1Title3Link}" rel="nofollow" target="_blank">更多</a></span>	
+			</div>
+			<div class="bor_shadow_660"></div>
+		</div>
+	</cms:list>   
+    <div class="clearfix  fright one_box03">
+		<div class="bor_s h300">
+			<h3 class="img_p_title">热销保险产品推荐</h3>
+			<ul class="hotprodulist">
+			<cms:list item="article" level="current" name="${catalog.ProductArea}" type="rand"  count="5" >
+				<li><span class="produpic53"><a href="${Article.Link}"><img src="${Site.ProductResourcePath}/${Article.Logo}" width="53" height="53" /></a></span><h3 class="font14 rxtiti"><a href="${Article.Link}">${Article.title|CharWidth=15}</a></h3><p class="gray">${Article.AdaptPeopleInfo|CharWidth=17}</p><div class="clear"></div></li>
+				
+			</cms:list>	
+			</ul>
+		</div>
+		<div class="bor_shadow_294"></div>
+	</div>
+    <div class="h20"></div>
+    <cms:list item="article" level="current" name="公积金专题" count="1" > 
+	<h2 class="part_titles" id="part2">${Article.Section2}</h2>
+	</cms:list>
+	<div class="w980">
+		<div class="bor_s padding10 ">
+		<div class="tab"> 
+             <ul> 
+                <li id="one1" onMouseOver="setTab('one',1,4)" class="hover"><a href="javascript:void(0);">资讯</a></li>
+				<li id="one2" onMouseOver="setTab('one',2,4)" ><a href="javascript:void(0);">百科</a></li>
+				<li id="one3" onMouseOver="setTab('one',3,4)" ><a href="javascript:void(0);">问答</a></li>
+				<li id="one4" onMouseOver="setTab('one',4,4)" ><a href="javascript:void(0);">知识</a></li>
+				<li><a href="#">&nbsp;</a></li>
+             </ul>
+             <div class="clear"></div>
+        </div>
+		<div class="tabcont" id="con_one_1">
+			<p><a href="${Site.URL}/zixun/" style="color:#FF6600" target="_blank">更多</a></p>
+			<ul class="txtlist05 graytxt">
+				<cms:list item="article" level="all" type="rand" tag="${catalog.tag2}" count="16" name="保险资讯">
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=15}</a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="tabcont" id="con_one_2" style="display:none;">
+			<p><a href="${Site.URL}/baike/" style="color:#FF6600" target="_blank">更多</a></p>
+			<ul class="txtlist05 graytxt">
+				<cms:list item="article" level="all" type="rand" tag="${catalog.tag2}" count="16" name="保险百科">
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=15} </a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="tabcont" id="con_one_3" style="display:none;">
+			<p><a href="${Site.URL}/wenda/" style="color:#FF6600" target="_blank">更多</a></p>
+			<ul class="txtlist05 graytxt">
+				<cms:list item="article" level="all" type="rand" tag="${catalog.tag2}" count="16" name="保险问答">
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=15} </a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="tabcont" id="con_one_4" style="display:none;">
+			<p><a href="${Site.URL}/zhishi/" style="color:#FF6600" target="_blank">更多</a></p>
+			<ul class="txtlist05 graytxt">
+				<cms:list item="article" level="all" type="rand" tag="${catalog.tag2}" count="16" name="保险知识">
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=15} </a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="h10"></div>
+		</div>
+		
+	</div>
+	<cms:list item="article" level="current" name="公积金专题" count="1" >
+	<div class="h20"><div class="bor_shadow_980"></div></div>
+	<h2 class="part_titles"  id="part3">${Article.Section3}</h2>
+	<div class="stenmore orange"><a href="${Article.Section3Link}" target="_blank">更多</a></div>
+	</cms:list>
+	<div class="w980">
+		<div class="bor_s padding10">
+			<ul class="txtlist01b graytxt">
+			<cms:list item="article"   name="公积金查询" hasAttribute="hot">
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=12}</a></li>
+			</cms:list>
+			<div class="h10"></div>
+			</ul>
+			
+		</div>
+	</div>
+	
+	<cms:list item="article" level="current" name="公积金专题" count="1" >
+	<div class="h20"><div class="bor_shadow_980"></div></div>
+           <div class="grid-c">
+				<div class="ad_980 boder_h">
+           	    <a href="${Article.adLink}" target="_blank"><img src="${Site.StaticResourcePath}/${Article.ad}" width="978" height="148" /></a>
+                </div>
+                <div class="bor_shadow_980"></div>
+		   </div>
+    </cms:list>
+	<div class="h20"></div>
+	<cms:list item="article" level="current" name="公积金专题" count="1" >
+	<h2 class="part_titles"  id="part4">${Article.Section4}</h2>
+	<div class="stenmore orange"><a href="${Article.Section4Link}"  target="_blank">更多</a></div>
+	</cms:list>
+	<div class="w980">
+		<div class="bor_s padding10">
+			<ul class="txtlist01b graytxt">
+				<cms:list item="article"  name="公积金管理" hasAttribute="hot">
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=12}</a></li>
+				</cms:list>
+			</ul>
+			<div class="h10"></div>
+		</div>
+	</div>
+	<div class="h30"><div class="bor_shadow_980"></div></div>
+    <ul class="orter_list">
+		<cms:list item="article" level="none" condition="type = 1 and id in ( select id from (select id from (select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword1}%' limit 4) a1 union select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword2}%' limit 5) a2 union select id from ( select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1  order by rand() limit 9 ) a3)c1 limit 9)c2)" count="9" >
+				<li><a href="${Article.Link}" target="_blank">${Article.Title} </a></li>
+		</cms:list>
+	</ul>
+	<div class="h30"></div>
+</div>
+         
+<!--临时foot 开始-->
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<!--临时foot 结束-->
+</body>
+</html>

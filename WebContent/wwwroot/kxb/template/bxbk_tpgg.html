@@ -1,0 +1,37 @@
+<!--大家都关注 开始-->
+		<div class="columntit graybordert">大家都关注</div>
+		<ul class="txtlist txtlist_up">
+			<cms:list item="article" level="all" name="保险专题" hasAttribute="newRecommend" count="7" >
+				<li><a href="${article.link}" target="_blank">${article.title}</a></li>
+			</cms:list>	
+		</ul>
+		<!--大家都关注 结束-->
+		<!--广告 开始-->
+        <div class="ad300">
+        <cms:ad name="保险百科广告位" size="320*75" type="1"> </cms:ad>
+        </div>
+        <div class="ad300"> 
+        <cms:ad name="保险百科广告位1" size="320*75" type="1"> </cms:ad>
+        </div>    
+		<!--加关注 开始-->
+		<div class="addattention">
+			<div class="addattentionleft"><a href="http://e.weibo.com/kaixinbao2012/profile" target="_blank"><img src="${Site.StaticResourcePath}/images/addattentionlogo.gif" alt="开心保保险网" width="100" height="100" /></a></div>
+			<div class="addattentionright">
+				<h4><a href="http://e.weibo.com/kaixinbao2012/profile" target="_blank"><img src="${Site.StaticResourcePath}/images/addattentiontxt.gif" width="84" height="16" alt="开心保保险网" align="absmiddle" /></a> 辽宁 大连</h4>
+				<h5>欢迎关注开心保微博</h5>
+				<h6>
+						<a href="http://e.weibo.com/kaixinbao2012" target="_blank"> <span>加关注</span></a>
+				</h6>
+			</div>
+		</div>
+		<!--加关注 结束-->
+		<!--关注微信 开始-->
+		<div class="micromsg">
+			<div class="micromsgleft"><img src="${Site.StaticResourcePath}/images/mpvcode.gif" width="100" height="100" /></div>
+			<div class="micromsgright">
+				<h4>关注开心保微信</h4>
+				<h5>微信扫一下即可添加开心保<br/>官方微信，心动优惠及时掌握。</h5>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!--关注微信 结束-->

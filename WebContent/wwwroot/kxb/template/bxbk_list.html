@@ -1,0 +1,205 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href="${Site.StaticResourcePath}/style/StyCss.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/BaikeSty.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/infor.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+<div class="BaikeMiddArea">
+<cms:include file="block/kxb_header.shtml" />
+		<div class="daohang">
+			<span class="daohang_home"></span>
+		<cms:link type="currentPositionList"></cms:link>
+		</div>
+    <div class="BaikeLeft mb10 w800 margt10"><!--   Left  begin   -->
+        <div class="BaikeColumnArea_1 mb10"><!--   精彩词条  begin   -->
+            <div class="TitleArea"><div class="TitleBg">精彩词条</div></div>
+            <div class="ColumnCont">
+                <div class="ImgArea">
+                <cms:list item="Article" level="all" count="1" name="保险百科" type = "top">
+				<img src="${Site.StaticResourcePath}wwwroot/test/${Article.logo}" width="180" height="157" alt="${Article.title}"/> 
+				</cms:list>
+				</div>
+                <div class="TxtArea">
+				<cms:list item="Article"  type = "top" count="1"  name="保险百科">	
+                    <p >${Article.Title}</p>
+                    <h2>&nbsp;</h2>
+                    <h5>${Article.Summary}<a href="${Article.Link}">[阅读全文]</a></h5>
+					</cms:list>
+                    <div class="DotLine_1"></div>
+                    <ul>
+					<cms:list item="Article" level="all" type = "top" count="6"  name="保险百科">	
+                        <li><span><a href="${Article.Link}">${Article.title}</a></span>${Article.Content}</li>
+					</cms:list>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div><!--   精彩词条  end   -->
+      
+        <div class="BaikeColumnArea_3 fl mr10 mb10"><!--   热门词条  begin   -->
+        	<div class="TitleArea"><div class="TitleTxt">热门词条</div><div class="TitleMore"><a href="#">更多>></a></div></div>
+            <div class="ColumnCont">
+			<cms:list item="Article" level="all" count="1"  name="保险百科" hasAttribute = "hot,image">
+            	<div class="ImgArea fl">				
+            	<img src="${Site.StaticResourcePath}wwwroot/test/${Article.logo}" width="180" height="157" alt="${Article.title}" /> 
+            	</div>
+                <div class="HotTxtArea">
+                	<p >${Article.Title} </p>
+                	<h2 class="tc">&nbsp;</h2>
+                    <h5>${Article.Content}<a href="${Article.Link}">[阅读全文]</a></h5>
+                </div>
+		    </cms:list>
+                <div class="clear"></div>
+                <div class="DotLine_1"></div>
+                <ul>
+                    <cms:list item="Article" level="all" hasAttribute = "hot" count="6"  name="保险百科">	
+                        <li><span><a href="${Article.Link}">${Article.title}</a></span>${Article.Content}</a></li>
+					  </cms:list>
+                    </ul>
+                </ul>
+            </div>
+        </div><!--   热门词条  end   -->
+        
+        <div class="BaikeColumnArea_3 fl mb10"><!--   推荐词条  begin   -->
+        	<div class="TitleArea"><div class="TitleTxt">推荐词条</div><div class="TitleMore"><a href="#">更多>></a></div></div>
+            <div class="ColumnCont">
+			<cms:list item="Article" level="all" count="1"  name="保险百科" hasAttribute = "image,recemmend">
+            	<div class="ImgArea fl">				
+                <img src="${Site.StaticResourcePath}wwwroot/test/${Article.logo}" width="180" height="157" alt="${Article.title}" /> 		
+            	</div>
+                <div class="HotTxtArea ">
+                	<h2 class="w245">${Article.Title}</h2>
+                    <h5 class="w245">${Article.Content}   <a href="{Article.Link}">[阅读全文]</a></h5>
+                </div>
+			  </cms:list>
+			  <cms:list item="Article" level="all" count="1"  name="保险百科" hasAttribute="recemmend">
+                <div class="clear"><span class="ImgArea fl">
+				<img src="${Site.StaticResourcePath}wwwroot/test/${Article.logo}" width="180" height="157" alt="${Article.title}" /></span></div>
+                <div class="ImgArea fl">
+                </div>
+                <div class="HotTxtArea ">
+                	<h2 class="w245">${Article.Title}</h2>
+                    <h5 class="w245">${Article.Content} <a href="${Article.Link}">[阅读全文]</a></h5>
+                </div>
+				</cms:list>
+                <div class="clear"></div>
+                <div class="DotLine_1"></div>
+                <ul>
+                    <cms:list item="Article" level="all" hasAttribute = "recemmend" count="6"  name="保险百科">	
+                        <li><span><a href="${Article.Link}">${Article.title}</a></span>${Article.Content}</a></li>
+				  </cms:list>
+                </ul>
+            </div>
+        </div><!--   推荐词条  end   -->
+        
+       <!--  <div class="BaikeColumnArea_3 fl mr10 mb10">  图片百科  begin  
+        	<div class="TitleArea"><div class="TitleTxt">图片百科</div><div class="TitleMore"><a href="#">更多>></a></div></div>
+            <div class="ColumnCont">
+			<cms:list item="Article" level="all" count="6"  name="保险百科" hasAttribute = "image"><img src="${Site.StaticResourcePath}wwwroot/test/${Article.logo}" width="180" height="157" alt="${Article.title}" /></cms:list>
+			  <div class="h40"></div>
+          </div>
+        </div>  图片百科  end   -->
+        
+        <div class="BaikeColumnArea_3 fl mb10"><!--   最近更新  begin   -->
+        	<div class="TitleArea"><div class="TitleTxt">最近更新</div><div class="TitleMore"><a href="#">更多>></a></div></div>
+            <div class="ColumnCont">
+            	<div class="TxtListArea">
+                	<ul>
+					<cms:list item="Article"  count="6"  name="保险百科" Type="day">
+					<li><h5><a href="${Article.Link}">${Article.Title}</a></h5><span>${Article.PublishDate|Format=yyyy-MM-dd}</span></li>
+					</cms:list>
+                    </ul>
+					<div class="h30"></div>
+                </div>
+            </div>
+        </div><!--   最近更新  end   -->
+        <div class="clear"></div>
+        
+        <!--   分类词条  end   -->
+    </div>
+    <!--   Left  end   -->
+    
+    <div class="BaikeRight mb10">
+    	<!--   Right  begin   -->
+    	
+    <div class="BaikeColumnArea_2 mb10">
+        	<div class="BrimBg">
+            	<h5>我们共同撰写的保险百科全书已收录词条<span>238676</span>个。</h5>
+                <h4><div class="Ico_1 fl"></div><a href="${Site.prop6}/message/createBk.jsp">创建词条 >></a></h4>
+                <h4><div class="Ico_2 fl"></div><a href="${Site.prop6}/message/editBk.jsp">完善词条 >></a></h4>
+            </div>
+        </div>
+      <div class="BaikeColumnArea_6">
+     <div class="TitleArea"><div class="TitleTxt">名次分类</div></div>
+	            <div class="ColumnCont" style="height: 274px;" >
+            	<div class="TxtListArea" > 
+						<ul class="newlist01">
+						<cms:list item="catalog" type="article" level="child" name="保险百科">
+							<li><a href="${catalog.link}">${catalog.name}</a></li>
+		                </cms:list>					
+						</ul>
+					</div>
+					 </div>
+					</div>
+        <!--   待完善词条  end   -->
+
+        
+        <!--   产品推荐  begin   -->
+        <div class="BaikeColumnArea_6">
+        	<div class="TitleArea"><div class="TitleTxt">推荐产品</div><div class="TitleMore"><a href="#">更多>></a></div></div>
+            <div class="ColumnCont">
+            	<div class="TxtListArea">
+                    <ul>
+                        <cms:list item="Article" level="all" hasAttribute = "recemmend" count="10"  name="保险百科">	
+                        <li><span><a href="${Article.Link}">${Article.title}</a></span>${Article.Content}</a></li>
+				        </cms:list>
+                    </ul>
+                </div>
+            </div>
+        </div><!--   产品推荐  end   -->
+        
+        
+        <!--   热门词条  begin   -->
+        <div class="BaikeColumnArea_6">
+        	<div class="TitleArea"><div class="TitleTxt">热点词条</div><div class="TitleMore"><a href="#">更多>></a></div></div>
+            <div class="ColumnCont">
+            	<div class="TxtListArea">
+                    <ul>
+                        <cms:list item="Article" level="all" hasAttribute = "hot" count="10"  name="保险百科">	
+                        <li><span><a href="${Article.Link}">${Article.title}</a></span>${Article.Content}</a></li>
+				        </cms:list>
+                    </ul>
+                </div>
+            </div>
+        </div><!--   热门词条  end   -->
+        
+        
+        <!-- 广告    -->
+        <div class="mb10">
+	    <cms:ad name="保险百科广告位" size="190*200" type="1"> 
+	    	 {ZCMS:广告版位 矩形横幅 名称：保险百科广告位}  
+        </cms:ad>
+		</a></div>
+        
+        
+        
+        
+  </div><!--   Right  end   -->
+</div>
+<div class="clear"></div>
+
+<!--底部 开始-->
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</center><!--底部 结束-->
+</body>
+</html>

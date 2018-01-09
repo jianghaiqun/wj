@@ -1,0 +1,1067 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>会员登录</title>
+<meta name="Author" content="SINOSOFT Team" />
+<meta name="Copyright" content="SINOSOFT" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="http://www.kxb.com:81/style/commonality.css" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/style/redesign/re_header.css" />
+<script type="text/javascript" >
+	function doReflush(){
+		show_onclick_('validateCode22_','validateCode2_');
+		show_onclick_('registerUserName2_','registerUserName_');
+		jQuery("#wgqyzm_").html("");
+	}
+</script>
+<!-- <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDExODA2Nl8zMDEwNThfODAwMTE4MDY2Xw"></script> --></head>
+<body onload="doReflush();">
+<!--top头部-->
+        <div class="g-top">
+            <div class="g-weaper1200">
+                <div class="m-login">
+                <div id="NotLogin"><span class="m-login-p f-ib">您好，请</span><span class="m-login-a" id="NotLoginSpan"><a href="javascript:void(0);" id="headerShowLoginWindow"  onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">登录</a><em>/</em>
+                <a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">注册</a>
+                <span class="m-login-x" style="display:none"></span>
+                <!-- 未登录状态 显示图层 -->
+                    <div class="m-login-no" style="display:none;">
+                        <div class="m-lo-p">
+                            <div class="m-lo-img"></div>
+                            <img src="http://localhost:8080/images/redesign/photo_06.gif" alt="">
+                        </div>
+                        <div class="m-login-jf">
+                            <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag">会员专享，<br>积分换优惠</a>
+                        </div>
+                        <div class="clear h12"></div>
+                        <div class="m-integral">
+                            <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                        </div>
+                        <div class="m-Coupon">
+                        <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em>
+                        </div>
+                    </div>
+                <!-- 未登录状态 显示图层 end -->
+                </span></div>
+                <div id="YesLogin" style="display: none"><span class="m-login-p f-ib" id="YesLoginSpan">
+                                                         您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a>
+                                                         <i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                
+                <span class="m-login-x" style="display:none"></span>
+                <!--登录状态显示图层 -->
+                    <div class="m-login-yes z-hover-shadow"  style="display:none;">
+                           <div class="m-login-back">
+                               <span class="m-login-p m-login_p2">您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a><i id="headerLoginMemGradeIcon"  class="vip_k vip_top vip_k1" title=""></i></span><a href="javascript:void(0);" id="headerLogout" class="m-go-back">退出登录</a>
+                           </div> 
+                           <div class="m-lo-p">
+                            <div class="m-lo-img"><a href="###"></a></div>
+                            <img id="memberphoto" alt="">
+                           </div>
+                            <div class="m-login-user">
+                                <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="f_mi m-login-name2"></a><i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                                <p id="gradeinfo"></p>
+                            </div>
+                            <div class="clear h6"></div>
+                            <div class="m-integral2">
+                                <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                                <a id="memberPointsCount" href="http://localhost:8080/wj/shop/point!newList.action" class="m-jf-num"></a>
+                            </div>
+                            <div class="m-Coupon2">
+                            <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em><a id="CouponCount" href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="m-jf-num"></a>
+                            </div>
+                    </div>
+                <!--登录状态显示图层 end -->
+                </span></div>
+                </div>
+                <div class="m-top-fun">
+                      <span class="m-fun-span f-ib m-tel"><em class="i-tel"></em><i class="p-tel">4009-789-789</i></span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-WeChat" id="i-WeChat">
+                            <a href="###" class="m-fun-a hover"><em class="i-WeChat"></em></a>
+                            <div class="m-WeChatImg z-hover-shadow" style="display:none;">
+                                    <img src="http://localhost:8080/images/redesign/wechart.gif" alt="">
+                                    <p>关注微信公众号<br>轻松管理账单</p>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-service" id="i-service">
+                            <a href="###"  class="m-fun-a "><em class="i-service"></em></a>
+                            <div class="m-service_con z-hover-shadow" style="display:none;">
+                                 <ul class="m-service-li">
+                                <li><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单服务</a></li>
+                                <li><a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a></li>
+                                <li><a href="http://localhost:8080/lipei/" target="_blank" rel="nofollow">理赔申请</a></li>
+                            </ul>
+                            </div> 
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-cart" id="i-user-cart-span"><a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-fun-a " onclick="wxsend('gwclogin');">
+                            <em class="i-cart"></em><i class="m-cartNum" id="shopCartNo">0</i></a>
+                              <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-nologin" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>请先登录</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/gwclogin" vlpageid="gwclogin">登录</a>
+                            </div>
+                             <!-- 购物车为空 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>购物车中没有商品</span>
+                                    <a href="http://www.kaixinbao.com" class="m-btn-login">去选购商品</a>
+                            </div>
+                             <!-- 购物车不为空 -->
+                           <div class="m-cart_list z-hover-shadow" id="m-cart-yes" style="display:none;">
+                                <ul class="m-cart-ul" id="shopcartinfo">
+                                
+                                </ul>
+                                <div class="m-cart-go">
+                                    	共计<em id="shoptotal"></em> <a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-cart-to">去购物车</a>
+                                </div>
+                           </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-user" id="i-user-span"><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-fun-a " onclick="wxsend('memlogin');"><em class="i-user"></em></a>
+                            <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-user-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>会员中心</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/memlogin" vlpageid="memlogin">登录</a>
+                            </div>
+                            <!-- 用户已登录状态 -->
+                            <div class="m-user-yes z-hover-shadow" id="m-user-yes" style="display:none;">
+                              <dl class="m-order_dl m-order_dl1">
+                                  <dt>我的保单</dt>
+                                  <dd>
+	                                  <a id="prepay" href="http://localhost:8080/wj/shop/order_query!queryNoPayOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="preeffecitive" href="http://localhost:8080/wj/shop/order_query!queryNoEffectOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="effecitive" href="http://localhost:8080/wj/shop/order_query!queryEffectingOrder.action" class="f-ib" rel="nofollow"></a>
+                                  </dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>账户中心</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/profile!edit.action" class="f-ib" rel="nofollow">账户信息</a>
+                                  <a href="http://localhost:8080/wj/shop/point!newList.action" class="f-ib" rel="nofollow">我的积分</a>
+                                  <a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="f-ib" rel="nofollow">我的优惠券</a></dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>客户服务</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/stow!queryScan.action" class="f-ib" rel="nofollow">我的收藏</a>
+                                  <a href="http://localhost:8080/wj/shop/question!questionList.action" class="f-ib" rel="nofollow">保险问答</a>
+                                  <a href="http://localhost:8080/wj/shop/member_comment!queryComment.action" class="f-ib" rel="nofollow">商品评价</a><a href="http://localhost:8080/wj/shop/my_compare!show.action" class="f-ib">对比记录</a>
+                                  <a href="http://localhost:8080/wj/shop/my_consult!show.action" class="f-ib" rel="nofollow">我的咨询</a></dd>
+                              </dl>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                </div>
+            </div>
+        </div>
+   <!--top头部end-->
+   
+     <!-- header -->
+     <div class="g-header ">
+        <div class="g-weaper">
+        <a href="http://localhost:8080/" class="m-logo-a">
+            <img src="http://localhost:8080/images/redesign/logo.gif" height="70px" class="m-logo" alt="开心保保险网">
+        </a>
+        <img src="http://localhost:8080/images/redesign/f_logo.gif" class="m-flogo" height="70px" alt="保险服务">
+        <div class="clear"></div>
+        <!-- 导航开始 -->
+             <div class="g-nav">
+                <span class="g-nav-title"></span>
+             <div class="qs_boxs"   id="g-nav-box" class="qs_boxs" style="display:none;">
+                <dl class="que_dl que_dl_j1 que_nav_zk" id="que_lv_sf">    
+                <dt class="que_dl_dt"><em class="i-navicon i-nav1 f-ib"></em><a target="_blank" href="http://localhost:8080/lvyou-baoxian/">旅游保险</a><span class="z-que-zd"></span></dt>
+                    <dd class="que_dl_dd">
+                       <a target="_blank" href="http://localhost:8080/lvyou-baoxian/guonei/">境内</a>|<a target="_blank" href="http://localhost:8080/lvyou-baoxian/jingwai/">境外</a>|<a target="_blank" href="http://localhost:8080/lvyou-baoxian/shengenqianzheng/">申根</a>|<a target="_blank" href="http://localhost:8080/huixuan/0000000008.shtml">东南亚</a>
+                    </dd>
+  					 <dd class="que_dl_dd que_dl_dd2">
+                       <a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000024.shtml">美日加澳</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000010.shtml">亚洲</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000007.shtml">港澳</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000244.shtml">台湾</a>
+                    </dd>
+                  <!-- 旅游保险显示层-->
+                        <div class="m-travel-con z-hover-shadow tagshow"  style="display:none;"  id="que_lv_sf">
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">国内旅游险</dt>
+                                      <dd>
+                                         <!--循环：friendlink count：10-->
+
+
+										  		<a href="http://120.55.73.0:81/choose/0000000323.shtml" target="_blank" >户外运动</a>
+										  
+
+										  		<a href="http://120.55.73.0:81/choose/0000000331.shtml" target="_blank" >本市</a>
+										  
+
+										  		<a href="http://120.55.73.0:81/choose/0000000331.shtml" target="_blank" >境内旅游险</a>
+										                                        
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">境外旅游险</dt>
+                                      <dd>
+		                                   <!--循环：friendlink count：10-->
+
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >港澳游</a>
+										   
+
+												<a href="http://www.kaixinbao.com/huixuan/0000000244.shtml" target="_blank" >台湾游</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >东南亚</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >亚洲</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000224.shtml" target="_blank" >全球</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000269.shtml" target="_blank" >旅游险-申根签证</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                     <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特色保障</dt>
+                                      <dd>
+		                                   <!--循环：friendlink count：10-->
+
+
+												<a href="http://120.55.73.0:81/choose/0000000334.shtml" target="_blank" >海外务工</a>
+										   
+
+												<a href="http://" target="_blank" >住院津贴</a>
+										   
+
+												<a href="http://" target="_blank" >全年停留</a>
+										   
+
+												<a href="http://" target="_blank" >高原地区</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000333.shtml" target="_blank" >航班延误</a>
+										   
+
+												<a href="http://" target="_blank" >申根拒签</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000329.shtml" target="_blank" >自驾游</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000328.shtml" target="_blank" >东南亚</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000330.shtml" target="_blank" >安盛保险</a>
+										   
+
+												<a href="http://" target="_blank" >全年多次往返</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+                                       <!--循环：friendlink count：30-->
+
+
+									   		<a href="http://" target="_blank" >路华救援</a>
+									   
+
+									   		<a href="http://" target="_blank" >新华人寿</a>
+									   
+
+									   		<a href="http://" target="_blank" >华泰保险</a>
+									   
+
+									   		<a href="http://" target="_blank" >中国人保</a>
+									   
+
+									   		<a href="http://" target="_blank" >太平保险</a>
+									   
+
+									   		<a href="http://" target="_blank" >安盛天平</a>
+									   
+
+									   		<a href="http://" target="_blank" >太平洋财产险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >平安财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >安联财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/0000000325.shtml" target="_blank" >史带财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/0000000244.shtml" target="_blank" >美亚财险公司</a>
+									                                         
+                                      </dd>
+                                    </dl>
+                              </div>
+                              <div class="m-t-nav-right">
+                                     <dl class="m-travel-navDl">
+                                      <dt class="f-ib">推荐计划</dt>
+                                    </dl>
+                                    <div id="lvyouquick" >
+		                                
+
+											<div class="m-recommend-list">
+												<div class="clear"></div>
+					                            <a href="http://localhost:8080/lvyou-baoxian/282881.shtml" target="_blank" class="m-recommend-a">开心保安联“亚洲”豪华保障计划</a>
+			                                    <ul>
+			                                    	<li><span>紧急送返显关爱</span></li><li><span>旅程延误有补贴</span></li><li><span>宠物责任保障</span></li><li><span>家属探访有补贴</span></li>
+			                                    </ul>		
+			                                    <div class="clear h10"></div>		
+		                                        <div class="m-recommend-money">
+		                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+		                                            <span class="m-xj-money f-ib f_mi">￥20.00</span>
+		                                        </div>	
+		                                       	<a href="http://localhost:8080/lvyou-baoxian/282881.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+					                        </div>
+					                        <div class="clear h20"></div>
+							    		
+
+											<div class="m-recommend-list">
+												<div class="clear"></div>
+					                            <a href="http://localhost:8080/lvyou-baoxian/282838.shtml" target="_blank" class="m-recommend-a">平安畅游天下境外旅游全年保障计划</a>
+			                                    <ul>
+			                                    	<li><span>承保年龄到80岁</span></li><li><span>出行天数自由选</span></li><li><span>旅程延误给补偿</span></li><li><span>24小时紧急搜救</span></li><li><span>航班备降、迫降保险</span></li><li><span>旅行期间家庭财产保障</span></li>
+			                                    </ul>		
+			                                    <div class="clear h10"></div>		
+		                                        <div class="m-recommend-money">
+		                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+		                                            <span class="m-xj-money f-ib f_mi">￥475.00</span>
+		                                        </div>	
+		                                       	<a href="http://localhost:8080/lvyou-baoxian/282838.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+					                        </div>
+					                        <div class="clear h20"></div>
+							    		            
+                                    </div>
+                                    
+                              </div>
+                        </div>
+                  <!-- 旅游保险显示层end-->
+
+                </dl>
+                
+                <dl class="que_dl que_dl_j1 que_nav_zk">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav2 f-ib"></em><a target="_blank" href="http://localhost:8080/yiwai-baoxian/">意外保险</a><span class="z-que-zd"></span></dt>    
+                    <dd class="que_dl_dd">
+                        <a target="_blank" href="http://localhost:8080/yiwai-baoxian/renshen/">人身意外</a>|<a target="_blank" href="http://localhost:8080/yiwai-baoxian/jiaotong/">交通意外</a>|<a target="_blank" href="http://localhost:8080/yiwai-baoxian/hangkong/">航空意外</a>
+                    </dd>
+                    <dd class="que_dl_dd que_dl_dd2">
+                        <a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000014.shtml">少儿</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000015.shtml">老人</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000090.shtml">中青年</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000093.shtml">医疗补偿</a>
+                    </dd>
+                      <!-- 意外保险显示层 -->
+
+                        <div class="m-travel-con m-accident-con z-hover-shadow tagshow " style="display:none"  >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                      <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保障年龄</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特殊保障</dt>
+                                      <dd>
+					                       <!--循环：friendlink count：30-->
+
+
+										   <a href="http://120.55.73.0:81/choose/0000000341.shtml" target="_blank" >高额航空保险</a>
+										   
+
+										   <a href="http://120.55.73.0:81/choose/0000000340.shtml" target="_blank" >百万级综合意外</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000262.shtml" target="_blank" >太平洋财险</a>
+											
+
+											<a href="http://120.55.73.0:81/choose/0000000261.shtml" target="_blank" >太平养老</a>
+											
+
+											<a href="http://120.55.73.0:81/choose/0000000296.shtml" target="_blank" >中国人寿</a>
+											
+                                      </dd>
+                                    </dl>
+                              </div>
+
+                              <div class="m-t-nav-right">
+                                      <dl class="m-travel-navDl"><dt class="f-ib">推荐计划</dt></dl>
+                                    
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/283692.shtml" target="_blank" class="m-recommend-a">昆仑全年自驾无忧保障计划</a>
+		                                    <ul>
+		                                    	<li><span>打发时间佛啊监控</span></li><li><span>发斯蒂芬将阿里山的</span></li><li><span>阿斯顿飞九</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥13.85</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/283692.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/283597.shtml" target="_blank" class="m-recommend-a">富德交通工具空意外保障淘宝专用</a>
+		                                    <ul>
+		                                    	<li><span>fhissdfhsidf</span></li><li><span>dsufosdf</span></li><li><span>u9wrisi</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥4.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/283597.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		                                   
+                            </div>
+                        </div>
+                      <!-- 意外保险显示层 end -->
+                </dl> 
+                <dl class="que_dl que_dl_j1">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav3 f-ib"></em><a target="_blank" href="http://localhost:8080/jiankang-baoxian/">健康保险</a><span class="z-que-zd"></span></dt>        
+                    <dd class="que_dl_dd"><a href="http://www.kaixinbao.com/huixuan/0000000138.shtml" target="_blank">少儿重疾</a>|<a href="http://localhost:8080/jiankang-baoxian/tedingjibing/" target="_blank">特定疾病</a>|<a href="http://localhost:8080/jiankang-baoxian/zhuyuanyiliao/" target="_blank">住院治疗</a></dd>
+                	<dd class="que_dl_dd que_dl_dd2"><a href="http://www.kaixinbao.com/huixuan/0000000226.shtml" target="_blank">老年重疾</a>|<a href="http://www.kaixinbao.com/huixuan/0000000018.shtml" target="_blank">女性特定疾病</a></dd>
+                    <!-- 健康保险显示层 -->
+
+                        <div class="m-travel-con m-health-con z-hover-shadow tagshow " style="display:none"  >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                      <dl class="m-travel-navDl">
+                                      <dt class="f-ib">人群分类</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000339.shtml" target="_blank" >女性疾病保险</a>
+											
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特色保障</dt>
+                                      <dd>
+					                       <!--循环：friendlink count：30-->
+
+
+										   <a href="http://120.55.73.0:81/choose/0000000338.shtml" target="_blank" >低价保障型</a>
+										   
+
+										   <a href="http://120.55.73.0:81/choose/0000000335.shtml" target="_blank" >住院津贴</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000343.shtml" target="_blank" >平安财险</a>
+											
+
+											<a href="http://120.55.73.0:81/yiwai-baoxian/257766.shtml" target="_blank" >中国人寿</a>
+											
+                                      </dd>
+                                    </dl>
+                              </div>
+
+                              <div class="m-t-nav-right">
+                                      <dl class="m-travel-navDl"><dt class="f-ib">推荐计划</dt></dl> 
+                                    
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/282981.shtml" target="_blank" class="m-recommend-a">安联乐享人生幼儿意外健康计划一</a>
+		                                    <ul>
+		                                    	<li><span>意外健康综合保障</span></li><li><span>紧急救援</span></li><li><span>电话医生服务</span></li><li><span>儿童走失补偿</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥230.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/282981.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/jiankang-baoxian/282612.shtml" target="_blank" class="m-recommend-a">大众安享中老年重疾健康保障计划</a>
+		                                    <ul>
+		                                    	<li><span>老年专款意外保障</span></li><li><span>意外医疗住院津贴</span></li><li><span>救护车服务津贴</span></li><li><span>温馨关爱老人健康</span></li><li><span>重疾和意外双重保障</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥1280.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/jiankang-baoxian/282612.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		                                   
+                            </div>
+                        </div>
+                      <!-- 健康保险显示层 end -->
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav4 f-ib"></em><a target="_blank" href="http://localhost:8080/renshou-baoxian/">人寿保险</a></dt>            
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav5 f-ib"></em><a target="_blank" href="http://localhost:8080/jiacai-baoxian/">家财保险</a></dt>              
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav6 f-ib"></em><a target="_blank" href="http://localhost:8080/tx/">团体保险</a></dt>                 
+                </dl>
+                <dl class="que_dl que_nav_zk">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav7 f-ib"></em><a target="_blank" href="http://localhost:8080/chexian/">车辆保险</a><span class="z-que-zd"></span></dt> 
+                     <!-- 车辆险显示层 -->
+
+                        <div class="m-travel-con m-cars-con z-hover-shadow tagshow" style="display:none;" >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+                                      <a target="_blank" href="http://localhost:8080/chexian/yangguang.shtml">阳光车险</a>|<a target="_blank" href="http://localhost:8080/chexian/dadi.shtml">大地车险</a>
+                                      <a target="_blank" href="http://localhost:8080/chexian/taipingyang.shtml">太平洋车险</a>|<a target="_blank"  href="http://localhost:8080/chexian/tianping.shtml">安盛天平车险</a></dd>
+                                    </dl>
+                                  
+                                   
+                            
+                              </div>
+
+                        </div>
+                      <!-- 车辆保险显示层 end -->          
+                </dl>
+             </div>
+             </div>
+                <ul class="g-nav-main">
+                    <li class="f-ib"><a href="http://localhost:8080" class="nav_1">首页</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/daogou/" class="nav_2">保险快选</a><i class="header-hot"></i></li>
+                    <li class="f-ib"><a href="http://localhost:8080/youhui/" class="nav_3" rel="nofollow">限时抢购</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/jifen/" class="nav_4" rel="nofollow">积分商城</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/huiyuan/" class="nav_5" rel="nofollow">会员部落</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/lipei/" class="nav_6" rel="nofollow">理赔通道</a></li>
+                </ul> 
+                <div class="m-search">
+                	            <form action="http://localhost:8080/Search/Search.jsp">
+                       <span class="f-search-i" style="display: none;"></span> <div class="m-search-box"><input type="text" name="query" class="m-search-input"><i class="i-search"></i><span class="f-search"><input name="" type="submit" value="搜索" onclick="jQuery.ajaxLoadImg.show('searchLoad');"></span></div>
+                                       </form> 
+                </div> 
+                </div>
+        <!-- 导航结束 -->
+
+     </div>
+    <!-- header end --><div class="wrapper">
+	
+
+	<div class="wraplogin3" >
+		<div class="wraploginleft3">
+			<div class="logintit3"></div>
+			<form id="loginForm_" action="http://localhost:8080/wj//shop/member!login.action" method="post">
+				<div><input type="text" name="loginName" id="loginUsername_" value="请输入电子邮件/手机号/用户名登录" onfocus="if(this.value=='请输入电子邮件/手机号/用户名登录'){this.value='';}" onblur="if(this.value==''){this.value='请输入电子邮件/手机号/用户名登录';}" class="inputlogin1a"    /></div>
+				
+				<div><input type="text" id="loginPassword__"  value="请输入密码"  onfocus="show_onclick_('loginPassword__','loginPassword_');"   class="inputlogin2a"/>
+				     <input type="password" name="member.password" id="loginPassword_"  value="" onblur="show_onblur_('loginPassword__','loginPassword_');" style="display:none;"   class="inputlogin2a" /></div>
+				
+				<div class="yz"><span><input type="text" class="inputlogina"  id="loginWindowCaptcha_" name="j_captcha" value="输入验证码"   onfocus="if(this.value=='输入验证码'){this.value='';}" onblur="if(this.value==''){this.value='输入验证码';}"  class="inputlogina"  style="width: 106px;" /></span><span><img id="loginWindowCaptchaImage_" src="" alt="换一张" /></span></div>
+				<div><input name="" type="checkbox" value="" id="isSaveUsername_" />记住我的电子邮件和手机号</div>
+				<div><input type="submit" id="loginWindowSubmit_" class="button2Login" value="" hidefocus="true" /></div>
+			</form>
+			 <div style="color:red;height:35px;margin-top:5px;"><span id="loginStatus_"></span></div>  
+			<div>忘记密码？<span class="orangelink"><a href="http://localhost:8080/wj//shop/member!passwordRecover.action">重新找回</a></span></div>
+		</div>
+	
+		<div class="wraploginright3">
+			<div class="regtit3"></div>
+			<form id="registerWindowForm_" name="fm" action="http://localhost:8080/wj//shop/member!register.action" method="post" onsubmit="return validateForm_();">
+				 <div ><input type="text" id="registerUserName2_"   class="inputlogin1a" value="请输入邮箱或手机号"  onfocus="show_onclick_('registerUserName2_','registerUserName_');"  style="" /></div>
+				 <div ><input type="text" name="registerUserName" id="registerUserName_"   class="inputlogin1a" value=""  onblur="validateRegisterUserName_();show_onblur_('registerUserName2_','registerUserName_');"  style="display:none;" /></div>
+				 <div style=" height:20px;color:red;"><span id="status_"></span></div>
+				
+				 <div><input type="text" name="validateCode_" id="validateCode22_" class="inputlogina"  value="请输入验证码"  onfocus="show_onclick_('validateCode22_','validateCode2_');"   style="width: 106px;color:#6A6A6A;" /><input type="text" name="validateCode"  id="validateCode2_"  class="inputlogina"  value=""  onblur="show_onblur_('validateCode22_','validateCode2_');validateValidateCode2_();" style="width: 106px;color:#6A6A6A;display:none;" /><input type="button" disabled="true" id="sendVC_" onclick="sendVCode_()" class="buttonSendVcode" value="获取验证码"></div>
+				 <div style=" height:20px;color:red;"><span id="wgqyzm_"></span></div>
+	 
+				 <div><input type="text"     id="registerWindowPassword2_" onfocus="show_onclick_('registerWindowPassword2_','registerWindowPassword_');"  class="inputlogin2b" value="请输入密码"  style="" /> 
+				  <input type="password" id="registerWindowPassword_"  onblur="IsEmpty_();show_onblur_('registerWindowPassword2_','registerWindowPassword_');" name="member.password" class="inputlogin2b"   style="display:none;" /></div>
+				 <div style=" height:20px;color:red;"><span id="wgqmm_"></span></div>
+	
+				 <div><input type="text"  id="rePassword2_" value="请输入重复密码" onfocus="show_onclick_('rePassword2_','rePassword_');" class="inputlogin2b"   style="" /> 
+				  <input type="password" name="rePassword" id="rePassword_" onblur="validatePassword_();show_onblur_('rePassword2_','rePassword_');" class="inputlogin2b"   style="display:none;" /></div>
+				 <div style=" height:20px;color:red;"><span id="wgqmmt_"></span></div>
+	
+				
+				<div><input type="checkbox" id="isAgreeAgreement_" name="isAgreeAgreement" value="true"  messagePosition="#isAgreeAgreementMessagePosition" /><a id="showAgreementWindow" class="showAgreementWindow" href="javascript:void(0);">已阅读并同意《注册协议》</a></div>
+	    		<div><input type="submit" id="registerWindowSubmit_" class="button2Register" value="" /></div>
+				<input type="hidden" name="member.VIPFrom" value="0"/>
+				<input type="hidden" id="timeswgq_" value="0"/>
+				<input type="hidden" id="used_" />
+				
+			</form>
+		</div>
+    </div>
+		
+    <div class="clear"></div> 		
+</div>   		
+<!-- 公共底部 -->
+    <div class="g-main-con">
+       <div class="clear h20"></div>  
+            <!-- foot -->
+            <div class="g-weaper1200">
+                <div class="g-footer">
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon1 "></em>正品保险</dt>
+                      <dd>中国保监会监制</dd>
+                      <dd>保险公司专供</dd>
+                      <dd>高性价比产品</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon2 "></em>快捷投保</dt>
+                      <dd>全方位一键对比</dd>
+                      <dd>1对1保险顾问指导</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon3 "></em>省心服务</dt>
+                      <dd>电子保单快捷变更</dd>
+                      <dd>满200元发票包邮</dd>
+                      <dd>免费协助理赔无差异</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon4 "></em>安全可靠</dt>
+                      <dd>7x24小时客服不间断</dd>
+                      <dd>风险提示保障安全</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon5 "></em>品牌实力</dt>
+                      <dd>4年300万用户选择</dd>
+                      <dd>2013年最佳保险中介</dd>
+                      <dd>30家知名保险公司合作</dd>
+                    </dl>
+
+                    <div class="clear h20"></div>
+                </div>
+              </div>
+                  <div class="clear h20"></div>
+                        <div class="g-footer-bg">
+                <div class="g-weaper1200">
+                     <div class="g-footer2">
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon6 "></em>新手指南</dt>
+                            <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn1" target="_blank" rel="nofollow">如何注册</a>
+                            <a href="http://localhost:8080/about//xszn/index.shtml#xszn4" target="_blank" rel="nofollow">如何投保</a>
+                            <a href="http://localhost:8080/about/xszn/index.shtml#xszn3" target="_blank" rel="nofollow">找回密码</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon7 "></em>支付帮助</dt>
+                            <dd><a href="http://localhost:8080/about/4/index.shtml#zfbz2" target="_blank" rel="nofollow">支付方式</a><a href="http://localhost:8080/about/4/index.shtml#zfbz1" target="_blank" rel="nofollow">支付说明</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon8 "></em>保单服务</dt>
+                            <dd><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单查询</a>
+                            <a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg2" target="_blank" rel="nofollow">保单变更</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg3" target="_blank" rel="nofollow">保单取消</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg1" target="_blank" rel="nofollow">保单寄送</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon9 "></em>理赔服务</dt>
+                            <dd><a href="http://localhost:8080/about/2/index.shtml#lpbz1" target="_blank" rel="nofollow">理赔指南</a><a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔报案</a>
+                            <a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔案例</a></dd>
+                          </dl>
+                           <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon10 "></em>服务中心</dt>
+                            <dd><a href="http://localhost:8080/wj/shop/bill_query!queryBill.action" target="_blank" rel="nofollow">发票索取</a>
+                            <a href="http://localhost:8080/about/3/dayizonghui/index.shtml" target="_blank" rel="nofollow">常见问题</a></dd>
+                          </dl>
+                          <div class="clear h20"></div>
+                     </div>
+                     
+                    <div class="clear h20"></div>
+                     <!-- 热门专题 -->
+                </div>
+              </div>
+             <!-- 底部 -->
+                <div class="g-btn-footer">
+                <div class="g-weaper1200">
+                        <div class="g-f-left">
+                          <div class="botlink02">
+                <ul  class="clearfix">
+					<li><a href="http://localhost:8080/other/about/" rel="nofollow">关于开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/news/" rel="nofollow">开心保要闻</a></li>
+					<li>|</li>
+					<!--<li><a href="http://localhost:8080/other/jobs/" rel="nofollow">加入开心保</a></li>
+					<li>|</li>-->
+					<li><a href="http://localhost:8080/other/sitemap/" >网站地图</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/legal/" rel="nofollow">法律声明</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/contact/" rel="nofollow">联系我们</a></li>
+					<li>|</li>
+					<li><a href="http://u.kaixinbao.com/" target="_blank" rel="nofollow">分销联盟</a></li>
+					<li>|</li>
+					<!-- <li><a href="http://kaixinbao.tmall.com/" target="_blank" rel="nofollow">开心保天猫店</a></li>
+					<li>|</li>
+					<li><a href="http://temai.kaixinbao.com/" target="_blank" rel="nofollow">特价机票</a></li>
+					<li><a href="http://wap.kaixinbao.com/" target="_blank" >移动版</a></li> -->
+					<li><a href="http://www.kaixinbao.com/yxhd/isl-tra/" target="_blank" rel="nofollow">微信版</a></li>                
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="copyright">		
+				<div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+				<div class="copyrightleft">Copyright 2012-2016 版权所有 网金保险销售服务有限公司</div>
+			</div>
+                        </div>
+                        <div class="g-f-right">
+                            <ul class="sl-floatcenter">
+          					
+ 
+				      			<li class="sl-floatcenter-item" ><a href="" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36" height="33"/></a></li>
+				    		
+ 
+				      			<li class="sl-floatcenter-item" ><a href="" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69" height="33"/></a></li>
+				    		 
+                          </ul>
+                        </div>
+                        <div class="clear"></div>
+                </div>
+          </div>
+    </div>
+<div id="fix_nav" class="fix_nav">
+    <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" >
+        <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_01.jpg" />
+        <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_01_on.jpg" />
+    </a>
+    <span class="fix-RichScan">
+                    <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_02.jpg" />
+                    <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_02_on.jpg" />
+                    <div style="display: none;" class="weixinDiv tagshow"><img src="${Site.StaticResourcePath}/images/wxnew.png">微信查保单</div>
+                </span>
+    <span class="fix-top" id="gotop">
+                    <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_03.jpg" />
+                    <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_03_on.jpg" />
+                </span>
+</div>
+    <!-- 公共底部 -->
+</body>
+</html>
+<script type="text/javascript">
+jQuery().ready( function() {
+	loginWindowCaptchaImageRefresh();
+	
+	// 提交表单验证,记住登录用户名
+	jQuery("#loginForm_").submit( function() {
+		if (jQuery("#loginUsername_").val() == "" || jQuery("#loginUsername_").val() == "请输入电子邮件/手机号/用户名登录" ) {
+			jQuery("#loginStatus_").html("请输入您的用户名!");
+			return false;
+		}
+		if (jQuery("#loginPassword_").val() == "") {
+			jQuery("#loginStatus_").html("请输入您的密码!");
+			return false;
+		}
+		if (jQuery("#loginWindowCaptcha_").val() == "" || jQuery("#loginWindowCaptcha_").val() == "输入验证码") {
+			jQuery("#loginStatus_").html("请输入您的验证码!");
+			return false;
+		}
+		
+		if(jQuery("#isSaveUsername").attr("checked") == true) {
+			jQuery.cookie("VIPUsername", $loginUsername.val(), {expires: 30});
+			
+		} else {
+			jQuery.cookie("VIPUsername", null);
+		}
+	});
+
+	// 刷新验证码图片
+	function loginWindowCaptchaImageRefresh() {
+		jQuery("#loginWindowCaptchaImage_").attr("src", "http://localhost:8080/wj//captcha.jpg?timestamp" + (new Date()).valueOf());
+	}
+	
+	// 点击刷新验证码图片
+	jQuery("#loginWindowCaptchaImage_").click( function() {
+		loginWindowCaptchaImageRefresh();
+	});
+});
+
+function copy(){
+	jQuery("#wgqmmt_").html("请输入重复密码");
+}
+
+function show_onclick_(showValue,hideValue){
+	jQuery("#"+showValue).hide();
+	jQuery("#"+hideValue).show();
+	jQuery("#"+hideValue).focus();
+}
+
+function show_onblur_(showValue,hideValue){
+	if(jQuery("#"+hideValue).val() == ''){
+		jQuery("#"+hideValue).hide();
+		jQuery("#"+showValue).focus();
+		jQuery("#"+showValue).show();
+	}
+}
+function orignal(){
+	jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+}
+function IsEmpty_(){
+	var registerWindowPassword = jQuery("#registerWindowPassword_").val();
+	if(registerWindowPassword == null || registerWindowPassword == "" || "undefined" == typeof(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码不能为空");
+		return false;
+	}
+	if(/^\d+$/.test(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+		return false;
+		}
+		if(/^[a-zA-Z]+$/.test(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+		return false;
+		}
+		if(/^[_]+$/.test(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+		return false;
+		}
+		if(!/^[0-9a-zA-Z_]{6,16}$/.test(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+		return false;
+		}
+		jQuery("#wgqmm_").html("");
+}
+function agree(){
+	jQuery("#isAgreeAgreement_").attr("checked",true);
+}
+
+function validateValidateCode2_(){
+	var validateCode2 = jQuery("#validateCode2_").val();
+	if(validateCode2 == null || validateCode2 == "" || "undefined" == typeof(validateCode2)){
+	    if(!jQuery("#sendVC_").attr("disabled")){
+		    jQuery("#wgqyzm_").html("验证码不能为空");
+			return false;
+	    }
+	} else {
+		jQuery("#wgqyzm_").html("");
+		return false;
+	}
+}
+function  validatePassword_(){
+	var registerWindowPassword=jQuery("#registerWindowPassword_").val();
+	var rePassword=jQuery("#rePassword_").val();
+	if(rePassword == null || rePassword == "" || "undefined" == typeof(rePassword)){
+		jQuery("#wgqmmt_").html("重复密码不能为空");
+		return false;
+	}
+	if(rePassword!=registerWindowPassword){
+		jQuery("#wgqmmt_").html("两次密码输入不一致");
+		jQuery("#registerWindowPassword_").attr("value","");
+		jQuery("#rePassword_").attr("value","");
+		return false;
+	}
+	jQuery("#wgqmmt_").html("");
+}
+function clearUserName(){
+	var registerUserName = jQuery("#registerUserName_").val();
+	if(registerUserName == null || registerUserName == "" || "undefined" == typeof(registerUserName)){
+	jQuery("#status").html("请输入邮箱或手机号");	
+	return false;
+	}
+	var myReg = /^[-_A-Za-z0-9\.]+@([-_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/;  //验证邮箱的正则
+	var regu = /^[1][3-8][0-9]{9}$/;
+	if (myReg.test(registerUserName) || regu.test(registerUserName)) {
+		jQuery("#registerUserName_").attr("value","");
+		return false;
+	}
+	
+}
+function clearLogin(){
+	jQuery("#loginWindowCaptcha_").attr("value","");
+    }
+function clearRegister(){
+	jQuery("#validateCode2_").attr("value","");
+}
+function empty(){
+var cdsf = jQuery("#validateCode2_").val();
+if(cdsf == null || cdsf == "" || "undefined" == typeof(cdsf)){}
+}
+function validateForm_(){
+	var registerUserName = jQuery("#registerUserName_").val();
+	if(registerUserName == null || registerUserName == "" || "undefined" == typeof(registerUserName)){
+		jQuery("#status_").html("邮箱号/手机号不能为空");
+		return false;
+	}
+	// 判断是邮箱还是手机号
+	var myReg = /^[-_A-Za-z0-9\.]+@([-_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/;  //验证邮箱的正则
+	var regu = /^[1][3-8][0-9]{9}$/;
+	if (!myReg.test(registerUserName) && !regu.test(registerUserName)) {
+		jQuery("#status_").html("请输入正确的邮箱号/手机号");
+		jQuery("#sendVC_").attr("disabled" ,true);
+		jQuery("#registerUserName_").attr("value","");
+		return false;
+	}
+	var registerWindowPassword = jQuery("#registerWindowPassword_").val();
+	if(registerWindowPassword == null || registerWindowPassword == "" || "undefined" == typeof(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码不能为空");
+		return false;
+	}
+	if(/^\d+$/.test(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+		return false;
+		}
+		if(/^[a-zA-Z]+$/.test(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+		return false;
+		}
+		if(/^[_]+$/.test(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+		return false;
+		}
+		if(!/^[0-9a-zA-Z_]{6,16}$/.test(registerWindowPassword)){
+		jQuery("#wgqmm_").html("密码只能由6-16个英文、数字、及下划线任两个组合组成");
+		return false;
+		}
+	
+	var rePassword=jQuery("#rePassword_").val();
+	if(rePassword == null || rePassword == "" || "undefined" == typeof(rePassword)){
+		jQuery("#wgqmmt_").html("重复密码不能为空");
+		return false;
+	}
+	if(rePassword!=registerWindowPassword){
+	jQuery("#wgqmmt_").html("两次密码输入不一致啊");
+	jQuery("#rePassword_").attr("value","");
+	return false;
+	}
+	var dddd = jQuery("#used_").val();
+	if(dddd==Y){
+	return false;}
+	jQuery("#registerWindowForm_").Submit();
+	
+}
+//验证邮箱是否已注册
+function validateRegisterUserName_(){
+	var registerUserName = jQuery("#registerUserName_").val();
+	if(registerUserName == null || registerUserName == "" || "undefined" == typeof(registerUserName)){
+		jQuery("#status_").html("邮箱号/手机号不能为空");
+		jQuery("#sendVC_").attr("disabled" ,true);
+		return false;
+	}
+	
+	// 判断是邮箱还是手机号
+	var myReg = /^[-_A-Za-z0-9\.]+@([-_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/;  //验证邮箱的正则
+	var regu = /^[1][3-8][0-9]{9}$/;
+	if (!myReg.test(registerUserName) && !regu.test(registerUserName)) {
+		jQuery("#status_").html("请输入正确的邮箱号/手机号");
+		//jQuery("#registerUserName_").attr("value","");
+		jQuery("#sendVC_").attr("disabled" ,true);
+		return false;
+	}
+	
+	 jQuery.ajax({
+	        url: sinosoft.base+"/shop/member!checkEmail.action?em="+registerUserName,
+	        type: "post",
+			dataType: "json",
+			success: function(data) {
+				if (data == false) {
+					jQuery("#status_").html("此邮箱/手机号已注册");
+					//jQuery("#registerUserName_").attr("value","");
+					jQuery("#sendVC_").attr("disabled" ,true);
+					jQuery("#used_").attr("value" ,"Y");
+				}else{
+				    jQuery("#sendVC_").attr("disabled" ,false);
+				    jQuery("#used_").attr("value" ,"N");
+				    jQuery("#status_").html("");
+					
+				}
+			}
+		});
+}
+var total ;
+var se ;  
+function OneSecond0_(){  
+	jQuery("#sendVC_").attr("value",  total/1000);
+	if(total <= 0){
+		jQuery("#sendVC_").attr("value",  "发送验证码");
+		jQuery("#sendVC_").attr("disabled",false);
+		clearInterval(se);
+		total = 1 * 60 * 1000;
+		
+	} else {
+		jQuery("#sendVC_").attr("disabled","disabled");
+	}
+	total -= 1000;  
+	
+} 
+function ThreeSecond0_(){  
+	jQuery("#sendVC_").attr("value",  total/1000);
+	if(total <= 0){
+		jQuery("#sendVC_").attr("value",  "发送验证码");
+		jQuery("#sendVC_").attr("disabled",false);
+		clearInterval(se);
+		total = 1 * 180 * 1000;
+		
+	} else {
+		jQuery("#sendVC_").attr("disabled","disabled");
+	}
+	total -= 1000;  
+} 
+
+//发送验证码	 
+function sendVCode_(){
+	var count = jQuery("#timeswgq_").val();
+	
+	if(Number(count)>=5){
+		jQuery("#wgqyzm_").html("系统已经给您发送了5次验证码了,为确保是您本人系统不再给您发送了!");
+		return false;	
+	}
+	var registerUserName = jQuery("#registerUserName_").val();
+	var radio = -1;
+	var myReg1 = /^[_A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/;  //验证邮箱的正则
+	var regu1 = /^[1][3-8][0-9]{9}$/;
+	if (myReg1.test(registerUserName)) {
+		radio = 0;
+	} else if(regu1.test(registerUserName)){
+		radio = 1;
+		jQuery("#timeswgq_").attr("value",Number(count)+Number(1));
+	}  
+	if(radio == -1){
+		jQuery.tip("请输入正确的邮箱号/手机号");
+		return false;
+	}else if(radio=='0'){
+		total=1 * 180 * 1000;
+		se = setInterval("ThreeSecond0_()",1000);
+	}else{
+		total=1 * 60 * 1000;
+		se = setInterval("OneSecond0_()",1000);
+	}
+	
+	jQuery.ajax({
+				url: sinosoft.base + "/shop/member!sendCode.action?rtype="+radio+"&ways="+registerUserName,
+				type: "post",
+				dataType: "json",
+				success: function(data){
+					document.getElementById("status").innerHTML=data;
+					jQuery("#sendVC_").attr("value", countDown);
+					jQuery("#sendVC_").attr("disable",true);
+				}
+	});
+}
+</script>

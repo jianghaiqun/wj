@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans.xsd  
+            http://code.alibabatech.com/schema/dubbo  
+            http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 调用经代通服务 -->
+	<dubbo:reference id="jdtService" interface="com.sinosoft.services.Service.ServiceInter" check="false"/>
+	<!-- 异步调用jdt服务 忽略返回值 -->
+	<dubbo:reference id="asyncJdtService" interface="com.sinosoft.services.Service.ServiceInter">
+		<dubbo:method name="upLoadFileToMaYi" async="true" return="false"/>
+	</dubbo:reference>
+</beans>

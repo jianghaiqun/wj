@@ -1,0 +1,420 @@
+<!DOCTYPE html > 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<!--redesign/re_header.css头部脚部全站样式-->
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_news.css">
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+		<div class="wrapper">
+		<!--主体 开始-->
+			<div class="rnews_zxTop">
+				<div class="news_flash_a news_zxflash">
+					<cms:imageplayer code="bxzx_index_center" type="0" width="260" height="250" />
+				</div>
+				<div class="news_zxTextC">
+				<cms:list item="Article" level="all" count="2" name="9444" hasAttribute="hp_recommend" type = "modifyzx" >
+					<div class="news_zxText">
+						<h2 class="news_zsTitleB news_jcct "><a href="${Article.Link}" >${Article.Title}</a></h2> 
+						<p class="news_zxover rnews_prg">${Article.Summary|CharWidth=100}</p> 
+					</div>
+				</cms:list>
+				</div>
+				
+				<div  class="news_zxtab_l">
+	       			<ul>
+	       			<cms:list item="Article" level="all" count="10" name="9444" hasAttribute="hp_recommend" type = "modifyzx" >
+	       			<%if(i>=2){%>
+						<li><font class="news_wdLt"><font class="news_pointB"></font><a href="${Article.Link}" >${Article.Title}</a></font></li>
+					<%}%>
+					</cms:list>
+					</ul>
+				</div>
+			</div>
+			<div class="news_wdImg">
+				<cms:ad name="保险资讯首页二次改版" custom="false" size="980*135" type="1"> 
+			 		{ZCMS:广告版位 矩形横幅 名称：开心保首页_下长}  
+				</cms:ad>			
+			</div>
+			<!--左边 开始-->
+			<div class="trisection">
+				<!--行业资讯 实时资讯 开始-->
+			 	<div class="news_box">
+			 		<div class="columntit">保险之窗 <span class="news_t_more"><a href="${Site.URL}/zixun/hangye/">更多</a></span></div>
+			 		<div class="tri_content">
+                    	<div class="tri_img">
+                    		<a href="${Site.URL}/zixun/hangye/" >
+                            <img src="${Site.StaticResourcePath}/${catalog.Image1}" width="320" height="88" />
+                        	</a>
+                    	</div>
+                    	<cms:list item="Article" level="all" count="1" name="9609" hasAttribute="hot" type = "modifyzx" >
+                    	<div class="tri_detail" >
+	                        <h2 class="tri_title">
+	                            <a href="${Article.Link}" >${Article.Title}</a>
+	                        </h2>
+	                        <div class="news_tab_zxT">
+	                            <p class="news_zxoverT rnews_prg">${Article.Summary|CharWidth=68}</p>
+	                            <span class="tri_more">
+	                                <a href="${Article.Link}" rel="nofollow" >【&nbsp;详情&nbsp;】</a>
+	                            </span>
+	                        </div>
+			 			</div>
+			 			</cms:list>
+			 			<div class="news_zxlist_r">
+			 				<ul>
+			 				<cms:list item="Article" level="all" count="5" name="9609"  type = "firstpublish" >
+								<li><font class="news_wdLt"><font class="news_pointB"></font><a href="${Article.Link}" >${Article.Title}</a></font></li>
+							</cms:list>
+			 				</ul>
+			 			</div>
+			 		</div>
+			 	</div>
+				<div class="news_box">
+					<div class="columntit">实事资讯 <span class="news_t_more"><a href="${Site.URL}/zixun/shishi/">更多</a></span></div>
+					<div class="tri_content" >
+	                    <div class="tri_img">
+	                        <a href="${Site.URL}/zixun/shishi/" >
+	                            <img src="${Site.StaticResourcePath}/${catalog.Image2}" width="320" height="88" />
+	                        </a>
+	                    </div>
+	                    <cms:list item="Article" level="all" count="1" name="9610" hasAttribute="hot" type = "modifyzx" >
+	                    <div class="tri_detail" >
+	                        <h2 class="tri_title">
+	                            <a href="${Article.Link}" >${Article.Title}</a>
+	                        </h2>
+	                        <div class="news_tab_zxT">
+	                            <p class="news_zxoverT rnews_prg">${Article.Summary|CharWidth=68}</p>
+	                            <span class="tri_more">
+	                                <a href="${Article.Link}" rel="nofollow" >【&nbsp;详情&nbsp;】</a>
+	                            </span>
+	                        </div>
+	                    </div>
+	                    </cms:list>
+	                    <div  class="news_zxlist_r">
+                        	<ul>
+                        	<cms:list item="Article" level="all" count="5" name="9610"  type = "firstpublish" >
+								<li><font class="news_wdLt"><font class="news_pointB"></font><a href="${Article.Link}" >${Article.Title}</a></font></li>
+							</cms:list>
+                        	</ul>
+                        </div>
+                    </div>
+				</div>
+				<div class="news_box last">
+					<div class="columntit">热销保险产品 <span class="news_t_more"><a href="${Site.URL}/">更多</a></span></div>
+					<div class="">
+                    	<ul class="hotprodu">
+                    	<cms:list item="article" level="none" count="6" hasAttribute="hot" condition=" (cataloginnercode like '002313000002%' or cataloginnercode like '002313000003%') and status='30'">
+	                    	<li>
+	                            <div class="hotproduright">
+	                                <h5>
+	                                    <a href="${article.link}" title="${article.title}" >${article.title}</a>
+	                                </h5>
+	                                <h6>${article.AdaptPeopleInfo}</h6>
+	                            </div>
+	                        </li>
+                    	</cms:list>
+                    	</ul>
+                    </div>
+                </div>
+                <!--行业资讯 实时资讯 结束-->
+			</div>
+			<div class="news_left">
+				<!--旅游健康tab 开始-->
+				<div class="news_wdct">
+			    	<ul class="news_wdtab_t cf rnews_nav" >   
+			    		<li><span id="hot_zxtab1"  class="hover" onclick="setTab('hot_zxtab',1,5)">旅游险资讯</span></li>
+				    	<li><span id="hot_zxtab2"  class="" onclick="setTab('hot_zxtab',2,5)">意外险资讯</span></li>
+				    	<li><span id="hot_zxtab3"  class="" onclick="setTab('hot_zxtab',3,5)">健康险资讯</span></li>
+				    	<li><span id="hot_zxtab4"  class="" onclick="setTab('hot_zxtab',4,5)">人寿险资讯</span></li>
+				    	<li class="last"><span id="hot_zxtab5"  class="" onclick="setTab('hot_zxtab',5,5)">车险资讯</span></li>
+			    	</ul>
+			    	<div class="news_zxtab_box">
+				        <div id="con_hot_zxtab_1" >
+				        	<div  class="news_zxtab_left">
+								<div class="news_zxImg"><img src="${Site.StaticResourcePath}/${catalog.Image4}" width="110" height="123"/></div>
+								<div class="news_zxtl">
+									<ul>
+									<cms:list item="article" level="all" name="9444" type="rand" condition="tag like '%旅游险%'" count="5" >
+										<li><a href="${Article.Link}" >${Article.Title}</a></li>
+									</cms:list>
+									</ul>
+								</div>
+							</div>
+							<div class="news_zxtab_r" >
+								<h3 class="news_wdtjt">旅游保险相关产品</h3> 
+								<ul class="product_list">
+								<cms:list item="article" level="all"  name="9409" count="5" type="rand">
+								    <li><a href="${Article.Link}" >${Article.Title}</a></li>
+								</cms:list>
+								</ul>
+							</div>
+				        </div>
+				        <div id="con_hot_zxtab_2" style="display:none;">
+				      	 	<div  class="news_zxtab_left">
+								<div class="news_zxImg"><img src="${Site.StaticResourcePath}/${catalog.Image3}" width="110" height="123"/></div>
+								<div class="news_zxtl">
+									<ul>
+									<cms:list item="article" level="all" name="9444" type="rand" condition="tag like '%意外险%'" count="5" >
+										<li><a href="${Article.Link}" >${Article.Title}</a></li>
+									</cms:list>
+									</ul>
+								</div>
+							</div>
+							<div class="news_zxtab_r" >
+								<h3 class="news_wdtjt">意外保险相关产品</h3> 
+								<ul class="product_list">
+								<cms:list item="article" level="all"  name="9385" count="5" type="rand">
+								    <li><a href="${Article.Link}" >${Article.Title}</a></li>
+								</cms:list>
+								</ul>
+							</div>
+				       </div>
+				       <div id="con_hot_zxtab_3" style="display:none;">
+				       		<div  class="news_zxtab_left">
+								<div class="news_zxImg"><img src="${Site.StaticResourcePath}/${catalog.Image5}" width="110" height="123"/></div>
+								<div class="news_zxtl">
+									<ul>
+									<cms:list item="article" level="all" name="9444" type="rand" condition="tag like '%健康险%'" count="5" >
+										<li><a href="${Article.Link}" >${Article.Title}</a></li>
+									</cms:list>
+									</ul>
+								</div>
+							</div>
+							<div class="news_zxtab_r" >
+								<h3 class="news_wdtjt">健康保险相关产品</h3> 
+								<ul class="product_list">
+								<cms:list item="article" level="all"  name="9424" count="5" type="rand">
+								    <li><a href="${Article.Link}" >${Article.Title}</a></li>
+								</cms:list>
+								</ul>
+							</div>
+				       </div>
+				       <div id="con_hot_zxtab_4" style="display:none;">
+				      		<div  class="news_zxtab_left">
+								<div class="news_zxImg"><img src="${Site.StaticResourcePath}/${catalog.Image6}" width="110" height="123" /></div>
+								<div class="news_zxtl">
+									<ul>
+									<cms:list item="article" level="all" name="9444" type="rand" condition="tag like '%人寿险%'" count="5" >
+										<li><a href="${Article.Link}" >${Article.Title}</a></li>
+									</cms:list>
+									</ul>
+								</div>
+							</div>
+							<div class="news_zxtab_r" >
+								<h3 class="news_wdtjt">人寿保险相关产品</h3> 
+								<ul class="product_list">
+								<cms:list item="article" level="all"  name="9399" count="5" type="rand">
+								    <li><a href="${Article.Link}" >${Article.Title}</a></li>
+								</cms:list>
+								</ul>
+							</div>
+				      </div>
+			          <div id="con_hot_zxtab_5" style="display:none;">
+				       		<div  class="news_zxtab_left">
+								<div class="news_zxImg"><img src="${Site.StaticResourcePath}/${catalog.Image7}" width="110" height="123" /></div>
+								<div class="news_zxtl">
+									<ul>
+									<cms:list item="article" level="all" name="9444" type="rand" condition="tag like '%车险%'" count="5" >
+										<li><a href="${Article.Link}" >${Article.Title}</a></li>
+									</cms:list>
+									</ul>
+								</div>
+							</div>
+							<div class="news_zxtab_r" >
+								<h3 class="news_wdtjt">车辆保险相关产品</h3> 
+								<ul class="product_list">
+								<cms:list item="friendlink" name="车辆产品资讯首页" count="5">
+										<li><a href="${friendlink.URL}" >${friendlink.Name}</a></li>
+								</cms:list>
+								</ul>
+							</div>
+				      </div>
+			      </div>
+			  </div>
+			  <!--旅游健康tab 结束-->
+			  <div class="news_wdct">
+			      <ul class="news_wdtab_t cf rnews_nav" >     
+			    	<li><span id="hot_bxtab1"  class="hover" onclick="setTab('hot_bxtab',1,4)">保险公司</span></li>
+			    	<li><span id="hot_bxtab2"  class="" onclick="setTab('hot_bxtab',2,4)">保险产品</span></li>
+			    	<li><span id="hot_bxtab3"  class="" onclick="setTab('hot_bxtab',3,4)">保险营销</span></li>
+			    	<li class="last"><span id="hot_bxtab4" class="" onclick="setTab('hot_bxtab',4,4)">监管动态</span></li>
+			      </ul>
+			      <div class="news_zxtab_box">
+					      <div id="con_hot_bxtab_1" >
+				      	  <div class="news_zxtab_left">
+				      	  	  <div class="news_zxImg">
+                                <img src="${Site.StaticResourcePath}/${catalog.Image8}" width="110" height="123">
+                              </div>
+							  <div class="news_zxtl">
+								<ul>
+								<cms:list item="article" level="all" name="9444" type="rand" condition="(tag like '%公司%' or tag like '%险企%' or tag like '%股份%' or tag like '%有限%')" count="5" >
+									<li><a href="${article.Link}" >${article.Title}</a></li>
+								</cms:list>
+								</ul>
+							  </div>
+				          </div>
+				          <div class="news_zxtab_r">
+                            <h3 class="news_wdtjt">相关产品推荐</h3>
+                            <ul class="product_list">
+								<cms:list item="article" level="all" name="9480" type="modifyzx" condition="(tag like '%保险公司%' and status='30' and type='1')" count="5" >
+									<li><a href="${article.Link}" >${article.Title}</a></li>
+								</cms:list>
+                            </ul>
+                          </div>
+                      </div>
+				      <div id="con_hot_bxtab_2" style="display:none;">
+				      	  <div class="news_zxtab_left">
+                            <div class="news_zxImg">
+                                <img src="${Site.StaticResourcePath}/${catalog.Image9}" width="110" height="123">
+                            </div>
+                            <div class="news_zxtl">
+								<ul>
+								<cms:list item="article" level="all" name="9444" type="rand" condition="tag like '%产品%'" count="5" >
+									<li><a href="${article.Link}" >${article.Title}</a></li>
+								</cms:list>
+								</ul>
+							</div>
+						  </div>
+						  <div class="news_zxtab_r">
+                            <h3 class="news_wdtjt">相关产品推荐</h3>
+                            <ul class="product_list">
+								<cms:list item="article" level="all" name="9480" type="modifyzx" condition="(tag like '%保险产品%' and status='30' and type='1')" count="5" >
+									<li><a href="${article.Link}" >${article.Title}</a></li>
+								</cms:list>
+                            </ul>
+                          </div>
+				      </div>
+				      <div id="con_hot_bxtab_3" style="display:none;">
+				          <div class="news_zxtab_left">
+                            <div class="news_zxImg">
+                                <img src="${Site.StaticResourcePath}/${catalog.Image10}" width="110" height="123">
+                            </div>
+                            <div class="news_zxtl">
+								<ul>
+								<cms:list item="article" level="all" name="9444" type="rand" condition="(tag like '%营销%' or tag like '%销售%' or tag like '%网销%' or tag like '%电销%' or tag like '%渠道%')" count="5" >
+									<li><a href="${article.Link}" >${article.Title}</a></li>
+								</cms:list>
+								</ul>
+							</div>
+						  </div>
+						  <div class="news_zxtab_r">
+                            <h3 class="news_wdtjt">相关产品推荐</h3>
+                            <ul class="product_list">
+								<cms:list item="article" level="all" name="9480" type="modifyzx" condition="(tag like '%保险营销%' and status='30' and type='1')" count="5" >
+									<li><a href="${article.Link}" >${article.Title}</a></li>
+								</cms:list>
+                            </ul>
+                          </div>
+				      </div>
+				      <div id="con_hot_bxtab_4" style="display:none;">
+				          <div class="news_zxtab_left">
+                            <div class="news_zxImg">
+                                <img src="${Site.StaticResourcePath}/${catalog.Image11}" width="110" height="123">
+                            </div>
+                            <div class="news_zxtl">
+								<ul>
+								<cms:list item="article" level="all" name="9444" type="rand" condition="(tag like '%保监会%' or tag like '%法规%' or tag like '%政策%')" count="5" >
+									<li><a href="${article.Link}" >${article.Title}</a></li>
+								</cms:list>
+								</ul>
+							</div>
+						  </div>
+						  <div class="news_zxtab_r">
+                            <h3 class="news_wdtjt">相关产品推荐</h3>
+                            <ul class="product_list">
+								<cms:list item="article" level="all" name="9480" type="modifyzx" condition="(tag like '%监管动态%' and status='30' and type='1')" count="5" >
+									<li><a href="${article.Link}" >${article.Title}</a></li>
+								</cms:list>
+                            </ul>
+                          </div>
+				      </div>
+			      </div>
+			  </div>
+		    </div>
+			<!--左边 结束-->
+            <!--右边 开始-->
+		<div class="news_right">
+			<div class="columntit">热门标签</div>
+			<div class="news_rmbj news_zxbj" >
+				<ul>
+					<li>
+					<cms:list item="customtable" name="zctag"  condition="order by rand()" count="23">
+					<% if(i%3==0){%>
+						<a class="news_color12" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }else if(i%3==1){%>
+						<a class="news_color13" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }else if(i%3==2){%>
+						<a class="news_color14" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }%>
+					</cms:list>
+					</li>
+				</ul>
+			</div>
+			<div class="columntit">精彩专题</div>
+			<div class="news_zxzt">
+				<ul>
+				<cms:list item="article" level="all" name="保险专题" type="rand" count="6" >
+					<li><a href="${article.link}" >${article.title}</a></li>
+				</cms:list>
+				</ul>
+			</div>
+
+		</div>
+		<!--右边 结束-->
+		<!--主体 结束-->
+	</div>
+</div>
+<div class="h10"></div>
+<div class="wrapper">
+    <div class="part6">
+    <ul class="wrap_ul">
+	<cms:list item="hotopic"  name="资讯首页二次改版" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="资讯首页二次改版" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="资讯首页二次改版" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+
+<script type="text/javascript">
+	jQuery(function(){
+    //焦点图切换
+        jQuery('#change_33 div.changeDiv').soChange({
+            thumbObj:'#change_33 .ul_change_a2 span',
+            thumbNowClass:'on',
+            changeTime:4000//自定义切换时间为4000ms
+        });
+    });
+</script>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+</body>
+</html>
+<!-- Powered by CMS(中科软科技股份有限公司) 1.3.1.0 PublishDate 2013-04-16 15:32:45-->

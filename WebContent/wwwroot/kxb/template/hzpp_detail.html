@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href="${Site.StaticResourcePath}/style/commonality.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/bxzs_infor.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<cms:include file="block/kxb_custom_header.shtml"/>
+</head>
+<body>
+	<!-- 顶部 开始 -->
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<!--  主体 开始 -->
+	<div class="wrap1000">
+		<!--  导航-->
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link> <span class="separator">></span><p   >${Article.title}</p>
+		</div>
+		<div class="newpart">
+			<div class="newright02">
+				<h3 class="titnew04">保险品牌列表</h3>
+				<div class="morenew02"></div>
+				<div class="newtxtarea01" align="center">
+					<ul>
+						<cms:list item="catalog" level="child" name="合作品牌">
+							 <li><a href="${Catalog.Link}"><img src="${Site.StaticResourcePath}/${Catalog.ImagePath}" width="126" height="62" /></a></li>
+						</cms:list>
+					</ul>
+				</div>
+				
+				<h3 class="titnew04 margt10">险种</h3>
+				<div class="morenew02"></div>
+				<div class="newtxtarea01">
+					<ul class="newlist01">
+						<cms:list item="catalog" level="child" name="产品中心">
+							<li><a href="${catalog.link}">${catalog.name}</a></li>
+						</cms:list>
+					</ul>
+				</div>
+
+
+			</div>
+			<div class="newleft02">
+				<div class="newtxtarea02">
+					<!--文章 开始-->
+					<div class="artical">
+						<h3 align="center">${article.title}</h3>
+						<div class="cont">${article.content}</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<!--底部 开始-->
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+</body>
+</html>
+
+
+

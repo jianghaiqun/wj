@@ -1,0 +1,146 @@
+<!--top头部-->
+		<div class="g-top">
+            <div class="g-weaper1200">
+                <div class="m-login">
+                <div id="NotLogin"><span class="m-login-p f-ib">您好，欢迎光临开心保请</span><span class="m-login-a" id="NotLoginSpan"><a href="javascript:void(0);" id="headerShowLoginWindow" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">登录</a><em>/</em><a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">免费注册</a>
+                <span class="m-login-x" style="display:none"></span>
+                <!-- 未登录状态 显示图层 -->
+                    <div class="m-login-no" style="display:none;">
+                        <div class="m-lo-p">
+                            <div class="m-lo-img"></div>
+                            <img src="http://localhost:8080/images/redesign/photo_06.gif" alt="">
+                        </div>
+                        <div class="m-login-jf">
+                            <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag">会员专享，<br>积分换优惠</a>
+                        </div>
+                        <div class="clear h12"></div>
+                        <div class="m-integral">
+                            <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                        </div>
+                        <div class="m-Coupon">
+                        <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em>
+                        </div>
+                    </div>
+                <!-- 未登录状态 显示图层 end -->
+                </span></div>
+                <div id="YesLogin" style="display: none"><span class="m-login-p f-ib" id="YesLoginSpan">
+                                                         您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a>
+                                                         <i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                
+                <span class="m-login-x" style="display:none"></span>
+                <!--登录状态显示图层 -->
+                    <div class="m-login-yes z-hover-shadow"  style="display:none;">
+                           <div class="m-login-back">
+                               <span class="m-login-p m-login_p2">您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a><i id="headerLoginMemGradeIcon"  class="vip_k vip_top vip_k1" title=""></i></span><a href="javascript:void(0);" id="headerLogout" class="m-go-back">退出登录</a>
+                           </div> 
+                           <div class="m-lo-p">
+                            <div class="m-lo-img"><a href="###"></a></div>
+                            <img id="memberphoto" alt="">
+                           </div>
+                            <div class="m-login-user">
+                                <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="f_mi m-login-name2"></a><i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                                <p id="gradeinfo"></p>
+                            </div>
+                            <div class="clear h6"></div>
+                            <div class="m-integral2">
+                                <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                                <a id="memberPointsCount" href="http://localhost:8080/wj/shop/point!newList.action" class="m-jf-num"></a>
+                            </div>
+                            <div class="m-Coupon2">
+                            <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em><a id="CouponCount" href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="m-jf-num"></a>
+                            </div>
+                    </div>
+                <!--登录状态显示图层 end -->
+                   
+                </span></div>
+                </div>
+                <div class="m-top-fun">
+                      <span class="m-fun-span f-ib m-tel"><em class="i-tel"></em><i class="p-tel">4009-789-789</i></span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-WeChat" id="i-WeChat">
+                      <a href="###" class="m-fun-a hover"><em class="i-WeChat"></em>手机版<b class="arrow"></b></a>
+                            <div class="m-WeChatImg z-hover-shadow" style="display:none;">
+                                <p><img src="http://localhost:8080/images/redesign/wechart.gif" alt="">关注微信了解新资讯</p>
+                                <p><img src="http://localhost:8080/images/redesign/app.png" alt="">下载APP投保快捷省心</p>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-service" id="i-service">
+                            <a href="###"  class="m-fun-a "><em class="i-service"></em></a>
+                            <div class="m-service_con z-hover-shadow" style="display:none;">
+                                 <ul class="m-service-li">
+                                <li><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单服务</a></li>
+                                <li><a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a></li>
+                                <li><a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔申请</a></li>
+                            </ul>
+                            </div> 
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-cart" id="i-user-cart-span"><a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-fun-a " onclick="wxsend('gwclogin');">
+                            <em class="i-cart"></em><i class="m-cartNum" id="shopCartNo">0</i></a>
+                              <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-nologin" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>请先登录</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/gwclogin" vlpageid="gwclogin">登录</a>
+                            </div>
+                             <!-- 购物车为空 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>购物车中没有商品</span>
+                                    <a href="http://www.kaixinbao.com" class="m-btn-login">去选购商品</a>
+                            </div>
+                             <!-- 购物车不为空 -->
+                           <div class="m-cart_list z-hover-shadow" id="m-cart-yes" style="display:none;">
+                                <ul class="m-cart-ul" id="shopcartinfo">
+                                
+                                </ul>
+                                <div class="m-cart-go">
+                                    	共计<em id="shoptotal"></em> <a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-cart-to">去购物车</a>
+                                </div>
+                           </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-user" id="i-user-span"><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-fun-a " onclick="wxsend('memlogin');"><em class="i-user"></em></a>
+                            <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-user-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>会员中心</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/memlogin" vlpageid="memlogin">登录</a>
+                            </div>
+                            <!-- 用户已登录状态 -->
+                            <div class="m-user-yes z-hover-shadow" id="m-user-yes" style="display:none;">
+                              <dl class="m-order_dl m-order_dl1">
+                                  <dt>我的保单</dt>
+                                  <dd>
+	                                  <a id="prepay" href="http://localhost:8080/wj/shop/order_query!queryNoPayOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="preeffecitive" href="http://localhost:8080/wj/shop/order_query!queryNoEffectOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="effecitive" href="http://localhost:8080/wj/shop/order_query!queryEffectingOrder.action" class="f-ib" rel="nofollow"></a>
+                                  </dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>账户中心</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/profile!edit.action" class="f-ib" rel="nofollow">账户信息</a>
+                                  <a href="http://localhost:8080/wj/shop/point!newList.action" class="f-ib" rel="nofollow">我的积分</a>
+                                  <a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="f-ib" rel="nofollow">我的优惠券</a></dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>客户服务</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/stow!queryScan.action" class="f-ib" rel="nofollow">我的收藏</a>
+                                  <a href="http://localhost:8080/wj/shop/question!questionList.action" class="f-ib" rel="nofollow">保险问答</a>
+                                  <a href="http://localhost:8080/wj/shop/member_comment!queryComment.action" class="f-ib" rel="nofollow">商品评价</a><a href="http://localhost:8080/wj/shop/my_compare!show.action" class="f-ib" rel="nofollow">对比记录</a>
+                                  <a href="http://localhost:8080/wj/shop/my_consult!show.action" class="f-ib" rel="nofollow">我的咨询</a></dd>
+                              </dl>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                </div>
+                <div class="g-resale-nav">
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/jiankang-baoxian/">健康险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/lvyou-baoxian/">旅游险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/yiwai-baoxian/">意外险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/">首页</a></span>
+                </div>
+            </div>
+        </div>
+<!--top头部end-->

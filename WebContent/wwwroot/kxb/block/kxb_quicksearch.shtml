@@ -1,0 +1,90 @@
+<div class="insquery">
+	<h3><img src="http://localhost:8080/image/insquerytit.gif" width="244" height="18" /></h3>
+	<div class="sul01">
+			<select id="search_ProductType" name="search_ProductType">
+			<option value="A00" selected>旅游保险</option>
+			<option value="A01">&nbsp;&nbsp;国内旅游险</option>
+			<option value="A02">&nbsp;&nbsp;境外旅游险</option>
+			<option value="A03">&nbsp;&nbsp;申根签证险</option>
+			<option value="B00">意外保险</option>
+			<option value="B01">&nbsp;&nbsp;人身意外险</option>
+			<option value="B02">&nbsp;&nbsp;交通意外险</option>
+			<option value="B03">&nbsp;&nbsp;航空意外险</option>
+			<option value="C00">家财保险</option>
+			<option value="C01">&nbsp;&nbsp;自住型</option>
+			<option value="C02">&nbsp;&nbsp;出租型</option>
+			<option value="C03">&nbsp;&nbsp;承租型</option>
+			<option value="D00">健康保险</option>
+			<option value="D01">&nbsp;&nbsp;重大疾病险</option>
+			<option value="D02">&nbsp;&nbsp;住院医疗险</option>
+			<option value="D03">&nbsp;&nbsp;特定疾病险</option>
+			<option value="D04">&nbsp;&nbsp;护理保险</option>
+			<option value="E00">人寿保险</option>
+			<option value="E01">&nbsp;&nbsp;两全险</option>
+			<option value="E02">&nbsp;&nbsp;定期险</option>
+			<option value="E03">&nbsp;&nbsp;理财险</option>
+			<option value="E04">&nbsp;&nbsp;教育险</option>
+			<option value="E05">&nbsp;&nbsp;年金险</option>
+			<option value="F00">车辆保险</option>
+		</select>	
+  </div>
+  <div class="sul01">
+		<select id="search_SupplierCode" name="search_SupplierCode">
+			<option value="" selected>==请选择保险公司==</option>
+			<option value="1004">人保寿险</option>
+			<option value="1006">人保健康</option>
+			<option value="1010">平安养老</option>
+			<option value="1015">泰康人寿</option>
+			<option value="1018">太平养老</option>
+			<option value="1032">友邦保险</option>
+			<option value="1061">合众人寿</option>
+			<option value="1087">阳光人寿</option>
+			<option value="1088">幸福人寿</option>
+			<option value="2007">平安财险</option>
+			<option value="2021">大地财险</option>
+			<option value="2023">华泰财险</option>
+			<option value="2025">天安财险</option>
+			<option value="2026">安盛天平车险</option>
+			<option value="2034">美亚财险</option>
+		</select>
+  </div>
+  <div class="sul01">
+		<select id="search_Age" name="search_Age">
+			<option value="" selected>==请选择年龄==</option>
+			<option value="0Y-10Y">0-10岁</option>
+			<option value="11Y-20Y">11-20岁</option>
+			<option value="21Y-30Y">21-30岁</option>
+			<option value="31Y-40Y">31-40岁</option>
+			<option value="41Y-50Y">41-50岁</option>
+			<option value="51Y-60Y">51-60岁</option>
+			<option value="61Y">60岁以上</option>
+		</select> 
+  </div>
+  <div class="sul01">
+		<select id="search_Sex" name="search_Sex">
+			<option value="" selected>==请选择性别==</option>
+			<option value="男">男</option>
+			<option value="女">女</option>
+		</select> 
+  </div>
+ 	<input type="button" class="insquerybtn" onclick="quick_search();" value="" />
+ 	<script type="text/javascript">
+		function quick_search() {
+			var dc = new DataCollection();
+			dc.add("_CurrentSiteID", "221");
+			dc.add("ProductType", document.getElementById("search_ProductType").value);
+			dc.add("SupplierCode", document.getElementById("search_SupplierCode").value);
+			dc.add("Age", document.getElementById("search_Age").value);
+			dc.add("Sex", document.getElementById("search_Sex").value);
+			dc.add("SearchType", "quick");
+			Server.sendRequest("com.sinosoft.product.ProductSearch.quicksearch", dc,
+					function(response) {
+						if (response.Status == 0) {
+							// 错误处理
+						} else if (response.Status == 1) {
+							window.open(response.get("resultPageURL"));
+						}
+					});
+		}
+	</script>
+</div>

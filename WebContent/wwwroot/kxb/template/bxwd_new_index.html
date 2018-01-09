@@ -1,0 +1,398 @@
+<!--导航结束-->
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+	</div>
+	<div class="wrapper">
+	<!--主体 开始-->
+		<div class="news_wdImg">
+				
+			<cms:ad name="保险问答首页最上广告位" custom="false" size="980*80" type="1"> 
+					{ZCMS:广告版位 矩形横幅 名称：开心保首页_下长}  
+			</cms:ad>		
+		</div>
+			<!--左边 开始-->
+		<div class="news_wdleft">
+			<h3 class="news_t">问答分类</h3> 
+			<div class="news_wdfl">
+				<h3 class="news_st">保险咨询</h3> 
+				<ul>
+					<cms:list item="catalog" type="article" level="child" name="保险咨询">						
+					<% if(i%3==0){%>
+					<li><span><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% }else if(i%3==1){%>
+					<li><span class="news_tc" ><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% }else if(i%3==2){%>
+					<li><span class="news_tr" ><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% } %>
+					</cms:list>
+				</ul>
+				<h3 class="news_st">险种咨询</h3> 
+				<ul>
+					<cms:list item="catalog" type="article" level="child" name="险种咨询">						
+					<% if(i%3==0){%>
+					<li><span><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% }else if(i%3==1){%>
+					<li><span class="news_tc" ><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% }else if(i%3==2){%>
+					<li><span class="news_tr" ><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% } %>
+					</cms:list>
+				</ul>
+				<h3 class="news_st">网站相关</h3> 
+				<ul>
+					<cms:list item="catalog" type="article" level="child" name="网站相关">						
+					<% if(i%3==0){%>
+					<li><span><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% }else if(i%3==1){%>
+					<li><span class="news_tc" ><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% }else if(i%3==2){%>
+					<li><span class="news_tr" ><font class="news_point">●&nbsp;&nbsp;</font><a href="${catalog.link}">${catalog.name}</a></span></li>
+					<% } %>
+					</cms:list>
+					
+				</ul>
+			</div>
+			<h3 class="news_t">热门标签</h3> 
+			<div class="news_rmbj">
+				<ul>
+					<li>
+						<cms:list item="customtable" name="zctag"  condition="order by rand()" count="51">
+					<% if(i%7==0){%>
+						<a class="news_color12" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }else if(i%7==1){%>
+						<a class="news_color14" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }else if(i%7==2){%>
+						<a class="news_color19" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }else if(i%7==3){%>
+						<a class="news_color13" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }else if(i%7==4){%>
+						<a class="news_color15" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }else if(i%7==5){%>
+						<a class="news_color16" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% }else if(i%7==6){%>
+						<a class="news_color14" href="${customtable.linkurl}" >${customtable.tag}</a>
+					<% } %>
+					</cms:list>
+					</li>
+				</ul>
+			</div>
+			<h3 class="news_t">推荐保险专题</h3> 
+			<div class="news_tjzt">
+				<ul>
+					<cms:list item="article" level="all" name="保险专题" hasAttribute="newRecommend" count="8" >
+						<li><a href="${article.link}" target="_blank">${article.title|substrwidth=20}</a></li>
+					</cms:list>	
+				</ul>
+			</div>
+			<div class="news_wdad">
+				<ul>
+					<li>
+						<cms:ad name="保险问答首页左下角广告位1" custom="false" size="980*80" type="1"> 
+					 		{ZCMS:广告版位 矩形横幅 名称：开心保首页_下长}  
+						</cms:ad>
+					</li>
+					<li>
+						<cms:ad name="保险问答首页左下角广告位2" custom="false" size="980*80" type="1"> 
+					 		{ZCMS:广告版位 矩形横幅 名称：开心保首页_下长}  
+						</cms:ad>
+					</li>
+					<li>
+						<cms:ad name="保险问答首页左下角广告位3" custom="false" size="980*80" type="1"> 
+					 		{ZCMS:广告版位 矩形横幅 名称：开心保首页_下长}  
+						</cms:ad>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--左边 结束-->
+		<!--右边 开始-->
+		<div class="news_wdright">
+			<!--问答第一部分 开始-->
+			<div class="news_wdct" >
+			<cms:list item="Article" level="all" count="1" name="保险问答" hasAttribute="hp_recommend" type = "modifyzx" >
+				<div class="news_wdtop" >
+					<div class="news_tab_Img"><a href="${Article.Link}" alt="" rel="nofollow"><img src="${Site.StaticResourcePath}/${Article.logo}" height="86" width="108"/></a></div>
+					<div class="news_tab_wdT">
+						<h2 class="news_wdTitles news_qImg"><a href="${Article.Link}" >${Article.Title}</a></h2> 
+						<p class="news_wdAover">${Article.metadescription|CharWidth=100}</p> 
+						<span class="news_wdmore"> <a href="${Article.Link}" rel="nofollow" >详细》</a></span>
+					</div>
+				</div>
+			</cms:list>
+				<div class="news_wdlist" >
+					<ul>
+					<cms:list item="Article" level="all" count="7" name="保险问答" hasAttribute="hp_recommend" type = "modifyzx" >
+					<%if(i!=0){%>	
+						<li><font class="news_wdLt"><a href="${Article.Link}" >${Article.Title|CharWidth=22}</a></font></li>
+					<%}%>
+					</cms:list>
+					</ul>
+				</div>
+			
+			</div>
+			<!--问答第一部分 结束-->
+			<!--搜索 开始-->
+				<div class="memeber_wdcheck news_bor_hui">
+				<form action="${Site.prop6}/Search/bxwd_SearchResult.jsp">
+					<input type="hidden" name="id" value="26" id="id" />
+					<input type="hidden" name="site" value="221" />
+					<input class="qasearchinput" type="text" onblur="if(this.value==''){this.value='请输入保险问题进行搜索...';this.className ='qasearchinput';}" onfocus="if(this.value=='请输入保险问题进行搜索...'){this.value='';}" onclick="this.className='qasearchinputclick'" value="请输入保险问题进行搜索..." name="query"></input>
+                    <span><input class="member_wdsummit" type="submit" value="搜索答案" /></span>     
+                    <span><input type="button" value="我要提问" class="member_wdsummit" onclick="location.href='<cms:link type='Catalog' name='我要提问'/>'" /> </span>
+                </form>	
+                </div>
+			<!--旅游健康tab 开始-->
+			 <div class="news_wdct">
+			    <ul class="news_wdtab_t cf" >      
+			    	<li><span id="hot_Fl1"  class="hover" onclick="setTab('hot_Fl',1,6)">旅游保险</span></li>
+			    	<li><span id="hot_Fl2"  class="" onclick="setTab('hot_Fl',2,6)">意外保险</span></li>
+			    	<li><span id="hot_Fl3"  class="" onclick="setTab('hot_Fl',3,6)">车辆保险</span></li>
+			    	<li><span id="hot_Fl4"  class="" onclick="setTab('hot_Fl',4,6)">健康保险</span></li>
+			    	<li><span id="hot_Fl5"  class="" onclick="setTab('hot_Fl',5,6)">家财保险</span></li>
+			    	<li><span id="hot_Fl6"  class="" onclick="setTab('hot_Fl',6,6)">人寿保险</span></li>
+			    </ul>
+			    <div class="news_wdtab_box news_bor_hui">
+				       <div id="con_hot_Fl_1" >
+				       		<div  class="news_wdtab_l">
+				       			<ul>
+				       			<cms:list item="article" name="9461" count="6" hasAttribute="hot">
+									<li><font class="news_wdLt"><a href="${Article.Link}" >${Article.Title}</a></font></li>
+								</cms:list>
+								</ul>
+							</div>
+							<div class="news_wdtab_r" >
+								<h3 class="news_wdtjt">旅游保险相关产品</h3> 
+								<ul>
+								<cms:list item="article" level="all"  name="9409" count="3" type="rand">
+									<li>
+										<span class="news_xgcp_t"><a href="${Article.Link}">${Article.title|CharWidth=16}</a></span>
+										<span class="news_xgcp_T">${Article.AdaptPeopleInfo|CharWidth=16}</span>
+									</li>
+								</cms:list>
+								</ul>
+							</div>
+								<a href="${Site.URL}/wenda/xianzhong/lvyou/" class="news_wd_more"  target="_blank"  rel="nofollow" >更多旅游保险问答</a>
+							
+				        </div>
+				       <div id="con_hot_Fl_2" style="display:none;">
+				      	 	<div  class="news_wdtab_l">
+				       			<ul>
+								<cms:list item="article" name="9459" count="6" hasAttribute="hot">
+									<li><font class="news_wdLt"><a href="${Article.Link}" >${Article.Title}</a></font></li>
+								</cms:list>
+								</ul>
+							</div>
+							<div class="news_wdtab_r" >
+								<h3 class="news_wdtjt">意外保险相关产品</h3> 
+								<ul>
+								<cms:list item="article" level="all"  name="9385" count="3" type="rand">
+									<li>
+										<span class="news_xgcp_t"><a href="${Article.Link}">${Article.title|CharWidth=16}</a></span>
+										<span class="news_xgcp_T">${Article.AdaptPeopleInfo|CharWidth=16}</span>
+									</li>
+								</cms:list>
+								</ul>
+							</div>
+							<a href="${Site.URL}/wenda/xianzhong/yiwai/" class="news_wd_more"  target="_blank"  rel="nofollow">更多意外保险问答</a>
+				       </div>
+				       <div id="con_hot_Fl_3" style="display:none;">
+				       		<div  class="news_wdtab_l">
+				       			<ul>
+								<cms:list item="article" name="9900" count="6" hasAttribute="hot">
+									<li><font class="news_wdLt"><a href="${Article.Link}" >${Article.Title}</a></font></li>
+								</cms:list>
+								</ul>
+							</div>
+							<div class="news_wdtab_r" >
+								<h3 class="news_wdtjt">车辆保险相关产品</h3> 
+								<ul>
+									<cms:list item="friendlink" name="车辆产品问答首页" count="3">
+										<li>
+										<span class="news_xgcp_t"><a href="${friendlink.URL}" target="_blank">${friendlink.Name|CharWidth=16}</a></span>
+										<span class="news_xgcp_T">${friendlink.Prop3|CharWidth=16}</span>
+										</li>
+									</cms:list>
+								</ul>
+							</div>
+							<a href="${Site.URL}/wenda/xianzhong/cheliang/" class="news_wd_more"  target="_blank" rel="nofollow">更多车辆保险问答</a>
+				       </div>
+				       <div id="con_hot_Fl_4" style="display:none;">
+				      		<div  class="news_wdtab_l">
+				       			<ul>
+								<cms:list item="article" name="9465" count="6" hasAttribute="hot">
+									<li><font class="news_wdLt"><a href="${Article.Link}" >${Article.Title}</a></font></li>
+								</cms:list>
+								</ul>
+							</div>
+							<div class="news_wdtab_r" >
+								<h3 class="news_wdtjt">健康保险相关产品</h3> 
+								<ul>
+								<cms:list item="article" level="all"  name="9424" count="3" type="rand">
+									<li>
+										<span class="news_xgcp_t"><a href="${Article.Link}">${Article.title|CharWidth=16}</a></span>
+										<span class="news_xgcp_T">${Article.AdaptPeopleInfo|CharWidth=16}</span>
+									</li>
+								</cms:list>
+								</ul>
+							</div>
+							<a href="${Site.URL}/wenda/xianzhong/jiankang/" class="news_wd_more"  target="_blank"  rel="nofollow">更多健康保险问答</a>
+				      </div>
+			          <div id="con_hot_Fl_5" style="display:none;">
+				       		<div  class="news_wdtab_l">
+				       			<ul>
+								<cms:list item="article" name="9899" count="6" hasAttribute="hot">
+									<li><font class="news_wdLt"><a href="${Article.Link}" >${Article.Title}</a></font></li>
+								</cms:list>
+								</ul>
+							</div>
+							<div class="news_wdtab_r" >
+								<h3 class="news_wdtjt">家财保险相关产品</h3> 
+								<ul>
+									<cms:list item="friendlink" name="家财产品问答首页" count="3">
+										<li>
+										<span class="news_xgcp_t"><a href="${friendlink.URL}" target="_blank">${friendlink.Name|CharWidth=16}</a></span>
+										<span class="news_xgcp_T">${friendlink.Prop3|CharWidth=16}</span>
+										</li>
+									</cms:list>
+								</ul>
+							</div>
+							<a href="${Site.URL}/wenda/xianzhong/jiacai/" class="news_wd_more"  target="_blank" rel="nofollow" >更多家财保险问答</a>
+				       </div>
+				       <div id="con_hot_Fl_6" style="display:none;">
+				       		<div  class="news_wdtab_l">
+				       			<ul>
+								<cms:list item="article" name="9901" count="6" hasAttribute="hot">
+									<li><font class="news_wdLt"><a href="${Article.Link}" >${Article.Title}</a></font></li>
+								</cms:list>
+								</ul>
+							</div>
+							<div class="news_wdtab_r" >
+								<h3 class="news_wdtjt">人寿保险相关产品</h3> 
+								<ul>
+								<cms:list item="article" level="all"  name="9399" count="3" type="rand">
+									<li>
+										<span class="news_xgcp_t"><a href="${Article.Link}">${Article.title|CharWidth=16}</a></span>
+										<span class="news_xgcp_T">${Article.AdaptPeopleInfo|CharWidth=16}</span>
+									</li>
+								</cms:list>
+								</ul>
+							</div>
+							<a href="${Site.URL}/wenda/xianzhong/renshou/" class="news_wd_more"  target="_blank" rel="nofollow">更多人寿保险问答</a>
+				      </div>
+			      </div>
+			  </div>
+			  <!--旅游健康tab 结束-->
+			  <!--百科ad 开始-->
+			  <div class="news_bkImg">
+			  
+			  <cms:ad name="保险问答首页内容中广告位" custom="false" size="980*80" type="1"> 
+					{ZCMS:广告版位 矩形横幅 名称：开心保首页_下长}  
+			</cms:ad>
+			
+			  </div>
+			  <!--百科ad 结束-->
+			   <!--热门问题 tab 开始-->
+			  <div class="news_wdct">
+				 <ul class="news_wdtab_t cf" >      
+			    	<li><span id="hot_Wt1"  class="hover" onMouseOver="setTab('hot_Wt',1,2)">最新问题</span></li>
+			    	<li><span id="hot_Wt2"  class="" onMouseOver="setTab('hot_Wt',2,2)">热门问题</span></li>
+			    </ul>
+			    <div class="news_wdtabB_box">
+			       <div id="con_hot_Wt_1" >
+			       		<ul>
+			       		<cms:list item="article" level="all"  name="保险问答" count="8" type = "firstpublish">
+			       			<li>
+				       			<p class="news_qat">
+				       				<span class="news_qaQ"><a href="${article.link}">${article.title}</a></span>
+				       				<%if("solve".equals(article.getString("isOk"))){%>
+				       				<span class="news_qaTd" ></span>
+				       				<%}%>
+				       				<span class="news_qatime" >丨&nbsp;发布于  ${Article.FirstPublishDate|Format=yyyy-MM-dd }</span>
+				       				<span class="news_qaname" >${Article.author}</span>
+	                            </p>
+	                           	<div class="news_qaA">
+				       				<b>
+				       				<%if("solve".equals(article.getString("isOk"))){%>
+				       				答:&nbsp;
+				       				<%}%>
+									</b>
+									<%if("solve".equals(article.getString("isOk"))){%>
+				       				${Article.metadescription|CharWidth=100}
+				       				<%}else{%>
+				       				${Article.cainadaan|CharWidth=100}
+									<%}%>
+	                            </div>
+			       			</li>
+			       		</cms:list>					  
+			       		</ul>
+			       		<div class="news_tab_qmore"><a href="${Site.URL}/wenda/list.shtml" >更多...</a></div>
+			        </div>
+			       <div id="con_hot_Wt_2" style="display:none;">
+			      		 <ul>
+			      		 <cms:list item="article" level="all"  name="保险问答" count="8" type = "rand">
+			       			<li>
+				       			<p class="news_qat">
+				       				<span class="news_qaQ"><a href="${article.link}">${article.title}</a></span>
+				       				<%if("solve".equals(article.getString("isOk"))){%>
+				       				<span class="news_qaTd" ></span>
+				       				<%}%>
+				       				<span class="news_qatime">丨&nbsp;发布于 ${Article.FirstPublishDate|Format=yyyy-MM-dd }</span>
+				       				<span class="news_qaname">${Article.author}</span>
+	                            </p>
+	                           	<div class="news_qaA">
+				       				<b>
+				       				<%if("solve".equals(article.getString("isOk"))){%>
+				       				答:&nbsp;
+				       				<%}%>
+									</b>
+									<%if("solve".equals(article.getString("isOk"))){%>
+				       				${Article.metadescription|CharWidth=100}
+				       				<%}else{%>
+				       				${Article.cainadaan|CharWidth=100}
+									<%}%>
+	                            </div>
+			       			</li>
+			       		</cms:list>	
+			       		</ul>
+			       </div>
+			     </div>
+			  </div>
+		</div>
+		<!--右边 结束-->
+		
+	<!--主体 结束-->
+	</div>
+ <div class="h10" ></div>
+ <div class="wrapper">
+   <div class="part6">
+    <ul>
+	<cms:list item="hotopic"  name="问答首页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="问答首页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="问答首页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+	</div>
+ </div>
+
+
+
+
+	<div class="clear"></div>
+<cms:include file="block/community_v1.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<!-- Powered by CMS(中科软科技股份有限公司) 1.3.1.0 PublishDate 2013-04-16 15:32:45-->

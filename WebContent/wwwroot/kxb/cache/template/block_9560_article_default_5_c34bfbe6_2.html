@@ -1,0 +1,18 @@
+<% DataTable dt_2 = TemplateData.getDocList("article","意外保险","all","hot","null","5","null","null","null");
+  if(dt_2==null){write("没有找到栏目。parent：null  catalog："+"意外保险");}else{
+ int rdCnt=dt_2.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_2  = dt_2.getDataRow(i);
+ int rdIdx=i;
+%>
+	
+                        <li>
+                        	<h4><a href="${article_2.Link}"><img src="${Site.ProductResourcePath}/${article_2.Logo}" alt="${article_2.title}" width="50" height="50" /></a></h4>
+                        	<div class="hotproduright">
+								<h5><a href="${article_2.Link}" title="${article_2.title}">${article_2.title|CharWidth=12}</a> </h5>
+								<h6>${article_2.AdaptPeopleInfo}</h6>
+							</div>
+                        	                   
+                        </li>                      
+			<%}}%>

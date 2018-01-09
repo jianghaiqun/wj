@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>正在连接，请稍后…</title>
+<link rel="stylesheet" type="text/css" href="/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="/style/car/car_style.css">
+
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper">
+  <div class="guodu_box">
+       <div class="guodu_logo"></div>
+    <p class="meihua_p">正在与 <b class="font_guodu_p">开心保</b>网站连通<br/>请稍候...</p>
+    <img src="${Site.StaticResourcePath}/images/loading2.gif" width="70" height="70" />
+    </div>
+</div>
+
+<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+		<cms:include file="block/community.shtml" />
+<script type="text/javascript">
+function openlink(){
+	function isIllegal(temp) {
+		var regex = "script|prompt|iframe|<|>|\"|\'|javascript";
+		var r = temp.match(regex); 
+		if(r==null||r==""){
+			return false; 
+		}else{
+			return true;
+		}
+	}
+	 var str=window.location.search;   //location.search是从当前URL的?号开始的字符串
+	 if(isIllegal(str)){
+		 window.location.href= sinosoft.base+"/error.jsp?errormsg='carjs'";
+		 }else{
+	 	 str = str.replace("?", "");
+		 window.location.href=str;
+		 }
+ }
+setTimeout("openlink()",1000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<% DataTable dt_2 = TemplateData.getDocList("article","经验抽奖","all","null","null","8","null","null","null");
+  if(dt_2==null){write("没有找到栏目。parent：null  catalog："+"经验抽奖");}else{
+ int rdCnt=dt_2.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_2  = dt_2.getDataRow(i);
+ int rdIdx=i;
+%>
+
+					<div class="jyzcjqcont">
+						<div class="jyzcjqcontimg">
+							<img src="${Site.StaticResourcePath}/${article_2.logo}" height="100" width="100" /><span>${article_2.kaixinguo}经验值/次</span>
+						</div>
+						<div class="jyzcjqconttxt">
+							<h1>
+								<b>${article_2.title}</b><br />${article_2.content}
+							</h1>
+							<span onclick="submitp('${article_2.actCode}','${article_2.referenceprice}');"><a href="#"><img
+								 src="${Site.StaticResourcePath}/images/btnchangepoint.gif" />
+							</a>
+							</span>
+						</div>
+						<div class="clear"></div>
+					</div>
+				<%}}%>

@@ -1,0 +1,14 @@
+<% DataTable dt_0 = TemplateData.getDocList("article","车辆违章查询","current","null","null","1","null","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"车辆违章查询");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+
+<%
+String title = article_0.getString("MetaTitle");
+write(((null==title || "".equals(title)) ? article_0.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+<%}}%>

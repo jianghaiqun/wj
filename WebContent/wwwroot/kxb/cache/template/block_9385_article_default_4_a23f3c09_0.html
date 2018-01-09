@@ -1,0 +1,20 @@
+<% DataTable dt_15 = TemplateData.getDocList("article","9385","current","null","null","4","cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'","null","null");
+  if(dt_15==null){write("没有找到栏目。parent：null  catalog："+"9385");}else{
+ int rdCnt=dt_15.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_15  = dt_15.getDataRow(i);
+ int rdIdx=i;
+%>
+
+						    	
+						    	
+		                               <dl class="g-eb-dl">
+		                                  <a href="${Site.URL}/${article_15.URL}" target="_blank"><span class="g-eb-num f_mi"><%=i+1%></span>
+		                                  <dt>${article_15.Title|CharWidth=12}</dt>
+		                                  <dd>${article_15.AdaptPeopleInfo|CharWidth=20}</dd>
+		                                  <dd><span class="g-eb-money f_mi f-ib">￥${article_15.BasePremValue}</span><span class="g-eb-nums f-ib"><i id="SalesI_${article_15.RiskCode}" class="SalesI_${article_15.RiskCode}" >0人</i>已购买</span></dd>
+		                                  <span class="g-eb-go"></span></a>
+		                               </dl>						    	
+						    	
+						    	<%}}%>

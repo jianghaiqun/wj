@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title> 
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_list.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/brand_style.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_cooperation.css"/>
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+
+</head>
+<body class="cooperation">
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link> <span class="separator">></span><p>${Article.title}</p>
+		</div>
+		<div class="content">
+			<!-- 公司介绍 -->
+            <div class="introduce">
+                <div class="thumb_wrap">
+					<% if(article.getString("CompanyID").contains(",")){%>
+					<div class='companies_logo_hz max_icon_C<%= article.getString("CompanyID").substring(0, 4)%>'></div>
+					<% }else{%>
+					<div class="companies_logo_hz max_icon_C${Article.CompanyID}"></div>
+					<% }%>
+                    <p>客服电话：<em>${Article.CustomTel}</em></p>
+                </div>
+                <div class="hide detail">
+                    <h2>${Article.title}</h2>
+                    <div class="detail_p">${Article.content}<i class="points icon"></i></div>
+                </div>
+                <i class="arrow icon"></i>
+            </div>
+            <!-- 公司介绍 end -->
+			<div class="grid-c2-s6f detail_page1">
+				<div class="col-main">
+					<div class="main-wrap">
+						<cms:list item="article" level="none" condition=" exists(select 1 from ZDColumnValue z2 where ZCArticle.id=z2.relaid and z2.columncode='SupplierCode' and z2.textvalue in (${Article.CompanyID})) and status='30'" customtableflag="true" page="true" pagesize="10" globaldata="true" dataid="productlist" detailaslist="true">
+						<div class="nlist_con cf">
+							<div class="nlist_des">
+								<div class="icon_C${article.SupplierCode} m-list-logo"></div>
+								<div class="m-list-cn">
+									<a class="nlist_title" href="${article.link}" target="_blank">${article.title}</a>
+									<div class="shop_tj_shrq cf">
+										<p class="shop_shrd_con">
+	                                        <span class="shop_shrq_bg"> 适合人群</span>
+	                                        ${article.AdaptPeopleInfoListV3}
+	                                    </p>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<ul class="recommend_list">${article.DutyHTMLV3}</ul>
+								<div class="price_tj">
+									<span class="recom_xl" id="SalesV_${Article.RiskCode}">(累计销量：加载中...)</span>
+									<span class="recom_xl"><i><a href="javascript:void(0)" onclick="openCommnet('${Article.link}')" class="shop_tj_num" id="CommentV_${Article.RiskCode}">评论加载中...</a></i></span>
+								</div>
+							</div>
+							<div class="nlist_price">
+								<p class="list_Sale tribe-action" id="Activity_${Article.RiskCode}">
+									<span id="Diy_Title_Activity_${Article.RiskCode}" style="display: none;"></span>
+									<em id="Diy_Activity_${Article.RiskCode}" style="display: none;"></em>
+								</p>
+								<span class="nlist_pay moneys" name="Ajax_Prict_${Article.RiskCode}"><em>￥</em>${article.InitPrem}</span>
+								<em class="nlist_pay_t moneys"> 
+									<span name="Clear_Ajax_Prict_${Article.RiskCode}">
+											    <!--
+											    <%  String initPrem = "￥"+article.getString("InitPrem"); String
+													basePrem = article.getString("BasePremV3");
+													if(!initPrem.equals(basePrem) && basePrem!=null &&!"".equals(basePrem)){ write("原价 "+basePrem); } %> 
+												-->
+									</span>
+								</em>
+								<div class="remcon_desmore">
+									<a target="_blank" href="${Article.link}" rel="nofollow">去看看</a>
+								</div>
+							</div>
+						</div>
+						</cms:list>
+					</div>
+					<div class="plpage">
+						<!--    翻页    -->
+						<div class="page_area" id="productsPageBar"><div id="pagination">${pageBarNew}</div></div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="col-sub">
+					<!-- 产品分类 -->
+					<div class="new_bottom">
+						<script src="${Site.Prop6}/Services/bxppB1ProductList.jsp?alias=${Article.alias}&id=${Article.id}_${Article.CompanyID}"></script>
+					</div>
+					<!-- 买保险选开心保 -->
+					<div class="new_bottom choose">
+	                    <h3 class="title_left"><i class="icon"></i>买保险选开心保</h3>
+	                    <ul>
+	                        <li>
+	                            <p>保险公司</p>
+	                            <span>制定合作网站</span>
+	                        </li>
+	                        <li>
+	                            <p>保监会认证</p>
+	                            <span>优质保险销售平台</span>
+	                        </li>
+	                        <li>
+	                            <p>计划对比</p>
+	                            <span>在线对比更省钱</span>
+	                        </li>
+	                        <li>
+	                            <p>快捷支付</p>
+	                            <span>实时出单</span>
+	                        </li>
+	                        <li class="last">
+	                            <p>专业导购</p>
+	                            <span>协助理赔</span>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <!-- 投保及服务 -->
+	                <div class="new_bottom service">
+	                	<h3 class="title_left"><i class="icon"></i>投保及服务</h3>
+	                	<ul>
+	                		<li>
+	                			<i>1</i>
+	                			<p><i class="icon"></i>选择保险产品</p>
+	                		</li>
+	                		<li>
+	                			<i>2</i>
+	                			<p><i class="icon"></i>在线填写保单</p>
+	                		</li>
+	                		<li>
+	                			<i>3</i>
+	                			<p><i class="icon"></i>网上支付</p>
+	                		</li>
+	                		<li>
+	                			<i>4</i>
+	                			<p><i class="icon"></i>下载电子保单</p>
+	                		</li>
+	                	</ul>
+	                	<p class="on_time">7*24小时服务，投保仅需3分钟！</p>
+	                	<div class="s_info">
+	                        <p>
+	                        	<em>保单：</em> 电子保单为PDF格式，与纸质保单有同等法律效力。电子保单将在30分钟之内发送到您填写的投保人邮箱中。如需办理签证需彩色打印保单。
+	                        </p>
+	                        <p>
+	                            <em>验真：</em>在开心保投保成功后，凭电子保单号可到保险公司验真。
+	                        </p>
+	                        <p>
+	                            <em>理赔：</em>开心保用户享受协助理赔服务帮您报案、提交申请、搜集资料、提供理赔咨询。
+	                        </p>
+	                    </div>
+	                </div>
+	                <!-- 产品热销榜 -->
+	                <div class="new_bottom hots">
+						<h3 class="title_left"><i class="icon"></i>产品热销榜</h3>
+						<ul class="nav"  id="hot_nav">
+                            <li class="cur"><span id="hot1">旅游险</span></li>
+                            <li><span id="hot2" >健康险</span></li>
+                            <li><span id="hot3" >意外险</span></li>
+                        </ul>
+                        <div id="hot_con">
+	                        <ul class="detail_list" style="display: block;">
+	                        	<cms:list item="article" name="9409" level="current" count="5" hasAttribute="hot">
+	                        	<li>
+                                    <a class="dl_title ellipsis" href="${Article.Link}" target="_blank">${Article.Title}</a>
+                                    <p class="for_who">${Article.AdaptPeopleInfo|CharWidth=15}</p>
+                                    <p>
+                                        <span class="price" name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}</span>
+                                        <span id="SalesU_${Article.RiskCode}">${Article.SalesVolume}人已购买</span>
+                                    </p>
+                                    <a class="icon" href="${Article.Link}" target="_blank">
+                                        >
+                                    </a>
+                                </li>
+	                        	</cms:list>
+	                        </ul>
+	                        <ul class="detail_list" id="con_hot_2" style="display: none;">
+	                        	<cms:list item="article" name="产品中心/健康保险" level="current" count="5" hasAttribute="hot">
+	                        	<li>
+                                    <a class="dl_title ellipsis" href="${Article.Link}" target="_blank">${Article.Title}</a>
+                                    <p class="for_who">${Article.AdaptPeopleInfo|CharWidth=15}</p>
+                                    <p>
+                                        <span class="price" name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}</span>
+                                        <span id="SalesU_${Article.RiskCode}">${Article.SalesVolume}人已购买</span>
+                                    </p>
+                                    <a class="icon" href="${Article.Link}" target="_blank">
+                                        >
+                                    </a>
+                                </li>
+	                        	</cms:list>
+	                        </ul>
+	                        <ul class="detail_list" id="con_hot_3" style="display: none;">
+	                        	<cms:list item="article" name="9385" level="current" count="5" hasAttribute="hot">
+	                        	<li>
+                                    <a class="dl_title ellipsis" href="${Article.Link}" target="_blank">${Article.Title}</a>
+                                    <p class="for_who">${Article.AdaptPeopleInfo|CharWidth=15}</p>
+                                    <p>
+                                        <span class="price" name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}</span>
+                                        <span id="SalesU_${Article.RiskCode}">${Article.SalesVolume}人已购买</span>
+                                    </p>
+                                    <a class="icon" href="${Article.Link}" target="_blank">
+                                        >
+                                    </a>
+                                </li>
+	                        	</cms:list>
+	                        </ul>
+                        </div>
+					</div>
+	                <!-- 咨询、百科、问答、知识 -->
+	                <div class="new_bottom news">
+	                	<ul class="nav" id="news">
+                            <li class="cur">
+                                <span>资讯</span>
+                            </li>
+                            <li>
+                                <span>百科</span>
+                            </li>
+                            <li>
+                                <span>问答</span>
+                            </li>
+                            <li>
+                                <span>知识</span>
+                            </li>
+                        </ul>
+                        <div id="news_con">
+                        	<ul class="detail_list" style="display:block;">
+                        	<cms:list item="article" level="none" condition="cataloginnercode like '002307%' and tag like '%${Article.tag}%' and status in (30,60)" count="6" >
+								<li>
+									<a href="${Article.Link}" class="ellipsis">${Article.Title}</a>
+								</li>
+							</cms:list>
+                        	</ul>
+                        	<ul class="detail_list" style="display:none;">
+                        	<cms:list item="article" level="none" condition="cataloginnercode like '002347%' and tag like '%${Article.tag}%' and status in (30,60)" count="6" >
+								<li>
+									<a href="${Article.Link}" class="ellipsis">${Article.Title}</a>
+								</li>
+							</cms:list>
+                        	</ul>
+                        	<ul class="detail_list" style="display:none">
+							<cms:list item="article" level="none" condition="cataloginnercode like '002308%' and tag like '%${Article.tag}%' and status in (30,60)" count="6" >
+								<li>
+									<a href="${Article.Link}" class="ellipsis">${Article.Title}</a>
+								</li>
+							</cms:list>
+							</ul>
+							<ul class="detail_list" style="display:none">
+							<cms:list item="article" level="none" condition="cataloginnercode like '002306%' and tag like '%${Article.tag}%' and status in (30,60)" count="6" >
+							<li>
+								<a href="${Article.Link}" class="ellipsis">${Article.Title}</a>
+							</li>
+							</cms:list>
+							</ul>
+                        </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+		<div class="clear h20"></div>
+		<div class="others">
+			<h3 class="box_title"><i class="icon"></i>其他保险公司</h3>
+			<ul>
+			<cms:list item="article" level="all" id="${Catalog.ID}" condition=" exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='是' and z1.columncode='HasPartnership')" name="保险品牌">
+				<li><a href="${Article.link}">${Article.alias}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" condition=" exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='否' and z1.columncode='HasPartnership')" name="保险品牌">
+				<li><a href="${Article.link}">${Article.alias}</a></li>
+			</cms:list>
+			</ul>
+		</div>
+	</div>	
+
+		
+
+
+	<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"></cms:include>
+	<cms:include file="block/kxb_product_compare.shtml" includetype="virtual"/>
+	<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=false"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_productCompare.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_productlistv3.js"></script>
+	<script type="text/javascript">
+	jQuery.fn.extend({ 
+        liClick: function(){
+            // console.log(this);
+            this.each(function(){
+                var _this = jQuery(this);
+                _this.click(function(){
+                    _this.siblings().removeClass('cur').end()
+                        .addClass('cur');
+                });
+            });
+        }
+    });
+	
+	jQuery(function(){
+        jQuery('.news .nav li, .hots .nav li').liClick();
+        //公司介绍的下拉效果
+        var _introduce = jQuery('.introduce'),
+            _detail = _introduce.find('.detail'),
+            _arrow = _introduce.find('.arrow'),
+            _p = _detail.find('.detail_p');
+        if(_p.height() > 115){
+            _arrow.show().click(function(){
+                jQuery(this).toggleClass('up');
+                _detail.toggleClass('hide');
+            });
+        }
+        else{
+            _arrow.hide();
+        }
+    });
+	
+	jQuery(document).ready(function($) {
+        jQuery("#hot_nav li").tagclickbind({addstyle:"cur",con:"hot_con",nav:"hot_nav",mode:"ul"});
+    });
+	
+    jQuery(document).ready(function($) {
+        jQuery("#news li").tagclickbind({addstyle:"cur",con:"news_con",nav:"news",mode:"ul"});
+    });
+	</script>
+</body>
+</html>

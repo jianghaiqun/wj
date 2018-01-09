@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<link rel="stylesheet" type="text/css"
+	href="${Site.StaticResourcePath}/style/commonality.css" />
+<link href="${Site.StaticResourcePath}/style/IntegralMallSty.css" rel="stylesheet"
+	type="text/css" />
+<link href="${Site.StaticResourcePath}/style/StyCss.css" rel="stylesheet"
+	type="text/css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<style>
+.ColumnArea__ {
+	width: 500px;
+	float: right;
+	background: #fff;
+}
+
+.ColumnArea__ .TitleArea {
+	background: url(${Site.StaticResourcePath}/images/Bg_1.gif);
+	height: 34px;
+	line-height: 34px;
+	font-size: 16px;
+	color: #000000;
+	text-shadow: -1px -1px 1px #810C0C;
+	text-indent: 25px;
+}
+
+.ColumnArea__ .TitleArea .TitleTxt {
+	float: left;
+	height: 34px;
+	line-height: 34px;
+	font-size: 16px;
+	color: #000000;
+	font-weight: hold;
+}
+
+.ColumnArea__ .TitleArea .TitleMore {
+	float: right;
+	background: url(${Site.prop6}/template/shop/images/login_bg.gif) no-repeat
+		-30px -64px;
+	width: 40px;
+	height: 20px;
+	margin-top: 5px;
+}
+
+.ColumnArea__ .TitleArea .TitleMore a {
+	display: block;
+	text-decoration: none;
+	width: 40px;
+	height: 24px;
+}
+
+.ColumnArea__ .Content {
+	font-size: 14px;
+	margin-top: 40px;
+}
+
+.btn {
+	BORDER-RIGHT: #7b9ebd 1px solid;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: #7b9ebd 1px solid;
+	PADDING-LEFT: 2px;
+	FONT-SIZE: 12px;
+	FILTER: progid : DXImageTransform.Microsoft.Gradient ( GradientType = 0,
+		StartColorStr = #ffffff, EndColorStr = #cecfde );
+	BORDER-LEFT: #7b9ebd 1px solid;
+	CURSOR: hand;
+	COLOR: black;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #7b9ebd 1px solid
+}
+</style>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="wrapper">
+
+		<div class="MallMiddArea">
+			<div class="MallColumnArea_1 mb10">
+				<!--     商城产品分类  begin   -->
+				<div class="TitleArea">
+					<h3>商城产品分类</h3>
+				</div>
+				<div class="ColumnCont">
+					<ul class="ListArea">
+						<li><a href="<cms:link type='Catalog' name='手机充值卡'/>"
+							class="Ico_1">手机充值卡</a></li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!--    商城产品分类  end    -->
+
+			<div class="MallFocusArea">
+				<!--     焦点图  begin   -->
+				<cms:imageplayer code="points_home" type="0" width="496"
+					height="282" />
+			</div>
+			<!--     焦点图  begin   -->
+
+			<div class="MallUserInfoArea mb10">
+				<!--     已登录  begin   -->
+				<div id="login_no_">
+					<h4
+						style="margin-top: 30px; font-size: 15px; text-align: left; font-weight: bold;">您尚未登录</h4>
+					<h5 style="margin-top: 5px; margin-bottom: 15px;" />
+					登录后可以查看积分
+					</h5>
+					<div class="UserIntegralNumArea">
+						<red>---</red>
+					</div>
+				</div>
+				<div style="display: none;" id="login_yes_">
+					<h4
+						style="margin-top: 30px; font-size: 15px; text-align: left; font-weight: bold;">尊敬的会员</h4>
+					<h5 style="margin-top: 5px; margin-bottom: 15px;">您当前拥有的开心果</h5>
+					<div class="UserIntegralNumArea" id="usrinfo_integral"></div>
+				</div>
+			</div>
+			<!--     已登录  begin   -->
+			<div class="clear"></div>
+
+			<div class="MallColumnArea_2 mb10">
+				<!--     手机充值卡类兑换排行  begin   -->
+				<div class="TitleArea">
+					<h3>手机充值卡类热销排行</h3>
+				</div>
+				<div class="ColumnCont">
+					<ul>
+						<cms:list item="Article" count="10" hasAttribute="newRecommend"
+							name="手机充值卡">
+		        	        <% int index = i+1; %>
+			                <li><% if(index<=3) { %>
+								<div class="ListNumberID_<%=index%>"><%=index%></div> <% } else
+								{%>
+								<div class="ListNumberID"><%=index%></div> <% } %>
+								<div class="ListTxt">
+									<a href="${Article.Link}" target="_top">${Article.title}</a>
+								</div>
+								<div class="clear"></div></li>
+						</cms:list>
+					</ul>
+				</div>
+			</div>
+			<!--    手机充值卡类兑换排行  end    -->
+
+			<div class="MallColumnArea_3 mb10">
+				<!--     手机充值卡  begin   -->
+				<div class="TitleArea">
+					<a href="<cms:link type='Catalog' name='手机充值卡'/>">手机充值卡</a>
+				</div>
+				<div class="ColumnCont">
+					<cms:list item="Article" level="all" count="8" name="手机充值卡">
+						<a href="${Article.Link}" target="_top"> <img
+							src="${Site.StaticResourcePath}/${Article.logo}" width="173" height="157"
+							alt="${Article.title}" /> </a>
+					</cms:list>
+				</div>
+			</div>
+			<!--    手机充值卡  end    -->
+			<div class="clear"></div>
+			<div class="mb10">
+				<cms:ad name="积分商城首页" custom="false" size="980*100" type="1">
+				</cms:ad>
+			</div>
+
+		</div>
+		<div class="clear"></div>
+		<!--新增样式 2012-10-11 update-->
+		<div class="MallColumnArea_2 mb10">
+			<div class="TitleArea">
+				<h3>近期抽奖动态</h3>
+			</div>
+			<div class="ColumnCont" id="winnerList" style="overflow: overflow-y:scroll; ">
+				<ul>
+					<li>
+						<div class="ListNumberID_1">1</div>
+						<div class="ListTxt">
+							<a href="#">182****2213抽奖获得50元话费</a>
+						</div>
+						<div class="clear"></div></li>
+					<li>
+						<div class="ListNumberID_2">2</div>
+						<div class="ListTxt">
+							<a href="#">155****6654抽奖获得50元话费</a>
+						</div>
+						<div class="clear"></div></li>
+					<li>
+						<div class="ListNumberID_3">3</div>
+						<div class="ListTxt">
+							<a href="#">147****1156抽奖获得50元话费</a>
+						</div>
+						<div class="clear"></div></li>
+					<li>
+						<div class="ListNumberID">4</div>
+						<div class="ListTxt">
+							<a href="#">138****2349抽奖获得50元话费</a>
+						</div>
+						<div class="clear"></div></li>
+					<li>
+						<div class="ListNumberID">5</div>
+						<div class="ListTxt">
+							<a href="#">155****4908抽奖获得50元话费</a>
+						</div>
+						<div class="clear"></div></li>
+					<li style="border-bottom: none;">
+						<div class="ListNumberID">6</div>
+						<div class="ListTxt">
+							<a href="#">155****1134抽奖获得50元话费</a>
+						</div>
+						<div class="clear"></div></li>
+				</ul>
+			
+			</div>
+		</div>
+
+		<div class="MallColumnArea_3 mb10">
+			<!--     餐饮兑换券  begin   -->
+			<div class="TitleArea">
+				<h3>经验值抽奖区</h3>
+			</div>
+			<div class="ColumnCont">
+				<cms:list item="Article" level="all" count="8" name="经验抽奖">
+					<div class="jyzcjqcont">
+						<div class="jyzcjqcontimg">
+							<img src="${Site.StaticResourcePath}/${Article.logo}" height="100" width="100" /><span>${Article.kaixinguo}经验值/次</span>
+						</div>
+						<div class="jyzcjqconttxt">
+							<h1>
+								<b>${Article.title}</b><br />${Article.content}
+							</h1>
+							<span onclick="submitp('${Article.actCode}','${Article.referenceprice}');"><a href="#"><img
+									src="${Site.StaticResourcePath}/images/btnchangepoint.gif" />
+							</a>
+							</span>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</cms:list>
+				<div class="h10"></div>
+			</div>
+
+
+		</div>
+	</div>
+	<div class="clear"></div>
+	<!--新增样式 2012-10-11 update-->
+	<div id="paytippopdiv"
+		style="background-color: white; width: 500px; height: 280px; border: 5px solid #dcd8b5; display: none;"
+		class="ColumnArea__">
+		<div class="TitleArea">
+			<div class="TitleTxt">抽奖结果</div>
+			<div class="TitleMore">
+				<a class="windowClose_ loginWindowClose_" href="javascript:void(0);"
+					hidefocus="true" onclick="closeDo();"></a>
+			</div>
+		</div>
+		<div class="Content">
+			<div>
+				<span id="lottery_result"></span><br/>
+			</div>
+			<div id="info_real" style="display: block; padding-top: 20px;">
+				<span>真实姓名：<input type="text" id="realName" name="realName" />
+				</span><br/><span></span><br/><span>手机号码：<input type="text" id="mobile"
+					name="mobile" />
+				</span><br/> <span></span><br/> <span><button onclick="submitp_2()"
+						class="btn">确&nbsp;&nbsp;定</button>
+				</span><br/>
+			</div>
+		</div>
+	</div>
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+	<cms:include file="block/community_v1.shtml" />
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+							jQuery.ajax({
+								url : "${Site.prop6}/shop/member!isLogin.action",
+								dataType : "json",
+								async : false,
+								success : function(data) {
+									if (data == -1) {
+										jQuery("#login_no_").show();
+										jQuery("#login_yes_").hide();
+									} else {
+										jQuery("#login_no_").hide();
+										jQuery("#login_yes_").show();
+										document
+												.getElementById("usrinfo_integral").innerHTML = data;
+									}
+								}
+							});
+							
+							
+						});
+		jQuery(document).ready(function() {
+			jQuery.ajax({
+				url : "${Site.prop6}/shop/exp_lottery!getWin.action",
+				dataType : "html",
+				async : false,
+				success : function(data) {
+					if(data!=""){
+						document.getElementById("winnerList").innerHTML = data;
+						
+					}
+				}
+			});
+		});
+		function submitp(str,price) {
+			jQuery.ajax({
+				url : '${Site.prop6}/shop/exp_lottery!toDo.action?actCode='
+						+ str,
+				dataType : 'html',
+				async : false,
+				success : function(de) {
+					if (de == 'notlogin') {
+						artLogin();//使用弹出窗口登录
+					} else {
+						//alert(de);
+						if(de=='yes'){
+							document.getElementById("info_real").style.display='block';
+							document.getElementById("lottery_result").innerHTML = "恭喜您！获得价值"+parseInt(price)+"元的手机充值卡一张，稍后客服人员会与您联系！"; 
+						}else if(de=='no'){
+							document.getElementById("info_real").style.display='none';
+							document.getElementById("lottery_result").innerHTML = "对不起！您没能中奖！"; 
+						}else{
+							document.getElementById("info_real").style.display='none';
+							document.getElementById("lottery_result").innerHTML = de;  
+						}
+						jQuery.blockUI({
+							"message" : jQuery("#paytippopdiv"),
+							"css" : {
+								"width" : jQuery("#paytippopdiv").width(),
+								"height" : jQuery("#paytippopdiv").height()
+							}
+						});
+					}
+				}
+			});
+		}
+		function closeDo(){
+			jQuery.unblockUI();
+		}
+		function submitp_2(){
+			if(validateData()){
+				var realName=jQuery("#realName").val();
+				var mobile=jQuery("#mobile").val();
+				jQuery.ajax({
+					url:'${Site.prop6}/shop/lottery!toDo2.action?realName='+realName+'&mobile='+mobile,
+					dataType: "html",
+					async: false,
+					success: function(data) {
+						document.getElementById("lottery_result").innerHTML = data;   
+						if(data=='success'){
+							jQuery.unblockUI();
+						}
+					}
+				});
+			}
+		}
+		function validateData(){
+			var name=jQuery("#realName").val();
+			var NO=jQuery("#mobile").val();
+			var flag=true;
+			if(name==""){
+				document.getElementById("lottery_result").innerHTML = "真实姓名不能为空!";
+				flag =false;
+			}else if(NO==""){
+				document.getElementById("lottery_result").innerHTML = "手机号不能为空!";
+				flag =false;
+			}
+			var regu = /^[1][3-8][0-9]{9}$/;
+			if (!regu.test(NO)) {
+				document.getElementById("lottery_result").innerHTML = "请输入正确手机号!";
+				flag =false;
+			}
+			return flag;
+		}
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

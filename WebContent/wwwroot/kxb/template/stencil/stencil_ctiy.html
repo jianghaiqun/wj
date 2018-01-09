@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${Article.MetaTitle}</title>
+</head>
+<link rel="stylesheet" type="text/css"
+	href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css"
+	href="${Site.StaticResourcePath}/style/reset-grids.css" />
+<link rel="stylesheet" type="text/css"
+	href="${Site.StaticResourcePath}/style/stencil.css" />
+<link rel="stylesheet" type="text/css"
+	href="${Site.StaticResourcePath}/style/new_logo.css" />
+<style>
+.ste_banner {
+	background: url(${Site.StaticResourcePath}/${Article.bannerBack}) no-repeat center top;
+	height: 600px;	
+}
+.g-resale-nav{display:none; }
+</style>
+<body>
+	<cms:include file="block/kxb_header_index_new_promotion.shtml" includetype="virtual"/>
+	<div class="ste_main_nav">
+		<div class="ste_warper">
+			<div class="ste_logo">
+				<a href="${Site.URL}/"> <img src="${Site.StaticResourcePath}/images/stencil/stencil_logo.gif"
+					alt="">
+				</a>
+			</div>
+			<div class="ste_nav">
+				<ul class="ste_navs">
+					<li><a href="${Site.URL}/">首页</a></li>
+					<li><a href="${Site.URL}/lvyou-baoxian/">旅游险</a></li>
+					<li><a href="${Site.URL}/yiwai-baoxian/">意外险</a></li>
+					<li><a href="${Site.URL}/jiankang-baoxian/">健康险</a></li>
+					<li><a href="${Site.URL}/renshou-baoxian/">人寿险</a></li>
+					<li><a href="${Site.URL}/jiacai-baoxian/">家财险</a></li>
+					<li><a href="${Site.URL}/chexian/">车险</a></li>
+					<li><a href="${Site.URL}/tx/">团体险</a></li>
+					<li class="ste_nav_last"><a href="${Site.URL}/touzi-licai/">理财险</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ste_banner">
+	<div class="ste_banners_box">   <h1 class="ste_baner_text">${Article.zhuantibiaoti}</h1></div>
+	</div>
+	<div class="city_con">
+		<h2 class="ctiy_title" id="city_1">${Article.CatalogName1}</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_c_l"></div>
+			<div class="city_c_c">
+				<div class="city_n_img">
+					<a href="${Article.lanmuyilianjie1}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.lanmuyitupian}" width="316px" heigh="211px"
+						alt="">
+					</a>
+				</div>
+				<div class="city_n_list">
+					<h3 class="ciyt_tit_h3">
+						<a href="${Article.lanmuyilianjie1}" target="_blank">${Article.lanmuyibiaoti1}</a>
+					</h3>
+					<p class="city_news_d">
+						${Article.lanmuyizhaiyao1|CharWidth=168}
+						<a href="${Article.lanmuyilianjie1}" target="_blank">...更多</a></p>
+					<div class="city_height20"></div>
+					<h3 class="ciyt_tit_h3">
+						<a href="${Article.lanmuyilianjie2}" target="_blank">${Article.lanmuyibiaoti2}</a>
+					</h3>
+					<p class="city_news_d">
+						${Article.lanmuyizhaiyao2|CharWidth=168}
+						<a href="${Article.lanmuyilianjie2}" target="_blank">...更多</a></p>
+				</div>
+				<div class="city_x_bor"></div>
+        <div class="cp_dy_box cp_dy_box_min fleft">
+        <cms:list item="article" level="none" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.product1}' and type='1' and status=30 limit 1" count="1" >
+						<div class="cp_stencil_title clearfix">
+							<div class="cp_box_logo">
+								<span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span>
+							</div>
+							<div class="cp_title_s">
+								<h2>
+									<a href="${site.url}/${Article.url}" target="_blank">${Article.title}</a>
+								</h2>
+								<p>${Article.AdaptPeopleInfo}</p>
+							</div>
+						</div>
+						<ul class="stencil_td ">
+							${Article.FEMRiskBrightSpot}
+						</ul>
+						<div class="stencil_cp_des_list">
+							<p>${Article.DutyHTML}</p>
+						</div>
+						<div class="cp_price_con">
+					       <em>RMB</em><span name="Ajax_Prict_${Article.RiskCode}" class="nlist_pay moneys"><em>￥</em>${Article.InitPrem}</span><br/>
+					       <span id="Clear_li_Ajax_Prict_${Article.RiskCode}" class="yj_pay" style="display:none" >原价</span>
+					       <span class="yj_pay" style="display:none" name="Clear_Ajax_Prict_${Article.RiskCode}"></span>
+		                    <a href="${site.url}/${Article.url}" target="_blank">查看详情</a>
+						</div>
+					</cms:list>
+					</div>
+				<div class="cp_dy_box cp_dy_box_min fright">
+				<cms:list item="article" level="none" condition=" select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.product2}' and type='1' and status=30 limit 1 " count="1" >
+					<div class="cp_stencil_title clearfix">
+						<div class="cp_box_logo">
+							<span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span>
+						</div>
+						<div class="cp_title_s">
+							<h2>
+								<a href="${site.url}/${Article.url}" target="_blank">${Article.title}</a>
+							</h2>
+							<p>${Article.AdaptPeopleInfo}</p>
+						</div>
+					</div>
+					<ul class="stencil_td ">
+						${Article.FEMRiskBrightSpot}
+					</ul>
+					<div class="stencil_cp_des_list">
+						<p>${Article.DutyHTML}</p>
+					</div>
+					<div class="cp_price_con">
+					       <em>RMB</em><span name="Ajax_Prict_${Article.RiskCode}" class="nlist_pay moneys"><em>￥</em>${Article.InitPrem}</span><br/>
+					       <span id="Clear_li_Ajax_Prict_${Article.RiskCode}" class="yj_pay" style="display:none" >原价</span>
+					       <span class="yj_pay" style="display:none" name="Clear_Ajax_Prict_${Article.RiskCode}"></span>
+		                    <a href="${site.url}/${Article.url}" target="_blank">查看详情</a>
+					</div>
+				</cms:list>
+				</div>
+			</div>
+			<div class="city_c_r"></div>
+		</div>
+		<h2 class="ctiy_title" id="city_2">${Article.CatalogName2}</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_c_l"></div>
+			<div class="city_c_c">
+				<div class="city_n_img">
+					<a href="${Article.lanmuerlianjie}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.lanmuertupian}" width="316px"
+						heigh="211px" alt="">
+					</a>
+				</div>
+				<div class="city_n_list">
+					<div class="city_n_box">
+						<h3 class="ciyt_tit_h3">
+							<a href="${Article.lanmuerlianjie}" target="_blank">${Article.lanmuerbiaoti}</a>
+						</h3>
+						<p class="city_news_d">
+							${Article.lanmuerzhaiyao|CharWidth=168}
+							<a href="${Article.lanmuerlianjie}" target="_blank">...更多</a>
+						</p>
+					</div>
+					<div class="city_n_box">
+			            <h3 class="ciyt_tit_h3">
+			              ${Article.lanmuerInvok}
+			            </h3>
+			            <ul class="city_list_n">
+			            <% if(article.getString("matchWay").equals("tag词调用")){%>
+			            <cms:list item="article" level="all" type="rand" tag="${Article.Invoktag}" count="4" 
+			            name="保险知识,保险资讯">
+						<li><a target="_blank" href="${Site.URL}/${Article.Link}">${article.Title}</a></li>
+					</cms:list>
+			             <%}else{%>
+			            <li>
+			              <a href="${Article.lanmuerInvokL1}" target="_blank">>${Article.lanmuerInvokT1}</a>
+			            </li>
+			            <li>
+			              <a href="${Article.lanmuerInvokL2}" target="_blank">>${Article.lanmuerInvokT2}</a>
+			            </li>
+			            <li>
+			              <a href="${Article.lanmuerInvokL3}" target="_blank">>${Article.lanmuerInvokT3}</a>
+			            </li>
+			            <li>
+			              <a href="${Article.lanmuerInvokL4}" target="_blank">>${Article.lanmuerInvokT4}</a>
+			            </li>
+			             <%}%>
+			            </ul>
+			         </div>
+				</div>
+				<div class="city_x_bor"></div>
+
+				<div class="cp_dy_box cp_dy_box_min fleft">
+					<cms:list item="article" level="none" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.product3}' and type='1' and status=30 limit 1" count="1" >
+						<div class="cp_stencil_title clearfix">
+							<div class="cp_box_logo">
+								<span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span>
+							</div>
+							<div class="cp_title_s">
+								<h2>
+									<a href="${site.url}/${Article.url}" target="_blank">${Article.title}</a>
+								</h2>
+								<p>${Article.AdaptPeopleInfo}</p>
+							</div>
+						</div>
+						<ul class="stencil_td ">
+							${Article.FEMRiskBrightSpot}
+						</ul>
+						<div class="stencil_cp_des_list">
+							<p>${Article.DutyHTML}</p>
+						</div>
+						<div class="cp_price_con">
+							<em>RMB</em><span>${Article.InitPrem}</span>
+		                    <a href="${site.url}/${Article.url}" target="_blank">查看详情</a>
+						</div>
+					</cms:list>
+				</div>
+				<div class="cp_dy_box cp_dy_box_min fright">
+					<cms:list item="article" level="none" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.product4}' and type='1' and status=30 limit 1" count="1" >
+						<div class="cp_stencil_title clearfix">
+							<div class="cp_box_logo">
+								<span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span>
+							</div>
+							<div class="cp_title_s">
+								<h2>
+									<a href="${Site.URL}/${Article.Li${Site.URL}/${Article.Link}lank">${article.Title}</a>
+								</h2>
+								<p>${Article.AdaptPeopleInfo}</p>
+							</div>
+						</div>
+						<ul class="stencil_td ">
+							${Article.FEMRiskBrightSpot}
+						</ul>
+						<div class="stencil_cp_des_list">
+							<p>${Article.DutyHTML}</p>
+						</div>
+						<div class="cp_price_con">
+							<em>RMB</em><span>${Article.InitPrem}</span>
+		                    <a href="${Site.url}/${Article.url}" target="_blank">查看详情</a>
+						</div>
+					</cms:list>
+				</div>
+			</div>
+			<div class="city_c_r"></div>
+		</div>
+
+		<div class="ste_cp_ad">
+			<a href="${Article.adPicLink}" target="_blank"> <img
+				src="${Site.StaticResourcePath}/${Article.adPic}" width="986px"
+				height="137px" alt="">
+			</a>
+		</div>
+
+		<h2 class="ctiy_title" id="city_3">${Article.CatalogName3}</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_m_l"></div>
+			<div class="city_m_c">
+				<div class="city_mm">
+					<div class="city_mm_des">
+						<h3 class="ciyt_tit_h3">
+							<a target="_blank" href="${Article.lanmusanlianjie}">${Article.lanmusanbiaoti}</a>
+						</h3>
+						<p class="city_news_d">
+						    ${Article.lanmusanzhaiyao|CharWidth=220}
+							<a target="_blank" href="${Article.lanmusanlianjie}">...更多</a>
+						</p>
+						<div class="clear h20"></div>
+				          <h3 class="ciyt_tit_h3">
+				            ${Article.lanmusanInvok}
+				          </h3>
+				           <ul class="city_list_n city_fj_list">
+				           <% if(article.getString("matchWay").equals("tag词调用")){%>
+				            <cms:list item="article" level="all" type="rand" tag="${Article.Invoktag}" 
+				            count="2" name="保险知识,保险资讯">
+						   <li><a target="_blank" href="${article.Link}">${article.Title}</a></li>
+					        </cms:list>
+				            <%}else{%>
+			            <li>
+			              <a href="${Article.lanmusanInvokL1}" target="_blank">>${Article.lanmusanInvokT1}</a>
+			            </li>
+			            <li>
+			              <a href="${Article.lanmusanInvokL2}" target="_blank">>${Article.lanmusanInvokT2}</a>
+			            </li>
+			             <%}%>
+				       </ul>
+					</div>
+				</div>
+				<div class="city_jd">
+					<div id="change_city" class="changeBox_ctiy">
+						<a class="a_bigImg" href="${Article.lunbolianjie1}"
+							target="_blank" style="display: inline;"><img width="364"
+							height="227" alt="" src="${Site.StaticResourcePath}/${Article.lunbo1}">
+						</a> <a class="a_bigImg" href="${Article.lunbolianjie2}"
+							target="_blank" style="display: none;"><img width="364"
+							height="227" alt="" src="${Site.StaticResourcePath}/${Article.lunbo2}">
+						</a> <a class="a_bigImg" href="${Article.lunbolianjie3}"
+							target="_blank" style="display: none;"><img width="364"
+							height="227" alt="" src="${Site.StaticResourcePath}/${Article.lunbo3}">
+						</a> <a class="a_bigImg" href="${Article.lunbolianjie4}"
+							target="_blank" style="display: none;"><img width="364"
+							height="227" alt="" src="${Site.StaticResourcePath}/${Article.lunbo4}">
+						</a>
+
+						<ul class="ul_change_city">
+							<li><span class="on">1</span>
+							</li>
+							<li><span class="">2</span>
+							</li>
+							<li><span class="">3</span>
+							</li>
+							<li><span class="">4</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="city_m_r"></div>
+		</div>
+		<h2 class="ctiy_title" id="city_4">${Article.CatalogName4}</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_m_l"></div>
+			<div class="city_m_c">
+				<div class="city_ms_box">
+					<a href="${Article.lanmusilianjie1}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.lanmusitupian1}" alt="" width="226px"
+						height="156px" class="city_mm_img">
+					</a>
+					<div class="city_ms_p">
+						<h3 class="ciyt_tit_h3">
+							<a target="_blank" href="${Article.lanmusilianjie1}">${Article.lanmusibiaoti1}</a>
+						</h3>
+						<p class="city_news_d">
+						${Article.lanmusizhaiyao1|CharWidth=70}
+							<a target="_blank" href="${Article.lanmusilianjie1}">...更多</a>
+						</p>
+					</div>
+					<a href="${Article.lanmusilianjie2}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.lanmusitupian2}" alt="" width="226px"
+						height="156px" class="city_mm_img">
+					</a>
+					<div class="city_ms_p">
+						<h3 class="ciyt_tit_h3">
+							<a target="_blank" href="${Article.lanmusilianjie2}">${Article.lanmusibiaoti2}</a>
+						</h3>
+						<p class="city_news_d">
+						${Article.lanmusizhaiyao2|CharWidth=70}
+							<a target="_blank" href="${Article.lanmusilianjie2}">...更多</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="city_m_r"></div>
+
+		</div>
+		<h2 class="ctiy_title" id="city_5">${Article.CatalogName5}</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_m_l"></div>
+			<div class="city_m_c">
+				<div class="city_ms_box">
+					<a href="${Article.lanmuwulianjie}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.lanmuwutupian}" alt="" width="226px"
+						height="156px" class="city_mm_img">
+					</a>
+					<div class="city_lv_box">
+						<h3 class="ciyt_tit_h3">
+							<a target="_blank" href="${Article.lanmuwulianjie}">${Article.lanmuwubiaoti}</a>
+						</h3>
+						<p class="city_news_d">
+						${Article.lanmuwuzhaiyao|CharWidth=90}
+							<a target="_blank" href="${Article.lanmuwulianjie}">...更多</a>
+						</p>
+					</div>
+					<div class="city_n_box city_n_box2">
+			            <h3 class="ciyt_tit_h3">
+			              ${Article.lanmuwuInvok}
+			            </h3>
+			            <ul class="city_list_n ">
+			            <% if(article.getString("matchWay").equals("tag词调用")){%>
+			             <cms:list item="article" level="all" type="rand" tag="${Article.Invoktag}" 
+			             count="4" name="保险知识,保险资讯">
+						<li><a target="_blank" href="${Site.URL}/${Article.Link}">${article.Title}</a></li>
+					   </cms:list>
+			             <%}else{%>
+			            <li>
+			              <a href="${Article.lanmuwuInvokL1}" target="_blank">>${Article.lanmuwuInvokT1}</a>
+			            </li>
+			            <li>
+			              <a href="${Article.lanmuwuInvokL2}" target="_blank">>${Article.lanmuwuInvokT2}</a>
+			            </li>
+			            <li>
+			              <a href="${Article.lanmuwuInvokL3}" target="_blank">>${Article.lanmuwuInvokT3}</a>
+			            </li>
+			            <li>
+			              <a href="${Article.lanmuwuInvokL4}" target="_blank">>${Article.lanmuwuInvokT4}</a>
+			            </li>
+			             <%}%>
+			            </ul>
+			         </div>
+				</div>
+			</div>
+			<div class="city_m_r"></div>
+
+		</div>
+		<h2 class="ctiy_title">精彩专题推荐</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_m_l"></div>
+			<div class="city_m_c">
+				<div class="city_ms_box city_up_imgs">
+					<a href="${Article.tuijianlianjie1}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.tuijiantupian1}" alt="" width="226px"
+						height="156px" class="city_mm_img city_tz">${Article.tuijianzhuanti1}</a> <a
+						href="${Article.tuijianlianjie2}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.tuijiantupian2}" alt="" width="226px"
+						height="156px" class="city_mm_img city_tz">${Article.tuijianzhuanti2}</a> <a
+						href="${Article.tuijianlianjie3}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.tuijiantupian3}" alt="" width="226px"
+						height="156px" class="city_mm_img city_tz">${Article.tuijianzhuanti3}</a> <a
+						href="${Article.tuijianlianjie4}" target="_blank"> <img
+						src="${Site.StaticResourcePath}/${Article.tuijiantupian4}" alt="" width="226px"
+						height="156px" class="city_mm_img city_tz">${Article.tuijianzhuanti4}</a>
+				</div>
+			</div>
+			<div class="city_m_r"></div>
+
+		</div>
+	</div>
+	<div class="g-weaper"></div>
+	<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+	<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+	<!-- 导航浮动层 开始 -->
+	<div class="ClassificationArea" id="ClassificationArea">
+		<div class="city_sidr_top"></div>
+		<div class="cp_nav" id="sidebar">
+			<a href="#city_1">${Article.CatalogName1}</a><a href="#city_2">${Article.CatalogName2}</a>
+			<a href="#city_3">${Article.CatalogName3}</a><a href="#city_4">${Article.CatalogName4}</a><a
+				href="#city_5">${Article.CatalogName5}</a>
+		</div>
+		<span class="city_go_top"></span>
+	</div>
+	<!-- 代码结束 -->
+
+	<!--通用footer-->
+	<script type="text/javascript"
+		src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/stencil/stencil_CityTravel.js"></script>
+
+</body>
+</html>

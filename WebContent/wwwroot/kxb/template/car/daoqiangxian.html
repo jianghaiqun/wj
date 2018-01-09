@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title><%
+String title = article.getString("MetaTitle"); 
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%></title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+<ul class="car_mininav clearfix lyg_nav">                                                       
+		<li><a  href="${Site.StaticResourcePath}/chexian/"  title="车辆保险首页">返回车险首页</a></li>
+	</ul>
+<div class="car_index_s"><div class="meihua_p">买车险 首选开心保 <b>直降15%</b></div></div>
+<div class="car_gs_box car_border_q no_top_bor cf">
+	<div class="car_bxgs floatl">
+    
+      	      	<div class="search_bxgs"><div class="car_bxzscon">保险公司:</div>  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+				   <cms:list item="article"  level="all" name="车险对接保险公司" >
+		              <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+		           </cms:list>
+                </div>
+            </div>
+             </div>
+          
+             	<ul  id="car_tag_con" class="car_lipin  cf">
+				   <cms:list item="article" level="all" name="车险对接保险公司" >
+		             <li style="display:none">${Article.Gift}</li>
+		           </cms:list>
+             	</ul>
+            
+                <div class="ljbj_sc"> <input name="" type="button" value="开始报价" onclick="guodu('${Site.StaticResourcePath}/cx/gd/')" class="input_ksbj"></div>
+    </div>
+    <div class="car_adjd floatr">
+    <img src="${Site.StaticResourcePath}/images/car/huahen_08.jpg" width="700" height="246" alt="车辆刮损不发愁">
+    </div>
+</div>
+<div class="h10 clear"></div>
+<div class="car_left floatl ">
+<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html" target="_blank">
+<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165" alt="车险快速报价" title="车险快速报价"></a></div>
+            <cms:list item="Image"  name="车险图片"> 
+		      <div class="car_ad_l clearfix">
+			   <a href="${Image.wangzhi}" target="_blank">
+			       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+			   </a>
+			  </div>
+		    </cms:list>
+            
+            <div class="car_border_q mar_btn_10">
+            <ul class="car_zx_title zs_list cf">
+            	<li class="zslist_1"><span class="hover" id="zslist1" onclick="setTab('zslist',1,3)">资讯</span></li>
+            	<li class="zslist_1"> <span  id="zslist2"  onclick="setTab('zslist',2,3)">知识</span></li>
+                <li class="zslist_1"> <span  id="zslist3"  onclick="setTab('zslist',3,3)">问答</span></li>
+            </ul>
+            <ul class="zx_list cf " id="con_zslist_1">
+				<cms:list item="article" level="all" type="rand" tag="车辆盗抢险" count="6" name="保险资讯">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_2" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="车辆盗抢险" count="6" name="保险知识">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_3" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="车辆盗抢险" count="6" name="保险问答">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+            </div>
+           <div class="car_border_q mar_btn_10">
+             <h2 class="car_l_title3">商业车险种类</h2>
+             <ul class="car_gs_list xz_list cf ">
+			   <cms:list item="friendlink" name="商业车险种类">
+				 <li><a href="${friendlink.URL}" target='<%String url = friendlink.getString("url");if(url.startsWith("h"))write("_blank");%>'>${friendlink.Name|CharWidth=7}</a></li>
+		       </cms:list>
+             </ul>
+            </div>
+               <div class="car_border_q mar_btn_10">
+              	 <h3 class="car_l_title3">理赔案例资讯</h3>
+                 <ul class="car_gs_list lp_list cf">
+                 <cms:list item="article" level="all" type="rand" tag="车辆盗抢险案例" count="10" name="保险知识,保险资讯">
+						<li>
+							<a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a>
+	                		<%if(i==0){
+	                		write("<p class='p_text_des'>");
+	                		String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>50){
+							description = description.substring(0,50);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>50){
+							summary = summary.substring(0,50);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==50){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==50){
+							write("...");
+							}
+						    write("</p>");
+						    }%>
+						</li>
+					</cms:list>
+                 </ul>
+              </div>
+  </div>
+       <div class="car_right floatr">
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h1 class="car_l_title">车辆盗抢险</h1>
+			<p >
+       车辆盗抢险，全称机动车辆全车盗抢险，简称盗抢险。盗抢险可保障全车被盗窃、被抢劫、被抢夺造成的车辆损失以及在被盗窃、被抢劫、被抢夺期间受到损坏或车上零部件、附属设备丢失需要修复的合理费用。<br>
+车辆盗抢险保障特殊情况的车险险种， 如果无固定停车点、露天停放，建议投保盗抢险。此外，新车及一些热门车型也建议投保盗抢险。
+
+
+            </p>
+
+            
+        </div>
+        
+         <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/AF20130722035.shtml" target="_blank">购买车辆盗抢险注意事项</a></h2>
+			
+            <p>购买车辆盗抢险注意事项<br>
+1、注意车辆盗抢险的保险责任范围<br>
+2、注意车辆盗抢险生效日期<br>
+3、注意车辆盗抢险的价格<br>
+4、注意车辆盗抢险的保额<br>
+5、注意车辆盗抢险重复投保问题<br>
+</p>
+            
+        </div>
+        
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A03G20130520075.shtml" target="_blank">什么是盗抢险</a></h2>
+			
+            <p>全车盗抢险是指投保车辆在非人为的、非故意的、非违章的情况下，发生盗抢，经报案、立案调查后，一定期限内（一般是3个月左右）仍然没有破案的，由保险公司赔付相应的损失。假若车辆经侦查后归还车主，保险公司需赔付车辆在盗抢期间受到的损失。</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/CF20130722036.shtml" target="_blank">盗抢险多少钱</a></h2>
+			
+            <p>车辆盗抢险保费确定的方式有三种：<br>
+一是与保险价值相等<br>
+二是按投保当时的市场价值确定；<br>
+三是协商价值。<br>
+其计算公式为：<br>
+盗抢险保险费=(车辆损失险基本保费+保险金额×费率)×20%－30%。<br>
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/CF20130722037.shtml" target="_blank">全车盗抢险理赔限额</a></h2>
+			
+            <p>全车盗抢险理赔限额为每次事故应赔偿损失总金额的80% 。如果您的车被盗抢超过三个月未找回，保险金额在保险金额内进行赔偿。如果车被盗抢后，在三个月内找回了，但是在此期间车辆损坏或零部件丢失，保险公司负责赔偿修复费用。 
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/CF20130722038.shtml" target="_blank">盗抢险赔偿范围</a></h2>
+			
+            <p>一是保险车辆(含投保的挂车)全车被盗窃、被抢劫、被抢夺，经县级以上公安刑侦部门立案证实满三个月未查明下落; 　　<br>
+二是保险车辆全车被盗窃、被抢劫、被抢夺后受到损坏或车上零部件、附属设备丢失需要修复的合理费用。即赔偿条件必须为整车被盗被抢，且公安机关立案，如盗抢未遂则不属于赔偿范围。所以“非全车遭盗抢，仅车上零部件或附属设备被盗窃”等情形都是属于盗抢险的责任免除事项，是不予赔偿的。 　　<br>
+开心保车险专家提醒车主：全车盗抢险赔偿范围是车辆本身，像现金、电脑等值钱的东西还是别放在车上为好。
+<br>
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A02F20130529065.shtml" target="_blank">车辆盗抢险理赔流程 	</a></h2>
+			
+            <p>一、报案：立即向当地公安刑侦部门保安，保留现场并立即向报案（48小时）。<br>
+二、定损：尽快在当地市级以上报社发布寻车启事，并索取并保存该期报刊至；3各月后到当地公安刑侦部门开具未破案证明，同时到所属车管部门办理失窃车辆牌证注销手续。<br>
+三、索赔：尽快的收集索赔单证，十五天内向保险公司申请索赔（保险公司一般在报案3个月后受理）<br>
+
+
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title">保险公司对比板块</h2>
+		<table width="100%" border="0" class="huahen_table">
+  <tr>
+    <th scope="col" class="table_no_bor_l" style="width:134px;">&nbsp;</th>
+    <cms:list item="article" level="all" name="太平洋车险" >
+         <th scope="col">太平洋车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.StaticResourcePath}/cx/gd/')"class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="平安车险" >
+         <th scope="col">平安车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.StaticResourcePath}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="阳光车险" >
+        <th scope="col">阳光车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.StaticResourcePath}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="大地车险" >
+        <th scope="col">大地车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.StaticResourcePath}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+  </tr>
+  <tr>
+    <td  class="table_no_bor_l">盗抢险保障范围</td>
+    <td colspan="4">全车被盗窃、被抢劫、被抢夺造成的车辆损失以及在被盗窃、被抢劫、被抢夺期间受到损坏或车上零部件、附属设备丢失需要修复的合理费用。</td>
+    </tr>
+  <tr>
+    <td  class="table_no_bor_l">免责范围</td>
+    <td colspan="4">1、非全车遭盗窃、抢劫、抢夺，仅车上零部件或附属设备被盗窃、抢劫、抢夺、损坏；<br>
+2、新车车辆出厂时的原厂配置以外新增设备的损失；<br>
+3、保险车辆全车被盗窃、抢劫、抢夺期间造成人身伤亡或本车以外的财产损失；<br>
+3、遭受保险责任范围内的损失后，未经必要修理继续使用，致使损失扩大的部分；<br>
+4、市场价格变动造成的贬值、修理后因价值降低引起的损失。	<br>
+</td>
+    </tr>
+ 
+</table>
+ 
+        </div>
+        
+        
+          <div class="car_border_q cf"> 
+         	<div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+        <div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="盗抢险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="盗抢险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="盗抢险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+    <cms:include file="block/kxb_footer_new.shtml" />
+	<cms:include file="block/community.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title><%
+	String title = article.getString("CustomTitle");
+	write(((null==title) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%></title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/product.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/listul.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<div class="wrapper">
+		<!-- nav 结束 -->
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a> 
+		</div>
+        	<div class="wcont_body">
+            	<h1  class="stencil_title">${Article.Title}</h1>
+                <div>${Article.Content}</div>
+
+            	<ul class="stencil_nav_li sl-floatcenter clearfix">
+            		<li class="sl-floatcenter-item"><a href="#part1"  >${Article.Section1}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part2"  >${Article.Section2}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part3"  >${Article.Section3}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part4"  >${Article.Section4}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part5"  >${Article.Section5}</a></li>
+            	</ul>
+                <h2 class="part_titles"  id="part1">${Article.Section1}</h2>
+                
+                
+                    <div class="grid-c ">
+                    <div class="boder_h clearfix">
+                    	<div class="img_400_200 fleft">
+                    	<a href="${Article.Section1Title1Link}" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section1Image}" alt="${Article.Section1ImageAlt}" width="270" height="198" /></a></div>
+                        <div class="stencil_news_box fright stencil3_top_box_up">
+									<h3 class="zx_news_title"><a href="${Article.Section1Title1Link}" target="_blank">${Article.Section1Title1}</a></h3>
+                    <p class="zx_news_des p_h40">
+						${Article.Section1Content1|CharWidth=80}<a href="${Article.Section1Title1Link}" rel="nofollow"  target="_blank">更多</a> 
+	</p>
+       <div class="box_du_bors"></div>
+    	<h3 class="zx_news_title"><a href="${Article.Section1Title2Link}" target="_blank">${Article.Section1Title2}</a></h3>
+     
+                    <p class="zx_news_des p_h40">
+						${Article.Section1Content2|CharWidth=80}<a href="${Article.Section1Title2Link}" rel="nofollow" target="_blank">更多</a> 
+	</p>
+                        </div>
+                              </div>
+                        <div class="bor_shadow_980"></div>
+              
+              
+                    </div>
+                
+                
+                 <h2 class="part_titles"  id="part2">${Article.Section2}</h2>
+                
+                 <div class="grid-c2-s12">
+			<div class="col-main">
+				<div class="main-wrap up_date_main-warp">
+				<div class="boder_h clearfix">
+               	     <div class=" p_h155 p_w_110 fleft">
+               	     <h3 class="zx_news_title"><a href="${Article.Section1Title2Link}" target="_blank">${Article.Section1Title2|CharWidth=12}</a></h3>
+               	      <p class="zx_news_des p_h110 p_w_110 fleft">
+						${Article.Section2Content2|CharWidth=80}<a href="${Article.Section2Content2Link}" rel="nofollow" target="_blank">更多</a>
+					  </p> 
+					</div>
+                    <div class=" p_h155 p_w_110 fleft">
+                    <h3 class="zx_news_title"> <a href="${Article.Section2Content3Link}" class="up_zx_news_titile" target="_blank">${article.title2|CharWidth=12}</a></h3>
+	                    <p class="zx_news_des p_h110 p_w_110 fleft">
+						${Article.Section2Content3|CharWidth=80}<a href="${Article.Section2Content3Link}"  rel="nofollow" target="_blank">更多</a> 
+						</p>
+					</div>
+                </div>
+                      <div class="bor_shadow_470"></div>
+				</div>
+			</div>
+			<div class="col-sub">
+			  <div class="boder_h clearfix">
+               	    <a href="${Article.Section2Content1Link}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section2Image}" alt="${Article.Section2ImageAlt}" class="fleft" width="234" height="198" /></a>
+                    <div class=" p_h150 p_w_110 fleft">
+                    <h3 class="zx_news_title"><a href="${Article.Section2Content1Link}" class="up_zx_news_titile" target="_blank">${article.title3|CharWidth=12}</a></h3>
+                     <p class="zx_news_des p_h110 p_w_110 fleft">
+					${Article.Section2Content1|CharWidth=80}<a href="${Article.Section2Content1Link}" rel="nofollow" target="_blank">更多</a> 
+					</p>
+                    </div>
+			  </div>
+             <div class="bor_shadow_470"></div>
+		</div>
+                
+                   <div class="h10"></div>
+           <div class="grid-c">
+				<div class="ad_980 boder_h">
+           	    <a href="${Article.adLink}"  target="_blank"><img src="${Site.StaticResourcePath}/${Article.ad}" alt="${Article.adAlt}" width="978" height="148" /></a> 
+                </div>
+                <div class="bor_shadow_980"></div>
+		   </div>
+           
+             <div class="h10"></div>
+                
+                     <h2 class="part_titles"  id="part3">${Article.Section3}</h2>
+                
+                     <div class="grid-c2-s12">
+			<div class="col-main">
+				<div class="main-wrap up_date_main-warp">
+					<div class="boder_h clearfix">
+						<div class="p_h150 p_w_110 fleft">
+		               	     <h3 class="zx_news_title"><a href="${Article.Section3Content3Link}" class="up_zx_news_titile" target="_blank">${article.Section3Content3Title|CharWidth=12}</a></h3>
+		               	     <p class="zx_news_des p_h110 p_w_110 fleft">
+								${Article.Section3Content3|CharWidth=80} <a href="${Article.Section3Content3Link}" target="_blank">更多</a> 
+							</p>
+						</div>
+						<div class=" p_h150 p_w_110 fleft">
+		                     <h3 class="zx_news_title"><a href="${Article.Section3Content4Link}" class="up_zx_news_titile" target="_blank">${article.Section3Content4Title|CharWidth=12}</a></h3>
+		                    <p class="zx_news_des p_h110 p_w_110 fleft">
+								${Article.Section3Content4|CharWidth=80} <a href="${Article.Section3Content4Link}"  target="_blank">更多</a> 
+							</p>
+						</div>
+                    </div>
+                      <div class="bor_shadow_470"></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				 <div class="boder_h clearfix">
+				 	<div class=" p_h150 p_w_110 fleft">
+	               	     <h3 class="zx_news_title"><a href="${Article.Section3Content1Link}" target="_blank">${article.Section3Content1Title|CharWidth=12}</a></h3>
+	               	    <p class="zx_news_des p_h110 p_w_110 fleft">
+						${Article.Section3Content1|CharWidth=80}<a href="${Article.Section3Content1Link}" target="_blank">更多</a> 
+						</p>
+					</div>
+					<div class=" p_h150 p_w_110 fleft">
+	                     <h3 class="zx_news_title"><a href="${Article.Section3Content2Link}" class="up_zx_news_titile" target="_blank">${article.Section3Content2Title|CharWidth=12}</a></h3>
+	                    <p class="zx_news_des p_h110 p_w_110 fleft">
+						${Article.Section3Content2|CharWidth=80}<a href="${Article.Section3Content2Link}" target="_blank">更多</a> 
+						</p>
+					</div>	
+                </div>
+                      <div class="bor_shadow_470"></div>
+			</div>
+		</div>
+                     <h2 class="part_titles"  id="part4">${Article.Section4}</h2>
+                   <div class="grid-c2-s6">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="boder_h clearfix news_list_box1 fright">
+                    <h3 class="zx_news_title"><a href="${Article.Section4Title1Link}" target="_blank">${Article.Section4Title1}</a></h3>
+                    	<p class="zx_news_des p_h100">
+				${Article.Section4Content1|CharWidth=200}  <a href="${Article.Section4Title1Link}" rel="nofollow" target="_blank">更多</a> 
+	</p>
+                    </div>
+                      <div class="clear"></div>
+                       <div class="bor_shadow_710 fright"></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="img_230_150 clearfix">
+   			    <a href="${Article.Section4Title1Link}" target="_blank"><img width="228" height="148" src="${Site.StaticResourcePath}/${Article.Section4Image1}" alt="${Article.Section4Image1Alt}"></a></div>
+                <div class="bor_shadow_230"></div>
+			</div>
+		</div>
+            <div class="h10"></div>
+          <div class="grid-c2-s6">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="boder_h clearfix news_list_box1 fright">
+                    <h3 class="zx_news_title"><a href="${Article.Section4Title2Link}" target="_blank">${Article.Section4Title2}</a></h3>
+                    	<p class="zx_news_des p_h100">
+                    	 
+				${Article.Section4Content2|CharWidth=200} <a href="${Article.Section4Title2Link}" rel="nofollow" target="_blank">更多</a> 
+	</p>
+                    </div>
+                      <div class="clear"></div>
+                       <div class="bor_shadow_710 fright"></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="img_230_150 clearfix">
+   			    <a href="${Article.Section4Title2Link}" target="_blank"><img width="228" height="148" src="${Site.StaticResourcePath}/${Article.Section4Image2}" alt="${Article.Section4Image2Alt}"></a></div>
+                <div class="bor_shadow_230"></div>
+			</div>
+		</div>
+              <div class="h30"></div>
+          <h2 class="part_titles"  id="part5">${Article.Section5}</h2>
+          
+          <div class="wenda_box boder_h clearfix">
+            	<dl class="wenda_last">
+            		<dt><a href="${Article.Section5Question1Link}" target="_blank">问：${Article.Section5Question1}</a></dt>
+                    <dd><b>答：</b>${Article.Section5Answer1|CharWidth=120}</dd>
+            	</dl>
+               <dl class="wenda_last">
+            		<dt><a href="${Article.Section5Question2Link}" target="_blank">问：${Article.Section5Question2}</a></dt>
+                    <dd><b>答：</b>${Article.Section5Answer2|CharWidth=120}</dd>
+            	</dl>
+                <dl class="wenda_last">
+            		<dt><a href="${Article.Section5Question3Link}" target="_blank">问：${Article.Section5Question3}</a></dt>
+                    <dd><b>答：</b>${Article.Section5Answer3|CharWidth=120}</dd>
+            	</dl>
+                <dl class="wenda_last">
+            		<dt><a href="${Article.Section5Question4Link}" target="_blank">问：${Article.Section5Question4}</a></dt>
+                    <dd><b>答：</b>${Article.Section5Answer4|CharWidth=120}</dd>
+            	</dl>
+                <dl class="wenda_last">
+            		<dt><a href="${Article.Section5Question5Link}" target="_blank">问：${Article.Section5Question5}</a></dt>
+                    <dd><b>答：</b>${Article.Section5Answer5|CharWidth=120}</dd>
+            	</dl>
+                <dl class="wenda_last">
+            		<dt><a href="${Article.Section5Question6Link}" target="_blank">问：${Article.Section5Question6}</a></dt>
+                    <dd><b>答：</b>${Article.Section5Answer6|CharWidth=120}</dd>
+            	</dl>
+                <dl class="wenda_last">
+            		<dt><a href="${Article.Section5Question7Link}" target="_blank">问：${Article.Section5Question7}</a></dt>
+                    <dd><b>答：</b>${Article.Section5Answer7|CharWidth=120}</dd>
+            	</dl>
+            
+          </div>
+          <div class="bor_shadow_980"></div>
+           <div class="h30"></div>
+        <ul class="orter_list">
+        	 <cms:list item="article" level="none" condition="type = 1 and id in ( select id from (select id from (select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword1}%' limit 4) a1 union select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword2}%' limit 5) a2 union select id from ( select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1  order by rand() limit 9 ) a3)c1 limit 9)c2)" count="9" >
+				<li><a href="${Article.Link}" target="_blank">${Article.Title} </a></li>
+			</cms:list>
+        </ul>
+              <div class="h30"></div>
+                
+                </div>
+        
+                <div class="clear"></div>
+</div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="专题三" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="专题三" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="专题三" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" target="_blank">${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+</body>
+</html>

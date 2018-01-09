@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<cms:include file="block/kxb_header_new_css.shtml" includetype="virtual"/>
+<link href="${Site.StaticResourcePath}/style/new_news.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/new_information.css" rel="stylesheet" type="text/css" />
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<title>${catalog.meta_title}_第${Page.PageIndex}页_${site.Meta_Keywords}</title>
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<!--位置信息 开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+	</div>
+<!--位置信息 结束-->
+<!--主体 开始-->
+<div class="wrap980 mainbgl336">
+	<!--左边 开始-->
+	<div class="left336 re_left">
+		<!--问答分类 开始-->
+		<div class="columntit">问答分类</div>
+		<div class="columnsubtit coulunmes_ts">保险咨询</div>
+		<ul class="columnclass">
+			<cms:list item="Catalog" level="child" name="保险咨询">
+				<li><a href="${Site.URL}/${Catalog.URL}" target="_blank">${Catalog.Name}</a></li>
+			</cms:list>	
+		</ul>
+		<div class="columnsubtit">险种咨询</div>
+		<ul class="columnclass">
+			<cms:list item="Catalog" level="child" name="险种咨询">
+				<li><a href="${Site.URL}/${Catalog.URL}" target="_blank">${Catalog.Name}</a></li>
+			</cms:list>
+		</ul>
+		<div class="columnsubtit">网站相关</div>
+		<ul class="columnclass">
+			<cms:list item="Catalog" level="child" name="网站相关">
+				<li><a href="${Site.URL}/${Catalog.URL}" target="_blank">${Catalog.Name}</a></li>
+			</cms:list>
+		</ul>
+		<div class="h12"></div>
+		<!--问答分类 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			<cms:list item="article" level="none" count="5" hasAttribute="hot" condition=" (cataloginnercode like '002313000002%' or cataloginnercode like '002313000003%') and status='30'">
+				<li>
+					<h4><a href="${article.link}" title="${article.title}"><img src="${Site.ProductResourcePath}${Article.ProductLogo}" alt="${Article.title}" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="${article.link}" title="${article.title}" >${article.title|CharWidth=30}</a></h5>
+						<h6>${article.AdaptPeopleInfo}</h6>
+					</div>
+				</li>
+			</cms:list>
+		</ul>
+		<!--热销保险产品 结束-->
+		<cms:include file="block/bxbk_tpgg.shtml" includetype="virtual"/>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="right644 re_right">
+		<!--问答搜索 开始-->
+		<div class="qasearcharea">
+			<form action="${Site.prop6}/Search/bxwd_SearchResult.jsp">
+				<input type="hidden" name="id" value="26" id="id" />
+				<input type="hidden" name="site" value="221" />
+				<div class="qasearcharealeft"><span class="search_icons"></span><input name="query" type="text" class="qasearchinput" value="请输入保险问题进行搜索..."  onfocus="if(this.value=='请输入保险问题进行搜索...'){this.value='';}" onblur="if(this.value==''){this.value='请输入保险问题进行搜索...';}" /></div>
+				<div class="qasearcharearight"><input name="" type="submit" value="搜索答案" class="btnsa" onclick="jQuery.ajaxLoadImg.show('searchAnsLoad');"/>&nbsp;&nbsp;<input name="" type="button" value="我要提问" class="btnask" onclick="jQuery.ajaxLoadImg.show('searchQuesLoad');location.href='<cms:link type='Catalog' name='我要提问'/>';"/></div>
+			</form>	
+		</div>
+		<!--问答搜索 结束-->
+		<div class="news_wdct">
+			<ul class="news_wdtab_t cf rnews_nav">
+				<li>
+                    <span onmouseover="setTab('hot_Wt',1,2)" class="hover" id="hot_Wt1">所有问题</span>
+                </li>
+                <li class="last">
+                    <span onmouseover="setTab('hot_Wt',2,2)" id="hot_Wt2" class="">热门问题</span>
+                </li>
+			</ul>
+			<div class="qa_wrap">
+				<div id="con_hot_Wt_1" style="">
+					<div class="news_tab_qmore"></div>
+					<ul class="qa_list">
+					<cms:list item="Article" level="all" page="true" pagesize="10" >
+						<li>
+							<div class="question">
+                                <div class="ans_tit"><a href="${article.link}" target="_blank">${article.title}</a></div><i class="icon"></i>
+                            </div>
+                            <div class="answer">
+                            	<%if("solve".equals(article.getString("isOk")) && StringUtil.isNotEmpty(article.getString("content"))){%>
+                                <div class="answer_p">
+                                    ${Article.content}
+				       				 <br>                    
+                                    <a href="${article.link}" class="more" target="_blank">【详情】</a>
+                                </div> <i class="icon"></i>
+                                <%}else if(!"solve".equals(article.getString("isOk")) && StringUtil.isNotEmpty(article.getString("cainadaan"))){%>
+                                <div class="answer_p">
+                                    ${Article.cainadaan}
+				       				 <br>                    
+                                    <a href="${article.link}" class="more" target="_blank">【详情】</a>
+                                </div> <i class="icon"></i>
+								<%}%>
+                                <%if("solve".equals(article.getString("isOk"))){%>
+	                                  <div class="ok_icon"></div>
+	                            <%}%>
+                            </div>
+                            <div class="answer_time">${Article.author}&nbsp;&nbsp;|&nbsp;&nbsp;发起于 ${Article.AskTime|Format=yyyy-MM-dd }</div>
+						</li>
+					</cms:list>
+					</ul>
+					<!--    翻页    -->
+					<div class="plpage">
+						<div id="productsPageBar" class="page_area">
+							<div id="pagination">${pageBarNew}</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--页码 结束-->
+				</div>
+				<div style="display: none;" id="con_hot_Wt_2">
+					<div class="news_tab_qmore"></div>
+					<ul class="qa_list">
+					<cms:list item="Article" level="all" count="10" type="rand" >
+						<li>
+                            <div class="question">
+                                <div class="ans_tit"><a href="${article.link}" target="_blank">${article.title}</a></div><i class="icon"></i>
+                            </div>
+                            <div class="answer">
+                            	<%if("solve".equals(article.getString("isOk")) && StringUtil.isNotEmpty(article.getString("content"))){%>
+                                <div class="answer_p">
+                                    ${Article.content}
+				       				 <br>                    
+                                    <a href="${article.link}" class="more" target="_blank">【详情】</a>
+                                </div> <i class="icon"></i>
+                                <%}else if(!"solve".equals(article.getString("isOk")) && StringUtil.isNotEmpty(article.getString("cainadaan"))){%>
+                                <div class="answer_p">
+                                    ${Article.cainadaan}
+				       				 <br>                    
+                                    <a href="${article.link}" class="more" target="_blank">【详情】</a>
+                                </div> <i class="icon"></i>
+								<%}%>
+                                <%if("solve".equals(article.getString("isOk"))){%>
+	                                  <div class="ok_icon"></div>
+	                            <%}%>
+                            </div>
+                              <div class="answer_time">${Article.author}&nbsp;&nbsp;|&nbsp;&nbsp;发起于 ${Article.AskTime|Format=yyyy-MM-dd }</div>
+                        </li>
+					</cms:list>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="qasearcharea">
+		<form action="${Site.prop6}/Search/bxwd_SearchResult.jsp">
+			<input type="hidden" name="id" value="26" id="id" />
+			<input type="hidden" name="site" value="221" />
+			<div class="qasearcharealeft"><span class="search_icons"></span><input name="query" type="text" class="qasearchinput" value="请输入保险问题进行搜索..." onfocus="if(this.value=='请输入保险问题进行搜索...'){this.value='';}" onblur="if(this.value==''){this.value='请输入保险问题进行搜索...';}"  /></div>
+			<div class="qasearcharearight"><input name="" type="submit" class="btnsa" value="搜索答案" onclick="jQuery.ajaxLoadImg.show('searchAnsLoad1');"/>&nbsp;&nbsp;<input name="" type="button" class="btnask" value="我要提问" onclick="jQuery.ajaxLoadImg.show('searchQuesLoad1');location.href='<cms:link type='Catalog' name='我要提问'/>'"/></div>
+		</form>
+		</div>
+		
+		<!--人气产品搜索词 开始-->
+		<div class="hotprodukeywordtit graybordert">人气产品搜索词</div>
+		<ul class="hotprodukeyword">
+		<cms:list item="friendlink" name="人气产品搜索词">
+			<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name}</a></li>
+		</cms:list>
+		</ul>
+		<div class="h20"></div>
+		<!--人气产品搜索词 结束-->
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->    
+</div>
+<!--主体 结束-->
+<div class="clear"></div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="问答列表页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="问答列表页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="问答列表页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+
+</body>
+</html>

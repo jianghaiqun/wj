@@ -1,0 +1,11 @@
+<% DataTable dt_8 = TemplateData.getDocList("article","保险知识/车辆保险知识","current","null","firstpublish","5","null","null","9");
+  if(dt_8==null){write("没有找到栏目。parent：null  catalog："+"保险知识/车辆保险知识");}else{
+ int rdCnt=dt_8.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_8  = dt_8.getDataRow(i);
+ int rdIdx=i;
+%>
+
+				 			<li><a href="${Site.URL}/${article_8.URL}" target="_blank" >${article_8.title|substrwidth=30}</a><span class="que_time">${article_8.FirstPublishDate|Format=yyyy-MM-dd }</span></li>
+						<%}}%>

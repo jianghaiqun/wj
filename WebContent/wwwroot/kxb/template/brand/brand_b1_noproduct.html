@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_list.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/brand_style.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_cooperation.css"/>
+
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=false"></script>
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body class="cooperation" >
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+	<div class="wrapper">
+
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link> <span class="separator">></span><p>${Article.title}</p>
+		</div>
+		<div class="content">
+			<!-- 公司介绍 -->
+			<div class="introduce">
+                <div class="thumb_wrap">
+                   <div class="companies_logo_hz max_icon_C${Article.CompanyID}"></div>
+                    <p>客服电话：<em>${Article.CustomTel}</em></p>
+                </div>
+                <div class="hide detail">
+                    <h2>${Article.title}</h2>
+                    <div class="detail_p">${Article.content}<i class="points icon"></i></div>
+                </div>
+                <i class="arrow icon"></i>
+            </div>
+            <!-- 公司介绍 end -->
+		
+			<div class="grid-c2-s6f detail_page2">
+                <div class="col-main">
+                    <div class="main-wrap">
+                        <!-- 保险咨讯 -->
+                        <div class="insurance_news">
+                            <h3 class="box_title"><i class="icon"></i>保险资讯</h3>
+                            
+                            <cms:list item="article" level="none" condition="cataloginnercode like '002307%' and tag like '%${Article.tag}%' and status in (30,60)" count="7">
+                            <% if (i==0) { %>
+                            <div class="detail_one">
+                            	<p class="detail_title"><a href="${Article.Link}">${Article.Title}</a></p>
+                            	<p class="detail_info">${Article.Summary|CharWidth=160}</p>
+                                <a class="more" href="${Article.Link}">查看更多&nbsp;&gt;</a>
+                            </div>
+                            <% }%>
+                            </cms:list>
+                            <ul>
+                            <cms:list item="article" level="none" condition="cataloginnercode like '002307%' and tag like '%${Article.tag}%' and status in (30,60)" count="7">
+                            <% if (i>0) { %>
+	                            <li><a class="ellipsis" href="${Article.Link}">${Article.Title}</a></li>
+                            <% }%>
+                            </cms:list>
+                            </ul>
+                        </div>
+                        <div class="sub_main">
+                        	<!-- 保险问答 -->
+                        	<div class="insurance_qa">
+                        		<h3 class="box_title"><i class="icon"></i>保险问答<a class="more" href="<cms:link type='Catalog' name='保险问答'/>">更多问答&nbsp;&gt;</a></h3>
+                        		<ul>
+                        			<cms:list item="article" level="none" condition="ZCArticle.cataloginnercode like '002308%' and ZCArticle.tag like '%${Article.tag}%' and status in (30,60)" count="3">
+                        			<% if (i==2) { %>
+                            		<li class="last">
+	                            	<% } else {%>
+	                            	<li>
+	                            	<% }%>
+                        			
+                                        <div class="question">
+                                            <div class="con"><a href="${Article.Link}">${Article.Title}</a></div>
+                                            <i class="icon"></i>
+                                        </div>
+                                        <div class="answer">
+                                            <div class="con">${Article.cainadaan|substrwidth=80}<br><a class="more" href="${Article.Link}">查看更多&nbsp;&gt;</a></div>
+                                            <i class="icon"></i>
+                                        </div>
+                                    </li>
+                        			</cms:list>
+                        		</ul>
+                        	</div>
+                        	<!-- 保险知识 -->
+                        	<div class="insurance_know">
+                        		<h3 class="box_title"><i class="icon"></i>保险知识<a class="more" href="<cms:link type='Catalog' name='保险知识'/>">更多知识&nbsp;&gt;</a></h3>
+                        		<ul>
+                        		<cms:list item="article" level="none" condition="ZCArticle.cataloginnercode like '002306%' and ZCArticle.tag like '%${Article.tag}%' and status in (30,60)" count="4">
+                        		<% if (i==3) { %>
+                            		<li class="last">
+	                            <% } else {%>
+	                            	<li>
+	                            <% }%>
+	                            		<a class="list_title ellipsis" href="${Article.Link}">${Article.Title}</a>
+                                        <div class="descon">${Article.Summary|CharWidth=70}</div>
+                                        <a class="more" href="${Article.Link}">查看更多&nbsp;&gt;</a>
+                                    </li>
+                        		</cms:list>
+                        		</ul>
+                        	</div>
+                        </div>
+                        <!-- 保险百科 -->
+                        <div class="insurance_wiki">
+                            <h3 class="box_title"><i class="icon"></i>保险百科</h3>
+                            <cms:list item="article" level="none" condition="ZCArticle.cataloginnercode like '002347%' and ZCArticle.tag like '%${Article.tag}%' and status in (30,60)" count="5" >
+                            <% if (i==0) { %>
+                            <div class="detail_one">
+                                <div class="detail_imgs">
+                                	<cms:ad name="保险品牌公司无产品页面广告" custom="false" size="200*105" type="1"> 
+									{ZCMS:广告版位 矩形横幅 名称：保险品牌公司无产品页面广告}
+									</cms:ad> 
+								</div>
+                                <p class="detail_title"><a href="${Article.Link}">${Article.Title}</a></p>
+                                <p class="detail_info">${Article.Summary|CharWidth=130}</p>
+                                <a class="more" href="${Article.Link}">查看更多&nbsp;&gt;</a>
+                            </div>
+                            <ul>
+                            <% } else { %>
+                                <li><a class="ellipsis" href="${Article.Link}">${Article.Title}</a></li>
+                            <% } %>
+                            </cms:list>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sub">
+                	<div class="new_bottom">
+					 	<cms:imageplayer code="kxb_product" type="0" width="230" height="255" />
+					</div>
+					<!-- 产品热销榜 -->
+					<div class="new_bottom hots">
+						<h3 class="title_left"><i class="icon"></i>产品热销榜</h3>
+						<ul class="nav"  id="hot_nav">
+                            <li class="cur"><span id="hot1">旅游险</span></li>
+                            <li><span id="hot2" >健康险</span></li>
+                            <li><span id="hot3" >意外险</span></li>
+                        </ul>
+                        <div id="hot_con">
+	                        <ul class="detail_list" style="display: block;">
+	                        	<cms:list item="article" name="9409" level="current" count="5" hasAttribute="hot">
+	                        	<li>
+                                    <a class="dl_title ellipsis" href="${Article.Link}" target="_blank">${Article.Title}</a>
+                                    <p class="for_who">${Article.AdaptPeopleInfo|CharWidth=15}</p>
+                                    <p>
+                                        <span class="price" name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}</span>
+                                        <span id="SalesU_${Article.RiskCode}">${Article.SalesVolume}人已购买</span>
+                                    </p>
+                                    <a class="icon" href="${Article.Link}" target="_blank">
+                                        >
+                                    </a>
+                                </li>
+	                        	</cms:list>
+	                        </ul>
+	                        <ul class="detail_list" id="con_hot_2" style="display: none;">
+	                        	<cms:list item="article" name="产品中心/健康保险" level="current" count="5" hasAttribute="hot">
+	                        	<li>
+                                    <a class="dl_title ellipsis" href="${Article.Link}" target="_blank">${Article.Title}</a>
+                                    <p class="for_who">${Article.AdaptPeopleInfo|CharWidth=15}</p>
+                                    <p>
+                                        <span class="price" name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}</span>
+                                        <span id="SalesU_${Article.RiskCode}">${Article.SalesVolume}人已购买</span>
+                                    </p>
+                                    <a class="icon" href="${Article.Link}" target="_blank">
+                                        >
+                                    </a>
+                                </li>
+	                        	</cms:list>
+	                        </ul>
+	                        <ul class="detail_list" id="con_hot_3" style="display: none;">
+	                        	<cms:list item="article" name="9385" level="current" count="5" hasAttribute="hot">
+	                        	<li>
+                                    <a class="dl_title ellipsis" href="${Article.Link}" target="_blank">${Article.Title}</a>
+                                    <p class="for_who">${Article.AdaptPeopleInfo|CharWidth=15}</p>
+                                    <p>
+                                        <span class="price" name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}</span>
+                                        <span id="SalesU_${Article.RiskCode}">${Article.SalesVolume}人已购买</span>
+                                    </p>
+                                    <a class="icon" href="${Article.Link}" target="_blank">
+                                        >
+                                    </a>
+                                </li>
+	                        	</cms:list>
+	                        </ul>
+                        </div>
+					</div>
+					<!-- 产品介绍 -->
+					<div class="new_bottom intro">
+                        <h3 class="title_left"><i class="icon"></i>产品介绍</h3>
+                        <ul>
+                            <li>
+                                <a class="ellipsis" href="${Article.ProductTitleURL1}">${Article.ProductTitle1}</a>
+                                <p>${Article.ProductContent1|CharWidth=66}</p>
+                            </li>
+                            <li>
+                                <a class="ellipsis" href="${Article.ProductTitleURL2}">${Article.ProductTitle2}</a>
+                                <p>${Article.ProductContent2|CharWidth=66}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 其他保险公司 -->
+                <div class="others">
+                	<h3 class="box_title"><i class="icon"></i>其他保险公司</h3>
+                	<ul>
+                	 	<cms:list item="article" level="all" id="${Catalog.ID}" condition=" exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='是' and z1.columncode='HasPartnership')" name="保险品牌">
+						<li><a href="${Article.link}">${Article.alias}</a></li>
+						</cms:list>
+						<cms:list item="article" level="all" type="rand" condition=" exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='否' and z1.columncode='HasPartnership')" name="保险品牌">
+						<li><a href="${Article.link}">${Article.alias}</a></li>
+						</cms:list>
+                	</ul>
+                </div>
+            </div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"></cms:include>
+	 <cms:include file="block/community_v1.shtml" includetype="virtual"/>
+	<script type="text/javascript">
+	jQuery.fn.extend({
+        liClick: function(){
+            // console.log(this);
+            this.each(function(){
+                var _this = jQuery(this);
+                _this.click(function(){
+                    _this.siblings().removeClass('cur').end()
+                        .addClass('cur');
+                });
+            });
+        }
+    });
+	jQuery(function(){
+		//焦点图切换
+		jQuery('#change_33 div.changeDiv').soChange({
+			thumbObj:'#change_33 .ul_change_a2 span',
+			thumbNowClass:'on',
+			changeTime:4000//自定义切换时间为4000ms
+		});
+		
+        jQuery('.news .nav li, .hots .nav li').liClick();
+         //公司介绍的下拉效果
+         var _introduce = jQuery('.introduce'),
+             _detail = _introduce.find('.detail'),
+             _arrow = _introduce.find('.arrow'),
+             _p = _detail.find('.detail_p');
+         if(_p.height() > 115){
+             _arrow.show().click(function(){
+                 jQuery(this).toggleClass('up');
+                 _detail.toggleClass('hide');
+             });
+         }
+         else{
+             _arrow.hide();
+         }
+    });
+	jQuery(document).ready(function($) {
+        jQuery("#hot_nav li").tagclickbind({addstyle:"cur",con:"hot_con",nav:"hot_nav",mode:"ul"});
+    });
+	jQuery(document).ready(function($) {
+        jQuery("#news li").tagclickbind({addstyle:"cur",con:"news_con",nav:"news",mode:"ul"});
+    });
+	</script>
+
+</body>
+</html>

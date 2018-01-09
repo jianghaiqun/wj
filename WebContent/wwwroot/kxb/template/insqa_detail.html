@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css" />
+<link href="${Site.StaticResourcePath}/style/new_information.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/skins/default.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<title> 
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body onload="BestA()"> 
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<!--位置信息 开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link> <span class="separator">></span>${Article.title}
+		</div>
+	</div>
+<!--位置信息 结束-->
+<!--主体 开始-->
+<div class="wrap980 mainbgl644">
+	<!--左边 开始-->
+	<div class="right336 up_right">
+	
+		<!--图片切换 开始-->
+		<div class="ad_jiaodian">
+			<cms:imageplayer code="bxbk_detail_right" type="0" width="320" height="250" />
+		</div>
+		<!--图片切换 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			<cms:list item="article" cmsorder="1" level="none" count="5" hasAttribute="hot" condition=" (cataloginnercode like '002313000002%' or cataloginnercode like '002313000003%') and status='30'">
+				<li>
+					<h4><a href="${Site.URL}/${Article.URL}" title="${article.title}"><img src="${Site.ProductResourcePath}${Article.ProductLogo}" alt="${Article.title}" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="${Site.URL}/${Article.URL}" title="${article.title}" >${article.title|CharWidth=30}</a></h5>
+						<h6>${Article.AdaptPeopleInfo}</h6>
+					</div>
+				</li>
+			</cms:list>
+		</ul>
+		<!--热销保险产品 结束-->
+		<!--问答分类 开始-->
+		<div class="columntit graybordert">问答分类</div>
+		<div class="columnsubtit coulunmes_ts">保险咨询</div>
+		<ul class="columnclass">
+			<cms:list item="Catalog" level="child" cmsorder="2" name="保险咨询">
+				<li><a href="${Site.URL}/${Catalog.URL}" target="_blank">${Catalog.Name}</a></li>
+			</cms:list>	
+		</ul>
+		<div class="columnsubtit">险种咨询</div>
+		<ul class="columnclass">
+			<cms:list item="Catalog" level="child" cmsorder="3" name="险种咨询">
+				<li><a href="${Site.URL}/${Catalog.URL}" target="_blank">${Catalog.Name}</a></li>
+			</cms:list>
+		</ul>
+		<div class="columnsubtit">网站相关</div>
+		<ul class="columnclass">
+			<cms:list item="Catalog" level="child" name="网站相关" cmsorder="4">
+				<li><a href="${Site.URL}/${Catalog.URL}" target="_blank">${Catalog.Name}</a></li>
+			</cms:list>
+		</ul>
+		<div class="h12"></div>
+		<!--问答分类 结束-->
+		<cms:include file="block/bxbk_tpgg.shtml" includetype="virtual"/>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="left644 up_left">
+		<!--问题详细 开始-->
+		<div class="questiondetailbg">
+			<div class="questiondetail">
+				<h3>${Article.title}</h3>
+				<input type="hidden" name="QuestionId" id="QuestionId" value="${article.ID}" /> <input type="hidden" name="QuestionTitle" id="QuestionTitle" value="${article.title}" />
+				<div class="questioncont"><p>${article.cainadaan}</p></div>
+				<h4>${article.author}&nbsp;&nbsp;|&nbsp;&nbsp;发起于 ${Article.AskTime|Format=yyyy-MM-dd }</h4>
+			</div>
+			<div class="icon"></div>
+		</div>
+		<!--问题详细 结束-->
+		<!--回答详细 开始-->
+		<div class="answerdetailbg" id="BestA" style="display: none">
+			
+			<div class="answerdetail" >
+				<div class="icon"></div>
+				<div class="answercont"><p>${Article.content}</p></div>
+				<h4>${article.ReplyUser}&nbsp;&nbsp;|&nbsp;&nbsp;回复于 ${Article.ReplyTime|Format=yyyy-MM-dd }</h4>
+			</div>
+			${Article.qitadaan}
+		</div>
+		<!--回答详细 结束-->
+		<!--我来回答 开始-->
+		<div class="answerareabg">
+			<div class="answerareadetail" >
+				<h3>我来回答 <em class="pi_tips" id="answerPoint"></em></h3>
+				<h4><textarea name="content" id="content" rows="6"></textarea></h4>
+				<h4>
+					<tr  height="40">
+						<td valign="top" align="right" class="f14">验证码：</td>
+						<td valign="top" align="left"><input name="VerifyCode" type="text" class="vode_imgs" id="VerifyCode"  onfocus="this.select();">
+						<img src="${Site.Prop6}/Services/AuthCode.jsp?Height=24&Width=78&type=Comment" id="yzm" alt="点击刷新验证码" height="18"  align="absmiddle" style="cursor:pointer;" onClick="this.src='${Site.Prop6}/Services/AuthCode.jsp?Height=24&Width=78&type=Comment&'+ Math.random()" >
+						</td>
+					</tr>
+				</h4>
+				<h5><input name="" type="button" value="提交答案" class="btnask" id="add" />&nbsp;&nbsp;<input name="" type="button" value="我要提问" class="btnask" onclick="jQuery.ajaxLoadImg.show('searchQuesLoad');location.href='<cms:link type='Catalog' name='我要提问'/>'" /></h5>
+				<h6>如果您有任何问题，可以点击“我要提问”咨询。</h6>		
+			</div>		
+		</div>
+		<!--我来回答 结束-->
+		<!--问答关键词开始 开始-->
+		<div class="qakeyword">关键词：${Article.tag|taglink=Y}</div>
+		<!--问答关键词开始 结束-->
+		<!-- 相关问题 开始 -->
+		<div class="xg_question">
+			<ul class="news_wdtab_t cf rnews_nav">
+				<li>
+                    <span onmouseover="setTab('zs_zx',1,2)" class="hover" id="zs_zx1">相关问题</span>
+                </li>
+                <li class="last">
+                    <span onmouseover="setTab('zs_zx',2,2)" id="zs_zx2" class="">相关资讯</span>
+                </li>
+			</ul>
+			<div id="con_zs_zx_1">
+				<ul class="que_list">
+					<cms:list item="article" tag="${Article.tag}" level="none" cmsorder="5"
+						condition=" type = 1 and cataloginnercode like '002308%'  and status in (30,60) and title !='${Article.title}'"
+						count="5">
+						<li><a href="${Site.URL}/${Article.URL}" target="_blank">${article.title}</a><span
+							class="que_time">${article.AskTime|Format=yyyy-MM-dd}</span>
+						</li>
+					</cms:list>
+
+				</ul>
+				<a href="${Article.tag|taglink=M}" class="que_more" target="_blank">更多相关问题>></a>
+			</div>
+			<div id="con_zs_zx_2" style="display: none">
+				<ul class="que_list">
+					<cms:list item="relazx" tag="${Article.tag}" count="5" cmsorder="6">
+						<li><a href="${Site.URL}/${relazx.url}" target="_blank">${relazx.title}</a><span
+							class="que_time">${relazx.FirstPublishDate|Format=yyyy-MM-dd }</span>
+						</li>
+					</cms:list>
+				</ul>
+			</div>
+		</div>
+		 <!-- 相关问题 结束 -->
+		 <!-- 相关知识 开始-->
+		<div class="xg_question">
+		 	<div class="columntit bor_hs">您可能想要了解的知识</div>
+		 		<ul class="zs_tag cf rnews_nav" id="zs_nav">
+        	 		<li><span id="zs1" class="hover" onClick="setTab('zs',1,6)">旅游知识</span></li>
+        	 		<li><span id="zs2" onClick="setTab('zs',2,6)">意外知识</span></li>
+        	 		<li><span id="zs3" onClick="setTab('zs',3,6)">车辆知识</span></li>
+        	 		<li><span id="zs4" onClick="setTab('zs',4,6)">健康知识</span></li>
+        	 		<li><span id="zs5" onClick="setTab('zs',5,6)">人寿知识</span></li>
+        	 		<li class="last"><span id="zs6" onClick="setTab('zs',6,6)">家财知识</span></li>
+        	    </ul>
+
+        	    <div class="clear"></div>
+        	    <div id="con_zs_1">
+					<ul class="que_list">
+			 			<cms:list item="article" name="保险知识/旅游保险知识" cmsorder="7" count="5" type="firstpublish">
+				 			<li><a href="${Site.URL}/${Article.URL}" target="_blank" >${Article.title|substrwidth=30}</a><span class="que_time">${Article.FirstPublishDate|Format=yyyy-MM-dd }</span></li>
+						</cms:list>	
+					</ul>
+					<a href="${Site.URL}/zhishi/lvyoubaoxian/" class="que_more" target="_blank">更多旅游相关知识&gt;&gt;</a>	
+				</div>
+				<div id="con_zs_2" style="display:none">
+					<ul class="que_list">
+			 			<cms:list item="article" name="保险知识/意外保险知识" cmsorder="8" count="5" type="firstpublish">
+				 			<li><a href="${Site.URL}/${Article.URL}" target="_blank" >${Article.title|substrwidth=30}</a><span class="que_time">${Article.FirstPublishDate|Format=yyyy-MM-dd }</span></li>
+						</cms:list>
+					</ul>
+					<a href="${Site.URL}/zhishi/yiwaibaoxianzhishi/" class="que_more" target="_blank">更多意外相关知识&gt;&gt;</a>
+				</div>
+				<div id="con_zs_3" style="display:none">
+					<ul class="que_list">
+			 			<cms:list item="article" name="保险知识/车辆保险知识" cmsorder="9" count="5" type="firstpublish">
+				 			<li><a href="${Site.URL}/${Article.URL}" target="_blank" >${Article.title|substrwidth=30}</a><span class="que_time">${Article.FirstPublishDate|Format=yyyy-MM-dd }</span></li>
+						</cms:list>
+					</ul>
+					<a href="${Site.URL}/zhishi/cheliangbaoxian/" class="que_more" target="_blank">更多车辆相关知识&gt;&gt;</a>	
+				</div>
+				<div id="con_zs_4" style="display:none">
+					<ul class="que_list">
+			 			<cms:list item="article" name="保险知识/健康保险知识" cmsorder="10" count="5" type="firstpublish">
+				 			<li><a href="${Site.URL}/${Article.URL}" target="_blank" >${Article.title|substrwidth=30}</a><span class="que_time">${Article.FirstPublishDate|Format=yyyy-MM-dd }</span></li>
+						</cms:list>
+					</ul>
+					<a href="${Site.URL}/zhishi/jiankangbaoxian/" class="que_more" target="_blank">更多健康相关知识&gt;&gt;</a>
+				</div>
+				<div id="con_zs_5" style="display:none">
+					<ul class="que_list">
+			 			<cms:list item="article" name="保险知识/人寿保险知识" cmsorder="11" count="5" type="firstpublish">
+				 			<li><a href="${Site.URL}/${Article.URL}" target="_blank" >${Article.title|substrwidth=30}</a><span class="que_time">${Article.FirstPublishDate|Format=yyyy-MM-dd }</span></li>
+						</cms:list>
+					</ul>
+					<a href="${Site.URL}/zhishi/renshoubaoxianzhishi/" class="que_more" target="_blank">更多人寿相关知识&gt;&gt;</a>
+				</div>
+				<div id="con_zs_6" style="display:none">
+					<ul class="que_list">
+			 			<cms:list item="article" name="保险知识/家财保险知识" cmsorder="12" count="5" type="firstpublish">
+				 			<li><a href="${Site.URL}/${Article.URL}" target="_blank" >${Article.title|substrwidth=30}</a><span class="que_time">${Article.FirstPublishDate|Format=yyyy-MM-dd }</span></li>
+						</cms:list>
+					</ul>
+					<a href="${Site.URL}/zhishi/jiacaibaoxianzhishi/" class="que_more" target="_blank">更多家财相关知识&gt;&gt;</a>	
+				</div>
+	     </div>
+	    <!-- 相关知识 结束-->
+		<!--推荐产品 开始-->
+		<input type="hidden" id="RiskType" value="${article.RiskType}"/>
+		<input type="hidden" id="RiskCompany" value="${article.RiskCompany}"/>
+		<input type="hidden" id="RiskProduct1" value="${article.RiskProduct1}"/>
+		<input type="hidden" id="RiskProduct2" value="${article.RiskProduct2}"/>
+		<div id="products" class="produlist hot_shiop_bor">
+			<div class="columntit bor_hs">热门产品推荐</div>
+			<div align="center">
+	            <img src="${Site.StaticResourcePath}/images/loading2.gif" width="70" height="70" />
+	        </div>
+		</div>
+		<!--推荐产品 结束-->
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<div class="clear"></div>
+<!--主体 结束-->
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="问答详情页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="问答详情页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="问答详情页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script src="${Site.JsResourcePath}/js/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<script type="text/javascript">
+jQuery().ready( function() {
+	var riskType = jQuery("#RiskType").val();
+	var riskCompany = jQuery("#RiskCompany").val();
+	var riskProduct1 = jQuery("#RiskProduct1").val();
+	var riskProduct2 = jQuery("#RiskProduct2").val();
+	jQuery.ajax({
+		url: "${Site.prop6}/shop/article!ajaxProduct.action?riskType="+riskType+"&riskCompany="+riskCompany+"&riskProduct1="+riskProduct1+"&riskProduct2="+riskProduct2,
+		type: "post",
+		dataType: "json",
+		success: function(data){
+			var obj = eval(data);
+			 jQuery("#products").html("<div class=\"columntit bor_hs\">热门产品推荐</div>"+obj.products) ;
+	 	}			
+	});
+});
+jQuery(function(){
+    jQuery('#change_33 div.changeDiv').soChange({
+       thumbObj: '#change_33 .ul_change_a2 span',
+       thumbNowClass: 'on',
+       changeTime: 4000
+   })
+})
+	function BestA() {
+		if ("${Article.isok}"== "solve") { 
+			document.getElementById("BestA").style.display = "block";
+		}
+	}
+	jQuery(document).ready(
+					function() {
+						jQuery("#add").click(function() {
+											jQuery.ajaxLoadImg.show('QuesLoad');
+											var tContent = document.getElementById("content").value;
+											var tQuestionId = document.getElementById("QuestionId").value;
+											var tQuestionTitle = document.getElementById("QuestionTitle").value;
+											var tVerifyCode = document.getElementById("VerifyCode").value;
+											if (tContent.length > 1000) {
+												alert("回答内容只能写1000个字以内哟")
+												return false;
+											}
+											var now = new Date().getTime();
+											var data = {
+												QuestionId : encodeURI(
+														tQuestionId, "UTF8"),
+												Content : encodeURI(
+														tContent, "UTF-8"),
+												QuestionTitle : encodeURI(
+														tQuestionTitle,
+														"UTF-8"),
+												VerifyCode : encodeURI(
+														tVerifyCode,
+														"UTF-8"),
+												operate : "Answer",
+												method : "save"
+											};
+											//$.post('${site.prop6}/shop.jsp?now='+now, data, function(json){//now表示每次点击都会发送新的请求
+											jQuery.post('${site.prop6}/shop.jsp?now='+ now,data,
+												function(json) {
+												    jQuery.ajaxLoadImg.hide('QuesLoad');
+												    var str = json;
+													while( str.indexOf( "\"" ) != -1 ) {
+														str =  str.replace("\"",""); 
+													}
+												    str = str.replace(":","").replace("{","").replace("}","").replace("test","");
+												
+													if (str == 'nologin') {
+														artLogin();//使用弹出窗口登录
+														
+													} else if(str=='验证码没有写对哟！'){
+														art.dialog.alert(str);
+														document.getElementById("yzm").click();
+													}else{
+														art.dialog.alert(str);
+														window.location.href = "${Site.URL}/wenda/index.shtml";
+													}
+												});
+										});
+					});
+						
+</script>
+</body>
+</html>

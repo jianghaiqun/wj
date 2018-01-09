@@ -1,0 +1,11 @@
+<% DataTable dt_15 = TemplateData.getDocList("article","车辆违章查询","current","null","null","1","null","null","null");
+  if(dt_15==null){write("没有找到栏目。parent：null  catalog："+"车辆违章查询");}else{
+ int rdCnt=dt_15.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_15  = dt_15.getDataRow(i);
+ int rdIdx=i;
+%>
+
+		<h2 class="part_titles" id="part6">${article_15.Section6}</h2>
+		<%}}%>

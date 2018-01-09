@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+
+<link href="${Site.StaticResourcePath}/style/redesign/re_header.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_list.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/activity.css"/>
+<%
+if("upload/Imagepicture.jpg".equals(article.getString("BannerImage1Name"))){
+%>
+<style>
+.ste_banners{ background:#fff; overflow:hidden;}
+</style>
+<%}else{%>
+<style>
+.ste_banners{ background:url(${Site.URL}/${Article.BannerImage1Name})  repeat-x; overflow:hidden;}
+</style>
+<%}%>
+<script type="">
+var complicatedFlag = 'N';
+</script>
+<cms:include file="block/kxb_custom_header.shtml"/>
+</head>
+<body onload="pinglun();">
+    <!--header-->
+	<cms:include file="block/kxb_header_yxhd.shtml" />
+    <!--header end-->
+    <!--banner-->
+    <div class="ste_banners">
+     <div class="wrapper">
+     <img src="${Site.StaticResourcePath}/${Article.Image1Name}"  style="display:block"  alt="" />
+      </div>
+     </div>
+    <!--banner end-->
+        <div class="wrapper">
+        <div id="stc_order" class="paixu_gs">
+             <div class="stc_paixu">排序:</div>
+				<span class="stc_paixu" id="order_SalesVolume" onclick="doOrder1(this);">销量</span><span class="stc_paixu"  id="order_InitPrem" onclick="doOrder1(this);">价格</span>
+                <div class="stc_ad_text">${Catalog.HTML1}</div>
+				</div>
+           <div id="products">
+           <cms:list item="article" name="产品中心" level="all"  page="false"  condition="select z1.* from zcarticle z1,scfaq s1 where z1.id=s1.faqname and s1.relaid='${Article.ID}' order by s1.orderflag " >
+           <%if(i<3){%>
+           <div class="cf">          
+        		<div class="stc_shopboxs stc_tj">
+             			<div class="product_title">
+							<span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span> <span class="productName"> <a target="_blank" href="${Article.Link}"><h2 class="ziti">${Article.title}</h2></a>
+							</span> <span class="SalesVolume">(累计销量：${Article.SalesVolume})</span><span id="productIntegral_209601001" style="display: none;"></span>
+						</div>
+                        <div class="product_condition">
+                        ${Article.CalHTML2}
+						</div>
+                        <div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price">${Article.prodcutMarkPrice}</ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('${Article.Link}')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('${Article.RiskCode}');">加入收藏</span><span onclick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.PageRiskCode}');" style="margin-left: 6px;" class="add_cp_list">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">${Article.AdaptPeopleInfo}</div>
+							
+							<div class="productFeature">${Article.FEMRiskBrightSpot}</div>
+							${Article.DutyHTML}
+                </div>
+                </div>
+                <div class="stc_pinglun">
+                	<p class="stc_djzmk">大家怎么看：</p>
+                    <ul class="sct_zan" id="wangjin<%write(i);%>">
+                    
+                    </ul>
+                </div>             
+           
+           </div>
+           <%}else{%>
+                      <div class="cf">          
+        		<div class="stc_shopboxs">
+             			<div class="product_title">
+							<span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span> <span class="productName"> <a target="_blank" href="${Article.Link}"><h2 class="ziti">${Article.title}</h2></a>
+							</span> <span class="SalesVolume">(累计销量：${Article.SalesVolume})</span><span id="productIntegral_209601001" style="display: none;"></span>
+						</div>
+                        <div class="product_condition">
+                        ${Article.CalHTML2}
+						</div>
+                        <div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price">${Article.prodcutMarkPrice}</ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('${Article.Link}')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('${Article.RiskCode}');">加入收藏</span><span onclick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.PageRiskCode}');" style="margin-left: 6px;" class="add_cp_list">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">${Article.AdaptPeopleInfo}</div>
+							
+							<div class="productFeature">${Article.FEMRiskBrightSpot}</div>
+							${Article.DutyHTML}
+                </div>
+                </div>
+                <div class="stc_pinglun">
+                	<p class="stc_djzmk">大家怎么看：</p>
+                    <ul class="sct_zan" id="wangjin<%write(i);%>">
+                    
+                    </ul>
+                </div>             
+           
+           </div>
+           <%}%>
+           </cms:list>
+           </div>
+        </div>
+        
+        <div class="wrapper">
+            <div class="stc_zhuyi">
+              <h3 class="stc_zs_title">${Catalog.HTML2}</h3>
+              
+              <!-- add 预约模块 begin -->
+				<div class="order cf">
+
+						<img src="${Site.StaticResourcePath}/${Article.prePic}" alt="" width="482px" height="290px" alt=""  class="order_img" />
+						<div id="order_con"></div>
+				</div>
+              <!-- add 预约模块 end-->
+              
+                <div class="stc_wd">
+               <dt  id="wd1" onMouseOver="setTab('wd',1,5)"><em class="stc_wdicon"></em>${Article.question1}</dt>
+               <dl class="stc_wd_text" id="con_wd_1" >${Article.answer1}</dl>
+                         <dt  id="wd2" onMouseOver="setTab('wd',2,5)"><em class="stc_wdicon"></em>${Article.question2}</dt>
+               <dl class="stc_wd_text" id="con_wd_2" style="display:none;">${Article.answer2}</dl>
+                         <dt  id="wd3" onMouseOver="setTab('wd',3,5)"><em class="stc_wdicon"></em>${Article.question3}</dt>
+               <dl class="stc_wd_text" id="con_wd_3" style="display:none;">${Article.answer3}</dl>
+                         <dt  id="wd4" onMouseOver="setTab('wd',4,5)"><em class="stc_wdicon"></em>${Article.question4}</dt>
+               <dl class="stc_wd_text" id="con_wd_4" style="display:none;">${Article.answer4}。</dl>
+                         <dt  id="wd5" onMouseOver="setTab('wd',5,5)"><em class="stc_wdicon"></em>${Article.question5}</dt>
+               <dl class="stc_wd_text" id="con_wd_5" style="display:none;">${Article.answer5}</dl>
+                </div>
+                <div class="stc_r_baner">
+						<a href="${Article.Image3Link}" target="_blank" class="a_bigImg"><img src="${Site.StaticResourcePath}/${Article.Image3Name}"width="242" height="306" alt="" /></a>
+                </div>
+                <div class="clear"></div>
+                 <div class="stc_btn_baner">
+                 <img src="${Site.StaticResourcePath}/${Article.Image2Name}"  style="display:block"  alt=""/>
+                 </div>
+          </div>
+           
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<div class="clear"></div>
+	<div id="cpdiv" class="cpdiv">
+		<div class="comparediv">
+			<h3>产品比较</h3>
+			<div class="closebtn">
+				<span onclick="closecp()"><img src="${Site.StaticResourcePath}/images/closebtn.gif" width="20" height="20" /></span>
+			</div>
+			<div class="comparedivcont">
+				<div class="comparedetail" style="display: none;" id="cpprodu1">
+					<input type="hidden" name="productCodeA" id="productCodeA" />
+					<p>
+						<span id="productnameA"></span><br /> <span class="dblue cpdelico" onclick="closecp1()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu2">
+					<input type="hidden" name="productCodeB" id="productCodeB" />
+					<p>
+						<span id="productnameB"></span><br /> <span class="dblue cpdelico" onclick="closecp2()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu3">
+					<input type="hidden" name="productCodeC" id="productCodeC" />
+					<p>
+						<span id="productnameC"></span><br /> <span class="dblue cpdelico" onclick="closecp3()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu4">
+					<input type="hidden" name="productCodeD" id="productCodeD" />
+					<p>
+						<span id="productnameD"></span><br /> <span class="dblue cpdelico" onclick="closecp4()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparebtn">
+					<span><img src="${Site.StaticResourcePath}/images/btncp.gif" width="72" height="28" alt="提交对比" onclick="javascript:begincompare('${Site.prop6}');subclosecp();" /></span>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	 function pinglun()
+	 {	
+		 var pingluns = document.getElementById("products")
+			.getElementsByTagName("a");
+			var aa="";
+			var bb,cc,dd,ff;
+			for(var k=0;k<pingluns.length;k++){
+				aa=aa+pingluns[k]+",";
+					
+			}
+			jQuery.ajax({
+				url: '${Site.prop6}/shop/filter!searchPL.action?condition=' + aa ,
+				dataType: "json",
+				async: false,
+				success: function(data) {
+					  if(data.status == '0'){
+						    // 替换产品
+						    var hh=data.message.split("-");
+						    
+						    for(var nn=0;nn<hh.length;nn++)
+						    {
+						    	bb="#wangjin" +nn;
+						    	//alert(hh[nn]);
+						    	jQuery(bb).html(hh[nn]);
+						    }
+								//jQuery(bb).html(data.message);
+								// 拼装分页
+				  }
+				
+			}
+			 });
+	 }
+</script>
+<script type="text/javascript">
+	jQuery(function(){
+		jQuery(".stc_paixu").toggle(
+				  function () {
+				    jQuery(this).addClass("xz_select");
+				  },
+				  function () {
+				    jQuery(this).removeClass("xz_select");
+				  }
+				);
+		initProduct();
+		pinglun();
+		
+ })
+</script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.qtip.js"></script>
+	<script	type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/productCompare.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/stencil/stencil_order.js"></script>
+	<script type="text/javascript">
+
+	
+		function chakan(str)
+			{
+				window.open(str);
+				
+			}
+	
+		function submitp(str) {
+			jQuery.ajax({
+				type : 'get',
+				url : '${Site.prop6}/shop/favorites!add.action?productId='
+						+ str,
+				dataType : 'html',
+				success : function(de) {
+
+					if (de == 'notlogin') {
+						artLogin();//使用弹出窗口登录
+					} else {
+						alert(de);
+					}
+				}
+			});
+		}
+
+	 
+
+		function doBuy(str,sup) {
+			var selectID = str+"_Period";
+			var value = jQuery("#"+selectID).val();
+			if(value == null || value == "undefined"){
+				value = "";
+			}
+			var Period = "&Period="+value; 
+
+			var Plan_value = jQuery("#"+(str+"_Plan")).val();
+			if(Plan_value == null || Plan_value == "undefined"){
+				Plan_value = "";
+			}
+			var Plan = "&Plan="+Plan_value; 
+			var TextAge_value = jQuery("#"+(str+"_TextAge")).val();
+			if(TextAge_value == null || TextAge_value == "undefined"){
+				TextAge_value = "";
+			}
+			var TextAge = "&TextAge="+TextAge_value; 
+			
+			if(sup=='1015'){
+				window.location.href = "${Site.prop6}/shop/order_config!buyNow.action?productId="
+					+ str+Period+Plan+TextAge;
+			}else{
+				window.location.href = "${Site.prop6}/shop/order!buyNow.action?productId="
+					+ str+Period+Plan+TextAge;     
+			}
+		}
+		
+		function doOrder1(ele){
+			
+			changeOrderInfoStyle11(ele);
+			searchProduct(ele);
+			setTimeout("AjaxPriceOrder2()",2000);
+		}
+
+		function searchProduct(curElement1){
+			
+			var ProductsOrder = "";
+			var str="${Article.FAQ}";
+			if (curElement1.id == "order_SalesVolumedesc") {
+				ProductsOrder = "order_SalesVolumedesc";
+			}else if(curElement1.id == "order_SalesVolumeasc")
+			{
+				ProductsOrder = "order_SalesVolumeasc";
+			}
+			else if(curElement1.id == "order_InitPremdesc")
+			{
+				ProductsOrder = "order_InitPremdesc";
+			}
+			else if(curElement1.id == "order_InitPremasc")
+			{
+				ProductsOrder = "order_InitPremasc";
+			}
+			jQuery.ajax({
+				url: '${Site.prop6}/shop/filter!searchYXHD.action?condition=' + str +'&ProductsOrder=' +ProductsOrder,
+				dataType: "json",
+				async: false,
+				success: function(data) {
+					  if(data.status == '0'){
+						    // 替换产品
+							jQuery("#products").html(data.message);
+							// 拼装分页
+					   }
+				  }
+				
+				
+			 });
+		}
+		function changeOrderInfoStyle11(curElement) {
+			var DocElements = document.getElementById("stc_order")
+					.getElementsByTagName("SPAN");
+			for ( var i = 0; i < DocElements.length; i++) {
+				if (DocElements[i].id == curElement.id) {
+					if (DocElements[i].id == "order_SalesVolume")
+					{
+						curElement.id="order_SalesVolumedesc";
+					}else if(DocElements[i].id == "order_SalesVolumedesc")
+					{
+						curElement.id="order_SalesVolumeasc";
+					}else if(DocElements[i].id == "order_SalesVolumeasc")
+					{
+						curElement.id="order_SalesVolumedesc";
+					}else if(DocElements[i].id == "order_InitPrem")
+					{
+						curElement.id="order_InitPremdesc";
+					}else if(DocElements[i].id == "order_InitPremdesc")
+					{
+						curElement.id="order_InitPremasc";
+					}else if(DocElements[i].id == "order_InitPremasc")
+					{
+						curElement.id="order_InitPremdesc";
+					}
+				}
+			}
+			
+		}
+		function AjaxPriceOrder2(){
+			if(jQuery('span[name^=Ajax_Prict_]').length <= 0){
+				return;
+			}
+			var list = jQuery('span[name^=Ajax_Prict_],span[name^=R_Ajax_Prict_]');
+			
+			var productIDArray = new Array(list.length);
+			for (var i = 0; i < list.length; i++) {
+				productIDArray[i] = jQuery(list[i]).attr("name").replace("R_","");
+			}
+			
+			var cpsUserId = jQuery.cookie('cpsUserId');
+			var channelsn = "wj";
+			if(typeof(cpsUserId)!="undefined" && cpsUserId!=null && cpsUserId!=""){
+				channelsn = "cps";
+			}
+			jQuery.ajax({
+				type: 'post',
+				url: sinosoft.base+'/shop/ajax_price!ajaxPrice.action?&callback=?&channelSn='+channelsn+'&ProductIDS='+productIDArray,
+				dataType: "json",
+				async: false,
+				success: function(data) {
+				
+				jQuery.each(data, function(index, price) {
+					var mPrice = price.split("_");
+					var tprice = "<em>￥</em>"+mPrice[0];
+					var initPrem = "<em>￥</em>"+mPrice[1];
+					var ttLen = mPrice.length;
+					var disrate = "dis";
+					if(ttLen>=4){
+						disrate = mPrice[3];
+					}
+					//列表页推荐产品-无“￥”
+					jQuery("span[name=R_Ajax_Prict_"+index+"]").html(mPrice[0]);
+					
+					jQuery("span[name=Ajax_Prict_"+index+"]").html(tprice);
+					
+					if(jQuery("#txt_price").length > 0){
+						var v_riskCode = jQuery("#RiskCode").val();
+						if(v_riskCode == index){
+							jQuery("#txt_price").html("<em>￥</em>"+mPrice[0]);
+						}
+					} 
+					if(initPrem && parseFloat(jQuery.trim(mPrice[0])) >= parseFloat(jQuery.trim(mPrice[1]))){
+						if(disrate=="dis"){
+							jQuery("span[name=Clear_Ajax_Prict_"+index+"]").html("");
+							jQuery("span[name=Clear_Ajax_Prict_"+index+"]").hide();
+							jQuery("#Clear_li_Ajax_Prict_"+index).hide();
+						}
+					}else{
+						//jQuery("span[name=Clear_Ajax_Prict_"+index+"]").html(initPrem);
+						//jQuery("span[name=Clear_Ajax_Prict_"+index+"]").show();
+						//jQuery("#Clear_li_Ajax_Prict_"+index).show();
+					}
+					if(jQuery("#productIntegral_"+index).length > 0){
+						 if(mPrice[2] < 1){
+							 jQuery("#productIntegral_" + index).html("0");
+						 }else{
+							 if(ttLen>=8&&'true'==mPrice[6]&&mPrice[7]!=''){
+								 jQuery("#pointdes").html(mPrice[7]);
+							 }else{
+								 jQuery("#productIntegral_" + index).html(Math.floor(mPrice[2])+" ");
+							 }
+							 if(ttLen>=6){
+								  if("true"!=mPrice[5]){
+									  jQuery("#integer_login").show();
+								  }
+							}
+						 }
+						 if(mPrice.length > 4){
+							 if(parseFloat(mPrice[4])!=0){
+								 if("true"!=mPrice[5]){
+									 jQuery("#maxIntegralPrice_" + index).html("<span>积分最多可抵<em>"+mPrice[4]+"</em>元</span>");
+								 }else{
+									 jQuery("#maxIntegralPrice_" + index).html("<span>您有积分<em>"+mPrice[8]+"</em> 本次可抵<em>"+mPrice[4]+"</em>元</span>");
+								 }
+							 }
+						 }
+					}
+				});
+			}
+			});
+		}
+	</script>
+</body>
+</html>

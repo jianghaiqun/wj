@@ -1,0 +1,200 @@
+<!DOCTYPE html >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");  
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%> 
+</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_sales.css"/>
+<link rel="shortcut icon" href="${Site.StaticResourcePath}/favicon.ico"/>
+<style type="text/css">
+.g-nav-main li a.nav_3{ color:#f08225; }
+</style>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+<!-- 顶部 开始 -->
+	<cms:include file="block/kxb_header_index_new_promotion.shtml" />
+	<!-- 顶部 结束 -->
+
+<div class="ct_sales_con" style="background:${Article.cxsexi};">
+	<div class="g_sales_img" style="background: url(${Site.StaticResourcePath}/${Article.cxbanner}) no-repeat center bottom;">
+        <style>
+        	<%
+				String cxbanner = article.getString("cxbanner");
+				cn.com.sinosoft.action.shop.PromotionDetailAction p1 = new cn.com.sinosoft.action.shop.PromotionDetailAction();
+				String imageHei = p1.getImageHeight(cxbanner);
+				if (imageHei == null || "".equals(imageHei)) {
+					write(".g_sales_img{  height:365px; }");
+				} else {
+					write(".g_sales_img{  height:"+imageHei+"; }");
+				}
+				
+			 %>
+              
+             
+		</style>
+    </div>
+    <div class="h50"></div>
+    <div class="g-weaper">
+ 	<%
+	String ID = article.getString("ID");
+	cn.com.sinosoft.action.shop.PromotionDetailAction p = new cn.com.sinosoft.action.shop.PromotionDetailAction();
+	com.sinosoft.framework.utility.Mapx map = p.promotionInfo(ID);
+	if (map != null) {
+		Object[] o = map.valueArray();
+		if (o != null && o.length > 0) {
+			for (int i = 0; i < o.length; i++) {
+				write(o[i]);
+			}
+		}
+	}
+	%>
+
+		<div class="clear h20"></div>
+	</div>
+	<div class="clear"></div>
+	<style>
+        .sales_tip_bg{background: url(${Site.StaticResourcePath}/${Article.cuxiaoweibutupian}) no-repeat center bottom;}
+    </style>
+    <div class="sales_tip_con sales_tip_bg" style="" >
+        <div class="g-weaper">
+			${Article.Content}
+        </div>
+    </div>
+</div>
+<!-- 公共底部 -->
+<cms:include file="block/kxb_footer_new_v2.shtml" />
+<!-- 公共底部 -->
+<!-- js加载 -->
+<cms:include file="block/common_js.shtml" />
+<script type="text/javascript">
+jQuery(function(){
+	salesVolumeLoad();
+	searchProductListAvtivity();
+	if(jQuery('span[name^=Ajax_Prict_]').length <= 0){
+		return;
+	}
+	var list = jQuery('span[name^=Ajax_Prict_]');
+	
+	var productIDArray = new Array(list.length);
+	for (var i = 0; i < list.length; i++) {
+		productIDArray[i] = jQuery(list[i]).attr("name");
+	}
+	
+	var cpsUserId = jQuery.cookie('cpsUserId');
+	var channelsn = "wj";
+	if(typeof(cpsUserId)!="undefined" && cpsUserId!=null && cpsUserId!=""){
+		channelsn = "cps";
+	}
+	jQuery.ajax({
+		type: 'post',
+		url: sinosoft.base+'/shop/ajax_price!ajaxPrice.action?&callback=?&channelSn='+channelsn+'&ProductIDS='+productIDArray,
+		dataType: "json",
+		async: false,
+		success: function(data) {
+		
+		jQuery.each(data, function(index, price) {
+			var mPrice = price.split("_");
+			var tprice = "<i>￥</i>"+mPrice[0];
+			var initPrem = "￥"+mPrice[1];
+			var ttLen = mPrice.length;
+			var disrate = "dis";
+			if(ttLen>=4){
+				disrate = mPrice[3];
+			}
+
+			jQuery("span[name=Ajax_Prict_"+index+"]").html(tprice);
+			
+			if(initPrem && parseFloat(jQuery.trim(mPrice[0])) >= parseFloat(jQuery.trim(mPrice[1]))){
+				
+				if(disrate=="dis"){
+					jQuery("span[name=Clear_Ajax_Prict_"+index+"]").html("");
+					jQuery("span[name=Clear_Ajax_Prict_"+index+"]").hide();
+				}
+			}else{
+				jQuery("span[name=Clear_Ajax_Prict_"+index+"]").html(initPrem);
+				jQuery("span[name=Clear_Ajax_Prict_"+index+"]").show();
+			}
+		});
+	}
+	});
+});
+
+/**
+ * 产品销量
+ */
+function salesVolumeLoad() {
+	var list=jQuery('span[id^=SalesV_]');
+	var id = new Array(list.length);
+	var idStr="";
+	for (var i = 0; i < list.length; i++) {
+           id[i] = list[i].id;
+           idStr+= list[i].id;
+	}
+	if(idStr==""){
+		return;
+	}
+	jQuery.ajax({
+		type: 'post',
+		url: sinosoft.base+'/shop/sales_volume!search.action?productIds='+id,
+		dataType: "json",
+		async: false,
+		success: function(data) {
+			jQuery.each(data, function(index, object) {
+	        document.getElementById(index).innerHTML=object+"人已购买";
+			});
+		}
+	});
+}
+
+//满减活动信息
+function searchProductListAvtivity(){
+	var list=jQuery('span[id^=Activity_]');
+	var id = new Array(list.length);
+	var idStr="";
+	for (var i = 0; i < list.length; i++) {
+           id[i] = list[i].id;
+           idStr+= list[i].id;
+	}
+	if(idStr==""){
+		return;
+	}
+	var cpsUserId = jQuery.cookie('cpsUserId');
+	var channelsn = "wj";
+	if(typeof(cpsUserId)!="undefined" && cpsUserId!=null && cpsUserId!=""){
+		channelsn = "cps";
+	}
+	jQuery.ajax({
+		type: 'post',
+		url: sinosoft.base+'/shop/sales_volume!searchProductListAvtivity.action?productId='+id+'&channelSn='+channelsn,
+		dataType: "json",
+		async: false,
+		success: function(data) {
+			jQuery.each(data, function(index, object) {
+				var index_productid=index.substring(0,index.indexOf("@"));
+				var activity_type=index.substring(index.indexOf("@")+1,index.length);
+				if(activity_type!="8"){
+					if (object != null && object != '') {
+						jQuery('#'+index_productid).show();
+						object = object.substring(object.indexOf(">") + 1,object.indexOf("</"));
+						document.getElementById(index_productid).innerHTML=object+'<em class="ct_sales_em"></em>';
+					}
+					
+				}
+			});
+		}
+	});
+}
+</script>
+</body>
+</html>

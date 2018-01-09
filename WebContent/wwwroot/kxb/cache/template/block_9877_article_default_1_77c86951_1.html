@@ -1,0 +1,13 @@
+<% DataTable dt_8 = TemplateData.getDocList("article","公积金专题","current","null","null","1","null","null","null");
+  if(dt_8==null){write("没有找到栏目。parent：null  catalog："+"公积金专题");}else{
+ int rdCnt=dt_8.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_8  = dt_8.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	<div class="h20"><div class="bor_shadow_980"></div></div>
+	<h2 class="part_titles"  id="part3">${article_8.Section3}</h2>
+	<div class="stenmore orange"><a href="${article_8.Section3Link}" target="_blank">更多</a></div>
+	<%}}%>

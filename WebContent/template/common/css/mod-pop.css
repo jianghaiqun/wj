@@ -1,0 +1,78 @@
+.lay-pop {
+	margin: 20px; border: 1px solid rgb(200, 200, 200); width: 528px; box-shadow: 0px 0px 10px #999; background-color: rgb(255, 255, 255); -moz-box-shadow: 0 0 10px #999; -webkit-box-shadow: 0 0 10px #999;
+}
+.pop-title {
+	background: url("/mice/insalert/alerttitle-bg.png") repeat-x left top; height: 41px; line-height: 41px; padding-left: 20px; font-weight: bold; border-bottom-color: rgb(200, 200, 200); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.pop-close {
+	top: 0px; width: 44px; height: 41px; right: 0px; position: absolute; cursor: pointer;
+}
+.pop-cont {
+	padding: 15px 25px 20px; font-size: 14px;
+}
+.pop-cont p {
+	margin: 5px 0px;
+}
+.pop-cont p input {
+	margin: 2px 5px 0px 0px;
+}
+.pop-cont p label {
+	width: 94%;
+}
+.pop-cont p label span {
+	margin: 0px 5px; word-break: break-all; word-wrap: break-word;
+}
+.pop-cont a {
+	padding: 0px 3px; font-weight: 700; text-decoration: underline;
+}
+.ajaxPager {
+	margin: 15px 0px 0px; font-size: 12px;
+}
+.ajaxPager div {
+	margin: 0px auto; text-align: center;
+}
+.ajaxPager a:link {
+	text-decoration: none;
+}
+.ajaxPager a:visited {
+	text-decoration: none;
+}
+.ajaxPager a:hover {
+	text-decoration: none;
+}
+.ajaxPager a {
+	margin: 0px 3px 0px 0px; padding: 2px 5px; height: 18px; text-align: center; line-height: 18px; vertical-align: middle;
+}
+.ajaxPager .curP {
+	margin: 0px 3px 0px 0px; padding: 2px 5px; height: 18px; text-align: center; line-height: 18px; vertical-align: middle;
+}
+.ajaxPager .sumP {
+	margin: 0px 3px 0px 0px; padding: 2px 5px; height: 18px; text-align: center; line-height: 18px; vertical-align: middle;
+}
+.ajaxPager .sumP {
+	padding-left: 0px; font-weight: normal;
+}
+.ajaxPager strong {
+	padding: 0px 5px;
+}
+.ajaxPager .curP {
+	background: rgb(255, 75, 1); border: 1px solid red; color: rgb(255, 255, 255); font-weight: 700; cursor: default;
+}
+.ajaxPager a {
+	border: 1px solid rgb(204, 204, 204); vertical-align: middle;
+}
+.ajaxPager a:hover {
+	border: 1px solid red;
+}
+.ajaxPager a span {
+	vertical-align: baseline;
+}
+.pop-cont dt {
+	margin-bottom: 10px;
+}
+.pop-cont dd {
+	margin-bottom: 5px;
+}
+.pop-cont dd a {
+	font-weight: 500; margin-right: 15px;
+}

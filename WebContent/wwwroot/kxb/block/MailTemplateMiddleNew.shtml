@@ -1,0 +1,36 @@
+<tr>
+	<td colspan="10" style="height:30px; width:600px;" bgcolor="#ffffff"></td>
+</tr>
+<tr>
+	<td colspan="10">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="11" style="height:109px; width:300px;border-right: 1px solid #e8e8e8;bgcolor:#ffffff;">
+					<p style="color: #222222; line-height: 1.8em; font-size: 12px;">
+						1 本邮件由开心保系统自动发出，请勿直接回复 <br> 2 如需帮助，请致电客服4009-789-789 <br>
+						3 也可进入开心保网点击“在线客服”<br> 4 或发邮件至：<a
+						 href="mailto:kf@kaixinbao.com"
+							style="color: #ed6d00; text-decoration: underline;">kf@kaixinbao.com</a>
+						<br>
+					</p>
+				</td>
+				<td colspan="3" style="height:109px; width:49px;bgcolor:#ffffff;" ></td>
+				<td colspan="5"><img width="125" height="109" style=" width:125px; height:109px; " alt=""
+				 src="http://resource.kaixinbao.com/active_file/images/email/bx_06.gif"></td>
+				<td colspan="4">
+					<p style="color: #888888; line-height: 1.8em; font-size: 12px;">
+						<b style="color: #222222;">微信扫一扫关注</b><br>
+						<#if (financeFlag??) && (financeFlag == true)>
+							<font style="color: #ed6d00">登录会员中心查看收益</font><br>
+						</#if>
+						随时随地咨询理赔问题<br>
+						手机也可以购买保险 <br> 获取最新的优惠活动 <br>
+					</p>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="10" style="height:30px; width:600px;border-bottom: 1px solid #e8e8e8"></td>
+</tr>

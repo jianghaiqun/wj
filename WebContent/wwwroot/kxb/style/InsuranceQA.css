@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+.InsuQAMiddArea{width:980px; margin:0 auto;}
+.InsuQAMiddArea .InsuQALeft{float:left; margin-right:10px;margin-top: 10px;}
+.InsuQAMiddArea .InsuQARight{float:right;width:775px;margin-top:10px;}
+
+.InsuQANavGreyArea{border:1px solid #cccccc; background:url(../images/Bg_1.gif) 0 -200px repeat-x; height:30px; line-height:31px; color:#7b7b7b; overflow:hidden; margin-bottom:10px; margin-top:5px;}
+.InsuQANavGreyArea .IcoHome{background:url(../images/Ico_Arrow_2.gif) top right no-repeat; float:left; padding-right:20px; margin-right:5px;}
+.InsuQANavGreyArea .IcoHome img{float:left; margin:7px 6px 0 7px;}
+.InsuQANavGreyArea .IcoHome a{color:#333333;}
+
+.InsuQAColumnArea_1{}
+.InsuQAColumnArea_1 .TitleArea{height:35px; width:190px; line-height:35px; text-align:center; color:#fff;  font-family:'微软雅黑'; font-size:16px; text-shadow: -1px -1px 1px #810C0C; background:url(../images/Bg_2.gif) 0 -55px no-repeat;}
+.InsuQAColumnArea_1 .ColumnCont{border:1px solid #ccc; border-width:0px 1px 1px 1px;}
+.InsuQAColumnArea_1 .ColumnCont h4{background:#F1F1F1; height:32px; line-height:32px; font-size:14px; font-weight:bold; text-indent:12px; color:#3A3A3A;}
+.InsuQAColumnArea_1 .ColumnCont ul{margin-left:19px; margin-top:5px; margin-bottom:5px;}
+.InsuQAColumnArea_1 .ColumnCont li{float:left; width:80px; height:25px; line-height:25px;}
+
+.InsuQAColumnArea_2{position: relative;}
+.InsuQAColumnArea_2 .TitleArea{text-align: center;background:url(../images/Bg_2.gif) 0 0 no-repeat; height:35px; line-height:35px; font-family:'微软雅黑';font-size:16px; color:#fff;text-shadow: -1px -1px 1px #810C0C;}
+.InsuQAColumnArea_2 .TitleArea .TitleTxt{text-align: center;height:35px; line-height:35px; font-family:'微软雅黑';font-size:16px; color:#fff;text-shadow: -1px -1px 1px #810C0C;}
+.InsuQAColumnArea_2 .TitleArea .TitleMore{position:absolute;top:10px;right:0px; float:right; padding-right:5px; font-family:'宋体';}
+.InsuQAColumnArea_2 .TitleArea .TitleMore a{font-size:12px; font-weight:normal; text-shadow:none; color:#333;}
+.InsuQAColumnArea_2 .ColumnCont{border:1px solid #ccc; border-width:0px 1px 1px 1px;}
+.InsuQAColumnArea_2 .ColumnCont .TxtListArea{padding-left:12px; padding-top:5px; padding-bottom:5px;}
+.InsuQAColumnArea_2 .ColumnCont .TxtListArea ul{}
+.InsuQAColumnArea_2 .ColumnCont .TxtListArea li{background:url(../images/Dot_1.gif) 0 11px no-repeat; text-indent:15px; height:25px; line-height:25px;}
+
+.InsuQASearchArea{}
+.InsuQASearchArea .InsuQASearchBg{border:1px solid #f9b041; background:#fff url(../images/Bg_1.gif) 0 -490px repeat-x; height:80px;}
+.InsuQASearchArea .InputTxtArea{width:500px; height:30px; line-height:30px; border:1px solid #CC6600; background:#fff url(../images/Bg_1.gif) 0 -382px repeat-x; margin-top:20px; margin-left:25px; padding-left:8px; font-size:12px; color:#666666; margin-right:5px; float:left;}
+.InsuQASearchArea .Btn_1, .InsuQASearchArea .Btn_2{background:url(../images/BtnImg.gif) 0 -113px; width:100px; height:31px; border:none; cursor:pointer; margin-right:5px; margin-top:20px; }
+.InsuQASearchArea .Btn_2{background-position:0 -174px;}
+
+.InsuQAColumnArea_3{}
+.InsuQAColumnArea_3 .ColumnCont{border:1px solid #cccccc;}
+.InsuQAColumnArea_3 .ColumnCont h2{background:#fff url(../images/Bg_1.gif) 0 -382px repeat-x; font-size:14px; font-weight:bold; padding-top:10px; padding-left:15px; height:25px;}
+.InsuQAColumnArea_3 .ColumnCont ul{margin-left:30px; margin-bottom:12px;}
+.InsuQAColumnArea_3 .ColumnCont li{background:url(../images/Dot_2.gif) 0 12px no-repeat; text-indent:15px; height:30px; line-height:30px; width:235px; margin-right:10px; float:left; font-size:14px;}
+.InsuQAColumnArea_3 .ColumnCont .TxtArea{margin:10px 15px; color:#333333; line-height:20px;}
+.InsuQAColumnArea_3 .ColumnCont .TxtArea h4{color:#000; font-size:14px; line-height:25px; margin-bottom:5px;}
+.InsuQAColumnArea_3 .ColumnCont .TxtArea h5{color:#666;}
+.InsuQAColumnArea_3 .ColumnCont .TxtArea strong{color:#fd0100;}
+.InsuQAColumnArea_3 .ColumnCont .TxtArea a{color:#0066cb;}
+.InsuQAColumnArea_3 .ColumnCont .TxtArea .Btn_1{background:url(../images/BtnImg.gif) 0 -228px; width:110px; height:36px; border:none; cursor:pointer;}
+.InsuQAColumnArea_3 .ColumnCont .TxtArea .Btn_2{background:url(../images/BtnImg.gif) 0 -291px; width:110px; height:36px; border:none; cursor:pointer;}
+.InsuQAColumnArea_3 .ColumnCont .TxtArea .ContArea{border-bottom:1px solid #ccc; padding-bottom:10px; margin-bottom:10px;}
+.InsuQAColumnArea_3 .ColumnCont .PersonArea{float:right; margin-right:10px; background:url(../images/Ico_2.gif) 0 -515px no-repeat; text-indent:18px; color:#575757; line-height:20px;}
+.InsuQAColumnArea_3 .ColumnCont .TimeArea{float:right; color:#575757; line-height:20px; margin-right:20px;}
+.InsuQAColumnArea_3 .ColumnCont .TagArea{float:right; color:#575757; line-height:20px; margin-right:20px;}
+
+.InsuQAColumnArea_4{}
+.InsuQAColumnArea_4 .TitleArea{height:50px; position:relative;}
+.InsuQAColumnArea_4 .TitleArea ul{position:absolute;}
+.InsuQAColumnArea_4 .TitleArea li{float:left; width:188px; margin-right:10px; text-align:center; font-size:14px; font-weight:bold; color:#2E2E2E;}
+.InsuQAColumnArea_4 .TitleArea li.Active{height:55px; background:#fff url(../images/Bg_1.gif) 0 -636px repeat-x; border:1px solid #ccc; border-bottom:0; line-height:50px;}
+.InsuQAColumnArea_4 .TitleArea li a{display:block; height:40px;color:#2E2E2E; background:#fff url(../images/Bg_1.gif) 0 -726px repeat-x; margin-top:9px; border:1px solid #ccc; border-bottom:0; line-height:40px;}
+.InsuQAColumnArea_4 .TitleArea .SortArea{float:right; padding-top:20px;}
+.InsuQAColumnArea_4 .ColumnCont{border:1px solid #cccccc;background:#fff url(../images/Line_1.gif) 0 1px repeat-x;}
+.InsuQAColumnArea_4 .ColumnCont .TxtArea{margin-top:20px; margin-left:6px; margin-right:6px; margin-bottom:10px;}
+.InsuQAColumnArea_4 .ColumnCont .TxtArea .QuestionArea{height:38px; line-height:38px; border-top:1px solid #ccc; background:#f6f6f6; overflow:hidden;}
+.InsuQAColumnArea_4 .ColumnCont .TxtArea .QuestionArea .TitleArea{line-height:38px;background:url(../images/Ico_2.gif) 10px -298px no-repeat; float:left; text-indent:35px; font-size:14px; font-weight:bold; color:#333333; margin-right:40px;}
+.InsuQAColumnArea_4 .ColumnCont .TxtArea .QuestionArea .notsolve{background:url(../images/Ico_2.gif) 0 -412px no-repeat; float:left; text-indent:15px; font-weight:bold; color:#FF6600; width:60px; height:36px;}
+.InsuQAColumnArea_4 .ColumnCont .TxtArea .QuestionArea .solve{background:url(../images/Ico_2.gif) 0 -460px no-repeat; float:left; text-indent:18px; font-weight:bold; color:#009933;width:60px; height:36px;}
+.InsuQAColumnArea_4 .ColumnCont .TxtArea .QuestionArea .PersonArea{line-height:38px;float:right; margin-right:10px; background:url(../images/Ico_2.gif) 0 -502px no-repeat; text-indent:18px; color:#575757;}
+.InsuQAColumnArea_4 .ColumnCont .TxtArea .Answer{height:80px;margin:0px;padding-left:20px; padding-right:9px; }
+.InsuQAColumnArea_4 .ColumnCont .TxtArea .Answer a{color:#3369c1; margin-left:20px; margin-right:10px;margin-top:0px;line-height:1px; font-size:16px;}
+
+.InsuQAColumnArea_5{border:1px solid #ccc;}
+.InsuQAColumnArea_5 .TitleArea{background:#fff url(../images/Bg_1.gif) 0 -726px repeat-x; }
+.InsuQAColumnArea_5 .TitleArea h2{background:#fff url(../images/Bg_1.gif) 0 -816px repeat-x; font-size:14px; font-weight:bold; padding-top:10px; padding-left:15px; height:25px;}
+.InsuQAColumnArea_5 .TitleArea h2 .TitleIco{background:url(../images/Ico_2.gif) 0 -624px no-repeat; text-indent:25px;}
+.InsuQAColumnArea_5 .TitleArea h1{padding-top:10px; padding-left:15px;font-weight:bold; /*font-family:'黑体'; */font-size:18px; line-height:25px; float:left; margin-right:20px;}
+.InsuQAColumnArea_5 .TitleArea .Status_1{float:left;background:url(../images/Ico_2.gif) 0 -420px no-repeat; text-indent:15px; font-weight:bold; color:#FF6600; margin-top:13px;}
+.InsuQAColumnArea_5 .TitleArea .Status_2{float:left;background:url(../images/Ico_2.gif) 0 -470px no-repeat; text-indent:18px; font-weight:bold; color:#009933; margin-top:13px;}
+.InsuQAColumnArea_5 .TitleArea .TipArea{background:url(../images/Ico_2.gif) 0 -565px no-repeat; text-indent:23px; color:#575757; margin-left:15px; margin-top:10px; line-height:20px;}
+.InsuQAColumnArea_5 .TitleArea .TipArea span{color:#FF6600; font-weight:bold;}
+.InsuQAColumnArea_5 .ColumnCont{margin:15px;}
+.InsuQAColumnArea_5 .ColumnCont h5{line-height:25px; font-size:14px;}
+.InsuQAColumnArea_5 .ColumnCont .PersonArea{float:right; margin-right:10px; background:url(../images/Ico_2.gif) 0 -515px no-repeat; text-indent:18px; color:#575757; line-height:20px;}
+.InsuQAColumnArea_5 .ColumnCont .TimeArea{float:right; color:#575757; line-height:20px; margin-right:20px;}
+.InsuQAColumnArea_5 .ColumnCont .TxtArea{line-height:25px;}
+.InsuQAColumnArea_5 .ColumnCont .TxtArea h4{background:url(../images/Ico_2.gif) 0px -100px no-repeat; font-weight:bold; text-indent: 15px;}
+.InsuQAColumnArea_5 .ColumnCont .TxtArea a{color:#3369c1;}
+.InsuQAColumnArea_5 .Btn_3{background:url(../images/BtnImg.gif) 0 -357px; width:110px; height:36px; border:none; cursor:pointer; margin-right:5px; margin-top:20px; }

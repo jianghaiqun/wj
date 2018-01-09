@@ -1,0 +1,84 @@
+<div class="col-sub">
+				<div class="help_right_box help_bor_h cf">
+					<h3 class="help_titile">下载</h3>
+					<div class="help_dow_list">
+                		<a href="http://localhost:8080/wj/Search/SearchClaimsInfo.jsp" class="help_down" title="理赔申请书">理赔申请书</a>
+		       		</div>
+		       		<div class="clear h20"></div>
+		       		<h3 class="help_titile">自助服务</h3>
+		       		<div class="help_myself">
+                      <ul>
+                        <li class="myicon1"><a href="http://localhost:8080/bdyz/" target="_blank">保单验真</a></li>
+                        <li class="myicon2"><a href="http://localhost:8080/ddkscx/" target="_blank">订单查询</a></li>
+                        <li class="myicon3"><a href="http://localhost:8080/wj/shop/member!passwordRetrieve.action" target="_blank">找回密码</a></li>
+                        <li class="myicon4"><a href="http://localhost:8080/lipei/" target="_blank">理赔报案</a></li>
+                      </ul>
+                    </div>
+                    <div class="clear h20"></div>  
+                    <h3 class="help_titile">常见问题<a target="_blank" href="http://localhost:8080/about/3/dayizonghui/" class="help_more">更多</a></h3>
+					<ul class="help_list">
+						
+
+						<li><a target="_blank" href="../about/3/dayizonghui/253376.shtml">申根国家有哪些？什么是申根签证？</a></li>
+						
+
+						<li><a target="_blank" href="../about/3/dayizonghui/253351.shtml">有那种飞机延误也给钱的保险吗？</a></li>
+						
+
+						<li><a target="_blank" href="../about/3/dayizonghui/253344.shtml">平安有什么交通意外保险产品？</a></li>
+						
+
+						<li><a target="_blank" href="../about/3/dayizonghui/253332.shtml">想问一下老年人意外险买什么好？</a></li>
+						
+
+						<li><a target="_blank" href="../about/3/dayizonghui/253325.shtml">目前市面上哪些女性健康险比较划算？</a></li>
+						
+
+						<li><a target="_blank" href="../about/3/dayizonghui/253320.shtml">出国旅游保险该怎么买？</a></li>
+						
+
+						<li><a target="_blank" href="../about/3/dayizonghui/253312.shtml">出国留学买什么保险比较合适？</a></li>
+						
+					</ul>
+                </div>
+			</div>
+			<div class="col-extra">
+               <div class="help_left help_bor_h cf" id="sidebar_help">
+					<h2 class="help_titlec f_mi">帮助分类</h2>
+                    <dl class="help_tree">
+                    	<dt>新手指南<em class="tree_icon"></em></dt>
+                        <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn1">注册新用户</a></dd>
+                        <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn2">用户登录</a></dd>
+                        <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn3">找回密码</a></dd>
+                        <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn4">网站购买流程</a></dd>
+                    </dl>
+                    <dl class="help_tree">
+                       <dt>会员说明<em class="tree_icon"></em></dt>
+                        <dd><a href="http://localhost:8080/about/huiyuan/index.shtml#hysm1">会员体系简介 </a></dd>
+                        <dd><a href="http://localhost:8080/about/huiyuan/index.shtml#hysm2">会员特权 </a></dd>
+                    </dl>
+                    <dl class="help_tree">
+                        <dt>积分说明<em class="tree_icon"></em></dt>
+                        <dd><a href="http://localhost:8080/about/jifen/index.shtml#jfsm1">积分介绍 </a></dd>
+                        <dd><a href="http://localhost:8080/about/jifen/index.shtml#jfsm2">获得积分 </a></dd>
+                        <dd><a href="http://localhost:8080/about/jifen/index.shtml#jfsm3" rel="nofollow">积分商城 </a></dd>
+                    </dl>
+                    <dl class="help_tree"> 
+                        <dt>保单帮助<em class="tree_icon"></em></dt>
+                        <dd><a href="http://localhost:8080/about/1/index.shtml#yxxg1">保单送达说明</a></dd>
+                        <dd><a href="http://localhost:8080/about/1/index.shtml#yxxg2">保单变更说明</a></dd>
+                        <dd><a href="http://localhost:8080/about/1/index.shtml#yxxg3">保单取消说明</a></dd>
+                    </dl>
+                    <dl class="help_tree">
+                       <dt>理赔帮助<em class="tree_icon"></em></dt>
+                        <dd><a href="http://localhost:8080/about/2/index.shtml#lpbz1">理赔服务说明</a></dd>
+                        <dd><a href="http://localhost:8080/about/2/index.shtml#lpbz2">理赔报案电话</a></dd>
+                    </dl>
+                    <dl class="help_tree">
+                        <dt>支付帮助<em class="tree_icon"></em></dt>
+                        <dd><a href="http://localhost:8080/about/4/index.shtml#zfbz1">支付方式</a></dd>
+                        <dd><a href="http://localhost:8080/about/4/index.shtml#zfbz2">支付说明</a></dd>
+                    </dl>
+               </div>
+               
+			</div>

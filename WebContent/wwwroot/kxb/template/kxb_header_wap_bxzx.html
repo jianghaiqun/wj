@@ -1,0 +1,45 @@
+ 
+  	<!-- 页头 --> 
+	<header id="header_box">
+		<a class="kxb_menu"></a>
+		<h1><img src="${Site.WapResourceURL}/images/common/logo_kaixinbao.png" alt="" /></h1>
+		<ul class="btns">
+			<li><a class="phone" href="tel:4009789789" exturl="${Site.WapURL}/whphone" onclick="javascript:void(0);return(VL_FileDL(this));return false;" vlpageid="whphone"></a></li>
+			<li><a class="service" href="javascript:void(0);" exturl="${Site.WapURL}/whserv" onclick="NTKF.im_openInPageChat('kf_9401_1473649732984');return(VL_FileDL(this));return false;" vlpageid="whserv"></a></li>
+		</ul>
+	</header>
+	<!-- /页头 -->
+	
+		<!-- 菜单 -->
+	<section id="popup_box"></section>
+	<!-- /菜单 -->
+	
+	<!--保险导航-->
+		<section>
+			<ul class="mesage_nav">
+				<li><a href="${Site.WapURL}/lvyou-baoxian/" class="nav1">旅游保险</a></li>
+				<li><a href="${Site.WapURL}/yiwai-baoxian/" class="nav2">意外保险</a></li>
+				<li><a href="${Site.WapURL}/jiankang-baoxian/" class="nav3">健康保险</a></li>
+			</ul>
+		</section>
+	<!--/保险导航-->
+<script type="text/javascript" src="${Site.WapResourceURL}/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="${Site.WapResourceURL}/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="${Site.WapResourceURL}/js/jquery-form.js"></script>
+<script type="text/javascript" src="${Site.WapResourceURL}/js/validate.js"></script>
+<script type="text/javascript" src="${Site.WapResourceURL}/js/iscroll.js"></script>
+<script type="text/javascript" src="${Site.WapResourceURL}/js/mod_common.js"></script>
+<script type="text/javascript" src="${Site.WapResourceURL}/js/mod_intro.js"></script>
+<script type="text/javascript" src="${Site.WapResourceURL}/js/login_pop.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+
+<script type="text/javascript">
+$(function() {
+
+	//导航菜单显隐
+	$("#popup_box").load("${Site.WapURL}/leftmenu.shtml", function() {
+		new navTouchSlider();
+	});
+	
+	});
+	</script>

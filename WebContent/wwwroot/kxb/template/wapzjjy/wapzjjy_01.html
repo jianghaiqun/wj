@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+
+	String wapServerContext = com.sinosoft.framework.Config.getValue("WapServerContext");
+%>
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="applicable-device" content="mobile">
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<link rel="stylesheet" href="${Site.WapURL}/css/base.css" media="screen">
+<link rel="stylesheet" href="${Site.WapURL}/css/mod_common.css" media="screen">
+<link rel="stylesheet" href="${Site.WapURL}/css/mod_swiper.css" media="screen">
+</head>
+<body>
+<input type="hidden" id="articleId" value="${Article.ID}"/>
+<input type='hidden' id='wx_msgimg' value='${Site.WapURL}/images/logo/minlogo.jpg'>
+<input type='hidden' id='wx_url'>
+<input type='hidden' id='wx_title'>
+<input type='hidden' id='wx_description' value='好保险，聪明选，开心保保险网随时准备为您服务！'>
+<input type="hidden" id="AppResourcePath" value="<%=wapServerContext%>">
+	<!-- 页头 -->
+	<header id="header_box">
+	    <a href="${Site.WapURL}/index.shtml" class="kxb_back"></a>
+		<h1><img src="${Site.WapURL}/images/common/logo_kaixinbao.png" alt="" /></h1>
+		<ul class="btns">
+			<li><a class="phone" href="tel:4009789789"></a></li>
+			<li><a onclick="NTKF.im_openInPageChat(sinosoft.xiaoNeng_CustomerService)" class="service"></a></li>
+		</ul>
+	</header>
+	<!-- /页头 -->
+	
+	<!-- nav -->
+	<section id="filter_sort">
+		<ul class="sort_list">
+			<cms:list item="friendlink" name="${Article.NavName}" count="3">
+				<li><a class="high" href="${friendlink.URL}" target="_blank">${friendlink.Name}</a></li>
+			</cms:list>
+		</ul>
+	</section>
+	<!-- nav -->
+	
+	<!-- 图片轮播 -->
+	<section id="scroll_area">
+		<div id="scroll_visual">
+			<div class="swiper-wrapper">
+				<cms:list item="friendlink" name="${Article.AdvertisingImage}">
+					<div class="swiper-slide"><a href="${friendlink.URL}"><img src="${Site.StaticResourcePath}/${friendlink.ImagePath}" /></a></div>
+				</cms:list>
+			</div>
+			<div class="flicking_con"></div>
+		</div>
+	</section>
+	<!-- /图片轮播 -->
+	
+	<!-- 特色 -->
+<% if (!com.sinosoft.framework.utility.StringUtil.isEmpty(article.getString("SafeguardName"))) {%>
+	<section id="scroll_desmes">
+		<cms:list item="friendlink" name="${Article.SafeguardName}" count="4">
+			<dl class="scroll_dlcon">
+				<dt><span class="scroll_dlicon"></span>${friendlink.Name}</dt>
+				<dd>${friendlink.Prop3}</dd>
+			</dl>
+		</cms:list>
+	</section>
+<%}%>
+	<!-- /特色 -->
+
+	<!--  产品列表 -->
+	<% 
+        String articleId = article.getString("ID");
+        cn.com.sinosoft.action.shop.WapBidAction ac = new cn.com.sinosoft.action.shop.WapBidAction();
+		String productContent = ac.getProductContentHtml(articleId);
+		write(productContent);
+	%>
+	<!--  /产品列表 -->
+
+	<section class="cp_img">	
+		<ul class="intro_show">
+			<li>
+				<%if (!com.sinosoft.framework.utility.StringUtil.isEmpty(article.getString("BottemImage1"))
+					&& !(article.getString("BottemImage1").indexOf("nopicture.jpg") > -1)) {%>
+					<img src="${Site.StaticResourcePath}/${article.BottemImage1}" alt="">
+				<%}else{%>
+					<img src="${Site.WapURL}/images/common/sem_03.gif" alt="">
+				<%}%>
+			</li>
+			<li class="noSpace">
+				<%if (!com.sinosoft.framework.utility.StringUtil.isEmpty(article.getString("BottemImage2"))
+					&& !(article.getString("BottemImage2").indexOf("nopicture.jpg") > -1)) {%>
+					<img src="${Site.StaticResourcePath}/${article.BottemImage2}" alt="">
+				<%}else{%>
+					<img src="${Site.WapURL}/images/common/sem_05.gif" alt="">
+				<%}%>
+			</li>
+			<li>
+				<%if (!com.sinosoft.framework.utility.StringUtil.isEmpty(article.getString("BottemImage3"))
+					&& !(article.getString("BottemImage3").indexOf("nopicture.jpg") > -1)) {%>
+					<img src="${Site.StaticResourcePath}/${article.BottemImage3}" alt="">
+				<%}else{%>
+					<img src="${Site.WapURL}/images/common/sem_10.gif" alt="">
+				<%}%>
+			</li>
+			<li class="noSpace">
+				<%if (!com.sinosoft.framework.utility.StringUtil.isEmpty(article.getString("BottemImage4"))
+					&& !(article.getString("BottemImage4").indexOf("nopicture.jpg") > -1)) {%>
+					<img src="${Site.StaticResourcePath}/${article.BottemImage4}" alt="">
+				<%}else{%>
+					<img src="${Site.WapURL}/images/common/sem_12.gif" alt="">
+				<%}%>
+			</li>
+		</ul>
+	</section>
+	<!-- 页尾 -->
+	<footer id="footer_box">
+		<ul class="link_list">
+			<li><a href="${Site.WapURL}/index.shtml">首页</a></li>
+			<li><a href="${Site.WapURL}/about.shtml">关于开心保</a></li>
+			<li><a href="${Site.WapURL}/contact.shtml">联系我们</a></li>
+			<li><a href="${Site.WapURL}/recommend.shtml">关注微信</a></li>
+			<li><a href="${Site.WapURL}/ditu/sitemap.xml">sitemap</a></li>
+		</ul>
+		<p>wap.kaixinbao.com&nbsp;&nbsp;开心保保险网</p>
+	</footer>
+	<!-- /页尾 -->	
+<script type="text/javascript" src="${Site.WapURL}/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="${Site.WapURL}/js/swiper.min.js"></script>
+<script type="text/javascript" src="${Site.WapURL}/js/iscroll.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/weixitrack.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="${Site.WapURL}/js/transmit_url.js"></script>
+
+<script>
+$(document).ready(function() {
+	// 微信内分享URL
+	$("#wx_url").val(document.URL);
+//	// 微信内分享title
+//	$("#wx_title").val($("title").html());
+	// 控制保障项目显示6条
+	$(".prix_cont").each(function(){
+			$(this).find("li:gt(5)").remove();
+	})
+
+	searchProductListAvtivity();
+	var sims = $(".swiper-slide").length;
+	//首页图片轮播
+	var imgSwiper = new Swiper("#scroll_visual", {
+		autoplay: 5000,
+		visibilityFullFit: true,
+		autoplayDisableOnInteraction: false,
+		loop:true,
+		pagination: ".flicking_con"
+	});	
+	if(sims==1){
+		imgSwiper.lockSwipes();
+		$(".flicking_con").hide();
+	}
+	//Tab切换
+	new tabTouchSlider({
+		tabMenu : ".member_tab",
+		 tabBtn : ".member_tab > li > label",
+	    tabCont : ".tab-content",
+		tabType : 1
+	});
+
+});
+
+/** 
+ * @des: 开心保Wap：Tab切换
+ * @maker: Songzairan
+ * @date: 2015.8.6
+ */
+tabTouchSlider = function(opt) {
+	
+	this._opt = $.extend({
+		tabMenu : "",
+		 tabBtn : "",
+	    tabCont : "",
+		tabType : 0,
+	   chkClass : "check"
+	}, opt);
+	
+	this.setInit();
+	this.addEvent();
+	
+}
+tabTouchSlider.prototype.setInit = function() {
+	
+	this.tabArea = $(this._opt.tabMenu);
+	this.tabBtn = $(this._opt.tabBtn);
+	
+}
+tabTouchSlider.prototype.addEvent = function() {
+	
+	var _this = this;
+	
+	this.tabBtn.bind("click", function() {
+		 
+		var contAll = _this.tabArea.find(_this._opt.tabCont);
+		var contNow = $(this).next(_this._opt.tabCont);
+		
+		if(_this._opt.tabType == 1) {
+			_this.tabBtn.removeClass(_this._opt.chkClass);
+			$(this).addClass(_this._opt.chkClass);
+			contAll.hide();
+			contNow.show();
+		} else if (_this._opt.tabType == 2) {
+			if(contNow.is(":hidden")) {
+				$(this).addClass(_this._opt.chkClass);
+				contNow.show();
+			} else {
+				$(this).removeClass(_this._opt.chkClass);
+				contNow.hide();
+			}
+		}
+		
+	});
+	
+}
+
+// 活动信息
+function searchProductListAvtivity(){
+	var list=jQuery('span[id^=new_price_]');
+	var id = new Array(list.length);
+	var idStr="";
+	for (var i = 0; i < list.length; i++) {
+         id[i] = list[i].id;
+         idStr+= list[i].id;
+	}
+	if(idStr==""){
+		return;
+	}
+	var channelsn = "wap_ht";
+	jQuery.ajax({
+		type: 'post',
+		url: sinosoft.base+'/shop/wap_bid!searchProductListAvtivity.action?productId='+id+'&channelSn='+channelsn+'&articleId='+jQuery("#articleId").val() + "&callback=?",
+		dataType: "json",
+		async: true,
+		success: function(data) {
+			jQuery.each(data.objList, function(index, object) {
+				if (null != object.newPrice && "" != object.newPrice) {
+					jQuery("#new_price_"+object.productId).html("￥" + object.newPrice+"起");
+				}
+				var oldPrice=jQuery("#new_price_"+object.productId).prev().html().replace("原价:￥","");
+				if (oldPrice != "" && oldPrice != object.newPrice &&data.discount=='discount') {
+					jQuery("#new_price_"+object.productId).prev().show();
+				}
+				if (null != object.activity && "" != object.activity) {
+					jQuery("#producttitle_"+object.productId).closest("a").append(object.activity);
+				}
+			});
+		}
+	});
+}
+</script>
+</body>
+</html>

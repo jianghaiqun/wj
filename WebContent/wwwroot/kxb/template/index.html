@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${Site.Meta_Keywords}" />
+<meta name="description" content="${Site.Meta_Description}" />
+<link href="${Site.StaticResourcePath}/style/commonality.css" rel="stylesheet" type="text/css" />
+<title>${Site.name}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<!-- 顶部 开始 -->
+	<cms:include file="block/kxb_header.shtml" />
+	<!-- 顶部 结束 -->
+	<div class="part1">
+		<div class="part1left">
+			<div class="top5">
+				<h3 class="top5tit">
+					<img src="${Site.StaticResourcePath}/image/top5tit.gif" width="115" height="19" />
+				</h3>
+				<div class="tab01">
+					<ul>
+						<li id="one1" onmouseover="setTab('one',1,2)" class="hover">意外</li>
+						<li id="one2" onmouseover="setTab('one',2,2)">旅游</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<div id="con_one_1">
+					<ul class="liststyle05">
+						<cms:list item="article" name="意外保险" level="current" count="5" hasAttribute="hot">
+							<li><span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span></li>
+						</cms:list>
+					</ul>
+				</div>
+				<div id="con_one_2" style="display: none;">
+					<ul class="liststyle05">
+						<cms:list item="article" name="旅游保险" level="current" count="5" hasAttribute="hot">
+							<li><span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span></li>
+						</cms:list>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="part1center">
+			<div class="ad06">
+				<a href="#"><img src="${Site.StaticResourcePath}/image/ad06.jpg" width="480" height="240" /></a>
+			</div>
+		</div>
+		<div class="part1right">
+			<div class="ad07">
+				<a href="#"><img src="${Site.StaticResourcePath}/image/ad07.jpg" width="230" height="240" /></a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="part2">
+		<div class="part2left">
+			<h3 class="tjcp">推荐产品</h3>
+			<div class="tjcpcont">
+				<div class="tjcpone">
+					<cms:list item="article" count="1" name="推荐产品">
+						<h4>
+							<a href="${Article.Link}">${article.title|charwidth=24}</a>
+						</h4>
+						<div class="tjcponeleft">
+							<img src="${Site.StaticResourcePath}/image/produpic01.jpg" width="46" height="46" />
+						</div>
+						<div class="tjcponeright">
+							<span class="zeng">${article.campaign}<em>￥${article.InitPrem}</em></span>
+						</div>
+					</cms:list>
+					<div class="clear"></div>
+					<ul class="liststyle06">
+						<cms:list item="article" count="4" name="推荐产品">
+							<li><a href="${Article.Link}">${article.title|charwidth=24}</a></li>
+						</cms:list>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="part2center">
+			<div class="ad08">
+				<a href="#"><img src="${Site.StaticResourcePath}/image/ad08.jpg" width="480" height="120" /></a>
+			</div>
+			<div class="ad09">
+				<a href="#"><img src="${Site.StaticResourcePath}/image/ad09.jpg" width="480" height="120" /></a>
+			</div>
+		</div>
+		<div class="part2right">
+			<div id="KinSlideshow_3">
+				<cms:imageplayer code="kxb_homePic_3" type="0" width="230" height="255" />
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	<cms:include file="block/kxb_quicksearch1.shtml" />
+	<!--一生呵护 开始-->
+	<div class="wholelife">
+		<div id="con_two_1" class="wlcont position01" style="display: none;" onmouseout="hidwlc01()" onmouseover="showwlc01()">
+			<div class="wlleft">
+				<span>幼有所护</span><em>0-10岁</em>
+			</div>
+			<div class="wlright">
+				<ul class="wllist">
+					<li><span>平安成长</span><a href="${Site.URL}/sjzzt/yysh/seyw/">少儿意外</a></li>
+					<li><span>健康快乐</span><a href="${Site.URL}/sjzzt/yysh/jkyl/">健康医疗</a></li>
+					<li><span>教育无忧</span><a href="${Site.URL}/sjzzt/yysh/jyj/">教育金</a></li>
+					<li><span>理财趁早</span><a href="${Site.URL}/sjzzt/yysh/lcl/">理财类</a></li>
+				</ul>
+				<div class="wlmore">
+					<a href="${Site.URL}/sjzzt/yysh/">查看更多>></a>
+				</div>
+			</div>
+		</div>
+		<div id="con_two_2" class="wlcont position02" style="display: none;" onmouseout="hidwlc02()" onmouseover="showwlc02()">
+			<div class="wlleft">
+				<span>钱有所积</span><em>10-20岁</em>
+			</div>
+			<div class="wlright">
+				<ul class="wllist">
+					<li><span>平安成长</span><a href="${Site.URL}/sjzzt/jysj/yw/">意外</a></li>
+					<li><span>健康快乐</span><a href="${Site.URL}/sjzzt/jysj/jkyl/">健康医疗</a></li>
+					<li><span>赢在起跑</span><a href="${Site.URL}/sjzzt/jysj/lcl/">理财类</a></li>
+				</ul>
+				<div class="wlmore">
+					<a href="${Site.URL}/sjzzt/jysj/">查看更多>></a>
+				</div>
+			</div>
+		</div>
+		<div id="con_two_3" class="wlcont position03" style="display: none;" onmouseout="hidwlc03()" onmouseover="showwlc03()">
+			<div class="wlleft">
+				<span>壮有所倚</span><em>20-30岁</em>
+			</div>
+			<div class="wlright">
+				<ul class="wllist">
+					<li><span>平安无忧</span><a href="${Site.URL}/sjzzt/zysy/yw/">意外</a></li>
+					<li><span>健康生活</span><a href="${Site.URL}/sjzzt/zysy/jkyl/">健康医疗</a></li>
+					<li><span>安心创业</span><a href="${Site.URL}/sjzzt/zysy/dqbz/">定期保障</a></li>
+					<li><span>规划未来</span><a href="${Site.URL}/sjzzt/zysy/lcl/">理财类</a></li>
+				</ul>
+				<div class="wlmore">
+					<a href="${Site.URL}/sjzzt/zysy/">查看更多>></a>
+				</div>
+			</div>
+		</div>
+		<div id="con_two_4" class="wlcont position04" style="display: none;" onmouseout="hidwlc04()" onmouseover="showwlc04()">
+			<div class="wlleft">
+				<span>亲有所奉</span><em>30-40岁</em>
+			</div>
+			<div class="wlright">
+				<ul class="wllist">
+					<li><span>平安生活</span><a href="${Site.URL}/sjzzt/qysf/yw/">意外</a></li>
+					<li><span>健康生活</span><a href="${Site.URL}/sjzzt/qysf/jkyl/">健康医疗</a></li>
+					<li><span>安心生活</span><a href="${Site.URL}/sjzzt/qysf/dqbz/">定期保障</a></li>
+					<li><span>财务规划</span><a href="${Site.URL}/sjzzt/qysf/lcl/">理财类</a></li>
+				</ul>
+				<div class="wlmore">
+					<a href="${Site.URL}/sjzzt/qysf/">查看更多>></a>
+				</div>
+			</div>
+		</div>
+		<div id="con_two_5" class="wlcont position05" style="display: none;" onmouseout="hidwlc05()" onmouseover="showwlc05()">
+			<div class="wlleft">
+				<span>爱有所继</span><em>40-50岁</em>
+			</div>
+			<div class="wlright">
+				<ul class="wllist">
+					<li><span>平安生活</span><a href="${Site.URL}/sjzzt/aysj/yw/">意外</a></li>
+					<li><span>健康生活</span><a href="${Site.URL}/sjzzt/aysj/jkyl/">健康医疗</a></li>
+					<li><span>安享人生</span><a href="${Site.URL}/sjzzt/aysj/dqbz/">定期保障</a></li>
+					<li><span>财富规划</span><a href="${Site.URL}/sjzzt/aysj/lcl/">理财类</a></li>
+				</ul>
+				<div class="wlmore">
+					<a href="${Site.URL}/sjzzt/aysj/">查看更多>></a>
+				</div>
+			</div>
+		</div>
+		<div id="con_two_6" class="wlcont position06" style="display: none;" onmouseout="hidwlc06()" onmouseover="showwlc06()">
+			<div class="wlleft">
+				<span>老有所养</span><em>50-60岁</em>
+			</div>
+			<div class="wlright">
+				<ul class="wllist">
+					<li><span>平安幸福</span><a href="${Site.URL}/sjzzt/lysy/yw/">意外</a></li>
+					<li><span>医疗无忧</span><a href="${Site.URL}/sjzzt/lysy/jkyl/">健康医疗</a></li>
+					<li><span>财产规划</span><a href="${Site.URL}/sjzzt/lysy/lcl/">理财类</a></li>
+				</ul>
+				<div class="wlmore">
+					<a href="${Site.URL}/sjzzt/lysy/">查看更多&gt;&gt;</a>
+				</div>
+			</div>
+		</div>
+		<div id="con_two_7" class="wlcont position07" style="display: none;" onmouseout="hidwlc07()" onmouseover="showwlc07()">
+			<div class="wlleft">
+				<span>财有所承</span><em>60-70岁</em>
+			</div>
+			<div class="wlright">
+				<ul class="wllist">
+					<li><span>平安幸福</span><a href="${Site.URL}/sjzzt/cysc/yw/">意外</a></li>
+					<li><span>特别关爱</span><a href="${Site.URL}/sjzzt/cysc/jkyl/">健康医疗</a></li>
+					<li><span>财产规划</span><a href="${Site.URL}/sjzzt/cysc/lcl/">理财类</a></li>
+				</ul>
+				<div class="wlmore">
+					<a href="${Site.URL}/sjzzt/cysc/">查看更多>></a>
+				</div>
+			</div>
+		</div>
+		<div class="tabwl">
+			<ul>
+				<li id="two1" onmouseover="setTab('two',1,7)"></li>
+				<li id="two2" onmouseover="setTab('two',2,7)"></li>
+				<li id="two3" onmouseover="setTab('two',3,7)"></li>
+				<li id="two4" onmouseover="setTab('two',4,7)"></li>
+				<li id="two5" onmouseover="setTab('two',5,7)"></li>
+				<li id="two6" onmouseover="setTab('two',6,7)"></li>
+				<li id="two7" onmouseover="setTab('two',7,7)"></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!--一生呵护 结束-->
+	<div class="adarea">
+		<div class="ad01">
+			<a href="#"><img src="${Site.StaticResourcePath}/image/ad01.jpg" width="320" height="80" /></a>
+		</div>
+		<div class="ad02">
+			<a href="#"><img src="${Site.StaticResourcePath}/image/ad02.jpg" width="320" height="80" /></a>
+		</div>
+		<div class="ad03">
+			<a href="#"><img src="${Site.StaticResourcePath}/image/ad03.jpg" width="320" height="80" /></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="part3">
+		<div class="part3left">
+			<div class="produ01">
+				<div class="proleft">
+					<a href="<cms:link type='Catalog' name='境外旅游'/>"></a>
+				</div>
+				<div class="proright">
+					<cms:list item="article" count="2" level="all" name="境外旅游">
+						<div class="produli">
+							<h1>
+								<a href="${Article.Link}">${article.Title}</a>
+							</h1>
+							<h2>
+								<span class="sp01"><img src="${Site.StaticResourcePath}/image/produpic01.jpg" width="46" height="46" /></span><span class="sp02"><img src="../image/companylogo01.jpg" width="96" height="46" /></span><span
+									class="sp03"><img src="${Site.StaticResourcePath}/image/produlevel01.gif" width="46" height="46" /></span>
+							</h2>
+							<h3>${Article.content|charwidth=18}</h3>
+						</div>
+					</cms:list>
+				</div>
+			</div>
+			<div class="produ02">
+				<div class="proleft">
+					<a href="<cms:link type='Catalog' name='境内旅游'/>"></a>
+				</div>
+				<div class="proright">
+					<cms:list item="article" count="2" level="all" name="境内旅游">
+						<div class="produli">
+							<h1>
+								<a href="${Article.Link}">${article.Title}</a>
+							</h1>
+							<h2>
+								<span class="sp01"><img src="${Site.StaticResourcePath}/image/produpic01.jpg" width="46" height="46" /></span><span class="sp02"><img src="../image/companylogo01.jpg" width="96" height="46" /></span><span
+									class="sp03"><img src="${Site.StaticResourcePath}/image/produlevel01.gif" width="46" height="46" /></span>
+							</h2>
+							<h3>${Article.content|charwidth=18}</h3>
+						</div>
+					</cms:list>
+				</div>
+			</div>
+			<div class="produ03">
+				<div class="proleft">
+					<a href="<cms:link type='Catalog' name='9385'/>"></a>
+				</div>
+				<div class="proright">
+					<cms:list item="article" count="2" level="all" name="9385">
+						<div class="produli">
+							<h1>
+								<a href="${Article.Link}">${article.Title}</a>
+							</h1>
+							<h2>
+								<span class="sp01"><img src="${Site.StaticResourcePath}/image/produpic01.jpg" width="46" height="46" /></span><span class="sp02"><img src="../image/companylogo01.jpg" width="96" height="46" /></span><span
+									class="sp03"><img src="${Site.StaticResourcePath}/image/produlevel01.gif" width="46" height="46" /></span>
+							</h2>
+							<h3>${Article.content|charwidth=18}</h3>
+						</div>
+					</cms:list>
+				</div>
+			</div>
+		</div>
+		<div class="part3right">
+			<div class="insinfortit">
+				<span class="gray"><a href="<cms:link type='Catalog' name='保险资讯'/>">更多</a></span>
+			</div>
+			<div class="insinfor">
+				<div class="insinforone">
+					<cms:list item="article" level="current" count="1" name="保险资讯">
+						<h3>
+							<a href="${Article.Link}">${Article.title}</a>
+						</h3>
+						<p>${Article.content|charwidth=50}...</p>
+					</cms:list>
+				</div>
+				<ul class="liststyle01">
+					<cms:list item="article" level="child" count="7" name="保险资讯">
+						<li><a href="${Article.Link}">${Article.title}</a></li>
+					</cms:list>
+				</ul>
+			</div>
+			<div class="ad04">
+				<a href="#"><img src="${Site.StaticResourcePath}/image/ad04.jpg" width="230" height="250" /></a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="ad05">
+		<a href="#"><img src="${Site.StaticResourcePath}/image/ad05.jpg" width="980" height="80" /></a>
+	</div>
+	<div class="part4">
+		<div class="part4left">
+			<div class="infor01">
+				<h3 class="infortit01">
+					<img src="${Site.StaticResourcePath}/image/infortit01.gif" width="72" height="18" />
+				</h3>
+				<div class="more01">
+					<span class="gray"><a href="<cms:link type='Catalog' name='认识保险'/>">更多</a></span>
+				</div>
+				<ul class="liststyle02">
+					<cms:list item="article" count="8" name="9519">
+						<li><a href="${article.Link}">${article.title}</a></li>
+					</cms:list>
+				</ul>
+			</div>
+			<div class="infor02">
+				<h3 class="infortit01">
+					<img src="${Site.StaticResourcePath}/image/infortit02.gif" width="72" height="18" />
+				</h3>
+				<div class="more01">
+					<span class="gray"><a href="<cms:link type='Catalog' name='购买保险'/>">更多</a></span>
+				</div>
+				<ul class="liststyle02">
+					<cms:list item="article" count="8" name="购买保险">
+						<li><a href="${article.Link}">${article.title}</a></li>
+					</cms:list>
+				</ul>
+			</div>
+			<div class="infor03">
+				<h3 class="infortit01">
+					<img src="${Site.StaticResourcePath}/image/infortit03.gif" width="72" height="18" />
+				</h3>
+				<div class="more01">
+					<span class="gray"><a href="<cms:link type='Catalog' name='9521'/>">更多</a></span>
+				</div>
+				<ul class="liststyle02">
+					<cms:list item="article" count="8" name="9521">
+						<li><a href="${article.Link}">${article.title}</a></li>
+					</cms:list>
+				</ul>
+			</div>
+		</div>
+		<div class="part4right">
+			<div class="qa">
+				<div class="qa01">
+					<div class="more02">
+						<span class="white"><a href="<cms:link type='Catalog' name='保险问答'/>">更多</a></span>
+					</div>
+					<p class="qaq">经常出差乘坐飞机、火车、交通意外险怎么买？</p>
+					<p class="qaa">买份意外保险可获得意外身故保险，随时随地...</p>
+					<div class="more03">
+						<span class="white"><a href="#">提问题</a></span>
+					</div>
+				</div>
+				<ul class="liststyle01">
+					<!-- <li>[<a href="#">理财</a>] <a href="#">万能保险结算利率公告</a></li> -->
+					<cms:list item="article" count="3" name="保险问答" level="all">
+						<li><a href="${Article.Link}">${article.Title|charWidth=20}</a></li>
+					</cms:list>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="part5">
+		<div class="part5left">
+			<h3 class="cooperationtit">
+				<img src="${Site.StaticResourcePath}/image/cooptit.gif" width="211" height="18" />
+			</h3>
+			<div class="cooprationcont">
+				<div class="rollBox">
+					<div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
+					<div class="Cont" id="ISL_Cont">
+						<div class="ScrCont">
+							<div id="List1">
+								<div class="crcont">
+									<cms:list item="Catalog" level="child" name="合作品牌">
+										<a href="${Catalog.Link}"><img src="${Site.StaticResourcePath}/${Catalog.ImagePath}" width="126" height="62" /></a>
+									</cms:list>
+								</div>
+
+							</div>
+							<div id="List2"></div>
+						</div>
+					</div>
+					<div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>
+				</div>
+			</div>
+		</div>
+		<div class="part5right">
+			<h3 class="frdlinktit">
+				<img src="${Site.StaticResourcePath}/image/frdlinktit.gif" width="131" height="19" />
+			</h3>
+			<div class="more04">
+				<span class="gray"><a href="#">更多</a></span>
+			</div>
+			<div class="frdlinkcont">
+				<ul class="liststyle03">
+					<cms:list item="friendlink" name="首页友情链接">
+						<li><a href="${friendlink.URL}" class="mr20" target="_blank">${friendlink.Name}</a></li>
+					</cms:list>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<cms:include file="block/kxb_right.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/shouye.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/Framework/Main.js"></script>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/select.js"></script>
+	<script type="text/javascript">
+	<!--//--><![CDATA[//><!--
+		function herf(tmp) {
+			if (temp.length > 4) {
+				temp = tmp.substr(0, 4);
+			}
+			window.location.href = "${site.url}/hzpp/" + tmp + "/index.shtml";
+		}
+		//图片滚动列表 mengjia 070816  
+		var Speed = 10; //速度(毫秒)  
+		var Space = 5; //每次移动(px)  
+		var PageWidth = 143; //翻页宽度  
+		var fill = 0; //整体移位  
+		var MoveLock = false;
+		var MoveTimeObj;
+		var Comp = 0;
+		var AutoPlayObj = null;
+		GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+		GetObj('ISL_Cont').scrollLeft = fill;
+		GetObj("ISL_Cont").onmouseover = function() {
+			clearInterval(AutoPlayObj);
+		}
+		GetObj("ISL_Cont").onmouseout = function() {
+			//AutoPlay();
+		}
+		//AutoPlay();
+		function GetObj(objName) {
+			if (document.getElementById) {
+				return eval('document.getElementById("' + objName + '")')
+			} else {
+				return eval('document.all.' + objName)
+			}
+		}
+		function AutoPlay() { //自动滚动  
+			clearInterval(AutoPlayObj);
+			AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();', 5000); //间隔时间  
+		}
+		function ISL_GoUp() { //上翻开始  
+			if (MoveLock)
+				return;
+			clearInterval(AutoPlayObj);
+			MoveLock = true;
+			MoveTimeObj = setInterval('ISL_ScrUp();', Speed);
+		}
+		function ISL_StopUp() { //上翻停止  
+			clearInterval(MoveTimeObj);
+			if (GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0) {
+				Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth);
+				CompScr();
+			} else {
+				MoveLock = false;
+			}
+			//AutoPlay();
+		}
+		function ISL_ScrUp() { //上翻动作  
+			if (GetObj('ISL_Cont').scrollLeft <= 0) {
+				GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft
+						+ GetObj('List1').offsetWidth
+			}
+			GetObj('ISL_Cont').scrollLeft -= Space;
+		}
+		function ISL_GoDown() { //下翻  
+			clearInterval(MoveTimeObj);
+			if (MoveLock)
+				return;
+			clearInterval(AutoPlayObj);
+			MoveLock = true;
+			ISL_ScrDown();
+			MoveTimeObj = setInterval('ISL_ScrDown()', Speed);
+		}
+		function ISL_StopDown() { //下翻停止  
+			clearInterval(MoveTimeObj);
+			if (GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0) {
+				Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth
+						+ fill;
+				CompScr();
+			} else {
+				MoveLock = false;
+			}
+			//AutoPlay();
+		}
+		function ISL_ScrDown() { //下翻动作  
+			if (GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth) {
+				GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft
+						- GetObj('List1').scrollWidth;
+			}
+			GetObj('ISL_Cont').scrollLeft += Space;
+		}
+		function CompScr() {
+			var num;
+			if (Comp == 0) {
+				MoveLock = false;
+				return;
+			}
+			if (Comp < 0) { //上翻  
+				if (Comp < -Space) {
+					Comp += Space;
+					num = Space;
+				} else {
+					num = -Comp;
+					Comp = 0;
+				}
+				GetObj('ISL_Cont').scrollLeft -= num;
+				setTimeout('CompScr()', Speed);
+			} else { //下翻  
+				if (Comp > Space) {
+					Comp -= Space;
+					num = Space;
+				} else {
+					num = Comp;
+					Comp = 0;
+				}
+				GetObj('ISL_Cont').scrollLeft += num;
+				setTimeout('CompScr()', Speed);
+			}
+		}
+		//--><!
+	</script>
+</body>
+</html>

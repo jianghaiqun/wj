@@ -1,0 +1,374 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sdong
+{
+
+	margin-top:20px;
+	margin-bottom:20px;
+	width:861px;
+	height:86px;
+	background-image:url(../images/dongshopa.png);
+	background-position:-5px -96px;
+
+}
+
+
+.xuana
+{
+
+	width:1000px;
+	text-align:left;
+	font-size:14px;
+	font-family:"宋体";
+	height:40px;
+	line-height:40px;
+	margin-top:10px;
+
+}
+
+.xuan
+{
+
+	float:left;
+	margin-left:10px;
+
+}
+
+.xuan_top
+{
+
+	width:1000px;
+	height:38px;
+	border:1px solid #b79f63;
+	background-image:url(../images/top_c_bg.png);
+	background-repeat:repeat-x;
+	text-indent:20px;
+	text-align:left;
+	font-size:14px;
+	font-family:"宋体";
+	line-height:38px;
+	margin-top:10px;
+	margin-bottom:5px;
+
+}
+
+.table_top
+{
+
+	float:left;
+
+}
+
+.table_content
+{
+
+	width:1000px;
+	height:85px;
+	line-height:85px;
+	border:1px solid #999999;
+
+}
+.yellow_bg
+{
+
+	background-image:url(../images/yellow_bg.png);
+	background-repeat:repeat-x;
+	width:1000px;
+	height:37px;
+	border:1px solid #b79f63;
+	text-indent:20px;
+	text-align:left;
+	font-size:14px;
+	font-weight:bold;
+	font-family:"宋体";
+	line-height:37px;
+
+}
+
+.button
+{
+
+	float:right;
+	background-image:url(../images/xingbutton.png);
+	background-position:-292px -190px;
+	width:86px; 
+	height:35px; 
+	line-height:35px; 
+	font-size:14px;
+	font-weight:normal;
+	margin-right:10px;
+	text-align:center;
+	text-indent:0px;
+
+}
+
+.contenta
+
+{
+
+	width:1000px;
+	margin-top:5px;
+	border:1px solid #999999;
+
+}
+.line
+{
+
+	font-size:0px;
+	height:2px;
+	width:1000px;
+	background-color:#CCCCCC;
+	margin-top:5px;
+	margin-bottom:5px;
+
+}
+
+.line_1
+{
+
+	width:1000px;
+	height:100px;
+	margin-bottom:5px;
+
+}
+
+.line_a
+{
+
+	width:980px;
+	margin-bottom:5px;
+	border:1px solid #cccccc;
+
+}
+
+.line_at
+{
+
+	font-size:14px; 
+	font-weight:bolder; 
+	text-align:left; 
+	text-indent:20px;
+	width:978px; 
+	color:#333333;
+	 background-color:#fbfcee;
+	 height:30px; 
+	 line-height:30px;
+	 margin-bottom:5px;
+	 border-bottom:1px solid #cccccc;
+
+}
+
+.form
+{
+
+	margin-top:20px;
+	margin-left:40px;
+	text-align:left;
+	font-size:14px;
+	font-family:"宋体";
+
+}
+
+.form span
+{
+
+	width:120px;
+	display:block;
+	float:left;
+	margin-top:-10px;
+
+}
+.radio
+{
+}
+.form p
+{
+
+	height:50px;
+	line-height:50px;
+	width:100%;
+}
+
+.form input
+{
+
+	width:370px; 
+	height:30px; 
+	border: 2px solid #CCCCCC;
+
+}
+
+.line_2
+{
+
+	width:1000px;
+	height:100px;
+	margin-top:5px;
+	border:1px solid #999999;
+
+}
+
+.font1
+{
+
+float:left; margin-left:440px; font-weight:normal; color:#CC6600;
+
+}
+
+.font2
+{
+
+	float:left; display:block; margin-left:10px;
+
+}
+
+.font3
+{
+
+	float:left; display:block; margin-left:650px; font-weight:normal;
+
+}
+
+.font4
+{
+
+	height:80px; line-height:80px; margin-top:0px;
+
+}
+
+.font6
+{
+
+	float:left; margin-left:300px; line-height:0px;
+
+}
+.red_pic
+{
+
+	float:left; margin-top:10px; margin-left:10px;
+}
+
+.pinan
+{
+
+	width:105px; margin-top:20px; float:left; height:39px; background-position:-275px -320px; background-image:url(../images/xingbutton.png);
+
+}
+
+.line1_top
+{
+
+	float:left; width:160px; height:80px; margin-left:10px;
+
+}
+
+.line1_top .zi
+{
+
+	width:160px; float:left; text-indent:1px; font-size:14px; font-family:'宋体'; font-weight:bold; margin-top:10px;
+
+}
+
+.line1_b
+{
+
+	float:left; margin-left:330px; margin-top:10px;
+
+}
+
+.line1_b1
+{
+
+	margin-left:250px;_margin-left:150px; background-image:url(../images/xingbutton.png); background-position:-265px -367px; background-repeat:no-repeat; width:113px; height:73px; margin-top:5px;_margin-left:250px;
+
+}
+
+.line1_b2
+{
+
+	font-size:22px; font-family:'黑体'; font-weight:bold; color:#8f2a38; line-height:normal; height:40px; line-height:40px;
+
+}
+
+.line1_b3
+{
+
+	 margin-left:20px;line-height:normal;font-size:12px; color:#FFFFFF;height:30px; line-height:30px;
+
+}
+
+.line1
+{
+
+	float:left; margin-top:10px; margin-left:10px;
+
+}
+
+.line2
+{
+
+	width:250px; text-indent:1px; float:left; text-align:left;font-size:14px; font-family:'宋体'; font-weight:bold; margin-top:10px;
+
+}
+
+.line3
+{
+
+	width:100px; margin-top:20px; float:left;height:40px; background-position:-277px -275px; background-image:url(../images/xingbutton.png);
+
+}
+
+.line4
+{
+
+	 background-image:url(../images/xingbutton.png); background-position:-265px -367px; background-repeat:no-repeat; width:113px; height:73px; margin-top:5px;margin-left:250px;_margin-left:150px;
+
+}
+
+.line5
+{
+
+	float:left; margin-left:350px; margin-top:10px;
+
+}
+
+.linea
+{
+
+	font-size:22px; font-family:'黑体'; font-weight:bold; color:#8f2a38; line-height:normal; height:40px; line-height:40px;
+
+}
+
+.line4 .lineb
+{
+
+	margin-left:20px;line-height:normal;font-size:12px; color:#FFFFFF;height:30px; line-height:30px;
+
+}
+.line8
+{
+
+	float:left; width:160px; height:80px; margin-left:10px;
+
+}
+.blue
+{
+
+	 margin-top:20px; background-image:url(../images/bgaa.png); background-repeat:repeat-x;
+
+}
+
+.a
+{
+
+	font-size:22px; font-family:'黑体'; font-weight:bold; color:#8f2a38; line-height:normal; height:40px; line-height:40px;
+
+}
+
+.b
+{
+
+	 margin-left:20px;line-height:normal;font-size:12px; color:#FFFFFF;height:30px; line-height:30px;
+
+}

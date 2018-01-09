@@ -1,0 +1,21 @@
+<!--循环：catalog count：10-->
+
+					<li><a href="http://localhost:8080/../baike/zhishi/" target="_blank">知识</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/chanpin/" target="_blank">产品</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/fagui/" target="_blank">法规</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/yewu/" target="_blank">业务</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/tiaokuan/" target="_blank">条款</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/hetong/" target="_blank">合同</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/kaoshi/" target="_blank">考试</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/gongsi/" target="_blank">公司</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/mingren/" target="_blank">名人</a></li>							
+
+					<li><a href="http://localhost:8080/../baike/zhishi/" target="_blank">车险</a></li>							

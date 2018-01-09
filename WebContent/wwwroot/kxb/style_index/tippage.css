@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+.wrap404{ width:1020px; margin:0 auto; background:#f6f6f6; border:1px solid #ccc;height:300px;}
+.wrap404 .bg{background:url(../images/404ico.gif) no-repeat 230px 80px;height:300px;}
+.wrap404 .bg h3{ padding-top:100px; padding-left:380px; font-size:14px; font-weight:bold;}
+.wrap404 .bg p{padding-left:368px; padding-top:12px;}
+.wrap404 .bg b{ color:#CC0000; font-weight:bold; padding-left:6px; padding-right:6px;}
+
+.wrap404b{ width:1020px; margin:0 auto; background:#f6f6f6; border:1px solid #ccc;height:300px;}
+.wrap404b .bg{background:url(../images/404ico2.gif) no-repeat 170px 80px;height:300px;}
+.wrap404b .bg h3{ padding-top:87px; padding-left:260px; font-size:14px; font-weight:bold;}
+.wrap404b .bg p{padding-left:260px; padding-top:12px;}
+.wrap404b .bg b{ font-weight:bold; }
+.wrap404b .bg p img{padding-right:6px;}
+.wrap404b .bg p a{padding-right:16px;}

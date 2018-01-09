@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<title>开心保恭贺 感恩八周年店庆</title>
+<meta name="keyword" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="http://resource.kaixinbao.com/style/redesign/re_header.css" />
+<link rel="stylesheet" type="text/css" href="http://resource.kaixinbao.com/style/skins/default.css"/>
+<style>
+body{ min-width: 984px; background: url("http://resource.kaixinbao.com/active_file/images/be_thankful/bg_body.jpg") no-repeat center top; }
+#wrapper{ width: 984px; margin: 0 auto; padding-bottom: 20px; font-family: '微软雅黑'; }
+.insure_cont { width: 940px; margin: 670px auto 0; }
+.insure_list { padding-top: 26px; padding-bottom: 24px; }
+.insure_list li { position: relative; width: 120%; margin-bottom: 35px; overflow: hidden; font-size: 22px; color: #666; zoom:1;vertical-align: top; }
+.insure_list .item { float: left; position: relative; width: 25%; text-align: right; line-height: 38px; }
+.insure_list .text { float: left; padding-left: 1%; }
+.insure_list .text input { width: 448px; height: 38px; padding: 0 10px; line-height: 38px/9; background-color: #fff5f5; border: 1px solid #f6afb0; font-size: 22px; color: #666; }
+.insure_list .card_type { width: 120px; height: 40px; padding: 2px;line-height: 40px; vertical-align: top; background-color: #fff5f5; border: 1px solid #f6afb0; font-size: 20px; color: #999; font-family: "微软雅黑" }
+.insure_list .text .card_num { width: 314px; margin-left: 7px; }
+.insure_list .check_sex label { display: inline-block; margin-right: 20px; height: 38px; line-height: 38px; cursor: pointer; }
+.insure_list .check_sex input { width: auto; height: auto; vertical-align: top; cursor: pointer; background-color: #fff; border: none; vertical-align: top; position: relative; top: 13px; *top: 7px; margin-right: 5px; }
+.tip_txt { height: 24px; padding-bottom: 44px; *padding-bottom: 34px; line-height: 24px; text-align: center; font-size: 18px; color: #e94043; font-weight: bold; }
+.btn_receive { text-align: center; font-size: 0; }
+.btn_receive a { display: block; width: 260px; height: 56px; margin: 0 auto; background: url(http://resource.kaixinbao.com/active_file/images/be_thankful/btn_receive.png) no-repeat left top; }
+.btn_receive a:hover { background: url(http://resource.kaixinbao.com/active_file/images/be_thankful/btn_receive.png) no-repeat left -56px; }
+.pro_intro { position: relative; margin-top: 76px; width: 984px; height: 614px; background: url(http://resource.kaixinbao.com/active_file/images/be_thankful/img_product_intro.jpg) no-repeat left top; }
+.pro_intro a { position: absolute; bottom: 222px; left: 414px; display: block; width: 98px; height: 24px; z-index: 9999; }
+.pro_intro a:hover { border-bottom: 1px solid #fff; } 
+.show_list { margin-top: 180px; overflow: hidden; }
+.show_list li { position: relative; float: left; width: 479px; margin: 0 6px; }
+.show_list li a { position: absolute; right: 23px; bottom: 50px; display: block; width: 252px; height: 58px; }
+.show_list li .pro_01 { background: url(http://resource.kaixinbao.com/active_file/images/be_thankful/btn_showlist_01.jpg) no-repeat left top; }
+.show_list li .pro_02 { background: url(http://resource.kaixinbao.com/active_file/images/be_thankful/btn_showlist_02.jpg) no-repeat left top; }
+.show_list li .pro_03 { background: url(http://resource.kaixinbao.com/active_file/images/be_thankful/btn_showlist_03.jpg) no-repeat left top; }
+.show_list li .pro_04 { background: url(http://resource.kaixinbao.com/active_file/images/be_thankful/btn_showlist_04.jpg) no-repeat left top; }
+.insure_list li .error { float: left; height: 38px; margin-left: 15px; padding: 0 5px; background-color: #fff; border: 1px solid #e6393d; line-height: 38px; color: #e6393d; z-index: 999; }
+.insure_list li .error span { display: inline-block; }
+</style>
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<div class="insure_cont">
+			<ul class="insure_list">
+				<li>
+					<div class="item"><span>投保人姓名：</span></div>
+					<div class="text"><input data-verify="NOTNULL|姓名不为空&&LENGTH>1|姓名的长度不正确&&CHANDEH|请输入中文和字母"  id="name" type="text" /></div>
+				</li>
+				<li>
+					<div class="item"><span>证件号码：</span></div>
+					<div class="text">
+						<select class="card_type">
+							<option>身份证</option>
+						</select>
+						<input class="card_num" id="identityId" type="text" data-verify="SELECTCARD|请先选择证件类型&&NOTNULL|证件号不为空&&CARDTYPE|请输入正确的身份证号" />
+					</div>
+				</li>
+				<li>
+					<div class="item"><span>手机号码：</span></div>
+					<div class="text"><input class="short" id="mobile" data-verify="NOTNULL|手机号不为空&&TELPHONE|请输入正确的手机号" type="text" maxlength="11" /></div>
+				</li>
+				<li>
+					<div class="item"><span>电子邮箱：</span></div>
+					<div class="text"><input data-verify="NOTNULL|电子邮箱不为空&&EMAIL|请输入正确的电子邮箱" type="text" id="email" /></div>
+				</li>
+			</ul>
+			<p class="tip_txt">注：领取年龄为18-65周岁</p>
+			<p class="btn_receive"><a href="#">点击领取</a></p>
+		</div>
+		
+		<p class="pro_intro"><a href="http://resource.kaixinbao.com//eriskfile/Clause/103801001_00001992.pdf"></a></p>
+		
+		<ul class="show_list">
+			<li><img src="http://resource.kaixinbao.com/active_file/images/be_thankful/img_showlist_01.jpg" /><a class="pro_01" href="http://u.kaixinbao.com/link?cpsUserUrl=http://www.kaixinbao.com/lvyou-baoxian/303248.shtml&cpsUserId=a0000103779" target="_blank"></a></li>
+			<li><img src="http://resource.kaixinbao.com/active_file/images/be_thankful/img_showlist_02.jpg" /><a class="pro_02" href="http://u.kaixinbao.com/link?cpsUserUrl=http://www.kaixinbao.com/jiankang-baoxian/301479.shtml&cpsUserId=a0000103779" target="_blank"></a></li>
+			<li><img src="http://resource.kaixinbao.com/active_file/images/be_thankful/img_showlist_03.jpg" /><a class="pro_03" href="http://u.kaixinbao.com/link?cpsUserUrl=http://www.kaixinbao.com/yiwai-baoxian/303240.shtml&cpsUserId=a0000103779 " target="_blank"></a></li>
+			<li><img src="http://resource.kaixinbao.com/active_file/images/be_thankful/img_showlist_04.jpg" /><a class="pro_04" href="http://u.kaixinbao.com/link?cpsUserUrl=http://www.kaixinbao.com/jiankang-baoxian/301493.shtml&cpsUserId=a0000103779" target="_blank"></a></li>
+		</ul>
+	</div>
+
+<div class="g-weaper"></div>	
+
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/validate.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_base.js"></script>
+<script>
+$(function() {
+
+	//表单信息校验
+	$(".insure_cont :input").bind("blur", function() {	
+		var verify = $(this).attr("data-verify");
+		
+		if(!verify || verify == "") return;	
+		
+		var vefyAll = verify.split("&&");
+		
+		for(var i=0;i<vefyAll.length; i++) {
+			var _key = vefyAll[i].split("|")[0];
+			var _tip = vefyAll[i].split("|")[1];
+			
+			if(_key.match(/[><=]/)) {
+				var _oper = _key.match(/[><=]/)[0];
+				_key = _key.split(_oper[0]);
+				
+				objValidate["TIP_FUN"](this, _key[0], _tip, _oper, _key[1]);
+			} else {			
+				objValidate["TIP_FUN"](this, _key, _tip);
+			}
+			
+			if(objValidate["IS_TIP"]) break;
+		}
+	});
+	
+	//提交表单校验函数
+	var sbtValidate = function(elm) {	
+		var valiList = $(elm).parent().siblings(".insure_list");
+		var inputElms = valiList.find("input");
+	
+		inputElms.blur();
+	
+		if(valiList.find(".error").length > 0) {
+			var oError = valiList.find(".error").eq(0);
+			var _top = oError.offset().top - oError.outerHeight();
+			
+			$("html, body").animate({scrollTop: _top}, 400);
+
+			return true;
+		} else {		
+			return false;
+		}
+	}
+	
+	
+	//提交表单
+	$(".btn_receive a").bind("click", function(e) {	
+		e.preventDefault();
+		
+		if(sbtValidate(this)) return;  //提交校验
+		
+		//发送ajax请求写在此处
+		jQuery.ajax({
+			url: "${Site.prop6}/shop/brand_shopping!saveOrder.action?name="+encodeURIComponent(encodeURIComponent($("#name").val()))+"&identityId="+$("#identityId").val()+"&mobile="+$("#mobile").val()+"&email="+$("#email").val(),
+			type: "post",
+			dataType: "json",
+			success: function(data){
+				if (data.Status == '0') {
+					alert("领取成功！"+data.PolicyMsg+"\n用户名："+data.LoginName+" 密码："+data.Password);	
+				} else {
+					alert("领取失败！"+data.Msg);	
+				}
+		 	}
+		});
+		
+		
+	});
+
+});
+</script>
+
+</body>
+</html>

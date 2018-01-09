@@ -1,0 +1,21 @@
+<% DataTable dt_3 = TemplateData.getDocList("article","9461","current","hot","null","4","null","null","null");
+  if(dt_3==null){write("没有找到栏目。parent：null  catalog："+"9461");}else{
+ int rdCnt=dt_3.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_3  = dt_3.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	                        	<% if(i==0){%>
+                        			<li class="cur">
+		                                <a class="rnews_tl" href="${article_3.Link}" >${article_3.Title}</a>
+		                                <p class="rnews_prg">${article_3.metadescription|CharWidth=38}</p>
+		                                <a class="more_detail" href="${article_3.Link}">【详情】</a>
+		                            </li>
+                        		<% } else {%>
+                        			<li>
+		                                <a href="${article_3.Link}" >${article_3.Title}</a>
+		                            </li>
+                        		<% }%>
+	                        <%}}%>

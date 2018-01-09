@@ -1,0 +1,13 @@
+<!-- 邮件模板-公共头 start-->
+<tr>
+	<td style="padding-top: 10px; padding-bottom: 10px; font-size: 12px;"
+		colspan="10">为了保证正常收到开心保网发送的保单信息，请将<a
+	 href="mailto:kf@kaoxinbao.com">kf@kaixinbao.com</a>加入到您的通讯录
+	</td>
+</tr>
+<tr>
+	<td><a href="http://www.kaixinbao.com"><img
+		 src="http://resource.kaixinbao.com/active_file/images/email/header.gif"
+			alt=""></a></td>
+</tr>
+<!-- 邮件模板-公共头 start-->

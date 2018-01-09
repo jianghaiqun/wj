@@ -1,0 +1,299 @@
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href='../../baike/' target='_self'>保险百科</a><span class="separator">></span><span class="separator1">公司</span>
+		</div>
+	</div>
+	<!-- 最新关注开始 -->
+	<div class="newconcern">
+		<div class="columntit">最新关注</div>
+	<ul>
+		
+ 
+		      <li>
+		      		<h4><a href="http://www.baidu.com/" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/bxbk1/2016/03/2849098918.jpg" /></a></h4>
+		      		<h5><a href="http://www.baidu.com/" target="_blank" rel="nofollow">测试测试测试测试测试</a></h5>
+		      </li>
+		
+ 
+		      <li>
+		      		<h4><a href="http://www.kaixinbao.com" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/bxbk1/2016/03/2849084169.jpg" /></a></h4>
+		      		<h5><a href="http://www.kaixinbao.com" target="_blank" rel="nofollow">的事发生大幅瓦尔多舒服</a></h5>
+		      </li>
+		
+ 
+		      <li>
+		      		<h4><a href="http://www.baidu.com" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/bxbk1/2016/03/2849072433.jpg" /></a></h4>
+		      		<h5><a href="http://www.baidu.com" target="_blank" rel="nofollow">第三方大锅饭低功耗法规和法规和大法官大幅</a></h5>
+		      </li>
+		
+ 
+		      <li>
+		      		<h4><a href="" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/bxbk1/2016/03/2849067684.jpg" /></a></h4>
+		      		<h5><a href="" target="_blank" rel="nofollow">sfwe4rwefsdfsdfsdsdsdsdsdsdsdsdsdsdsdsdsd</a></h5>
+		      </li>
+		 
+	</ul>
+		
+	</div>
+	<!-- 最新关注结束 -->
+	<!--主体 开始-->
+<div class="wrap980 mainbgl336 graybordert">
+	<!--左边 开始-->
+	<div class="left336">
+		<!--词条分类浏览 开始-->
+		<div class="columntit">词条分类浏览</div>
+		<ul class="entryclass">			
+           <!--循环：catalog count：10-->
+
+					<li><a href="../../baike/zhishi/" target="_blank">知识</a></li>							
+	        
+					<li><a href="../../baike/chanpin/" target="_blank">产品</a></li>							
+	        
+					<li><a href="../../baike/fagui/" target="_blank">法规</a></li>							
+	        
+					<li><a href="../../baike/yewu/" target="_blank">业务</a></li>							
+	        
+					<li><a href="../../baike/tiaokuan/" target="_blank">条款</a></li>							
+	        
+					<li><a href="../../baike/hetong/" target="_blank">合同</a></li>							
+	        
+					<li><a href="../../baike/kaoshi/" target="_blank">考试</a></li>							
+	        
+					<li><a href="../../baike/gongsi/" target="_blank">公司</a></li>							
+	        
+					<li><a href="../../baike/mingren/" target="_blank">名人</a></li>							
+	        
+					<li><a href="../../baike/zhishi/" target="_blank">车险</a></li>							
+	        	                  
+		</ul>
+		<div class="h20"></div>
+		<!--词条分类浏览 结束-->
+		<!--搜索词条 开始-->
+		<div class="entrysearch">
+		<form name="myformname" action="http://localhost:8080/Search/Result.jsp">
+				<input type="hidden" name="id" value="43" id="id" />
+				<input type="hidden" name="site" value="221" />
+				<input type="hidden" name="order"  value="time" /> 
+		<h4><input id="valueid" name="query" type="text" class="entrysearchinput" value="旅游保险" onfocus="if(this.value=='旅游保险'){this.value='';}" onblur="if(this.value==''){this.value='旅游保险';}"/></h4><h5><input name="" type="submit" value="" class="entrysearchbtn"onmouseover="this.className='entrysearchbtnover'" onmouseout="this.className='entrysearchbtn'" /></h5>
+		</form>
+		</div>
+		<!--搜索词条 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			
+			
+		</ul>
+	
+		<!--热销保险产品 结束-->
+		<!--热门词条推荐 开始-->
+		<div class="columntit graybordert">热门词条推荐</div>
+		<ul class="txtlist">
+			
+	
+                        <li>                      	
+								<a href="../../baike/fagui/253797.shtml" title="劳工保险和雇主责任保险" target="_blank">劳工保险和雇主责任保险</a> 	                   
+                        </li>                      
+			
+	
+                        <li>                      	
+								<a href="../../baike/chanpin/253730.shtml" title="保证保险是什么" target="_blank">保证保险是什么</a> 	                   
+                        </li>                      
+			
+	
+                        <li>                      	
+								<a href="../../baike/gongsi/253891.shtml" title="中国大地财产保险公司总部" target="_blank">中国大地财产保险公司总部</a> 	                   
+                        </li>                      
+			
+	
+                        <li>                      	
+								<a href="../../baike/kaoshi/251080.shtml" title="保险从业资格" target="_blank">保险从业资格</a> 	                   
+                        </li>                      
+			
+	
+                        <li>                      	
+								<a href="../../baike/zhishi/251040.shtml" title="储蓄保险" target="_blank">储蓄保险</a> 	                   
+                        </li>                      
+			
+	
+                        <li>                      	
+								<a href="../../baike/zhishi/251051.shtml" title="万能险" target="_blank">万能险</a> 	                   
+                        </li>                      
+			
+	
+                        <li>                      	
+								<a href="../../baike/zhishi/251050.shtml" title="少儿重大疾病保险" target="_blank">少儿重大疾病保险</a> 	                   
+                        </li>                      
+			
+		</ul>
+		<!--热门词条推荐 结束-->
+		<!--大家都关注 开始-->
+		<div class="columntit graybordert">大家都关注</div>
+		<ul class="txtlist">
+			
+
+				<li><a href="../../zhuanti/lc5/AG20140620001.shtml" target="_blank">测试一下啦</a></li>
+			
+
+				<li><a href="../../zhuanti/lc5/AG20140620001.shtml" target="_blank">test标题</a></li>
+			
+
+				<li><a href="../../zhuanti/zt1/AG20140528005.shtml" target="_blank">测试</a></li>
+			
+
+				<li><a href="../../zhuanti/zt3/AG20140509001.shtml" target="_blank">弟子规</a></li>
+			
+
+				<li><a href="../../zhuanti/zt2/AG20140508014.shtml" target="_blank">战争</a></li>
+			
+
+				<li><a href="../../zhuanti/zt1/AG20140508007.shtml" target="_blank">定律</a></li>
+			
+
+				<li><a href="../../huati/AG20140505001.shtml" target="_blank">现在最热门的话题就是即将到来的世界杯</a></li>
+				
+		</ul>
+		<!--大家都关注 结束-->
+		<!--广告 开始-->
+		<div class="h10 graybordert"></div>
+        <div class="ad300">
+        <script language='javascript' src='http://localhost:8080/js/340.js'></script>
+        </div>
+        <div class="ad300">
+        <script language='javascript' src='http://localhost:8080/js/339.js'></script>
+        </div>    
+		<!--加关注 开始-->
+		<div class="addattention">
+			<div class="addattentionleft"><a href="http://e.weibo.com/kaixinbao2012/profile" target="_blank"><img src="http://localhost:8080/images/addattentionlogo.gif" alt="开心保保险网" width="100" height="100" /></a></div>
+			<div class="addattentionright">
+				<h4><a href="http://e.weibo.com/kaixinbao2012/profile" target="_blank"><img src="http://localhost:8080/images/addattentiontxt.gif" width="84" height="16" alt="开心保保险网" align="absmiddle" /></a> 辽宁 大连</h4>
+				<h5>欢迎关注开心保微博</h5>
+				<h6>
+						<a href="http://e.weibo.com/kaixinbao2012" target="_blank"> <span>加关注</span></a>
+				</h6>
+			</div>
+		</div>
+		<!--加关注 结束-->
+		<!--关注微信 开始-->
+		<div class="micromsg">
+			<div class="micromsgleft"><img src="http://localhost:8080/images/mpvcode.gif" width="100" height="100" /></div>
+			<div class="micromsgright">
+				<h4>关注开心保微信</h4>
+				<h5>微信扫一下即可添加开心保<br/>官方微信，心动优惠及时掌握。</h5>
+			</div>
+		</div>
+		<div class="h30"></div>
+		<!--关注微信 结束-->
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	
+		<!--列表 开始-->
+		<div class="right644">
+             <ul class="contentlist ">
+                  
+
+                		<li>
+                        	<h3><a href="../../baike/gongsi/253881.shtml" title ="合众人寿" >合众人寿</a></h3> 
+                        	<h4><b>摘要：</b>合众人寿是经中国保险监督管理委员会批准的一家综合性人寿保险公司。企业性质为全国性、股份制寿险公司。作为综合性人寿保险公司，公司可经营一切人身险险种<a href="../../baike/gongsi/253881.shtml" rel="nofollow">阅读全文</a></h4>                       
+                       	 	<h5>关键词：</h5>
+                        	<h6>创建日期：2012-09-16</h6>
+                        </li>  
+                  
+
+                		<li>
+                        	<h3><a href="../../baike/gongsi/253880.shtml" title ="天安保险公司" >天安保险公司</a></h3> 
+                        	<h4><b>摘要：</b>天安保险公司全称天安保险股份有限公司，是一家成立于1994年10月的股份制商业保险公司，总部设在上海。是中国首家由企业出资组建的商业保险公司。<a href="../../baike/gongsi/253880.shtml" rel="nofollow">阅读全文</a></h4>                       
+                       	 	<h5>关键词：</h5>
+                        	<h6>创建日期：2012-09-16</h6>
+                        </li>  
+                  
+
+                		<li>
+                        	<h3><a href="../../baike/gongsi/253879.shtml" title ="太平洋保险有限公司" >太平洋保险有限公司</a></h3> 
+                        	<h4><b>摘要：</b>中国太平洋保险有限公司是在1991年5月13日成立的中国太平洋保险公司的基础上组建而成的保险集团公司，总部设在上海，注册资本77亿元，是中国第一家全国性的股份制商业保险公司。<a href="../../baike/gongsi/253879.shtml" rel="nofollow">阅读全文</a></h4>                       
+                       	 	<h5>关键词：<a href="/tag/000084000001-30.html"target="_blank">保险公司</a>&nbsp;&nbsp;<a href="/tag/000106000001-30.html"target="_blank">保险百科</a>&nbsp;&nbsp;<a href="/tag/000084000001-30.html"target="_blank">保险公司</a>&nbsp;&nbsp;</h5>
+                        	<h6>创建日期：2012-09-16</h6>
+                        </li>  
+                  
+
+                		<li>
+                        	<h3><a href="../../baike/gongsi/253878.shtml" title ="美亚财产保险有限公司" >美亚财产保险有限公司</a></h3> 
+                        	<h4><b>摘要：</b>美亚财产保险有限公司（简称“美亚保险”）是Chartis保险集团旗下在中国经营财产责任险保险的独资子公司，目前在北京市、上海市、广东省和深圳市设有分支机构。美亚财产保险有限公司是目前在中国国内经营业务...<a href="../../baike/gongsi/253878.shtml" rel="nofollow">阅读全文</a></h4>                       
+                       	 	<h5>关键词：美亚保险 财险公司 保险百科 保险公司<a href="/tag/000106000001-30.html"target="_blank">保险百科</a>&nbsp;&nbsp;<a href="/tag/000084000001-30.html"target="_blank">保险公司</a>&nbsp;&nbsp;</h5>
+                        	<h6>创建日期：2012-09-16</h6>
+                        </li>  
+                  
+
+                		<li>
+                        	<h3><a href="../../baike/gongsi/253877.shtml" title ="百年人寿" >百年人寿</a></h3> 
+                        	<h4><b>摘要：</b>百年人寿保险股份有限公司是经中国保险监督管理委员会批准成立的全国性人寿保险公司。公司于2009年6月3日正式成立，总部选址于美丽的海滨城市大连。<a href="../../baike/gongsi/253877.shtml" rel="nofollow">阅读全文</a></h4>                       
+                       	 	<h5>关键词：<a href="/tag/000084000001-30.html"target="_blank">保险公司</a>&nbsp;&nbsp;</h5>
+                        	<h6>创建日期：2012-09-16</h6>
+                        </li>  
+                  
+             </ul>	
+       
+		
+		<!--列表 结束-->
+		<!--页码 开始-->
+			<div class="plpage">
+					<!--    翻页    -->
+					<div id="plpagecont"><div class='plpage'><div class='plpagecont'><span class='plpage02'><a href='.'>首页</a></span><span class='plpage01'><a href=''><</a></span><span class='plpage01'><a href='.'>1</a></span>&nbsp;<span class='plpage04'><a href='index_2.shtml'><font color = '#FFFFFF'> 2</font></a></span>&nbsp;<span class='plpage01'><a href='#'>></a></span><span class='plpage02'><a href='index_2.shtml'>尾页</a></span>&nbsp;&nbsp;共2页&nbsp;&nbsp;&nbsp;&nbsp;到第&nbsp;<input id='_PageBar_Index_0' type='text' size='4' style='width:30px' class='pageinput'style='' onKeyUp="value=value.replace(/\D/g,'')">&nbsp;页&nbsp;&nbsp;<input type='button' class='btn300' onclick="if(/[^\d]/.test(document.getElementById('_PageBar_Index_0').value)){alert('错误的页码');$('_PageBar_Index_0').focus();}else if(document.getElementById('_PageBar_Index_0').value>2){alert('错误的页码');document.getElementById('_PageBar_Index_0').focus();}else{var PageIndex = (document.getElementById('_PageBar_Index_0').value)>0?document.getElementById('_PageBar_Index_0').value:1;if(PageIndex==1){window.location='index.shtml'}else{window.location='index_'+PageIndex+'.shtml';}}" style='' value='确定'></td></div></div></div>
+					<div class="clear"></div>
+				</div>
+			<!--页码 结束-->
+			<!--人气产品搜索词 开始-->
+			<div class="hotprodukeywordtit graybordert">人气产品搜索词</div>
+			<ul class="hotprodukeyword">
+				<!--循环：friendlink count：50-->
+
+
+					<li>                      	
+						<span ><a href="http://www.kaixinbao.com/yiwai-baoxian/258853.shtml" title="综合意外险">综合意外险</a> </span>	                   
+                    </li>
+				
+
+					<li>                      	
+						<span ><a href="http://www.kaixinbao.com/yiwai-baoxian/255432.shtml" title="自驾游意外险">自驾游意外险</a> </span>	                   
+                    </li>
+				
+			</ul>
+			<div class="h20"></div>
+			<!--人气产品搜索词 结束-->
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<div class="clear"></div>
+<div class="part6">
+	<ul>
+	<!--循环：hotopic count：50-->
+	
+		<!--循环：hotopic count：50-->
+
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<!--循环：hotopic count：50-->
+
+	</div>
+</div>
+<div class="clear"></div>
+<script type="text/javascript" src="http://localhost:8080/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jqueryupdate.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_header.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/xiaoneng_CustomerService.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/artDialog.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/login.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/iframeTools.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://localhost:8080/js/tabchange.js" type="text/javascript" charset="utf-8"></script>
+<!-- Powered by CMS(中科软科技股份有限公司) 1.3.1.0 PublishDate 2016-09-26 10:06:37-->

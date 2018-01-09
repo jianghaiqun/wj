@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");  
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/mod_style.css"/>
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/redesign/animate.css"/>
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/wj_kxb/mod_sales.css"/
+
+
+</head>
+<body class="re-bg"> 
+ 
+	<!-- 顶部 开始 -->
+	<div id="headerArea">
+		<div class="headerCont">
+			<h1><a href="${Site.URL}"><img src="${Site.StaticResourcePath}/images/sem/semlog_02.gif" alt="开心保 买保险就是买开心" /></a></h1>
+			<p class="tel">4009-789-789</p>
+			<ul id="menuArea">
+				<li>
+					<a class="" href="http://www.kaixinbao.com/lvyou-baoxian/">境外险</a>
+				</li>
+				<li>
+					<a class="hover" href="http://www.kaixinbao.com/lvyou-baoxian/shengenqianzheng/">申根险</a>
+				</li>
+				<li>
+					<a class="" href="http://www.kaixinbao.com/lvyou-baoxian/guonei/">境内险</a>
+				</li>
+<!-- 				<%
+					String articleId = article.getString("ID");
+					cn.com.sinosoft.action.shop.ProductMarketingAction pm = new cn.com.sinosoft.action.shop.ProductMarketingAction();
+					String meth = pm.getNavHtml(articleId);
+					write(meth);
+				%> -->
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="guide_header">
+      <div class="g-weaper">
+          <div class="g-guide-pktit">
+          <div class="g-guide-icon"></div>
+          <div class="g-guide-dds f_mi">
+               <span>根据您的选择</span>
+               <div>您目前需要加强<h1 class="g-guide-b">“
+                     <% String url = article.getString("jiaqiangbaozhanglianjie");
+                  	    if (url == null || "".equals(url)) {
+                  	 	    write("<a href='javascript:void(0)'>");
+                  	    } else {
+                  	 	    write("<a href='"+url+"' target='_blank'>");
+                  	    }
+                     %>${Article.jiaqiangbaozhangtishi} </a>” </h1>方面的保障</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="g-weaper">
+        <div class="daohang">
+            <span class="daohang_home"></span>
+             <a href="${Site.URL}" target="_self"><span class="orange">您的现在位置：首页</span></a><span class="separator">&gt;</span><a href="${Site.URL}/daogou/" target="_self"><span class="separator1">保险快选</span></a><span class="separator">&gt;</span><span class="separator1">${article.Title}</span>
+        </div>
+      </div>      
+      
+	<!-- 顶部 头图 -->
+                <% 
+		           com.sinosoft.cms.document.ShoppingGuidePKManageNew topPic = new com.sinosoft.cms.document.ShoppingGuidePKManageNew();
+			       String pkInfoHtml1 = topPic.getTopPicture(article.getString("ID"),article.getString("baoxianfenlei"),article.getString("Content"),article.getString("txtMaxSize"));
+			       write(pkInfoHtml1);	
+		        %>	
+    <!-- 顶部 头图end -->
+    
+	
+	            <% 
+		           com.sinosoft.cms.document.ShoppingGuidePKManageNew sh = new com.sinosoft.cms.document.ShoppingGuidePKManageNew();
+			       String pkInfoHtml2 = sh.getPKInfo(article.getString("ID") ,article.getString("baoxianfenlei"));
+			       write(pkInfoHtml2);	
+		        %>
+
+
+
+    <div id="fix_nav" class="fix_nav">
+        <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" >
+            <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_01.jpg" />
+            <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_01_on.jpg" />
+        </a>
+        <span class="fix-RichScan">
+                <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_02.jpg" />
+                <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_02_on.jpg" />
+                <div style="display: none;" class="weixinDiv tagshow"><img src="${Site.StaticResourcePath}/images/wxnew.png">微信查保单</div>
+            </span>
+        <span class="fix-top" id="gotop">
+                <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_03.jpg" />
+                <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_03_on.jpg" />
+            </span>
+    </div>
+        
+ 	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.cookie.js"></script>
+	<!-- js加载 -->
+	<script type="text/javascript">VLTrace_custom_getparam='u1=productdetail';</script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/weixitrack.js"></script>
+	<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/wj_kxb/require.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/wj_kxb/require.config.js"></script>
+<!-- 	<script type="text/javascript" src="${Site.JsResourcePath}/js/wj_kxb/mod_guide.js"></script> -->
+<script type="text/javascript">
+  require(["guide"], function(index) {
+    if(index && index.init) {
+      index.init();
+    }
+  });
+  
+</script>
+</body>
+</html>

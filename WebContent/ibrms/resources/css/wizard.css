@@ -1,0 +1,48 @@
+div.wizardSteps div 
+{
+border-bottom:1px solid #E3E3E3;
+border-top:1px solid #FFFFFF;
+margin:0;
+padding:2px;
+vertical-align:middle;
+}
+
+
+div.wizardSteps div.wizardCurrentStep 
+{
+background-color:#776699;
+border-bottom:1px solid #004B7A;
+border-top:1px solid #5C9DBD;
+color:#FFFFFF;
+margin:0;
+padding:2px;
+vertical-align:middle;
+}
+
+#TreeMenu a:hover
+{
+color:#CC9900;
+}
+
+#TreeMenu a, #TreeMenu a:visited {
+color:#006699;
+text-decoration:none;
+}
+
+#TreeMenu a, #TreeMenu a:visited {
+color:#006699;
+text-decoration:none;
+}
+
+div.wizardSteps div a:hover {
+background-color:#FFFFFF;
+color:#CC9900;
+display:block;
+text-decoration:none;
+}
+
+div.wizardSteps div a {
+color:#006699;
+display:block;
+text-decoration:none;
+}

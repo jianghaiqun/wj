@@ -1,0 +1,15 @@
+<% DataTable dt_23 = TemplateData.getDocList("article","首页理赔案例","all","null","null","5","null","null","null");
+  if(dt_23==null){write("没有找到栏目。parent：null  catalog："+"首页理赔案例");}else{
+ int rdCnt=dt_23.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_23  = dt_23.getDataRow(i);
+ int rdIdx=i;
+%>
+
+							 	<% if(i%9==0){ %>
+									<span class="select swiper-pagination-switch swiper-visible-switch swiper-active-switch">${article_23.title}</span>
+							 	<% } else { %>
+									<span>${article_23.title}</span>
+							 	<% } %>
+							 <%}}%>

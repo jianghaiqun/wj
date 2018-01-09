@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <div class="help_link">
+        <h1 class="f_mi">帮助中心<em class="f_mi">人工客服，快捷解决</em></h1>
+        <ul class="help_contentus">
+            <li class="link1"><span>4009-789-789</span><em>7X24小时全天侯服务</em></li>
+            <li class="link2"><span class="zixun">在线咨询</span><em>服务时间：8:30-23:30</em></li>
+            <li class="link3"><span>邮件服务</span><em>kf@kaixinbao.com </em></li>
+        </ul>
+    </div>
+</div>

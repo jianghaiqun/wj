@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+.NonCarMiddArea{width:1000px; margin:0 auto;}
+.NonCarNavArea{border:1px solid #c8b398; background:#fff url(../images/Bg_1.gif) 0 -987px repeat-x; height:33px; line-height:33px; color:#7b7b7b; overflow:hidden; margin-bottom:10px; margin-top:5px;}
+.NonCarNavArea .IcoHome{background:url(../images/bggg.gif) top right no-repeat; float:left; padding-right:20px; margin-right:5px; text-indent:15px; font-weight:bold;}
+.NonCarNavArea .IcoHome a{color:#666666;}
+.NonCarMiddArea li{ height:32px; line-height:32px;}
+
+.valueStar, .valueStar i{background:url(../images/StarImg.gif) no-repeat 5px -30px; width:62px; height:12px; overflow:hidden; display: inline-block; margin:0px 0px 0 5px; padding-right: 5px; Font-size:1.08em}
+.valueStar i{ background-position:0 0px; overflow:hidden;}
+
+.NonCarColumnArea_1{position:relative;}
+.NonCarColumnArea_1 .YellowBrimArea{border:3px solid #fbb03b; position:absolute; width:330px; -webkit-box-shadow: 3px 3px 1px #9d9d9d;-moz-box-shadow:3px 3px 10px #9d9d9d;}
+.NonCarColumnArea_1 .YellowBrimArea .CloseArea{background:url(../images/Bg_2.gif) -880px -520px no-repeat; width:50px; height:20px; line-height:20px; text-indent:20px; margin-top:8px;}
+.NonCarColumnArea_1 .TitleTabArea{position:absolute;left:-42px; font-size:13px; font-weight:bold; color:#333333;}
+.NonCarColumnArea_1 .TitleTabArea .TabBg_1{background:url(../images/Bg_2.gif) -857px -134px; width:42px; height:49px;font-weight:bold;}
+.NonCarColumnArea_1 .TitleTabArea .TabBg_2{background:url(../images/Bg_2.gif) -857px -257px; width:42px; height:80px; padding-top:10px; overflow:hidden; font-weight:bold; line-height:16px;}
+.NonCarColumnArea_1 h2{font-size:16px; font-weight:bold; height:50px; line-height:50px;}
+.NonCarColumnArea_1 .ProductImgArea{float:left; margin-left:35px; text-align:left; margin-right:25px;}
+.NonCarColumnArea_1 .ProductImgArea img{margin-bottom:5px;}
+.NonCarColumnArea_1 .PrizeArea{float:left; background:url(../images/Bg_2.gif) -770px 0px no-repeat; width:130px; height:83px;}
+.NonCarColumnArea_1 .PrizeArea h5{margin-top:13px; text-align:center; color:#fff; }
+.NonCarColumnArea_1 .ProductTrait{padding:10px;}
+.NonCarColumnArea_1 .ProductTrait li{float:left; width:150px; height:30px; line-height:30px; margin-bottom:10px; background:url(../images/Bg_2.gif) -868px -400px no-repeat; text-indent:35px; text-align:left;}
+.NonCarColumnArea_1 .More_1{background:url(../images/Bg_2.gif) -640px -455px no-repeat; height:30px; line-height:30px; display:block; margin-right:10px;}
+
+.AllPriceArea{color:#C1272D; height:40px; line-height:40px; font-size:16px;}
+.AllPriceArea span{color:#333333;}
+.AllPriceArea strong{ font-size:24px;}

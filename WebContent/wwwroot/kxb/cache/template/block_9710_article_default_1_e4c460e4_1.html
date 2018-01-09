@@ -1,0 +1,17 @@
+<% DataTable dt_5 = TemplateData.getDocList("article","保险百科","all","image,recemmend","null","1","null","null","null");
+  if(dt_5==null){write("没有找到栏目。parent：null  catalog："+"保险百科");}else{
+ int rdCnt=dt_5.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_5  = dt_5.getDataRow(i);
+ int rdIdx=i;
+%>
+
+            	<div class="ImgArea fl">				
+                <img src="${Site.StaticResourcePath}wwwroot/test/${article_5.logo}" width="180" height="157" alt="${article_5.title}" /> 		
+            	</div>
+                <div class="HotTxtArea ">
+                	<h2 class="w245">${article_5.Title}</h2>
+                    <h5 class="w245">${article_5.Content}   <a href="../{article_5.Link}">[阅读全文]</a></h5>
+                </div>
+			  <%}}%>

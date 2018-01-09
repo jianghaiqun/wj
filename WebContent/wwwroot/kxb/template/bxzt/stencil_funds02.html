@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>
+${catalog.metetitle}
+</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/base.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/main.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body>
+<!--head 开始-->
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<!--head 结束-->
+<!--位置信息 开始-->
+<div class="h10"></div>
+<div class="bread"><a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a>
+</div>
+<!--位置信息 结束-->
+ <!--主体 开始-->
+<div class="wrap980 mainbgl644">
+	<!--左边 开始-->
+	<div class="left644">
+		<div class="medicalquery">
+		<%
+				 String parent_innercode = catalog.getString("InnerCode");
+				 parent_innercode = parent_innercode.substring(0,12);
+				 catalog.set("InnerCode", parent_innercode);
+			
+		%>
+		
+          <p><b>【直辖市】</b></p>
+			<p>                     	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi' and textvalue='直辖市') and zcarticle.CatalogInnerCode like '${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p>                   
+		<p><b>【河北省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi' and textvalue='河北省') and zcarticle.CatalogInnerCode like '${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【山西省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi' and textvalue='山西省') and zcarticle.CatalogInnerCode like '${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【内蒙古自治区】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='内蒙古自治区') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【江苏省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='江苏省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【浙江省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='浙江省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【安徽省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='安徽省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【福建省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='福建省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【江西省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='江西省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【山东省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='山东省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【四川省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='四川省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【贵州省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='贵州省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【云南省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='云南省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【西藏自治区】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='西藏自治区') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【辽宁省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='辽宁省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【吉林省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='吉林省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【黑龙江省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='黑龙江省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【河南省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='河南省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【湖北省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='湖北省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【湖南省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='湖南省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【广东省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='广东省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【广西壮族自治区】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='广西壮族自治区') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【海南省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='海南省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【陕西省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='陕西省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【甘肃省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='甘肃省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【青海省】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='青海省') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【宁夏回族自治区】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='宁夏回族自治区') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		<p><b>【新疆维吾尔自治区】</b></p>
+			<p>                      	
+                 <cms:list item="Article"  level="none" condition="zcarticle.id in (select relaid from zdcolumnvalue where columncode='suoshuchengshi'and textvalue='新疆维吾尔自治区') and zcarticle.CatalogInnerCode like'${Catalog.InnerCode}%'" >
+						<span><a href="${article.link}" title="${article.title}" target="_blank">${article.suoshuchengshi1}</a> </span>	                   
+				</cms:list>
+            </p> 
+		</div>
+		<div class="h30"></div>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="right336">
+		<!--热销保险产品 开始-->
+		<div class="columntit">热销保险产品</div>
+		<ul class="hotprodu grayborderb">
+			<cms:list item="article" level="all" type="rand" count="5" name="${catalog.productscope}" >	
+					<li>
+					<span class="produpic53"><a href="${Article.link}"><img src="${Site.ProductResourcePath}/${Article.Logo}" width="53" height="53" /></a></span>
+					<h3 class="font14 rxtiti"><a href="${Article.link}">${Article.title|CharWidth=15}</a></h3>
+					<p class="gray">${Article.AdaptPeopleInfo|CharWidth=16}</p>
+					<div class="clear"></div>
+					</li>
+					
+			 	</cms:list>
+		</ul>
+		<!--热销保险产品 结束-->
+		<!--图片切换 开始-->
+		<div id="KinSlideshow"  class="kinslideshow">
+			<cms:imageplayer code="yibao" type="0" width="300" height="250" />      
+        </div>
+		<!--图片切换 结束-->
+		<div class="tab02  graybordert">
+			<div class="h30"></div>
+             <ul> 
+                <li id="one1" onMouseOver="setTab('one',1,4)" class="hover"><a href="${Site.URL}/zixun">资讯</a></li>
+				<li id="one2" onMouseOver="setTab('one',2,4)" ><a href="${Site.URL}/baike">百科</a></li>
+				<li id="one3" onMouseOver="setTab('one',3,4)" ><a href="${Site.URL}/wenda">问答</a></li>
+				<li id="one4" onMouseOver="setTab('one',4,4)" ><a href="${Site.URL}/zhishi">知识</a></li>
+             </ul>
+        </div>
+		<div class="clear"></div>
+		<div class="" id="con_one_1">
+			<ul class="txtlist">
+				<cms:list item="article" level="all" type="rand" tag="${catalog.tag}" count="16" name="保险咨询">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=16}</a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="" id="con_one_2" style="display:none;">
+			<ul class="txtlist">
+				<cms:list item="article" level="all" type="rand" tag="${catalog.tag}" count="16" name="保险百科">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=16}</a></li>
+			</cms:list>
+			</ul>
+		</div>
+		<div class="" id="con_one_3" style="display:none;">
+			<ul class="txtlist">
+				<cms:list item="article" level="all" type="rand" tag="${catalog.tag}" count="16" name="保险问答">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=16}</a></li>
+			</cms:list>
+			</ul>
+		</div>
+		<div class="" id="con_one_4" style="display:none;">
+			<ul class="txtlist">
+				<cms:list item="article" level="all" type="rand" tag="${catalog.tag}" count="16" name="保险知识">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=16}</a></li>
+			</cms:list>
+			</ul>
+		</div>
+        <div class="h30"></div>
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+         
+<!--foot 开始-->
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<!--foot 结束-->
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!-- qq彩贝 -->
+<div id="qqcb_login_content" class="qqcb_login cf"  style="display: none;">
+	<div class="wrapper_qqcb">
+		<div id="qqcb_headshow" class="qqcb_head">
+		</div>
+		<div  class="qqcb_me">
+			<a id="qqcb_jifenurl" href="../">我的彩贝积分</a>
+		</div>
+	</div>
+</div>
+<!-- qq彩贝 -->
+<!--mini nav 开始-->
+
+  <div class="min_nav">
+   <div class="nav_box">
+     <div class="login_box" id="NotLogin"><span>您好，欢迎来到开心保！请 </span ><a href="###" id="headerShowLoginWindow">登录</a> <span>|</span> <a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag">免费注册</a> </div>
+     <div class="login_box" id="YesLogin" style="display: none;"><span>您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername">会员中心</a><i onclick="linkMemDesc();" id="headerLoginMemGradeIcon"></i><span class="vip_jf">(<em id="memberPointsCount"></em>)<div class="goto_jifen" id="pointsChange" style="display: none;">快到<a href="http://localhost:8080/jifen/">商城消费</a><span class="colse_sc"></span></div></span>，欢迎来到开心保！<a href="javascript:void(0);" id="headerLogout" class="headerLogout">退出</a></span> </div>
+     <div class="q_link"> 
+     <ul class="top_nav_link" id="topnav_link">
+     	  <li class="gwc_nav"><a class="q_link_c q_link_shop" href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action">我的购物车(<span id="shopCartNo" class="gwc_nums">0</span>)</a></li>
+          <li><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="q_link_c ">会员中心</a></li>
+          <li><a href="http://localhost:8080/about/" class="q_link_c"  target="_blank">帮助中心</a></li>
+          <li class="min_nav_cord"><a href="###" class="q_link_c">公众号</a>
+              <div class="q_link_cord" style="display:none;"></div>
+          </li>
+          <li class="topNavDropMenuBox"><a href="javascript:void(0);" class="q_link_c q_link_d " id="wz_nav">网站导航<b id="nav_wfs" class="nav_wf switch"></b></a>
+           <div id="topNavDropMenu" class="wz_nav_box topNavDropMenu " style="display:none;" >   
+     	<dl class="clearfix">
+     		<dt>保险产品</dt>
+     		<dd class="navmin1"><a href="http://localhost:8080/lvyou-baoxian/" target="_blank" rel="nofollow">旅游险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/yiwai-baoxian/" target="_blank" rel="nofollow">意外险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/jiankang-baoxian/" target="_blank" rel="nofollow">健康险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/renshou-baoxian/" target="_blank" rel="nofollow">人寿险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/jiacai-baoxian/"  target="_blank" rel="nofollow">家财险</a></dd>
+         	<dd class="navmin1"><a href="http://localhost:8080/chexian/"  target="_blank" rel="nofollow">车险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/tx/"  target="_blank" rel="nofollow">团体险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/touzi-licai/"  target="_blank" rel="nofollow">理财险</a></dd>
+     	</dl>
+        <dl class="clearfix">   
+     		<dt>保险社区</dt>
+            <dd class="navmin2"><a href="http://localhost:8080/zhishi/"  target="_blank">保险知识</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/zixun/"  target="_blank">保险资讯</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/wenda/"  target="_blank">保险问答</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/baike/"  target="_blank">保险百科</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/zhuanti/"  target="_blank">保险专题</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/gongsi/"  target="_blank">保险公司</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/jifen/"  target="_blank" rel="nofollow">积分商城</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/huati/"  target="_blank">热门话题</a></dd>
+     	</dl>
+         <dl class=" clearfix clear_bors">    
+     		<dt>服务中心</dt>
+            <dd class="navmin3"><a href="http://localhost:8080/group/"  target="_blank">合作商入口</a></dd>
+            <dd class="navmin3"><a href="http://localhost:8080/ddkscx/"  target="_blank">订单快速查询</a></dd>
+            <dd class="navmin3"><a href="http://localhost:8080/bdyz/"  target="_blank">保单验真</a></dd>
+            <dd class="navmin3"><a href="http://localhost:8080/lpzs/index.shtml"  target="_blank">理赔服务助手</a></dd> 
+     	</dl>
+     </div>
+       </li>
+       <li class="navmin_tel">
+         	服务热线<span class="nav_tels">4009-789-789</span>
+       </li>
+     </ul>
+
+     </div>
+   </div>
+  </div>
+<!--mini nav 结束-->

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>正在连接，请稍后…</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css"/>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper">
+  <div class="guodu_box">
+       <div class="guodu_logo"></div>
+    <p class="meihua_p">正在与 <b class="font_guodu_p"><span id="company"></span></b>网站连通<br/>请稍候...</p>
+    <img src="${Site.StaticResourcePath}/images/loading2.gif" width="70" height="70" />
+    </div>
+</div>
+
+<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+<!--	维析针对不同险种车险的跳转统计的 	-->
+<script type="text/javascript">
+					function isIllegal(temp) {
+						var regex = "script|prompt|iframe|<|>|\"|\'|javascript";
+						var r = temp.match(regex); 
+						if(r==null||r==""){
+							return false; 
+						}else{
+							return true;
+						}
+					}
+				 var str=window.location.search;   //location.search是从当前URL的?号开始的字符串
+				 if(isIllegal(str)){
+					 window.location.href= sinosoft.base+"/error.jsp?errormsg='carjs'";
+					 }else{
+						 str = str.substring(str.indexOf("?")+1,str.indexOf("*"));
+						 str = str.replace("$wen$", "?");
+						 var title =[
+							 ["http://www.4008000000.com","paCar"],
+							 ["http://www.ecpic.com.cn","tpyCar"],
+							 ["http://chexian.sinosig.com","ygCar"],
+							 ["http://www.95590.cn","ddCar"],
+							 ["http://chexian.axatp.com","astpCar"],
+							 ["http://www.axatp.com","astpCar"]
+							]
+						 for(var i=0;i<title.length;i++){
+							 if(str.indexOf(title[i][0])!=-1){
+								 var weixi_js="<script type=\"text/javascript\">VLTrace_custom_getparam='p="+title[i][1]+"';</sc" + "ript>";
+								 document.write(weixi_js);
+								 document.write("<div id=\"WeixiChexian\" style=\"display:none;\"><script type=\"text/javascript\" src=\"http://www.kaixinbao.com/js/weixitrack.js\"></sc" + "ript></div>");
+							}
+						 }
+					 }
+	</script>
+<!--	维析针对车险整体的跳转统计-->
+<script type="text/javascript">VLTrace_custom_getparam='p=chexianl';</script>
+<cms:include file="block/community.shtml" />
+
+
+<script type="text/javascript">
+	function isIllegal(temp) {
+		var regex = "script|prompt|iframe|<|>|\"|\'|javascript";
+		var r = temp.match(regex); 
+		if(r==null||r==""){
+			return false; 
+		}else{
+			return true;
+		}
+	}
+ 	setTimeout("openlink()",1500);
+ 	window.onload=function(){
+		 var str=window.location.search;   //location.search是从当前URL的?号开始的字符串
+		 if(isIllegal(str)){
+			 window.location.href= sinosoft.base+"/error.jsp?errormsg='carjs'";
+			 }else{
+			 str = str.substring(str.indexOf("*"));
+			 str = str.replace("*", "");
+			 str = unescape(str);
+			 document.getElementById("company").innerHTML=str;
+			 }
+    }
+ 	
+</script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

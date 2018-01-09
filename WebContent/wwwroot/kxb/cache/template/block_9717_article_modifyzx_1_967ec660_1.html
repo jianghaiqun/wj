@@ -1,0 +1,13 @@
+<% DataTable dt_26 = TemplateData.getDocList("article","考试","all","hot","modifyzx","1","null","null","null");
+  if(dt_26==null){write("没有找到栏目。parent：null  catalog："+"考试");}else{
+ int rdCnt=dt_26.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_26  = dt_26.getDataRow(i);
+ int rdIdx=i;
+%>
+
+									  <h4 class="news_ctTitle news_tab_jcct rnews_tl ellipsis"><a href="${article_26.Link}" >${article_26.Title}</a></h4> 
+									  <h4 class="rnews_prg">${article_26.Summary|CharWidth=36}</h4>
+									  <a href="${article_26.Link}" class="rnew_more"> 【详情】</a>
+								  <%}}%>

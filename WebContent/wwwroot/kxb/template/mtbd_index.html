@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_about.css">
+<link rel="shortcut icon" href="favicon.ico"/>>
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>	
+<cms:include file="block/kxb_custom_header.shtml"/>
+</head>
+<body class="re-bg">
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="abouBox">
+	 	<div class="wrapper">
+		<!-- 顶部 开始 -->
+			<div class="daohang">
+				<span class="daohang_home"></span>
+				<cms:link type="currentPositionList"></cms:link>
+			</div>
+		</div>
+		<div class="about_con">
+		    <div class="about_nav">
+		      <ul>
+		        <li><a href="<cms:link type='Catalog' name='关于开心保' />">关于开心保</a></li>
+		        <li><a href="<cms:link type='Catalog' name='媒体报道' />">媒体报道</a></li>
+		        <!--<li><a href="<cms:link type='Catalog' name='加入我们' />">加入我们</a></li>-->
+		        <li><a href="<cms:link type='Catalog' name='联系我们' />">联系我们</a></li>
+		        <li><a href="<cms:link type='Catalog' name='分销平台' />">分销平台</a></li>
+		        <li><div class="about_nav_m "><span class="div_more">更多</span>
+		            <ul>
+		              <li><a href="<cms:link type='Catalog' name='注册协议' />">注册协议</a></li>
+		              <li><a href="<cms:link type='Catalog' name='网站地图' />">网站地图</a></li>
+		              <li><a href="<cms:link type='Catalog' name='法律声明' />">法律声明</a></li>
+		            </ul></div></li>
+		      </ul>
+		    </div>
+		    <cms:list item="article" count="1">
+			<div class="kxb_about">
+				<h2 class="about_tit_n f_mi">媒体报道</h2>
+			    <div class="kxb_des_con">
+			    <div class="kxb_banners">
+			     	<cms:imageplayer code="mtbd_detail_banner" type="0" width="884" height="356" />
+			         </div>
+			        <div class="kxb_news_box">
+			            <ul class="kxb_new_ul" id="kxb_new_ul">
+			              <li class="f_mi select">媒体时讯</li>
+			              <li class="f_mi">公司动态</li>
+			            </ul>
+			            <div id="kxb_new_mod">
+			              <div class="news_mod_box" style="display: block;">
+			             
+			                <ul class="news_list" id="mtsxInfo">
+			                </ul>
+							 <!--    翻页    -->
+			                <div id="mtsxPage" class="page_area">
+							</div>
+							<div class="clear"></div>
+			              </div>
+			              <div class="news_mod_box" style="display: none;">
+			                <ul class="news_list" id="gsdtInfo">
+			                </ul>
+			               	<div id="gsdtPage" class="page_area">
+							</div>
+							<div class="clear"></div>
+			              </div>
+			              </div>
+			          </div>
+			          <img src="${Site.StaticResourcePath}/images/about/imgs_25.gif" class="kxb_linkus" alt="">
+			      </div>
+			</div>
+			</cms:list>
+		</div>
+	</div>
+<cms:include file="block/kxb_footer_new_common.shtml"></cms:include>
+<cms:include file="block/community_v1.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_about.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery.ajax({
+		type: 'post',
+		url: sinosoft.base+'/shop/article!mtbdInit.action',
+		dataType: "json",
+		async: true,
+		success: function(data) {
+			if (data.mtsxInfo != null && data.mtsxInfo != '') {
+				jQuery("#mtsxInfo").html(data.mtsxInfo);
+			}
+			if (data.mtsxPage != null && data.mtsxPage != '') {
+				jQuery("#mtsxPage").html(data.mtsxPage);
+			}
+			if (data.gsdtInfo != null && data.gsdtInfo != '') {
+				jQuery("#gsdtInfo").html(data.gsdtInfo);
+			}
+			if (data.gsdtPage != null && data.gsdtPage != '') {
+				jQuery("#gsdtPage").html(data.gsdtPage);
+			}
+		}
+	});
+});
+</script>
+	</body>
+</html>
+

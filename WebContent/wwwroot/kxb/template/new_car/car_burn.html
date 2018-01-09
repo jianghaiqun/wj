@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="${catalog.Meta_Keywords}" />
+	<meta name="description" content="${catalog.Meta_Description}" />
+	<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+    <link href="${Site.StaticResourcePath}/style/new/global.css" rel="stylesheet" type="text/css"/>
+    <link href="${Site.StaticResourcePath}/style/car/base.css" rel="stylesheet" type="text/css"/>
+    <link href="${Site.StaticResourcePath}/style/car/information.css" rel="stylesheet" type="text/css"/>
+    <link href="${Site.StaticResourcePath}/style/car/howbuy.css" rel="stylesheet" type="text/css"/>
+    <link href="${Site.StaticResourcePath}/style/new/other.css" rel="stylesheet" />
+</head>
+<body onload="navHeight();">
+   <cms:include file="block/car_header.shtml" />
+<!--mainbody start-->
+<div class="mainbody">
+	<div class="wrapper">
+	<input id="type" type="hidden" value="C"/>
+    	<div class="your_site"><cms:link type="currentPositionList"></cms:link></div>
+        <!--主体部分 左侧边栏 开始-->
+        <div class="buyleftbar">
+        	 <!--获取报价 start-->
+            <div class="price">
+                <ul>
+                    <li><span class="bg07 white">车主姓名</span><input id="carUser" name="carUser" type="text" class="text" maxlength="30"/></li>
+                    <li><span class="bg08 white">联系电话</span><input id="carPhone" name="carPhone" type="text" class="text" maxlength="11"/></li>
+                    <li><span class="bg09 white">车牌号</span><input id="carNO" name="carNO" type="text" class="text" maxlength="9"/></li>
+                    <li><input name="" type="checkbox" value="" id="guidtype" align="absmiddle"/><label for="guidtype">新车未上牌</label></li>
+                    <li><span class="mt_6">保险公司</span>
+                        <div class="index_tb_right pr" id="corpBar">
+                            <a href="javascript:;" class="car_tb_corp tb_active" rel="pa">平安</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="tpy">太平洋</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="yg">阳光</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="dd">大地</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="tp">安盛天平</a>
+                        </div>
+                    </li>
+                    <li><input name="" onclick="guoduNew()" type="button" class="btn" value="获取报价" /></li>
+                </ul>
+              <div class="clear"></div>
+            </div>
+            <!--获取报价 end-->
+            <!--商业车险种类 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>商业车险种类</h2>
+                </div>
+                <ul class="cartype">
+                	<li class="mr10"><a href="${Site.URL}/chexian/huahenxian.shtml" target="_blank" title="划痕险">划痕险</a></li>
+                    <li><a href="${Site.URL}/chexian/sheshuixian.shtml" target="_blank" title="涉水险">涉水险</a></li>
+                    <li class="mr10"><a href="${Site.URL}/chexian/chesunxian.shtml" title="车辆损失险">车辆损失险</a></li>
+                    <li><a href="${Site.URL}/chexian/ziranxian.shtml" target="_blank" title="自燃损失险">自燃损失险</a></li>
+                    <li class="mr10"><a href="${Site.URL}/chexian/daoqiangxian.shtml" title="车辆盗抢险">车辆盗抢险</a></li>
+                    <li><a href="${Site.URL}/chexian/bolixian.shtml" target="_blank" title="玻璃单独破碎险">玻璃单独破碎险</a></li>
+                    <li class="mr10"><a href="${Site.URL}/chexian/sanzexian.shtml" target="_blank" title="第三者责任险">第三者责任险</a></li>
+                    <li><a href="${Site.URL}/chexian/chezexian.shtml" target="_blank" title="车上人员责任险">车上人员责任险</a></li>
+                    <li class="mr10"><a href="${Site.URL}/chexian/bujimianpeixian.shtml" target="_blank" title="不计免赔特约险">不计免赔特约险</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--商业车险种类 结束-->
+            <!--常见问题 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>常见问题</h2>
+                    <h6><a href="${Site.URL}/chexian/club/wenda/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险问答" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--常见问题 结束-->
+            <!--案例解读 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>案例解读</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险案例" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--案例解读 结束-->
+            <!--车险知识 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>车险知识</h2>
+                    <h6><a href="${Site.URL}/chexian/club/zhishi/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险知识" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--车险知识 结束-->
+            <div class="right_banner mt10 border_gray"><a href="${catalog.LeftHref}" target="_blank"><img src="${Site.StaticResourcePath}/${catalog.LeftAd}" width="223" height="82" /></a></div>
+            <!--友情链接 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>友情链接</h2>
+                </div>
+                <ul class="linklist">
+                	<cms:list item="friendlink"  name="车险理赔">
+						<li class="<% if(i%2==0) write("mr10");%>"><a href="${friendlink.URL}" target="_blank" title="${friendlink.Name}">［${friendlink.Name}］</a></li>
+			 		</cms:list>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--友情链接 结束-->
+        </div>
+        <!--主体部分 左侧边栏 开始-->
+            <!--主体部分 右侧 开始-->
+            <div class="buymain">
+                <!--险种介绍 开始-->
+                <div class="howbuy">
+                    <div class="buymaintit">
+                        <h1>险种介绍</h1>
+                    </div>
+                </div>
+                <div class="whatthree">
+                    <div class="whatleft">
+                        <h1>什么是自燃险？ </h1>
+                        <p>自燃险指的是在保险期间内，保险车辆在使用过程中，由于本车电路、线路、油路、供油系统、货物自身发生问题、机动车运转摩擦起火引起火灾，造成保险车辆的损失，以及被保险人在发生该保险事故时，为减少保险车辆损失而必须要支出的合理施救费用，保险公司会相应的进行赔偿。</p>
+                        <h6><a href="http://www.kaixinbao.com/chexian/club/zhishi/A07G20140331102.shtml" target="_blank">自燃险费率</a><a href="http://www.kaixinbao.com/chexian/club/zhishi/A07G20140331103.shtml" target="_blank">自燃险条款</a><a href="http://www.kaixinbao.com/chexian/club/zhishi/A07G20140331104.shtml" target="_blank">自燃险免赔范围</a><a href="http://www.kaixinbao.com/chexian/club/zhishi/A07G20140331106.shtml" target="_blank">自燃险赔偿范围</a></h6>
+                    </div>
+                    <div class="whatright wenbin_percent3">
+                        <h2><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2021">自燃险在线购买</a></h2>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!--险种介绍 结束-->
+                <!--"险"比三家 开始-->
+                <div class="howbuy">
+                    <div class="buymaintit">
+                        <h2>"险"比三家</h2>
+                    </div>
+                </div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ratio">
+                    <tr>
+                        <td width="11%">&nbsp;</td>
+                        <td width="17%"><a href="${Site.Prop6}/Transition/PinAnTransition.jsp" title="中国平安"><img src="${Site.StaticResourcePath}/images/new_car/link_icon14.png" width="110" height="58" /></a></td>
+		                <td width="18%"><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2011" title="太平洋保险"><img src="${Site.StaticResourcePath}/images/new_car/link_icon10.png" width="110" height="58" /></a></td>
+		                <td width="18%"><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=1087" title="阳光保险集团"><img src="${Site.StaticResourcePath}/images/new_car/link_icon11.png" width="110" height="58" /></a></td>
+		                <td width="18%"><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2021" title="中国大地保险"><img src="${Site.StaticResourcePath}/images/new_car/link_icon12.png" width="110" height="58" /></a></td>
+		                <td width="18%"><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2026" title="安盛天平汽车保险" ><img src="${Site.StaticResourcePath}/images/new_car/link_icon13.png" width="110" height="58" /></a></td>
+                    </tr>
+                    <tr>
+                        <td class="center">自燃险保障范围</td>
+                        <td colspan="5">保险车辆在使用过程中，因本车电器、线路、油路、供油系统、供气系统、货物自身发生问题、机动车运转摩擦起火引起火灾，造成保险车辆的损失，以及相关施救费用，保险公司负责赔偿。</td>
+                    </tr>
+                    <tr>
+                        <td class="center">不同公司自燃险保障相同部分</td>
+                        <td colspan="5">被保险人在使用保险车辆过程中，因人工直接供油、高温烘烤等违反车辆安全操作规则造成的损失。</td>
+                    </tr>
+                    <tr>
+                        <td class="center">各公司免赔范围不同之处比较</td>
+                        <td class="vtop">自燃导致的货物损失免赔。</td>
+                        <td class="vtop">自燃导致的货物损失免赔。</td>
+                        <td class="vtop">自燃导致的货物损失免赔。</td>
+                        <td class="vtop">1、 因自燃仅造成电器、线路、油路、供油系统、供气系统的损失免赔。<br />
+                            2、自燃导致的货物损失免赔。
+                        </td>
+                        <td class="vtop">保险车辆已达到国家规定的机动车强制报废标准后发生的损失问题免赔。</td>
+                    </tr>
+                </table>
+                <!--"险"比三家 结束-->
+                <!--投保建议 开始-->
+                <div class="proposal">
+                    <div class="proposaltit">
+                        <h2>投<br />
+                            保<br />
+                            建<br />
+                            议</h2>
+                    </div>
+                    <div class="proposallist">
+                        <ul>
+                            <li class="borb">
+                                <p>如果被保险车辆是老车或者处在恶劣环境下行车，担心容易自燃引起火灾导致损失，建议投保太平洋、平安和阳光车险。</p>
+                                <a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=1087" >阳光车险免费报价</a></li>
+                            <li>
+                                <p>对于运载货物的损失问题，除安盛天平保险外，其他保险公司则明文规定货物自身损失免赔，
+                                安盛天平对被保险人最有利，建议投保。</p>
+                                <a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2026" >安盛天平免费报价</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--投保建议 结束-->
+               <!--比较组 开始-->
+            <div class="threeratio">
+            	<ul>
+                	<li><a href="${Site.URL}/chexian/chesunxian.shtml" target="_blank" title="车损险">车损险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/bolixian.shtml" target="_blank" title="玻璃单独破碎险">玻璃单独破碎险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/daoqiangxian.shtml" target="_blank" title="盗抢险">盗抢险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/huahenxian.shtml" target="_blank" title="车身划痕保险">车身划痕保险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/chezexian.shtml" target="_blank" title="车上人员险">车上人员险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/ziranxian.shtml" target="_blank" title="自燃损失险">自燃损失险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/sheshuixian.shtml" target="_blank" title="涉水险">涉水险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/bujimianpeixian.shtml" target="_blank" title="不计免赔险">不计免赔险比较</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--比较组 结束-->
+            <!--品牌推荐 开始-->
+            <div class="proposal">
+            	<div class="recommendtit"><h2>品<br />牌<br />推<br />荐</h2></div>
+                <div class="servicellist">
+                	<ul>
+                		<cms:list item="Image" name="品牌推荐" >
+							<li><a href="${Image.wangzhi}" title="${Image.title}" target="_blank" rel="nofollow"><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="116" height="130" align="absmiddle" /></a></li>
+                        </cms:list>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--品牌推荐 开始-->
+            <!--优惠活动 开始-->
+        	<div class="howbuy">
+                <div class="buymaintit"><h2>优惠活动</h2></div>
+                <div class="topic">
+                	<ul>
+                		<cms:list item="Image" name="优惠活动" >
+							<li><a href="${Image.href}" title="${Image.title}" target="_blank" ><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}"  width="133" height="78" align="absmiddle" /><span>${Image.title}</span></a></li>
+                        </cms:list>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--优惠活动 结束-->
+        </div>
+        <!--主体部分 右侧 结束-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mainbody end-->
+<cms:include file="block/car_footer.shtml" /> 
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/car.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('div, ul, img, li, input , a');
+</script>
+<![endif]-->
+</body>
+</html>
+
+
+

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:tx="http://www.springframework.org/schema/tx" 
+    xmlns:oscache="http://www.springmodules.org/schema/oscache"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 
+	http://www.springmodules.org/schema/oscache 
+	http://www.springmodules.org/schema/cache/springmodules-oscache.xsd
+	">
+	
+	<bean id="xInitializing" class="cn.com.sinosoft.common.Initializing"><property name="keyFile" value="c2hvcHh4LnR4d" /></bean>
+
+	<context:annotation-config></context:annotation-config>  
+	<bean id="payBaseServiceImpl" class="cn.com.sinosoft.service.impl.PayBaseServiceImpl"></bean>  
+	<bean id="tbOrderInsureDataSavingImpl" class="com.sinosoft.framework.service.TbOrderInsureDataSavingImpl" />
+	<bean id="tbOrderInfoDataSave" class="com.sinosoft.framework.service.TbOrderInfoDataSave" />
+
+	<!-- JDBC参数配置  -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" lazy-init="true">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list> 
+				<value>classpath:/jdbc.properties</value>
+			</list>
+		</property>     
+	</bean>
+
+	<!-- 数据源配置 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<!-- 设置JDBC驱动名称 -->
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<!-- 设置JDBC连接URL -->
+		<property name="url" value="${jdbc.url}" />
+		<!-- 设置数据库用户名 -->
+		<property name="username" value="${jdbc.username}" />
+		<!-- 设置数据库密码 -->
+		<property name="password" value="${jdbc.password}" />
+		<!-- 设置连接池初始值 -->
+		<property name="initialSize" value="5" />
+		<!-- 设置连接池最大值 -->
+		<property name="maxActive" value="100" />
+		<!-- 设置连接池最小空闲值 -->
+		<property name="minIdle" value="20" />
+		<!-- 设置连接池最大空闲值 -->
+		<property name="maxIdle" value="50" />
+		
+		<property name="maxWait" value="600000" />       <!-- 一个查询10分钟内没有返回，自动放弃 -->  
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnReturn" value="true" />
+          
+       <property name="validationQuery" value="SELECT 1" />   <!-- 数据库连接可用性测试语句 -->  
+       <property name="testOnBorrow" value="true" />          <!-- 每次获取一个连接的时候，验证一下连接是否可用，语句在validationQuery里面 -->  
+       <property name="removeAbandoned" value="true" />       <!-- 自动处理连接未关闭的问题，Setting this to true can recover db connections from poorly written applications which fail to close a connection.  -->  
+       <property name="removeAbandonedTimeout" value="300" /> <!-- 连接使用后5分钟未关闭，则抛弃 -->  
+         
+       <!-- 每5分钟检查一次，每次检查3个连接，如果连接空闲时间达到5分钟，则认为可以Evict，从连接池排除   
+            空闲的连接是否排除对连接池似乎没有太大影响，我们只需要保证每次获取的连接都可用，所以暂时先不开启  
+        <property name="timeBetweenEvictionRunsMillis" value="300000" />  
+       <property name="numTestsPerEvictionRun" value="3" />  
+        <property name="minEvictableIdleTimeMillis" value="320000" />-->  
+		
+	</bean>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<!-- 配置Hibernate拦截器,自动填充数据的插入、更新时间 -->
+		<property name="entityInterceptor" ref="entityInterceptor" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<value>
+				<!-- 设置数据库方言 -->
+				hibernate.dialect=${hibernate.dialect}
+				<!-- 设置自动创建|更新|验证数据库表结构 -->
+				hibernate.hbm2ddl.auto=update
+				<!-- 输出SQL语句到控制台 -->
+				hibernate.show_sql=false
+				<!-- 格式化输出到控制台的SQL语句 -->
+				hibernate.format_sql=${hibernate.format_sql}
+				<!-- 是否开启二级缓存 -->
+				hibernate.cache.use_second_level_cache=false
+				<!-- 配置二级缓存产品 -->
+				hibernate.cache.provider_class=org.hibernate.cache.OSCacheProvider
+				<!-- 是否开启查询缓存 -->
+				hibernate.cache.use_query_cache=false
+				<!-- 数据库批量查询数 -->
+				hibernate.jdbc.fetch_size=50
+				<!-- 数据库批量更新数 -->
+				hibernate.jdbc.batch_size=30
+				hibernate.autoReconnect=true 
+			</value>
+		</property>
+
+		<property name="annotatedClasses">
+			<list>
+				<value>cn.com.sinosoft.entity.Information</value>
+				<value>cn.com.sinosoft.entity.ArticleHome</value>
+				<value>cn.com.sinosoft.entity.OrderProduct</value>
+				<value>cn.com.sinosoft.entity.Code</value>
+				<value>cn.com.sinosoft.entity.CustomerDemand</value>
+				<value>cn.com.sinosoft.entity.Area</value>
+				<value>cn.com.sinosoft.entity.LogConfig</value>
+				<value>cn.com.sinosoft.entity.Log</value>
+				<value>cn.com.sinosoft.entity.Admin</value>
+				<value>cn.com.sinosoft.entity.Role</value>
+				<value>cn.com.sinosoft.entity.Cresource</value>
+				<value>cn.com.sinosoft.entity.MemberRank</value>
+				<value>cn.com.sinosoft.entity.Member</value>
+				<value>cn.com.sinosoft.entity.MemberAttribute</value>
+				<value>cn.com.sinosoft.entity.Receiver</value>
+				<value>cn.com.sinosoft.entity.ProductCategory</value>
+				<value>cn.com.sinosoft.entity.Product</value>
+				<value>cn.com.sinosoft.entity.ProductType</value>
+				<value>cn.com.sinosoft.entity.ProductAttribute</value>
+				
+				<value>cn.com.sinosoft.entity.ProductInsType</value>
+				<value>cn.com.sinosoft.entity.ProductInsAttribute</value>
+				
+				<value>cn.com.sinosoft.entity.Brand</value>
+				<value>cn.com.sinosoft.entity.Navigation</value>
+				<value>cn.com.sinosoft.entity.ArticleCategory</value>
+				<value>cn.com.sinosoft.entity.Article</value>
+				<value>cn.com.sinosoft.entity.FriendLink</value>
+				<value>cn.com.sinosoft.entity.Footer</value>
+				<value>cn.com.sinosoft.entity.Agreement</value>
+				<value>cn.com.sinosoft.entity.Message</value>
+				<value>cn.com.sinosoft.entity.CartItem</value>
+				<value>cn.com.sinosoft.entity.PaymentConfig</value>
+				<value>cn.com.sinosoft.entity.Deposit</value>
+				<value>cn.com.sinosoft.entity.Payment</value>
+				<value>cn.com.sinosoft.entity.Refund</value>
+				<value>cn.com.sinosoft.entity.Shipping</value>
+				<value>cn.com.sinosoft.entity.Reship</value>
+				<value>cn.com.sinosoft.entity.DeliveryType</value>
+				<value>cn.com.sinosoft.entity.DeliveryCorp</value>
+				<value>cn.com.sinosoft.entity.DeliveryItem</value>
+				<value>cn.com.sinosoft.entity.Order</value>
+				<value>cn.com.sinosoft.entity.OrderItem</value>
+				<value>cn.com.sinosoft.entity.OrderLog</value>
+				
+				<value>cn.com.sinosoft.entity.Channel</value>
+				
+				<value>cn.com.sinosoft.entity.PremiumRate</value>
+				<value>cn.com.sinosoft.entity.PremiumRateTemp</value>
+				<value>cn.com.sinosoft.entity.City</value>
+				<value>cn.com.sinosoft.entity.FDInsCom</value>
+				<value>cn.com.sinosoft.entity.CarMenu</value>
+				<value>cn.com.sinosoft.entity.Dict</value>
+				<value>cn.com.sinosoft.entity.CarRateInformation</value>
+				<value>cn.com.sinosoft.entity.Insurance</value>
+				<value>cn.com.sinosoft.entity.ShowInsurance</value>
+				<value>cn.com.sinosoft.entity.SDtargetInformation</value>
+				<value>cn.com.sinosoft.entity.PresentCategory</value>
+				<value>cn.com.sinosoft.entity.Present</value>
+				<value>cn.com.sinosoft.entity.PresentDeliveryItem</value>
+				<value>cn.com.sinosoft.entity.PresentObtain</value>
+				<value>cn.com.sinosoft.entity.PointTurnover</value>
+				<value>cn.com.sinosoft.entity.PaymentCompany</value>
+				<value>cn.com.sinosoft.entity.SCQuestion</value>
+				<value>cn.com.sinosoft.entity.SCAnswer</value>
+				<value>cn.com.sinosoft.entity.AppInsured</value>
+				<value>cn.com.sinosoft.entity.Stock</value>
+				<value>cn.com.sinosoft.entity.Gift</value>
+				<value>cn.com.sinosoft.entity.MemberHobby</value>
+				<value>cn.com.sinosoft.entity.TradeInformation</value>
+				<value>cn.com.sinosoft.entity.PayBase</value>
+				<value>cn.com.sinosoft.entity.InformationInsured</value>
+				<value>cn.com.sinosoft.entity.InformationAppnt</value>
+				<value>cn.com.sinosoft.entity.InformationBnf</value>
+				<value>cn.com.sinosoft.entity.InformationItemMain</value>
+				<value>cn.com.sinosoft.entity.InformationItemCargo</value>
+				<value>cn.com.sinosoft.entity.InformationItemHouse</value>
+				<value>cn.com.sinosoft.entity.InformationItemProp</value>
+				<value>cn.com.sinosoft.entity.InformationRiskType</value>
+				<value>cn.com.sinosoft.entity.InformationDuty</value>
+				<value>cn.com.sinosoft.entity.RefundBase</value>
+				<value>cn.com.sinosoft.entity.MyTrailNonAuto</value>
+				<value>cn.com.sinosoft.entity.TrailProduct</value>
+				<value>cn.com.sinosoft.entity.Occupation</value>
+				<value>cn.com.sinosoft.entity.Dictionary</value>
+				<value>cn.com.sinosoft.entity.InformationInsuredElements</value>
+				<value>cn.com.sinosoft.entity.ProductCollection</value>
+				<value>cn.com.sinosoft.entity.InsuredCompanyReturnData</value>
+				<value>cn.com.sinosoft.entity.LotteryAct</value>
+				<value>cn.com.sinosoft.entity.PageLayout</value>
+				<value>cn.com.sinosoft.entity.MemberDonated</value>
+				<value>cn.com.sinosoft.entity.Reservation</value>
+				<value>cn.com.sinosoft.entity.GALog</value>
+				<value>cn.com.sinosoft.entity.MemberChannel</value>
+				<value>cn.com.sinosoft.entity.HealthyInfo</value>
+				<value>cn.com.sinosoft.entity.ProductConfig</value>
+				<value>cn.com.sinosoft.entity.InsuredHealth</value>
+				<value>cn.com.sinosoft.entity.ProductPeriod</value>
+				<value>cn.com.sinosoft.entity.ZdrecordCps</value>
+				<value>cn.com.sinosoft.entity.QuestionPaper</value>
+				<value>cn.com.sinosoft.entity.SDOrder</value>
+				<value>cn.com.sinosoft.entity.SDOrderItem</value> 
+				<value>cn.com.sinosoft.entity.SDInformation</value>
+				<value>cn.com.sinosoft.entity.SDInformationRiskType</value>
+				<value>cn.com.sinosoft.entity.SDInformationInsured</value> 
+				<value>cn.com.sinosoft.entity.SDInformationDuty</value> 
+				<value>cn.com.sinosoft.entity.SDInformationAppnt</value>
+				<value>cn.com.sinosoft.entity.SDInformationInsuredElements</value> 
+				<value>cn.com.sinosoft.entity.SDInformationBnf</value> 
+				<value>cn.com.sinosoft.entity.SDInsuredHealth</value> 
+				<value>cn.com.sinosoft.entity.SDOrderItemOth</value> 
+				<value>cn.com.sinosoft.entity.SDInformationProperty</value> 
+				<value>cn.com.sinosoft.entity.SDInformationDutyTemp</value> 
+				<value>cn.com.sinosoft.entity.BindInfoForLogin</value>
+				<value>cn.com.sinosoft.entity.SDRelationAppnt</value>
+				<value>cn.com.sinosoft.entity.CouponInfo</value>
+				<value>cn.com.sinosoft.entity.SDRelationRecognizee</value>
+				<value>cn.com.sinosoft.entity.SDShoppingCart</value>
+				<value>cn.com.sinosoft.entity.InsuranceTest</value>
+				<value>cn.com.sinosoft.entity.InsuranceTestResult</value>
+				<value>cn.com.sinosoft.entity.TradeInfo</value>
+				<value>cn.com.sinosoft.entity.Wxbind</value>
+				<value>cn.com.sinosoft.entity.SDAppnt</value>
+				<value>cn.com.sinosoft.entity.DirectPayBankInfo</value>
+				<value>cn.com.sinosoft.entity.GoodsStock</value>
+				<value>cn.com.sinosoft.entity.GiftClassify</value>
+				<value>cn.com.sinosoft.entity.PointExchangeInfo</value>
+				<value>cn.com.sinosoft.entity.SDDeliverAddress</value>
+				<value>cn.com.sinosoft.entity.SDBillTitle</value>
+				<value>cn.com.sinosoft.entity.TradeSummaryInfo</value>
+				<value>cn.com.sinosoft.entity.Partnerinfo</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 缓存配置 -->
+<!--	<oscache:config configLocation="classpath:oscache.properties" id="cacheProvider" />-->
+<!--	<oscache:annotations providerId="cacheProvider">-->
+<!--		<oscache:caching id="caching" cronExpression="0 1 * * *" refreshPeriod="86400" />-->
+<!--		<oscache:flushing id="flushing" />-->
+<!--	</oscache:annotations>-->
+	
+	<bean id="cacheManager" class="org.springmodules.cache.provider.oscache.OsCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:oscache.properties" />
+    </bean>
+    
+	<!-- 设置需要进行Spring注解扫描的类包 -->
+	<context:component-scan base-package="cn.com.sinosoft,com.finance.activemq" />
+
+	<!-- 使用AspectJ方式配置AOP -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<aop:config proxy-target-class="true" />
+
+	<!-- 使用注解方式定义事务 -->
+	<tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager" />
+
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 配置事务传播特性 -->
+	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="load*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 配置哪些类的哪些方法参与事务 -->
+	<aop:config>
+		<aop:advisor pointcut="execution(* cn.com.sinosoft.service..*.*(..))" advice-ref="transactionAdvice" />
+	</aop:config>
+
+	<!-- 配置freemarkerManager -->
+	<bean id="freemarkerManager" class="cn.com.sinosoft.util.FTLManager" />
+
+	<!-- 配置JCaptcha验证码功能 -->
+	<bean id="captchaService" class="com.octo.captcha.service.image.DefaultManageableImageCaptchaService">
+		<property name="captchaEngine">
+			<bean class="cn.com.sinosoft.common.JCaptchaEngine" />
+		</property>
+		<!-- 验证码过期时间 -->
+		<property name="minGuarantedStorageDelayInSeconds" value="600" />
+	</bean>
+
+	<!-- 重建索引配置 -->
+<!--	<bean id="indexBuilder" class="cn.com.sinosoft.common.CompassIndexBuilder">-->
+<!--		<property name="compassGps" ref="compassGps" />-->
+<!--		<property name="lazyTime" value="30" />-->
+<!--	</bean>-->
+	
+	<!-- SMTP邮件服务配置 -->
+	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.timeout">25000</prop>
+				<!-- SSL连接配置 -->
+				<!--
+				<prop key="mail.smtp.starttls.enable">true</prop>  
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+				-->
+			</props>
+		</property>
+	</bean>
+	
+	<!-- SMTP邮件异步发送 -->
+	<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<!-- 核心线程数 -->
+		<property name="corePoolSize" value="10" />
+		<!-- 最大线程数 -->
+		<property name="maxPoolSize" value="50" />
+		<!-- 最大队列数 -->
+		<property name="queueCapacity" value="10000" />
+		<!-- 线程池维护线程所允许的空闲时间 -->
+		<property name="keepAliveSeconds" value="60" />
+	</bean>
+	
+	<!-- Spring 工具类 -->
+	<bean id="springContextUtil" class="cn.com.sinosoft.util.SpringContextUtil" />
+	
+	<!--<import resource="classpath:resources/spring-dubbo-consumer.xml" />-->
+    <!--<import resource="classpath:resources/spring-dubbo-provider.xml" />-->
+</beans>

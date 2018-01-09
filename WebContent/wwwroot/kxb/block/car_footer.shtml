@@ -1,0 +1,59 @@
+<!--footer start-->
+<div class="n_footwrap">
+    <div class="wrapper ">
+        <div class="new_botlink">
+            <div class="new_botlinkcont">
+                <h3><img src="http://localhost:8080/images/new_car/new_botlinkcont01.gif" width="142" height="36" /></h3>
+                <ul class="n_liststyle04">
+                    <li>·<a href="http://localhost:8080/other/news/" rel="nofollow">开心保要闻</a></li>
+                    <!--<li>·<a href="http://localhost:8080/other/jobs/" rel="nofollow">加入开心保</a></li>-->
+                    <li>·<a href="http://localhost:8080/other/legal/" rel="nofollow">法律声明</a></li>
+                    <li>·<a href="http://localhost:8080/other/contact/" rel="nofollow">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="new_botlinkcont">
+                <h3><img src="http://localhost:8080/images/new_car/new_botlinkcont02.gif" width="142" height="36" /></h3> 
+                <ul class="n_liststyle04">
+                    <li>·<a href="http://localhost:8080/chexian/lipei.shtml" rel="nofollow">理赔流程</a></li>
+                    <li>·<a href="http://localhost:8080/chexian/lipei.shtml" rel="nofollow">理赔案例</a></li>
+                    <li>·<a href="http://localhost:8080/chexian/lipei.shtml" rel="nofollow">理赔进度</a></li>
+                    <li>·<a href="http://www.kaixinbao.com/chexian/club/zhishi/A07F20140328001.shtml" rel="nofollow">单证下载</a></li>
+                </ul>
+            </div>
+            <div class="new_botlinkcont">
+                <h3><img src="http://localhost:8080/images/new_car/new_botlinkcont03.gif" width="142" height="36" /></h3>
+                <ul class="n_liststyle04">
+                    <li>·<a href="http://localhost:8080/chexian/club/wenda" rel="nofollow">车险问答</a></li>
+                    <li>·<a href="http://localhost:8080/chexian/club/zixun" rel="nofollow">车险资讯</a></li>
+                    <li>·<a href="http://localhost:8080/chexian/club/anli" rel="nofollow">车险案例</a></li>
+                    <li>·<a href="http://localhost:8080/chexian/club/zhishi" rel="nofollow">车险知识</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="authenticate">
+        	
+ 
+		      <a href="" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36" height="33"/></a>
+		    
+ 
+		      <a href="" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69" height="33"/></a>
+		      
+        </div>
+        <div class="copyright">Copyright 2012-2017 版权所有 网金保险销售服务有限公司</div>
+    </div>
+</div>
+<div class="partner">
+    <a href="http://localhost:8080/chexian/pingan.shtml" target="_blank" title="平安车险" rel="nofollow"><img src="http://localhost:8080/images/new_car/link_icon05.png" width="124" height="58"/></a>
+    <a href="http://localhost:8080/chexian/taipingyang.shtml" target="_blank" title="太平洋车险" rel="nofollow"><img src="http://localhost:8080/images/new_car/link_icon06.png" width="124" height="58"/></a>
+    <a href="http://localhost:8080/chexian/yangguang.shtml" target="_blank" title="阳光车险" rel="nofollow"><img src="http://localhost:8080/images/new_car/link_icon07.png" width="124" height="58"/></a>
+    <a href="http://localhost:8080/chexian/dadi.shtml" target="_blank" title="大地车险" rel="nofollow"><img src="http://localhost:8080/images/new_car/link_icon08.png" width="124" height="58"/></a>
+    <a href="http://localhost:8080/chexian/tianping.shtml" target="_blank" title="安盛天平车险" rel="nofollow"><img src="http://localhost:8080/images/new_car/link_icon09.png" width="124" height="58"/></a>
+</div>
+<!--footer end-->  
+<script type="text/javascript" src="http://localhost:8080/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/template/common/js/base.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/car/footer.js"></script>

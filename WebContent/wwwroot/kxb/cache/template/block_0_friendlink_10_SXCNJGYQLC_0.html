@@ -1,0 +1,9 @@
+<!--循环：friendlink count：10-->
+<% DataTable dt_1 = TemplateData.getFriendLinkList("friendlink","首页猜你计划友情链接","10","null","null");
+if(dt_1==null){write("没有找到友情链接："+"首页猜你计划友情链接");}else{
+for(int i=0;i<dt_1.getRowCount();i++){
+DataRow friendlink_1  = dt_1.getDataRow(i);
+%>
+
+					  		<li><div class="g-guess-li"><span><a target="_blank" href="${friendlink_1.URL}" rel="nofollow"></a></span><img src="${Site.StaticResourcePath}/${friendlink_1.ImagePath}" width="68px" alt="${friendlink_1.Prop4}"></div><p>${friendlink_1.Name}</p></li>
+					  <%}}%>

@@ -1,0 +1,106 @@
+<link href="${Site.URL}/style_index/new/main.css" rel="stylesheet" type="text/css" />
+<link href="${Site.prop6}/template/shop/css/login.css" rel="stylesheet" type="text/css" />
+<link href="${Site.prop6}/template/shop/css/login1.css" rel="stylesheet" type="text/css" />
+<link href="${Site.prop6}/template/shop/css/register.css" rel="stylesheet" type="text/css" />
+<link href="${Site.prop6}/template/common/css/base.css" rel="stylesheet" type="text/css" />
+<link href="${Site.prop6}/template/common/css/jquery.datepicker.css" rel="stylesheet" type="text/css" />
+<link href="${Site.prop6}/template/common/css/jquery.zoomimage.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+		<!-- 顶部 开始 -->
+		<div class="toplink">
+			<div class="toplinkleft" id="NotLogin">
+				<em>欢迎来开心保！请</em>
+				<span><span id="headerShowLoginWindow" class="showLoginWindow" style="text-decoration: underline; cursor: pointer;">登录</span></span>
+				<span>|</span>
+				<span><a href="${Site.prop6}/shop/member_register!home.action" id="headerRegister">免费注册</a></span>
+			</div>
+			<div class="toplinkleft" id="YesLogin" style="display: none;">
+				<em>您好<span id="headerLoginMemberUsername"></span>,欢迎来开心保</em>
+				<span><a href="${Site.prop6}/shop/member_center!index.action" id="headerMemberCenter">会员中心</a></span>
+				<span>|</span>
+				<span><a href="${Site.prop6}/shop/member!logout.action" id="headerLogout">退出</a></span>
+			</div>
+			<div class="toplinkright">
+				<span><a href="${Site.URL}/zhishi/">保险知识</a></span>
+				<span>|</span>
+				<span><a href="${Site.URL}/zixun/">资讯</a></span>
+				<span>|</span>
+				<span><a href="${Site.URL}/wenda/">问答</a></span>
+				<span>|</span>
+				<span><a href="${Site.URL}/baike/">百科</a></span>
+				<span>|</span>
+				<span><a href="${Site.URL}/jifen/" rel="nofollow">积分商城</a></span>
+				<span>|</span>
+				<span><a href="${Site.URL}/about/">帮助中心</a></span>
+			</div>
+		</div>
+		<!-- 顶部 结束 -->
+		<!-- head 开始 -->
+		<div class="head">
+			<div class="logo"><h1><a href="${Site.URL}/"><img src="${Site.StaticResourcePath}/image/logo.gif" alt="开心保保险网，一站式服务，省钱更省心" title="开心保保险网，一站式服务，省钱更省心" width="278" height="60" /></a></h1></div>
+			<div class="headsearch">
+				<div class="headsearchinputarea">
+					<form name="myformname" action="${Site.URL}/Search/Search.jsp">
+					  		<!-- input type="hidden" name="id" value="20" id="id" />
+				  			<input type="hidden" name="site" value="221" />
+				  			<input type="hidden" name="order"  value="time" / -->
+							<input id="valueid" name="query" type="text" class="headsearchinput" value="旅游保险" onfocus="if(this.value=='旅游保险'){this.value='';}" onblur="if(this.value==''){this.value='旅游保险';}"/><input type="submit" value="搜 索" class="headsearchbtn" />
+					</form>
+					<div class="headsearchkeyword">热门搜索：<span class="gray"><a href="${Site.URL}/keylist/000001000001.shtml" onclick="document.getElementById('valueid').value='旅游险';myformname.submit()">旅游险</a></span><span class="dred"><a href="${Site.URL}/keylist/000002000001.shtml" onclick="document.getElementById('valueid').value='航空意外险';myformname.submit()">航空意外险</a></span><span class="gray"><a href="${Site.URL}/keylist/000003000001.shtml" onclick="document.getElementById('valueid').value='签证保险';myformname.submit()">签证保险</a></span><span class="gray"><a href="${Site.URL}/keylist/000004000001.shtml" onclick="document.getElementById('valueid').value='申根保险';myformname.submit()">申根保险</a></span><span class="gray"><a href="${Site.URL}/keylist/">更多</a></span></div>
+				</div>
+			</div>
+			<div class="headserv"></div>
+			<div class="headbuy">
+				<span class="headbuybtn02"><a href="javascript:void(0);" vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap2" onclick="return(VL_FileDL(this));return false;"rel="nofollow"><img src="${Site.StaticResourcePath}/image/headbtnserv.gif" width="99" height="29" /></a></span>
+			</div>
+		</div>
+		<!-- head 结束 -->
+		<!-- nav 开始 -->
+		<div class="nav">
+			<div class="navcont">
+				<h3><a href="${Site.URL}/lvyou-baoxian/" title="旅游保险">旅游</a></h3>
+				<ul>
+					<li><a href="${Site.URL}/lvyou-baoxian/guonei/" >国内旅游险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/lvyou-baoxian/jingwai/" >境外旅游险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/lvyou-baoxian/shengenqianzheng/" >申根签证险</a></li>
+				</ul>	
+				<div class="navico02"><img src="${Site.StaticResourcePath}/image/navico02.gif" width="25" height="17" /></div>
+			</div>
+			<div class="navcont navmarg">
+				<h3><a href="${Site.URL}/yiwai-baoxian/" title="意外保险">意外</a></h3>
+				<ul>
+					<li><a href="${Site.URL}/yiwai-baoxian/jiaotong/" >交通意外险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/yiwai-baoxian/renshen/" >人身意外险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/yiwai-baoxian/hangkong/" >航空意外险</a></li>
+				</ul>
+				<div class="navico01"><img src="${Site.StaticResourcePath}/image/navico01.gif" width="21" height="11" /></div>
+			</div>
+			<div class="navcont navmarg">
+				<h3><a href="${Site.URL}/jiankang-baoxian/" title="健康保险">健康</a></h3>
+				<ul>
+					<li><a href="${Site.URL}/jiankang-baoxian/zhongdajibing/" >重大疾病险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/jiankang-baoxian/tedingjibing/" >特定疾病险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/jiankang-baoxian/zhuyuanyiliao/" >住院医疗险</a></li>
+				</ul>
+			</div>
+			<div class="navcont navmarg">
+				<h3><a href="${Site.URL}/renshou-baoxian/" title="人寿保险">人寿</a></h3>
+				<ul>
+					<li><a href="${Site.URL}/renshou-baoxian/yanglaoxian/" >养老险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/renshou-baoxian/dingqi/" >定期险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/renshou-baoxian/licai/" >理财险</a></li>
+					<li>|</li>
+					<li><a href="${Site.URL}/renshou-baoxian/jiaoyu/" >教育险</a></li>
+				</ul>
+				<div class="navico03"><img src="${Site.StaticResourcePath}/image/navico03.gif" width="21" height="12" /></div>
+			</div>
+		</div>
+		<!-- nav 结束 --> 

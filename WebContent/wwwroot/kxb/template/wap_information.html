@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb=“http://open.weibo.com/wb”>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="applicable-device" content="mobile">
+<link rel="stylesheet" href="${Site.WapResourceURL}/css/base.css" media="screen">
+<link rel="stylesheet" href="${Site.WapResourceURL}/css/mod_common.css" media="screen">
+<link rel="stylesheet" href="${Site.WapResourceURL}/css/mod_message.css" media="screen">
+<title>
+<%
+	String title = article.getString("MetaTitle"); 
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+</head>
+
+<body id="information">
+
+<cms:include file="block/kxb_header_wap_bxzx.shtml" />
+		<section id="Message">
+	          <div class="message_con">
+				<h2>
+					${article.title}<br />
+					<span>发布日期：${Article.FirstPublishDate}</span>
+				</h2>
+				${Article.content}
+				<!-- <span class="mes_more">点击查看更多</span> -->
+			</div>
+			<!-- 推荐产品 -->
+			
+			<!--推荐产品 开始-->
+		<input type="hidden" id="ArticleID" value="${article.id}"/>
+		<input type="hidden" id="RiskType" value="${article.RiskType}"/>
+		<input type="hidden" id="RiskCompany" value="${article.RiskCompany}"/>
+		<input type="hidden" id="RiskProduct1" value="${article.RiskProduct1}"/>
+		<input type="hidden" id="RiskProduct2" value="${article.RiskProduct2}"/>
+		<div class="shop_top">
+			<h3><i class="tit_icons">推荐产品</i><a href="${Site.WapURL}" class="go_icon"></a></h3>
+			<ul class="intro_list"  id="products">
+			</ul> 
+		</div>
+	
+			<!-- /推荐产品 -->
+			<div class="otherList">
+				<h3><i class="tit_icons">相关资讯</i><a href="javascript:void(0);" class="go_icon"></a></h3>
+				<ul class="linkList">
+					<cms:list item="article" tag="${Article.tag}" cmsorder="1" level="none" type="rand" condition=" type = 1 and (cataloginnercode like '002306%' or cataloginnercode like '002307%') and status in (30,60)" count="6" >
+					
+						<li><a href="${Article.Link}" target="_blank">${Article.title|substrwidth=19}</a></li>
+				  	</cms:list>	
+				</ul>
+			
+		       </div>
+		</section>
+	<!-- /资讯 -->
+		
+<cms:include file="block/kxb_footer_wap_bxzx.shtml" />
+
+<div class="d_top" id="gotop"> </div>
+<script type="text/javascript" src="http://mresource.kaixinbao.com/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="${Site.WapResourceURL}/js/mod_message.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#gotop').click(function () {
+		    $('body,html').animate({
+		        scrollTop: 0
+		    }, 500)
+		});
+
+	  new Messageshow();
+      //电话href 修改
+      $(".phone").attr("href","tel:4009789789");
+	 //加载推荐产品  
+			var riskType = jQuery("#RiskType").val();
+			var riskCompany = jQuery("#RiskCompany").val();
+			var riskProduct1 = jQuery("#RiskProduct1").val();
+			var riskProduct2 = jQuery("#RiskProduct2").val();
+			jQuery.ajax({
+				url: "${Site.URL}/wj/shop/article!ajaxWapProduct.action?&callback=?&riskType="+riskType+"&riskCompany="+riskCompany+"&riskProduct1="+riskProduct1+"&riskProduct2="+riskProduct2,
+				type: "post",
+				dataType: "json",
+				success: function(data){
+					var obj = eval(data);
+					 jQuery("#products").html(obj.products) ;
+			 	}			
+			});
+		
+	}) 
+</script>
+</body>
+</body>
+</html>

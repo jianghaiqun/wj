@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<title>
+ <cms:list item="article" level="current" name="${catalog.name}" count="1" >  
+<%
+	String title = article.getString("CustomTitle");
+	write(((null==title) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</cms:list>
+</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/product.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/listul.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+
+<body >
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<div class="wrapper">
+		<!-- nav 结束 -->
+        	<div class="wcont_body">
+        	<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a>
+		</div>
+            <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+            	<h1  class="stencil_title">${Article.Title|substrwidth=26}</h1>
+                <div class="stencil_min_des">${Article.Content}</div>
+            	<ul class="stencil_nav_li sl-floatcenter clearfix">
+            		<li class="sl-floatcenter-item"><a href="#part1"  title="${Article.Section1}">${Article.Section1}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part2"  title="${Article.Section2}">${Article.Section2}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part3"  title="${Article.Section3}">${Article.Section3}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part4"  title="${Article.Section4}">${Article.Section4}</a></li>
+                    <li class="sl-floatcenter-item"><a href="#part5"  title="${Article.Section5}">${Article.Section5}</a></li>
+                    <li class="sl-floatcenter-item"><a href="#part6"  title="${Article.Section6}">${Article.Section6}</a></li>
+                    <li class="sl-floatcenter-item"><a href="#part7"  title="${Article.Section7}">${Article.Section7}</a></li>
+                    <li class="sl-floatcenter-item"><a href="#part8"  title="${Article.Section8}">${Article.Section8}</a></li>
+            	</ul>
+                <h2 class="part_titles"  id="part1">${Article.Section1}</h2>
+                <div class="grid-c2-s8f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="eleven_top_left boder_h">
+               	    
+                     <div class="clearfix"><a href="${Article.Section1Title1Link}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section1Image1}" width="267" height="200" class="fleft" /> </a><div class="eleven_font">
+                     	<h3 class="zx_news_title"><a href="${Article.Section1Title1Link}" target="_blank">${Article.Section1Title1}</a></h3>
+                        <p class="zx_news_des p_eleven_h70">
+	${Article.Section1Content1|CharWidth=60}<a href="${Article.Section1Title1Link}" rel="nofollow" target="_blank">更多</a> 
+	</p>
+    	<h3 class="zx_news_title"><a href="${Article.Section1Title2Link}" target="_blank">${Article.Section1Title2}</a></h3>
+                        <p class="zx_news_des p_eleven_h70">
+	${Article.Section1Content2|CharWidth=60}<a href="${Article.Section1Title2Link}" rel="nofollow" target="_blank">更多</a> 
+	</p>
+                     </div>
+                   </div>
+                                      <div class="clear"></div>
+                   <h3 class="zx_news_title ele_title_up"><a href="${Article.Section1Title3Link}" target="_blank">${Article.Section1Title3}</a></h3>
+                        <p class="zx_news_des p_eleven_h70 p_eleven_bor">
+	${Article.Section1Content3|CharWidth=135}<a href="${Article.Section1Title3Link}" rel="nofollow" target="_blank">更多</a> 
+	</p>
+                    </div>
+                      <div class="bor_shadow_630"></div>
+
+				</div>
+              </cms:list>   
+			</div>
+			
+			<div class="col-sub">
+			  <div class="boder_h clearfix">
+               	   <h3 class="img_p_title">热销保险产品推荐</h3>
+               	  <cms:list item="article" level="current" name="${catalog.ProductArea}" type="rand"  count="5" >
+                 	<div class="clearfix eleven_cp_tj">
+           	    		<a href="${Article.Link}" target="_blank"><img src="${Site.ProductResourcePath}${Article.ProductLogo}" width="53" height="53" /></a>
+           	    		 <div class="ele_cp_des"><h3><a href="${Article.Link}" target="_blank">${Article.title}</a></h3>
+					<p> ${Article.AdaptPeopleInfo}</p></div></div>
+				</cms:list>	
+              </div>
+              <div class="bor_shadow_310"></div>
+			</div>
+		</div>
+
+
+            <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+             <div class="h10"></div>
+              <h2 class="part_titles"  id="part2">${Article.Section2}</h2>
+             
+       <div class="grid-c">
+			<div class="clearfix boder_h">
+            <div class="zt_box_list">
+            <h3 class="img_p_title">${Article.Section2Name1}</h3>
+              </cms:list>
+
+             <ul class="new_dian_list">
+                	<cms:list item="article" level="none" name="${catalog.ArticleArea}" type="rand" condition=" type = 1 and tag like '%${catalog.tag1}%' and status in (30,60)" count="5" >
+						<li><a href="${Article.Link}" target="_blank"><em><% if(i<5) write(i+1);%></em>${Article.Title|CharWidth=10} </a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <div class="zt_box_list">
+            <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+            <h3 class="img_p_title">${Article.Section2Name2}</h3>
+            </cms:list>
+             <ul class="new_dian_list">
+                	<cms:list item="article" level="none" name="${catalog.ArticleArea}" type="rand" condition=" type = 1 and tag like '%${catalog.tag2}%' and status in (30,60)" count="5" >
+						<li><a href="${Article.Link}" target="_blank"><em><% if(i<5) write(i+1);%></em>${Article.Title|CharWidth=10} </a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <div class="zt_box_list">
+          <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+            <h3 class="img_p_title">${Article.Section2Name3}</h3>
+            </cms:list>
+             <ul class="new_dian_list">
+                	<cms:list item="article" level="none" name="${catalog.ArticleArea}" type="rand" condition=" type = 1 and tag like '%${catalog.tag3}%' and status in (30,60)" count="5" >
+						<li><a href="${Article.Link}" target="_blank"><em><% if(i<5) write(i+1);%></em>${Article.Title|CharWidth=10} </a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <div class="zt_box_list">
+             <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+              <h3 class="img_p_title">${Article.Section2Name4}</h3>
+           </cms:list>
+             <ul class="new_dian_list">
+                	<cms:list item="article" level="none" name="${catalog.ArticleArea}" type="rand" condition=" type = 1 and tag like '%${catalog.tag4}%' and status in (30,60)" count="5" >
+						<li><a href="${Article.Link}" target="_blank"><em><% if(i<5) write(i+1);%></em>${Article.Title|CharWidth=10} </a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <div class="zt_box_list clear_bor">
+             <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+            <h3 class="img_p_title">${Article.Section2Name5}</h3>
+              </cms:list>
+             <ul class="new_dian_list">
+                	<cms:list item="article" level="none" name="${catalog.ArticleArea}" type="rand" condition=" type = 1 and tag like '%${catalog.tag5}%' and status in (30,60)" count="5" >
+						<li><a href="${Article.Link}" target="_blank"><em><% if(i<5) write(i+1);%></em>${Article.Title|CharWidth=10} </a></li>
+					</cms:list>
+                </ul>
+            </div>
+            </div>
+            <div class="bor_shadow_980"></div>
+		</div>
+          <div class="h10"></div>
+                <div class="grid-c3-s8e8">
+			<div class="col-main">
+				<div class="main-wrap">
+                 <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+				<h2 id="part4" class="part_titles">${Article.Section4}</h2>
+                  </cms:list>
+                <div class="ele_new_lists boder_h">
+                	<ul>
+                		<cms:list item="friendlink" name="${catalog.Section4friendLink}">
+							<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|substrwidth=19}</a></li>
+					 	</cms:list>
+                	</ul>
+                </div>
+                 <div class="bor_shadow_310"></div>
+              </div>
+			</div>
+			<div class="col-sub">
+               <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+				<h2 id="part3" class="part_titles">${Article.Section3}</h2>
+                 </cms:list>
+                <div class="ele_new_lists boder_h">
+                	<ul>
+                		<cms:list item="friendlink" name="${catalog.Section3friendLink}">
+							<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|substrwidth=19}</a></li>
+					 	</cms:list>
+                	</ul>
+                </div>
+                <div class="bor_shadow_310"></div>
+			</div>
+			<div class="col-extra">
+               <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+				<h2 id="part5" class="part_titles">${Article.Section5}</h2>
+                </cms:list>
+                <div class="ele_new_lists boder_h">
+                	<ul>
+                		<cms:list item="friendlink" name="${catalog.Section5friendLink}">
+							<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|substrwidth=19}</a></li>
+					 	</cms:list>
+                	</ul>
+                </div>
+                 <div class="bor_shadow_310"></div>
+			</div>
+		</div>
+             <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+                  <h2 class="part_titles"  id="part6">${Article.Section6}</h2> 
+                </cms:list>
+                  <div class="grid-c">
+                     <div class="eleven_news boder_h clearfix">
+                    <div class="ele_news_nav">
+                        <ul class="ele_news_tag" id="min_tag_ste">
+                        	<li>|<a href="javascript:void(0);" class="select_tab_ste">资讯</a></li>
+                        	<li>|<a href="javascript:void(0);">百科</a></li>
+                        	<li>|<a href="javascript:void(0);">问答</a></li>
+                        	<li>|<a href="javascript:void(0);">知识</a>|</li>
+                        </ul>
+                    </div>
+                     <div class="ele_news_con" id="tag_box_ste">
+                     	<ul>
+                     		<cms:list item="article" level="none" type="rand" condition=" type = 1 and cataloginnercode like '002307%' and tag like '%${catalog.tag6}%' and status in (30,60)" count="16" >
+								<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=17} </a></li>
+							</cms:list>
+                     	</ul>
+                        <ul style="display:none">
+                     		<cms:list item="article" level="none" type="rand" condition=" type = 1 and cataloginnercode like '002347%' and tag like '%${catalog.tag6}%' and status in (30,60)" count="16" >
+								<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=17} </a></li>
+							</cms:list>
+                     	</ul>
+                        <ul style="display:none">
+                     		<cms:list item="article" level="none" type="rand" condition=" type = 1 and cataloginnercode like '002308%' and tag like '%${catalog.tag6}%' and status in (30,60)" count="16" >
+								<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=17} </a></li>
+							</cms:list>
+                     	</ul>
+                        <ul style="display:none">
+                     		<cms:list item="article" level="none" type="rand" condition=" type = 1 and cataloginnercode like '002306%' and tag like '%${catalog.tag6}%' and status in (30,60)" count="16" >
+								<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=17} </a></li>
+							</cms:list>
+                     	</ul>
+                     </div>
+                     </div>
+                  </div>
+                     <div class="h30"></div>
+                     <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+                       <h2 class="part_titles"  id="part7">${Article.Section7}</h2> 
+                       <div class="stenmore orange"><a href="${Article.Section7Link}"  target="_blank">更多</a></div>
+                       </cms:list>
+                       <div class="grid-c">
+					<div class="zdy_p boder_h">
+                    	<ul class="stencil_ciyt_list clearfix">
+                    	  	<cms:list item="friendlink" name="${catalog.KeyCity}">
+								<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name}</a></li>
+					 		</cms:list>
+                    	</ul>
+                    </div>
+                     <div class="bor_shadow_980"></div>
+		</div>
+        <div class="grid-c">
+				<div class="ad_980 boder_h">
+               <cms:list item="article" level="current" name="${catalog.name}" count="1" >
+           	    <a href="${Article.adLink}" target="_blank"><img width="978" height="148" src="${Site.StaticResourcePath}/${Article.ad}"></a>
+                </div>
+                <div class="bor_shadow_980"></div>
+		   </div>
+                           <div class="h30"></div>
+                      <h2 class="part_titles"  id="part8">${Article.Section8}</h2> 
+                    </cms:list>    
+          <div class="wenda_box boder_h clearfix">
+          <cms:list item="friendlink" name="${catalog.AskAndAnswer}">
+          		<dl class="wenda_last">
+            		<dt><a href="${friendlink.URL}" target="_blank">问：${friendlink.Name}</a></dt>
+                   	<dd><b>答：</b>${friendlink.Prop3|CharWidth=120}</dd>
+            	</dl>
+            </cms:list> 		
+          </div>
+          <div class="bor_shadow_980"></div>
+            <div class="h10"></div>
+        <ul class="orter_list">
+        	<cms:list item="article" level="none" condition="type = 1 and id in ( select distinct id from ( select id from zcarticle   where  cataloginnercode like '002354%'  and (title like '%${catalog.TitleKeyword1}%' or title like  '%${catalog.TitleKeyword2}%') ) a union all  select id from ( select id from zcarticle where  cataloginnercode like '002354%'   order by firstpublishdate desc  limit 9 ) b )" count="9" >
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|substrwidth=12} </a></li>
+			</cms:list>
+        </ul>
+              <div class="h30"></div>
+</div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="社保专题" > 
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="社保专题" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="社保专题" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+</div>
+ <script type="text/javascript" src="${Site.JsResourcePath}/js/stencil/stencil_jquery.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

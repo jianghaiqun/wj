@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.cp_logos {
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: 1px solid #d9d9d9;
+	height: 100px;
+	margin: 0 auto;
+	width: 189px;
+}
+
+.cp_gscon {
+	float: left;
+	padding-top: 7px;
+	width: 191px;
+}
+
+#wrapper {
+		width:100%;
+		margin: 0 auto;
+	}
+	.content_right{
+		height:auto;
+		float:left;
+		margin-left:10px;
+		_margin-left:0px;
+	}

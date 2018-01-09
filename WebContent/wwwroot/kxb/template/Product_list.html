@@ -1,0 +1,230 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_list.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css" />
+<%
+if(catalog.getString("ProductType").length()>0){
+String aa = catalog.getString("ProductType").substring(0,1);
+%>
+<style type="text/css">
+	#hovers_<%write(aa);%> {background:none repeat scroll 0 0 #CD4800}
+	#hovers_{background:none repeat scroll 0 0 }
+</style>
+<%}%>
+<cms:include file="block/kxb_custom_header.shtml"/>
+</head>
+<body onload="initProduct();salesVolumeLoad();">
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+		<div class="content">
+			<div class="content_left">
+					  <div class="l_boxss">
+        			  <div class="c1">${catalog.name}概述</div>
+         			  <img src="${catalog.describeImg}" width="228" height="60"/>
+         			 
+         	          <div class="l_box_p"><p>${catalog.productDescribe}</p></div>
+         		      </div>
+
+				<div class="l_boxss">
+                <div class="c1">${catalog.name}热销产品</div>
+           		<ul class="zjll_list">
+           			<cms:list item="article" level="current" count="5" hasAttribute="hot">
+            		<li class="clearfix">
+            			<a href="${Article.Link}">${article.title}</a>
+                		<em class="list_xls">销量：${Article.SalesVolume}</em><em class="list_pays">￥${Article.InitPrem}</em></li>
+          	   		</cms:list>
+          	    </ul>
+                </div>
+                
+                <div class="l_boxss kf_box">
+         		  <a href="javascript:void(0);" vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap2" onclick="return(VL_FileDL(this));return false;" rel="nofollow"><img width="228" height="48" title="投保遇到问题？马上咨询在线客服" alt="投保遇到问题？马上咨询在线客服" src="${Site.StaticResourcePath}/images/group_11.jpg"></a>
+           		</div>
+				
+			<div class="l_boxss">
+            	 <div class="c1">保险知识</div>
+		          <ul class="zx_list">
+		          		<cms:list item="article"  level="all" count="5"  type="rand" name="9443" condition="${catalog.Catalog_insknowledge}">
+		          			<li>
+		          		<a target="_blank" href="${Article.Link}">${Article.Title|CharWidth=16}</a>
+		          			</li>
+		          		</cms:list>
+		          </ul>
+           </div>
+				
+			<div class="l_boxss">
+             <div class="c1">保险问答</div>
+             	<ul class="zx_list">
+		             <cms:list item="article"  level="all" count="5"  type="rand" name="9445" condition="${catalog.Catalog_insqa}">
+			          	<li>
+			         		<a target="_blank" href="${Article.Link}">${Article.Title|CharWidth=16}</a>
+			          	</li>
+					</cms:list>
+           	    </ul>
+           </div>
+				
+           <div class="l_boxss">
+		   <%
+			  String pl = catalog.getString("guanggaowei") ;
+			  if("yiwai".equals(pl)){
+		   %>
+          	   <cms:imageplayer code="kxb_product_yiwai" type="0"  width="230" height="255" />
+           <%} else if ("lvyou".equals(pl)) {%>
+        	   <cms:imageplayer code="kxb_product_lvyou" type="0"  width="230" height="255" />
+           <% } else if ("renshou".equals(pl)) {%>
+               <cms:imageplayer code="kxb_product_renshou" type="0"  width="230" height="255" />
+           <% } else if ("jiacai".equals(pl)) {%>
+               <cms:imageplayer code="kxb_product_jiacai" type="0"  width="230" height="255" />
+           <% } else if ("jiankang".equals(pl)) {%>
+               <cms:imageplayer code="kxb_product_jiankang" type="0"  width="230" height="255" />
+           <% } else {%>
+               <cms:imageplayer code="kxb_product" type="0"  width="230" height="255" />
+           <% }%>
+		   </div>
+           
+			</div>
+			<div class="content_right">
+				<div class="top_b">
+					<div id="load_con" style="display:none;"></div>
+						<div class="top_aa">
+							<h1 class="shaixuan" >${catalog.name}产品列表</h1><a href="${Site.URL}/${catalog.URL}">恢复默认条件</a>
+						</div>
+						${catalog.Catalog_SearchConditions}
+					<input id="hdn_page" type="hidden"  value="-1" name="hdn_page" />
+					<input id="prop6" type="hidden" value="${Site.prop6}" name="prop6" />
+					<input id="ProductType" type="hidden" value="${Catalog.ProductType}" name="ProductType" />
+					<input id="FrontServer" type="hidden" value="${Site.URL}" name="FrontServer" />
+					</div>
+					 <div class="zd_sx_list" id="zd_click" title="展开筛选条件"></div>
+				
+				<div class="recommend_shop cf">
+						<input type="hidden" id="catalogName" value="${catalog.name}"/>
+	                	<div class="recommend_titile"><div class="reconmend_img"></div><b><span id="recommendTitle">${catalog.name}</span>推荐产品</b><div class="recommend_kong">收起&nbsp;>></div></div>
+	                    <div id="shop_bosf">
+	                    <cms:list  item="article" level="current" count="2" hasAttribute="newRecommend">
+	                    		<% if((i+1)==2){%>
+	                    			 <div class="recommend_con floatl">
+								<% }else{%>
+		                   			 <div class="recommend_con floatl bor_leftsf">
+								<% }%>
+		                    <div class="recommend_box ">
+		                       <div class="recommend_top cf">
+		                       <!-- 推荐产品缩略图 -->
+		                     <span class="list_zd_img floatl"  >
+		                     <a href="${article.link}" target="_blank"><img width="108" height="108" alt="" src="${article.LogoLink}"></a>
+		                     </span>
+		                     <div class="floatl shop_sfs "> 
+		                     <span class="shop_titile"><a href="${article.link}" target="_blank">${article.title}</a></span>
+		                     <!-- 推荐产品特殊保障 -->
+		                     <ul class="shop_desafs">
+		                         ${article.FEMRiskBrightSpotNew}
+		                     </ul>
+		                     </div>
+		                       </div>
+		                       <div class="recommend_cen cf">
+		                       <!-- 推荐产品责任条款 -->
+		                       <ul class="recommend_list">
+		                           ${article.DutyHTML2}
+		                       </ul>
+		                       <div class="recom_price cf">
+		                       <span id="SalesU_${Article.RiskCode}" class="recom_xl">(累计销量：加载中...)</span>
+		                       <div class="clear" ></div>
+		                       <span class="crcom_pric">￥${Article.InitPrem}</span>
+		                       <span class="remcon_desmore">
+		                       <a href="${article.link}" target="_blank">去看看>></a></span>
+		                       </div>
+		                       </div>
+		                    </div>
+		                    </div>
+		                 </cms:list>
+	                    </div>
+	                    <div class="clear"></div>
+	                </div>
+				
+				
+				
+				
+				<div id="divSearchOrder">
+					<span id="order_default" class="one" onclick="doOrder1(this);">默认排序</span><span id="order_Popular" class="two" onclick="doOrder1(this);">人气</span><span id="order_SalesVolume" class="two" onclick="doOrder1(this);">销量</span><span id="order_InitPrem"
+						class="two" onclick="doOrder1(this);">价格</span>
+				</div>
+				<div class="s_noshop cf"  id="s_noshop" ></div>
+				<div id="products">
+					<cms:list item="article" level="current" pagesize="10" page="true" condition="catalogid='${Catalog.ID}' >
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C${Article.SupplierCode2}"  ></span> <span class="productName"> <a href="${Article.Link}" target="_blank"><h2 class="ziti">${Article.title}</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_${Article.RiskCode}">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_${Article.RiskCode}">${Article.Prop2}</span>
+						</div>
+						<div class="product_condition">
+							${Article.CalHTML2}
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" >${Article.prodcutMarkPrice}</ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('${Article.Link}')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('${Article.RiskCode}');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.producttype}','${Article.logolink}','${Article.InitPrem}');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">${Article.AdaptPeopleInfo}</div>
+							
+							<div class="productFeature">${Article.FEMRiskBrightSpot}</div>
+							${Article.DutyHTML}
+						</div>
+					</cms:list>
+				</div>
+				<div class="plpage">
+					<!--    翻页    -->
+					<div id="productsPageBar">${PageBar1}</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="产品列表页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="产品列表页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="产品列表页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+	<cms:include file="block/community_v1.shtml" />
+	<cms:include file="block/kxb_product_compare.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-hcheckbox.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.qtip.js"></script>
+	<script	type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/productCompare.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script	type="text/javascript" src="${Site.JsResourcePath}/js/productliketblist.js"></script>
+</body>
+</html>

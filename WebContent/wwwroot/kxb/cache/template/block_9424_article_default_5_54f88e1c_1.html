@@ -1,0 +1,21 @@
+<% DataTable dt_2 = TemplateData.getDocList("article","产品中心/健康保险","current","hot","null","5","null","null","null");
+  if(dt_2==null){write("没有找到栏目。parent：null  catalog："+"产品中心/健康保险");}else{
+ int rdCnt=dt_2.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_2  = dt_2.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	                        	<li>
+                                    <a class="dl_title ellipsis" href="${article_2.Link}" target="_blank">${article_2.Title}</a>
+                                    <p class="for_who">${article_2.AdaptPeopleInfo|CharWidth=15}</p>
+                                    <p>
+                                        <span class="price" name="Ajax_Prict_${article_2.RiskCode}">￥${article_2.InitPrem}</span>
+                                        <span id="SalesU_${article_2.RiskCode}">${article_2.SalesVolume}人已购买</span>
+                                    </p>
+                                    <a class="icon" href="${article_2.Link}" target="_blank">
+                                        >
+                                    </a>
+                                </li>
+	                        	<%}}%>

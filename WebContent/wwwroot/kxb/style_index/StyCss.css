@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;list-style:none; font-style: normal;}
+body{font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+.clear{height:0;font-size:0;line-height:0;clear:both;}
+img{border:none;}
+.clearfix{display:block}
+.clearinl{display:inline-block;}
+input,textarea{outline:none;resize:none;}
+/*table{border-collapse:collapse;border-spacing:0}*/
+
+a{color:#3a3a3a; text-decoration:none;}
+a:hover{text-decoration:underline;}
+.fl{float:left;}
+.fr{float:right;}
+
+.pos{position:relative;}
+.posA{position:absolute;}
+.fms{font-family:宋体;}
+.fb{font-weight:bold;}
+.fn{font-weight:normal;}
+
+.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+
+.tc{text-align:center;}
+.tr{text-align:right;}
+
+.tdlt{text-decoration:line-through}
+.tu{text-decoration:underline;}
+
+.lh150{line-height:150%;}
+.lh180{line-height:180%;}
+.lh200{line-height:200%;}
+
+.Height3{height:3px; line-height:3px; font-size:3px;}
+
+.w1000{width:1000px; margin:0 auto;}
+.w1007{width:1007px; margin:0 auto;}
+.w1030{width:1030px; margin:0 auto;}
+
+.w190{width:190px;}
+.w244{width:244px;}
+.w245{width:245px;}
+.w496{width:496px;}
+.w757{width:757px;}
+.w800{width:800px;}
+
+.mr5{margin-right:5px;}
+.mr8{margin-right:8px;}
+.mr10{margin-right:10px;}
+.mr20{margin-right:20px;}
+
+.mt8{margin-top:8px;}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.mt55{margin-top:60px;}
+
+.mb10{margin-bottom:10px;}
+.mb20{margin-bottom:20px;}
+
+.ml10{margin-left:10px;}
+
+.pl20{padding-left:25px;}
+
+.fontCo11, .fontCo11 a {color: #ff0000;text-decoration: none;}	/*  红		*/
+.fontCo11 a:hover {text-decoration: underline;}
+.fontCo12, .fontCo12 a {color: #0066cb;text-decoration: none;}	/*  蓝		*/
+.fontCo12 a:hover {text-decoration: underline;}
+.fontCo13, .fontCo13 a {color: #808080;text-decoration: none;}	/*  灰		*/
+.fontCo13 a:hover {text-decoration: underline;}
+
+.YellowLine{border-bottom:1px solid #d9e021;}
+
+/*翻页样式*/
+.PageArea{text-align:right; margin:10px 0; color:#7c7879; height:35px;}
+.PageArea ul{line-height:23px; height:23px; float:right; margin-right:0px;}
+.PageArea li{float:left; border:1px solid #cccccc; margin:0 3px 0 0; padding:0 8px;}
+.PageArea li.Active{border:none;}
+.PageArea li.Active a{color:#ff6600; font-weight:bold;}
+.PageArea li.Num{border:none; margin-right:30px;}

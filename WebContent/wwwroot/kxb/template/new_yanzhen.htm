@@ -1,0 +1,63 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="${Site.URL}/bdyz/" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_test.css	">
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<!--导航开始-->
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!--导航结束-->
+<!-- 保单验真 -->
+<div class="test_true">
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div> 
+	</div>
+
+	<div class="wrapper">
+		<!-- 顶部图片及步骤 -->
+        <div class="top_bar">
+            <ol>
+                <li>致电保险公司验真电话选择人工客服</li>
+                <li>提供保单号/投保人或被保人证件号</li>
+                <li class="last">确认保单真实有效</li>
+            </ol>
+        </div>
+        <!-- 顶部图片及步骤 end -->
+        <!-- 保单验真电话 -->
+        <div class="member-htit">
+            <span class="member-titsc">保单验真</span>
+            <span class="sub_title">为开心保购买用户，提供快捷验真服务</span>
+        </div>
+        <div class="content-wrap">
+        	<ul class="clearfix phone-list">
+        		<cms:list item="ReportCompany">
+        		<li class="fl-l">
+                    <div>
+                      <p class="icon_C${ReportCompany.companyCode} pro_logo"></p>
+                      <p class="phone"><span><i class="claim-icon"></i>${ReportCompany.companyPhone}</span></p>
+                    </div>
+                    <p class="name">${ReportCompany.companyName}</p>
+                </li>
+                </cms:list> 
+        	</ul>
+        </div>
+	</div>
+</div>
+<!-- 保单验真 end -->
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+</body>
+</html>

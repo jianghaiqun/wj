@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>搜索结果第${page}页_${query}</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/commonality.css" />
+<style type="text/css">
+	.InsuQASearchArea{}
+	.InsuQASearchArea .InsuQASearchBg{border:1px solid #f9b041; width:980px;background:#fff url(${Site.StaticResourcePath}/images/Bg_1.gif) 0 -490px repeat-x; height:80px;}
+	.InsuQASearchArea .InputTxtArea{width:530px; height:30px; line-height:30px; border:1px solid #CC6600; background:#fff url(${Site.StaticResourcePath}/images/Bg_1.gif) 0 -382px repeat-x; margin-top:20px; margin-left:125px; padding-left:8px; font-size:12px; color:#666666; margin-right:5px; float:left;}
+	.InsuQASearchArea .Btn_1   {background:url('${Site.StaticResourcePath}/images/BtnImg1.jpg') ;width:100px; height:31px; border:none; cursor:pointer; margin-right:5px; margin-top:20px; }
+	.lip2{padding-top: 2px ;padding-bottom: 2px;}
+</style>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+</head>
+<body>
+  ${header}
+<div class="wrapper">
+  
+		<div class="center" style="  margin: 10px auto 0;width: 980px;">
+		     <form id="search">
+			    <div class="InsuQASearchArea mb10">
+						<div class="InsuQASearchBg">
+							<input type="text" value=${query} class="InputTxtArea" name="query" id="queryid"/>
+							<input type="hidden" name="oldquery" value="" id="oldqueryid" />
+							<input name="site" type="hidden" id="site" value="221">
+							<input name="id" type="hidden" id="id" value="20">
+							<input type="submit" value="" style="float:left;background:url('${Site.StaticResourcePath}/images/search.gif');width:42px;height:32px;cursor: pointer;border: none; margin-top:20px; " />
+						</div>
+			    </div>
+		    </form>
+			<script type="text/javascript">document.getElementById("valueid").value = document.getElementById("oldqueryid").value;</script>
+		
+		
+			<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="bi">
+				<tr>
+					<td width="81%" valign="bottom" nowrap>
+					<div id=div1
+						style="background-color: #eee; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; CLEAR: right; Z-INDEX: 20; FLOAT: left; WIDTH: 100%; HEIGHT: 24px; FONT-SIZE: 13px;">
+					<div style="padding: 0 1em; border-top: 1px solid #fff;"><span
+						style="float: right;">约有<b>${total}</b>项符合搜索${query}的查询结果，耗时${usedTime}秒，以下是第<b>${from}</b>-<b>${to}</b>项。</span>
+					</div>
+					</div>
+					</td>
+				</tr>
+			</table>
+			<div id="mleft" style="width: 900px;  padding-top:0px; text-align:left;word-wrap: break-word; word-break: normal;">
+				<ul>
+				<#if dtflag1="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item1.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item1.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item1.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item1.getString("URL")}">${item1.getString("URL")}</a> - ${item1.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item1.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+
+								<#if dtflag2="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item2.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item2.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item2.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item2.getString("URL")}">${item2.getString("URL")}</a> - ${item2.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item2.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+
+								<#if dtflag3="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item3.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item3.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item3.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item3.getString("URL")}">${item3.getString("URL")}</a> - ${item3.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item3.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+
+								<#if dtflag4="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item4.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item4.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item4.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item4.getString("URL")}">${item4.getString("URL")}</a> - ${item4.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item4.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+
+								<#if dtflag5="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item5.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item5.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item5.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item5.getString("URL")}">${item5.getString("URL")}</a> - ${item5.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item5.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+
+								<#if dtflag6="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item6.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item6.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item6.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item6.getString("URL")}">${item6.getString("URL")}</a> - ${item6.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item6.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+
+								<#if dtflag7="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item7.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item7.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item7.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item7.getString("URL")}">${item7.getString("URL")}</a> - ${item7.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item7.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+
+								<#if dtflag8="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item8.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item8.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item8.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item8.getString("URL")}">${item8.getString("URL")}</a> - ${item8.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item8.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+
+								<#if dtflag9="1">
+				<li class="g1" style="border-bottom: 1px dashed #CDCAC6;padding-top: 10px ;padding-bottom: 10px;">
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item9.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item9.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item9.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item9.getString("URL")}">${item9.getString("URL")}</a> - ${item9.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item9.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+								<#if dtflag10="1">
+				<li class="g1"  >
+						        <ul>
+							       	<li class="lip2"> <a class=l href="${item10.getString("URL")}" target=_blank style="font-weight: bold;color: #000000;font-size: 15px;">
+							        ${item10.getString("Title")}</a></li>
+									
+								    <li class="lip2"><span style="font-size: 13px; ">${item10.getString("Content")}...</span></li>
+								    <li class="lip2"><span style="color: #875"><a href="${item10.getString("URL")}">${item10.getString("URL")}</a> - ${item10.getString("PublishDate")}</span></li>
+							   		<li class="lip2">栏目：${item10.getString("CatalogName")}</li>
+							    </ul>
+						   </li>
+				</#if>
+				</ul>
+				
+				
+				
+				<ul style=" text-align: center;padding-top: 40px;">
+					<li ><span style="font-size: 13px;">结果页码:&nbsp;</span> 
+                ${pageinfo}
+					</li>
+				</ul>
+			</div>
+		</div>
+		${footer}
+	</div>
+	${community}
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href="${Site.StaticResourcePath}/style/IntegralMallSty.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/StyCss.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="wrapper">
+		
+
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link><span class="separator">></span><p   >${Article.title}</p>
+		</div>
+				<!--   Left  begin   -->
+				<div class="MallColumnArea_2 mb10 mt10">
+					<!--     手机充值卡类兑换排行  begin   -->
+					<div class="TitleArea">
+						<h3>手机充值卡类兑换排行</h3>
+					</div>
+					<div class="ColumnCont">
+						<ul>
+							<cms:list item="Article" count="10" hasAttribute="hot">
+        	        <% int index = i+1; %>
+	                <li><% if(index<=3) { %>
+									<div class="ListNumberID_<%=index%>"><%=index%></div> <% } else {%>
+									<div class="ListNumberID"><%=index%></div> <% } %>
+									<div class="ListTxt">
+										<a href="${Article.Link}" target="_top">${Article.title}</a>
+									</div>
+									<div class="clear"></div>
+								</li>
+							</cms:list>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="wrappointlist mt10">
+				<div class="pointdetailwrap">
+					<div class="pdleft">
+						<img src="${Site.StaticResourcePath}/${Article.logo}" alt="${Article.title}" width="300" height="300" />
+					</div>
+					<div class="pdright">
+						<div class="pointarea">
+							<div style="float: left;">
+								<span class="pointprice">${article.kaixinguo}</span>
+							</div>
+							<h3>${Article.title}</h3>
+						</div>
+						<div class="pd01">
+							参&nbsp;&nbsp;考&nbsp;&nbsp;价：<b>${article.referenceprice}元</b>
+						</div>
+						<div class="pd01">
+							库&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;存：<b>${article.stock}</b>
+						</div>
+						<div class="pd02">
+							支付方式：<em>开心果兑换</em>
+						</div>
+						<div class="pd03">
+							<p>
+								图片仅供参考，实际兑换商品<br/> 请以实物或您获取的服务为准
+							</p>
+							<a href="${Site.prop6}/shop/points!buyNow.action?presentID=${Article.presentID}"> <img src="${Site.StaticResourcePath}/images/pointbtn.gif" width="110" height="38" /></a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="titpoint">商品详情</div>
+					<div class="pddetail">
+						<p>${article.content}</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+	<cms:include file="block/community_v1.shtml" />
+</body>
+</html>

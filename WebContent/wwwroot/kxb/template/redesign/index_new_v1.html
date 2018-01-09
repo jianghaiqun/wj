@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<title>${Site.name}</title>
+<cms:include file="block/common_css_index.shtml" />
+
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/redesign/swiper.min.css">
+
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${Site.Index_Keywords}" />
+<meta name="description" content="${Site.Meta_Description}" />
+<title>${Site.name}</title>
+<link id="controlCss" rel="stylesheet" type="text/css" href="javascript:void(0);">
+<cms:include file="block/kxb_custom_header.shtml" />
+<style type="text/css">
+.g-nav-main li a.nav_1{ color:#f08225; }
+</style>
+</head>
+<body id="max_style">
+    <!-- 顶部 开始 -->
+	<cms:include file="block/kxb_header_index_new_v1.shtml" />
+	<!-- 顶部 结束 -->
+    <div class="g-main-con">
+            <div class="g-weaper1200">
+            <!-- 轮播图 -->
+              <div class="g-Home-banner">
+          
+                <div class="swiper-container" >
+                  <div class="swiper-wrapper" >
+                    <cms:imageplayer code="index_ad" type="0" width="230" height="255" />
+                  </div>
+                    <div class="pagination"></div>
+               </div>
+
+                <!-- 每日优惠 -->
+                 <cms:list item="article"  name="产品中心" level="all" count="1" hasAttribute="Dailyoffers" >
+	                <div class="m-day-privilege z-hover-shadow">
+	                <span class="m-day-tips"></span>
+	                    <a target="_blank" href="${Site.URL}/${Article.URL}" class="m-day-tit f_mi" >${article.title}</a>
+	                    <span class="m-day-ftit f_mi">${article.DisInfo}</span>
+	                    <p class="m-day-des">适用人群：${article.AdaptPeopleInfoV3}</p>
+	                    <ul class="m-day-ul">
+	                      ${article.DutyHTMLV4}
+	                    </ul>
+						<div class="tribe-action main_vip" id="Activity_${Article.RiskCode}">
+							<span id="Diy_Title_Activity_${Article.RiskCode}" style="display: none;" class="vip_tag"></span>
+							<span class="vip_tag_des" id="Diy_Activity_${Article.RiskCode}" style="display: none;"></span>
+						</div>
+	                    <div class="m-day-pri">
+	                        <span class="m-day-ypay f_mi" style="display:none">${Article.BasePremV3}</span>
+	                        <span class="m-day-zpay f_mi"><i>￥</i>${Article.BasePremValue}</span>
+	                    </div>
+	                    <a target="_blank" href="${Site.URL}/${article.URL}" class="m-day-goto" rel="nofollow">立即购买</a>
+	                </div>
+                </cms:list>   
+              </div>
+            <!-- 轮播图 -->
+              <div class="clear h20"></div>
+              <!-- 猜你计划 -->
+                <div class="g-Guess-p">
+                    <span class="g-guess-tit"></span>
+                    <span class="g-guess-fun">换一换></span>
+                    <ul class="g-Guess-ul">
+	                   <cms:list item="friendlink" name="首页猜你计划友情链接" count="10">
+					  		<li><div class="g-guess-li"><span><a target="_blank" href="${friendlink.URL}" rel="nofollow"></a></span><img src="${Site.StaticResourcePath}/${friendlink.ImagePath}" width="68px" alt="${friendlink.Prop4}"></div><p>${friendlink.Name}</p></li>
+					  </cms:list>                    
+                     
+                    </ul>
+                </div>
+              <!-- 猜你计划end -->
+              <!-- 筛选 -->
+                <div class="g-screen-tag">
+                       <ul class="g-screen-tagul" id="mod-ul">
+                         <li class="hover"><span id="A00">旅游险</span><em></em></li>
+                         <li><span id="B00">意外险</span><em></em></li>
+                         <li><span id="D00">健康险</span><em></em><em></em></li>
+                       </ul>
+                       <div class="g-screen-mod"  id="mod-con">
+                              <div class="g-screen-mod">
+                                <table class="g-screen-table">
+                                    <tr>
+                                      <td class="g-screen-td">您的年龄：</td>
+                                      <td><div  class="divselect"> 
+                                              <cite></cite> 
+                                                <ul> 
+ 												  <li><a href="javascript:;" selectid="Age1">1-17岁</a></li> 
+                                                  <li><a href="javascript:;" selectid="Age2">18-60岁</a></li> 
+                                                  <li><a href="javascript:;" selectid="Age3">60岁以上</a></li>  
+                                                </ul>
+                                                <input class="inputselect" type="hidden" value="" id="Age_A"/>
+                                              </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="g-screen-td">出行目的地：</td>
+                                      <td><div class="trealy_input"> <label class="trealy_inputs" for="g-screen-ctiy" style="display: block;">
+                            请输入您要去往的目的地</label> <input type="text" class="g-screen-input" id="g-screen-ctiy" name="screencity">
+                                     </div></td>
+                                    	 <input type="hidden" value="" id="travelAddress" name="travelAddress">
+                                    </tr>
+                                    <tr>
+                                      <td class="g-screen-td">停留天数：</td>
+                                      <td><div  class="divselect"> 
+                                              <cite></cite> 
+                                                <ul> 
+                                                  <li><a href="javascript:;" selectid="1-7">1-7天</a></li> 
+                                                  <li><a href="javascript:;" selectid="8-15">8-15天</a></li> 
+                                                  <li><a href="javascript:;" selectid="16-30">16-30天</a></li> 
+                                                  <li><a href="javascript:;" selectid="31-90">31-90天</a></li> 
+                                                  <li><a href="javascript:;" selectid="91-180">91-180天</a></li> 
+                                                  <li><a href="javascript:;" selectid="365">365天</a></li> 
+                                                </ul>
+                                                <input class="inputselect" type="hidden" value="" id="Period_A"/>
+                                              </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2"><span class="g-screen-btn" onclick="quicksearch()">一键筛选</span></td>
+                                    </tr>
+                                </table>
+                              </div>
+                              <div class="g-screen-mod" style="display:none">
+                                <table class="g-screen-table">
+                                    <tr>
+                                      <td class="g-screen-td">投保年龄：</td>
+                                      <td><div  class="divselect"> 
+                                              <cite></cite> 
+                                                <ul> 
+                                                  <li><a href="javascript:;" selectid="shaoeryiwai">少儿(0-17岁)</a></li> 
+                                                  <li><a href="javascript:;" selectid="zhongqingnianyiwai">中青年(18-65岁)</a></li> 
+                                                  <li><a href="javascript:;" selectid="laonianyiwai">老年(66-80岁)</a></li> 
+                                                </ul>
+                                                <input class="inputselect" type="hidden" value="" id="Age_B" />
+                                              </div>
+                                              
+                                          </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="g-screen-td">保障类型：</td>
+                                      <td><div  class="divselect"> 
+                                              <cite></cite> 
+                                                <ul> 
+                                                  <li><a href="javascript:;" selectid="B02">交通意外保险</a></li> 
+                                                  <li><a href="javascript:;" selectid="B01">人身意外保险</a></li> 
+                                                  <li><a href="javascript:;" selectid="B03">航空意外险</a></li> 
+                                                </ul>
+                                                <input class="inputselect" type="hidden" value="" id="Features_B"/>
+                                              </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="g-screen-td">保险金额：</td>
+                                      <td>  <div  class="divselect"> 
+                                              <cite></cite> 
+                                                <ul> 
+                                                  <li><a href="javascript:;" selectid="Prem2">10万以下</a></li> 
+                                                  <li><a href="javascript:;" selectid="Prem3">11-20万</a></li> 
+                                                  <li><a href="javascript:;" selectid="Prem4">21-50万</a></li> 
+                                                  <li><a href="javascript:;" selectid="Prem5">50-100万</a></li> 
+                                                  <li><a href="javascript:;" selectid="Prem6">100万以上</a></li> 
+                                                </ul>
+                                                <input class="inputselect" type="hidden" value="" id="Prem_B"/>
+                                              </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2"><span class="g-screen-btn" onclick="quicksearch()">一键筛选</span></td>
+                                    </tr>
+                                </table>
+                              </div>
+                              <div class="g-screen-mod" style="display:none">
+                                <table class="g-screen-table">
+                                    <tr>
+                                      <td class="g-screen-td">投保人群：</td>
+                                      <td><div  class="divselect"> 
+                                              <cite></cite> 
+                                                <ul> 
+                                                  <li><a href="javascript:;" selectid="shaoer">少儿(0-17岁)</a></li> 
+                                                  <li><a href="javascript:;" selectid="zhongqingnian">中青年(18-60岁)</a></li> 
+                                                  <li><a href="javascript:;" selectid="zhonglaonian">老年(60岁以上)</a></li> 
+                                                  <li><a href="javascript:;" selectid="nvxing">女性疾病保险</a></li> 
+                                                </ul>
+                                                <input class="inputselect" type="hidden" value="" id="Age_D"/>
+                                              </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="g-screen-td">保障类型：</td>
+                                      <td><div  class="divselect"> 
+                                              <cite></cite> 
+                                                <ul>
+                                                  <li><a href="javascript:;" selectid="dijia">低价保障型</a></li> 
+                                                  <li><a href="javascript:;" selectid="zhuanbaoaizheng">专保癌症</a></li> 
+                                                  <li><a href="javascript:;" selectid="zhuyuanjintie">住院津贴</a></li> 
+                                                </ul>
+                                                <input class="inputselect" type="hidden" value="" id="Features_D"/>
+                                              </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="g-screen-td"></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2"><span class="g-screen-btn" onclick="quicksearch()">一键筛选</span></td>
+                                    </tr>
+                                </table>
+                              </div>
+                       </div>
+                </div>
+              <!-- 筛选end -->
+               <div class="clear h20"></div>
+
+              <div class="g-in-mod g-in-mod1">
+                      <h2 class="g-in-tit g-in-tit1"><a href="${Site.URL}/lvyou-baoxian/" target="_blank" rel="nofollow">更多&gt;</a></h2>
+                      <div class="clear"></div>
+                      <div class="g-in-box">
+                          <ul class="g-in-ul" id="f-tagul1">
+                            <li class="g-in-f-li select"><span>申根签证</span></li>
+                            <li><span>境外旅游</span></li>
+                            <li><span>国内旅游</span></li>
+                          </ul>
+                          <div class="g-bg-con">
+                            <div id="f-incon1">
+                              <div class="g-in-shop">
+                               			<div class="m-in-box">
+		                                    <cms:list item="catalog" name="9416" level="all" count="1">
+												<img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="旅游保险-申根签证保险"/>
+											</cms:list>	                             
+					            			<cms:list item="article" count="3" level="all" name="9416" hasAttribute="hp_topical">
+					                 
+					                 <%if(i==0){%>
+		                                    
+		                                    <div class="m-in-shopdes">
+		                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi" >${Article.shorttitle|CharWidth=16}</a>
+		                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+		                                      <ul class="m-in-ul">
+		                                       		${Article.DutyHtmlV4}
+		                                      </ul>
+		                                      <div class="clear h10"></div>
+		                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+		                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+		                                      <div class="clear"></div>
+		                                    </div>
+		                                  </div>	
+		                                  
+		                                  <div class="m-in-box m-in-box2">				                 
+					                 <%}else{%>
+		                                    <div class="m-in-shopdes">
+		                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+		                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <ul class="m-in-ul">
+		                                       		${Article.DutyHtmlV4}
+		                                      </ul>
+		                                      <div class="clear h10"></div>
+		                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+		                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+		                                      <div class="clear"></div>
+		                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                 </div>
+					                 <%}%>
+					                     
+								</cms:list>                              
+                              </div>
+                              <div class="g-in-shop" style="display:none">
+                                        <div class="m-in-box">
+		                                    <cms:list item="catalog" name="9415" level="all" count="1">
+												<img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="旅游保险-境外旅游保险"/>
+											</cms:list>	 
+	                                        <cms:list item="article" count="3" level="all" name="9415" hasAttribute="hp_topical">
+						                 
+						                 <%if(i==0){%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                          <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>
+			                                  </div>	
+			                                  
+			                                  <div class="m-in-box m-in-box2">				                 
+						                 <%}else{%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                 </div>
+					                 <%}%>
+									</cms:list>
+								</div>
+                              <div class="g-in-shop" style="display:none">
+                                                                      <div class="m-in-box">
+		                                    <cms:list item="catalog" name="9414" level="all" count="1">
+												<img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="旅游保险-国内旅游保险"/>
+											</cms:list>	
+                                  <cms:list item="article" count="3" level="all" name="9414" hasAttribute="hp_topical">
+						                 
+						                 <%if(i==0){%>
+
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>
+			                                  </div>	
+			                                  
+			                                  <div class="m-in-box m-in-box2">				                 
+						                 <%}else{%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                 </div>
+					                 <%}%>
+									</cms:list>
+                              </div>
+                            </div>
+                            
+                            <div class="g-eb-shop">
+                              <h3 class="g-eb-tit f_mi">大家都在买</h3>
+                              
+						    	<cms:list item="article"  name="9409" level="current" count="4"  condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'">
+						    	
+		                               <dl class="g-eb-dl">
+		                                  <a href="${Site.URL}/${Article.URL}" target="_blank"><span class="g-eb-num f_mi"><%=i+1%></span>
+		                                  <dt>${Article.Title|CharWidth=12}</dt>
+		                                  <dd>${Article.AdaptPeopleInfo|CharWidth=20}</dd>
+		                                  <dd><span class="g-eb-money f_mi f-ib">￥${Article.BasePremValue}</span><span class="g-eb-nums f-ib"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>已购买</span></dd>
+		                                  <span class="g-eb-go"></span></a>
+		                               </dl>						    	
+						    	
+						    	</cms:list>                              
+                            </div>
+                          </div>
+                      </div>    
+              </div>
+               <div class="clear h20"></div>
+              <div class="g-in-mod g-in-mod2">
+                      <h2 class="g-in-tit g-in-tit2"><a href="${Site.URL}/yiwai-baoxian/" target="_blank" target="_blank" rel="nofollow">更多&gt;</a></h2>
+                      <div class="clear"></div>
+                      <div class="g-in-box">
+                          <ul class="g-in-ul" id="f-tagul2">
+                            <li class="g-in-f-li select"><span>人身意外</span></li>
+                            <li><span>航空意外</span></li>
+                            <li><span>交通意外</span></li>
+                          </ul>
+                          <div class="g-bg-con">
+                          
+                           <div id="f-incon2">
+                           	  <div class="g-in-shop" >
+                                     <div class="m-in-box">
+		                                    <cms:list item="catalog" name="9421" level="all" count="1">
+												<img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="意外保险-人身意外保险"/>
+											</cms:list>	
+                                  <cms:list item="article" count="3" level="all" name="9421" hasAttribute="hp_topical">
+						            
+						                 
+						                 <%if(i==0){%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>
+			                                  </div>	
+			                                  
+			                                  <div class="m-in-box m-in-box2">				                 
+						                 <%}else{%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                 </div>
+					                 <%}%>
+									</cms:list>
+                              </div>
+                              	
+                              <div class="g-in-shop" style="display:none">
+                                      <div class="m-in-box">
+		                                    <cms:list item="catalog" name="9422" level="all" count="1">
+												<img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="意外保险-航空意外保险"/>
+											</cms:list>	
+			                                  <cms:list item="article" count="3" level="all" name="9422" hasAttribute="hp_topical">
+									            
+									                 
+									                 <%if(i==0){%>
+						                                    <div class="m-in-shopdes">
+						                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+						                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+					                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+						                                      <ul class="m-in-ul">
+						                                       		${Article.DutyHtmlV4}
+						                                      </ul>
+						                                      <div class="clear h10"></div>
+						                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+						                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+						                                      <div class="clear"></div>
+						                                    </div>
+						                                  </div>	
+						                                  
+						                                  <div class="m-in-box m-in-box2">				                 
+									                 <%}else{%>
+						                                    <div class="m-in-shopdes">
+						                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+						                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+						                                      <ul class="m-in-ul">
+						                                       		${Article.DutyHtmlV4}
+						                                      </ul>
+						                                      <div class="clear h10"></div>
+						                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+						                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+						                                      <div class="clear"></div>
+						                                    </div>					                 	
+								                 <%}%>
+								                 <%if(i == (rdCnt - 1)){%>
+								                 </div>
+								                 <%}%>
+												</cms:list>
+                              </div>
+                              <div class="g-in-shop" style="display:none">
+                                                                      <div class="m-in-box">
+		                                    <cms:list item="catalog" name="9420" level="all" count="1">
+												<img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="意外保险-交通意外保险"/>
+											</cms:list>	
+									<cms:list item="article" count="3" level="all" name="9420" hasAttribute="hp_topical">
+						            
+						                 
+						                 <%if(i==0){%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>
+			                                  </div>	
+			                                  
+			                                  <div class="m-in-box m-in-box2">				                 
+						                 <%}else{%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                 </div>
+					                 <%}%>
+									</cms:list>
+                              </div>
+                            </div>
+                            
+                            <div class="g-eb-shop">
+                              <h3 class="g-eb-tit f_mi">大家都在买</h3>
+						    	<cms:list item="article"  name="9385" level="current" count="4"  condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'">
+						    	
+						    	
+		                               <dl class="g-eb-dl">
+		                                  <a href="${Site.URL}/${Article.URL}" target="_blank"><span class="g-eb-num f_mi"><%=i+1%></span>
+		                                  <dt>${Article.Title|CharWidth=12}</dt>
+		                                  <dd>${Article.AdaptPeopleInfo|CharWidth=20}</dd>
+		                                  <dd><span class="g-eb-money f_mi f-ib">￥${Article.BasePremValue}</span><span class="g-eb-nums f-ib"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>已购买</span></dd>
+		                                  <span class="g-eb-go"></span></a>
+		                               </dl>						    	
+						    	
+						    	</cms:list> 
+                            </div>
+                          </div>
+                      </div>    
+              </div>
+               <div class="clear h20"></div>
+              <div class="g-in-mod g-in-mod3">
+                      <h2 class="g-in-tit g-in-tit3"><a href="${Site.URL}/jiankang-baoxian/" target="_blank" rel="nofollow">更多&gt;</a></h2>
+                      <div class="clear"></div>
+                      <div class="g-in-box">
+                          <ul class="g-in-ul" id="f-tagul3">
+                            <li class="g-in-f-li select"><span>重大疾病</span></li>
+                            <li><span>特定疾病</span></li>
+                            <li class="g-in-e-li"><span>住院医疗</span></li>
+                          </ul>
+                          <div class="g-bg-con">
+                            <div id="f-incon3">
+                              <div class="g-in-shop">
+                                   <div class="m-in-box">
+		                                <cms:list item="catalog" name="9430" level="all" count="1">
+											<img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="健康保险-重大疾病保险"/>
+										</cms:list>	
+                                        <cms:list item="article" count="3" level="all" name="9430" hasAttribute="hp_topical">
+						                 <%if(i==0){%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>
+			                                  </div>	
+			                                  
+			                                  <div class="m-in-box m-in-box2">				                 
+						                 <%}else{%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                 </div>
+					                 <%}%>
+									</cms:list>
+                              </div>
+                              <div class="g-in-shop" style="display:none">
+                                  <div class="m-in-box">
+		                               <cms:list item="catalog" name="9432" level="all" count="1">
+										   <img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="健康保险-特定疾病保险"/>
+									   </cms:list>	
+                                       <cms:list item="article" count="3" level="all" name="9432" hasAttribute="hp_topical">
+						            	
+						                 <%if(i==0){%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>
+			                                  </div>	
+			                                  
+			                                  <div class="m-in-box m-in-box2">				                 
+						                 <%}else{%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                 </div>
+					                 <%}%>
+									</cms:list>
+									
+                              </div>
+                              <div class="g-in-shop" style="display:none">
+                                   <div class="m-in-box">
+		                                    <cms:list item="catalog" name="9769" level="all" count="1">
+												<img data-original="${Site.StaticResourcePath}/${catalog.index_img}" class="m-in-img" width="130px" height="111px" alt="健康保险-住院医疗保险"/>
+											</cms:list>	
+                                   <cms:list item="article" count="3" level="all" name="9769" hasAttribute="hp_topical">
+
+						                 <%if(i==0){%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${Article.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>
+			                                  </div>	
+			                                  
+			                                  <div class="m-in-box m-in-box2">				                 
+						                 <%}else{%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-shtit f_mi">${Article.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${Article.AdaptPeopleInfo|CharWidth=14}</p>
+			                                      <ul class="m-in-ul">
+			                                       		${Article.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${Article.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${Article.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                
+					                 </div>
+					                 <%}%>
+									</cms:list>
+                              </div>
+                       
+                         
+                            </div>
+                            <div class="g-eb-shop">
+                              <h3 class="g-eb-tit f_mi">大家都在买</h3>
+						    	<cms:list item="article"  name="9424" level="current" count="4"  condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'">
+						    	
+		                               <dl class="g-eb-dl">
+		                                  <a href="${Site.URL}/${Article.URL}" target="_blank"><span class="g-eb-num f_mi"><%=i+1%></span>
+		                                  <dt>${Article.Title|CharWidth=12}</dt>
+		                                  <dd>${Article.AdaptPeopleInfo|CharWidth=20}</dd>
+		                                  <dd><span class="g-eb-money f_mi f-ib">￥${Article.BasePremValue}</span><span class="g-eb-nums f-ib"><i id="SalesI_${Article.RiskCode}" class="SalesI_${Article.RiskCode}" >0人</i>已购买</span></dd>
+		                                  <span class="g-eb-go"></span></a>
+		                               </dl>						    	
+						    	
+						    	</cms:list> 
+                            </div>
+                          </div>
+                      </div>    
+              </div>
+               <div class="clear h20"></div>
+                <!-- 理赔案例 -->
+               <div class="g-claims" >
+					<h3 class="g-brand-tit f_mi">理赔案例<a href="${Site.URL}/lipei/" target="_blank" rel="nofollow">更多&gt;</a></h3>
+
+					<div class="g-intro nar-screen">
+						<div class="f-tagul4">
+							 <cms:list item="article" count="5" level="all" name="首页理赔案例" >
+							 	<% if(i%9==0){ %>
+									<span class="select swiper-pagination-switch swiper-visible-switch swiper-active-switch">${Article.title}</span>
+							 	<% } else { %>
+									<span>${Article.title}</span>
+							 	<% } %>
+							 </cms:list>	
+						</div>
+						
+						<div class="f-swiper">
+							<div class="swiper-wrapper" style="width: 3976px; height: 320px; transform: translate3d(-2840px, 0px, 0px); transition-duration: 0.5s;">
+							    <cms:list item="article" count="5" level="all" name="首页理赔案例" >
+									<div class="swiper-slide swiper-slide-duplicate" style="width: 568px; height: 320px;">
+										<div class="f-left"> 
+											<p class="t-ttl">
+												<%if(article.getString("TitleLink") != null && !"".equals(article.getString("TitleLink"))){%>
+													<a href="${Article.TitleLink}" target="_blank" class="case-title">${Article.title}</a>
+												<% } else { %>
+													<span class="case-title">${Article.title}</span>
+												<% } %>
+											</p>
+											<dl class="t-list">
+												<div>
+												<dt>理赔时间：</dt>
+												<dd>${Article.ClaimDate}</dd>
+												</div>
+												<div>
+												<dt>保险公司：</dt>
+												<dd>${Article.ComName}</dd>
+												</div>
+												<div>
+												<dt>保险产品：</dt>
+												<dd>${Article.ProductName}</dd>
+												</div>
+												<div>
+												<dt>理赔项目：</dt>
+												<dd>${Article.ClaimItem1}</dd>
+												</div>
+												<div>
+												<dt>理赔详情：</dt>
+												<dd class="more-text">${Article.ClaimItem2}</dd>
+												</div>
+											</dl>
+										</div>
+										
+										<% if(i==0){ %>
+											<div class="p-img"><img class="lazy" src="${Site.StaticResourcePath}/${Article.ClaimPic}" alt="${Article.ClaimPicDesc}" /></div>
+									 	<% } else { %>
+											<div class="p-img"><img class="lazy" data-original="${Site.StaticResourcePath}/${Article.ClaimPic}" alt="${Article.ClaimPicDesc}" /></div>
+									 	<% } %>
+									 	
+										<div class="f-icon"><img src="${Site.StaticResourcePath}/images/redesign/icon_triangle.png" alt="" /></div>
+									</div>							    
+								</cms:list>	
+								
+								
+								
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="g-process">
+						<p class="p-ttl">理赔流程</p>
+						<ol class="p-list">
+						<li><p><span class="i-con1"></span>致电开心保报案<br />领取理赔申请表</p></li>
+						<li><p><span class="i-con2"></span>准备资料<br />提交资料</p></li>
+						<li><p><span class="i-con3"></span>领取理赔款</p></li>
+						</ol>
+						<p class="l-btn"><a href="${Site.URL}/lipei/" target="_blank" rel="nofollow">立即申请理赔 ></a></p>
+					</div>
+				</div>
+                <!-- 保险攻略 -->
+               <div class="g-strategy">
+                  <h3 class="g-brand-tit f_mi">保险攻略</h3>
+                    <ul class="g-strategyUl cf" id="g-strategyUl">
+                      <li class="select">评测<em></em></li>
+                      <li>热点<em></em></li>
+                      <li>专题<em></em></li>
+                      <li>知识<em></em></li>
+                    </ul>
+                  <div id="g-strategyboxBox">
+					  <div class="g-strateg-div cf">
+                          <ul class="g-strateg-ul">
+                          <cms:list item="article"  name="10568" level="all" count="5" hasAttribute="index_show" type="modifyzx">
+							  <li><a href="${Site.URL}/${article.URL}" target="_blank">${article.title}</a></li>
+						  </cms:list>
+                          </ul>
+						  <div class="clear"></div>
+					  </div>
+					  <div class="g-strateg-div cf" style="display:none;">
+                      <ul class="g-strateg-ul">
+						<cms:list item="friendlink" name="首页热点友情链接" count="5" >
+								<li><a href="${friendlink.URL}">${friendlink.Name}</a></li>
+						</cms:list>
+                      </ul>
+                        <div class="clear"></div>
+                    </div>
+                     <div class="g-strateg-div cf" style="display:none;">
+                      <ul class="g-strateg-ul">
+						<cms:list item="friendlink" name="首页专题友情链接" count="5">
+								<li><a href="${friendlink.URL}">${friendlink.Name}</a></li>
+						</cms:list>
+                      </ul>
+                     <!--  <a href="<cms:link type='Catalog' name='9766'/>" target="_blank" class="g-strateg-more" rel="nofollow"> 更多&gt; </a> -->
+                        <div class="clear"></div>
+                    </div>
+                     <div class="g-strateg-div cf" style="display:none;">
+                      <ul class="g-strateg-ul">
+                      		<cms:list item="article" count="5" level="root" hasAttribute="index_show" type="modifyzx" condition=" (CatalogInnerCode like '002306%' or CatalogInnerCode like '002307%' or CatalogInnerCode like '002347%')">
+									<li><a href="${Site.URL}/${Article.URL}" target="_blank">${article.title}</a></li>
+							</cms:list>
+                      </ul>
+                      <a href="<cms:link type='Catalog' name='9443'/>" target="_blank" class="g-strateg-more" rel="nofollow"> 更多&gt; </a>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="link_tag">
+			        	<cms:list item="friendlink" name="首页标签云" count="30">
+								<a href="${friendlink.URL}">${friendlink.Name}</a>
+						</cms:list>
+                  </div>
+               </div>
+                <div class="clear h20"></div>  
+                <!-- 合作品牌 -->
+                <div class="g-brand">
+                    <h3 class="g-brand-tit f_mi">合作品牌 <a href="<cms:link type='Catalog' name='9475'/>" target="_blank" >更多&gt;</a></h3>
+                    <div class="g-brand-logo">
+						<cms:list item="article" level="all" condition=" exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='是' and z1.columncode='HasPartnership')" name="保险品牌">
+							<a href="${Site.URL}/${Article.URL}" target="_blank" ><img height="50" width="113" data-original="${Site.StaticResourcePath}/${article.CompanyLogo}"  width="126" height="62" title="${article.LogoAlt}" alt="${article.LogoAlt}" class="lazy"/></a>
+						</cms:list>                      
+                    </div>
+                    <div class="clear h20"></div>
+                </div>
+
+            </div>
+         
+    </div>
+
+<!-- 底部开始 -->
+	<cms:include file="block/kxb_footer_new_v1.shtml" />
+<!-- 底部结束 -->
+
+<!-- 城市选择 -->
+<div id='suggest' class="ac_results">
+  
+
+</div>
+<!-- 城市选择 -->
+<div id='suggest1' class="ac_results ac_results1">
+  
+
+</div>
+
+<!-- js加载 -->
+<script src="${Site.JsResourcePath}/js/LAB.min.js" type="text/javascript" charset="utf-8" ></script>
+<script src="${Site.JsResourcePath}/js/weixitrack.js" type="text/javascript" ></script>
+
+	<script type="text/javascript">
+	   $LAB
+	     .script("${Site.JsResourcePath}/js/mobile.js").wait()
+	     .script("${Site.JsResourcePath}/js/jquery-1.4.4.min.js").wait()
+	     .script("${Site.JsResourcePath}/js/jquery.cookie.js")
+	     .script("${Site.JsResourcePath}/js/redesign/re_base.js")
+	     .script("${Site.JsResourcePath}/js/swiper.min.js").wait()
+	     .script("${Site.JsResourcePath}/js/login.js")
+	     .script("${Site.JsResourcePath}/js/redesign/re_header.js")
+	     .script("${Site.JsResourcePath}/js/redesign/re_footer.js")
+	     .script("${Site.JsResourcePath}/js/lazyload.js").wait()
+	     .script("${Site.JsResourcePath}/js/redesign/re_home.js")
+	     .wait(function(){
+	    	    new changePlanSort(); 
+	    		allowScreen()
+	    		jQuery(window).resize(function () {
+	    		    allowScreen()
+	    		});
+	        searchProductListAvtivity();
+	        jQuery('#fix_wechar').fixService({
+	            direction: 'left'
+	        });
+	    	//活动信息
+			function searchProductListAvtivity(){
+				var list=jQuery('div[id^=Activity_]');
+				var id = new Array(list.length);
+				var idStr="";
+				for (var i = 0; i < list.length; i++) {
+					id[i] = list[i].id;
+					idStr+= list[i].id;
+				}
+				if(idStr==""){
+					return;
+				}
+				var cpsUserId = jQuery.cookie('cpsUserId');
+				var channelsn = "wj";
+				if(typeof(cpsUserId)!="undefined" && cpsUserId!=null && cpsUserId!=""){
+					channelsn = "cps";
+				}
+				jQuery.ajax({
+					type: 'post',
+					url: sinosoft.base+'/shop/sales_volume!searchProductListAvtivityRe.action?productId='+id+'&channelSn='+channelsn,
+					dataType: "json",
+					async: false,
+					success: function(data) {
+						jQuery.each(data, function(index, object) {
+							var index_productid=index.substring(0,index.indexOf("@"));
+							if  (object != null && object != '') {
+								var obj_str=object+"";
+								var activity_title=obj_str.substring(0,obj_str.indexOf("@"));
+								var activity_description=obj_str.substring(obj_str.indexOf("@")+1,obj_str.length);
+								jQuery('#Diy_'+index_productid).show();
+								jQuery('#Diy_Title_'+index_productid).show();
+								document.getElementById("Diy_"+index_productid).innerHTML=activity_description;
+								document.getElementById("Diy_Title_"+index_productid).innerHTML=activity_title;
+
+								var activity_type = index.substring(index.indexOf("@")+1);
+								var active_class;
+								if (activity_type == "x") {
+									active_class = " active_07";
+								} else if (activity_type == "1") {
+									active_class = " active_06";
+								} else if (activity_type == "2") {
+									active_class = " active_05";
+								} else if (activity_type == "3") {
+									active_class = " active_04";
+								} else if (activity_type == "6") {
+									active_class = " active_02";
+								} else if (activity_type == "7") {
+									active_class = " active_08";
+								} else if (activity_type == "8") {
+									active_class = " active_03";
+								} else if (activity_type == "9") {
+									active_class = " active_09";
+								}
+								document.getElementById("Diy_Title_"+index_productid).className += active_class;
+							}
+						});
+					}
+				});
+			}
+	　　}).script("${Site.JsResourcePath}/js/redesign/re_suggest.js")
+	    .script("${Site.JsResourcePath}/js/redesign/xiaoneng_CustomerService.js")
+	    .script("http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401")
+	    
+	    
+	    
+	
+ 
+
+	
+	</script>
+</body>
+</html> 

@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+String title = article.getString("MetaTitle");
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+<ul class="car_mininav clearfix lyg_nav">                                                       
+		<li><a  href="${Site.URL}/chexian/"  title="车辆保险首页">车辆保险首页</a></li>
+	</ul>
+<div class="car_index_s"><div class="meihua_p">买车险 首选开心保 <b>直降15%</b></div></div>
+<div class="car_gs_box car_border_q no_top_bor cf">
+	<div class="car_bxgs floatl">
+    
+      	<div class="search_bxgs"><div class="car_bxzscon">保险公司:</div>  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+				   <cms:list item="article"  level="all" name="车险对接保险公司" >
+		              <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+		           </cms:list>
+                </div>
+            </div>
+             </div>
+          
+             	<ul  id="car_tag_con" class="car_lipin  cf">
+				   <cms:list item="article" level="all" name="车险对接保险公司" >
+		             <li style="display:none">${Article.Gift}</li>
+		           </cms:list>
+             	</ul>
+            
+                <div class="ljbj_sc"> <input name="" type="button" value="开始报价" onclick="guodu('${Site.URL}/cx/gd/')" class="input_ksbj"></div>
+    </div>
+    <div class="car_adjd floatr">
+    <img src="${Site.StaticResourcePath}/images/car/huahen_03.jpg" width="700" height="246" alt="车辆刮损不发愁">
+    </div>
+</div>
+<div class="h10 clear"></div>
+<div class="car_left floatl ">
+		<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html " target="_blank">
+		<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165" alt="车险快速报价" title="车险快速报价"></a></div>
+		<cms:list item="Image"  name="车险图片"> 
+	      <div class="car_ad_l clearfix">
+		   <a href="${Image.wangzhi}" target="_blank">
+		       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+		   </a>
+		  </div>
+	    </cms:list> 
+            
+            <div class="car_border_q mar_btn_10">
+            <ul class="car_zx_title zs_list cf">
+            	<li class="zslist_1"><span class="hover" id="zslist1" onclick="setTab('zslist',1,3)">资讯</span></li>
+            	<li class="zslist_1"> <span  id="zslist2"  onclick="setTab('zslist',2,3)">知识</span></li>
+                <li class="zslist_1"> <span  id="zslist3"  onclick="setTab('zslist',3,3)">问答</span></li>
+            </ul>
+             <ul class="zx_list cf " id="con_zslist_1">
+				<cms:list item="article" level="all" type="rand" tag="划痕险" count="6" name="保险资讯">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_2" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="划痕险" count="6" name="保险知识">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_3" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="划痕险" count="6" name="保险问答">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+            </div>
+             <div class="car_border_q mar_btn_10">
+             <h2 class="car_l_title3">商业车险种类</h2>
+             <ul class="car_gs_list xz_list cf ">
+			   <cms:list item="friendlink" name="商业车险种类">
+				 <li><a href="${friendlink.URL}" target='<%String url = friendlink.getString("url");if(url.startsWith("h"))write("_blank");%>'>${friendlink.Name|CharWidth=7}</a></li>
+		       </cms:list>
+             </ul>
+            </div>
+               <div class="car_border_q mar_btn_10">
+              	 <h3 class="car_l_title3">理赔案例资讯</h3>
+                 <ul class="car_gs_list lp_list cf">
+                 <cms:list item="article" level="all" type="rand" tag="划痕险案例" count="10" name="保险知识,保险资讯">
+						<li>
+							<a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a>
+	                		<%if(i==0){
+	                		write("<p class='p_text_des'>");
+	                		String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>50){
+							description = description.substring(0,50);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>50){
+							summary = summary.substring(0,50);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==50){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==50){
+							write("...");
+							}
+						    write("</p>");
+						    }%>
+						</li>
+					</cms:list>
+                 </ul>
+              </div>
+  </div>
+       <div class="car_right floatr">
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h1 class="car_l_title">车辆划痕险</h1>
+			<p >
+            车身划痕损失险简称划痕险，可保障车身因尖锐物体造成的车漆破坏，比如小刀、石子、钥匙等等。而与其他物体发生碰撞造成的损失如车辆碰撞、剐蹭到固定物体等情况，不包含在划痕险的保障范围内，而属于车损险范畴。划痕险属于车辆损失险的附加险种，不能单独投保。
+            </p>
+
+            
+        </div>
+        
+         <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a  href="${Site.URL}/zhishi/cheliangbaoxian/A03G20130904099.shtml"  target="_blank" title="汽车划痕险有必要买么？">汽车划痕险有必要买么？</a></h2>
+			
+            <p>作为车损险的附加险种，划痕险价格一般在几百元左右，但不是必须购买的。新车出现刮痕的几率远远大于旧车，因此建议新车车主投保划痕险。而行驶多年的旧车在划痕险上多有投保限制，就可以酌情考虑购买。此外，如果车辆长期露天停放，无论新车、旧车，都建议投保划痕险。</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title">划痕险对比</h2>
+		<table width="100%" border="0" class="huahen_table">
+  <tr>
+    <th scope="col" class="table_no_bor_l" style="width:134px;">&nbsp;</th>
+    	 <cms:list item="article"  level="all" name="车险对接保险公司" >
+		    <th scope="col">${Article.title}<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_see">立即报价</a></div></th>
+         </cms:list>
+  </tr>
+  <tr>
+    <td  class="table_no_bor_l">划痕险保障范围</td>
+    <td colspan="4">保险期间内，因非碰撞原因导致的车身表面油漆单独划伤</td>
+    </tr>
+  <tr>
+    <td  class="table_no_bor_l">划痕险免赔范围</td>
+    <td colspan="4">1、被保险人或驾驶人故意行为造成被保险车辆的损失<br>
+2、保险车辆与其他车辆碰撞、剐蹭到固定物体造成的划痕损失</td>
+    </tr>
+  <tr>
+    <td valign="top"  class="table_no_bor_l table_no_bor_btn">不同公司免责条款对比</td>
+    <td valign="top" class="table_no_bor_btn">1、民事纠纷造成的车辆损失；<br>
+2、车身表面自然老化、损坏；<br>
+3、其他不属于保险责任范围内的损失和费用<br></td>
+    <td valign="top" class="table_no_bor_btn">1、民事纠纷造成的车辆损失；<br>
+2、车身表面自然老化、损坏；<br>
+3、其他不属于保险责任范围内的损失和费用<br></td>
+    <td valign="top" class="table_no_bor_btn">1、民事纠纷造成的车辆损失；<br>
+2、车身表面自然老化、损坏；<br>
+3、其他不属于保险责任范围内的损失和费用<br></td>
+    <td valign="top" class="table_no_bor_btn">被保险人、驾驶人及家庭成员的故意行为造成车身划痕。</td>
+  </tr>
+</table>
+ 
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a  href="${Site.URL}/zhishi/cheliangbaoxian/A03G20130620073.shtml"  target="_blank" title="划痕险理赔技巧与理赔范围">划痕险理赔技巧与理赔范围：</a></h2>
+          <br>
+    <b>哪些损失不属于划痕险</b>
+
+            <ul class="lust_cons">
+            	<li>1、被保险人及其家庭成员、驾驶人及其家庭成员的故意行为造成的损失；</li>
+            	<li>2、他人因与被保险人或驾驶人及其家庭成员发生民事、经济纠纷造成保险车辆的损失；</li>
+            	<li>3、车身表面自然老化、损坏；</li>
+            	<li>4、其他不属于保险责任范围内损失和费用。</li>
+            </ul>
+			<b>汽车划痕险理赔流程</b>
+
+            <ul class="lust_cons">
+            	<li>1、及时向保险公司报案，超过48小时报案，需要持身份证件到保险公司补报案。
+</li>
+            	<li>2、保险公司定损，交付4S店修车。
+</li>
+            	<li>3、备齐相关资料：定损单、维修费用报销单等等，到保险公司进行赔付。
+</li>
+            </ul>
+
+	  <b>划痕险理赔技巧</b>		
+	<p>
+如果划痕不严重或者投保汽车不是很昂贵，建议车主不报案，因为首年无理赔出险，次年车险保费可优惠10%左右。<br>
+需注意，划痕险赔付按照实际修理费用计算，每次赔偿有15%的免赔率。保险期间内累积赔款金额超过保险金额，则保险责任自动终止。不同公司对于划痕险的基本赔付率计算不同，购买之前最好能多咨询保险公司。此外，网上投保可以进行多家车险比较，获得精准的报价，也是省钱的好选择。</p>
+
+
+ 
+
+
+
+            
+        </div>
+         <div class="car_border_q cf"> 
+         	  <div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+			<div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="划痕险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="划痕险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="划痕险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+		<cms:include file="block/community.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

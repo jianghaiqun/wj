@@ -1,0 +1,61 @@
+<div class="bottom">
+				     <div class="product_recommend">
+						<div class="part1left">
+								<div class="top5">
+									<h3 class="top5tit"><img src="http://localhost:8080/image/top5tit.gif" width="115" height="19" /></h3>
+									<div class="tab01">
+						                    <ul> 
+						                        <li id="one1" onMouseOver="setTab('one',1,2)" class="hover">意外</li>
+						                        <li id="one2" onMouseOver="setTab('one',2,2)">旅游</li>
+						                    </ul>
+						                    <div class="clear"></div>
+						          </div>
+								  <div id="con_one_1">
+									<ul class="liststyle05">
+						          		
+
+						              	  <li>
+						                      <span class='rank01'><a href="../yiwai-baoxian/284060.shtml">平安开心保航班延误保障</a></span>
+						                  </li>
+						                
+
+						              	  <li>
+						                      <span class='rank02'><a href="../yiwai-baoxian/283704.shtml">平安短期7天交通意外保险</a></span>
+						                  </li>
+						                
+
+						              	  <li>
+						                      <span class='rank03'><a href="../yiwai-baoxian/258334.shtml">平安短期7天交通意外保险</a></span>
+						                  </li>
+						                
+						            </ul>
+						          </div>
+								  <div id="con_one_2" style="display:none;">
+									<ul class="liststyle05">
+						               	
+
+						               	   <li>
+						                       <span class='rank01'><a href="../lvyou-baoxian/283363.shtml">史带境外旅游自选全球高端保障计划（含澳...</a></span>
+						                   </li>
+						                 
+
+						               	   <li>
+						                       <span class='rank02'><a href="../lvyou-baoxian/283262.shtml">平安签证拒签补偿保险B款计划二</a></span>
+						                   </li>
+						                 
+
+						               	   <li>
+						                       <span class='rank03'><a href="../lvyou-baoxian/282937.shtml">美亚乐悠游海外旅行保障计划二</a></span>
+						                   </li>
+						                 
+
+						               	   <li>
+						                       <span class='rank04'><a href="../lvyou-baoxian/258440.shtml">美亚畅游神州境内旅行保障计划</a></span>
+						                   </li>
+						                 
+						            </ul>
+						          </div>
+								</div>
+							</div>
+					</div>
+				</div>

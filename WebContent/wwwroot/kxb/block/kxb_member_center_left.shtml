@@ -1,0 +1,27 @@
+<div class="member_left">
+	<input type="hidden" id="out_member" value="member"/>
+	<h3 class="member_title"><span><a href="../shop/member_center!index.action">会员中心首页</a></span></h3>
+	<dl class="member_navs cf" id="member_nav">
+		<dt class="mem_nav_b">订单中心</dt>
+		<dd class="mem_nav_a"><a href="../shop/order_query!queryOrder.action" >我的订单</a></dd>
+		<dd class="mem_nav_a"><a href="../shop/order_query!memberQueryTripOrder.action" >机票订单</a></dd>
+		<dd class="mem_nav_a"><a href="../shop/order_query!queryNoPayOrder.action" >未支付订单</a></dd>
+		<dd class="mem_nav_a"><a href="../shop/order_query!queryNoEffectOrder.action" >待生效保单</a></dd>
+		<dd class="mem_nav_a"><a href="../shop/order_query!queryEffectingOrder.action" >生效中保单</a></dd>
+		<dd class="mem_nav_a"><a href="../shop/order_query!queryOutEffectOrder.action" >已过期保单</a></dd>
+		<dt class="mem_nav_b">自助服务</dt>
+		<dd class="mem_nav_a"><a href="../shop/bill_query!queryBill.action" >发票申请</a></dd>
+		<dt class="mem_nav_b">账户中心</dt>
+		<dd class="mem_nav_a"><a href="../shop/profile!edit.action">账户信息</a><span class="mes_bfb" id="MemberCenter"></span>
+		</dd>
+		<dd class="mem_nav_a"><a href="../shop/point!newList.action" >我的积分</a></dd>
+        <dd class="mem_nav_a"><a href="../shop/coupon!queryCoupon.action" >我的优惠券</a></dd>
+        <dd class="mem_nav_a"><a href="../shop/member_info_maintain!memberInfoQuery.action" >常用信息维护</a></dd>
+        <dt class="mem_nav_b">客户服务</dt>
+        <dd class="mem_nav_a"><a href="../shop/stow!queryScan.action" >我的收藏</a></dd>
+        <dd class="mem_nav_a"><a href="../shop/member_comment!queryComment.action" >商品评价</a></dd>
+        <dd class="mem_nav_a"><a href="../shop/question!questionList.action">保险问答</a></dd>
+        <dd class="mem_nav_a"><a href="../shop/my_compare!show.action" >对比记录</a></dd>
+        <dd class="mem_nav_a"><a href="../shop/my_consult!show.action" >我的咨询</a></dd>
+    </dl> 
+</div>

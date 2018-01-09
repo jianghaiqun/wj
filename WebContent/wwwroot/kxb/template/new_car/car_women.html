@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link href="${Site.StaticResourcePath}/style/new/global.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/base.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/information.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/howbuy.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body onload="navHeight();">
+<cms:include file="block/car_header.shtml" />
+<!--mainbody start-->
+<div class="mainbody">
+	<div class="wrapper">
+	<input id="type" type="hidden" value="C"/>
+    	<div class="your_site"><cms:link type="currentPositionList"></cms:link></div>
+        <!--主体部分 左侧边栏 开始-->
+        <div class="buyleftbar">
+        	<!--获取报价 start-->
+            <div class="price">
+                <ul>
+                    <li><span class="bg07 white">车主姓名</span><input id="carUser" name="carUser" type="text" class="text" maxlength="30"/></li>
+                    <li><span class="bg08 white">联系电话</span><input id="carPhone" name="carPhone" type="text" class="text" maxlength="11"/></li>
+                    <li><span class="bg09 white">车牌号</span><input id="carNO" name="carNO" type="text" class="text" maxlength="9"/></li>
+                    <li><input name="" type="checkbox" value="" id="guidtype" align="absmiddle"/><label for="guidtype">新车未上牌</label></li>
+                    <li><span class="mt_6">保险公司</span>
+                        <div class="index_tb_right pr" id="corpBar">
+                            <a href="javascript:;" class="car_tb_corp tb_active" rel="pa">平安</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="tpy">太平洋</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="yg">阳光</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="dd">大地</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="tp">安盛天平</a>
+                        </div>   
+                    </li>
+                    <li><input name="" onclick="guoduNew()" type="button" class="btn" value="获取报价" /></li>
+                </ul>
+              <div class="clear"></div>
+            </div>
+            <!--获取报价 end-->
+            <!--车主服务 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>车主服务</h2>
+                </div>
+                <div class="rolelist">
+                    <ul>
+                        <li><strong>特征：</strong><a href="${Site.URL}/chexian/man.shtml" target="_blank">男性</a>｜<a href="${Site.URL}/chexian/woman.shtml" target="_blank">女性</a>｜<a href="${Site.URL}/chexian/oldman.shtml" target="_blank">老人</a></li>
+                        <li><strong>技术：</strong><a href="${Site.URL}/chexian/newdrivers.shtml" target="_blank">新手</a>｜<a href="${Site.URL}/chexian/skilleddrivers.shtml" target="_blank">老手</a></li>
+                        <li><strong>车况：</strong><a href="${Site.URL}/chexian/newcar.shtml" target="_blank">新车</a>｜<a href="${Site.URL}/chexian/usedcar.shtml" target="_blank">二手车</a></li>
+                        <li><strong>场景：</strong><a href="${Site.URL}/chexian/forwork.shtml" target="_blank">上下班</a>｜<a href="${Site.URL}/chexian/business.shtml" target="_blank">商务</a>｜<a href="${Site.URL}/longdistancedriving.shtml" target="_blank">自驾游</a></li>
+                        <li><strong>环境：</strong><a href="${Site.URL}/chexian/severecold.shtml" target="_blank">高寒</a>｜<a href="${Site.URL}/chexian/heat.shtml" target="_blank">酷暑</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--车主服务 结束-->
+            <!--常见问题 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>常见问题</h2>
+                    <h6><a href="${Site.URL}/chexian/club/wenda/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险问答" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--常见问题 结束-->
+            <!--案例解读 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>案例解读</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险案例" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--案例解读 结束-->
+            <!--车险知识 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>车险知识</h2>
+                    <h6><a href="${Site.URL}/chexian/club/zhishi/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险知识" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--车险知识 结束-->
+            <div class="right_banner mt10 border_gray"><a href="${catalog.LeftHref}" target="_blank"><img src="${Site.StaticResourcePath}/${catalog.LeftAd}" width="223" height="82" /></a></div>
+            <!--友情链接 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>友情链接</h2>
+                </div>
+                <ul class="linklist">
+                	<cms:list item="friendlink" name="车险理赔">
+						<li class="<% if(i%2==0) write("mr10");%>"><a href="${friendlink.URL}" target="_blank" title="${friendlink.Name}">［${friendlink.Name}］</a></li>
+			 		</cms:list>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--友情链接 结束-->
+        </div>
+        <!--主体部分 左侧边栏 开始-->
+        <!--主体部分 右侧 开始-->
+    	<div class="buymain">
+        	<!--女人开车 开始-->
+        	<div class="howbuy">
+                <div class="buymaintit"><h1>女人开车</h1></div>
+            </div>
+            <!--女人开车 结束-->
+            <!--驾驶状况描述 开始-->
+            <div class="drivestatus">
+            	<div class="driveimg"><img src="${Site.StaticResourcePath}/images/new_car/imgages08.jpg" width="98" height="100" /></div>
+                <div class="drivetext">
+                	<h2>驾驶状况描述</h2>
+                    <p>我是一名女性，必须承认，我的车技一般，心理素质也不是很好，尤其是在路上后面一按喇叭我就紧张，每次倒车、停车我也很紧张，生怕撞到碰到，有时遇到别人加塞，我也担心踩不住刹车会撞上去……我这样的买车险应该注意什么呢？</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--驾驶状况描述 开始-->
+            <!--投保建议 开始-->
+            <div class="threeratio">
+            	<h2>投保建议：</h2>
+                <p>相对于男性来说，女性驾车心理素质稍微不足。而因为现在道路交通复杂性，比如随意变道、加塞、乱停车等种种现象，更是增加了驾驶的复杂性。据我们统计女性驾车出险最大的现象，就是由于追尾、倒车、停车、变道中发生的小碰小擦。我们建议女性投保。</p>
+            </div>
+            <!--投保建议 结束-->
+            <!--推荐理由 开始-->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="claimstable">
+              <tr>
+                <td width="15%" align="center" class="claimstit"><strong>建议险种</strong></td>
+                <td width="85%" align="center" class="claimstit"><strong>推荐理由</strong></td>
+              </tr>
+              <tr>
+                <td align="center"><strong>交强险</strong></td>
+                <td>国家规定的强制保障</td>
+              </tr>
+              <tr>
+                <td align="center"><strong>商业第三方<br />责任险</strong></td>
+                <td>在您责任事故中，帮助您减轻财务负担，帮您为第三方补偿损失，建议投保保额在30万以上</td>
+              </tr>
+              <tr>
+                <td align="center"><strong>车辆损失保险</strong></td>
+                <td>无论是小剐小蹭，还是损坏严重，都可以由保险公司来支付修理费用，对于维护车主您的利益具有重要作用</td>
+              </tr>
+              <tr>
+                <td align="center"><strong>车身划痕险</strong></td>
+                <td>车身出现划痕的可能性比较高，对于爱美的女士来说划痕险的保费不贵，而且比较实用</td>
+              </tr>
+              <tr>
+                <td align="center"><strong>不计免赔险</strong></td>
+                <td>单保车损险的话，保险公司有一定比例的免赔范围，也就是说车主必须自己掏出一部分的钱为事故买单。买了不计免赔险的话，就可以让保险公司全额赔付了。所以建议消费者在为爱车购买车险时，应给车损险与商业第三方责任险分别投保不计免赔险，使理赔权益最大化</td>
+              </tr>
+              <tr>
+                <td align="center"><strong>全车盗抢险</strong></td>
+                <td>如果新车出现了全车被盗窃、被抢劫、被抢夺造成的车辆损失以及在被盗窃、被抢劫、被抢夺期间受到损坏或车上零部件、附属设备丢失需要修复的合理费用，会由保险公司承担</td>
+              </tr>
+            </table>
+            <!--推荐理由 结束-->
+            <!--品牌推荐 开始-->
+            <div class="proposal">
+            	<div class="recommendtit"><h2>品<br />牌<br />推<br />荐</h2></div>
+                <div class="servicellist">
+                	<ul>
+                    	<cms:list item="Image" name="品牌推荐" >
+							<li><a href="${Image.wangzhi}" title="${Image.title}" target="_blank" rel="nofollow"><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="116" height="130" align="absmiddle" /></a></li>
+                        </cms:list>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--品牌推荐 开始-->
+            <!--优惠活动 开始-->
+        	<div class="howbuy">
+                <div class="buymaintit"><h2>优惠活动</h2></div>
+                <div class="topic">
+                	<ul>
+                    	<cms:list item="Image" name="优惠活动" >
+							<li><a title="${Image.title}" target="_blank" href="${Image.href}"  ><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}"  width="133" height="78" align="absmiddle" /><span>${Image.title}</span></a></li>
+                        </cms:list>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--优惠活动 结束-->
+        </div>
+        <!--主体部分 右侧 结束-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mainbody end-->
+
+
+<cms:include file="block/car_footer.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/bigpicroll.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/car.js"></script>
+<script type="text/javascript">
+	//checkbox事件
+	function checkUp(){
+	  var Obj=document.getElementById("checks");	  
+		Obj.checked=!Obj.checked;
+	}
+</script> 
+
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('div, ul, img, li, input , a');
+</script>
+<![endif]-->
+</body>
+</html>
+
+
+
+
+
+

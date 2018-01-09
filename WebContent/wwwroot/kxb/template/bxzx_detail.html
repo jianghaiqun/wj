@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb=“http://open.weibo.com/wb”>
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<cms:include file="block/kxb_header_new_css.shtml" includetype="virtual"/>
+<link href="${Site.StaticResourcePath}/style/new_information.css" rel="stylesheet" type="text/css" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<!--位置信息 开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link> <span class="separator">></span>${Article.title}
+		</div>
+	</div>
+<!--位置信息 结束-->
+<!--主体 开始-->
+<div class="wrap980 mainbgl644">
+	<!--左边 开始-->
+	<div class="left644 up_left">
+		<!--文章 开始-->
+		<div class="article">
+			<h1 class="articletit">${article.title}</h1>
+			<div class="articledate02">发布日期：${Article.FirstPublishDate}</div>
+			<div id="ajaxad">${article.content}</div>
+		</div>
+		<!--文章 结束-->
+		<!--推荐产品 开始-->
+		<input type="hidden" id="ArticleID" value="${article.id}"/>
+		<input type="hidden" id="RiskType" value="${article.RiskType}"/>
+		<input type="hidden" id="RiskCompany" value="${article.RiskCompany}"/>
+		<input type="hidden" id="RiskProduct1" value="${article.RiskProduct1}"/>
+		<input type="hidden" id="RiskProduct2" value="${article.RiskProduct2}"/>
+		<div class="columntit up_columntit">相似产品推荐</div>
+		<div class="produlist" id="products">
+			<div align="center">
+	            <img src="${Site.StaticResourcePath}/images/loading2.gif" width="70" height="70" />
+	        </div>
+		</div>
+				
+		<!--推荐产品 结束-->
+		<div class="shareandkeyword">
+			<!--分享到 开始-->
+			<div class="articleshare">
+			<div class="bshare-custom icon-medium"><span class="articlekeyword"><font size="2">分享到:</font><a class="bshare-qzone" title="分享到QQ空间"></a>
+			<a class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+			<a class="bshare-renren" title="分享到人人网"></a>
+			<a class="bshare-douban" title="分享到豆瓣"></a>
+			<a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+			</span></div>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+			</div>
+			<!--分享到 结束-->
+			<!--关键词 开始-->
+			<div class="articlekeyword">关键词：<span>${article.tag|taglink=Y}</span></div>
+			<!--关键词 结束-->
+		</div>
+		<!--上一篇下一篇 开始-->
+		<div class="articlepage"><a href="${Article.PrevLink}" target="_blank">←</a>&nbsp;&nbsp;下一篇：<a href="${Article.PrevLink}" target="_blank">${Article.PrevTitle}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上一篇：<a href="${Article.NextLink}" target="_blank">${Article.NextTitle}</a>&nbsp;&nbsp;<a href="${Article.NextLink}" target="_blank">→</a></div>
+		<!--上一篇下一篇 结束-->
+		<div class="inforandaq">
+			<!--相关资讯 开始-->
+			<div class="relatedinfor">
+				<div class="columntit">相关资讯</div>
+				<ul class="txtlist12">
+				  	<cms:list item="article" tag="${Article.tag}" cmsorder="1" level="none" type="rand" condition=" type = 1 and (cataloginnercode like '002306%' or cataloginnercode like '002307%') and status in (30,60)" count="6" >
+						<li><a href="${Site.URL}/${Article.URL}" target="_blank">${article.title}</a></li>
+				  	</cms:list>	
+				</ul>
+			</div>
+			<!--相关资讯 结束-->
+			<!--精彩问答 开始-->
+			<div class="wonderfulaq">
+				<div class="columntit">精彩问答</div>
+				<ul class="txtlist12">
+					<cms:list item="article" level="all" cmsorder="2" type="rand" name="9445" count="6" >
+						<li>问：<a href="${Site.URL}/${Article.URL}" target="_blank">${article.title}</a></li>
+					</cms:list>	
+				</ul>
+			</div>
+			<div class="h30"></div>
+			<!--精彩问答 结束-->
+		</div>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="right336 up_right">
+		<!--图片切换 开始-->
+		<cms:imageplayer code="bxbk_detail_right" type="0" width="320" height="250" />
+		
+		<!--图片切换 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			<cms:list item="article" level="none" count="5" cmsorder="3" hasAttribute="hot" condition=" (cataloginnercode like '002313000002%' or cataloginnercode like '002313000003%') and status='30'">
+				<li>
+					<h4><a href="${Site.URL}/${Article.URL}" title="${article.title}"><img src="${Site.ProductResourcePath}${Article.ProductLogo}" alt="${Article.title}" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="${Site.URL}/${Article.URL}" title="${article.title}" >${article.title}</a></h5>
+						<h6>${Article.AdaptPeopleInfo}</h6>
+					</div>
+				</li>
+			</cms:list>
+		</ul>
+		<!--热销保险产品 结束-->
+		<!--热门文章推荐 开始-->     
+		<div class="columntit graybordert">热门文章推荐</div>
+		<ul class="txtlist hot_txtlist">
+			<cms:list item="article" level="all" type="rand" cmsorder="4" name="9443" count="3" >
+				<li><a href="${Site.URL}/zhishi" target="_blank">知识</a> |&nbsp;&nbsp;<a href="${Site.URL}/${article.URL}" target="_blank">${article.title}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" cmsorder="5" name="9710" count="2" >
+				<li><a href="${Site.URL}/baike" target="_blank">百科</a> |&nbsp;&nbsp;<a href="${Site.URL}/${article.URL}" target="_blank">${article.title}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" cmsorder="6" name="9444" count="2" >
+				<li><a href="${Site.URL}/zixun" target="_blank">资讯 </a>|&nbsp;&nbsp;<a href="${Site.URL}/${article.URL}" target="_blank">${article.title}</a></li>
+			</cms:list>
+		</ul>
+		<!--热门文章推荐 结束-->
+		<div class="h12"></div>	
+		<div class="columntit graybordert">热门标签</div>
+		<div class="news_rmbj news_bor_hui news_zsbj">
+			<ul>
+				<li>
+				<cms:list item="hotlabels"  name="热门标签" cmsorder="7" count="20" type="lexicon" tag="${Article.tag}">
+					<% if(i%3==0){%>
+						<a class="news_color12" href="${hotlabels.LinkURL}" >${hotlabels.Tag}</a>
+					<% }else if(i%3==1){%>
+						<a class="news_color13" href="${hotlabels.LinkURL}" >${hotlabels.Tag}</a>
+					<% }else if(i%3==2){%>
+						<a class="news_color14" href="${hotlabels.LinkURL}" >${hotlabels.Tag}</a>
+					<% }%>
+				</cms:list>
+				</li>
+			</ul>
+		</div>
+		<div class="h12"></div>
+		<cms:include file="block/bxbk_tpgg.shtml" includetype="virtual"/>
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<div class="clear"></div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  cmsorder="9" name="资讯详情页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  cmsorder="10" name="资讯详情页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  cmsorder="11" name="资讯详情页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.KinSlideshow-1.2.1.min.js"></script>
+<script type="text/javascript">
+jQuery().ready( function() {
+	var riskType = jQuery("#RiskType").val();
+	var riskCompany = jQuery("#RiskCompany").val();
+	var riskProduct1 = jQuery("#RiskProduct1").val();
+	var riskProduct2 = jQuery("#RiskProduct2").val();
+	jQuery.ajax({
+		url: "${Site.prop6}/shop/article!ajaxProduct.action?riskType="+riskType+"&riskCompany="+riskCompany+"&riskProduct1="+riskProduct1+"&riskProduct2="+riskProduct2,
+		type: "post",
+		dataType: "json",
+		success: function(data){
+			var obj = eval(data);
+			 jQuery("#products").html(obj.products) ;
+	 	}			
+	});
+});
+jQuery(function(){
+	jQuery('#change_33 div.changeDiv').soChange({
+        thumbObj: '#change_33 .ul_change_a2 span',
+        thumbNowClass: 'on',
+        changeTime: 4000
+    })
+})
+</script>
+</body>
+</html>

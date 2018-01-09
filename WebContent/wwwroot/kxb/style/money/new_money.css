@@ -1,0 +1,267 @@
+@charset "utf-8";
+/*
+#@des:理财险栏目样式
+*@maker:dongqi.guo
+*@time:2014-2-18 11:20
+*/
+ 
+/*理财首页*/
+.money_warper{ width: 985px; overflow: hidden; margin: 0 auto;} 
+.col-main{float:left;width:100%}
+.col-sub,.col-extra{float:left;position:relative}
+.grid-c2-s7f .main-wrap{margin-right:245px}
+.grid-c2-s7f .col-sub{width:245px;margin-left:-245px}
+.grid-c2-s7f:after{content:'\0020';display:block;height:0;clear:both}
+.grid-c2-s7f{zoom:1;}
+.main-wrap{min-height:1px}
+.money_main_nav li{ float:left; width:128px; height:65px; margin-right: 30px;}
+.money_main_nav a:link,.money_main_nav a:visited,.money_main_nav a:active{ font-family:"Microsoft YaHei"; font-size:24px; color:#BBBBBB; font-weight:bolder; display:block; height:60px; line-height:60px; padding-left:24px;}
+.money_main_nav a:hover{ color:#313131; border-bottom:4px solid #FF6E00;}
+.mon_nav1 a,.mon_nav2 a,.mon_nav3 a{background:url(../../images/money/money_sprint_03.png) no-repeat; }
+.mon_nav1 a{ background-position:  -12px -43px ;}
+.mon_nav1 a:hover,.mon_nav1 a.active{ background-position: -11px 24px;  color:#313131; border-bottom:4px solid #FF6E00;}
+.mon_nav2 a{ background-position: -13px -181px ;}
+.mon_nav2 a:hover,.mon_nav2 a.active{ background-position: -12px -111px;  color:#313131; border-bottom:4px solid #FF6E00;}
+.mon_nav3 a{ background-position:-13px -335px ;}
+.mon_nav3 a:hover,.mon_nav3 a.active{ background-position: -13px -269px ;  color:#313131; border-bottom:4px solid #FF6E00;}
+.grid-c2-s7f .main-wrap{ background:#fff;}
+.grid-c2-s7f{ background: #F4F4F4;}
+.money_nav{ height: 65px;}
+/*汽车焦点图*/
+.changeBox_a1{position:relative;float:left;width:740px;height:300px; z-index:2; background:url(../../images/index_adloding.gif) center center no-repeat;}
+.changeBox_a1 .a_bigImg{position:absolute;top:0px;left:0px;display:none;}
+.changeDiv{position:absolute;top:0px;left:0px;display:none;}
+.changeDiv h3{position:absolute;bottom:5px;   *bottom: 0px;left:0px;width:740px;height:30px;background:#000000;line-height:30px;opacity:0.4;filter:alpha(opacity=40);}
+.changeDiv h3 a{display:block;padding-left:15px;color:#fff;}
+.ul_change_a2{position:absolute;right:40%;bottom:10px;overflow:hidden;padding-left:19px}
+.ul_change_a2 li{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1}
+.ul_change_a2 span{display:-moz-inline-stack;display:inline-block;margin-right:2px;padding:10px 14px; background:url(../../images/money/money_sprint_03.png) no-repeat -4px -920px ;font-size:1em; cursor:hand;cursor:pointer;*display:inline;*zoom:1;}
+.ul_change_a2 span.on{ background-position:-4px -971px; color:#fff;}
+.a_last,.a_next{position:absolute;top:10px;width:80px;height:65px;background:url(../../images/money/money_sprint_03.png) no-repeat ;text-indent:-999em;overflow:hidden;}
+.a_last{left:0px;background-position:-12px -735px; top:120px;}
+.a_next{right:0px;background-position:-12px -828px; top:120px;}
+/*end*/
+.my_mon_login{ height:160px; background: #FFEDE0; padding: 20px 26px;}
+.my_money_b{ display: block; height: 30px;}
+.my_login_btn:link, .my_login_btn:visited,.my_login_btn:active{ display: block; height: 30px; background:#FF6E00; color: #fff ; text-align: center; line-height: 29px; font-size: 14px;  text-shadow: 1px 1px 0px #C32400;}
+.my_login_btn:hover{ background: #FF9544;}
+.my_money_p{ padding: 12px 0; text-align: right;}
+.my_money_p a:link,.my_money_p a:visited,.my_money_p a:active{ color: #FF6E00; text-decoration: underline;}
+.my_money_p2{ line-height: 1.6em; color: #B5987E; border-top: 1px dashed #B5987E; padding-top: 8px; }
+.money_r_bor{ line-height: 0px; font-size: 0px;border-top: 1px dashed #ccc; border-bottom: 1px dashed #fff; clear: both;margin: 15px 0;}
+.money_hot{ height: 41px; line-height: 41px; overflow: hidden; color: #fff; background:url(../../images/money/money_sprint_03.png) no-repeat  0 -1334px #D00000; padding-left: 35px; font-size: 14px; font-weight: bold; }
+.money_mainbox{ border: 1px solid #DCDCDC; border-top: none;  border-bottom: none;}
+.money_tj{width:49.91%; float: left; _display: inline;}
+.money_tj dt{ height: 36px; line-height: 36px; font-size:1.8em; font-weight:bold; color: #BF1515; margin: 0 12px; border-bottom: 1px dashed #DDDDDD; font-family:"Microsoft YaHei"; padding-top:10px;}
+.money_tj_titile {padding:8px 12px;}
+.money_tj_titile a:link,.money_tj_titile  a:visited,.money_tj_titile a:active{font-size: 16px; font-weight: bold; color: #3F3A39;}
+.money_tj_titile a:hover{ color: #FF6D00;}
+.money_tj_des{ line-height: 1.8em; padding:0 12px; height: 44px; overflow:hidden;}
+.money_tj_bom{ background:url(../../images/money/money_sprint_03.png) no-repeat right -1043px  #FFF8F2; height: 90px; border-bottom: 1px solid #DCDCDC;}
+.money_tj_sy{ padding-left: 12px; padding-top: 12px; font-size: 14px; color: #555555;}
+.money_tj_sy em{ color: #CA1515; font-size: 16px; padding-left: 8px;}
+.money_tj_go{ display:block; width: 100px; height: 35px; text-indent: -20000em; background:url(../../images/money/money_sprint_03.png) no-repeat 0px -1179px; margin: 8px auto;}
+.money_tj_go:hover{ background-position: 0px -1225px;}
+.money_l_title,.money_l_title2{ font-size: 16px; font-weight:bold;  color: #D01616; font-family:"Microsoft YaHei"; height: 20px; line-height: 20px; margin:20px 23px; }
+.money_l_title2{ font-size: 14px;  height: 20px; line-height: 20px; padding:16px 23px 8px; margin: 0px; }
+.money_cp_s{ width: 49.5%; float:left; _display: inline; height: 160px; overflow:hidden; margin:16px 0;} 
+.money_cp_main{ width: 346px; margin-left:25px; overflow: hidden;}
+.money_cp_img{ width: 110px; float: left; margin-right: 10px;}
+.money_cp_img img{ border: 1px solid #EBEBEB;}
+.money_cp_des{ float: left; width: 225px;}
+.money_cp_a a:link,.money_cp_a  a:visited,.money_cp_a a:active{ font-size: 14px; color: #565656; font-weight: bold;}
+.money_cp_a a:hover{ color: #FF6E00;}
+.money_cp_sy{ border: 1px solid #FF6E00; height: 22px; line-height: 21px; color:#FF6E00; width: 188px; }
+.money_cp_sy b{ background:#FF6E00; width: 81px; overflow: hidden; color: #fff; padding: 1px 8px; font-size: 14px; display:block; float: left;}
+.money_cp_sy{ margin: 4px 0;}
+.money_cp_sy span{ display: block; float: left; padding-left: 4px; width: 84px; overflow: hidden; }
+.money_cp_li li{ width: 106px; float: left;}
+a.money_gogo:link,a.money_gogo:visited,a.money_gogo:active{ display: block; width: 100px; height: 35px; line-height: 29px; text-align: center;background:url(../../images/money/gotukankan_03.png); text-indent: -2000em; color: #fff; font-size: 14px; margin-top: 8px;}
+a.money_gogo:hover{ background-position: 0px -40px;}
+.money_cp_box{ border-bottom: 1px solid #DCDCDC; margin-top: -16px;}
+.licai_img1{width: 146px; float: left; _display: inline;}
+.licai_img2{ width: 591px; float: left; _display: inline;}
+.licai_img2 img{ display: block; float: left; _display: inline;}
+.licai_lc img{ display: block; margin: 0 auto;}
+.licai_lc{ padding-bottom:20px; margin-top: -15px;}
+.licai_lc_bor{ border-top:1px dashed #DCDCDC; line-height: 0px; font-size: 0; margin: 27px 0 17px;}
+.n_footwrap{ margin-top: 0px;}
+.money_right{ margin:28px;}
+.lizx_list li{ height:24px; line-height: 24px; text-overflow:ellipsis; white-space:nowrap; overflow: hidden;}
+.lizx_list a:link,.lizx_list  a:visited,.lizx_list a:active { color: #2E2E2E;}
+.lizx_list a:hover{ color: #FF9544;}
+.money_more:link,.money_more:visited,.money_more:active { display: block; text-align: right; color: #FF6E00; padding-right: 8px; padding-bottom: 15px;}
+.money_zd a{display: block; height: 40px;  margin-bottom: 4px;  line-height: 39px; border: 1px solid #F4F4F4; -webkit-box-shadow:1px 1px 1px 0px #E2E2E2; box-shadow: 1px 1px 1px 0px #E2E2E2; padding-left: 90px; }
+.money_zd a:link,.money_zd a:visited,.money_zd a:active{ font-weight: bold; color: #2E2E2E; }
+.money_zd a:hover{ border: 1px solid #FF6E00; color: #FF6E00; -webkit-box-shadow:0px 0px 0px 0px; box-shadow: 0px 0px 0px 0px ;}
+.money_zd{ overflow: hidden; margin-bottom: 25px;}
+.money_zd li{ background:url(../../images/money/money_sprint_03.png) no-repeat #fff; }
+li.money_r_nav1{ background-position: 30px -413px;}
+li.money_r_nav2{ background-position: 30px -472px;}
+li.money_r_nav3{ background-position: 30px -537px;}
+li.money_r_nav4{ background-position: 30px -598px;}
+li.money_r_nav5{ background-position: 30px -649px;}
+.que_q{ padding-left: 33px; position: relative;  background:url(../../images/money/money_sprint_03.png) -77px -1431px no-repeat;height:auto !important;height:33px;min-height:33px; margin-bottom:8px;}
+.que_q p,.que_a p{ background: #fff; height:auto !important;height:25px;min-height:25px; line-height: 1.6em; padding: 4px 6px 2px; color: #707070; margin-left: 8px; text-align:inherit;}
+.que_sjx{ display: block; 	width:0px;height:0px;line-height:0px; border:8px solid transparent;
+_border:8px solid #fff; position: absolute; left: 25px; top: 9px;  border-right-color:#fff;}
+.que_a{ position: relative; padding-right: 33px; background:url(../../images/money/money_sprint_03.png) 164px -1429px no-repeat;height:auto !important;height:33px;min-height:33px; margin-bottom:8px; }
+.que_a .que_sjx{border-right-color:#F4F4F4; border-left-color:#fff; left: 154px;}
+.que_a p{ background: #fff;}
+.money_tag a{background-color:#428BCA;box-shadow:0 4px 3px -3px rgba(0,0,0,0.1);color:#FFFFFF;display:inline-block;line-height:22px;margin:0 5px 5px 0;opacity:0.8;padding:0 6px;transition:opacity 0.2s ease-in-out 0s}
+.money_tag a:link,.money_tag a:visited,.money_tag a:active{color:#FFFFFF;font-size:14px}
+.money_tag a:hover{opacity:1}
+.money_tag a:nth-child(2n){background-color:#2F9944}
+.money_tag a:nth-child(3n){background-color:#F53300}
+.money_tag a:nth-child(4n){background-color:#CA5254}
+.my_money_mes{ height:26px; line-height: 26px;  color: #B5987E; text-align: center;}
+.my_money_dd{ height:26px; line-height: 26px; color: #2D2D2D; text-align: center; overflow: hidden; display: block; margin-bottom: 20px;}
+.my_money_dd em{ font-size: 2em; color: #FF0000;}
+.money_nav_up{ margin-left:270px;}
+/*内页焦点图修改 如何理财*/
+.money_flash2 .changeBox_a1{ width:980px; height:250px;}
+.money_flash2 .changeDiv h3{ width:980px;}
+.money_flash2 .a_last, .money_flash2 .a_next{ top: 95px;}
+
+.money_nav_up{ margin-bottom:50px;}
+.money_ztitle{ height:40px; line-height:39px; background:#D00000; color:#fff; font-weight:bold; font-family:"Microsoft YaHei"; padding-left:20px; font-size:16px;}
+.money_warper_up{ width:980px; margin:0 auto;}
+.how_money_box{ border-right: 1px solid #DCDCDC; overflow: hidden; width:980px;}
+.how_money_boxl{ width: 320px; float: left; background: #F4F4F4; overflow: hidden;}
+.how_money_boxr{ width: 636px; float: right; }
+.how_money_boxl img{ display: block;}
+.money_uls{ margin: 26px;}
+.money_lis{ height:24px; width: 268px; line-height: 24px; text-overflow:ellipsis; white-space:nowrap; overflow: hidden;}
+.money_lis a:link,.money_lis  a:visited,.money_lis a:active { color: #AE7B90;}
+.money_lis a:hover{ color: #AE7B90; text-decoration:underline;}
+.licai_list_tit a:link,.licai_list_tit  a:visited,.licai_list_tit a:active { color: #474747;}
+.licai_list_tit a:hover{ color: #AE7B90; text-decoration:underline;}
+.licai_list_tit{ height: 21px; line-height: 21px; font-weight: bold;}
+.licai_list_dd{ line-height:1.6em; color: #4B4B4B; padding-right: 8px;}
+.licai_list{ height: 64px; overflow: hidden; margin-top: 12px;}
+.money_tj_up{ border-left:1px solid #DCDCDC; border-right:1px solid #DCDCDC; margin-bottom: 15px; overflow: hidden;}
+.money_tj_up .money_tj dt{ margin: 0px 65px;}
+.money_tj_up  dd{ padding: 0px 55px;height: 100px}
+/*理财规划*/
+.planngingad{ display:block;}
+.money_plan_box{ border: 1px solid #DCDCDC; border-bottom: none; padding:32px  28px 0px 28px; overflow: hidden;}
+.money_zt_left{ width: 631px; float: left;}
+.zt_img_b{ float: left; width:193px;   margin-left: 16px;  text-align: justify; position: relative; cursor: pointer; }
+.zt_img_b img{border: 1px solid #ccc; }
+.money_zt_des{ width: 570px; padding: 16px 18px; border: 1px solid #E9E9E9; background: #fff; margin-top: 20px; margin-left: 67px; overflow: hidden;}
+.money_zt_des p{ width: 420px; height: 55px; float: left; overflow: hidden;}
+.go_tj_zt{ display: block; width: 101px; height: 34px; line-height: 34px; float: right; text-align: center; text-indent: -2000em; background:url(../../images/money/money_gh_22.gif) no-repeat; margin-top:10px; margin-right: 20px; }
+.plannging_zt_r { width: 216px; float: right;}
+.jtlc_img1{ padding-left: 50px;  background:url(../../images/money/money_gh_07.gif) no-repeat;  }
+.jtlc_img2{ padding-left: 50px;  background:url(../../images/money/money_gh_25.gif) no-repeat;  }
+.jtlc_img3{ padding-left: 50px;  background:url(../../images/money/money_gh_33.gif) no-repeat;  }
+.plannging_listli{ height: 28px; line-height: 28px; overflow: hidden; text-overflow: ellipsis;  white-space: nowrap;}\
+.plannging_listli a:link,.plannging_listli  a:visited,.plannging_listli a:active { color: #474747;}
+.plannging_listli a:hover{ color: #AE7B90; }
+.money_news_t{ color: #E73D3D; height: 35px; line-height: 35px;}
+.money_zt_box{ margin-bottom: 30px; overflow: hidden;}
+.lcbx_rh_titile {   display: inline; color: #424242; font-size:24px; font-family:"Microsoft YaHei"; height: 30px; line-height:29px; border-bottom:1px dashed #9B9B9B;  padding-bottom: 15px;}
+.lcbx_rh_des{ line-height: 1.8em; text-align: justify; margin-top: 20px; color: #474747;}
+.lcbx_header { width:600px;  float: right;}
+.lcbx_dl{ width: 714px; margin: 0 auto 60px; overflow: hidden;}
+.lc_icon{ width:95px; height: 94px;    float: left;}
+
+.zt_sff{ position:relative; overflow:hidden;}
+.sanjiao{ display: block; width: 37px; height: 18px; background:url(../../images/money/licai_jiao_13.gif) ; position: absolute; top: 4px;}
+.sanjiao1{ left:134px; }
+.sanjiao2{ left:346px; }
+.sanjiao3{ left:552px; }
+/*列表页面*/
+.licai_list_boxs{ border: 1px solid #DCDCDC; border-top: none; padding:30px 16px; background: #fff;  margin-bottom: 15px; overflow: hidden;}
+.licai_list_li{ position: relative;}
+.licai_list_time{ position:absolute; top:1px; right:8px; color: #ADADAD; background: #fff；}
+.licai_list_li a:link,.licai_list_li  a:visited,.licai_list_li a:active { color: #474747; font-weight: bold;}
+.licai_list_li a:hover{ color: #AE7B90; }
+.licai_list_des{ margin-bottom: 20px; overflow: hidden; line-height: 1.8em;}
+/* 页码 css */
+.plpage{margin-top:10px; height:56px; text-align:center; padding-top:1px;}
+.tabcont .plpage{margin-top:5px;padding-top:0px;}
+.plpagecont{padding-bottom:6px;}
+.plpage01{margin-right:3px;}.plpage01 a:link,.plpage01 a:visited,.plpage01 a:active{padding:4px 7px; border:1px solid #ccc; background:#fff; color:#0066CC; line-height:14px;}.plpage01 a:hover{padding:4px 7px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#0066CC; line-height:14px;}
+.plpage02{margin-right:3px;}.plpage02 a:link,.plpage02 a:visited,.plpage02 a:active{padding:5px 7px 4px 7px; border:1px solid #ccc; background:#fff; color:#999; height:22px;}.plpage02 a:hover{padding:5px 7px 4px 7px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#999; height:22px;}
+.plpage03{padding-left:24px; color:#999;}
+.plpage04{padding:4px 6px 3px 6px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#999; height:22px;}.plpage04 a:active{color:#FFFFFF}
+.money_news{ border:1px solid #DCDCDC; border-top: none; border-bottom: 1px solid #D74A4A;}
+.money_news_box{ margin: 0 23px 23px 23px;  overflow: hidden;}
+.m_news_listbox{ border-left: 1px solid #DCDCDC;  border-right: 1px solid #DCDCDC; overflow: hidden;}
+.m_list_ul{ padding:0px 23px 13px; overflow: hidden;  }
+.m_list_li{ width: 360px; float: left; padding-left: 30px; background:url(../../images/money/licai_sprint_03.png) no-repeat  -16px -333px ; margin: 6px 0 6px 33px;      overflow: hidden;text-overflow: ellipsis; white-space: nowrap;}
+.m_list_li a:link,.m_list_li  a:visited,.m_list_li a:active { color: #474747; }
+.m_list_li a:hover{ color: #AE7B90; }
+.money_more_l:link,.money_more_l:visited,.money_more_l:active {font-size: 12px; color: #E50000; display: block; text-align: right; padding-right: 23px;  overflow: hidden; margin-top: -30px; width: 100px; float: right;}
+.money_more_l:hover{ text-decoration: underline;}
+.news_list_con{ overflow: hidden; border-bottom: 1px dashed #CCCCCC; overflow: hidden; padding-bottom: 15px;}
+.money_new_tag{ float: right; margin-right: 8px; width: 280px;}
+.money_new_tag li{ float: right; width: 93px; padding-top: 4px; }
+.money_new_tag span{ width: 93px; display: block; height:37px; line-height: 37px; text-align: center; cursor: pointer;}
+.money_new_tag .hover{ background: #fff; color: #F07A7A;}
+.m_zt_ad{ border: 1px solid #DCDCDC; border-bottom: none;}
+.money_zt_sbox{ border: 1px solid #DCDCDC; border-bottom: none;  }
+.zt_box_img{ width: 196px; height: 204px;}
+.zt_box_lists{ width:720px; padding:26px 30px;  }
+.zt_box_con{border-bottom: 1px solid #DCDCDC; overflow: hidden;}
+.zt_box_imgb{ border-right: 1px solid #DCDCDC; }
+.zt_box_imgb2{ border-left:1px solid #DCDCDC; }
+/*理财产品详细页面*/
+.money_logo{ display:block; margin:4px auto; height:100px; background-repeat:no-repeat; width:203px;}
+.money_img_con{ display:block; border:1px solid #ccc;}
+.money_lct{ display:block; margin:10px auto;}
+.cp_gscon{ width: 194px;}
+.cp_descon{ width: 530px;}
+.crowd p{ line-height:1.8em;}
+
+/*购买分数*/
+.gm_num_txt{ color:#8D8D8D;}
+.gm_num{ padding:0 4px; width:60px; border:1px solid #C6CBD0; height:22px;}
+.gm_dess{ color:#848484;}
+.money_con img{ display:block;}
+.money_s{ position:relative;}
+.gm_mun_l{ border:2px solid #ED6D00;}
+.money_des1{ position:absolute; top:260px; left:61px;}
+.money_des2{ position:absolute; top:280px; left:217px;}
+.money_des3{ position:absolute;top:330px; left:217px;}
+.money_des4{ position:absolute; top:380px; left:217px;}
+.money_des5{  position:absolute; top:672px; left:153px;}
+.money_des6{  position:absolute; top:695px; left:125px;}
+/*计算器*/
+.caculator_box{background:url("../../images/money/caculator_bg.png") no-repeat scroll 15px 15px #F6F6F6;margin:0px auto;padding:80px 10px 11px;}
+.caculator_box1{background:url("../../images/money/caculator_bg.png") no-repeat scroll 15px 15px #F6F6F6;margin:0px auto;padding:80px 0px 11px;}
+.money_jsq_p{ line-height: 1.8em;color: red;}
+.caculator{color:#333333;height:24px;line-height:24px;padding-bottom:8px}
+.caculator dt{float:left;padding-right:6px;text-align:right;width:61px}
+.caculator dd{float:left;height:24px;width:120px}
+.input_de1{border:1px solid #999999;height:22px;line-height:22px;padding-left:5px;width:46px}
+.cal_result{line-height:24px}
+.slider_ca{border-color:#E2E2E2 #E2E2E2 #FFFFFF;border-style:solid;border-width:1px 0;margin:0 11px}
+.result_info{padding:7px 0 6px 14px;}
+.crowd p, .tb_yh p{ line-height: 1.8em; text-align: justify;}
+.gray5{color:#666666}
+.btn_caculator{background:url("../../images/money/money_btn_03.gif") no-repeat;border:0 none;cursor:pointer;height:29px;margin:10px auto 13px;width:88px;  display: block;}
+.money_jsl{ font-weight: bold; padding:0px 14px 10px;}
+#hovers_{background:none repeat scroll 0 0; }
+#hovers_H{background:none repeat scroll 0 0 #CD4800}
+
+/*理财相关资讯推荐*/
+.relatedinfor2 { width:600px; }
+.relatedinfor2 .txtlist12 li{ float: left;}
+
+.money_linshi{border: 1px dashed #C8C8C8;width:660px; height:200px; _display:inline; margin:10px auto 10px;}
+.money_bor_bg{  border-right: 1px solid #DCDCDC;}
+.money_more_m:link, .money_more_m:visited, .money_more_m:active {color: #E50000; display: block; font-size: 12px;overflow: hidden; padding-right: 23px; width: 100px;}
+.money_more_m:hover{ text-decoration: underline;}
+.car_news_tags li{ width: 62px; float: left; _display: inline; padding-bottom: 6px;}
+.car_news_tags span{ color: #464646; padding-bottom: 4px; cursor: pointer;}
+.car_news_tags span.hover{ color: #F17213;  border-bottom: 1px solid #ED6D00;  height: 20px;}
+.lizx_list li a{  background: url("../../images/brand_img/ulist_01.gif") no-repeat scroll 0px -31px; padding-left:10px;}
+.lizx_list li a:hover{ background-position: 0px 7px;}
+
+
+
+
+
+  

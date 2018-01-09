@@ -1,0 +1,232 @@
+@charset "utf-8";
+/* 
+#@des:成人专题
+*@maker:dongqi.guo
+*@time:2017-02-24-14:00
+*/
+#stencil_bg{
+    background: #f5f5f5;
+}
+#stencil_bg div{
+    font-family: "Microsoft YaHei";
+}
+.mod_imgbox img{
+    display: block;
+    margin: 0 auto;
+}
+.des_con{
+}
+.mod_descon{
+    overflow:hidden;
+    border:1px solid #fb8734;
+    padding:10px;
+    background:#fff;
+    margin-top: 14px;
+}
+.des_con h3{
+    font-size: 16px;
+    margin-bottom:20px;
+    padding-top: 5px;
+}
+.des_con p{
+    line-height: 1.6em;
+    text-align: justify;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color:#222;
+}
+.descon_imgs{
+    display:block;
+    float:left;
+    margin-right: 10px;
+}
+.mod_advise,.mod_recommend{
+    margin-top: 25px;
+    background:#fff;
+    border-top: 1px solid #fb8834;
+}
+.adult_tit{
+    font-size: 16px;
+    border-left: 4px solid #fb8834;
+    padding-left: 10px;
+    margin:14px 0 14px 10px;
+    color:#222222;
+}
+.mod_advise{
+    overflow:hidden;
+    padding-bottom: 20px;
+}
+.mod_advise img{
+    display:block;
+    margin-left: 20px;
+    float:left;
+}
+.mod_rec_shop{
+    overflow:hidden;
+    margin:20px 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #efefef;
+}
+.rec_shop_img{
+    width:300px;
+    float:left;
+
+}
+.rec_shop_img img{
+    border:1px solid #f4f4f4;
+}
+.rec_shop_des{
+    width:420px;
+    float:left;
+    margin:0 16px;
+}
+.rec_shop_des h3 a{
+    font-size: 16px;
+    color: #222;
+    font-weight:normal;
+}
+.rec_shop_des h3 a:hover{
+    color:#fb8834;
+}
+.shop_des_li{
+    overflow:hidden;
+    padding:10px 0;
+}
+.shop_des_li li{
+    width:30%; 
+    border:1px solid #fdaa68;
+    background:#fff6ee;
+    color:#fb8834;
+    font-size: 14px;
+    text-align: center;
+     height:22px;
+     line-height: 22px;
+     display:block;
+     float:left;
+     margin-right:2%;
+     overflow:hidden;
+}
+.list_Sale {
+    color: #888;
+    overflow: hidden;
+    padding: 5px 0 10px;
+    word-break: break-all;
+}
+.list_Sale em{
+    font-weight: normal;
+    line-height: 1.6em;
+}
+.list_Sale span {
+    background: #ffd463;
+    color: #fff;
+    display: inline-block;
+    margin-right: 4px;
+    padding: 4px 8px;
+}
+.shop_des_ul{
+    background:#f5f5f5;
+    padding:16px 16px 12px;
+
+}
+.shop_des_ul li{
+    position:relative;
+    height:24px;
+    line-height: 24px;
+    background:url(../../images/special/tis_55.png) repeat-x 0px center;
+}
+.recommend_list{
+    height:100px;
+    overflow:hidden;
+}
+.recommend_list{
+ position:relative;
+}
+.rec_list_li span{
+    background:#f5f5f5;
+    color:#222;
+    font-family: "Microsoft YaHei";
+}
+.rec_list_s{
+    padding-right: 10px;
+}
+.rec_list_money{
+    padding-left: 10px;
+}
+.rec_list_money{
+    position:absolute;
+    right:0px;
+}
+.rec_service{
+    overflow:hidden;
+}
+.rec_service li{
+    display:inline-block;
+    float:left;
+    padding:15px  6px 15px 20px;
+    background:url(../../images/special/adult_21.png) no-repeat 0px 12px;
+    width:78px;
+}
+.shop_rea_tit{
+    color: #fb8834;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.rec_shop_reason li{
+    line-height: 1.7em;
+    text-align: justify;
+}
+.rec_shop_des{
+    border-right: 1px solid #f5f5f5;
+    padding-right: 20px;
+}
+.rec_shop_reason{
+    width:145px;
+    float:right;
+    overflow:hidden;
+}
+.rec_shop_reason ul{
+    height:120px;
+    margin-bottom: 20px;
+}
+.rec_shop_reason li{
+    padding-left: 22px;
+    color:#888888;
+    max-height: 40px;
+    overflow:hidden;
+    background:url(../../images/special/adult_20.png) no-repeat 0px 0px;
+}
+
+.nlist_pay {
+    color: #fd7f13;
+    display: block;
+    font-family: "Microsoft YaHei";
+    font-size: 30px;
+    text-align: center;
+}
+.remcon_desmore a {
+    background:#fd8824 url("../../images/redesign/list_ips_01.png") no-repeat scroll 73px 1px;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 auto;
+    padding-right: 5px;
+    text-align: center;
+    width: 125px;
+}
+.nlist_pay_t {
+    color: #888;
+    display: block;
+    font-weight: normal;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: line-through;
+}
+.remcon_desmore a:hover {
+    background-color: #ee6c02;
+}

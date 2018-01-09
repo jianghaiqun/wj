@@ -1,0 +1,11 @@
+<% DataTable dt_24 = TemplateData.getDocList("article","9480","all","null","modifyzx","5","(tag like '%监管动态%' and status='30' and type='1')","null","null");
+  if(dt_24==null){write("没有找到栏目。parent：null  catalog："+"9480");}else{
+ int rdCnt=dt_24.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_24  = dt_24.getDataRow(i);
+ int rdIdx=i;
+%>
+
+									<li><a href="${article_24.Link}" >${article_24.Title}</a></li>
+								<%}}%>

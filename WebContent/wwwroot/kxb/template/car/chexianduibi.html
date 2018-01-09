@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+String title = article.getString("MetaTitle");
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+    <ul class="car_mininav clearfix lyg_nav">                                                       
+			<li><a href="${Site.URL}/chexian/" title="车辆保险首页">车辆保险首页</a></li>
+			<li><a class="s_car_nav" href="${Site.URL}/chexian/chexianduibi.shtml" title="车险哪家好">车险哪家好</a></li>
+			<li><a href="${Site.URL}/chexian/chexianzhishi.shtml"  title="车险知识学堂">车险知识学堂</a></li>
+			<li><a href="${Site.URL}/chexian/lipei.shtml"  title="车险理赔指南">车险理赔指南</a></li>
+	</ul>
+<div class="car_index_s"><div class="meihua_p">买车险 首选开心保 <b>直降15%</b></div></div>
+<div class="car_gs_box car_border_q no_top_bor cf">
+   <div class="car_bxgs floatl">
+    
+      	<div class="search_bxgs"><div class="car_bxzscon">保险公司:</div>  
+      	  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+                	<cms:list item="article"  level="all" name="车险对接保险公司" >
+                        <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+                    </cms:list>
+                </div>
+           </div>
+         </div>
+          
+           	<ul  id="car_tag_con" class="car_lipin  cf">
+			   <cms:list item="article" level="all" name="车险对接保险公司" >
+	             <li style="display:none">${Article.Gift}</li>
+	           </cms:list>
+           	</ul>
+        <div class="ljbj_sc"><input name="" type="button" value="开始报价" onclick="guodu('${Site.URL}/cx/gd/')" class="input_ksbj"></div>
+    </div>
+    <div class="car_adjd floatr">
+    <img src="${Site.StaticResourcePath}/images/car/cxnjh_ad_03.jpg" width="700" height="250" alt="对比更清楚 选择更轻松">
+    </div>
+</div>
+<div class="h10 clear"></div>
+<div class="car_left floatl ">
+		<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html" target="_blank">
+		<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165"
+			alt="车险快速报价" title="车险快速报价"></a></div>
+		<cms:list item="Image"  name="车险图片"> 
+	      <div class="car_ad_l clearfix">
+		   <a href="${Image.wangzhi}" target="_blank">
+		       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+		   </a>
+		  </div>
+	    </cms:list> 
+            
+            <div class="car_border_q mar_btn_10">
+            <ul class="car_zx_title zs_list cf">
+            	<li class="zslist_1"><span class="hover" id="zslist1" onclick="setTab('zslist',1,3)">资讯</span></li>
+            	<li class="zslist_1"> <span  id="zslist2"  onclick="setTab('zslist',2,3)">知识</span></li>
+                <li class="zslist_1"> <span  id="zslist3"  onclick="setTab('zslist',3,3)">问答</span></li>
+            </ul>
+             <ul class="zx_list cf " id="con_zslist_1">
+				<cms:list item="article" level="all" type="rand" tag="车险哪家好" count="6" name="保险资讯">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_2" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="车险哪家好" count="6" name="保险知识">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_3" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="车险哪家好" count="6" name="保险问答">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+            </div>
+  </div>
+  
+       <div class="car_right floatr">
+        <div class="car_border_q hzpp_main cf"> 
+         <h1 class="car_l_title2 meihua_p">车险哪家好</h1>
+			<table width="100%" border="0" class="service_duibi">
+  <tr>                       
+    <th scope="col" width="150px;">&nbsp;</th>
+    <th scope="col" width="212px;">服务项目</th>
+    <th scope="col">阳光车险</th>
+    <th scope="col">太平洋车险</th>
+    <th scope="col">平安车险</th>
+    <th scope="col">大地车险</th>
+  </tr>
+  <tr class="lv_bgs">
+    <td rowspan="6"><div class="serice_1"><img src="${Site.StaticResourcePath}/images/car/hao_img_03.png" width="131" height="150"></div></td>
+    <td><span class="service_des">7X24小时车险服务</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="lv_bgs">
+    <td><span class="service_des">全国通赔</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="lv_bgs">
+    <td><span class="service_des">非伤人案件 无须单证 超快赔付</span></td>
+    <td><span class="service_sel"></span></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="lv_bgs">
+    <td><span class="service_des">万元以下 资料齐全 一天赔付</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="lv_bgs">
+    <td><span class="service_des">上门收取理赔资料</span></td>
+    <td>&nbsp;</td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="lv_bgs">
+    <td><span class="service_des">人伤事故专人跟进服务</span></td>
+    <td>&nbsp;</td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="bs_bgs">
+    <td rowspan="4"><div class="serice_2"><img src="${Site.StaticResourcePath}/images/car/hao_img_06.png" width="131" height="101"></div></td>
+    <td><span class="service_des">全国非事故道路救援</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="bs_bgs">
+    <td><span class="service_des">异地救援后原地住宿</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="bs_bgs">
+    <td><span class="service_des">电瓶充电</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="bs_bgs">
+    <td><span class="service_des">送水加油</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="fs_bgs">
+    <td rowspan="4"><div class="serice_3"><img src="${Site.StaticResourcePath}/images/car/hao_img_08.png" width="131" height="104"></div></td>
+    <td><span class="service_des">拖车牵引</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="fs_bgs">
+    <td><span class="service_des">故障现场维修</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="fs_bgs">
+    <td><span class="service_des">更换轮胎</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="fs_bgs">
+    <td><span class="service_des">轮胎充气</span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+    <td><span class="service_sel"></span></td>
+  </tr>
+  <tr class="clear_bnt_bo">
+    <td colspan="2">&nbsp;</td>
+    <cms:list item="article" level="all" name="阳光车险" >
+        <td><a  onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_hdbj_btn">获得报价</a></td>
+    </cms:list>
+    <cms:list item="article" level="all" name="太平洋车险" >
+        <td><a onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_hdbj_btn">获得报价</a></td>
+    </cms:list>
+    <cms:list item="article" level="all" name="平安车险" >
+        <td><a onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_hdbj_btn">获得报价</a></td>
+    </cms:list>
+    <cms:list item="article" level="all" name="大地车险" >
+        <td><a onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_hdbj_btn">获得报价</a></td>
+    </cms:list>
+  </tr>
+</table>
+
+            
+        </div>
+         <div class="car_border_q cf"> 
+         	  <div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+			    	
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+			<div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="车险哪家好" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="车险哪家好" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="车险哪家好" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+		<cms:include file="block/community.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

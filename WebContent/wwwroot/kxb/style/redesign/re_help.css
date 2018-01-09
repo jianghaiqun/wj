@@ -1,0 +1,740 @@
+/* 
+#@des:理赔频道css
+*@maker:dengyuying
+*@time:2015-12-7-11:30 
+*/
+
+/*覆盖re_main.css*/
+.g-nav-title { background: url("../../images/redesign/isp_01.png") no-repeat 42px -664px #FD8824; }
+.nostyle .g-nav-title { background-position: 41px -734px; }
+.claim_top { background: #f5f5f5 url("../../images/redesign/rehelp/bg_lipei_repeat.jpg") repeat-x center 150px; }
+/*引用自help.css*/
+.claims_box_left td { font-size: 12px; height: 28px; }
+.xm_td { color: #333; text-align: right; }
+.bx_txt { height: 27px; border: 1px solid #CCC; width: 240px; color: #898989; }
+.lipei_des_s { text-align: center; color: #A5A4A4; }
+.next_link { display: block; width: 87px; height: 32px; margin: 0 20px; text-align: center; line-height: 32px; background: #FF6E16; color: #fff; }
+.next_link:link,
+.next_link:visited,
+.next_link:active { color: #fff; font-size: 14px; }
+.db_error { color: red; padding-left: 25px; background: url("../../images/redesign/rehelp/message_img_03.gif") no-repeat 5px -43px; }
+.lipei_sq { width: 875px; border: none; padding: 56px 44px; margin: 0 auto; }
+.lipei_sq li { position: relative; }
+.lipei_sq td { color: #898989; font-size: 12px; padding: 0 5px 15px 0; }
+.lipei_sq .no-first .cutting { padding-top: 15px; border-top: 1px dashed #e8e8e8; }
+.no-first .add_bd_bbr { margin-top: 16px; }
+.no-first  .error { padding-top: 15px; }
+.lipei_sq .submit_box { overflow: hidden; padding-left: 155px; }
+.bd_mc { text-align: right; }
+.bd_mc b { font-weight: normal; color: #222; }
+.bd_mc em { padding-right: 4px; color: red; vertical-align: middle; }
+.db_txts { height: 26px; width: 240px; line-height: 26px; border: 1px solid #CCC; }
+.add_bd_bbr { display: block; width: 94px; height: 24px; line-height: 24px; text-align: center; color: #fff; border-radius: 5px; background: #fd8824; cursor: pointer; margin-left: 155px; margin-bottom: 20px; }
+.jscxr { position: absolute; top: 0; left: 250px; }
+.del_btn { height: 26px; line-height: 26px; border: 1px solid #ccc; color: #222; background-color: #f6f6f6; }
+.zb_p_b { display: block; margin-bottom: 10px; font-weight: normal; color: #FF6D00; }
+.xm_td em { color: #F60; padding-right: 4px; vertical-align: middle; }
+.db_mi { vertical-align: top; }
+.bd_mc { text-align: right; }
+.bz_list { border-bottom: 1px dashed #CCC; padding: 8px 0; margin-bottom: 8px; }
+.cf { zoom: 1; }
+.rxbz_li { width: 120px; height: 20px; float: left; vertical-align: middle; margin-bottom: 10px; }
+.rxbz_li input { margin-right: 5px; vertical-align: middle; }
+.rxbz_li label { cursor: pointer; }
+.sjms_text { width: 446px; height: 188px; padding: 6px; border: 1px solid #ccc; resize: none; font-size: 12px; color: #898989; }
+.bd_tj { display: block; float: left; width: 140px; height: 40px; line-height: 40px; border: none; border-radius: 5px; font-size: 16px; font-family: "微软雅黑"; color: #fff; background: #fd8824; overflow: hidden; cursor: pointer; }
+.claims_box_left { width: 550px; }
+.next_link { width: 120px; height: 40px; line-height: 40px; border-radius: 5px; background-color: #fb8834; }
+
+/*============理赔频道============*/
+.claims { max-width: 1400px; margin: 0 auto; font-family: "微软雅黑"; background: url("../../images/redesign/rehelp/main-bg.jpg") no-repeat top center #f5f5f5; }
+.main-wrap { width: 980px; margin: 0 auto; }
+.main-bg { padding: 0 10px 10px; color: #fff; }
+.claims .daohang,
+.claims .daohang a,
+.claims .daohang .separator { color: #fff; }
+.main-bg h1 { margin: 30px 0 0 350px; font-size: 46px; }
+.main-bg h2 { margin: 10px 0 35px 345px; font-size: 24px; }
+
+/*理赔流程*/
+.step-wrap { padding: 0 120px 20px; border-radius: 10px 10px 0 0; }
+.step-wrap h1 { position: relative; font-size: 22px; line-height: 70px; text-align: center; color: #f47d26; }
+.step-wrap h1 .claim-icon { position: absolute; top: 25px; *top: 6px; left: 300px; width: 19px; height: 22px; }
+.step { height: 72px; padding-top: 10px; font-size: 20px; color: #fff; background: url("../../images/redesign/rehelp/step-bg.jpg") no-repeat center; }
+.step ul { padding-left: 14px; }
+.step li { width: 169px; margin-right: 108px; line-height: 72px; text-align: center; }
+.step li.last { margin-right: 0; }
+.explain ul { height: 105px; padding-left: 19px; color: #888; }
+.explain li { width: 156px; margin: 15px 122px 0 0; }
+.explain li.last { margin-right: 0; }
+.explain li em { font-weight: normal; color: #fb8834; }
+
+/*content-wrap*/
+.claims .content-wrap { margin-top: 20px; }
+.claims .left-side { width: 695px; padding: 25px 20px 20px 25px; }
+.claims .left-side h1 { margin-left: 55px; padding: 23px 0 23px 30px; border-left: 2px solid #e8e8e8; font-size: 20px; color: #222; }
+.claims .left-side h1 .claim-icon { width: 20px; height: 20px; margin: 4px 0 0 -41px; background-position: -20px 0; }
+.claims .left-side .content { padding: 25px; border: 1px solid #e8e8e8; }
+
+/*快速报案*/
+.claims .report h1 { padding-top: 0; }
+.claims .report h1 .claim-icon { height: 30px; margin-top: -3px; background-position: 0px -46px; }
+.claims .report .content { height: 150px; padding-left: 60px; }
+
+/*理赔须知*/
+.pay-notice ol { padding-bottom: 20px; border-bottom: 1px dashed #e8e8e8; }
+.pay-notice ol li { font-family: "宋体"; border-bottom: 1px solid #fff; text-indent: 2em; color: #eb6d1f; background-color: #ffefe1; }
+.pay-notice ol h2 { font-size: 14px; line-height: 35px; cursor: pointer; }
+.pay-notice ol p { display: none; padding: 10px 5px; border-left: 1px solid #e8e8e8; border-right: 1px solid #e8e8e8; line-height: 17px; color: #888; background-color: #fff; }
+.pay-notice ol .on p { display: block; }
+.pay-notice ul { width: 660px; margin-top: 20px; overflow: visible; }
+.pay-notice ul li { position: relative; }
+.pay-notice ul a { display: block; width: 93px; height: 40px; line-height: 40px; margin-right: 17px; border-radius: 5px; font-size: 14px; text-align: center; color: #fff; background-color: #fb8834; }
+.pay-notice ul .dialog { display: none; position: absolute; top: -140px; left: -110px; width: 277px; height: 75px; padding: 30px 20px; background: url("../../images/redesign/rehelp/dialog-bg.png") no-repeat 0 0; }
+.pay-notice ul .less { height: 45px; padding: 45px 20px; }
+.pay-notice ul .behind { top: 50px; background-position: -1px -145px; }
+.pay-notice ul div p { line-height: 18px; }
+.pay-notice ul .close { position: absolute; top: 0; right: 0; width: 23px; height: 23px; cursor: pointer; }
+.pay-notice ul .on .dialog { display: block; }
+.pay-notice ul .on a { background-color: #ff6600; }
+
+/*资料下载*/
+.claims .download .content { padding-bottom: 10px; }
+.download h1 .btn { *margin-top: -50px; }
+.download .thumb-wrap,
+.download .data-list { font-family: "宋体"; color: #222;  overflow: hidden;  }
+.download .thumb-wrap { width: 643px; min-height:81px;  margin-bottom: 20px; border-bottom: 1px dashed #e8e8e8; }
+.thumb-wrap div { width: 310px; }
+.thumb-wrap div.fl-l { border-right: 1px solid #e8e8e8; }
+.thumb-wrap div.fl-l .pro_logo,
+.thumb-wrap div.fl-r .pro_logo { float: left; border: 1px solid #e8e8e8; margin: 0 9px 15px 0;}
+.thumb-wrap img { margin-right: 15px; border: 1px solid #e8e8e8; }
+.thumb-wrap li { width: 155px; margin-bottom: 15px; }
+.thumb-wrap li a:hover { color: #fd8824; }
+.data-list ul { margin-right: -41px; }
+.data-list li a { display: block; width: 130px; height: 24px; margin: 0 39px 15px 0; line-height: 24px; border: 1px solid #ffbb80; text-align: center; }
+.data-list li a:hover { color: #fd8824; }
+
+/*案例参考*/
+.case ol li { margin-bottom: 20px; }
+.case table { width: 100%; font-family: "宋体"; }
+.case .cutting { height: 10px; *margin-top: -4px; border-left: 1px solid #e8e8e8; border-right: 1px solid #e8e8e8; background-color: #f5f5f5; }
+.case th,
+.case td { padding: 15px 9px; line-height: 18px; border: 1px solid #e8e8e8; }
+.case th { min-width: 50px; color: #222; }
+.case .long-th { min-width: 72px; }
+.case td { color: #888; }
+.case .num th { text-align: center; }
+.case .num td { padding: 15px 20px; }
+.case .num .type { color: #f45050; }
+.case .icon-wrap { position: relative; }
+.case table .claim-icon { position: absolute; top: 10px; left: -9px; width: 20px; height: 16px; text-align: center; color: #fff; background-position: -41px 0; }
+.right-side { width: 220px; }
+.right-side .section { margin-bottom: 20px; background-color: #fff; }
+.right-side .section h1 { border-bottom: 1px solid #fb8834; font-size: 14px; font-family: "宋体"; line-height: 45px; color: #222; }
+.right-side .section h1 .claim-icon { width: 4px; height: 16px; margin: 15px 10px; background-position: -63px 0; }
+
+/*开心保客服*/
+.kxb-service ul { height: 182px; overflow: hidden; }
+.kxb-service li { height: 60px; line-height: 60px; border-bottom: 1px solid #e8e8e8; font-size: 16px; }
+.kxb-service li .claim-icon { width: 29px; height: 27px; margin: 15px; }
+.kxb-service .phone .claim-icon { background-position: 0 -22px; }
+.kxb-service .qq .claim-icon { background-position: -29px -22px; }
+.kxb-service .email .claim-icon { background-position: -58px -22px; }
+.kxb-service .phone { line-height: 43px; }
+.kxb-service .phone p { margin-top: -23px; font-size: 12px; font-family: "宋体"; color: #888; }
+.kxb-service .qq a { width: 50px; height: 28px; margin: 16px 6px; *margin-top: -43px; line-height: 28px; font-size: 14px; font-family: "微软雅黑"; }
+
+/*服务优势*/
+.advantage ul { height: 300px; }
+.advantage li h2 { margin-bottom: 20px; }
+.advantage li h2 p { padding: 10px 0; font-size: 14px; font-family: "宋体"; color: #fb8834; }
+.advantage .direct p { padding: 0; }
+.advantage li .claim-icon { width: 90px; height: 50px; margin-right: 10px; background-position: 0 -74px; }
+.advantage .direct .claim-icon { background-position: 0 -123px; }
+.advantage .help-all .claim-icon { background-position: 0 -170px; }
+
+/*合作保险公司电话*/
+.cooperation-phone a{ display: block; width: 219px; height: 61px; background: url("../../images/redesign/rehelp/cooperation-phone.jpg") no-repeat center; }
+/*协助理赔*/
+.help { padding-bottom: 30px; }
+.help p { margin: 25px 0; line-height: 18px; font-family: "宋体"; text-align: center; color: #222; }
+.help ul { height: 350px; margin: 0 30px 0 35px; padding-left: 30px; border-left: 1px solid #e8e8e8; }
+.help li { margin-bottom: 25px; overflow: visible; }
+.help li .claim-icon { width: 22px; height: 22px; margin-left: -41px; line-height: 22px; font-size: 16px; font-family: "微软雅黑"; text-align: center; color: #eb6d1f; background-position: -24px -50px; }
+
+/*============快速报案============*/
+.fast-report .main { padding: 20px; background-color: #fff; }
+.fast-report .nav { line-height: 40px; font-size: 14px; }
+.fast-report .nav a { position: relative; display: block; width: 468px; text-align: center; color: #222; border: 1px solid #f5f5f5; border-bottom-color: #eb6d1f; background-color: #f5f5f5; }
+.fast-report .nav a .claim-icon { position: absolute; top: 7px; left: 165px; width: 23px; height: 28px; background-position: 0 -220px; }
+.fast-report .nav a .phone { left: 148px; background-position: 0 -248px; }
+.fast-report .nav .on { color: #eb6d1f; border-color: #eb6d1f; border-bottom-color: #fff; background-color: #fff; }
+.fast-report .nav .on .claim-icon { background-position: -23px -220px; }
+.fast-report .nav .on .phone { background-position: -23px -248px; }
+.phone-list { margin-right: -38px; padding: 40px 25px 40px 28px; text-align: center; overflow: hidden; }
+.phone-list li { margin: 0 38px 15px 0; }
+.phone-list li div { width: 144px; border: 1px solid #d8d8d8; }
+.phone-list li img { display: block; }
+.pro_logo { display: block; width: 144px; height: 64px;  background-repeat: no-repeat; background-position: center center;}
+.phone-list li .phone { padding-left: 21px; border-top: 1px solid #d8d8d8; font-size: 14px; line-height: 35px; color: #ed6d00; background-color: #fbfbfb; }
+.phone-list li .phone span { position: relative; }
+.phone-list li .claim-icon { position: absolute; top: -2px; left: -26px; width: 21px; height: 18px; background-position: -47px -49px; }
+.phone-list li .name { width: 147px; line-height: 30px; font-family: "宋体"; color: #888; }
+
+/*理赔资料*/
+.material { font-family: "宋体"; }
+.material .left-side { width: 215px; margin-right: 20px; }
+.material .left-side h1 { padding-left: 5px; border-bottom: 1px solid #eee; line-height: 45px; font-weight: normal; font-size: 14px; color: #222; background-color: #fbfbfb; }
+.material .left-side h1 .claim-icon { width: 17px; height: 17px; margin: 14px 8px; background-position: -47px -222px; }
+.material .hot-download h1 .claim-icon { background-position: -65px -222px; }
+.material .left-side ul { padding: 15px; }
+.material .left-side li a { line-height: 25px; color: #888; }
+.material .left-side li a:hover { color: #fd8824; }
+.download-company ul { width: 225px; }
+.download-company li { width: 60px; margin-right: 10px; }
+.hot-download li a { display: block; width: 100%; }
+.material .content-wrap { width: 715px; padding: 15px; }
+.material .search-wrap { overflow: hidden; }
+.material .search-wrap input { width: 610px; height: 30px; padding-left: 10px; border: none; line-height: 30px; background-color: #f5f5f5; }
+.material .search-wrap .btn { width: 84px; height: 30px; line-height: 30px; }
+.material .label-wrap { margin-top: 12px; }
+.material .label-wrap ul { overflow: hidden; }
+.label-wrap li a { display: block; height: 30px; margin: 8px 12px; padding: 0 15px; line-height: 30px; border: 1px solid #c6c6c6; border-radius: 5px; text-align: center; }
+.label-wrap li a:hover,
+.label-wrap li .on { color: #fd8824; border-color: #fd8824; }
+.material .content { margin-bottom: 30px; }
+.material .content li { line-height: 40px; border-bottom: 1px solid #f5f5f5; }
+.material .content li a:hover { color: #fd8824; }
+.material .content li .claim-icon { width: 17px; height: 20px; margin: 10px; background-position: -68px -50px; }
+.material .page_area { text-align: center; }
+.material .page_area #pagination { display: inline-block; *display:inline; }
+#pagination ul { width: auto; margin: 0; }
+#pagination ul li, #pagination ul li span { *float: none; *display: inline; *zoom: 1;}
+#pagination .now { *line-height: 30px; }
+/*---------通用------------*/
+.claims h1,
+.claims h2 { font-weight: normal; }
+.step-wrap,
+.left-side,
+.material .content-wrap { background-color: #fff; }
+.claim-icon { display: block; background: url("../../images/redesign/rehelp/icon.png") no-repeat 0 0; }
+.fl-l { float: left; }
+.fl-r { float: right; }
+.ellipsis { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.btn { display: block; width: 80px; height: 28px; line-height: 28px; border-radius: 3px; font-size: 12px; font-family: "宋体"; text-align: center; color: #fff; background-color: #fb8834; }
+.btn:hover { color: #fff; }
+
+/*保险公司客服、服务优势共用*/
+.other-service ul,
+.advantage ul { padding: 0 10px; }
+.other-service li,
+.advantage li { padding: 20px 0; border-bottom: 1px dashed #e8e8e8; }
+.other-service li.last,
+.advantage li.last { border: none; }
+
+/*字体共用*/
+.explain li,
+.advantage li p,
+.help li { line-height: 15px; font-family: "宋体"; color: #888; }
+.fast-report,
+.material { background-color: #f5f5f5; }
+.position { line-height: 40px; font-family: "宋体"; color: #888; }
+
+.new_template_p{ font-style:oblique; height:48px; font-size:24px ; line-height: 48px; text-align: center;  color:#fcad7e; border-top: 1px dashed #dedede;}
+.net_tip_des{ line-height: 2em; position:relative; margin-top: 27px; font-size: 12px; color:#888888; padding-left:24px;}
+.net_tip_des span{display:block; position:relative; margin-bottom:22px; font-family: "宋体"; }
+.net_tip_des em{ position:absolute; left:-14px;}
+.new_t_code{ position:absolute; right:12px; top:4px; width:84px;}
+.new_template{  position:relative;}
+.new_t_bol{border:2px dashed #ff8400; }
+.new_tip_sc{ width:54px; height:38px; background:url(../../images/jifen/ions.png) no-repeat; position:absolute; top:-94px; right:-10px;}
+.new_mod_win{ width:833px; height:420px; background:url(../../images/jifen/zs_03.png) no-repeat; position:absolute; top:-418px; left:-700px;}
+.new_mod_win img{ margin-top: 92px; margin-left: 37px;}
+.new_mod_btn{ display:block; float:right; margin-top: 315px; margin-right: 36px; background:#fb8834; width:160px; height:44px; line-height: 44px; cursor:pointer; text-align: center; font-size: 16px; color:#fff; border-radius: 4px; }
+.new_mod_btn:hover{ background:#fc9549;}
+.win_closed{ position:absolute; width:40px; height:40px;  display:block; right:0px; top:0px; cursor:pointer;}
+/* 
+#@des:理赔频道改版
+*@maker:guodongqi
+*@time:2017-3-29-16:50
+*/
+.newClaims{
+    background:#fff;
+   font-family:"Microsoft YaHei";
+}
+.newClaims_nav{background:#f5f5f5;}
+.newClaims_nav .daohang{width:980px; margin:0 auto;}
+.modClamisSider{
+    background:url(../../images/rehelp/lpbg_03.png) repeat-x;
+    height:374px;
+    overflow:hidden;
+}
+.ClamisSider{
+    width:980px; 
+    margin:0 auto;
+    height:374px;
+    position:relative;
+}
+.modClamisCon{
+    width:980px;
+    margin:0 auto;
+    padding: 46px 0;
+}
+.Clamistitle{
+    height:50px;
+    width:850px;
+    background:url(../../images/rehelp/lptit1.png) no-repeat;
+    margin:0 auto;
+}
+.modClamisUl li{
+    width:152px;
+    float:left;
+    position:relative;
+    height:176px;
+}
+.modClamisUl p.Clamislijt{
+    width:100px;
+    float:left;
+}
+.clamisicon{
+    position:absolute;
+    left:10px; top:0;
+    width:135px;
+    height:135px;
+    display:block;
+    margin:0 auto;
+    background:url(../../images/rehelp/lpmain_11.png) no-repeat  -4px -173px;
+    cursor:pointer;
+}
+.icons1{
+    background-position: -4px -173px;
+}
+.icons2{
+    background-position: -175px  -173px;
+}
+.icons3{
+    background-position: -358px -173px;
+}
+.icons4{
+    background-position: -529px -173px;
+}
+.modClamisUl{
+    margin: 30px 0 26px 40px;
+    overflow:hidden;
+}
+.modClamisUl li span{
+    font-size: 22px;
+    color:#ff5f51;
+    display:block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.Clamislijt em{
+    display:block;
+    width:40px;
+    height:30px;
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat  -11px -726px;
+    margin:50px auto 0;
+}
+.back .icons1,.hover .front .icons1{
+    background-position:-4px -2px;
+}
+.back .icons2,.hover .front .icons2{
+    background-position:-178px -2px;
+}
+.back .icons3,.hover .front .icons3{
+    background-position:-358px -2px;
+}
+.back .icons4,.hover .front .icons4{
+    background-position:-529px -2px;
+}
+.ClamisConbox{
+     border:2px solid #ff5647;
+     border-radius: 4px;
+     width:800px;
+     padding:20px 32px;
+     position:relative;
+     line-height: 2em;
+}
+.ClamisUlCon{
+    width:868px;
+    margin:0 auto;
+}
+.clamis_j{
+    position:absolute;
+    width:25px;
+    height:25px;
+    background:url(../../images/rehelp/jiao_26.gif) no-repeat;
+    top:-16px;
+    left:50px;
+}
+.ClamisConbox h4{
+    font-size: 18px;
+    font-weight: normal;
+    color:#ff5647;
+    padding-left: 35px;
+    overflow:hidden;
+    line-height: 26px;
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat -16px -283px;
+}
+.ClamisConbox p{
+    color:#888888;
+    font-size: 16px;
+    margin-top: 6px;
+    padding-left: 35px;
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat -14px -339px;
+}
+.ClamisConbox p.o_cons1{
+    background-position: -14px -339px;
+}
+.ClamisConbox p.o_cons2{
+    background-position: -14px -377px;
+}
+.ClamisConbox p.o_cons3{
+    background-position: -14px -418px;
+}
+.ClamisConbox p.o_cons4{
+    background-position: -14px -455px;
+}
+.modClamisHelp{
+    background:url(../../images/rehelp/lpbgs_09.png) repeat;
+    overflow:hidden;
+}
+.clamisHelp_con{
+    background:url(../../images/rehelp/lpbg2_07.png) repeat-x;
+    padding:48px 0;
+}
+.clamistit2{
+    background:url(../../images/rehelp/lptit2.png) no-repeat;
+    margin-bottom: 40px;
+}
+.clamis_boxbor{
+    width:944px;
+    margin:0 auto;
+    padding:2px;
+    background:#fff;
+    border-radius: 4px;
+}
+.clamis_boxnb{
+    border:2px solid #ff5647;
+    border-radius: 4px;
+    padding:25px 30px;
+    overflow:hidden;
+}
+.clamislp_tit{
+    font-size: 20px;
+    color:#ff5647;
+    height:26px;
+    line-height: 26px;
+    padding-left: 40px;
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat -10px -501px;
+    margin-bottom: 20px;
+}
+.clamislp_dl dt{
+    font-size: 16px;
+    color:#9b9898;
+    background:#feeeee;
+    height:46px;
+    line-height: 46px;
+    padding:0 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position:relative;
+    cursor:pointer;
+}
+.clamislp_dl dd{
+    font-size: 16px;
+    color:#929292;
+    padding:10px 20px 20px;
+    line-height: 1.8em;
+    display:none;
+}
+.clamislp_tit2{
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat -10px -552px;
+}
+.clamislp_jt{
+    width:30px;
+    height:30px;
+    position:absolute; 
+    display:block;
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat -10px -654px;
+    right:10px;
+    top:8px;
+}
+.hide_dt .clamislp_jt{
+    background-position: -10px -601px;
+}
+.clamis_zlbox{
+    width:450px;
+    float:left;
+    border-right: 1px dashed #ccc;
+}
+.clamis_zlbox dl{
+    overflow:hidden;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.clamis_zlbox dt{
+    width:190px;
+    float:left;
+    margin-left: 10px;
+}
+.clamis_zlbox dd{
+    width:242px;
+    float:left;
+}
+.clamis_gs_list{
+    float:right;
+    width:400px;
+}
+.clamis_logos{
+    width:187px;
+    height:58px;
+    display:block;
+    border:1px solid #ccc;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.clamistit3{
+    background:url(../../images/rehelp/lptit3.png) no-repeat;
+    margin:40px auto;
+}
+.wirt_bor{
+    border:2px solid #fb791a;
+}
+.wirt_bor .clamis_boxnb{
+    border:1px solid #fff;
+    padding:0;
+}
+.clamis_boxnb table{width:100%;}
+.clamis_boxnb th{
+    height:50px;
+    line-height: 50px;
+    background:#fb8834;
+    color:#fff;
+    text-align: center;
+    font-size: 16px;
+}
+.clamis_boxnb td{
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    color:#a4a4a4;
+    font-size: 16px;
+    border-bottom: 1px solid #fb8834;
+}
+.clamis_zlbox dd a{
+    font-size: 16px;
+    color:#fd7265;
+    display:inline-block;
+    margin-top: 4px;
+    padding-left: 35px;
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat 0 -788px;
+}
+.clamis_zlbox dd a:hover{
+    color:#e53323;
+}
+.clamis_gs_list a{
+    display:block;
+    width:186px;
+    height:40px;
+    line-height: 40px;
+    color:#ef494c;
+    text-align: center;
+    background:#fff8f8;
+    border:1px solid #fd857a;
+    font-size: 16px;
+}
+.clamis_gs_list li{
+    width:190px; 
+    float:left;
+    margin:0 0px 10px 10px;
+}
+.clamis_gs_list a:hover{
+    background:#ffffff;
+}
+.clamis_tablebox{
+ padding-bottom: 40px;
+}
+.ClamisConbox2 .clamis_j{
+    left:296px;
+}
+.ClamisConbox3 .clamis_j{
+    left:551px;
+}
+.ClamisConbox4 .clamis_j{
+    left:802px;
+}
+
+.flip-container {
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+}
+.flip-container:hover .back, .flip-container.hover .back {
+    transform: rotateY(0deg);
+}
+
+.flip-container {
+    perspective: 1000;
+    transform-style: preserve-3d;
+}
+
+    .flip-container:hover .back {
+        transform: rotateY(0deg);
+    }
+    .flip-container:hover .front {
+        transform: rotateY(180deg);
+    }
+
+.flip-container, .front, .back {
+    width:152px;
+    height:137px;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+.front, .back {
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.back {
+    transform: rotateY(-180deg);
+}
+.vertical.flip-container {
+    position: relative;
+}
+
+.vertical .back {
+    transform: rotateX(180deg);
+}
+
+.vertical.flip-container:hover .back {
+    transform: rotateX(0deg);
+}
+
+.vertical.flip-container:hover .front {
+    transform: rotateX(180deg);
+}
+.hover .front,.hover .back{
+    transition: normal;
+}
+.siderone{
+    position: absolute;
+    left:75px;
+    top:48px;
+}
+.sidertwo{
+    position: absolute;
+    left:75px;
+    top:198px;
+}
+.siderthree{
+    position: absolute;
+    left:65px;
+    top:284px;
+}
+.siderphone{
+    position: absolute;
+    left:627px;
+    top:26px;
+}
+.clamis_ul_table li {
+    overflow:hidden;
+}
+.clamis_ul_table li span{
+    font-size: 14px;
+    color:#929292;
+    padding:10px 0;
+    display:block;
+    float:left;
+    width:18%;
+    height:25px;
+    line-height: 25px;
+    overflow:hidden;
+    text-align: center;
+     text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.clamis_ul_table li span.clamisNum,.clamisNum{
+width:15%;
+}
+.clamis_ul_table li span.clamisName,.clamisName{
+width:34%;
+}
+.clamis_ul_table li span.clamisCass,.clamisCass{
+width:15%;
+}
+.clamis_ul_table li span.clamisDay,.clamisDay{
+width:18%;
+}
+.clamis_ul_table li span.clamisMoney,.clamisMoney{
+width:17%;
+}
+.clamis_logos a{
+ display:block;
+ height:58px;
+}
+.clamis_gs_list a.more_calamisgs{
+    background:#fff;
+}
+.clamis_gs_list a.more_calamisgs:hover{
+    background:#fff8f8;
+}
+.fix_nav span.fix-clamis-mod1{
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat 0px 0px #fff;
+}
+.fix_nav span.fix-clamis-mod2{
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat 0px -96px #fff;
+}
+.fix_nav span.fix-clamis-mod3{
+    background:url(../../images/rehelp/lpmain_14.png) no-repeat 0px -197px #fff;
+}
+.clamis_nav span, .clamis_nav a, .clamis_nav{
+    margin-bottom: 0;
+    box-shadow:0 0 0;
+
+}
+.clamis_nav span{
+        border:1px solid #ff6659;
+        margin-top: -1px;
+}
+.clamis_nav a.fix_a{
+     color:#ff6659;
+     padding-top: 48px;
+}
+.clamis_nav span{
+    padding-top: 48px;
+}
+.clamis_nav a:hover{
+    color:#f93120;
+}
+.clamistag{
+    background:url(../../images/rehelp/ppspicons.png) no-repeat 0 0px;
+    display:inline-block;
+    width:40px;
+    height:30px;
+    vertical-align: middle;
+}
+.ClamisConbox a{ color:#ff5647; text-decoration: underline;}
+.ks_titlse{
+    font-size: 30px;
+    color:#fd8824;
+    text-align: center;
+    font-weight: normal;
+    font-family: "Microsoft YaHei";
+    padding-top: 20px;
+}

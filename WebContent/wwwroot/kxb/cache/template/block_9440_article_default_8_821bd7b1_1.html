@@ -1,0 +1,13 @@
+<% DataTable dt_1 = TemplateData.getDocList("article","手机充值卡","all","null","null","8","null","null","null");
+  if(dt_1==null){write("没有找到栏目。parent：null  catalog："+"手机充值卡");}else{
+ int rdCnt=dt_1.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_1  = dt_1.getDataRow(i);
+ int rdIdx=i;
+%>
+
+						<a href="${article_1.Link}" target="_top"> <img
+						 src="${Site.StaticResourcePath}/${article_1.logo}" width="173" height="157"
+							alt="${article_1.title}" /> </a>
+					<%}}%>

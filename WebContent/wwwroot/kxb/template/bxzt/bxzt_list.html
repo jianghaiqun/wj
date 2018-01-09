@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_listv2.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/brand.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/brand_style.css"/>
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body >
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+		<input type="hidden" id="catalogname" value=""/>
+		<div class="content">
+			<div class="content_left">
+			<div class="l_boxss">
+                <div class="c1"><a href="${Site.URL}/zhuanti/" class="bxzt_tit_link">保险专题</a></div>
+					<ul class="zt_l_nav">
+		                <cms:list item="hotopic"  name="保险专题导航" >
+			                 <li><a href="JavaScript:;" onclick="queryarticle('${hotopic.name}');" >${hotopic.name}</a>
+                                  <ul class="zt_lm_nav">
+                                    <cms:sublist item="friendlink" count="50" >
+			 							<li><a href="JavaScript:;" onclick="queryarticle('${friendlink.name}');" >${friendlink.name}</a></li>
+									</cms:sublist>	
+                                  </ul>
+	                          </li>
+						</cms:list>
+					</ul>
+                </div>
+				<div class="l_boxss">
+					 <cms:imageplayer code="kxb_product" type="0" width="230" height="255" />
+				</div>
+				<div class="l_boxss">
+                <div class="c1">${catalog.name}热销产品</div>
+           		<ul class="zjll_list">
+           			<cms:list item="article" level="current" count="5" hasAttribute="newRecommend" name="9385">
+            		<li class="clearfix">
+            			<a href="${Article.Link}">${article.title}</a>
+                		<em class="list_xls">销量：${Article.SalesVolume}</em>
+                		<em class="list_pays"><span name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}</span></em>
+					    <em class="list_pays_price moneys">${Article.BasePremV3}</em>
+                	</li>
+          	   		</cms:list>
+          	    </ul>
+                </div>
+				
+			<div class="l_boxss">
+				<div class="c1">保险知识</div>
+				<div class="product_Insure">
+					<cms:list item="article"  level="all" count="5"   name="9443" >
+						<div class="c5"><a target="_blank" href="${Article.Link}">${Article.Title|CharWidth=16}</a></div>
+					</cms:list>
+
+				</div>
+			</div>
+
+			<div class="l_boxss">
+				<div class="c1">保险问答</div>
+				<div class="product_Insure">
+					<cms:list item="article"  level="all" count="5"  name="9445" >
+						<div class="c5"><a target="_blank" href="${Article.Link}">${Article.Title|CharWidth=16}</a></div>
+					</cms:list>
+				</div>
+			</div>
+			</div>
+			<div class="content_right">
+				<div  class="brand_list_top">
+					<cms:list item="article" level="all" page="true"  pagesize="20" condition="type=1">
+						<div class="brand_list_info">
+							<span class="productName"><a href="${Article.link}" class="title" title="${Article.title}" target="_blank"> ${Article.title} </a> </span>
+							<div class="content">${Article.Summary|CharWidth=100}</div>
+						</div>
+					</cms:list>
+				</div>
+				<div id="productsPageBar">${PageBar1}</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="专题列表页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="专题列表页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="专题列表页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" target="_blank">${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>     
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/zt_detail.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script>
+		jQuery(function(){
+			 //焦点图切换
+			jQuery('#change_33 div.changeDiv').soChange({
+				thumbObj:'#change_33 .ul_change_a2 span',
+				thumbNowClass:'on',
+				changeTime:4000//自定义切换时间为4000ms
+			});
+		})
+	</script>
+</body>
+</html>

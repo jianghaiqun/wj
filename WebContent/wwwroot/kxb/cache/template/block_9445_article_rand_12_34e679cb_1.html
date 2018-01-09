@@ -1,0 +1,42 @@
+<% DataTable dt_27 = TemplateData.getDocList("article","保险问答","all","null","rand","12","null","null","null");
+  if(dt_27==null){write("没有找到栏目。parent：null  catalog："+"保险问答");}else{
+ int rdCnt=dt_27.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_27  = dt_27.getDataRow(i);
+ int rdIdx=i;
+%>
+
+							<% if("".equals(condition) || !condition.contains(","+article_27.getString("ID")+",")) {%>
+							
+	            			<li>
+	                            <div class="question">
+	                                <div class="ans_tit"><a href="${article_27.link}">${article_27.title}</a></div><i class="icon"></i>
+	                            </div>
+	                            <div class="answer">
+	                            <%if("solve".equals(article_27.getString("isOk")) && StringUtil.isNotEmpty(article_27.getString("metadescription"))){%>
+	                            	<div class="answer_p">
+	                            		${article_27.metadescription|CharWidth=100}
+	                            		<br>                    
+	                                    <a class="more" href="${article_27.link}">【详情】</a>
+	                                </div> <i class="icon"></i>
+	                            <%}else if(!"solve".equals(article_27.getString("isOk")) && StringUtil.isNotEmpty(article_27.getString("cainadaan"))){%>
+	                            	<div class="answer_p">
+	                            		${article_27.cainadaan|CharWidth=100}
+	                            		<br>                    
+	                                    <a class="more" href="${article_27.link}">【详情】</a>
+	                                </div> <i class="icon"></i>
+								<%}%>
+	                                <%if("solve".equals(article_27.getString("isOk"))){%>
+	                                  <div class="ok_icon"></div>
+	                                <%}%>
+	                            </div>
+	                        </li>
+	                        <%
+	                        	quesCount++;
+	                        	if (quesCount == 8) {
+	                        		break;
+	                        	}
+	            			}
+	            			%>
+	            		<%}}%>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");  
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%> 
+</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_help.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!--导航开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+<!--导航结束-->
+        
+        <div class="grid-c3f help_m">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="help_bor_h">
+                    	<h3 class="help_titile2">表单下载</h3>
+                         <div class="help_con">
+                         <p>退保申请书与变更申请书相同，合众、泰康、太平洋的用保险公司提供的变更申请书，其它保险公司均用【批改申请书】</p>
+<b>保单变更和退保申请书：</b>
+<ul class="help_down_list cf">
+				<cms:list item="attachment"  name="合众保险公司"> 
+				   <li><a href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}</a></li>
+		       </cms:list>
+		       <cms:list item="attachment"  name="其他保险公司"> 
+				   <li><a href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}</a></li>
+		       </cms:list>
+</ul>
+<div class="clear"></div>
+<b>理赔申请书：</b>
+<ul class="help_down_list cf"><cms:list item="attachment"  name="理赔申请"> 
+				   <li><a href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}</a></li>
+		       </cms:list>
+</ul>
+<div class="clear"></div>
+                         </div>
+                    </div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class="help_right_box help_bor_h cf">
+					<h3 class="help_titile">开心保客户服务</h3>
+                    	<p class="help_d help_tel">4009-789-789</p>
+                        <p class="help_d help_time">8:30—23:30</p>
+                        <p class="help_d help_eml">kf@kaixinbao.com</p>
+                    <h3 class="help_titile h_bor_t">下载</h3>
+                    <div class="help_dow_list">
+                <a href="${Site.URL}/about/bdxz/index.shtml" class="help_down" title="《保单变更和退保申请》">《保单变更和退保申请书》</a>
+                <a href="${Site.URL}/about/bdxz/index.shtml" class="help_down" title="《理赔申请书》">《理赔申请书》</a>
+                   </div>
+                    </div>
+                    
+                    <div class="help_right_box help_bor_h h_he_c cf">
+					<h3 class="help_titile">常见问题<a href="${Site.URL}/wenda/" class="help_more" target="_blank">更多</a></h3>
+					<ul class="help_list">
+					<cms:list item="article" level="all"  name="保险问答" count="8" type = "firstpublish">
+					   <% if("solve".equals(article.getString("isOk"))){ %>
+						 <li><a target="_blank" href="${article.link}">${article.title}</a></li>
+					   <%}%>
+					</cms:list>
+					</ul>
+                    </div>
+			</div>
+			<div class="col-extra">
+               <div class="help_left help_bor_h cf" id="sidebar_help">
+					<h3 class="help_titile">帮助中心</h3>
+                    <dl class="help_tree"> 
+                    	<dt>新手指南</dt>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn1">注册新用户</a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn2">用户登录</a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn3">找回密码</a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn4">网站购买流程</a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/index.shtml#xszn5" rel="nofollow">积分商城 </a></dd>
+                        <dd><a href="${Site.URL}/about/xszn/hysm/index.shtml">会员说明 </a></dd>
+                        <dt>业务相关</dt>
+                        <dd><a href="${Site.URL}/about/1/index.shtml#yxxg1">保单送达说明</a></dd>
+                        <dd><a href="${Site.URL}/about/1/index.shtml#yxxg2">保单变更说明</a></dd>
+                        <dd><a href="${Site.URL}/about/1/index.shtml#yxxg3">保单取消说明</a></dd>
+                        <dt>理赔帮助</dt>
+                        <dd><a href="${Site.URL}/about/2/index.shtml#lpbz1">理赔服务说明</a></dd>
+                        <dd><a href="${Site.URL}/about/2/index.shtml#lpbz2">理赔报案电话</a></dd>
+                        <dt>支付帮助</dt>
+                        <dd><a href="${Site.URL}/about/4/index.shtml#zfbz1">支付方式</a></dd>
+                        <dd><a href="${Site.URL}/about/4/index.shtml#zfbz2">支付说明</a></dd>
+                    </dl>
+               </div>
+               
+			</div>
+		</div>
+        
+        
+        
+        </div>
+
+
+
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+
+<script src="${Site.JsResourcePath}/js/sidebar-follow-jquery.js"></script>
+<script>
+/*侧边栏跟随配置*/
+(new SidebarFollow()).init({
+	element: jQuery('#sidebar_help'),
+	distanceToTop: 10
+});
+</script>
+
+</body>
+</html>

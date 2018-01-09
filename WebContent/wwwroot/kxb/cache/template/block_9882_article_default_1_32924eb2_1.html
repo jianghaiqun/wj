@@ -1,0 +1,28 @@
+<% DataTable dt_3 = TemplateData.getDocList("article","保险专题/人寿保险","current","null","null","1","null","null","null");
+  if(dt_3==null){write("没有找到栏目。parent：null  catalog："+"保险专题/人寿保险");}else{
+ int rdCnt=dt_3.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_3  = dt_3.getDataRow(i);
+ int rdIdx=i;
+%>
+ 
+	<h2 class="part_titles"  id="part1">${article_3.Section1}</h2>
+	<div class=" clearfix  fleft one_box02">
+		<div class="bor_s h280 padding10">
+			<span class="floatlpic"><a href="${article_3.Section1link1}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${article_3.Section1img1}" width="267" height="200" /></a></span>
+			<h3 class="zx_news_title"><a href="${article_3.Section1link1}" target="_blank">${article_3.Section1question1}</a></h3>
+			<p class="p01">${article_3.Section1answer1|CharWidth=80}</p>
+			<span class="more10 orange"><a href="${article_3.Section1link1}" rel="nofollow" target="_blank">更多</a></span>	
+			<div class="dashbor_bnor"></div>
+			<h3 class="zx_news_title"><a href="${article_3.Section1link2}" target="_blank">${article_3.Section1question2}</a></h3>
+			<p class="p01">${article_3.Section1answer2|CharWidth=80}</p>
+			<span class="more10 orange"><a href="${article_3.Section1link2}" rel="nofollow" target="_blank">更多</a></span>	
+			<div class="dashbor_bnor"></div>
+			<h3 class="zx_news_title"><a href="${article_3.Section1link3}" target="_blank">${article_3.Section1question3}</a></h3>
+			<p class="p01">${article_3.Section1answer3|CharWidth=108}</p>
+			<span class="more10 orange"><a href="${article_3.Section1link3}" rel="nofollow" target="_blank">更多</a></span>	
+		</div>	
+		<div class="bor_shadow_660"></div>
+	</div>
+	<%}}%>

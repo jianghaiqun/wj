@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title><%
+	String title = article.getString("CustomTitle");
+	write(((null==title) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%></title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/product.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/listul.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css" />
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body onload="initNewsImg();">
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<div class="wrapper">
+		<!-- nav 结束 -->
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a>
+		</div>
+        	<div class="wcont_body">
+            	<h1  class="stencil_title">${Article.Title}</h1>
+                 <div class="stencil_min_des">${Article.Content}</div>
+            <!-- 车险计算器开始 -->
+				<div class="counter_con">
+					<div class="counter_title">车险计算器</div>
+					<table width="100%" border="0" class="counter_table">
+						<tr>
+							<td>行驶城市：</td>
+							<td>
+								<select name="sdUser.Province" id="sltProvince" class="counter_sel">
+										<option selected="selected" value="">省份</option>
+										<option value="直辖市">直辖市</option>
+										<option value="河北">河北</option>
+										<option value="山西">山西</option>
+										<option value="内蒙古">内蒙古</option>
+										<option value="辽宁">辽宁</option>
+										<option value="吉林">吉林</option>
+										<option value="黑龙江">黑龙江</option>
+										<option value="江苏">江苏</option>
+										<option value="浙江">浙江</option>
+										<option value="安徽">安徽</option>
+										<option value="福建">福建</option>
+										<option value="江西">江西</option>
+										<option value="山东">山东</option>
+										<option value="河南">河南</option>
+										<option value="湖北">湖北</option>
+										<option value="湖南">湖南</option>
+										<option value="广东">广东</option>
+										<option value="广西">广西</option>
+										<option value="海南">海南</option>
+										<option value="四川">四川</option>
+										<option value="贵州">贵州</option>
+										<option value="云南">云南</option>
+										<option value="西藏">西藏</option>
+										<option value="陕西">陕西</option>
+										<option value="甘肃">甘肃</option>
+										<option value="青海">青海</option>
+										<option value="宁夏">宁夏</option>
+										<option value="新疆">新疆</option>
+										<option value="台湾">台湾</option>
+								</select>
+							</td>
+							<td>
+								<select name="sdUser.cityId" id="sltCity" class="counter_sel">
+										<option selected="selected" value="">城市</option>
+								 </select>
+							</td>
+							<td>车牌号码:</td>
+							<td><input type="text" class="counter1" id="carnum" /></td>
+							<td>车主姓名：</td>
+							<td colspan="2"><input type="text" class="counter2" id="CarOwner"/></td>
+							<td>联系电话：</td>
+							<td><input type="text" class="counter3" id="ContactPhone"/></td>
+
+						</tr>
+						<tr>
+							<td>购车时间:</td>
+							<td colspan="2">
+								<input id="BuyDate" type="text" class="counter2"   name="car.InsuranceDate" onclick="WdatePicker({minDate:'%y-%M-{%d+1}'})" class="input-c input-t" />
+							</td>
+							<td>车价(万)</td>
+							<td><input type="text" class="counter1" id="CarValue"/></td>
+							<td>保险到期：</td>
+							<td colspan="2">
+								<input type="text" class="counter2"  onclick="WdatePicker({maxDate:'%y-%M',dateFmt:'yyyy-MM'})" name="car.BuyDate" id="InsuranceDate" >
+							</td>
+							<td>邮箱地址：</td>
+							<td><input type="text" class="counter3" id="ContactEmail" /></td>
+						</tr>
+						<tr>
+							<td>车险品牌</td>
+							<td colspan="6">
+								<p class="counter_pp" id="counter_pplist">
+									<a class="counter_cartag counter_sels" href="javascript:;" rel="pa">平安车险</a>
+									<a class="counter_cartag" href="javascript:;" rel="tpy">太平洋车险</a> 
+									<a class="counter_cartag" href="javascript:;" rel="yg">阳光车险</a> 
+									<a class="counter_cartag" href="javascript:;" rel="dd">大地车险</a> 
+									<a class="counter_cartag" href="javascript:;" rel="astp">安盛天平车险</a>
+								</p>
+							</td>
+							<td colspan="3"><p id="error_message" style="display: none;" class="counter_error">这里是错误提示！</p>
+								<input type="hidden"  id="CarProperty" name="CarProperty" value="2"></input>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="9"><p class="counter_tip">请务必如实填写个人相关信息，以免造成报价误差过大！</p></td>
+							<td><a  class="conunt_btn" href="##" onclick="offerPrice('${Site.URL}/cx/gd/')"></a></td>
+						</tr>
+					</table>
+
+				</div>
+				<!-- 车险计算器结束 -->
+			<!-- 车险计算器结束 -->
+            	<ul class="stencil_nav_li sl-floatcenter clearfix">
+            		<li class="sl-floatcenter-item"><a href="#part1"  >${Article.Section1}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part2"  >${Article.Section2}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part3"  >${Article.Section3}</a></li>
+            		<li class="sl-floatcenter-item"><a href="#part4"  >${Article.Section4}</a></li>
+            	</ul>
+                <h2 class="part_titles"  id="part1">${Article.Section1}</h2>
+                <div class="grid-c2-s9f">
+			<div class="col-main">
+				<div class="main-wrap">
+                	<div class="img_box2 fleft">
+						<div class="img_230_150 clearfix">
+   			    <a href="${Article.Section1Title1Link}" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section1Image1}" alt="${Article.Section1Image1Alt}" width="228" height="148" /></a></div>
+                <div class="bor_shadow_230"></div>
+                </div>
+                <div class="clearfix fleft one_text">
+                <div class="boder_h  des_box2 clearfix">
+                		<h3 class="zx_news_title"><a href="${Article.Section1Title1Link}" target="_blank">${Article.Section1Title1}</a></h3>
+                    <p class="zx_news_des p_h110">
+						${Article.Section1Content1|CharWidth=100}<a href="${Article.Section1Title1Link}" rel="nofollow" target="_blank">更多</a> 
+	</p>
+    </div> 
+       <div class="bor_shadow_350 marig_leftsd"></div>
+                </div>
+      <div class="clear"></div>
+             	<div class="img_box2 fleft">
+						<div class="img_230_150 clearfix">
+   			    <a href="${Article.Section1Title2Link}" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section1Image2}" alt="${Article.Section1Image2Alt}" width="228" height="148" /></a></div>
+                <div class="bor_shadow_230"></div>
+                </div>
+ 				<div class="clearfix fleft one_text">
+                <div class="boder_h  des_box2 clearfix">
+                		<h3 class="zx_news_title"><a href="${Article.Section1Title2Link}" target="_blank">${Article.Section1Title2}</a></h3>
+                    <p class="zx_news_des p_h110">
+						${Article.Section1Content2|CharWidth=100} <a href="${Article.Section1Title2Link}" rel="nofollow" target="_blank">更多</a> 
+	</p>
+    </div>
+       <div class="bor_shadow_350 marig_leftsd"></div>
+                </div>
+				</div>
+			</div>
+			<div class="col-sub">
+			 <div class="img_p_list boder_h">
+                	<h3 class="img_p_title">相关资讯</h3>
+					<cms:list item="article" level="all" type="rand" tag="${Article.tag1}" count="5" 
+			            name="车险俱乐部">	 
+						 <div class="xgzx_box">
+                  			<a href="${Article.Link}" target="_blank"><img src="" id="image<% if(i<5) write(i+1);%>" width="200" height="56" /></a>
+                  			<h3 class="fleft"><a href="${Article.Link}" target="_blank">${Article.title}</a><span><% if(i<5) write(i+1);%></span></h3>
+                  		</div>
+					</cms:list>
+              </div>
+              <div class="bor_shadow_350"></div>
+			</div>
+		</div>
+        <div class="h10"></div>
+           <div class="grid-c">
+				<div class="ad_980 boder_h">
+           	     <a href="${Article.adLink}" target="_blank"><img src="${Site.StaticResourcePath}/${Article.ad}" alt="${Article.adAlt}" width="978" height="148" /></a>
+                </div>
+                <div class="bor_shadow_980"></div>
+		   </div>
+           
+             <div class="h10"></div>
+              <h2 class="part_titles"  id="part2">${Article.Section2}</h2>
+              <div class="grid-c2-s12">
+			<div class="col-main">
+				<div class="main-wrap up_date_main-warp">
+					<div class="boder_h clearfix">
+               	    <a href="${Article.Section2ContentLink}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section2Image}" alt="${Article.Section2ImageAlt}" class="fleft" width="234" height="198" /></a>
+                    <p class="zx_news_des p_h150 p_w_110 fright">
+					${Article.Section2Content|CharWidth=100}<a href="${Article.Section2ContentLink}" target="_blank">更多</a> 
+	</p>
+                    </div>
+                      <div class="bor_shadow_470"></div>
+				</div>
+			</div>
+			<div class="col-sub">
+			<div class=" boder_h cp_dy_box cp_dy_box_min">
+			<cms:list item="article" level="none" 
+			condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.ProductId1}' and type='1' and status=30 limit 1">
+	        	<div class="cp_stencil_title clearfix">
+	            <div class="cp_box_logo"><span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span></div>
+	            <div class="cp_title_s">
+	            <h2><a href="${Article.Link}">${Article.title}</a></h2>
+	            <p>${Article.AdaptPeopleInfo}</p>
+	            </div>
+	 	 		</div>
+	            <ul class="stencil_td ">                     
+	            	 ${Article.FEMRiskBrightSpot}
+	            </ul>
+	            <div class="stencil_cp_des_list">      
+	            	${Article.DutyHTML}
+	            </div>
+	            <div class="cp_price_con">
+	            	<em>RMB</em><span>${Article.InitPrem}</span>
+	                <a href="${Article.Link}">查看详情</a>
+	            </div>
+            </cms:list>
+            </div>
+            <div class="bor_shadow_470"></div>
+			</div>
+		</div>
+            	  <h2 class="part_titles"  id="part3">${Article.Section3}</h2> 
+                  <div class="grid-c2-s12">
+			<div class="col-main">
+				<div class="main-wrap up_date_main-warp">
+						 			<div class="boder_h clearfix">
+               	    <a href="${Article.Section3Content2Link}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section3Image2}" alt="${Article.Section3Image2Alt}" class="fleft" width="234" height="198" /></a>
+                    <p class="zx_news_des p_h150 p_w_110 fright">
+						${Article.Section3Content2|CharWidth=100}<a href="${Article.Section3Content2Link}" target="_blank">更多</a> 
+	</p>
+                    </div>
+                      <div class="bor_shadow_470"></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				    			<div class="boder_h clearfix">
+               	    <a href="${Article.Section3Content1Link}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section3Image1}" alt="${Article.Section3Image1Alt}" class="fleft" width="234" height="198" /></a>
+                    <p class="zx_news_des p_h150 p_w_110 fright">
+						${Article.Section3Content1|CharWidth=100}<a href="${Article.Section3Content1Link}"  target="_blank">更多</a> 
+	</p>
+                    </div>
+                      <div class="bor_shadow_470"></div>
+			</div>
+		</div>
+                <div class="grid-c">
+					<div class="zdy_p boder_h">
+                    	<ul class="stencil_ciyt_list clearfix">
+	                    	<cms:list item="friendlink" name="${Article.OtherArea}" count="150">
+								<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name}</a></li>
+					 		</cms:list>
+				 		</ul>
+                    </div>
+                     <div class="bor_shadow_980"></div>
+		</div>
+                  <h2 class="part_titles"  id="part4">${Article.Section4}</h2> 
+                    <div class="grid-c ">
+                    <div class="boder_h clearfix">
+                    	<div class="img_470_200 fleft">
+                        <a href="${Article.Section4ContentLink}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section4Image}" alt="${Article.Section4ImageAlt}" width="469" height="198" /></a></div>
+                        <div class="stencil_news_box fright">
+                        	   <p class="zx_news_des p_h80 box_du_bor">
+						${Article.Section4Content|CharWidth=150}<a href="${Article.Section4ContentLink}"  target="_blank">更多</a> 
+	</p>
+    <h3 class="xg_zx_list_title">相关资讯列表</h3>
+    <ul class="xg_zx_list">
+   		 <cms:list item="article" level="all" type="rand" tag="${Article.tag2}" count="4" 
+			            name="车险俱乐部">
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=20} </a></li>
+		</cms:list>
+    </ul>
+    </div>
+                        </div>
+                        <div class="bor_shadow_980"></div>
+                    </div>
+                     <div class="h30"></div>
+        <ul class="orter_list">
+        	 <cms:list item="article" level="none" condition="type = 1 and id in ( select id from (select id from (select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword1}%' limit 4) a1 union select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword2}%' limit 5) a2 union select id from ( select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1  order by rand() limit 9 ) a3)c1 limit 9)c2)" count="9" >
+				<li><a href="${Article.Link}" target="_blank">${Article.Title} </a></li>
+			</cms:list>
+        </ul>
+              <div class="h30"></div>
+		</div>
+ <div class="clear"></div>     
+ </div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="专题二" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="专题二" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="专题二" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" target="_blank">${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/template/shop/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/city_car.js"></script> 
+<script type="text/javascript">
+function initNewsImg(){
+	document.getElementById('image1').src = "${Site.StaticResourcePath}/${Article.NewsImage1}";
+	document.getElementById('image2').src = "${Site.StaticResourcePath}/${Article.NewsImage2}";
+	document.getElementById('image3').src = "${Site.StaticResourcePath}/${Article.NewsImage3}";
+	document.getElementById('image4').src = "${Site.StaticResourcePath}/${Article.NewsImage4}";
+	document.getElementById('image5').src = "${Site.StaticResourcePath}/${Article.NewsImage5}";
+}
+</script>
+</body>
+</html>

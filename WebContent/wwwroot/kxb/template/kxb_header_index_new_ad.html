@@ -1,0 +1,127 @@
+<!--mini nav 开始-->
+<style>
+	.js_ads{width:1190px; height:90px; margin:0 auto}
+	.js_ads2{ background:url(../images/index_ad.jpg) no-repeat center center; height:200px;}
+	.js_ads2 a{ display:block; height:200px;}
+	.servfloat{ top:280px;} 
+	.main_nav{ border:none;}
+</style>
+  <div class="min_nav">
+   <div class="nav_box">
+     <div class="login_box" id="NotLogin"><span>您好，欢迎来到开心保！请 </span ><a href="javascript:void(0);" id="headerShowLoginWindow">登录</a> <span>|</span> <a href="${Site.prop6}/shop/member_register!home.action">免费注册</a> </div>
+     <div class="login_box" id="YesLogin" style="display: none;"><span>您好<span id="headerLoginMemberUsername"></span>，欢迎来到开心保！<a href="javascript:void(0);" id="headerLogout" class="headerLogout">退出</a></span> </div>
+     <div class="q_link"> 
+     <ul class="top_nav_link" id="topnav_link">
+          <li><a href="${Site.prop6}/shop/member_center!index.action" class="q_link_c ">会员中心</a></li>
+          <li><a href="${Site.URL}/about/" class="q_link_c"  target="_blank">帮助中心</a></li>
+          <li class="topNavDropMenuBox"><a href="javascript:void(0);" class="q_link_c q_link_d " id="wz_nav">网站导航<b id="nav_wfs" class="nav_wf switch"></b></a>
+           <div id="topNavDropMenu" class="wz_nav_box topNavDropMenu " style="display:none;" >   
+     	<dl class="clearfix">
+     		<dt>保险产品</dt>
+     		<dd class="navmin1"><a href="${Site.URL}/lvyou-baoxian/" target="_blank" rel="nofollow">旅游险</a></dd>
+            <dd class="navmin1"><a href="${Site.URL}/yiwai-baoxian/" target="_blank" rel="nofollow">意外险</a></dd>
+            <dd class="navmin1"><a href="${Site.URL}/jiankang-baoxian/" target="_blank" rel="nofollow">健康险</a></dd>
+            <dd class="navmin1"><a href="${Site.URL}/renshou-baoxian/" target="_blank" rel="nofollow">人寿险</a></dd>
+            <dd class="navmin1"><a href="${Site.URL}/jiacai-baoxian/"  target="_blank" rel="nofollow">家财险</a></dd>
+         	<dd class="navmin1"><a href="${Site.URL}/chexian/"  target="_blank" rel="nofollow">车险</a></dd>
+            <dd class="navmin1"><a href="${Site.URL}/tx/"  target="_blank" rel="nofollow">团体险</a></dd>
+     	</dl>
+        <dl class="clearfix">  
+     		<dt>保险社区</dt>
+            <dd class="navmin2"><a href="${Site.URL}/zhishi/"  target="_blank">保险知识</a></dd>
+            <dd class="navmin2"><a href="${Site.URL}/zixun/"  target="_blank">保险资讯</a></dd>
+            <dd class="navmin2"><a href="${Site.URL}/wenda/"  target="_blank">保险问答</a></dd>
+            <dd class="navmin2"><a href="${Site.URL}/baike/"  target="_blank">保险百科</a></dd>
+            <dd class="navmin2"><a href="${Site.URL}/zhuanti/"  target="_blank">保险专题</a></dd>
+            <dd class="navmin2"><a href="${Site.URL}/gongsi/"  target="_blank">保险公司</a></dd>
+            <dd class="navmin2"><a href="${Site.URL}/jifen/"  target="_blank" rel="nofollow">积分商城</a></dd>
+            <dd class="navmin2"><a href="${Site.URL}/huati/"  target="_blank">热门话题</a></dd>
+     	</dl>
+         <dl class=" clearfix clear_bors">    
+     		<dt>服务中心</dt>
+            <dd class="navmin3"><a href="${Site.URL}/group/"  target="_blank">合作商入口</a></dd>
+            <dd class="navmin3"><a href="${Site.URL}/ddkscx/"  target="_blank">订单快速查询</a></dd>
+            <dd class="navmin3"><a href="${Site.URL}/bdyz/"  target="_blank">保单验真</a></dd> 
+     	</dl>
+     </div>
+       </li>
+     </ul>
+
+     </div>
+   </div>
+  </div>
+
+<!--mini nav 结束-->
+<div class="js_ads" id="js_ads_banner_top"><a href="http://www.kaixinbao.com/yxhd/jwly2013/index.shtml" target=_blank><img src="${Site.StaticResourcePath}/images/index_ad_min.gif " width="1190" height="90"></a></div>
+<div class="js_ads2" id="js_ads_banner_top_slide" style="display:none;"><a href="http://www.kaixinbao.com/yxhd/jwly2013/index.shtml" target=_blank></a></div>
+<!--导航开始-->
+<div class="main_nav">
+	<div class="nav_box clearfix nav_logs">
+    <div class="new_logo">  <a href="${Site.URL}/"><img src="${Site.StaticResourcePath}/images/logo_03.gif" alt="开心保保险网，一站式服务，省钱更安心" title="开心保保险网，一站式服务，省钱更安心" width="447" height="72"></a></div>
+    
+    		<div class="nav_bgs">
+	            <div class="select_box">
+	            <form action="${Site.URL}/Search/Search.jsp">
+	            <span><input name="query" type="text" class="txt_soso" value="请输入搜索关键词" onBlur="if (this.value == '') {this.value = '请输入搜索关键词';}" onFocus="if (this.value == '请输入搜索关键词') {this.value = '';}"></span>
+	            <span><label class="l_pn" style="width:46px;"><input name="" type="submit" value="搜索" class="input_soso"></label></span>
+	            <div class="clear"></div>
+                <span  class="so_ps">热门搜索：</span>
+                <cms:list item="friendlink" count="5" name="头部热门搜索">
+			 	     <a href="${friendlink.url}" target="_blank">${friendlink.name|substrwidth=8}</a>
+				</cms:list>
+                <a href="${Site.Prop4}/keylist/" target="_blank">更多>></a>
+                </form>        
+	            </div>
+            </div>
+     
+    <div class="nav_tel"><a href="${Site.URL}/about/2/index.shtml#lpbz2"><img src="${Site.StaticResourcePath}/images/logo_06v.gif" width="206" height="56"></a></div>
+    </div>
+    <div class="main_navs">
+	    <div class="nav_box main_nav_box">
+		     <ul class="nav_main">                                   
+		     	<li class="hovers_d" id="hovers_"><a href="${Site.URL}/">首页</a></li>
+		     	<li id="hovers_A"><a href="${Site.URL}/lvyou-baoxian/">旅游险</a>
+                 <ul>
+                	<li><a href="${Site.URL}/lvyou-baoxian/guonei/">国内旅游险</a></li>
+                	<li><a href="${Site.URL}/lvyou-baoxian/jingwai/">境外旅游险</a></li>
+                	<li><a href="${Site.URL}/lvyou-baoxian/shengenqianzheng/">申根签证险</a></li>
+                </ul>
+                </li>
+		     	<li id="hovers_B"><a href="${Site.URL}/yiwai-baoxian/">意外险</a>
+                <ul>
+                	<li><a href="${Site.URL}/yiwai-baoxian/jiaotong/">交通意外险</a></li>
+                	<li><a href="${Site.URL}/yiwai-baoxian/renshen/">人身意外险</a></li>
+                	<li><a href="${Site.URL}/yiwai-baoxian/hangkong/">航空意外险</a></li>
+                </ul>
+                </li>
+		     	<li id="hovers_D"><a href="${Site.URL}/jiankang-baoxian/">健康险</a>
+                   <ul>
+                	<li><a href="${Site.URL}/jiankang-baoxian/zhongdajibing/">重大疾病险</a></li>
+                	<li><a href="${Site.URL}/jiankang-baoxian/tedingjibing/">特定疾病险</a></li>
+                	<li><a href="${Site.URL}/jiankang-baoxian/zhuyuanyiliao/">住院医疗险</a></li>
+                </ul>
+                </li>
+		     	<li id="hovers_E"><a href="${Site.URL}/renshou-baoxian/">人寿险</a>
+                <ul>
+                	<li><a href="${Site.URL}/renshou-baoxian/yanglaoxian/">养老险</a></li>
+                	<li><a href="${Site.URL}/renshou-baoxian/dingqi/">定期险</a></li>
+                	<li><a href="${Site.URL}/renshou-baoxian/licai/">理财险</a></li>
+                    <li><a href="${Site.URL}/renshou-baoxian/jiaoyu/">教育金</a></li>
+                </ul>
+                </li>
+		 		<li id="hovers_C"><a href="${Site.URL}/jiacai-baoxian/" >家财险</a></li> 
+		     	<li id="hovers_F"><a href="${Site.URL}/chexian/">车险</a> 
+                 <ul>
+                 	<cms:list item="article"   name="车险对接保险公司" level="all" >
+                 	<li><a href="${Site.URL}/${Article.URL}">${Article.title}</a></li>
+                    </cms:list>
+                </ul>
+                </li>
+		      	<li><a id="hovers_G" href="${Site.URL}/tx/" >团体险</a> </li>  
+		     </ul>
+	    </div>
+          
+    </div>
+    <div class="h10"></div>
+</div>
+<!--导航结束-->

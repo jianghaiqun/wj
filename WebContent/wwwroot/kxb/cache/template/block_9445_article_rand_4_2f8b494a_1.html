@@ -1,0 +1,12 @@
+<% DataTable dt_2 = TemplateData.getDocList("article","保险问答","all","null","rand","4","null","null","null");
+  if(dt_2==null){write("没有找到栏目。parent：null  catalog："+"保险问答");}else{
+ int rdCnt=dt_2.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_2  = dt_2.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	        	<% condition += ("," + article_2.getString("ID") + ",");%>
+	        	<li><a class="ellipsis" href="${article_2.Link}">${article_2.Title} </a></li>
+	        <%}}%>

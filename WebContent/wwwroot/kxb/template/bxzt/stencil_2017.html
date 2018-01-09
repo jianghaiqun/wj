@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title><%
+	String title = article.getString("CustomTitle");
+	write(((null==title) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%></title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<!-- <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_detail.css"> -->
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/mod_stencil.css">
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body onload="initNewsImg();">
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a> 
+	</div>
+	</div>
+	<div class="mod_imgbox">
+		<img src="${Site.StaticResourcePath}/${Article.Section1Image}" width="1200px" height="277px" alt="">
+	</div>
+	<div class="wrapper">
+	<!-- 专题介绍 -->
+		<div class="mod_descon">
+			<a href="${Article.Section2URL}"><img src="${Site.StaticResourcePath}/${Article.Section2Image}" class="descon_imgs" alt="${Article.Section2Title}">
+			<div class="des_con">
+				<h3>${Article.Section2Title}</h3>
+				<p id="Section1ContentTxt" >${Article.Section2Content|CharWidth=321}</p>
+			</div>
+			</a>
+		</div>
+	<!-- /专题介绍 -->
+	<!-- 投保建议 -->
+		<div class="mod_advise">
+			<h2 class="adult_tit">${Article.Section3Txt}</h2>
+			<a href="${Article.Section3URL}" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section3Image}" alt="${Article.Section3}"></a>
+			<a href="${Article.Section4URL}" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section4Image}" alt="${Article.Section4}"></a>
+			<a href="${Article.Section5URL}" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section5Image}" alt="${Article.Section5}"></a>
+		</div>
+	<!-- /投保建议 -->
+
+	<!-- 推荐产品 -->
+		<div class="mod_recommend">
+			<h2 class="adult_tit">${Article.Section6Txt}</h2>
+			<cms:list item="article" level="none" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.Section7riskcode}' and type='1' and status=30 limit 1" >
+			<div class="mod_rec_shop">
+				<div class="rec_shop_img">
+					<a href="${Site.URL}/${Article.Link}" target="_blank"><img id='image1' src="" alt="${Article.title}"></a>
+				</div>
+				<div class="rec_shop_des">
+					<h3><a href="${Site.URL}/${Article.Link}" target="_blank">${Article.title}</a></h3>
+					<ul id="shop_des_li_1"  class="shop_des_li" >
+						${Article.FEMRiskBrightSpot}
+					</ul>
+					<p class="list_Sale" >
+					<span id="Diy_Title_Activity_${Article.RiskCode}" style="display: none;"></span><em id="Diy_Activity_${Article.RiskCode}" style="display: none;"></em>
+					</p>
+					<div class="shop_des_ul">
+						<ul class="recommend_list">
+						${Article.DutyHTMLV3}
+						</ul>
+					</div>
+					<ul class="rec_service">
+						<li>7X24小时</li>
+						<li>电子保单</li>
+						<li>2小时变更</li>
+						<li>代您理赔</li>
+					</ul>
+				</div>
+				<div class="rec_shop_reason">
+					   <h4 class="shop_rea_tit">推荐理由</h4>
+					   <ul id="Section7">
+					         
+					   </ul>
+					   <p id="Activity_${Article.RiskCode}" class="list_Sale">
+					   </p>
+					   <span class="nlist_pay moneys" name="Ajax_Prict_${Article.RiskCode}"><em>￥</em>${Article.InitPrem}</span>
+					   <em class="nlist_pay_t moneys"> <span name="Clear_Ajax_Prict_${Article.RiskCode}"></span></em>
+					   <div class="remcon_desmore">
+					   		<a target="_blank" href="${Site.URL}/${Article.Link}" rel="nofollow">去看看</a>
+					   </div>
+				</div>
+			</div>
+			</cms:list>
+			<cms:list item="article" level="none" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.Section8riskcode}' and type='1' and status=30 limit 1" >
+			<div class="mod_rec_shop">
+				<div class="rec_shop_img">
+					<a href="${Site.URL}/${Article.Link}" target="_blank"><img id='image2' src="" alt="${Article.title}"></a>
+				</div>
+				<div class="rec_shop_des">
+					<h3><a href="${Site.URL}/${Article.Link}" target="_blank">${Article.title}</a></h3>
+					<ul id="shop_des_li_2"  class="shop_des_li" style="display:block;" >
+						${Article.FEMRiskBrightSpot}
+					</ul>
+					<p class="list_Sale" >
+					<span id="Diy_Title_Activity_${Article.RiskCode}" style="display: none;"></span><em id="Diy_Activity_${Article.RiskCode}" style="display: none;"></em>
+					</p>
+					<div class="shop_des_ul">
+						<ul class="recommend_list">
+						${Article.DutyHTMLV3}
+						</ul>
+					</div>
+					<ul class="rec_service">
+						<li>7X24小时</li>
+						<li>电子保单</li>
+						<li>2小时变更</li>
+						<li>代您理赔</li>
+					</ul>
+				</div>
+				<div class="rec_shop_reason">
+					   <h4 class="shop_rea_tit">推荐理由</h4>
+					   <ul id="Section8" >
+
+					   </ul>
+					   <p id="Activity_${Article.RiskCode}" class="list_Sale">
+					   </p>
+					   <span class="nlist_pay moneys" name="Ajax_Prict_${Article.RiskCode}"><em>￥</em>${Article.InitPrem}</span>
+					   <em class="nlist_pay_t moneys"> <span name="Clear_Ajax_Prict_${Article.RiskCode}"></span></em>
+					   <div class="remcon_desmore">
+					   		<a target="_blank" href="${Site.URL}/${Article.Link}" rel="nofollow">去看看</a>
+					   </div>
+				</div>
+			</div>
+			</cms:list>
+			
+			
+			
+			
+		</div>
+	<!-- /推荐产品 -->
+	</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script type="text/javascript">
+ function initNewsImg(){
+	 //加载推荐产品图片
+	document.getElementById('image1').src = "${Site.StaticResourcePath}/${Article.Section7Image}";
+	document.getElementById('image2').src = "${Site.StaticResourcePath}/${Article.Section8Image}";
+	//加载推荐理由文字
+	document.getElementById('Section7').innerHTML = '${Article.Section7}';
+	document.getElementById('Section8').innerHTML ='${Article.Section8}';
+	//推荐产品不超过三个
+	jQuery("#shop_des_li_1 li:gt(2)").remove();
+	jQuery("#shop_des_li_2 li:gt(2)").remove();
+	//加载活动标签
+	getActive();
+	
+	
+} 
+
+ 
+ 
+ function getActive(){
+		var list=jQuery('p[id^=Activity_]');
+		var id = new Array(list.length);
+		var idStr="";
+		for (var i = 0; i < list.length; i++) {
+		       id[i] = list[i].id;
+		       idStr+= list[i].id;
+		}
+		
+		if(idStr==""){
+			return;
+		}
+		var cpsUserId = jQuery.cookie('cpsUserId');
+		var channelsn = "wj";
+		if(typeof(cpsUserId)!="undefined" && cpsUserId!=null && cpsUserId!=""){
+			channelsn = "cps";
+		}
+		jQuery.ajax({
+		type: 'post',
+		url: sinosoft.base+'/shop/sales_volume!searchProductListAvtivityRe.action?productId='+id+'&channelSn='+channelsn,
+		dataType: "json",
+		async: false,
+		success: function(data) {
+			jQuery.each(data, function(index, object) {
+				var index_productid=index.substring(0,index.indexOf("@"));
+				if  (object != null && object != '') {
+					var obj_str=object+"";
+					var activity_title=obj_str.substring(0,obj_str.indexOf("@"));
+					var activity_description=obj_str.substring(obj_str.indexOf("@")+1,obj_str.length);
+					jQuery('#Diy_'+index_productid).show();
+					jQuery('#Diy_Title_'+index_productid).show();
+					document.getElementById("Diy_"+index_productid).innerHTML=activity_description;
+					document.getElementById("Diy_Title_"+index_productid).innerHTML=activity_title;
+					
+					var activity_type = index.substring(index.indexOf("@")+1);
+					var active_class;
+					if (activity_type == "x") {
+						active_class = " active_07";
+					} else if (activity_type == "1") {
+						active_class = " active_06";
+					} else if (activity_type == "2") {
+						active_class = " active_05";
+					} else if (activity_type == "3") {
+						active_class = " active_04";
+					} else if (activity_type == "6") {
+						active_class = " active_02";
+					} else if (activity_type == "7") {
+						active_class = " active_08";
+					} else if (activity_type == "8") {
+						active_class = " active_03";
+					} else if (activity_type == "9") {
+						active_class = " active_09";
+					}
+					document.getElementById("Diy_Title_"+index_productid).className += active_class;
+				}
+			});
+		}
+		});
+		
+ }
+</script>         
+</body>
+</html>

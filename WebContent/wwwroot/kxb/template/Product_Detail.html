@@ -1,0 +1,652 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/mobile.js"></script>
+<%
+	String RiskCode = article.getString("RiskCode");
+	String WapURL = site.getString("WapURL");
+	
+	cn.com.sinosoft.action.shop.SalesVolumeAction sv = new cn.com.sinosoft.action.shop.SalesVolumeAction();
+	String wapFlag = sv.isWapProduct(RiskCode);
+	if ("Y".equals(wapFlag)) {
+		 
+		
+		String meth = "<script type='text/javascript'>uaredirect('" + WapURL + "/mobile/blankpage.ashx?PageType=D&PageID=" + RiskCode + "','detail');</script>";
+		write(meth);
+	}
+%> 
+<title>
+<%
+	String title = article.getString("MetaTitle");  
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%> 
+</title>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_listv2.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_detail.css" />
+<link href="${Site.StaticResourcePath}/style/skins/default.css" rel="stylesheet" type="text/css" />
+
+<script type="">
+var isCpsProduct = '${Article.isCpsProduct}'; 
+var riskCode = '${Article.RiskCode}';
+var artTitle = '${Article.title}';
+var artSalesVolume = '${Article.SalesVolume}'; 
+var productType = "A02";
+var catID = "9415";
+var productDetailFlag="true";
+var complicatedFlag = '${Article.ComplicatedFlag}';
+var AppFacDutyRela = ${Article.AppFacDutyRela};
+var AppFacDutyDef = ${Article.AppFacDutyDef};
+var LongInsurance = '${Article.LongInsurance}';
+
+</script>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+		<cms:include file="block/kxb_header_index_new_v2.shtml" />
+			<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link>
+			<span class="separator">></span><span>${Article.RiskBreadcrumb}</span><span
+				class="separator">></span><span class="separator1">
+				${Article.title}</span>
+		</div>
+		<div class="content">
+			<div class="content_left_up">
+
+				<!-- meijunfeng add start -->
+				<!-- TODO -->
+				<div class="l_boxss">
+					<cms:list item="catalog" name="${Article.RiskBreadcrumb}" level="all" count="1" condition=" InnerCode LIKE '002313%' ">
+						<div class="c1">
+							${catalog.introduce}
+						</div>
+						<img src="${Site.StaticResourcePath}/${catalog.introduceimg}" width="228" height="60"/>
+						<div class="l_box_p">
+								<p>${catalog.introduceContent}</p>	
+						</div>
+					</cms:list>
+				</div>
+				<div class="l_boxss" >
+				<div class="c1" >购买该产品的用户还买了</div>
+				<ul id="products" class="usershop_box">
+					  <cms:list item="article" tag="${Article.tag}" level="none" type="rand" condition="id in(SELECT RelaArticleID FROM RecommendToDetail WHERE ProductID='${Article.RiskCode}' )">
+				   		 <li class="usershop_list">
+							  <h4><a href="${Article.Link}" target="_blank"><img width="70" height="70" alt="${article.title}" src="${Article.LogoLink}"></a></h4>
+							 	 <div class="user_shop">
+							 	 	<a href="${Article.Link}" target="_blank">${article.title}</a> <span class="red shop_m moneys" name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}<span name="Clear_Ajax_Prict_${Article.RiskCode}" class="moneys price_ymoneys" style="display:none">${Article.BasePremV3}</span></span>
+				 			 	 </div>
+				 		 </li>
+				   </cms:list>
+				</ul>
+				</div>
+				<!-- TODO 
+				<div class="l_boxss">
+					<div class="c1">您最近浏览过的商品</div>
+					<img src="../images/loading2.gif" width="70" height="70"
+						class="jz_con_box">
+				</div>-->
+
+				<!-- TODO -->
+				<!-- <div class="l_boxss">
+					<div class="c1">您最近浏览过的商品</div>
+					<ul id="RecentView" class="zjll_list">
+					   <img src="${Site.StaticResourcePath}/images/loading2.gif" width="70" height="70"
+						class="jz_con_box"/>
+					</ul>
+				</div> -->
+				<div class="l_boxss kf_box">
+					<a  vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap2" onclick="return(VL_FileDL(this));return false;"
+						href="javascript:void(0);"
+						rel="nofollow"><img width="228" height="48"
+						title="投保遇到问题？马上咨询在线客服" alt="投保遇到问题？马上咨询在线客服"
+						src="${Site.StaticResourcePath}/images/group_11.jpg"/>
+					</a>
+				</div>
+				<div class="bnr_box">
+					<p class="ttl">${Article.title}</p>
+					<div class="bnr_price">
+						<em>价格：</em>
+						<span id="txt_price"><em>￥</em>00.00</span>
+					</div>
+					<p class="btn" ><a onClick='doBuy();return(VL_FileDL(this));return false;' exturl='http://www.kaixinbao.com/gm' href='javascript:void(0);'  rel='nofollow' vlpageid='gm'" >直接购买</a></p>
+				</div>
+			</div>
+			<!-- 侧边栏结束 -->
+			<input type="hidden" name="RiskCode" id="RiskCode" value="${Article.RiskCode}" />
+			<input type="hidden" name="price" id="price" value="${Article.InitPrem}" />
+			<input type="hidden" name="pTypeName" id="pTypeName" value="${Article.RiskBreadcrumb}" />
+			<input id="ProductType" type="hidden" value="${Catalog.ProductType}" name="ProductType" />
+			
+			<div class="content_right_up">
+				<div class="cp_gscon">
+					<div class="cp_img_show">
+						<p id="Activity_${Article.RiskCode}">${article.ProductActive}
+						</p>
+
+						<img width="190" height="190" style="display: inline;"
+							data-original="${article.LogoLink}" class="lazy"
+							src="${article.LogoLink}" alt="${article.title}" />
+					</div>
+					<ul class="cp_myd_des">
+						<li>商品评价：<span class="red" id="commLoad">加载中...</span> <b class="red" id="shopComment"></b> 好评度</li>
+						<li>商品评论：（<a href="#count" class="cp_counts" onclick='jQuery("#count").click();' id="commentCount">加载中...</a>）条</li>
+					</ul>
+					<div class="icon_C${Article.SupplierCode} cp_logos">
+						<a href="${Article.CompanyLink}" class="cp_logo_a" target="_blank"></a>
+					</div>
+					<div class="share_link">
+						<a onclick="submitp('${Article.RiskCode}');" class="add_sc">收藏</a>
+					</div>
+				</div>
+
+				<div class="cp_descon">
+					<div class="cp_titile_con">
+						<h1>${Article.title}</h1>
+						<em><span class="SalesVolume" id="SalesV_${Article.RiskCode}">销量：加载中...</span></em>
+					</div>
+					<div class="clear"></div>
+					<div id="content">
+					
+					<% 
+		            	String tCalHTML = article.getString("CalHTML");
+		            	String tRiskCode = article.getString("RiskCode");
+		            	String tSplitRiskCode = article.getString("SplitRiskCode");
+		            	if(tSplitRiskCode!=null && tSplitRiskCode!=""){
+			            	String newPlanHTML = com.sinosoft.product.Filtrate.getCalHTML(tRiskCode,tSplitRiskCode,"1");
+			            	if(tCalHTML.indexOf("sinosofttfosonis")!=-1){
+			            	   tCalHTML=tCalHTML.replace("sinosofttfosonis",newPlanHTML);
+			            	}
+		            	}
+		            	write(tCalHTML);
+		        	 %>
+					</div>
+					<div class="crowd clearfix">
+						<em class="cp_title_ms">可购份数：</em>
+						<p>每名被保险人最多可购买${Article.limcountNumber}份</p>
+					</div>
+					<div class="clear"></div>
+					<div class="price_con clearfix">
+						<em class="cp_title_ms">价格：</em>
+						<ul class="price">
+							${Article.prodcutMarkPrice}
+							<li class="integral_li" ><div class="integral_tip" id="maxIntegralPrice_${Article.RiskCode}" ></div></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+					<div class="tb_yh clearfix">
+						<em class="cp_title_ms">优惠信息：</em>
+						<p id="yhinfo" class="cp_yh_mes">
+							<em class="sp_red_bg sp_green_bg">积分</em><em class=sp_green id="pointdes"><span id="pointtitle_${Article.RiskCode}"></span>您将获得&nbsp;
+							<span id="productIntegral_${Article.RiskCode}">
+									${Article.ProductInt}
+							</span>&nbsp;个积分 </em>
+							<em id="demo-form-name" class="detail_sm_tip" title="若使用其他方式减免金额，将以实际支付金额， 按比例获得积分">说明</em>
+						</p>
+					</div>
+					<div class="clear h8"></div>
+					<div id="CountdownPart">
+					</div>
+					<div id="integer_login" style="display: none;">
+						<p class="vip_logins"><a id="PointShowLoginWindow" href="###" >登录</a>可查看是否享受会员身份，获得更多积分</p>
+						<div class="clear h8"></div>
+					</div>
+					<div class="button_b clearfix" id="button_b clearfix">
+						<span  onClick="doBuy();" class="button_b1">直接购买</span>
+						<span class="error_btn" style="display:none">该产品已下架</span>
+						
+						<span id="InContrast"
+							onClick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.producttype}','${Article.logolink}','${Article.InitPrem}');"
+							class="button_a">加入对比</span>
+					</div>
+					<div class="clear"></div>
+					
+					
+					<!-- 立即预约按钮开始 -->
+					<div class="button_b cf" id="button_b cf" style="display:none;">
+							<span class="yueyue_btns" id="yuyue_bsfa"></span>
+				   </div>
+				   <!-- 立即预约按钮结束 -->
+					
+				</div>
+				<div class="clear"></div>
+					<!-- 公告 -->
+			        <div class="gg_box" style="display:none">
+			          <span class="gg_box_title">公告：</span>
+			            <ul class="gg_lists">
+			            </ul>
+			        </div>
+			        <!-- 公告end -->
+                     <!--隐藏属性 style="display:none" -->
+			          <div class="error_shop_tj cf" id="error_div" style="display:none">
+			           		<h4 class="error_titile"><b>为您精心挑选了其他${catalog.name}产品：</b><a id="gengduo" href="###" target="_blank">还是没有你想要的，查看更多>></a></h4>
+					          
+				       	   <div id="ajaxProduct">
+<!--					            <img src="../images/loading2.gif" width="70" height="70" class="loading" />-->
+				       	   </div> 	
+          			  </div>
+
+				<div class="cp_contents">
+					<p id="min_tag" class="title fixed_nav">
+						<em><a class="selects_tag" href="javascript:void(0);">产品详情</a> </em>
+						<em><a href="javascript:void(0);" class="">投保示例</a> </em>
+						<em><a class="" href="javascript:void(0);">理赔服务</a> </em>
+						<em><a id="count" class="" href="javascript:void(0);">客户评价(载入中...)</a> </em>
+						<em><a class="" href="javascript:void(0);">常见问题</a> </em>
+					</p>
+					<div class="cp_des" id="tag_box">
+						<div class="cp_xq_con">
+							<div class="ccp_box_con ccp_box_con_up">
+							<div class="li_list li_list_up">
+							 ${Article.ProductDetailFront}
+							</div>
+							${Article.ProductDetailBright}
+						    <div class="li_list li_list_up">
+						    ${Article.ProductDetailTail}
+							</div>
+							</div>
+							<div class="bor_h"></div>
+							<div class="ccp_box_con">
+								<h3 class="n_title ">
+									保障权益 <em>如果您对保障权益有任何疑问，请点击<a vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap3" onclick="return(VL_FileDL(this));return false;"
+										href="javascript:void(0);"
+										rel="nofollow">在线客服</a> </em>
+								</h3>
+								${Article.DutyHTML1}
+							</div>
+
+
+
+						<div class="bor_h"></div>
+						<div class="ccp_box_con">
+							<h3 class="n_title ">产品特色</h3>
+							<p>${Article.ERiskFeatures}</p>
+						</div>
+						<div class="bor_h"></div>
+						<%
+							String Instruction = article.getString("Instruction");
+							if(null==Instruction || "".equals(Instruction))  {  
+						%>
+						<div class="ccp_box_con">
+							<h3 class="n_title ">开心保提示</h3>
+							<ul class="zr_list_conbs">
+								<li><em>1、</em>开心保网站上的投保责任描述仅供了解产品使用，详细内容请参阅相关条款。</li>
+								<li><em>2、</em>18周岁以下的被保险人，其以死亡为给付责任的保险金额不得超出中国保监会所规定的10万元限额。</li>
+								<li><em>3、</em>经开心保购买的产品，将提供电子保单，若需要纸质保单请联系客服人员。</li>
+								<li><em>4、</em>对于办理签证使用的产品，其电子保单彩色打印后可用于办理签证。根据签证实际情况，建议您提前准备一份保单复印件给使馆备份；</li>
+								<li><em>5、</em>对于保障期在一年以内的非寿险产品，不办理撤保、退保和加保，敬请谅解。</li>
+								<li><em>6、</em>对于签证使用的产品，不承保处于战乱国家。</li>
+								<li><em>7、</em>经开心保购买产品的顾客，若发生保险事故，开心保将尽全力协助办理理赔服务（4009-789-789）。</li>
+							</ul>
+						</div>
+						<%} else { 
+							write(article.getString("Instruction") );
+					    } %>
+					    <div class="ccp_box_zy">
+					    ${Article.Doc2}
+					    </div>
+						<div class="bor_h"></div>
+						<div  class="ccp_box_con">
+							<h3 class="n_title ">理赔服务</h3>
+							<img src="${Site.StaticResourcePath}/style/shop/images/desc_03.jpg" width="678"
+								height="225" alt="一站式服务，理赔更安心" title="一站式服务，理赔更安心">
+								<h4 class="ccp_titles_t">1、理赔办理流程</h4> <img
+								src="${Site.StaticResourcePath}/style/shop/images/desc_07.gif" width="431" height="27">
+									<div class="clear"></div>
+									<p class="bz_list_con">
+										<b>第一步：</b>发生保险事故后，请第一时间理赔报案。您可以直接向保险公司报案，也可以请开心保协助报案。开心保为您开通客服专线4009-789-789、在线客服以及客服邮箱
+										kf@kaixinbao.com等多种报案协助申请方式。<br>
+									</p>
+									<p class="bz_list_con">
+										<b style="float: left;">第二步：</b>请您根据<帮助中心>-<理赔帮助>中关于理赔材料说明，收集、整理、提交理赔材料进行理赔申请。为了最大程度缩短理赔时间，理赔材料齐全后，可直接快递至相应保险公司。<br>
+									</p>
+									<p class="bz_list_con">
+										<b>第三步：</b>保险公司收到申请材料以后，会开启"开心保理赔特别通道"，会很快的完成理赔案件的审核。<br>
+									</p>
+									<p class="bz_list_con">
+										<b>第四步：</b>理赔审核完成后，理赔结果会及时通知您！也请您及时查看您申请理赔的银行账户，确认钱款是否及时到帐。<br>
+									</p>
+									<h4 class="ccp_titles_t">2、理赔申请指引</h4>
+									<p>
+										保险公司报案理赔专线：${Article.Phone}<br>
+									</p>
+									<p>
+										   理赔申请书：
+										<ul  class="bxtk_list_box">
+										   <li>下载：
+											<cms:list item="attachment"  name="理赔申请书/${Article.CompanyShortName}"> 
+											<span class="${attachment.Suffix}"><a href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}</a></span>
+									        </cms:list>
+										   </li>
+										</ul>
+							       </p>
+									<h4 class="ccp_titles_t">3、理赔温馨提示</h4>
+									<p>
+										出于对客户健康的关怀，保险公司通常都会要求客户选择医疗质量高的公立二级甲等（县区级）以上医院进行就诊治疗，在接诊医生询问事故经过或者伤病历史时，应如实说明并请医生在病历上记录。（若特殊原因无法按照要求选择医院时，请拨打报案电话向保险公司垂询）<br>
+											发生交通工具等意外伤害事故，如有公安交警、急救中心、司法鉴定等相关机构介入处理的，请注意索要和保管好相应的证明、急救病历和鉴定报告等书面材料，作为事后申请理赔的重要依据。
+									</p>
+						</div>
+						<div class="bor_h"></div>
+						<div class="ccp_box_con">
+							<h3 class="n_title ">保险条款</h3>
+							<p>
+								保险责任请参考产品对应条款，并敬请特别留意条款中的 <span class="col_reds">"责任免除"</span>
+								部分。
+							</p>
+							<ul class="bxtk_list_box">
+								${Article.Doc1}
+							</ul>
+						</div>
+						
+						<div class="bor_h"></div>
+                         <div class="ccp_box_con" style="display:none;" id="ccp_box_con">
+	                    <h3 class="n_title ">保险条款<span class="gx_com">非常感谢您选择开心保，为了确保能联系到您，请准确填写以下信息</span></h3> 
+                        <div class="yuyue_table" id="yuyue_table">
+                        <table width="480px" border="0">
+  <tr>
+    <td width="93" class="tex_r">您的姓名：</td>
+    <td width="180"><span><input name="name" id="name" type="text"></span></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tex_r">联系电话：</td>
+    <td><span><input name="tel" id="tel" type="text"></span></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tex_r">您所在的城市：</td>
+    <td><span class="select_city"><select name="area1" id="area1" onchange="getChildCity(this.value);" class="SelectList">
+    	<option value="-1">--请选择地区--</option>
+		<option value="110000">北京市</option>
+		<option value="120000">天津市</option>
+		<option value="130000">河北省</option>
+		<option value="140000">山西省</option>
+		<option value="150000">内蒙古自治区</option>
+		<option value="210000">辽宁省</option>
+		<option value="220000">吉林省</option>
+		<option value="230000">黑龙江省</option>
+		<option value="310000">上海市</option>
+		<option value="320000">江苏省</option>
+		<option value="330000">浙江省</option>
+		<option value="340000">安徽省</option>
+		<option value="350000">福建省</option>
+		<option value="360000">江西省</option>
+		<option value="370000">山东省</option>
+		<option value="410000">河南省</option>
+		<option value="420000">湖北省</option>
+		<option value="430000">湖南省</option>
+		<option value="440000">广东省</option>
+		<option value="450000">广西壮族自治区</option>
+		<option value="460000">海南省</option>
+		<option value="500000">重庆市</option>
+		<option value="510000">四川省</option>
+		<option value="520000">贵州省</option>
+		<option value="530000">云南省</option>
+		<option value="540000">西藏自治区</option>
+		<option value="610000">陕西省</option>
+		<option value="620000">甘肃省</option>
+		<option value="630000">青海省</option>
+		<option value="640000">宁夏回族自治区</option>
+		<option value="650000">新疆维吾尔自治区</option>
+    </select></span></td>
+    <td style="text-align:left; padding-left:8px;"><span class="select_city"><select name="area2" id="area2" class="SelectList">
+        <option value="-1">--请选择地区--</option>
+        </select></span></td>
+  </tr>
+  <tr>
+    <td colspan="3"><input name="" type="submit" onclick="sure();" class="tijiaoyue_btn" id="tijiaoyue_btn" value="提交预约"></td>
+    </tr>
+    <tr>
+    <td colspan="3" style="padding-left:134px; "><span class="red" id="yuyueshow"></span></td>
+    </tr>
+</table>
+
+</div>
+                        
+<div class="yuyue_table yuyue_tables" id="yuyue_table2" style="display:none;">
+<table width="400px" border="0">
+   <input type="hidden" id="productName" name="productName" value="${Article.title}" />
+  <tr>
+    <td width="93" class="tex_r">您的姓名：</td>
+    <td width="180"><span><input name="name1" type="text"  id="name1" value ="" ></span></td>
+
+  </tr>
+  <tr>
+    <td class="tex_r">联系电话：</td>
+    <td><span><input name="tel1" id="tel1" type="text" value =""></span></td>
+
+  </tr>
+  <tr>
+    <td class="tex_r">您所在的城市：</td>
+    <td><span class="select_city"><select name="area11" id="area11"  onchange="getChildCity1(this.value);" class="SelectList">
+    	<option value="-1">--请选择地区--</option>
+		<option value="110000">北京市</option>
+		<option value="120000">天津市</option>
+		<option value="130000">河北省</option>
+		<option value="140000">山西省</option>
+		<option value="150000">内蒙古自治区</option>
+		<option value="210000">辽宁省</option>
+		<option value="220000">吉林省</option>
+		<option value="230000">黑龙江省</option>
+		<option value="310000">上海市</option>
+		<option value="320000">江苏省</option>
+		<option value="330000">浙江省</option>
+		<option value="340000">安徽省</option>
+		<option value="350000">福建省</option>
+		<option value="360000">江西省</option>
+		<option value="370000">山东省</option>
+		<option value="410000">河南省</option>
+		<option value="420000">湖北省</option>
+		<option value="430000">湖南省</option>
+		<option value="440000">广东省</option>
+		<option value="450000">广西壮族自治区</option>
+		<option value="460000">海南省</option>
+		<option value="500000">重庆市</option>
+		<option value="510000">四川省</option>
+		<option value="520000">贵州省</option>
+		<option value="530000">云南省</option>
+		<option value="540000">西藏自治区</option>
+		<option value="610000">陕西省</option>
+		<option value="620000">甘肃省</option>
+		<option value="630000">青海省</option>
+		<option value="640000">宁夏回族自治区</option>
+		<option value="650000">新疆维吾尔自治区</option>
+    </select></span></td>
+
+  </tr>
+    <tr>
+    <td class="tex_r"></td>
+<td ><span class="select_city"><select name="area22" id="area22" class="SelectList">
+        <option value="-1">--请选择地区--</option>
+        </select></span></td>
+
+  </tr>
+  <tr>
+    <td colspan="3" style="padding-left:38px;"><input name="" onclick="sure1();" type="submit" class="tijiaoyue_btn" id="tijiaoyue_btn" value="提交预约"></td>
+    </tr>
+    <tr>
+    <td colspan="3" style="padding-left:134px; "><span class="red" id="yuyueshow1"></span></td>
+    </tr>
+</table>
+
+                        </div>
+                        </div>
+						
+					</div>
+
+					<div class="cp_tbsl_con" style="display: none">
+						<div class="ccp_box_con">
+							<h3 class="n_title ">投保示例</h3>
+							<p>${Article.toubaoshili}
+							</p>
+						</div>
+					</div>
+
+
+
+					<div class="cp_lpfu_con" style="display: none">
+						<div class="ccp_box_con">
+							<h3 class="n_title ">理赔服务</h3>
+							<img src="${Site.StaticResourcePath}/style/shop/images/desc_03.jpg" width="678"
+								height="225" alt="一站式服务，理赔更安心" title="一站式服务，理赔更安心">
+								<h4 class="ccp_titles_t">1、理赔办理流程</h4> <img
+								src="${Site.StaticResourcePath}/style/shop/images/desc_07.gif" width="431" height="27">
+									<div class="clear"></div>
+									<p class="bz_list_con">
+										<b>第一步：</b>发生保险事故后，请第一时间理赔报案。您可以直接向保险公司报案，也可以请开心保协助报案。开心保为您开通客服专线4009-789-789、在线客服以及客服邮箱
+										kf@kaixinbao.com等多种报案协助申请方式；<br>
+									</p>
+									<p class="bz_list_con">
+										<b style="float: left;">第二步：</b>请您根据<帮助中心>-<理赔帮助>中关于理赔材料说明，收集、整理、提交理赔材料进行理赔申请。为了最大程度缩短理赔时间，理赔材料齐全后，可直接快递至相应保险公司。<br>
+									</p>
+									<p class="bz_list_con">
+										<b>第三步：</b>保险公司收到申请材料以后，会开启"开心保理赔特别通道"，会很快的完成理赔案件的审核。<br>
+									</p>
+									<p class="bz_list_con">
+										<b>第四步：</b>理赔审核完成后，理赔结果会及时通知您！也请您及时查看您申请理赔的银行账户，确认钱款是否及时到帐。<br>
+									</p>
+									<h4 class="ccp_titles_t">2、理赔申请指引</h4>
+									<p>
+										保险公司报案理赔专线：${Article.Phone}<br>
+									</p>
+									<p>
+										   理赔申请书：
+										<ul  class="bxtk_list_box">
+										   <li>下载：
+											<cms:list item="attachment"  name="理赔申请书/${Article.CompanyShortName}"> 
+											<span class="${attachment.Suffix}"><a href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}</a></span>
+									        </cms:list>
+										   </li>
+										</ul>
+							       </p>
+									<h4 class="ccp_titles_t">3、理赔温馨提示</h4>
+									<p>
+										出于对客户健康的关怀，保险公司通常都会要求客户选择医疗质量高的公立二级甲等（县区级）以上医院进行就诊治疗，在接诊医生询问事故经过或者伤病历史时，应如实说明并请医生在病历上记录。（若特殊原因无法按照要求选择医院时，请拨打报案电话向保险公司垂询）<br>
+											发生交通工具等意外伤害事故，如有公安交警、急救中心、司法鉴定等相关机构介入处理的，请注意索要和保管好相应的证明、急救病历和鉴定报告等书面材料，作为事后申请理赔的重要依据。
+									</p>
+						</div>
+					</div>
+
+					<div class="cp_pj_con" style="display: none">
+						<cms:comment count="10">{ZCMS:评论区域}</cms:comment>
+					</div>
+
+
+
+
+					<div style="display: none">
+						${Article.FAQ}
+					<!-- div class="cp_cjwt">
+                     <div class="ccp_box_con">
+                      <ul class="pl_list_convs">
+                    	<li><b>${Article.question1}</b><p>${Article.answer1}</p></li>
+                        <li><b>${Article.question2}</b><p>${Article.answer2}</p></li>
+                    </ul>
+                     </div>
+                     </div -->
+						<div class="xg_news_list">
+							<h3>相关保险知识:</h3>
+							<ul class="xg_news_list_con">
+							<cms:list item="article"  level="all" count="5"  type="rand" name="9443" condition="${catalog.Catalog_insknowledge}">
+							<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></li>
+					       </cms:list>
+							</ul>
+						</div>
+						<div class="xg_news_list">
+							<h3>相关保险问答：</h3>
+							<ul class="xg_news_list_con">
+							<cms:list item="article"  level="all" count="5"  type="rand" name="9445" condition="${catalog.Catalog_insqa}">
+							<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></li>
+					        </cms:list>
+							</ul>
+						</div>
+						<div class="link_kf_box">
+
+							<p>
+								尊敬的用户，如果您需要帮助请联系【<a vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap4" onclick="return(VL_FileDL(this));return false;"
+									href="javascript:void(0);"
+									rel="nofollow">在线客服</a>】，谢谢
+							</p>
+							<br/>
+							<a href="javascript:void(0);" vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap5" onclick="return(VL_FileDL(this));return false;"
+								rel="nofollow"/><img src="${Site.StaticResourcePath}/images/group_15.jpg" width="192" height="49"/>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="ligm_consf" id="ligm_consf">
+					<div class="button_b clearfix">
+						<span class="button_b1" onClick="doBuy();">直接购买</span>
+						<span class="error_btn" style="display:none">该产品已下架</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+<div class="h20"></div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="产品详情页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="产品详情页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="产品详情页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+</div>
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+	<cms:include file="block/kxb_product_compare.shtml" />
+	<div class="clear"></div>
+		<!-- 维析分组代码   -->
+<script type="text/javascript">VLTrace_custom_getparam='u1=productdetail';</script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/LAB.min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/weixitrack.js"></script>
+<script type="text/javascript">
+	$LAB = $LAB.script("${Site.JsResourcePath}/js/jquery-1.4.2.min.js").wait()//确保顺序加载
+	.script("${Site.JsResourcePath}/js/jquery.cookie.js").wait()
+	.script("${Site.JsResourcePath}/js/jquery.form.js").wait()
+	.script("${Site.JsResourcePath}/js/jqueryupdate.js").wait()
+	.script("${Site.JsResourcePath}/js/template/common/js/base.js").wait()
+	.script("${Site.JsResourcePath}/js/header1.js").wait()
+	.script("${Site.JsResourcePath}/js/footer.js").wait()
+	.script("${Site.JsResourcePath}/js/artDialog.js").wait()
+	.script("${Site.JsResourcePath}/js/login.js").wait()
+	.script("${Site.JsResourcePath}/js/template/shop/js/My97DatePicker/WdatePicker.js").wait()
+	.script("${Site.JsResourcePath}/js/iframeTools.js").wait()
+	.script("${Site.JsResourcePath}/js/jquery.qtip.js").wait()
+	.script("${Site.JsResourcePath}/js/premcalculate.js").wait()
+	.script("${Site.JsResourcePath}/js/productCompare.js").wait()
+	.script("${Site.JsResourcePath}/js/jquery.poshytip.js").wait()
+	.script("${Site.JsResourcePath}/js/redesign/jquery.sales.js").wait()
+	.script("${Site.JsResourcePath}/js/detailLong.js").wait(function(){
+		jQuery(".fixed_nav").fixedNavigation();
+		jQuery(".bnr_box").fixedBanner({ navElm : "#min_tag",nBtm:"0" }).selectDropDown();
+		jQuery(".bz_time").complexProduct();
+	});
+</script>
+
+
+</body>
+</html>

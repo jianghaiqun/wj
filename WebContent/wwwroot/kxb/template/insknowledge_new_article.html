@@ -1,0 +1,224 @@
+<!--位置信息 开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link> <span class="separator">></span>${Article.title}
+		</div>
+	</div>
+<!--位置信息 结束-->
+<!--主体 开始-->
+<div class="wrap980 mainbgl644">
+	<!--左边 开始-->
+	<div class="left644">
+		<!--文章 开始-->
+		<div class="article">
+			<h1 class="articletit">${article.title}</h1>
+			<div class="articledate02">发布日期：${Article.FirstPublishDate}</div>
+			<div>${article.content}</div>
+		</div>
+		<!--文章 结束--> 
+		<!--推荐产品 开始-->
+		<input type="hidden" id="RiskType" value="${article.RiskType}"/>
+		<input type="hidden" id="RiskCompany" value="${article.RiskCompany}"/>
+		<ul class="produlist" id="products">
+				<li>
+					<div align="center">
+	                  <img src="${Site.StaticResourcePath}/images/loading2.gif" width="70" height="70" />
+	                </div>
+				</li>
+		</ul>
+		<!--推荐产品 结束-->
+		<div class="shareandkeyword">
+			<!--分享到 开始-->
+			<div class="articleshare">
+			<div class="bshare-custom icon-medium"><span class="articlekeyword"><font size="2">分享到:</font><a class="bshare-qzone" title="分享到QQ空间"></a>
+			<a class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+			<a class="bshare-renren" title="分享到人人网"></a>
+			<a class="bshare-douban" title="分享到豆瓣"></a>
+			<a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+			</span></div>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+			</div>
+			<!--分享到 结束-->
+			<!--关键词 开始-->
+			<div class="articlekeyword">关键词：<span>${article.tag|taglink=Y}</span></div>
+			<!--关键词 结束-->
+		</div>
+		<!--上一篇下一篇 开始-->
+		<div class="articlepage"><a href="${Article.PrevLink}" target="_blank">←</a>&nbsp;&nbsp;下一篇：<a href="${Article.PrevLink}" target="_blank">${Article.PrevTitle}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上一篇：<a href="${Article.NextLink}" target="_blank">${Article.NextTitle}</a>&nbsp;&nbsp;<a href="${Article.NextLink}" target="_blank">→</a></div>
+		<!--上一篇下一篇 结束-->
+		<div class="inforandaq">
+			<!--相关资讯 开始-->
+			<div class="relatedinfor">
+				<div class="columntit">相关资讯</div>
+				<ul class="txtlist12">
+				  	<cms:list item="article" tag="${Article.tag}" level="none" type="rand" condition=" type = 1 and (cataloginnercode like '002306%' or cataloginnercode like '002307%') and status in (30,60)" count="6" >
+						<li><a href="${Article.Link}" target="_blank">${article.title|substrwidth=19}</a></li>
+				  	</cms:list>	
+				</ul>
+			</div>
+			<!--相关资讯 结束-->
+			<!--精彩问答 开始-->
+			<div class="wonderfulaq">
+				<div class="columntit">精彩问答</div>
+				<ul class="txtlist12">
+					<cms:list item="article" level="all" type="rand" name="9445" count="6" >
+						<li>问：<a href="${Article.Link}" target="_blank">${article.title|substrwidth=19}</a></li>
+					</cms:list>	
+				</ul>
+			</div>
+			<div class="h30"></div>
+			<!--精彩问答 结束-->
+		</div>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="right336">
+		<!--图片切换 开始-->
+		<div id="KinSlideshow" style="visibility:hidden;">
+			<cms:imageplayer code="bxbk_detail_right" type="0" width="300" height="250" />
+        </div>
+		<!--图片切换 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			<cms:list item="article" level="none" count="5" hasAttribute="hot" condition=" (cataloginnercode like '002313000002%' or cataloginnercode like '002313000003%') and status='30'">
+				<li>
+					<h4><a href="${article.link}" title="${article.title}"><img src="${Site.ProductResourcePath}${Article.ProductLogo}" alt="${Article.title}" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="${article.link}" title="${article.title}" >${article.title|substrwidth=24}</a></h5>
+						<h6>${Article.AdaptPeopleInfo|substrwidth=17}</h6>
+					</div>
+				</li>
+			</cms:list>
+		</ul>
+		<!--热销保险产品 结束-->
+		<!--热门文章推荐 开始-->     
+		<div class="columntit graybordert">热门文章推荐</div>
+		<ul class="txtlist">
+			<cms:list item="article" level="all" type="rand" name="9443" count="3" >
+				<li><a href="${Site.URL}/zhishi/" target="_blank">知识</a> |&nbsp;&nbsp;<a href="${article.link}" target="_blank">${article.title|substrwidth=16}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" name="9710" count="2" >
+				<li><a href="${Site.URL}/baike/" target="_blank">百科</a> |&nbsp;&nbsp;<a href="${article.link}" target="_blank">${article.title|substrwidth=16}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" name="9444" count="2" >
+				<li><a href="${Site.URL}/zixun/" target="_blank">资讯</a> |&nbsp;&nbsp;<a href="${article.link}" target="_blank">${article.title|substrwidth=16}</a></li>
+			</cms:list>
+		</ul>
+		<!--热门文章推荐 结束-->
+			<div class="columntit graybordert">热门标签</div>
+			<div class="news_rmbj news_bor_hui news_zsbj">
+				<ul>
+					<li>
+					<cms:list item="hotlabels"  name="热门标签" count="20" type="hot" tag="${Article.tag}">
+						<% if(i%7==0){%>
+								<a class="news_color12" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==1){%>
+								<a class="news_color14" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==2){%>
+								<a class="news_color19" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==3){%>
+								<a class="news_color13" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==4){%>
+								<a class="news_color15" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==5){%>
+								<a class="news_color16" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%7==6){%>
+								<a class="news_color14" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% } %>
+					</cms:list>
+					</li>
+				</ul>
+			</div>
+	
+		<!--大家都关注 开始-->
+		<div class="columntit graybordert">大家都关注</div>
+		<ul class="txtlist">
+			<cms:list item="attention" name="保险专题" count="7" tag="${Article.tag}">
+				<li><a href="${Site.URL}/${attention.url}" target="_blank">${attention.title}</a></li>
+			</cms:list>	
+		</ul>
+		<!--大家都关注 结束-->
+		<!--广告 开始-->
+		<div class="h10 graybordert"></div>
+        <div class="ad300">
+        <cms:ad name="保险百科广告位" size="300*70" type="1"> </cms:ad>
+        </div>
+        <div class="ad300">
+        <cms:ad name="保险百科广告位1" size="300*70" type="1"> </cms:ad>
+        </div>    
+		<!--加关注 开始-->
+		<div class="addattention">
+			<div class="addattentionleft"><a href="http://e.weibo.com/kaixinbao2012/profile" target="_blank"><img src="${Site.StaticResourcePath}/images/addattentionlogo.gif" alt="开心保保险网" width="100" height="100" /></a></div>
+			<div class="addattentionright">
+				<h4><a href="http://e.weibo.com/kaixinbao2012/profile" target="_blank"><img src="${Site.StaticResourcePath}/images/addattentiontxt.gif" width="84" height="16" alt="开心保保险网" align="absmiddle" /></a> 辽宁 大连</h4>
+				<h5>欢迎关注开心保微博</h5>
+				<h6>
+						<a href="http://e.weibo.com/kaixinbao2012" target="_blank"> <span>加关注</span></a>
+				</h6>
+			</div>
+		</div>
+		<!--加关注 结束-->
+		<!--关注微信 开始-->
+		<div class="micromsg">
+			<div class="micromsgleft"><img src="${Site.StaticResourcePath}/images/mpvcode.gif" width="100" height="100" /></div>
+			<div class="micromsgright">
+				<h4>关注开心保微信</h4>
+				<h5>微信扫一下即可添加开心保<br/>官方微信，心动优惠及时掌握。</h5>
+			</div>
+		</div>
+		<div class="h30"></div>
+		<!--关注微信 结束-->
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="保险知识详情页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="保险知识详情页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="保险知识详情页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/community_v1.shtml" />
+<script src="${Site.JsResourcePath}/js/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+jQuery().ready( function() {
+	var riskType = jQuery("#RiskType").val();
+	var riskCompany = jQuery("#RiskCompany").val();
+	jQuery.ajax({
+		url: "${Site.prop6}/shop/article!ajaxProduct.action?riskType="+riskType+"&riskCompany="+riskCompany+"",
+		type: "post",
+		dataType: "json",
+		success: function(data){
+			var obj = eval(data);
+			 jQuery("#products").html(obj.products) ;
+	 	}
+	});
+});
+jQuery(function(){
+	jQuery("#KinSlideshow").KinSlideshow({
+			moveStyle:"down",
+			intervalTime:8,
+			isHasTitleBar:false,
+			mouseEvent:"mouseover",
+			titleFont:{TitleFont_size:14,TitleFont_color:"#FF0000"}
+	});
+})
+</script>

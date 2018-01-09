@@ -1,0 +1,13 @@
+<% DataTable dt_6 = TemplateData.getDocList("article","南极洲","all","null","null","50","null","null","null");
+  if(dt_6==null){write("没有找到栏目。parent：null  catalog："+"南极洲");}else{
+ int rdCnt=dt_6.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_6  = dt_6.getDataRow(i);
+ int rdIdx=i;
+%>
+
+              <li>
+                <a href="${article_6.link}" target="_blank">${article_6.title}签证保险办理</a>
+              </li>
+              <%}}%>

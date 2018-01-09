@@ -1,0 +1,11 @@
+<% DataTable dt_12 = TemplateData.getDocList("article","保险专题/人寿保险","current","null","null","1","null","null","null");
+  if(dt_12==null){write("没有找到栏目。parent：null  catalog："+"保险专题/人寿保险");}else{
+ int rdCnt=dt_12.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_12  = dt_12.getDataRow(i);
+ int rdIdx=i;
+%>
+ 
+	  	<div class="h280"><a href="${article_12.Section3img1link}" target="_blank"><img src="${Site.StaticResourcePath}/${article_12.Section3img1}" width="244" height="280" /></a></div>
+	<%}}%>

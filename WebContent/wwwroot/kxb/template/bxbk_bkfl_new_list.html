@@ -1,0 +1,158 @@
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+	</div>
+	<!-- 最新关注开始 -->
+	<div class="newconcern">
+		<div class="columntit">最新关注</div>
+	<ul>
+		<cms:list item="Image"  name="保险百科1"> 
+		      <li>
+		      		<h4><a href="${Image.wangzhi}" target="_blank" rel="nofollow"><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" /></a></h4>
+		      		<h5><a href="${Image.wangzhi}" target="_blank" rel="nofollow">${Image.timu}</a></h5>
+		      </li>
+		</cms:list> 
+	</ul>
+		
+	</div>
+	<!-- 最新关注结束 -->
+	<!--主体 开始-->
+<div class="wrap980 mainbgl336 graybordert">
+	<!--左边 开始-->
+	<div class="left336">
+		<!--词条分类浏览 开始-->
+		<div class="columntit">词条分类浏览</div>
+		<ul class="entryclass">			
+           <cms:list item="catalog" type="article" level="child" name="保险百科" count="10">
+					<li><a href="${catalog.link}" target="_blank">${catalog.name}</a></li>							
+	        </cms:list>	                  
+		</ul>
+		<div class="h20"></div>
+		<!--词条分类浏览 结束-->
+		<!--搜索词条 开始-->
+		<div class="entrysearch">
+		<form name="myformname" action="${site.url}/Search/Result.jsp">
+				<input type="hidden" name="id" value="43" id="id" />
+				<input type="hidden" name="site" value="221" />
+				<input type="hidden" name="order"  value="time" /> 
+		<h4><input id="valueid" name="query" type="text" class="entrysearchinput" value="旅游保险" onfocus="if(this.value=='旅游保险'){this.value='';}" onblur="if(this.value==''){this.value='旅游保险';}"/></h4><h5><input name="" type="submit" value="" class="entrysearchbtn"onmouseover="this.className='entrysearchbtnover'" onmouseout="this.className='entrysearchbtn'" /></h5>
+		</form>
+		</div>
+		<!--搜索词条 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			<cms:list item="Article" level="all" hasAttribute = "hot" count="5" name='意外保险'>	
+                        <li>
+                        	<h4><a href="${Article.Link}"><img src="${Site.ProductResourcePath}/${Article.Logo}" alt="${Article.title}" width="50" height="50" /></a></h4>
+                        	<div class="hotproduright">
+								<h5><a href="${Article.Link}" title="${Article.title}">${Article.title|CharWidth=12}</a> </h5>
+								<h6>${Article.AdaptPeopleInfo}</h6>
+							</div>
+                        	                   
+                        </li>                      
+			</cms:list>
+			
+		</ul>
+	
+		<!--热销保险产品 结束-->
+		<!--热门词条推荐 开始-->
+		<div class="columntit graybordert">热门词条推荐</div>
+		<ul class="txtlist">
+			<cms:list item="Article" level="all" hasAttribute = "hot" count="7" name='保险百科'>	
+                        <li>                      	
+								<a href="${Article.Link}" title="${Article.title}" target="_blank">${Article.title|CharWidth=12}</a> 	                   
+                        </li>                      
+			</cms:list>
+		</ul>
+		<!--热门词条推荐 结束-->
+		<cms:include file="/block/kxb_zs_right.shtml" />
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	
+		<!--列表 开始-->
+		<div class="right644">
+             <ul class="contentlist ">
+                  <cms:list item="article" level="current" page="true" pagesize="10">
+                		<li>
+                        	<h3><a href="${Article.Link}" title ="${Article.Title}" >${Article.Title}</a></h3> 
+                        	<h4><b>摘要：</b><%
+							String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>100){
+							description = description.substring(0,100);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>100){
+							summary = summary.substring(0,100);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==100){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==100){
+							write("...");
+							}
+								
+						%><a href="${Article.Link}" rel="nofollow">阅读全文</a></h4>                       
+                       	 	<h5>关键词：${Article.tag|taglink=Y}</h5>
+                        	<h6>创建日期：${Article.FirstPublishDate|Format=yyyy-MM-dd}</h6>
+                        </li>  
+                  </cms:list>
+             </ul>	
+       
+		
+		<!--列表 结束-->
+		<!--页码 开始-->
+			<div class="plpage">
+					<!--    翻页    -->
+					<div id="plpagecont">${PageBar1}</div>
+					<div class="clear"></div>
+				</div>
+			<!--页码 结束-->
+			<!--人气产品搜索词 开始-->
+			<div class="hotprodukeywordtit graybordert">人气产品搜索词</div>
+			<ul class="hotprodukeyword">
+				<cms:list item="friendlink" group="保险百科" count=10>
+					<li>                      	
+						<span ><a href="${friendlink.Url}" title="${friendlink.name}">${friendlink.name|CharWidth=12}</a> </span>	                   
+                    </li>
+				</cms:list>
+			</ul>
+			<div class="h20"></div>
+			<!--人气产品搜索词 结束-->
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<div class="clear"></div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="百科列表页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="百科列表页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="百科列表页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<div class="clear"></div>
+<cms:include file="block/community_v1.shtml" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script src="${Site.JsResourcePath}/js/tabchange.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+
+

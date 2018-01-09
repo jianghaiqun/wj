@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.helplist{ margin:12px 22px;}
+.helplist li{ margin:0px 22px 12px 22px; border-bottom:1px dotted #c1c1c1; height:38px; line-height:38px;background:url(../images/listico.gif) no-repeat 0px 12px; padding-left:32px;}
+	.helplist li a:link,.helplist li a:visited,.helplist li a:active{font-size:14px;font-weight:normal;color:#333;text-decoration:none;}
+	.helplist li a:hover{font-size:14px;font-weight:normal;color:#333;text-decoration:underline;}
+/* 文章详细 */
+.artical{padding:0px 42px 40px 42px;}
+.artical h3{font-size:16px;font-weight:bold;padding-bottom:6px;text-align:center;color:#333;}
+.artical .date{height:32px;line-height:32px;text-align:center; color:#666;}
+.artical .date span{padding-left:6px;padding-right:6px;}
+.artical .cont{padding:8px 0 0 0;}
+.artical .cont h1{ font-size:22px; font-weight:bold; line-height:33px;}
+.artical .cont p{line-height:24px;text-indent:28px;font-size:14px;}
+.articalpic{text-align:center;font-size:12px; padding:12px;padding-top:4px;}
+.articalpic img{margin:12px;}
+.artical .cont p{line-height:28px;text-indent:28px;font-size:14px;}
+..artical .cont p a:link,.artical .cont p a:visited,.artical .cont p a:active{color:#000;font-size:14px;text-decoration:none;}
+..artical .cont p a:hover{color:#000;font-size:14px;text-decoration:underline;}
+
+.artical02{padding:20px 42px;font-size:14px;}
+.artical02 h3{padding-bottom:6px;color:#9D0B0E;font-size:14px;}
+.artical02 p{line-height:18px;text-indent:0px;font-size:12px;}

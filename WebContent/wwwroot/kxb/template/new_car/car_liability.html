@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="${catalog.Meta_Keywords}" />
+	<meta name="description" content="${catalog.Meta_Description}" />
+	<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+    <link href="${Site.StaticResourcePath}/style/new/global.css" rel="stylesheet" type="text/css"/>
+    <link href="${Site.StaticResourcePath}/style/car/base.css" rel="stylesheet" type="text/css"/>
+    <link href="${Site.StaticResourcePath}/style/car/information.css" rel="stylesheet" type="text/css"/>
+    <link href="${Site.StaticResourcePath}/style/car/howbuy.css" rel="stylesheet" type="text/css"/>
+    <link href="${Site.StaticResourcePath}/style/new/other.css" rel="stylesheet" />
+</head>
+<body onload="navHeight();">
+   <cms:include file="block/car_header.shtml" />
+<!--mainbody start-->
+<div class="mainbody">
+	<div class="wrapper">
+	<input id="type" type="hidden" value="C"/>
+    	<div class="your_site"><cms:link type="currentPositionList"></cms:link></div>
+        <!--主体部分 左侧边栏 开始-->
+        <div class="buyleftbar">
+        	 <!--获取报价 start-->
+            <div class="price">
+                <ul>
+                    <li><span class="bg07 white">车主姓名</span><input id="carUser" name="carUser" type="text" class="text" maxlength="30"/></li>
+                    <li><span class="bg08 white">联系电话</span><input id="carPhone" name="carPhone" type="text" class="text" maxlength="11"/></li>
+                    <li><span class="bg09 white">车牌号</span><input id="carNO" name="carNO" type="text" class="text" maxlength="9"/></li>
+                    <li><input name="" type="checkbox" value="" id="guidtype" align="absmiddle"/><label for="guidtype">新车未上牌</label></li>
+                    <li><span class="mt_6">保险公司</span>
+                        <div class="index_tb_right pr" id="corpBar">
+                            <a href="javascript:;" class="car_tb_corp tb_active" rel="pa">平安</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="tpy">太平洋</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="yg">阳光</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="dd">大地</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="tp">安盛天平</a>
+                        </div>
+                    </li>
+                    <li><input name="" onclick="guoduNew()" type="button" class="btn" value="获取报价" /></li>
+                </ul>
+              <div class="clear"></div>
+            </div>
+            <!--获取报价 end-->
+            <!--商业车险种类 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>商业车险种类</h2>
+                </div>
+                <ul class="cartype">
+                	<li class="mr10"><a href="${Site.URL}/chexian/huahenxian.shtml" target="_blank" title="划痕险">划痕险</a></li>
+                    <li><a href="${Site.URL}/chexian/sheshuixian.shtml" target="_blank" title="涉水险">涉水险</a></li>
+                    <li class="mr10"><a href="${Site.URL}/chexian/chesunxian.shtml" title="车辆损失险">车辆损失险</a></li>
+                    <li><a href="${Site.URL}/chexian/ziranxian.shtml" target="_blank" title="自燃损失险">自燃损失险</a></li>
+                    <li class="mr10"><a href="${Site.URL}/chexian/daoqiangxian.shtml" title="车辆盗抢险">车辆盗抢险</a></li>
+                    <li><a href="${Site.URL}/chexian/bolixian.shtml" target="_blank" title="玻璃单独破碎险">玻璃单独破碎险</a></li>
+                    <li class="mr10"><a href="${Site.URL}/chexian/sanzexian.shtml" target="_blank" title="第三者责任险">第三者责任险</a></li>
+                    <li><a href="${Site.URL}/chexian/chezexian.shtml" target="_blank" title="车上人员责任险">车上人员责任险</a></li>
+                    <li class="mr10"><a href="${Site.URL}/chexian/bujimianpeixian.shtml" target="_blank" title="不计免赔特约险">不计免赔特约险</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--商业车险种类 结束-->
+            <!--常见问题 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>常见问题</h2>
+                    <h6><a href="${Site.URL}/chexian/club/wenda/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险问答" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.URL}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--常见问题 结束-->
+            <!--案例解读 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>案例解读</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险案例" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.URL}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--案例解读 结束-->
+            <!--车险知识 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>车险知识</h2>
+                    <h6><a href="${Site.URL}/chexian/club/zhishi/" target="_blank" >更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险知识" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--车险知识 结束-->
+            <div class="right_banner mt10 border_gray"><a href="${catalog.LeftHref}" target="_blank"><img src="${Site.StaticResourcePath}/${catalog.LeftAd}" width="223" height="82" /></a></div>
+            <!--友情链接 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>友情链接</h2>
+                </div>
+                <ul class="linklist">
+                	<cms:list item="friendlink" cmsorder="4" name="车险理赔">
+						<li class="<% if(i%2==0) write("mr10");%>"><a href="${friendlink.URL}" target="_blank" title="${friendlink.Name}">［${friendlink.Name}］</a></li>
+			 		</cms:list>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--友情链接 结束-->
+        </div>
+        <!--主体部分 左侧边栏 开始-->
+            <!--主体部分 右侧 开始-->
+            <div class="buymain">
+                <!--险种介绍 开始-->
+                <div class="howbuy">
+                    <div class="buymaintit">
+                        <h1>险种介绍</h1>
+                    </div>
+                </div>
+                <div class="whatthree">
+                    <div class="whatleft wenbin_longyellow">
+                        <h1>什么是车上人员责任险？</h1>
+                        <p>车上人员责任险，即车上座位险。保障的是车上人员的人身伤亡，分为司机座位和乘客座位。投保该险后，被保险人或被保险人允许的合格驾驶员在使用保险车辆过程中发生保险事故，致使车内乘客人身伤亡，依法应由被保险人承担的赔偿责任，保险公司会按照保险合同进行赔偿。</p>
+                        <h6><a href="http://www.kaixinbao.com/chexian/club/zhishi/A6G20140331110.shtml" target="_blank">车上人员责任险费率</a><a href="http://www.kaixinbao.com/chexian/club/zhishi/A6F20140331098.shtml" target="_blank">车上人员责任险条款</a><a href="http://www.kaixinbao.com/chexian/club/zhishi/A6G20140331101.shtml" target="_blank">车上人员责任险免赔范围</a><br />
+                            <a href="http://www.kaixinbao.com/chexian/club/zhishi/A6G20140331105.shtml" target="_blank">车上人员责任险赔偿范围</a></h6>
+                    </div>
+                    <div class="whatright wenbin_percent4">
+                        <h2><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=1087" >车上人员责任险在线购买</a></h2>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!--险种介绍 结束-->
+                <!--"险"比三家 开始-->
+                <div class="howbuy">
+                    <div class="buymaintit">
+                        <h2>"险"比三家</h2>
+                    </div>
+                </div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ratio">
+                    <tr>
+                        <td width="11%">&nbsp;</td>
+                        <td width="17%"><a href="${Site.Prop6}/Transition/PinAnTransition.jsp" title="中国平安"><img src="${Site.StaticResourcePath}/images/new_car/link_icon14.png" width="110" height="58" /></a></td>
+		                <td width="18%"><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2011" title="太平洋保险"><img src="${Site.StaticResourcePath}/images/new_car/link_icon10.png" width="110" height="58" /></a></td>
+		                <td width="18%"><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=1087" title="阳光保险集团"><img src="${Site.StaticResourcePath}/images/new_car/link_icon11.png" width="110" height="58" /></a></td>
+		                <td width="18%"><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2021" title="中国大地保险"><img src="${Site.StaticResourcePath}/images/new_car/link_icon12.png" width="110" height="58" /></a></td>
+		                <td width="18%"><a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2026" title="安盛天平汽车保险" ><img src="${Site.StaticResourcePath}/images/new_car/link_icon13.png" width="110" height="58" /></a></td>
+                    </tr>
+                    <tr>
+                        <td class="center">车上人员责任险保障范围</td>
+                        <td colspan="5">保险期间内，被保险人或其允许的合法驾驶人在使用被保险机动车过程中发生意外事故，致使车上人员遭受人身伤亡，依法应当由被保险人承担的损害赔偿责任，保险公司依照本保险合同的约定负责赔偿。</td>
+                    </tr>
+                    <tr>
+                        <td class="center">免责范围</td>
+                        <td colspan="5">因违章搭乘造成的人身伤亡，被保险人、驾驶人的故意行为造成的损失。</td>
+                    </tr>
+                    <tr>
+                        <td class="center">不同公司免责条款对比</td>
+                        <td class="vtop">1、牵引其他未投保交强险的车辆或被该类车辆牵引；<br />
+                            2、学习驾驶时无教练员随车指导造成的意外事故；<br />
+                            3、一个记分周期内记分达12分仍驾驶造成的损失。
+                        </td>
+                        <td class="vtop">1、保险机动车正常行驶时车门没有完全闭合或车门闭合过程中；<br />
+                            2、持学习驾驶证及实习期在高速公路上驾车；<br />
+                            3、实习期驾驶执行任务的警车、消防车、工程救险车、救护车和载运危险品的车辆。
+                        </td>
+                        <td class="vtop">1、持学习驾驶证学习驾车时，无教练员随车指导，或不按指定时间、路线学习驾车；<br />
+                            2、实习期驾驶执行任务的警车、消防车、工程救险车、救护车和载运危险品的车辆。
+                        </td>
+                        <td class="vtop">1、违法、违章搭乘人员的人身伤亡；<br />
+                            2、车上人员因疾病、分娩、自残、殴斗、自杀、犯罪行为造成的自身伤亡或在车下时遭受的人身伤亡。
+                        </td>
+                        <td class="vtop">1、实习期内驾驶载有危险物品的机动车或牵引挂车的机动车发生意外事故的损失；<br />
+                            2、一个记分周期内记分达12分仍驾驶造成的损失的为除外责任。
+                        </td>
+                    </tr>
+                </table>
+                <!--"险"比三家 结束-->
+                <!--投保建议 开始-->
+                <div class="proposal">
+                    <div class="proposaltit">
+                        <h2>投<br />
+                            保<br />
+                            建<br />
+                            议</h2>
+                    </div>
+                    <div class="proposallist">
+                        <ul>
+                            <li class="borb">
+                                <p>如果是刚开始上路行驶的新手，或者有牵引挂车问题，建议投保大地车险，因为大地车险在除外责任规定方面最宽松，对被保险人最有利。</p>
+                                <a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2021" >大地车险免费报价</a></li>
+                            <li>
+                                <p>如果担心因发生乘车人员人身伤亡而被提起诉讼或仲裁产生的诉讼费，
+                                那么可以考虑投保安盛天平车上人员责任险，安盛天平车险提供这方面的保障。</p>
+                                <a href="${Site.Prop6}/shop/shopping_cart!goToCompany.action?company=2026" >安盛天平免费报价</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--投保建议 结束-->
+              <!--比较组 开始-->
+            <div class="threeratio">
+            	<ul>
+                	<li><a href="${Site.URL}/chexian/chesunxian.shtml" target="_blank" title="车损险">车损险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/bolixian.shtml" target="_blank" title="玻璃单独破碎险">玻璃单独破碎险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/daoqiangxian.shtml" target="_blank" title="盗抢险">盗抢险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/huahenxian.shtml" target="_blank" title="车身划痕保险">车身划痕保险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/chezexian.shtml" target="_blank" title="车上人员险">车上人员险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/ziranxian.shtml" target="_blank" title="自燃损失险">自燃损失险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/sheshuixian.shtml" target="_blank" title="涉水险">涉水险比较</a></li>
+                    <li><a href="${Site.URL}/chexian/bujimianpeixian.shtml" target="_blank" title="不计免赔险">不计免赔险比较</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--比较组 结束-->
+            <!--品牌推荐 开始-->
+            <div class="proposal">
+            	<div class="recommendtit"><h2>品<br />牌<br />推<br />荐</h2></div>
+                <div class="servicellist">
+                	<ul>
+                		<cms:list item="Image" name="品牌推荐" >
+							<li><a href="${Image.wangzhi}" title="${Image.title}" target="_blank" rel="nofollow"><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="116" height="130" align="absmiddle" /></a></li>
+                        </cms:list>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--品牌推荐 开始-->
+            <!--优惠活动 开始-->
+        	<div class="howbuy">
+                <div class="buymaintit"><h2>优惠活动</h2></div>
+                <div class="topic">
+                	<ul>
+                		<cms:list item="Image" name="优惠活动" >
+							<li><a href="${Image.href}" title="${Image.title}" target="_blank" ><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}"  width="133" height="78" align="absmiddle" /><span>${Image.title}</span></a></li>
+                        </cms:list>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--优惠活动 结束-->
+        </div>
+        <!--主体部分 右侧 结束-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mainbody end-->
+<cms:include file="block/car_footer.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/car.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('div, ul, img, li, input , a');
+</script>
+<![endif]-->
+</body>
+</html>
+
+

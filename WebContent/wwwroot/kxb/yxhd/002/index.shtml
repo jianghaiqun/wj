@@ -1,0 +1,1013 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        页面2-页面222-开心保保险网yhy
+    </title>
+    <link href="http://localhost:8080/style/redesign/re_header.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/activity.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/new_logo.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/skins/default.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/redesign/re_list.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/mod_style.css"/>
+    <style type="text/css">
+        /*add gdq 2015-5-4*/
+
+        .editP, .editC, .hide, .edit, .hideCss, .remd, .operate, .proDel {
+            font-size: 0px;
+            display: none;
+        }
+    </style>
+    <script>complicatedFlag = "N"</script>
+    <!-- <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDExODA2Nl8zMDEwNThfODAwMTE4MDY2Xw"></script> -->
+</head>
+<body onload='initProduct();salesVolumeLoad();' style='background-color:'>
+<style>
+    .fix_nav {
+        top: 31%;
+    }
+</style>
+<div class="g-weaper"></div>
+<div id="wrapper">
+    <input type="hidden" id="sem_list"/>
+    <div id="headerArea">
+        <div class="headerCont">
+            <h1><a href="http://localhost:8080"><img src="http://localhost:8080/images/sem/semlog_02.gif"
+                                                     alt="开心保 买保险就是买开心"/></a></h1>
+            <p class="tel">4009-789-789</p>
+            <ul id="menuArea">
+                <LI><A onfocus=undefined class=hover href="http://223.4.82.35:81/index.shtml"
+                       onFocus="undefined">今天旅游去</A></LI>
+                <LI><A onfocus=undefined href="http://223.4.82.35:81/index.shtml" onFocus="undefined">家财险</A></LI>
+                <LI><A onfocus=undefined href="http://223.4.82.35:81/index.shtml" onFocus="undefined">车险</A></LI>
+                <LI><A onfocus=undefined
+                       href="http://223.4.82.35:81/wj/Document/YXHDedit.jsp?ArticleID=258630&amp;CatalogId=9988#"
+                       onFocus="undefined">交通</A></LI>
+                <LI><A onfocus=undefined
+                       href="http://223.4.82.35:81/wj/Document/YXHDedit.jsp?ArticleID=258630&amp;CatalogId=9988#"
+                       onFocus="undefined">海上</A></LI>
+                <LI><A onfocus=undefined
+                       href="http://223.4.82.35:81/wj/Document/YXHDedit.jsp?ArticleID=258630&amp;CatalogId=9988#"
+                       onFocus="undefined">大连</A></LI>
+                <LI><A onfocus=undefined
+                       href="http://223.4.82.35:81/wj/Document/YXHDedit.jsp?ArticleID=258630&amp;CatalogId=9988#"
+                       onFocus="undefined">北京</A></LI>
+            </ul>
+        </div>
+        <!-- end headerArea --></div>
+
+    <div id="mainArea">
+        <div id="bnrShow">
+            <p class="imgBnr">
+                <a href='http://223.4.82.35:81/index.shtml'><img
+                        src='http://kxb-test.oss-cn-hangzhou.aliyuncs.com///upload/Image/tpbf/img_banner.jpg'
+                        alt=''/></a>
+            </p>
+        </div>
+
+        <div class="productList section">
+            <div id="textIntro">
+                <p>
+                    <a href='http://223.4.82.35:81/index.shtml'>匆匆那年</a>
+                </p>
+            </div>
+            <input id="pro1_comments" value="sdnvkjlsdgm;l sv" type="hidden"><input id="pro1_productN"
+                                                                                    value="安联出行无忧综合交通意外保障计划,安联乐享人生少儿意外重疾保障计划,安联乐享人生个人意外重疾基本保障计划A款,安联乐享人生个人意外重疾高额保障计划B款"
+                                                                                    type="hidden"><input
+                id="pro1_products" value="204901002,204901003,204901004,204901005," type="hidden"> <input
+                id="pro2_comments" value="sdfsdvkopkpfbfb" type="hidden"><input id="pro2_productN" value="平安境内旅游产品（经济型）"
+                                                                                type="hidden"><input id="pro2_products"
+                                                                                                     value="200701001"
+                                                                                                     type="hidden">
+            <input id="pro3_productN" value="安联出行无忧综合交通意外保障计划,安联乐享人生少儿意外重疾保障计划,安联乐享人生个人意外重疾基本保障计划A款"
+                   type="hidden"><input id="pro3_products" value="204901002,204901003,204901004" type="hidden">
+            <input id="pro4_productN" value="平安境内旅游产品（经济型）,平安境内旅游产品（特惠型）,平安境内旅游保障型（含高风险运动）" type="hidden"><input
+                id="pro4_products" value="200701001,200701002,200701003" type="hidden">
+            <input id="pro5_comments" value="sdgggggggggggggggggg" type="hidden"><input id="pro5_productN"
+                                                                                        value="平安境内旅游产品（经济型）,平安境内旅游产品（特惠型）"
+                                                                                        type="hidden"><input
+                id="pro5_products" value="200701001,200701002" type="hidden">
+            <div class="productArea section" id="pro1"><p class="proDel"><a href="#">删除模块</a></p>
+                <div class="intro "><p class="hide"><a href="#">隐藏</a></p>
+                    <p class="control"><span class="text"></span><span class="edit"><a href="#">编辑</a><a href="#"
+                                                                                                         class="smt">确定</a></span>
+                    </p></div>
+                <div class="adapt "><p class="hide"><a href="#">隐藏</a></p>
+                    <p class="control"><span class="text"></span><span class="edit"><a href="#">编辑</a><a href="#"
+                                                                                                         class="smt">确定</a></span>
+                    </p></div>
+                <div class="case "><p class="hide"><a href="#">隐藏</a></p>
+                    <p class="control"><span class="text"></span><span class="edit"><a href="#">编辑</a><a href="#"
+                                                                                                         class="smt">确定</a></span>
+                    </p></div>
+                <div class="order "><p class="hide"><a href="#">隐藏</a></p>
+                    <p class="control"><strong>排序</strong><span class="sale order01">销量</span><span
+                            class="prix order01">价格</span></p></div>
+                <div class="products "><p class="remd"><a href="#">显示推荐</a></p>
+                    <p class="editP"><a href="#">编辑商品</a></p><input value="" type="hidden">
+                    <div class="orderArea">
+                        <div class="cf">
+                            <div class="stc_shopboxs">
+                                <div class="product_title"><a target="_blank"
+                                                              href="http://localhost:8080/yiwai-baoxian/258857.shtml"
+                                                              class="CInsuranceCompany icon_C2049"></a><span
+                                        class="productName"> <a target="_blank"
+                                                                href="http://localhost:8080/yiwai-baoxian/258857.shtml" "=""><h2
+                                        class="ziti">安联出行无忧综合交通意外保障计划</h2></a></span> <span class="SalesVolume"
+                                                                                            id="SalesV_204901002">(累计销量：<b>3545</b>)</span><span
+                                        id="productIntegral_209601001" style="display: none;"></span></div>
+                                <div class="product_condition">
+                                    <div id="divRiskAppFactor_204901002" class="CRiskAppFactor">
+                                        <div><span>投保年龄</span>
+                                            <ul id="B0000000000000004725_TextAge">
+                                                <li class="li_selected"><span id="TextAge_0" class="long_width"
+                                                                              name="18Y-70Y"
+                                                                              onclick="premRecal('204901002', this, 'B0000000000000004725_TextAge');">18-70周岁</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div><span>保险期限</span>
+                                            <ul id="B0000000000000004726_Period">
+                                                <li class="li_selected"><span id="Period_0" class="long_width" name="1Y"
+                                                                              onclick="premRecal('204901002', this, 'B0000000000000004726_Period');">1年</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div><span>计划</span><select id="204901002_Plan" name="Plan"
+                                                                    onchange="premRecal('204901002', this, '204901002_Plan');">
+                                            <option selected="" value="CCPAAP1">计划一</option>
+                                            <option value="CCPAAP2">计划二</option>
+                                            <option value="CCPAAP3">计划三</option>
+                                        </select></div>
+                                    </div>
+                                </div>
+                                <div class="product_info">
+                                    <div class="product_info_bor"><p class="list_Sale" id="Activity_204901002"><span
+                                            id="Diy_Title_Activity_204901002" style="display: none;"></span><em
+                                            id="Diy_Activity_204901002" style="display: none;"></em></p>
+                                        <div class="prodcutMark">
+                                            <ul class="price"><input id="cp-zprcie" value="100.00" type="hidden"><input
+                                                    id="cp-yprcie" value="100.00" type="hidden">
+                                                <li class="priceC"><span name="Ajax_Prict_204901002"
+                                                                         id="productPrem_204901002"><em>￥</em>100.00</span>
+                                                </li>
+                                                <li class="priceB"><span id="Clear_li_Ajax_Prict_204901002"
+                                                                         style="display:none">原价：</span><span
+                                                        name="Clear_Ajax_Prict_204901002" style="display:none"
+                                                        id="productRatePrem_204901002"></span></li>
+                                            </ul>
+                                            <ul class="btn">
+                                                <li class="btn1"><span
+                                                        onclick="chakan('http://localhost:8080/yiwai-baoxian/258857.shtml')">查看详情</span>
+                                                </li>
+                                                <li class="btn2"><span onclick="submitp('204901002');"
+                                                                       id="id_204901002">加入收藏</span><span
+                                                        onclick="showcp('安联出行无忧综合交通意外保障计划','/','204901002','http://localhost:8080/wj/','B02');"
+                                                        class="add_cp_list">加入对比</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="productFeature">
+                                        <ul class="ld_list_box">
+                                            <li><span>公共交通工具全涵盖</span></li>
+                                            <li><span>高额航空意外险</span></li>
+                                            <li><span>自驾车意外保障全</span></li>
+                                            <li><span>全国道路救援服务</span></li>
+                                            <li><span>路边快修更省心</span></li>
+                                            <li><span>修车住宿有保险</span></li>
+                                            <li><span>修车不会让旅行受损</span></li>
+                                        </ul>
+                                    </div>
+                                    <div id="divRiskAppDuty_204901002" class="CRiskAppDuty">
+                                        <div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span
+                                                class="CDutyCol_3">责任描述</span></div>
+                                        <div class="list_1 row1" id="Duty_00000000000000005440"><span class="CDutyCol1">航空意外伤害身故及伤残</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005440_B0000000000000004727_CCPAAP1">40万</span><span
+                                                class="CDutyCol2" id="00000000000000005440_B0000000000000004727_CCPAAP2"
+                                                style="display:none;">80万</span><span class="CDutyCol2"
+                                                                                      id="00000000000000005440_B0000000000000004727_CCPAAP3"
+                                                                                      style="display:none;">100万</span><span
+                                                class="CDutyCol3">赔付因航空意外导致的身故及伤残</span></div>
+                                        <div class="list_2" id="Duty_00000000000000005441"><span class="CDutyCol1">轨道交通意外伤害身故及伤残</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005441_B0000000000000004727_CCPAAP1">30万</span><span
+                                                class="CDutyCol2" id="00000000000000005441_B0000000000000004727_CCPAAP2"
+                                                style="display:none;">40万</span><span class="CDutyCol2"
+                                                                                      id="00000000000000005441_B0000000000000004727_CCPAAP3"
+                                                                                      style="display:none;">40万</span><span
+                                                class="CDutyCol3">赔付因轨道交通（火车、地铁、轻轨）意外导致的身故及伤残</span></div>
+                                        <div class="list_3 row1" id="Duty_00000000000000005442"><span class="CDutyCol1">轮船意外伤害身故及伤残</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005442_B0000000000000004727_CCPAAP1">15万</span><span
+                                                class="CDutyCol2" id="00000000000000005442_B0000000000000004727_CCPAAP2"
+                                                style="display:none;">30万</span><span class="CDutyCol2"
+                                                                                      id="00000000000000005442_B0000000000000004727_CCPAAP3"
+                                                                                      style="display:none;">30万</span><span
+                                                class="CDutyCol3">赔付因轮船意外导致的身故及伤残</span></div>
+                                        <div class="list_4 row0" id="Duty_00000000000000005443"><span class="CDutyCol1">公共汽车（出租车）意外身故及伤残</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005443_B0000000000000004727_CCPAAP1">15万</span><span
+                                                class="CDutyCol2" id="00000000000000005443_B0000000000000004727_CCPAAP2"
+                                                style="display:none;">20万</span><span class="CDutyCol2"
+                                                                                      id="00000000000000005443_B0000000000000004727_CCPAAP3"
+                                                                                      style="display:none;">20万</span><span
+                                                class="CDutyCol3">赔付因公共汽车意外导致的身故及伤残</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf">
+                            <div class="stc_shopboxs">
+                                <div class="product_title"><a target="_blank"
+                                                              href="http://120.55.73.0:81/yiwai-baoxian/258861.shtml"
+                                    <span="" class="CInsuranceCompany icon_C2049"></a><span class="productName"> <a
+                                            target="_blank" href="http://120.55.73.0:81/yiwai-baoxian/258861.shtml" "=""><h2
+                                            class="ziti">安联乐享人生少儿意外重疾保障计划</h2></a></span> <span class="SalesVolume"
+                                                                                                id="SalesV_204901003">(累计销量：<b>3650</b>)</span><span
+                                            id="productIntegral_209601001" style="display: none;"></span></div>
+                                <div class="product_condition">
+                                    <div id="divRiskAppFactor_204901003" class="CRiskAppFactor">
+                                        <div><span>投保年龄</span>
+                                            <ul id="B0000000000000004728_TextAge">
+                                                <li class="li_selected"><span id="TextAge_0" class="long_width"
+                                                                              name="7Y-17Y"
+                                                                              onclick="premRecal('204901003', this, 'B0000000000000004728_TextAge');">7-17周岁</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div><span>保险期限</span>
+                                            <ul id="B0000000000000004729_Period">
+                                                <li class="li_selected"><span id="Period_0" class="long_width" name="1Y"
+                                                                              onclick="premRecal('204901003', this, 'B0000000000000004729_Period');">1年</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div><span>计划</span><select id="204901003_Plan" name="Plan"
+                                                                    onchange="premRecal('204901003', this, '204901003_Plan');">
+                                            <option selected="" value="CICHDAP1">计划一</option>
+                                            <option value="CICHDAP2">计划二</option>
+                                        </select></div>
+                                    </div>
+                                </div>
+                                <div class="product_info">
+                                    <div class="product_info_bor"><p class="list_Sale" id="Activity_204901003"><span
+                                            id="Diy_Title_Activity_204901003" style="display: none;"></span><em
+                                            id="Diy_Activity_204901003" style="display: none;"></em></p>
+                                        <div class="prodcutMark">
+                                            <ul class="price">
+                                                <li class="priceC"><span name="Ajax_Prict_204901003"
+                                                                         id="productPrem_204901003"><em>￥</em>190.00</span>
+                                                </li>
+                                                <li class="priceB"><span id="Clear_li_Ajax_Prict_204901003"
+                                                                         style="display:none">原价：</span><span
+                                                        name="Clear_Ajax_Prict_204901003" style="display:none"
+                                                        id="productRatePrem_204901003"></span></li>
+                                            </ul>
+                                            <ul class="btn">
+                                                <li class="btn1"><span
+                                                        onclick="chakan('http://120.55.73.0:81/yiwai-baoxian/258861.shtml')">查看详情</span>
+                                                </li>
+                                                <li class="btn2"><span onclick="submitp('204901003');">加入收藏</span><span
+                                                        onclick="showcp('安联乐享人生少儿意外重疾保障计划','/','204901003','http://120.55.73.0:81/wj','B01');"
+                                                        style="margin-left: 6px;" class="add_cp_list">加入对比</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="productFeature">
+                                        <ul class="ld_list_box">
+                                            <li><span>儿童意外伤害保障</span></li>
+                                            <li><span>40种儿童重大疾病</span></li>
+                                            <li><span>重症监护双倍赔</span></li>
+                                            <li><span>电话医生服务更贴心</span></li>
+                                            <li><span>儿童绑架日津贴</span></li>
+                                            <li><span>儿童三者更无忧</span></li>
+                                        </ul>
+                                    </div>
+                                    <div id="divRiskAppDuty_204901003" class="CRiskAppDuty">
+                                        <div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span
+                                                class="CDutyCol_3">责任描述</span></div>
+                                        <div class="list_1 row1" id="Duty_00000000000000005451"><span class="CDutyCol1">意外身故及伤残</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005451_B0000000000000004730_CICHDAP1">5万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005451_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">10万</span><span
+                                                class="CDutyCol3">赔付因意外导致的身故及伤残</span></div>
+                                        <div class="list_2 row0" id="Duty_00000000000000005452"><span class="CDutyCol1">意外医疗（免赔额100元,80%赔付）</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005452_B0000000000000004730_CICHDAP1">0.5万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005452_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">1万</span><span class="CDutyCol3">赔付因意外事故而在医院治疗的费用（免赔额100元,80%赔付）</span>
+                                        </div>
+                                        <div class="list_3 row1" id="Duty_00000000000000005453"><span class="CDutyCol1">重大疾病保障</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005453_B0000000000000004730_CICHDAP1">5万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005453_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">10万</span><span class="CDutyCol3">确诊重大疾病，保险公司赔付一次性津贴</span>
+                                        </div>
+                                        <div class="list_4 row0" id="Duty_00000000000000005454"><span class="CDutyCol1">每日住院津贴（免赔3日，30日为限）</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005454_B0000000000000004730_CICHDAP1">100</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005454_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">100</span><span class="CDutyCol3">若被保险人住院治疗, 保险公司将每日赔付约定的保险金。（免赔3日，30日为限）</span>
+                                        </div>
+                                        <div class="list_5 row1" id="Duty_00000000000000005455"><span class="CDutyCol1">重症监护每日住院津贴</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005455_B0000000000000004730_CICHDAP1">200</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005455_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">200</span><span class="CDutyCol3">如果被保险人入住重症监护室病房治疗，保险公司将每日赔付约定的保险金（免赔3日，30日为限）</span>
+                                        </div>
+                                        <div class="list_5 row0" id="Duty_00000000000000005456"><span class="CDutyCol1">电话医生服务</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005456_B0000000000000004730_CICHDAP1">包含</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005456_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">包含</span><span class="CDutyCol3">被保险人可拨打电话咨询，医生提供非诊断的医疗意见</span>
+                                        </div>
+                                        <div class="list_5 row1" id="Duty_00000000000000005457"><span class="CDutyCol1">紧急医疗运送和送返</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005457_B0000000000000004730_CICHDAP1">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005457_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">20万</span><span class="CDutyCol3">因意外事故或身患疾病，保险公司安排被保险人医疗运送及送返，并支付救援费用</span>
+                                        </div>
+                                        <div class="list_5 row0" id="Duty_00000000000000005458"><span class="CDutyCol1">儿童绑架勒索每日津贴（30日为限）</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005458_B0000000000000004730_CICHDAP1">200</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005458_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">200</span><span class="CDutyCol3">被保险人遭受绑架，根据实际被绑架的日数获得赔偿（30日为限）</span>
+                                        </div>
+                                        <div class="list_5 row1" id="Duty_00000000000000005459"><span class="CDutyCol1">儿童公共场所个人责任</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005459_B0000000000000004730_CICHDAP1">5万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005459_B0000000000000004730_CICHDAP2"
+                                                style="display:none;">10万</span><span class="CDutyCol3">赔付被保险人在公共场所因其行为导致的第三者人身伤亡或财产损失</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf">
+                            <div class="stc_shopboxs">
+                                <div class="product_title"><a target="_blank"
+                                                              href="http://localhost:8080/yiwai-baoxian/258867.shtml"
+                                                              class="CInsuranceCompany icon_C2049"></a><span
+                                        class="productName"> <a target="_blank"
+                                                                href="http://localhost:8080/yiwai-baoxian/258867.shtml" "=""><h2
+                                        class="ziti">安联乐享人生个人意外重疾基本保障计划A款</h2></a></span> <span class="SalesVolume"
+                                                                                                id="SalesV_204901004">(累计销量：<b>3328</b>)</span><span
+                                        id="productIntegral_209601001" style="display: none;"></span></div>
+                                <div class="product_condition">
+                                    <div id="divRiskAppFactor_204901004" class="CRiskAppFactor">
+                                        <div><span>投保年龄</span><select id="204901004_TextAge" name="TextAge"
+                                                                      onchange="premRecal('204901004', this, '204901004_TextAge');">
+                                            <option selected="" value="18Y-35Y">18-35周岁</option>
+                                            <option value="36Y-45Y">36-45周岁</option>
+                                            <option value="46Y-55Y">46-55周岁</option>
+                                        </select></div>
+                                        <div><span>保险期限</span>
+                                            <ul id="B0000000000000004732_Period">
+                                                <li class="li_selected"><span id="Period_0" class="long_width" name="1Y"
+                                                                              onclick="premRecal('204901004', this, 'B0000000000000004732_Period');">1年</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div><span>计划</span><select id="204901004_Plan" name="Plan"
+                                                                    onchange="premRecal('204901004', this, '204901004_Plan');">
+                                            <option selected="" value="LXRSPLAN0112">计划一</option>
+                                            <option value="LXRSPLAN0212">计划二</option>
+                                        </select></div>
+                                        <div style="display:none;"><span>职业类别</span>
+                                            <ul id="B0000000000000004734_Occup">
+                                                <li class="li_selected"><span id="Occup_0" class="long_width" name="1-2"
+                                                                              onclick="premRecal('204901004', this, 'B0000000000000004734_Occup');">1-2类</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product_info">
+                                    <div class="product_info_bor"><p class="list_Sale" id="Activity_204901004"><span
+                                            id="Diy_Title_Activity_204901004" style="display: none;"></span><em
+                                            id="Diy_Activity_204901004" style="display: none;"></em></p>
+                                        <div class="prodcutMark">
+                                            <ul class="price"><input id="cp-zprcie" value="410.00" type="hidden"><input
+                                                    id="cp-yprcie" value="410.00" type="hidden">
+                                                <li class="priceC"><span name="Ajax_Prict_204901004"
+                                                                         id="productPrem_204901004"><em>￥</em>410.00</span>
+                                                </li>
+                                                <li class="priceB"><span id="Clear_li_Ajax_Prict_204901004"
+                                                                         style="display:none">原价：</span><span
+                                                        name="Clear_Ajax_Prict_204901004" style="display:none"
+                                                        id="productRatePrem_204901004"></span></li>
+                                            </ul>
+                                            <ul class="btn">
+                                                <li class="btn1"><span
+                                                        onclick="chakan('http://localhost:8080/yiwai-baoxian/258867.shtml')">查看详情</span>
+                                                </li>
+                                                <li class="btn2"><span onclick="submitp('204901004');"
+                                                                       id="id_204901004">加入收藏</span><span
+                                                        onclick="showcp('安联乐享人生个人意外重疾基本保障计划A款','/','204901004','http://localhost:8080/wj/','B01');"
+                                                        class="add_cp_list">加入对比</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="productFeature">
+                                        <ul class="ld_list_box">
+                                            <li><span>交通工具意外全</span></li>
+                                            <li><span>航空意外保障高</span></li>
+                                            <li><span>40种重大疾病保障</span></li>
+                                            <li><span>三者责任更无忧</span></li>
+                                            <li><span>电话医生服务更贴心</span></li>
+                                            <li><span>自驾车意外有保险</span></li>
+                                        </ul>
+                                    </div>
+                                    <div id="divRiskAppDuty_204901004" class="CRiskAppDuty">
+                                        <div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span
+                                                class="CDutyCol_3">责任描述</span></div>
+                                        <div class="list_1 row1" id="Duty_00000000000000005460"><span class="CDutyCol1">意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005460_B0000000000000004733_LXRSPLAN0112">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005460_B0000000000000004733_LXRSPLAN0212"
+                                                style="display:none;">40万</span><span
+                                                class="CDutyCol3">赔付因意外导致的身故及残疾</span></div>
+                                        <div class="list_2 row0" id="Duty_00000000000000005465"><span class="CDutyCol1">航空意外伤害身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005465_B0000000000000004733_LXRSPLAN0112">40万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005465_B0000000000000004733_LXRSPLAN0212"
+                                                style="display:none;">60万</span><span
+                                                class="CDutyCol3">赔付因航空意外导致的身故及残疾</span></div>
+                                        <div class="list_3 row1" id="Duty_00000000000000005466"><span class="CDutyCol1">轨道交通（火车、地铁、轻轨）意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005466_B0000000000000004733_LXRSPLAN0112">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005466_B0000000000000004733_LXRSPLAN0212"
+                                                style="display:none;">30万</span><span class="CDutyCol3">赔付因轨道交通（火车、地铁、轻轨）意外导致的身故及残疾</span>
+                                        </div>
+                                        <div class="list_4 row0" id="Duty_00000000000000005467"><span class="CDutyCol1">轮船意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005467_B0000000000000004733_LXRSPLAN0112">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000005467_B0000000000000004733_LXRSPLAN0212"
+                                                style="display:none;">30万</span><span
+                                                class="CDutyCol3">赔付因轮船意外导致的身故及残疾</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf">
+                            <div class="stc_shopboxs">
+                                <div class="product_title"><a target="_blank"
+                                                              href="http://120.55.73.0:81/yiwai-baoxian/258875.shtml"
+                                    <span="" class="CInsuranceCompany icon_C2049"></a><span class="productName"> <a
+                                            target="_blank" href="http://120.55.73.0:81/yiwai-baoxian/258875.shtml" "=""><h2
+                                            class="ziti">安联乐享人生个人意外重疾高额保障计划B款</h2></a></span> <span class="SalesVolume"
+                                                                                                    id="SalesV_204901005">(累计销量：<b>3258</b>)</span><span
+                                            id="productIntegral_209601001" style="display: none;"></span></div>
+                                <div class="product_condition">
+                                    <div id="divRiskAppFactor_204901005" class="CRiskAppFactor">
+                                        <div><span>投保年龄</span><select id="204901005_TextAge" name="TextAge"
+                                                                      onchange="premRecal('204901005', this, '204901005_TextAge');">
+                                            <option selected="" value="18Y-35Y">18-35周岁</option>
+                                            <option value="36Y-45Y">36-45周岁</option>
+                                            <option value="46Y-55Y">46-55周岁</option>
+                                        </select></div>
+                                        <div><span>保险期限</span>
+                                            <ul id="B0000000000000004905_Period">
+                                                <li class="li_selected"><span id="Period_0" class="long_width" name="1Y"
+                                                                              onclick="premRecal('204901005', this, 'B0000000000000004905_Period');">1年</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div><span>计划</span><select id="204901005_Plan" name="Plan"
+                                                                    onchange="premRecal('204901005', this, '204901005_Plan');">
+                                            <option selected="" value="LXRSPLAN0134">计划一</option>
+                                            <option value="LXRSPLAN0234">计划二</option>
+                                        </select></div>
+                                        <div style="display:none;"><span>职业类别</span>
+                                            <ul id="B0000000000000004907_Occup">
+                                                <li class="li_selected"><span id="Occup_0" class="long_width" name="3-4"
+                                                                              onclick="premRecal('204901005', this, 'B0000000000000004907_Occup');">3-4类</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product_info">
+                                    <div class="product_info_bor"><p class="list_Sale" id="Activity_204901005"><span
+                                            id="Diy_Title_Activity_204901005" style="display: none;"></span><em
+                                            id="Diy_Activity_204901005" style="display: none;"></em></p>
+                                        <div class="prodcutMark">
+                                            <ul class="price">
+                                                <li class="priceC"><span name="Ajax_Prict_204901005"
+                                                                         id="productPrem_204901005"><em>￥</em>650.00</span>
+                                                </li>
+                                                <li class="priceB"><span id="Clear_li_Ajax_Prict_204901005"
+                                                                         style="display:none">原价：</span><span
+                                                        name="Clear_Ajax_Prict_204901005" style="display:none"
+                                                        id="productRatePrem_204901005"></span></li>
+                                            </ul>
+                                            <ul class="btn">
+                                                <li class="btn1"><span
+                                                        onclick="chakan('http://120.55.73.0:81/yiwai-baoxian/258875.shtml')">查看详情</span>
+                                                </li>
+                                                <li class="btn2"><span onclick="submitp('204901005');">加入收藏</span><span
+                                                        onclick="showcp('安联乐享人生个人意外重疾高额保障计划B款','/','204901005','http://120.55.73.0:81/wj','B01');"
+                                                        style="margin-left: 6px;" class="add_cp_list">加入对比</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="productFeature">
+                                        <ul class="ld_list_box">
+                                            <li><span>三者责任更无忧</span></li>
+                                            <li><span>航空意外保障高</span></li>
+                                            <li><span>40种重大疾病保障</span></li>
+                                            <li><span>交通工具意外全</span></li>
+                                            <li><span>自驾车意外有保险</span></li>
+                                            <li><span>电话医生服务更贴心</span></li>
+                                        </ul>
+                                    </div>
+                                    <div id="divRiskAppDuty_204901005" class="CRiskAppDuty">
+                                        <div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span
+                                                class="CDutyCol_3">责任描述</span></div>
+                                        <div class="list_1 row1" id="Duty_00000000000000014726"><span class="CDutyCol1">意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014726_B0000000000000004906_LXRSPLAN0134">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014726_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">40万</span><span
+                                                class="CDutyCol3">赔付因意外导致的身故及残疾</span></div>
+                                        <div class="list_2 row0" id="Duty_00000000000000014731"><span class="CDutyCol1">航空意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014731_B0000000000000004906_LXRSPLAN0134">40万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014731_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">60万</span><span
+                                                class="CDutyCol3">赔付因航空意外导致的身故及残疾</span></div>
+                                        <div class="list_3 row1" id="Duty_00000000000000014732"><span class="CDutyCol1">轨道交通（火车、地铁、轻轨）意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014732_B0000000000000004906_LXRSPLAN0134">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014732_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">30万</span><span class="CDutyCol3">赔付因轨道交通（火车、地铁、轻轨）意外导致的身故及残疾</span>
+                                        </div>
+                                        <div class="list_4" id="Duty_00000000000000014733"><span class="CDutyCol1">轮船意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014733_B0000000000000004906_LXRSPLAN0134">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014733_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">30万</span><span
+                                                class="CDutyCol3">赔付因轮船意外导致的身故及残疾</span></div>
+                                        <div class="list_5 row1" id="Duty_00000000000000014734"><span class="CDutyCol1">公共汽车（出租车）意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014734_B0000000000000004906_LXRSPLAN0134">5万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014734_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">10万</span><span class="CDutyCol3">赔付因公共汽车意外导致的身故及残疾</span>
+                                        </div>
+                                        <div class="list_5 row0" id="Duty_00000000000000014735"><span class="CDutyCol1">自驾车意外身故及残疾</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014735_B0000000000000004906_LXRSPLAN0134">5万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014735_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">10万</span><span class="CDutyCol3">赔付自驾过程中的意外导致的身故及残疾</span>
+                                        </div>
+                                        <div class="list_5 row1" id="Duty_00000000000000014727"><span class="CDutyCol1">意外医疗</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014727_B0000000000000004906_LXRSPLAN0134">0.5万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014727_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">1万</span><span class="CDutyCol3">赔付因意外事故而在医院治疗的费用（免赔额100元,80%赔付）</span>
+                                        </div>
+                                        <div class="list_5 row0" id="Duty_00000000000000014728"><span class="CDutyCol1">重大疾病保障</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014728_B0000000000000004906_LXRSPLAN0134">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014728_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">20万</span><span class="CDutyCol3">确诊重大疾病，保险公司赔付一次性津贴</span>
+                                        </div>
+                                        <div class="list_5 row1" id="Duty_00000000000000014729"><span class="CDutyCol1">每日住院津贴</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014729_B0000000000000004906_LXRSPLAN0134">100</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014729_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">100</span><span class="CDutyCol3">若被保险人住院治疗, 保险公司将每日赔付约定的保险金。（免赔3日，30日为限）</span>
+                                        </div>
+                                        <div class="list_5 row0" id="Duty_00000000000000014730"><span class="CDutyCol1">重症监护每日住院津贴</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014730_B0000000000000004906_LXRSPLAN0134">200</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014730_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">200</span><span class="CDutyCol3">如果被保险人入住重症监护室病房治疗，保险公司将每日赔付约定的保险金（免赔3日，30日为限）</span>
+                                        </div>
+                                        <div class="list_5 row1" id="Duty_00000000000000014736"><span class="CDutyCol1">电话医生服务</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014736_B0000000000000004906_LXRSPLAN0134">包含</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014736_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">包含</span><span class="CDutyCol3">被保险人可拨打电话咨询，医生提供非诊断的医疗意见</span>
+                                        </div>
+                                        <div class="list_5 row0" id="Duty_00000000000000014737"><span class="CDutyCol1">紧急医疗运送和送返</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014737_B0000000000000004906_LXRSPLAN0134">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014737_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">20万</span><span class="CDutyCol3">因意外事故或身患疾病，保险公司安排被保险人医疗运送及送返，并支付救援费用</span>
+                                        </div>
+                                        <div class="list_5 row1" id="Duty_00000000000000014738"><span class="CDutyCol1">公共场所个人责任</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014738_B0000000000000004906_LXRSPLAN0134">10万</span><span
+                                                class="CDutyCol2"
+                                                id="00000000000000014738_B0000000000000004906_LXRSPLAN0234"
+                                                style="display:none;">20万</span><span class="CDutyCol3">赔付被保险人在公共场所因其行为导致的第三者人身伤亡或财产损失</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commentArea"><p class="hide"><a href="#">隐藏</a></p>
+                        <div class="control"><p class="title">用户评论</p>
+                            <ul class="commentList"></ul>
+                            <p class="editC"><a href="#">添加评论</a></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="introArea" class="section">
+            <div class='control'>
+                <div class='introCont'><p class='showImg'><img
+                        src='http://kxb-test.oss-cn-hangzhou.aliyuncs.com///upload/Image/tpbf/Tulips.jpg' width='482px'
+                        height='400px' alt=''/></p></div>
+                <div id='order_con'></div>
+            </div>
+            <!-- end introArea --></div>
+
+        <div id="serviceArea" class="section">
+            <div class="guide_clm">
+                <p class="ttl">理赔指引</p>
+                <p class="img"><img alt="" src="http://localhost:8080/images/sem/img_guide_clm.gif"></p>
+                <ol>
+                    <li>
+                        <strong>1 出险报案</strong>
+                        发生保险事故后，请第一时间拨打开心保客服电话报案。开心保为您开通客服专线<span>4009-789-789</span>、在线客服以及客服邮箱<span><a
+                            href="mailto:kf@kaixinbao.com">kf@kaixinbao.com</a></span>等多种报案协助申请方式。
+                    </li>
+                    <li>
+                        <strong>2 理赔申请</strong>
+                        收集并提交相关材料办理理赔事项。
+                    </li>
+                    <li class="last">
+                        <strong>3 结案赔付</strong> 等待理赔结果通知（一般案件会在10个工作日左右结案）。
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="menuBox">
+            <div class="menuBg">
+                <ul class="menuCont">
+
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <!-- <li><a href="#pro1">可编辑文本1</a></li> --><!-- <li><a href="#pro1">可编辑文本1</a></li> -->
+                    <li><a href="#pro1">可编辑文本1</a></li>
+
+                </ul>
+            </div>
+            <!-- end menuBox --></div>
+
+        <!-- end mainArea --></div>
+    <!-- end wrapper --></div>
+<!-- 公共底部 -->
+<div class="g-main-con">
+    <div class="clear h20"></div>
+    <!-- foot -->
+    <div class="g-weaper1200">
+        <div class="g-footer">
+            <dl class="m-footer-dl">
+                <dt class="f_mi"><em class="i-f-icon i-f-icon1 "></em>正品保险</dt>
+                <dd>中国保监会监制</dd>
+                <dd>保险公司专供</dd>
+                <dd>高性价比产品</dd>
+            </dl>
+            <dl class="m-footer-dl">
+                <dt class="f_mi"><em class="i-f-icon i-f-icon2 "></em>快捷投保</dt>
+                <dd>全方位一键对比</dd>
+                <dd>1对1保险顾问指导</dd>
+            </dl>
+            <dl class="m-footer-dl">
+                <dt class="f_mi"><em class="i-f-icon i-f-icon3 "></em>省心服务</dt>
+                <dd>电子保单快捷变更</dd>
+                <dd>满200元发票包邮</dd>
+                <dd>免费协助理赔无差异</dd>
+            </dl>
+            <dl class="m-footer-dl">
+                <dt class="f_mi"><em class="i-f-icon i-f-icon4 "></em>安全可靠</dt>
+                <dd>7x24小时客服不间断</dd>
+                <dd>风险提示保障安全</dd>
+            </dl>
+            <dl class="m-footer-dl">
+                <dt class="f_mi"><em class="i-f-icon i-f-icon5 "></em>品牌实力</dt>
+                <dd>4年300万用户选择</dd>
+                <dd>2013年最佳保险中介</dd>
+                <dd>30家知名保险公司合作</dd>
+            </dl>
+
+            <div class="clear h20"></div>
+        </div>
+    </div>
+    <div class="clear h20"></div>
+    <div class="g-footer-bg">
+        <div class="g-weaper1200">
+            <div class="g-footer2">
+                <dl class="m-footer-dl">
+                    <dt><em class="i-f-icon i-f-icon6 "></em>新手指南</dt>
+                    <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn1" target="_blank"
+                           rel="nofollow">如何注册</a>
+                        <a href="http://localhost:8080/about//xszn/index.shtml#xszn4" target="_blank" rel="nofollow">如何投保</a>
+                        <a href="http://localhost:8080/about/xszn/index.shtml#xszn3" target="_blank"
+                           rel="nofollow">找回密码</a></dd>
+                </dl>
+                <dl class="m-footer-dl">
+                    <dt><em class="i-f-icon i-f-icon7 "></em>支付帮助</dt>
+                    <dd><a href="http://localhost:8080/about/4/index.shtml#zfbz2" target="_blank"
+                           rel="nofollow">支付方式</a><a href="http://localhost:8080/about/4/index.shtml#zfbz1"
+                                                     target="_blank" rel="nofollow">支付说明</a></dd>
+                </dl>
+                <dl class="m-footer-dl">
+                    <dt><em class="i-f-icon i-f-icon8 "></em>保单服务</dt>
+                    <dd><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单查询</a>
+                        <a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a>
+                        <a href="http://localhost:8080/about/1/index.shtml#yxxg2" target="_blank"
+                           rel="nofollow">保单变更</a>
+                        <a href="http://localhost:8080/about/1/index.shtml#yxxg3" target="_blank"
+                           rel="nofollow">保单取消</a>
+                        <a href="http://localhost:8080/about/1/index.shtml#yxxg1" target="_blank"
+                           rel="nofollow">保单寄送</a></dd>
+                </dl>
+                <dl class="m-footer-dl">
+                    <dt><em class="i-f-icon i-f-icon9 "></em>理赔服务</dt>
+                    <dd><a href="http://localhost:8080/about/2/index.shtml#lpbz1" target="_blank"
+                           rel="nofollow">理赔指南</a><a href="http://localhost:8080/lpzs/index.shtml" target="_blank"
+                                                     rel="nofollow">理赔报案</a>
+                        <a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔案例</a></dd>
+                </dl>
+                <dl class="m-footer-dl">
+                    <dt><em class="i-f-icon i-f-icon10 "></em>服务中心</dt>
+                    <dd><a href="http://localhost:8080/wj/shop/bill_query!queryBill.action" target="_blank"
+                           rel="nofollow">发票索取</a>
+                        <a href="http://localhost:8080/about/3/dayizonghui/index.shtml" target="_blank" rel="nofollow">常见问题</a>
+                    </dd>
+                </dl>
+                <div class="clear h20"></div>
+            </div>
+
+            <div class="clear h20"></div>
+            <!-- 热门专题 -->
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="g-btn-footer">
+        <div class="g-weaper1200">
+            <div class="g-f-left">
+                <div class="botlink02">
+                    <ul class="clearfix">
+                        <li><a href="http://localhost:8080/other/about/" rel="nofollow">关于开心保</a></li>
+                        <li>|</li>
+                        <li><a href="http://localhost:8080/other/news/" rel="nofollow">开心保要闻</a></li>
+                        <li>|</li>
+                        <!--<li><a href="http://localhost:8080/other/jobs/" rel="nofollow">加入开心保</a></li>
+                        <li>|</li>-->
+                        <li><a href="http://localhost:8080/other/sitemap/">网站地图</a></li>
+                        <li>|</li>
+                        <li><a href="http://localhost:8080/other/legal/" rel="nofollow">法律声明</a></li>
+                        <li>|</li>
+                        <li><a href="http://localhost:8080/other/contact/" rel="nofollow">联系我们</a></li>
+                        <li>|</li>
+                        <li><a href="http://u.kaixinbao.com/" target="_blank" rel="nofollow">分销联盟</a></li>
+                        <li>|</li>
+                        <!-- <li><a href="http://kaixinbao.tmall.com/" target="_blank" rel="nofollow">开心保天猫店</a></li>
+                        <li>|</li>
+                        <li><a href="http://temai.kaixinbao.com/" target="_blank" rel="nofollow">特价机票</a></li>
+                        <li><a href="http://wap.kaixinbao.com/" target="_blank" >移动版</a></li> -->
+                        <li><a href="http://www.kaixinbao.com/yxhd/isl-tra/" target="_blank" rel="nofollow">微信版</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">
+                    <div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank"
+                                                   rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a
+                            href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a
+                            href="http://localhost:8080/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a
+                            href="http://localhost:8080/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a>
+                    </div>
+                    <div class="copyrightleft">Copyright 2012-2016 版权所有 网金保险销售服务有限公司</div>
+                </div>
+            </div>
+            <div class="g-f-right">
+                <ul class="sl-floatcenter">
+
+
+                    <li class="sl-floatcenter-item"><a href="../../" target="_blank" rel="nofollow"><img
+                            src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36"
+                            height="33"/></a></li>
+
+
+                    <li class="sl-floatcenter-item"><a href="../../" target="_blank" rel="nofollow"><img
+                            src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69"
+                            height="33"/></a></li>
+
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div id="fix_nav" class="fix_nav">
+    <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow"
+       exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;">在线客服</a>
+    <span class="fix-RichScan ">保单查询<div style="display: none;" class="weixinDiv tagshow"><img
+            src="http://localhost:8080/images/wxnew.png">微信查保单</div></span>
+    <span class="fix-top" id="gotop">回到顶部</span>
+</div>
+<!-- 公共底部 -->
+<script type="text/javascript" src="http://localhost:8080/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jqueryupdate.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_base.js?version=20160930"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_header.js?version=20160930"></script>
+<script type="text/javascript"
+        src="http://localhost:8080/js/redesign/xiaoneng_CustomerService.js?version=20160930"></script>
+<script type="text/javascript" src="http://localhost:8080/js/artDialog.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/login.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/iframeTools.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+<div class="clear"></div>
+<div id="fix_vs" class="fix_vs">
+    <span class="g-vs-num" id="g-vs-num">0</span>
+    <div id="cpdiv" class="cpdiv">
+        <div class="comparediv">
+            <div class="closebtn">
+                <span onclick="close_h()" class="close_compare"></span>
+            </div>
+            <div class="comparedivcont">
+                <div class="comparedetail" style="display: none;" id="cpprodu1">
+
+                    <input type="hidden" name="productCodeA" id="productCodeA"/>
+                    <p>
+                        <span id="productnameA" class="compare_name"></span>
+                        <span id="productPremA" class="compare_pric" id=""></span>
+                        <span class="dblue cpdelico" onclick="closecp1()"></span>
+                    </p>
+                    <div class="clear"></div>
+                </div>
+                <div class="comparedetail" style="display:none;" id="cpprodu2">
+
+                    <input type="hidden" name="productCodeB" id="productCodeB"/>
+
+                    <p>
+                        <span id="productnameB" class="compare_name"></span>
+                        <span id="productPremB" class="compare_pric"></span>
+                        <span class="dblue cpdelico" onclick="closecp2()"></span>
+                    </p>
+                    <div class="clear"></div>
+                </div>
+                <div class="comparedetail" style="display:none;" id="cpprodu3">
+                    <input type="hidden" name="productCodeC" id="productCodeC"/>
+
+                    <p>
+                        <span id="productnameC" class="compare_name"></span>
+                        <span id="productPremC" class="compare_pric"></span>
+                        <span class="dblue cpdelico" onclick="closecp3()"></span>
+                    </p>
+                    <div class="clear"></div>
+                </div>
+                <div class="comparedetail" style="display:none;" id="cpprodu4">
+                    <input type="hidden" name="productCodeD" id="productCodeD"/>
+
+                    <p>
+                        <span id="productnameD" class="compare_name"></span>
+                        <span id="productPremD" class="compare_pric"></span>
+                        <span class="dblue cpdelico" onclick="closecp4()"></span>
+                    </p>
+                    <div class="clear"></div>
+                </div>
+                <div class="comparebtn">
+
+                    <span class="compare_submit"
+                          onclick="javascript:begincompare('http://localhost:8080/wj');subclosecp();"
+                          titile="提交对比">提交对比</span>
+                    <span class="compare_none" onclick="close_all();">清空</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <span class="cpdiv_jao"></span>
+        </div>
+    </div>
+    <a class="fixVs" href="javascript:void(0);" vlpageid="comp03" exturl="http://www.kaixinbao.com/comp03"
+       onclick="return(VL_FileDL(this));return false;">产品对比</a>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        jQuery("#mainArea").autoServChat();
+        jQuery(".productList").productOrderList();
+
+        jQuery(function () {
+
+            initProduct();
+            salesVolumeLoad();
+            searchProductListAvtivity();
+        });
+
+    });
+
+    //活动信息
+    function searchProductListAvtivity() {
+        var list = jQuery('p[id^=Activity_]');
+        var id = new Array(list.length);
+        var idStr = "";
+        for (var i = 0; i < list.length; i++) {
+            id[i] = list[i].id;
+            idStr += list[i].id;
+        }
+        if (idStr == "") {
+            return;
+        }
+        var cpsUserId = jQuery.cookie('cpsUserId');
+        var channelsn = "wj";
+        if (typeof(cpsUserId) != "undefined" && cpsUserId != null && cpsUserId != "") {
+            channelsn = "cps";
+        }
+        jQuery.ajax({
+            type: 'post',
+            url: sinosoft.base + '/shop/sales_volume!searchProductListAvtivityRe.action?productId=' + id + '&channelSn=' + channelsn,
+            dataType: "json",
+            async: false,
+            success: function (data) {
+                jQuery.each(data, function (index, object) {
+                    var index_productid = index.substring(0, index.indexOf("@"));
+                    if (object != null && object != '') {
+                        var obj_str = object + "";
+                        var activity_title = obj_str.substring(0, obj_str.indexOf("@"));
+                        var activity_description = obj_str.substring(obj_str.indexOf("@") + 1, obj_str.length);
+                        jQuery('#Diy_' + index_productid).show();
+                        jQuery('#Diy_Title_' + index_productid).show();
+                        document.getElementById("Diy_" + index_productid).innerHTML = activity_description;
+                        document.getElementById("Diy_Title_" + index_productid).innerHTML = activity_title;
+
+                        var activity_type = index.substring(index.indexOf("@") + 1);
+                        var active_class;
+                        if (activity_type == "x") {
+                            active_class = " active_07";
+                        } else if (activity_type == "1") {
+                            active_class = " active_06";
+                        } else if (activity_type == "2") {
+                            active_class = " active_05";
+                        } else if (activity_type == "3") {
+                            active_class = " active_04";
+                        } else if (activity_type == "6") {
+                            active_class = " active_02";
+                        } else if (activity_type == "7") {
+                            active_class = " active_08";
+                        } else if (activity_type == "8") {
+                            active_class = " active_03";
+                        } else if (activity_type == "9") {
+                            active_class = " active_09";
+                        }
+                        document.getElementById("Diy_Title_" + index_productid).className += active_class;
+                    }
+                });
+            }
+        });
+    }
+</script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.qtip.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/premcalculate.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_productCompare.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/tabchange.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/stencil/stencil_order.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/plugin.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_help.css">
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head> 
+
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!--导航开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+<!--导航结束-->
+<cms:include file="block/help_common_header.shtml" />
+      
+        <div class="grid-c3f help_m">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="help_bor_h">
+                    	<h3 class="help_titile2">新手指南</h3>
+                        <div class="help_con">
+                        	<b id="xszn1">注册新用户</b>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您可以点击网站首页左上方的“免费注册”按钮，跳转到注册页面，填写你常用的邮箱或手机号作为账号，设置以后登录用的密码，点击立即注册，即可成为我们尊贵的会员。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;会员享受众多权利，购买产品可以获得积分，可以在会员中心查看购买过的产品订单和电子保单等。
+如果您不注册，也可以购买产品，在购买成功后自动注册成为会员，您填写的投保人电子邮箱，将自动成为您登录的账号，密码会随支付成功后的邮件发送给您。</p>
+<br>
+<b id="xszn2">用户登录</b>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您可以点击网站首页左上方的“登录”，跳转登录页面后，填写正确的账号和密码，点击登录，即可登录成功。</p>
+ <br>
+<b id="xszn3">找回密码</b>
+<dl class="help_dl_list">
+  <dt><em>1</em>输入注册的电子邮箱或手机号码</dt>
+  <dd><p>在开心保登录页面，点击“忘记密码”，填写您在注册时使用的电子邮箱或手机号码，点击找回。</p>
+      <img src="${Site.StaticResourcePath}/images/help/help_07.gif">
+  </dd>
+  <dt><em>2</em>设置新密码</dt>
+  <dd><p>如果是邮箱，开心保会向您的邮箱发送一个找回密码的链接，请登录您的邮箱点击收到的链接，填写新密码并确认提交，新密码修改成功。找回密码的链接时效为24小时，过期需要重新按上述步骤操作!</p>
+    <p>如果是手机，开心保会向您的手机会发送验证码，填写您收到的验证码、新密码并确认提交，新密码即可修改成功。</p>
+     <img src="${Site.StaticResourcePath}/images/help/help_11.gif">
+  </dd>
+  <dt><em>3</em>修改密码成功</dt>
+  <dd>  <img src="${Site.StaticResourcePath}/images/help/help_14.gif"></dd>
+  <dd class="dd_end">END</dd>
+</dl>
+<b id="xszn4">网站购买流程</b>
+<dl class="help_dl_list">
+  <dt><em>1</em>挑选合适的产品</dt>
+  <dd>
+    <img src="${Site.StaticResourcePath}/images/help/help_17.gif">
+  </dd>
+  <dt><em>2</em>确认投保计划</dt>
+  <dd><p>在产品详情页确认投保计划</p>
+     <img src="${Site.StaticResourcePath}/images/help/help_19.gif">
+  </dd>
+  <dt><em>3</em>填写投保信息</dt>
+  <dd><p>1、投保人信息 <br>2、被投保人信息<br>3、核对购买产品信息</p><img src="${Site.StaticResourcePath}/images/help/help_22.gif"></dd>
+  <dt><em>4</em>核对投保信息</dt>
+  <dd> <p>预览提交页面， 核对投保信息</p><img src="${Site.StaticResourcePath}/images/help/help_24.gif"></dd>
+  <dt><em>5</em>支付购买产品</dt>
+  <dd> <p>我们提供的支付方式有：支付平台（支付宝、微信、财付通等）、信用卡、借记卡等，支持公司账户购买</p><img src="${Site.StaticResourcePath}/images/help/help_26.gif"></dd>
+  <dt><em>6</em>支付成功</dt>
+  <dd> <p>开心保会将电子保 单发送至投保人邮箱中，也可通过<a href="${Site.URL}/wj/shop/member_center!index.action">会员中心</a>查看订单 详情</p><img src="${Site.StaticResourcePath}/images/help/help_29.gif"></dd>
+  <dd class="dd_end">END</dd>
+</dl>
+                  </div>
+                    </div>
+				</div>
+			</div>
+			<cms:include file="block/help_common_sidebar.shtml" />
+		</div>
+        </div>
+
+
+
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+ 
+
+<script src="${Site.JsResourcePath}/js/sidebar-follow-jquery.js"></script>
+<script>
+/*侧边栏跟随配置*/
+(new SidebarFollow()).init({
+	element: jQuery('#sidebar_help'),
+	distanceToTop: 10
+});
+  
+  jQuery(document).ready(function() {
+	  jQuery(".help_tree").each(function(i, v) {
+		  jQuery(v).find("dd").each(function(j, o) {
+			 if (jQuery(o).find("a").attr("href").indexOf(window.location.href) >=0) {
+				 jQuery(v).addClass("help_select").siblings().removeClass("help_select");
+			 }
+		  })
+	  });
+	  jQuery(".help_tree dt").click(function(){
+	        var jPar = jQuery(this).parent();
+
+	        if(!jPar.hasClass("help_select")){
+	            jPar.addClass("help_select")
+	                .siblings()
+	                .removeClass("help_select");
+	        }
+	    });
+  });
+</script>
+
+</body>
+</html>

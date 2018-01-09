@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+String title = article.getString("MetaTitle");
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+    <ul class="car_mininav clearfix">                                               
+	   <li><a href="${Site.URL}/chexian/" title="返回车险首页">返回车险首页</a></li>
+	   <cms:list item="article"  level="all" name="车险对接保险公司" >
+	     <li><a href="${Site.URL}/${Article.Link}" class='<%if("平安车险".equals(article.getString("title"))) write("s_car_nav");%>' title="${Article.title}">${Article.title}</a></li>
+       </cms:list>
+	</ul>
+    <div class="car_banners">
+    <h1 class="dadi_titile pingan_titile meihua_p">| 平安车险</h1>
+    <img src="${Site.StaticResourcePath}/images/car/taiping_img_05.jpg" width="980" height="272" alt="平安车险" title="平安车险">
+	    <div class="libaojia pa_libaojia">
+	    <a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="bapjia_btn yangguang_btn">立即报价</a>
+        <div class="car_lp">
+        <span class="lp_box lp_box1"></span>
+        <span class="lp_box lp_box2">${Article.Gift}</span>
+        <span class="lp_box lp_box3"></span></div>
+	    </div>
+    </div>
+    <p class="car_desp pa_desp meihua_p">免手续费&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 多款组合&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一站报价</p>
+    <div class="car_border no_top_bor cf car_box4">
+    	<div class="col_list meihua_p dadi_p_col pingan_p_col floatl">平安车险</br>
+特色服务</div>
+<div class="youshi_list youshi_cson   floatr">
+<p class="ys_ps pa_ps"><span>快</span><em><i class="p_i_cuowei2">万元以下</i>
+<i>当日赔付</i></em></p>
+<p class="ys_ps pa_ps"><span>易</span><em><i class="p_i_cuowei1">单证齐全</i>
+    <i class="p_i_cuowei2">异地可理赔</i>
+</em></p>
+<p class="ys_ps pa_ps"><span>免</span><em><i class="p_i_cuowei1">无限次非事故</i>
+  <i class="p_i_cuowei2">道路救援</i>
+</em></p>
+
+</div>
+
+    </div>
+    <div class="car_border no_top_bor cf car_box2">
+      <div class="youshi_list floatl">
+      <dl class="fuwu_sf pa_fuwu_sf">
+      	    	<dt class="meihua_p">一站式服务</dt>
+        <dd>省：免费车船税代缴服务、<br>
+免费故障抢修服务<br>
+全：支持全国各大银行卡网上支付、<br>
+信用卡无卡支付、<br>
+POS机上门刷卡缴费服务<br>
+送：48小时内免费送单服务；</dd>
+      </dl>
+       <dl class="fuwu_sf fuwu_sf_s pa_fuwu_sf">
+      		<dt class="meihua_p">投保有礼
+</dt>
+        <dd>指定银行支付，可获丰厚豪礼；<br>
+平安汽车保险买哪些？<br>
+多组合车险套餐，<br>
+网上比价更划算<br>
+老客户独享续保快捷通道，<br>
+价格优惠，更有多重礼品赠送<br></dd>
+      </dl>
+      <dl class="fuwu_sf pa_fuwu_sf">
+      	<dt class="meihua_p">开心保用户尊享
+</dt>
+        <dd>凡通过平安电话车险或网上车险投保，<br>可免费享受非事故道路救援无限次！<br>
+服务项目：<br>
+·接电服务 ·更换轮胎 ·紧急送油<br>
+·紧急加水 ·现场抢修 ·拖车牵引<br>
+·吊装救援</dd>
+      </dl>
+      </div>
+      <div class="col_list meihua_p dadi_p_col floatr col_list2 pa_p_color">平安车险</br>
+投保优势</div>
+    </div>
+    
+      <div class="car_border no_top_bor cf car_box3">
+       <div class="col_list meihua_p dadi_p_col floatl col_list3 pa_p_color">平安车险</br>
+理赔服务</div>
+  <div class="youshi_list floatr">                
+  <ul class="serivce_list serivce_list2">
+  	<li>7×24小时车险理赔报案电话95511 </li>
+  	<li>车险专家现场办公，迅速查勘定损</li>
+  	<li>全国通赔，单证齐全即可当地理赔     </li>
+  	<li class="serivece1">万元以内车险责任事故，资料齐全，一个工作日内完成赔付</li>
+  	<li class="serivece2">"一袋式"理赔服务，服务案件类型范围内，专属快递上门收取理赔资料，赠送"理赔资料专用快递袋"</li>
+  </ul>
+  </div>
+      </div>
+      
+       <div class="car_border no_top_bor cf no_bor_btn car_box4">
+          <div class="col_list meihua_p dadi_p_col floatr col_list4 pa_p_color">平安车险</br>
+公司介绍</div>
+ <div class="youshi_list floatr"> 
+ 	<p class="js_con pa_desp3">平安车险是备受用户信赖和喜爱的车险品牌，平安电话车险及网上车险，<br>
+价格较传统私家车商业车险低15%，价格更透明，投保更优惠。平安车险提供在线报价及市场价格对比服务，<br>
+网上投保更尊享一站支付、快速理赔、车船税代缴等特色服务。</p>
+ </div>
+
+       </div>
+       <p class="car_desp meihua_p car_desp2 pa_tel ">平安电话车险：95511（7X24H） 平安车险咨询电话：40088-95512转1</p>
+       	<div class="clear h10"></div>
+	<div class="car_left floatl ">
+	<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html " target="_blank">
+	<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165"
+			alt="车险快速报价" title="车险快速报价"></a></div>
+		<cms:list item="Image"  name="车险图片"> 
+	      <div class="car_ad_l clearfix">
+		   <a href="${Image.wangzhi}" target="_blank">
+		       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+		   </a>
+		  </div>
+	    </cms:list> 
+	<div class="car_border_q cf">
+	<h2 class="car_l_title">其他车险公司</h2>
+	<ul class="car_gs_list ">
+			<cms:list item="friendlink" name="车险通用底部">
+				<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|CharWidth=15}</a></li>
+	        </cms:list>
+	</ul>
+	</div>
+	</div>
+       <div class="car_right floatr">
+         <div class="car_border_q cf"> 
+         	  <div class="car_l_title">意外保障 畅行无忧</div> 
+			     <cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+					<div class="cp_list_so">
+					    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+				    	<dl class="car_cp_des">
+			                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+				            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+							<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+				    	</dl>
+					</div>
+				 </cms:list>
+         </div>
+       </div>
+        <div class="clear"></div>
+        
+ 			<div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="平安车险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="平安车险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="平安车险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+		<cms:include file="block/community.shtml" />
+		<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+		<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

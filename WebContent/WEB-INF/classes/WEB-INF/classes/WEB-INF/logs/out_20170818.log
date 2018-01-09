@@ -1,0 +1,201 @@
+INFO: 17-08-18 17:20:35 ----CMS(中科软科技股份有限公司): Config Initialized----
+WARN: 17-08-18 17:20:36 ----Default.成功初始化10个连接
+INFO: 17-08-18 17:20:36 747ms	select type,value from zdconfig	{}
+INFO: 17-08-18 17:20:37 ----CMS(中科软科技股份有限公司): CronManager Initialized----
+INFO: 17-08-18 17:20:37 com.sinosoft.framework started!
+INFO: 17-08-18 17:20:37 7ms	select type code,value from zdconfig	{}
+INFO: 17-08-18 17:20:37 com.sinosoft.platform started!
+INFO: 17-08-18 17:20:37 pageSQL:select * from ZDCode
+INFO: 17-08-18 17:20:38 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:20:39 ----CMS(中科软科技股份有限公司): Clustering Initialized----
+INFO: 17-08-18 17:20:44 116ms	SELECT recognizeeName AS ChineseName,recognizeeEnName AS EnglishName,recognizeeIdentityTypeName AS DocumentType,recognizeeIdentityId AS DocumentNo,recognizeeSexName AS Gender,recognizeeBirthday AS BirthDay,PolicyNo AS Policy  FROM SDInformationInsured t1,SDInformationRiskType t2 WHERE t1.id = t2.sdinformationinsured_id AND t1.ordersn = '2013000132614898'	{}
+INFO: 17-08-18 17:20:44 合并成功！
+INFO: 17-08-18 17:21:39 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:22:39 2ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:22:39 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:23:01 ----CMS(中科软科技股份有限公司): Config Initialized----
+WARN: 17-08-18 17:23:07 ----Default.成功初始化10个连接
+INFO: 17-08-18 17:23:07 6124ms	select type,value from zdconfig	{}
+INFO: 17-08-18 17:23:07 ----CMS(中科软科技股份有限公司): CronManager Initialized----
+INFO: 17-08-18 17:23:07 com.sinosoft.framework started!
+INFO: 17-08-18 17:23:08 139ms	select type code,value from zdconfig	{}
+INFO: 17-08-18 17:23:08 com.sinosoft.platform started!
+INFO: 17-08-18 17:23:08 pageSQL:select * from ZDCode
+INFO: 17-08-18 17:23:08 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:23:09 ----CMS(中科软科技股份有限公司): Clustering Initialized----
+INFO: 17-08-18 17:23:12 189ms	SELECT recognizeeName AS ChineseName,recognizeeEnName AS EnglishName,recognizeeIdentityTypeName AS DocumentType,recognizeeIdentityId AS DocumentNo,recognizeeSexName AS Gender,recognizeeBirthday AS BirthDay,PolicyNo AS Policy  FROM SDInformationInsured t1,SDInformationRiskType t2 WHERE t1.id = t2.sdinformationinsured_id AND t1.ordersn = '2013000132614898'	{}
+ERROR: 17-08-18 17:23:12 net.sf.jasperreports.engine.JRException: Error retrieving field value from bean : ChineseName
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.data.JRAbstractBeanDataSource.getBeanProperty(JRAbstractBeanDataSource.java:123)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.data.JRAbstractBeanDataSource.getFieldValue(JRAbstractBeanDataSource.java:96)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.data.JRBeanCollectionDataSource.getFieldValue(JRBeanCollectionDataSource.java:100)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.fill.JRFillDataset.setOldValues(JRFillDataset.java:818)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.fill.JRFillDataset.next(JRFillDataset.java:782)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.fill.JRBaseFiller.next(JRBaseFiller.java:1448)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.fill.JRVerticalFiller.fillReport(JRVerticalFiller.java:108)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.fill.JRBaseFiller.fill(JRBaseFiller.java:923)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.fill.JRBaseFiller.fill(JRBaseFiller.java:845)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.fill.JRFiller.fillReport(JRFiller.java:85)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.JasperFillManager.fillReport(JasperFillManager.java:624)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.JasperFillManager.fillReport(JasperFillManager.java:540)
+ERROR: 17-08-18 17:23:12 	at com.wangjin.underwriting.UnderwritingOfflineInfo.main(UnderwritingOfflineInfo.java:659)
+ERROR: 17-08-18 17:23:12 Caused by: java.lang.NoSuchMethodException: Unknown property 'ChineseName' on class 'class com.wangjin.underwriting.Insured'
+ERROR: 17-08-18 17:23:12 	at org.apache.commons.beanutils.PropertyUtilsBean.getSimpleProperty(PropertyUtilsBean.java:1322)
+ERROR: 17-08-18 17:23:12 	at org.apache.commons.beanutils.PropertyUtilsBean.getNestedProperty(PropertyUtilsBean.java:770)
+ERROR: 17-08-18 17:23:12 	at org.apache.commons.beanutils.PropertyUtilsBean.getProperty(PropertyUtilsBean.java:846)
+ERROR: 17-08-18 17:23:12 	at org.apache.commons.beanutils.PropertyUtils.getProperty(PropertyUtils.java:426)
+ERROR: 17-08-18 17:23:12 	at net.sf.jasperreports.engine.data.JRAbstractBeanDataSource.getBeanProperty(JRAbstractBeanDataSource.java:111)
+ERROR: 17-08-18 17:23:12 	... 12 more
+INFO: 17-08-18 17:24:09 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:25:10 43ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:25:10 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:26:11 42ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:26:11 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:27:12 46ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:27:12 pageSQL:select * from ZDSchedule
+ERROR: 17-08-18 17:28:13 Default.:检测到连接使用超时302643，程序可能存在连接池泄漏，将自动关闭连接。以下是调用堆栈:
+ERROR: 17-08-18 17:28:13 	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:85
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:56
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:18
+	com.wangjin.underwriting.UnderwritingOfflineInfo.main(),行号:607
+
+INFO: 17-08-18 17:28:13 Default.:创建新连接，总数：10
+INFO: 17-08-18 17:28:13 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:29:05 ----CMS(中科软科技股份有限公司): Config Initialized----
+WARN: 17-08-18 17:29:11 ----Default.成功初始化10个连接
+INFO: 17-08-18 17:29:11 5825ms	select type,value from zdconfig	{}
+INFO: 17-08-18 17:29:11 ----CMS(中科软科技股份有限公司): CronManager Initialized----
+INFO: 17-08-18 17:29:11 com.sinosoft.framework started!
+INFO: 17-08-18 17:29:12 102ms	select type code,value from zdconfig	{}
+INFO: 17-08-18 17:29:12 com.sinosoft.platform started!
+INFO: 17-08-18 17:29:12 pageSQL:select * from ZDCode
+INFO: 17-08-18 17:29:12 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:29:13 ----CMS(中科软科技股份有限公司): Clustering Initialized----
+INFO: 17-08-18 17:29:14 48ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:29:14 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:29:16 42ms	SELECT recognizeeName AS ChineseName,recognizeeEnName AS EnglishName,recognizeeIdentityTypeName AS DocumentType,recognizeeIdentityId AS DocumentNo,recognizeeSexName AS Gender,recognizeeBirthday AS BirthDay,PolicyNo AS Policy  FROM SDInformationInsured t1,SDInformationRiskType t2 WHERE t1.id = t2.sdinformationinsured_id AND t1.ordersn = '2013000132614898'	{}
+ERROR: 17-08-18 17:29:16 net.sf.jasperreports.engine.JRException: Error retrieving field value from bean : ChineseName
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.data.JRAbstractBeanDataSource.getBeanProperty(JRAbstractBeanDataSource.java:123)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.data.JRAbstractBeanDataSource.getFieldValue(JRAbstractBeanDataSource.java:96)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.data.JRBeanCollectionDataSource.getFieldValue(JRBeanCollectionDataSource.java:100)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.fill.JRFillDataset.setOldValues(JRFillDataset.java:818)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.fill.JRFillDataset.next(JRFillDataset.java:782)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.fill.JRBaseFiller.next(JRBaseFiller.java:1448)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.fill.JRVerticalFiller.fillReport(JRVerticalFiller.java:108)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.fill.JRBaseFiller.fill(JRBaseFiller.java:923)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.fill.JRBaseFiller.fill(JRBaseFiller.java:845)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.fill.JRFiller.fillReport(JRFiller.java:85)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.JasperFillManager.fillReport(JasperFillManager.java:624)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.JasperFillManager.fillReport(JasperFillManager.java:540)
+ERROR: 17-08-18 17:29:16 	at com.wangjin.underwriting.UnderwritingOfflineInfo.main(UnderwritingOfflineInfo.java:659)
+ERROR: 17-08-18 17:29:16 Caused by: java.lang.NoSuchMethodException: Unknown property 'ChineseName' on class 'class com.wangjin.underwriting.Insured'
+ERROR: 17-08-18 17:29:16 	at org.apache.commons.beanutils.PropertyUtilsBean.getSimpleProperty(PropertyUtilsBean.java:1322)
+ERROR: 17-08-18 17:29:16 	at org.apache.commons.beanutils.PropertyUtilsBean.getNestedProperty(PropertyUtilsBean.java:770)
+ERROR: 17-08-18 17:29:16 	at org.apache.commons.beanutils.PropertyUtilsBean.getProperty(PropertyUtilsBean.java:846)
+ERROR: 17-08-18 17:29:16 	at org.apache.commons.beanutils.PropertyUtils.getProperty(PropertyUtils.java:426)
+ERROR: 17-08-18 17:29:16 	at net.sf.jasperreports.engine.data.JRAbstractBeanDataSource.getBeanProperty(JRAbstractBeanDataSource.java:111)
+ERROR: 17-08-18 17:29:16 	... 12 more
+INFO: 17-08-18 17:30:13 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:31:14 39ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:31:14 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:32:15 41ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:32:15 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:33:17 41ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:33:17 pageSQL:select * from ZDSchedule
+ERROR: 17-08-18 17:34:18 Default.:检测到连接使用超时303940，程序可能存在连接池泄漏，将自动关闭连接。以下是调用堆栈:
+ERROR: 17-08-18 17:34:18 	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:85
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:56
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:18
+	com.wangjin.underwriting.UnderwritingOfflineInfo.main(),行号:607
+
+INFO: 17-08-18 17:34:18 Default.:创建新连接，总数：10
+INFO: 17-08-18 17:34:18 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:35:19 56ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:35:19 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:36:20 46ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:36:20 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:37:21 45ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:37:21 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:37:38 ----CMS(中科软科技股份有限公司): Config Initialized----
+WARN: 17-08-18 17:37:44 ----Default.成功初始化10个连接
+INFO: 17-08-18 17:37:44 5707ms	select type,value from zdconfig	{}
+INFO: 17-08-18 17:37:44 ----CMS(中科软科技股份有限公司): CronManager Initialized----
+INFO: 17-08-18 17:37:44 com.sinosoft.framework started!
+INFO: 17-08-18 17:37:44 137ms	select type code,value from zdconfig	{}
+INFO: 17-08-18 17:37:44 com.sinosoft.platform started!
+INFO: 17-08-18 17:37:44 pageSQL:select * from ZDCode
+INFO: 17-08-18 17:37:44 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:37:45 ----CMS(中科软科技股份有限公司): Clustering Initialized----
+INFO: 17-08-18 17:37:48 47ms	SELECT recognizeeName AS ChineseName,recognizeeEnName AS EnglishName,recognizeeIdentityTypeName AS DocumentType,recognizeeIdentityId AS DocumentNo,recognizeeSexName AS Gender,recognizeeBirthday AS BirthDay,PolicyNo AS Policy  FROM SDInformationInsured t1,SDInformationRiskType t2 WHERE t1.id = t2.sdinformationinsured_id AND t1.ordersn = '2013000132614898'	{}
+ERROR: 17-08-18 17:37:48 net.sf.jasperreports.engine.JRException: Error trying to export to file : \alidata\kxb\offline\picc.pdf
+ERROR: 17-08-18 17:37:48 	at net.sf.jasperreports.engine.export.JRPdfExporter.exportReport(JRPdfExporter.java:386)
+ERROR: 17-08-18 17:37:48 	at net.sf.jasperreports.engine.JasperExportManager.exportReportToPdfFile(JasperExportManager.java:122)
+ERROR: 17-08-18 17:37:48 	at com.wangjin.underwriting.UnderwritingOfflineInfo.main(UnderwritingOfflineInfo.java:667)
+ERROR: 17-08-18 17:37:48 Caused by: java.io.FileNotFoundException: \alidata\kxb\offline\picc.pdf (另一个程序正在使用此文件，进程无法访问。)
+ERROR: 17-08-18 17:37:48 	at java.io.FileOutputStream.open(Native Method)
+ERROR: 17-08-18 17:37:48 	at java.io.FileOutputStream.<init>(FileOutputStream.java:194)
+ERROR: 17-08-18 17:37:48 	at java.io.FileOutputStream.<init>(FileOutputStream.java:145)
+ERROR: 17-08-18 17:37:48 	at net.sf.jasperreports.engine.export.JRPdfExporter.exportReport(JRPdfExporter.java:380)
+ERROR: 17-08-18 17:37:48 	... 2 more
+INFO: 17-08-18 17:38:13 ----CMS(中科软科技股份有限公司): Config Initialized----
+WARN: 17-08-18 17:38:19 ----Default.成功初始化10个连接
+INFO: 17-08-18 17:38:19 5601ms	select type,value from zdconfig	{}
+INFO: 17-08-18 17:38:19 ----CMS(中科软科技股份有限公司): CronManager Initialized----
+INFO: 17-08-18 17:38:19 com.sinosoft.framework started!
+INFO: 17-08-18 17:38:19 186ms	select type code,value from zdconfig	{}
+INFO: 17-08-18 17:38:19 com.sinosoft.platform started!
+INFO: 17-08-18 17:38:19 pageSQL:select * from ZDCode
+INFO: 17-08-18 17:38:20 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:38:21 ----CMS(中科软科技股份有限公司): Clustering Initialized----
+INFO: 17-08-18 17:38:24 50ms	SELECT recognizeeName AS ChineseName,recognizeeEnName AS EnglishName,recognizeeIdentityTypeName AS DocumentType,recognizeeIdentityId AS DocumentNo,recognizeeSexName AS Gender,recognizeeBirthday AS BirthDay,PolicyNo AS Policy  FROM SDInformationInsured t1,SDInformationRiskType t2 WHERE t1.id = t2.sdinformationinsured_id AND t1.ordersn = '2013000132614898'	{}
+INFO: 17-08-18 17:38:24 合并成功！
+INFO: 17-08-18 17:39:21 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:40:22 50ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:40:22 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:41:23 48ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:41:23 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:42:24 49ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:42:24 pageSQL:select * from ZDSchedule
+ERROR: 17-08-18 17:43:25 Default.:检测到连接使用超时302857，程序可能存在连接池泄漏，将自动关闭连接。以下是调用堆栈:
+ERROR: 17-08-18 17:43:25 	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:85
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:56
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:18
+	com.wangjin.underwriting.UnderwritingOfflineInfo.main(),行号:607
+
+INFO: 17-08-18 17:43:25 Default.:创建新连接，总数：10
+INFO: 17-08-18 17:43:25 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:44:26 45ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:44:26 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:45:28 44ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:45:28 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:46:29 49ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:46:29 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:47:30 44ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:47:30 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:48:31 44ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:48:31 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:49:32 43ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:49:32 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:50:33 347ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:50:33 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:51:34 43ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:51:34 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:52:34 43ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:52:34 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:53:35 51ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:53:35 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:54:36 44ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:54:36 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:55:37 43ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:55:37 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:56:38 44ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:56:38 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:57:39 44ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:57:39 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:58:40 44ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:58:40 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 17:59:41 43ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 17:59:41 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 18:00:42 43ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 18:00:42 pageSQL:select * from ZDSchedule
+INFO: 17-08-18 18:01:43 47ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-08-18 18:01:43 pageSQL:select * from ZDSchedule

@@ -1,0 +1,80 @@
+.indexmain { overflow:hidden; width:100%; }
+/*feature start*/
+.feature { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0px -760px; height:90px; overflow:hidden; width:100%; }
+.feature a { color:#838383; display:block; float:left; font-family:"微软雅黑"; font-size:18px; font-weight:bold; height:90px; overflow:hidden; line-height:90px; padding-left:66px; width:153px; }
+.feature a.featurepink:hover { color:#f38c8c; font-size:18px; }
+.feature a.featuregreen:hover { color:#7cddb9; font-size:18px; }
+.feature a.featureyellow:hover { color:#fbc061; font-size:18px; }
+.feature a.featureblue:hover { color:#8cd7f8; font-size:18px; }
+/*feature end*/
+/*which start*/
+.which { background:#f9f9f9; border:#cfcfcf 1px solid; margin-top:10px; position:relative; width:978px; }
+.whichtit { background:#f60; height:220px; overflow:hidden; text-align:center; vertical-align:middle; width:50px; }
+.whichtit h2 { color:#fff; font-family:"微软雅黑"; font-size:18px; font-weight:bold; line-height:24px; margin-top:42px; }
+.whichlist { left:60px; position:absolute; top:-7px; z-index:10; width:918px; }
+.whichlist li { float:left; padding:0 2px;}
+.whichlist li:hover { border-bottom:#e62601 3px solid; }
+/*which end*/
+/*owners_service start*/
+.owners_service { float:left; overflow:hidden; width:235px; }
+.owners_list { overflow:hidden; padding:10px 0 0 8px; }
+.owners_list ul { *display:inline-block; *float:left; *padding-bottom:10px; overflow:hidden; }
+.owners_list li {  border: 1px solid #E0E0E0;float: left;height: 95px;line-height: 20px; margin: 0 8px 10px 0; overflow: hidden; text-align: center; width: 64px; }
+.owners_list li:hover { border:#f60 1px solid; }
+.owners_list li a { color: #838383; display: block; height: 33px; padding-top: 62px; }
+.owners_list li a:hover { color:#f60; }
+.service_js { background:url(../../images/new_car/howbuy_bg.png) no-repeat 18px -920px; }
+.service_cx { background:url(../../images/new_car/howbuy_bg.png) no-repeat -98px -920px; }
+.service_zy { background:url(../../images/new_car/howbuy_bg.png) no-repeat -214px -920px; }
+.service_sy { background:url(../../images/new_car/howbuy_bg.png) no-repeat -332px -920px; }
+.service_dz { background:url(../../images/new_car/howbuy_bg.png) no-repeat -448px -920px; }
+.service_xz { background:url(../../images/new_car/howbuy_bg.png) no-repeat -566px -920px; }
+/*owners_service end*/
+/*indexmainlist*/
+.indexmainlist { background:url(../../images/new_car/howbuy_bg.png) no-repeat 160px -1920px; overflow:hidden; width:980px; }
+/*index_howbuy start*/
+.index_howbuy { float:right; overflow:hidden; width:735px;}
+.indexbuytable { width:100%; }
+.indexbuytable td { color:#838383; line-height:20px; overflow:hidden; padding:3px 10px; word-break:break-all; word-wrap:break-word; }
+.indexbuytable .borderb { border-bottom:#c3c3c3 1px solid; }
+.indexbuytable .borderr { border-right:#c3c3c3 1px solid; }
+.indexbuytable p { padding-top:50px; }
+.indexbuytable p a { color:#838383; font-family:"微软雅黑"; font-size:14px; font-weight:bold; }
+.indexbuytable p a:hover { color:#f60; font-size:14px; }
+.index_cai { background:url(../../images/new_car/howbuy_bg.png) no-repeat 50px -14px; }
+.index_old { background:url(../../images/new_car/howbuy_bg.png) no-repeat -189px -14px;}
+.index_women { background:url(../../images/new_car/howbuy_bg.png) no-repeat -431px -14px;}
+.indexbuytable a.bgf60 { background:#f60; color:#fff; padding:2px 5px; }
+.indexbuytable a.bgf60:hover { color:#fff; text-decoration:underline; }
+.indexbuytable a.orange { color:#f60;}
+.indexbuytable a.orange:hover { color:#f60; text-decoration:underline; }
+/*index_howbuy end*/
+/*index_news start*/
+.indexnewstit { border:#cacaca 1px solid; overflow:hidden; padding:10px 0 20px; position:relative; }
+.indexnewstit h2{ background:url(../../images/new_car/wrapper_bg.png) no-repeat -250px -350px; color:#fff; font-family:"微软雅黑"; font-size:18px; height:30px; line-height:30px; padding-left:20px; }
+.indexnewstit h2 a { color:#fff; font-size:18px; }
+.indexnewstit h2 a:hover{ color:#fff; font-size:18px; text-decoration:underline; }
+.indexnewstit h5 { border-bottom:#bebebe 1px dashed; font-size:14px; font-weight:bold; height:30px; line-height:30px; margin:30px 10px 0px; text-align:center; }
+.indexnewstit h5 a { color:#838383; font-size:14px; }
+.indexnewstit h5 a:hover { color:#f60; font-size:14px; }
+.indexnewstit h6 { line-height:20px; position:absolute; right:10px; _right:30px; bottom:10px; }
+.indexnewstit h6 a { color:#51a400; }
+.indexnewstit h6 a:hover { color:#51a400; text-decoration:underline; }
+.indexnewslist { overflow:hidden; padding:10px; }
+.indexnewslist ul { *display:inline-block; *float:left; overflow:hidden; width:100%; }
+.indexnewslist li{ background:url(../../images/new_car/wrapper_bg.png) no-repeat 0 -158px; height:22px; line-height:22px; overflow:hidden; padding-left:10px; }
+.indexnewslist li a { color:#838383; height:22px; line-height:22px; overflow:hidden; word-break:break-all; word-wrap:break-word; }
+.indexnewslist li a:hover { color:#f60; }
+/*index_news end*/
+
+/*linkweixin start*/
+.linkweixin { width:980px; }
+/*linkweixin end*/
+/*indexlink start*/
+.indexlink { float:left; overflow:hidden; width:735px; }
+.indexlinktit { background:url(../../images/new_car/wrapper_bg.png) no-repeat -360px -560px; border-bottom:#bebebe 1px dashed; height:30px; width:100%; }
+.indexlinktit h2 { color:#838383; font-size:14px; font-weight:bold; line-height:30px; margin-left:26px; }
+.indexlinklist { overflow:hidden; padding-top:10px;}
+.indexlinklist a{ color:#838383; display:block; float:left; overflow:hidden; padding:0 5px; text-align:center; width:80px; word-break:break-all; word-wrap:break-word; }
+.indexlinklist a:hover{ color:#f60; }
+/*indexlink end*/

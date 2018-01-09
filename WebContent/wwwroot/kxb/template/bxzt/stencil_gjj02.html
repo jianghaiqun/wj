@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+${catalog.meta_title}-${site.Meta_Keywords}
+</title>
+
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/base.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body>
+<!--临时head 开始-->
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<!--临时head 结束-->
+<!--位置信息 开始-->
+<div class="h10"></div>
+<div class="bread"><a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a></div>
+<!--位置信息 结束-->
+ <!--主体 开始-->
+<div class="wrap980 mainbgl644">
+	<!--左边 开始-->
+	<div class="left644">
+		<div class="stentit01">城市住房公积金查询</div>
+		<ul class="stenlist01">
+			<cms:list item="article"  name="公积金查询" >
+				<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=15}</a></li>
+			</cms:list>
+		</ul>
+		<div class="h30"></div>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="right336">
+		<!--热销保险产品 开始-->
+		<div class="columntit"><a href="javascript:void(0);">热销保险产品</a></div>
+		<ul class="hotprodu grayborderb">
+		<cms:list item="article" level="all" name="${catalog.ProductArea1}" type="rand"  count="5" >
+			<li>
+				<h4><a href="${Article.Link}"><img src="${Site.ProductResourcePath}/${Article.Logo}"  alt="标题" width="50" height="50" /></a></h4>
+			  	<div class="hotproduright">
+					<h5><a href="${Article.Link}" title="标题">${Article.title|CharWidth=15}</a></h5>
+					<h6>${Article.AdaptPeopleInfo|CharWidth=17}</h6>
+				</div>
+			</li>
+		</cms:list>	
+		</ul>
+		<!--热销保险产品 结束-->
+		<div class="tab02">
+			<div class="h30"></div>
+             <ul> 
+                <li id="one1" onMouseOver="setTab('one',1,4)" class="hover"><a href="javascript:void(0);">知识</a></li>
+				<li id="one2" onMouseOver="setTab('one',2,4)" ><a href="javascript:void(0);">资讯</a></li>
+				<li id="one3" onMouseOver="setTab('one',3,4)" ><a href="javascript:void(0);">百科</a></li>
+				<li id="one4" onMouseOver="setTab('one',4,4)" ><a href="javascript:void(0);">问答</a></li>
+             </ul>
+        </div>
+		<div class="clear"></div>
+		<div class="" id="con_one_1">
+			<ul class="txtlist">
+			<cms:list item="article" level="all" type="rand" tag="${catalog.list1tag}" count="16" name="保险知识">
+				<li><a href="${Article.Link}" title="标题" target="_blank">${Article.Title|CharWidth=17}</a></li>
+			</cms:list>
+			</ul>
+		</div>
+		<div class="" id="con_one_2" style="display:none;">
+			<ul class="txtlist">
+			<cms:list item="article" level="all" type="rand" tag="${catalog.list1tag}" count="16" name="保险资讯">
+				<li><a href="${Article.Link}" title="标题" target="_blank">${Article.Title|CharWidth=17}</a></li>
+			</cms:list>
+			</ul>
+		</div>
+		<div class="" id="con_one_3" style="display:none;">
+			<ul class="txtlist">
+			<cms:list item="article" level="all" type="rand" tag="${catalog.list1tag}" count="16" name="保险百科">
+				<li><a href="${Article.Link}" title="标题" target="_blank">${Article.Title|CharWidth=17}</a></li>
+			</cms:list>
+			</ul>
+		</div>
+		<div class="" id="con_one_4" style="display:none;">
+			<ul class="txtlist">
+			<cms:list item="article" level="all" type="rand" tag="${catalog.list1tag}" count="16" name="保险问答">
+				<li><a href="${Article.Link}" title="标题" target="_blank">${Article.Title|CharWidth=17}</a></li>
+			</cms:list>
+			</ul>
+		</div>
+        <div class="h30"></div>
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+ 
+ 
+ 
+<!--临时foot 开始-->
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<script src="${Site.JsResourcePath}/js/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#KinSlideshow").KinSlideshow({
+			moveStyle:"down",
+			intervalTime:8,
+			mouseEvent:"mouseover",
+			titleFont:{TitleFont_size:14,TitleFont_color:"#FF0000"}
+	});
+})
+</script>
+<!--临时foot 结束-->
+</body>
+</html>

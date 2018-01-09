@@ -1,0 +1,13 @@
+<% DataTable dt_28 = TemplateData.getDocList("article","业务","all","hot","modifyzx","1","null","null","null");
+  if(dt_28==null){write("没有找到栏目。parent：null  catalog："+"业务");}else{
+ int rdCnt=dt_28.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_28  = dt_28.getDataRow(i);
+ int rdIdx=i;
+%>
+
+									  <h4 class="news_ctTitle news_tab_jcct rnews_tl ellipsis"><a href="${article_28.Link}" >${article_28.Title}</a></h4> 
+									  <h4 class="rnews_prg">${article_28.Summary|CharWidth=36}</h4> 
+									  <a href="${article_28.Link}" class="rnew_more"> 【详情】</a>
+								  <%}}%>

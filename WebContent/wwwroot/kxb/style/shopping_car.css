@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body
+
+{
+
+	background-image:url(../images/scar_bg.png);
+	background-repeat:repeat-x;
+	height:1338px;
+	width:100%;
+
+}
+
+.sdong
+{
+
+	margin-top:20px;
+	margin-bottom:20px;
+	width:861px;
+	height:86px;
+	background-image:url(../images/dongshopa.png);
+	background-position:-5px -3px;
+
+}
+
+.xiangqing
+{
+
+	width:1000px;
+	height:33px;
+	border:1px solid #b79f63;
+	background-color:#fcfae1;
+	text-indent:20px;
+	text-align:left;
+	font-size:14px;
+	font-family:"宋体";
+	line-height:33px;
+
+}
+
+.xuana
+{
+
+	width:1000px;
+	text-align:left;
+	font-size:14px;
+	font-family:"宋体";
+	height:40px;
+	line-height:40px;
+	margin-top:10px;
+
+}
+
+.xuan
+{
+
+	float:left;
+	margin-left:10px;
+
+}
+
+.xuan_top
+{
+
+	width:1000px;
+	height:38px;
+	border:1px solid #b79f63;
+	background-image:url(../images/top_c_bg.png);
+	background-repeat:repeat-x;
+	text-indent:20px;
+	text-align:left;
+	font-size:14px;
+	font-family:"宋体";
+	line-height:38px;
+	margin-top:10px;
+	margin-bottom:5px;
+
+}
+
+.table_top
+{
+
+	float:left;
+
+}
+
+.table_content
+{
+
+	width:1000px;
+	height:85px;
+	line-height:85px;
+	border:1px solid #999999;
+
+}
+
+.line
+{
+
+	font-size:0px;
+	height:2px;
+	width:1000px;
+	background-color:#CCCCCC;
+	margin-top:5px;
+	margin-bottom:5px;
+
+}
+
+.ping
+{
+
+	background-image:url(../images/xingbutton.gif); background-position:-275px -320px; width:105px; height:39px;
+
+}
+
+.font1
+{
+
+ color:#333333; font-family:'宋体'; font-weight:bolder;
+}
+
+.font2
+{
+
+	margin-left:630px;font-family:'宋体';
+
+}
+
+.font3
+{
+	font-size:22px; font-family:'黑体'; font-weight:bold; color:#8f2a38;
+
+}
+
+.font4
+{
+
+	color:#333333; font-family:'宋体'; font-weight:bolder;
+
+}
+
+.font5
+{
+
+		margin-left:630px;font-family:'宋体';
+
+}
+
+.font6
+{
+
+	font-size:22px; font-family:'黑体'; font-weight:bold; color:#8f2a38;
+
+}
+
+.table_topa
+{
+
+	margin-left:150px; background-image:url(../images/xingbutton.gif); background-position:-265px -367px; background-repeat:no-repeat; width:113px; height:73px; margin-top:5px;
+
+}
+
+.top_a
+{
+
+	font-size:22px; font-family:'黑体'; font-weight:bold; color:#8f2a38; line-height:normal; margin-top:10px;
+	
+}
+
+.top_b
+{
+
+	 margin-left:20px;line-height:normal; margin-top:15px; font-size:12px; color:#FFFFFF;
+	 
+
+}
+
+.image_left
+{
+
+	background-image:url(../images/a1.png); background-repeat:repeat-x; background-position:left; width:32px; float:left;
+
+}
+
+.image_center
+{
+
+	background-image:url(../images/a1.png); background-repeat:repeat-x; background-position:center; width:35px; float:left;
+
+}
+
+.image_right
+{
+
+	background-image:url(../images/a1.png); background-repeat:repeat-x; background-position:right;width:38px; float:left;
+
+}
+
+.taikang
+{
+
+	background-image:url(../images/xingbutton.gif); width:100px; height:40px; background-position:-277px -275px;
+
+}
+
+.ee
+{
+
+	margin-left:100px;color:#333333; font-family:'宋体'; font-weight:bolder;
+
+}
+
+.ff
+{
+
+	margin-left:80px; background-image:url(../images/xingbutton.gif); background-position:-265px -367px; background-repeat:no-repeat; width:113px; height:73px; margin-top:5px;
+
+}
+
+.qian
+{
+
+	font-size:22px; font-family:'黑体'; font-weight:bold; color:#8f2a38; line-height:normal; margin-top:10px;
+
+}
+
+.ww
+{
+
+	margin-left:20px;line-height:normal; margin-top:15px; font-size:12px; color:#FFFFFF;
+
+}
+
+.rd
+{
+
+	 margin-top:10px;float:left; background-image:url(../images/crct.png); width:35px; height:24px;
+
+}
+
+.cb
+{
+
+	background-image:url(../images/crct.png); background-position:0 -50px;
+	width:35px; height:25px; margin-top:10px; margin-left:20px;
+
+}

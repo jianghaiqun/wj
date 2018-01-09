@@ -1,0 +1,191 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link href="${Site.StaticResourcePath}/style/redesign/re_header.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/activity.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_list.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/mod_style.css"/>
+<style type="text/css">
+/*add gdq 2015-5-4*/
+
+.editP,.editC,.hide,.edit,.hideCss,.remd,.operate,.proDel{font-size:0px; display: none;}
+</style>
+<script>complicatedFlag = "N"</script>
+<cms:include file="block/kxb_custom_header.shtml"/>
+</head>
+<%
+	String articleId = article.getString("ID");
+	
+	cn.com.sinosoft.action.shop.ProductMarketingAction pm = new cn.com.sinosoft.action.shop.ProductMarketingAction();
+	String color = pm.getBodyColor(articleId);
+	String meth = "<body onload='initProduct();salesVolumeLoad();' style='background-color:"+color+"'>";
+	write(meth);
+%>
+<style>
+.fix_nav{ top:65%;}
+</style>
+<div class="g-weaper"></div>
+<div id="wrapper">
+	<input type="hidden" id="sem_list" />
+	<div id="headerArea">
+		<div class="headerCont">
+			<h1><a href="${Site.URL}"><img src="${Site.StaticResourcePath}/images/sem/semlog_02.gif" alt="开心保 买保险就是买开心" /></a></h1>
+			<p class="tel">4009-789-789</p>
+			<ul id="menuArea">
+				<%
+					String articleId = article.getString("ID");
+					cn.com.sinosoft.action.shop.ProductMarketingAction pm = new cn.com.sinosoft.action.shop.ProductMarketingAction();
+					String meth = pm.getNavHtml(articleId);
+					write(meth);
+				%>
+			</ul>
+		</div>
+	<!-- end headerArea --></div>
+	<div id="mainArea">
+		<div id="bnrShow">
+			<p class="imgBnr">
+				<%
+					String articleId = article.getString("ID");
+					cn.com.sinosoft.action.shop.ProductMarketingAction pm = new cn.com.sinosoft.action.shop.ProductMarketingAction();
+					String link = pm.getBannerLink(articleId);
+					String path = pm.getBannerPath(articleId);
+					if(path=="" || path ==null){
+						path = com.sinosoft.framework.Config.getValue("StaticResourcePath")+"/images/img_banner.jpg";
+					}
+					String word = pm.getLeftWords(articleId);
+					String wordColor = pm.getLeftColor(articleId);
+					String wordBackColor = pm.getLeftWordBackColor(articleId);
+					String meth = "";
+					String wordStr = "";
+					if(word=="" || word ==null){
+						wordStr = "";
+					}else{
+						wordStr = "</p><p class='text' style='background-color:"+wordBackColor+";color:"+wordColor+"'>"+word;
+					}
+					if(link=="" || link ==null){
+						meth = "<img src='"+path+"' alt='' />";
+					}else{
+						meth = "<a href='"+link+"'><img src='"+path+"' alt='' /></a>";
+					}
+					write(meth+wordStr);
+				%>
+			</p>
+		</div>
+		<div class="productList section">
+			<div id="textIntro">
+				<p>
+				<%
+					String articleId = article.getString("ID");
+					cn.com.sinosoft.action.shop.ProductMarketingAction pm = new cn.com.sinosoft.action.shop.ProductMarketingAction();
+					String word = pm.getRightWords(articleId);
+					String link = pm.getRightWordLink(articleId);
+					String meth = "";
+					if(null==link || "" == link){
+						meth = word;
+					}else{
+						meth ="<a href='"+link+"'>"+word+"</a>";
+					}
+					write(meth);
+				%>
+				</p>
+			</div>
+			<%
+				String articleId = article.getString("ID");
+				cn.com.sinosoft.action.shop.ProductMarketingAction pm = new cn.com.sinosoft.action.shop.ProductMarketingAction();
+				String txtHtml = pm.getTxtHtml(articleId);
+				write(txtHtml);
+			%>
+		</div>
+		
+		<div id="introArea" class="section">
+				<%
+					String articleId = article.getString("ID");
+					cn.com.sinosoft.action.shop.ProductMarketingAction pm = new cn.com.sinosoft.action.shop.ProductMarketingAction();
+					String hid = pm.getPreHid(articleId);
+					String pic = pm.getPrePic(articleId);
+					if(pic=="" || pic ==null){
+						pic = com.sinosoft.framework.Config.getValue("StaticResourcePath")+"/images/img_intro_cont.jpg";
+					}
+					String meth = "";
+					if(!"Y".equals(hid)){
+						meth = "<div class='control'><div class='introCont'>"+
+						"<p class='showImg'><img src='"+pic+"' alt='' /></p>"+
+						"</div><div id='order_con'></div></div>";
+					}
+					write(meth);
+				%>
+		
+		
+		<!-- end introArea --></div>
+
+		
+		<div id="serviceArea" class="section">
+			<div class="guide_clm">
+				<p class="ttl">理赔指引</p>
+				<p class="img"><img alt="" src="${Site.StaticResourcePath}/images/sem/img_guide_clm.gif"></p>
+				<ol>
+					<li>
+						<strong>1 出险报案</strong>
+						发生保险事故后，请第一时间拨打开心保客服电话报案。开心保为您开通客服专线<span>4009-789-789</span>、在线客服以及客服邮箱<span><a href="mailto:kf@kaixinbao.com">kf@kaixinbao.com</a></span>等多种报案协助申请方式。
+					</li>
+					<li>
+						<strong>2 理赔申请</strong>
+						收集并提交相关材料办理理赔事项。
+					</li>
+					<li class="last">
+						<strong>3 结案赔付</strong> 等待理赔结果通知（一般案件会在10个工作日左右结案）。
+					</li>
+				</ol>
+			</div>
+		</div>
+		
+		<div id="menuBox">
+			<div class="menuBg">
+				<ul class="menuCont">
+					<%
+						String articleId = article.getString("ID");
+						cn.com.sinosoft.action.shop.ProductMarketingAction pm = new cn.com.sinosoft.action.shop.ProductMarketingAction();
+						String txtHtml = pm.getMenuCont(articleId);
+						write(txtHtml);
+					%>
+				</ul>
+			</div>
+		<!-- end menuBox --></div>
+		
+	<!-- end mainArea --></div>
+<!-- end wrapper --></div>
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<div class="clear"></div>
+<cms:include file="block/kxb_product_compare_v1.shtml" />
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	
+	jQuery("#mainArea").autoServChat();
+	jQuery(".productList").productOrderList();
+	
+	jQuery(function() {
+		
+		initProduct();
+		salesVolumeLoad();
+	});	
+	
+});
+</script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.qtip.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_productCompare.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/stencil/stencil_order.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/plugin.js"></script>
+</body>
+</html>

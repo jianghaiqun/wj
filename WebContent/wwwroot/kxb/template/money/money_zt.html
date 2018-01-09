@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="${catalog.Meta_Keywords}" />
+	<meta name="description" content="${catalog.Meta_Description}" />
+	<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/money/new_money.css"></head>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!--位置信息 开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link>
+		</div> 
+	</div>
+<!--位置信息 结束-->
+	<div class="money_warper cf">
+		<div class="money_nav cf">
+			<ul class="money_main_nav cf">
+				<li class="mon_nav1">
+					<a href="${Site.URL}/touzi-licai/">理财首页</a>
+				</li>
+				<li class="mon_nav2">
+					<a href="${Site.URL}/touzi-licai/zhishi/">如何理财</a>
+				</li>
+				<li class="mon_nav3">
+					<a href="${Site.URL}/touzi-licai/guihua/" class="active">理财规划</a>
+				</li>
+			</ul>
+		</div>
+	<div class="money_warper_up">
+		<img src="${Site.StaticResourcePath}/${Article.advertise}" width="978" height="189" class="planngingad m_zt_ad"  alt=""/>
+
+		<div class="money_zt_sbox">
+			<div class="zt_box_con cf">
+				<div class="zt_box_img zt_box_imgb fleft">
+					<img src="${Site.StaticResourcePath}/${Article.picture1}" width="196" height="204"  alt=""/>
+				</div>
+				<div class="zt_box_lists fright">
+					<dl class="licai_list">
+						<dt  class="licai_list_tit">
+						${Article.title1|CharWidth=16}
+						</dt>
+						<dd class="licai_list_dd">
+							${Article.text1|CharWidth=120}
+						</dd>
+					</dl>
+					<dl class="licai_list">
+						<dt  class="licai_list_tit">
+						${Article.title2|CharWidth=16}
+						</dt>
+						<dd class="licai_list_dd">
+							${Article.text2|CharWidth=120}
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="zt_box_con cf">
+				<div class="zt_box_img zt_box_imgb2 fright">
+					<img src="${Site.StaticResourcePath}/${Article.picture2}" width="196" height="204"  alt=""/>
+				</div>
+				<div class="zt_box_lists fleft">
+					<dl class="licai_list">
+						<dt  class="licai_list_tit">
+						${Article.title3|CharWidth=16}
+						</dt>
+						<dd class="licai_list_dd">
+							${Article.text3|CharWidth=120}
+						</dd>
+					</dl>
+					<dl class="licai_list">
+						<dt  class="licai_list_tit">
+						${Article.title4|CharWidth=16}
+						</dt>
+						<dd class="licai_list_dd">
+							${Article.text4|CharWidth=120}
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="zt_box_con cf">
+				<div class="zt_box_img zt_box_imgb fleft">
+					<img src="${Site.StaticResourcePath}/${Article.picture3}" width="196" height="204"  alt=""/>
+				</div>
+				<div class="zt_box_lists fright">
+					<dl class="licai_list">
+						<dt  class="licai_list_tit">
+						${Article.title5|CharWidth=16}
+						</dt>
+						<dd class="licai_list_dd">
+							${Article.text5|CharWidth=120}
+						</dd>
+					</dl>
+					<dl class="licai_list">
+						<dt  class="licai_list_tit">
+						${Article.title6|CharWidth=16}
+						</dt>
+						<dd class="licai_list_dd">
+							${Article.text6|CharWidth=120}
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<h3 class="money_l_title2">相关资讯</h3>
+			<ul class="m_list_ul cf">
+				<cms:list item="Article" cmsorder="1" level="all" type="rand" count="10" tag="${catalog.tag}" name="理财资讯" >	
+					<li class="m_list_li">
+						<a href="${Site.URL}/${Article.URL}" target="_blank">${Article.title|CharWidth=20}</a>
+					</li>
+		        </cms:list>
+				
+			</ul>
+		</div>
+		<h3 class="money_hot cf">热门推荐</h3>
+		<div class="money_tj_box money_tj_up cf">
+		  
+		   <cms:list item="article" cmsorder="2" level="all" count="2" hasAttribute="hot,newRecommend" name="理财保险">
+				<dl class="money_tj <% if(i==0) write("money_bor_bg");%>">
+				<dd>
+					<h2 class="money_tj_titile">
+						<a target="_blank" href="${Site.URL}/${Article.URL}">${article.title|CharWidth=15}</a>
+					</h2>
+					<p class="money_tj_des">${article.ERiskFeatures|CharWidth=60}</p>
+
+				</dd>
+				<dd class="money_tj_bom">
+					<p class="money_tj_sy">
+						预期年化收益率 <em>${article.ProfitRate}</em>
+					</p>
+					<a target="_blank" href="${Site.URL}/${Article.URL}" class="money_tj_go">查看详情</a>
+				</dd>
+				</dl>
+          	 </cms:list>
+			
+		</div>
+	</div>
+</div>
+	<div class="clear"></div>
+
+<cms:include file="block/kxb_footer_new_common.shtml"></cms:include>
+<cms:include file="block/community_v1.shtml" />
+
+</body>
+</html>

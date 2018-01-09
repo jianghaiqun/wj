@@ -1,0 +1,25 @@
+<% DataTable dt_0 = TemplateData.getDocList("article","保险问答","all","hp_recommend","modifyzx","4","null","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"保险问答");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	        <%if(i==0){%>
+	        	<li>
+	        <%}else{%>	
+				<li style="display: none;">
+			<%}%>
+	                <div class="question">
+	                    <div class="ans_tit"><a href="${article_0.Link}">${article_0.Title}</a></div><i class="icon"></i>
+	                </div>
+	                <div class="answer">
+	                    <div class="answer_p">${article_0.metadescription|CharWidth=100}
+	                    <br>
+	                        <a class="more" href="${article_0.Link}">查看更多&nbsp;&gt;</a>
+	                    </div> <i class="icon"></i>
+	                </div>
+	            </li>
+			<%}}%>

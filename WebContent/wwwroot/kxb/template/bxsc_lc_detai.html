@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+	<link href="${Site.StaticResourcePath}/style/new_information.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/money/new_money.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_list.css"/>
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css" />
+<style>
+#content {
+		width:100%;
+		margin: 0 auto;
+	}
+.top_b {
+    border: 1px solid #CCCCCC;
+    padding-bottom: 0;
+    position: relative;
+}
+.recommend_shop {
+    border: 2px solid #ED6D00;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+</style>
+</head>
+
+
+<body >
+		<div id="content" class="content">
+			<div class="content_right">
+				<div class="top_b">
+					<div class="top_aa">
+						<h1 class="shaixuan" >理财保险</h1></a>
+					</div>
+				</div>
+				
+				<div class="recommend_shop cf">
+                    <div id="shop_bosf">
+	                     <div class="money_cp_box cf">
+							<cms:list name="理财保险" level="all" item="article" count="6">
+                       			 <div class="money_linshi"><a target="_blank" href="${article.link}"><img src="${Site.StaticResourcePath}/${Article.ProductImg}" width="660" height="200"  alt=""/></a></div>
+							</cms:list>
+						</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+			</div>
+	<div class="clear"></div> 
+</body>
+
+</html>
+
+
+

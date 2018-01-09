@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>  
+<table>
+ <tr>
+	 <td>
+		 <table>
+					<tr>
+						<td>
+							<p class="path">您当前的位置：<cms:link type="currentPosition"></cms:link></p> 
+						</td>
+						<td>
+						</td>
+						
+					</tr> 
+					<tr>
+						<td>
+						    <input type="hidden" name="QuestionId" id="QuestionId" value="${article.id}"/>
+					        <input type="hidden" name="QuestionTitle" id="QuestionTitle" value="${article.title}"/>
+							<p>${article.title}</p>
+
+                           <p>作者：${article.author}</p>
+						</td>
+					</tr> 
+					<tr>
+						<td>
+							 ${article.content}
+						</td>
+                     
+					</tr> 
+                   <tr>
+						<td>
+							 ${PageBreakBar}
+						</td>
+                    
+					</tr>
+                   <tr>
+						<td>
+<cms:comment count="5">{ZCMS:评论区域}</cms:comment> 
+                       </td>
+                
+					</tr>
+		</table>
+	</td>
+<td>
+
+ <p >推荐文章</p>
+           <ul>
+           <cms:list item="Article" hasAttribute="relate" level="all">
+           <li><a href="${Site.URL}/${Article.Link}">${article.title}</a></li>                
+           </cms:list>
+           </ul>
+
+	
+
+</td>
+
+</tr>
+
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

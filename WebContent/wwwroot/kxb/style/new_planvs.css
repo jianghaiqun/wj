@@ -1,0 +1,43 @@
+@charset "utf-8";
+/*
+#@des:计划对比页面样式
+*@maker:dongqi.guo
+*@time:2013-5-8-14：00
+*/ 
+
+.plan_box{mangin:6px}
+.plan_box table{border:1px solid #E1E1E1}
+.plan_box table tr,.plan_box table td{border-collapse:0;border:1px solid #E1E1E1}
+.plan_box td{text-align:center;min-width:80px;border:1px solid #E1E1E1;padding:7px 0;color:#898989}
+.plan_box td span{display:block;line-height:1.7em;text-align:center;background:#F7F7F7;width:203px}
+.light_bg{background:#f7f7f7}
+.plan_box td span em,{font-size:14px;color:#EA5514;display:block;width:230px;font-weight:bold;margin:0 auto}
+.head_td em{font-size:14px;color:#EA5514;font-weight:bold}
+.head_td{text-align:center}
+.plan_box h2{font-size:16px;font-family:"微软雅黑","黑体",Arial, Helvetica, sans-serif; font-weight:bold; padding: 8px 0; color: #EA5514; }
+a.select_plan{ width: 66px; height: 25px; background:url(../images/select_plan_03.gif) no-repeat; display: block; line-height: 25px; color:#fff !important; margin: 0 auto;}
+a.select_plan:hover{ background-position:0px -38px; text-decoration:none;}
+
+    .hoverHilight {
+    background-color: #FFF5F0;
+    cursor: pointer;
+    }
+    .activeCellHilight {
+    background-color: #FFF5F0;
+    color:#898989;
+    }
+	.cp_des_con{ height:39px; border:1px solid #DFDFE0; background:#F7F7F7; border-bottom:none; line-height:39px; font-weight:bold; color:#EA5514; padding-left:58px; position:relative;}
+	.companies_logo{width:203px; position:absolute;   right: 0;top: -54px;}
+	.plan_box td.hilisgt_plan{ background:#FFF5F0; }
+	.table_td_liubai {position: relative; width: 203px;}
+	.plan_box td.table_td_liubai {position: relative; width: 203px;}
+	.dq_plan{ position:relative;position:relative; }
+	.dq_plan_s{ position:absolute; top:-31px; left:45px; width:54px; height:27px; background:url(../images/dqjh_03.gif);}
+	.plan_box td.table_td_liubai{ width:203px; position:relative;}
+
+	.head_td{ width:160px;}
+	.head_tds{ text-align:center; width:200px;}
+	.head_tds em{ font-weight:bold; color:#EA5515;}
+	.plan_box h2 span{ padding-left:8px;}
+	.prodcutDetail2 .CRiskAppDuty div span span{ float:none;}
+	

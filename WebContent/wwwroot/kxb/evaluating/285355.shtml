@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:cms="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>保险评测</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/redesign/re_header.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/new_information.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/skins/default.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/redesign/re_evaluating.css"/>
+</head>
+<body class="re-bg">
+
+
+<!-- 顶部 开始 -->
+<!--top头部-->
+<div class="g-top">
+    <div class="g-weaper1200">
+        <div class="m-login">
+        <div id="NotLogin"><span class="m-login-p f-ib">您好，请</span><span class="m-login-a" id="NotLoginSpan"><a href="javascript:void(0);" id="headerShowLoginWindow" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">登录</a><em>/</em>
+<a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">注册</a>
+        <span class="m-login-x" style="display:none"></span>
+        <!-- 未登录状态 显示图层 -->
+            <div class="m-login-no" style="display:none;">
+                <div class="m-lo-p">
+                    <div class="m-lo-img"></div>
+                    <img src="http://localhost:8080/images/redesign/photo_06.gif" alt="">
+                </div>
+                <div class="m-login-jf">
+                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag">会员专享，<br>积分换优惠</a>
+                </div>
+                <div class="clear h12"></div>
+                <div class="m-integral">
+                    <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                </div>
+                <div class="m-Coupon">
+                <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em>
+                </div>
+            </div>
+        <!-- 未登录状态 显示图层 end -->
+        </span></div>
+        <div id="YesLogin" style="display: none"><span class="m-login-p f-ib" id="YesLoginSpan">
+                                                 您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a>
+                                                 <i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+        
+        <span class="m-login-x" style="display:none"></span>
+        <!--登录状态显示图层 -->
+            <div class="m-login-yes z-hover-shadow"  style="display:none;">
+                   <div class="m-login-back">
+                       <span class="m-login-p m-login_p2">您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a><i id="headerLoginMemGradeIcon"  class="vip_k vip_top vip_k1" title=""></i></span><a href="javascript:void(0);" id="headerLogout" class="m-go-back">退出登录</a>
+                   </div> 
+                   <div class="m-lo-p">
+                    <div class="m-lo-img"><a href="###"></a></div>
+                    <img id="memberphoto" alt="">
+                   </div>
+                    <div class="m-login-user">
+                        <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="f_mi m-login-name2"></a><i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                        <p id="gradeinfo"></p>
+                    </div>
+                    <div class="clear h6"></div>
+                    <div class="m-integral2">
+                        <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                        <a id="memberPointsCount" href="http://localhost:8080/wj/shop/point!newList.action" class="m-jf-num"></a>
+                    </div>
+                    <div class="m-Coupon2">
+                    <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em><a id="CouponCount" href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="m-jf-num"></a>
+                    </div>
+            </div>
+        <!--登录状态显示图层 end -->
+           
+        </span></div>
+        </div>
+        <div class="m-top-fun">
+              <span class="m-fun-span f-ib m-tel"><em class="i-tel"></em><i class="p-tel">4009-789-789</i></span>
+              <em class="m-bor-l f-ib"></em>
+              <span class="m-fun-span f-ib m-WeChat" id="i-WeChat">
+                    <a href="###" class="m-fun-a hover"><em class="i-WeChat"></em></a>
+                    <div class="m-WeChatImg z-hover-shadow" style="display:none;">
+                            <img src="http://localhost:8080/images/redesign/wechart.gif" alt="">
+                            <p>关注微信公众号<br>轻松管理账单</p>
+                    </div>
+              </span>
+              <em class="m-bor-l f-ib"></em>
+              <span class="m-fun-span f-ib m-service" id="i-service">
+                    <a href="###"  class="m-fun-a "><em class="i-service"></em></a>
+                    <div class="m-service_con z-hover-shadow" style="display:none;">
+                         <ul class="m-service-li">
+                        <li><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单服务</a></li>
+                        <li><a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a></li>
+                        <li><a href="http://localhost:8080/lipei/" target="_blank" rel="nofollow">理赔申请</a></li>
+                    </ul>
+                    </div> 
+              </span>
+              <em class="m-bor-l f-ib"></em>
+              <span class="m-fun-span f-ib m-cart" id="i-user-cart-span"><a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-fun-a " onclick="wxsend('gwclogin');">
+                    <em class="i-cart"></em><i class="m-cartNum" id="shopCartNo">0</i></a>
+                      <!-- 用户未登录 -->
+                    <div class="m-user-no z-hover-shadow" id="m-cart-nologin" style="display:none;">
+                            <div class="m-user-noImg"></div>
+                            <span>请先登录</span>
+                            <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/gwclogin" vlpageid="gwclogin">登录</a>
+                    </div>
+                     <!-- 购物车为空 -->
+                    <div class="m-user-no z-hover-shadow" id="m-cart-no" style="display:none;">
+                            <div class="m-user-noImg"></div>
+                            <span>购物车中没有商品</span>
+                            <a href="http://www.kaixinbao.com" class="m-btn-login">去选购商品</a>
+                    </div>
+                     <!-- 购物车不为空 -->
+                   <div class="m-cart_list z-hover-shadow" id="m-cart-yes" style="display:none;">
+                        <ul class="m-cart-ul" id="shopcartinfo">
+                        
+                        </ul>
+                        <div class="m-cart-go">
+                            	共计<em id="shoptotal"></em> <a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-cart-to">去购物车</a>
+                        </div>
+                   </div>
+              </span>
+              <em class="m-bor-l f-ib"></em>
+              <span class="m-fun-span f-ib m-user" id="i-user-span"><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-fun-a " onclick="wxsend('memlogin');"><em class="i-user"></em></a>
+                    <!-- 用户未登录 -->
+                    <div class="m-user-no z-hover-shadow" id="m-user-no" style="display:none;">
+                            <div class="m-user-noImg"></div>
+                            <span>会员中心</span>
+                            <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/memlogin" vlpageid="memlogin">登录</a>
+                    </div>
+                    <!-- 用户已登录状态 -->
+                    <div class="m-user-yes z-hover-shadow" id="m-user-yes" style="display:none;">
+                      <dl class="m-order_dl m-order_dl1">
+                          <dt>我的保单</dt>
+                          <dd>
+                            <a id="prepay" href="http://localhost:8080/wj/shop/order_query!queryNoPayOrder.action" class="f-ib" rel="nofollow"></a>
+                            <a id="preeffecitive" href="http://localhost:8080/wj/shop/order_query!queryNoEffectOrder.action" class="f-ib" rel="nofollow"></a>
+                            <a id="effecitive" href="http://localhost:8080/wj/shop/order_query!queryEffectingOrder.action" class="f-ib" rel="nofollow"></a>
+                          </dd>
+                      </dl>
+                       <dl class="m-order_dl">
+                          <dt>账户中心</dt>
+                          <dd><a href="http://localhost:8080/wj/shop/profile!edit.action" class="f-ib" rel="nofollow">账户信息</a>
+                          <a href="http://localhost:8080/wj/shop/point!newList.action" class="f-ib" rel="nofollow">我的积分</a>
+                          <a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="f-ib" rel="nofollow">我的优惠券</a></dd>
+                      </dl>
+                       <dl class="m-order_dl">
+                          <dt>客户服务</dt>
+                          <dd><a href="http://localhost:8080/wj/shop/stow!queryScan.action" class="f-ib" rel="nofollow">我的收藏</a>
+                          <a href="http://localhost:8080/wj/shop/question!questionList.action" class="f-ib" rel="nofollow">保险问答</a>
+                          <a href="http://localhost:8080/wj/shop/member_comment!queryComment.action" class="f-ib" rel="nofollow">商品评价</a><a href="http://localhost:8080/wj/shop/my_compare!show.action" class="f-ib" rel="nofollow">对比记录</a>
+                          <a href="http://localhost:8080/wj/shop/my_consult!show.action" class="f-ib" rel="nofollow">我的咨询</a></dd>
+                      </dl>
+                    </div>
+              </span>
+              <em class="m-bor-l f-ib"></em>
+        </div>
+    </div>
+</div>
+<!--top头部end-->
+<!-- 顶部 结束 -->
+<div class="nav_box">
+    <div class="eav_nav">
+        <div class="eav_box">
+            <h2 class="eavlogo"><a href="http://localhost:8080/" >
+            </a></h2>
+            <ul class="eav_ul">
+    <li><a href="http://www.baidu.com" target="_Blank">12312123</a></li>
+    <li><a href="">标签2</a></li>
+    <li><a href="">标签3</a></li>
+    <li><a href="">标签4</a></li>
+    <li><a href="">标签5</a></li>
+</ul>
+        </div>
+    </div>
+</div>
+<!--位置信息 开始-->
+<div class="wrapper">
+    <div class="daohang">
+        <span class="daohang_home"></span>
+        <a href='../' target='_self' ><span class="orange">您所在的位置：首页</span></a><span class="separator">></span><a href='../evaluating/' target='_self'>保险评测</a> <span class="separator">></span>保险评测
+    </div>
+</div>
+<!--位置信息 结束-->
+<!--正文 开始-->
+<div class="wrapper" id="pc_box">
+    <div class="eav_left">
+        <div class="posright_box">
+            <!--正文 开始-->
+            <div class="article">
+                <h1 class="articletit">去高原旅游买什么保险好 美亚高原保险来保障</h1>
+                <div class="articledate02">
+                    发布日期：2016-12-21 10:59:54
+                    <span class="artic_time">分类：保险评测&nbsp;&nbsp;
+                        阅读(<em id="readCount">0</em>)&nbsp;&nbsp;
+                        评论(<em id="commentNum">0</em>)
+                    </span>
+                </div>
+                <div id="ajaxad">
+                    <!--循环：page count：50-->
+
+                        <div id="article_1"><p>现如今，不少人愿意通过旅游来缓解工作和生活中的压力，不断开发旅游线路和旅行项目让旅游行程变得丰富多彩，高原旅游热的到来让一大批青年旅游爱好者一下子涌入川藏线，也让他们一下子发生了高原反应而措手不及，没有做好充足的准备就前往高原旅游是旅行不顺利的主要原因，而没有投保专门的美亚高原旅游保险也成为高原旅游者的遗憾。</p>
+<p>2012年10月，上海姑娘金玲因赴西藏产生高原反应命丧&ldquo;新藏线&rdquo;的消息再次引发了大家对高原旅游潜在风险的关注。在高原地区，任何的不适都应当引起重视，特别是易引发高原肺水肿、脑水肿从而危及生命的感冒症状，更不能大意，应该立即服用抗感冒药并撤往低海拔地区就医，而且应该等到身体恢复后再继续行程。</p>
+<p><strong>去高原旅游<a href="http://www.kaixinbao.com/huati/A07G20150717005.shtml" target="_blank" title="买什么保险好">买什么保险好</a>？<a href="http://www.kaixinbao.com/zhuanti/A07B20140319005.shtml" target="_blank" title="旅游意外险">旅游意外险</a>和意外<a href="http://www.kaixinbao.com/jiankang-baoxian/zhongdajibing/" target="_blank" title="医疗险">医疗险</a>能不能保&ldquo;高原反应&rdquo;？&nbsp;</strong></p>
+<p>如今，人们的保险意识也增强了，很多人在出游前都会购买旅游保险来保障行程安全，几元几十元就能解决几万几十万的保障问题，可谓是花小钱办大事。但是对于&ldquo;如果高原反应导致身故、伤残或医疗，意外险或意外医疗险应不应该赔？&rdquo;这个问题很多人都觉得这是旅游意外，当然应该赔。</p>
+<p>其实，意外类保险只承保由意外伤害引起的事故，且在合同中都会载明&ldquo;意外伤害是指遭受外来的、突发的、非本意的、非疾病的使身体受到伤害的客观事件。&rdquo;而高原反应并非意外事故，而是一种疾病，这一项目在很多旅游保险中都做为了免责条款来处理。</p>
+<p>前往投保：<strong><span style="color: rgb(255,0,0)"><a target="_blank" href="http://www.kaixinbao.com/lvyou-baoxian/265823.shtml"><span style="color: rgb(255,0,0)">美亚高原旅游保险</span></a></span></strong></p>
+<p><strong>赴高原地区旅游应投保专门的高原保险</strong></p>
+<p>旅游<a href="http://www.kaixinbao.com/zixun/hangye/CG20121130038.shtml" target="_blank" title="保险专业">保险专业</a>人士表示，对去高原的游客，高原反应并不在短期意外险的保障范围，还需要另外购买一份高原保险，或者选择保险责任中含有高原反应保障责任的旅游保险，例如美亚高原保险。</p>
+<p>美亚高原保险其实是<a href="http://www.kaixinbao.com/lvyou-baoxian/265823.shtml" target="_blank" title="美亚畅游神州境内旅行保障计划">美亚畅游神州境内旅行保障计划</a>，是专为在国内旅游的人士提供旅游行程保障的，其中包含了高原反应、中暑等急性病保障责任，尤其适用于高原旅游者，因此，美亚畅游神州保险又是一款美亚高原旅游保险。</p>
+<p><strong>如何避免&ldquo;高原反应&rdquo;？</strong></p>
+<p>专家提醒，去高原地区之前，应该先做好体检，患有慢性阻塞性肺病、间质性肺病、各种呼吸功能不全、器质性心脏病、脑血管疾病、高血压病、胃肠道疾病、神经与精神性疾病、严重慢性疾病等的病人不适合去高原地区，无法确定安全性时，应该接受低氧试验；而一旦确定出行，最好携带红景天、肌肝片、葡萄糖、止痛片、感冒药等预防及缓解药品，也可在进高原的前两天开始服用复方党参片，每天8片。另外，海拔越高，高原反应的发病率也越高，超过海拔2400米之后，每升高600米，最好停下来休息1-2天，等身体适应后再继续登高；如果出现咳嗽、发热等感冒症状，应该立刻服用抗感冒药并赶紧就医，以免病情恶化导致高原脑水肿、肺水肿而危及生命。</p></div>
+                    
+                </div>
+            </div>
+            <!--正文 结束-->
+            <!--分页 开始-->
+            <div class="plpage">
+                <div id="pagination"><input id="listProductCount" value="129" type="hidden">
+                    <ul id="page_nav" class="pagenav">
+                        <!--循环：page count：50-->
+
+                            
+                        
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--分页 结束-->
+            <div class="share_tag">
+                <!--分享到 开始-->
+                <div class="articleshare">
+                    <div class="bshare-custom icon-medium">
+                      <span class="articlekeyword"><font size="2">分享到：</font>
+                        <a class="bshare-qzone" title="分享到QQ空间"></a>
+                        <a class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+                        <a class="bshare-renren" title="分享到人人网"></a>
+                        <a class="bshare-douban" title="分享到豆瓣"></a>
+                        <a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+                      </span>
+                    </div>
+                    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+                    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                </div>
+                <!--分享到 结束-->
+                <div class="clear"></div>
+                <!--SEO标签 开始-->
+                <div class="articlekeyword">关键词：<span>标签三</span></div>
+                <!--SEO标签 结束-->
+            </div>
+        </div>
+        <!--用户讨论区 开始-->
+        <div class="userabout">
+            <script src="http://localhost:8080/wj/Services/EvalCommentList.jsp?RelaID=285355&CatalogID=10309&CatalogType=1&SiteID=221&Count=10"></script>
+        </div>
+        <!--用户讨论区 结束-->
+    </div>
+    <div class="eav_right">
+        <div class="post_right">
+            <div class="columntit graybordert">精选推荐</div>
+            <ul class="txtlist hot_txtlist">
+
+                
+
+                    <li><a href="../evaluating/285354.shtml" target="_blank">复活”保罗沃克</a></li>
+                
+
+                    <li><a href="../evaluating/285338.shtml" target="_blank">开心保爱心保险</a></li>
+                
+
+                    <li><a href="../evaluating/285352.shtml" target="_blank">买重疾险的四条须知</a></li>
+                
+
+                    <li><a href="../evaluating/285351.shtml" target="_blank">老年人重大疾病保险应该怎么买老年人重大疾病保险应该怎么买</a></li>
+                
+
+                    <li><a href="../evaluating/285350.shtml" target="_blank">大陆赴台自由行第五批城市确定</a></li>
+                
+            </ul>
+            <div class="h12"></div>
+            <div class="columntit graybordert">热门直达</div>
+            <div class="hot_tagsc">
+                <!--循环：friendlink count：12-->
+
+
+                    <a href="http://" class="tage0">热点五</a>
+                
+
+                    <a href="http://" class="tage1">热点四</a>
+                
+
+                    <a href="http://localhost:8080/evaluating/285338.shtml" class="tage2">热点三</a>
+                
+
+                    <a href="http://" class="tage3">热点二</a>
+                
+
+                    <a href="http://" class="tage4">热点一</a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
+<div id="fix_nav" class="fix_nav">
+    <span class="fix-onlineqq "  onclick="javascript:openChat('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDExODA2Nl8yNzg4MDVfODAwMTE4MDY2XzJf');return(VL_FileDL(this));return false;" >在线客服</span>
+    <span class="fix-RichScan ">扫一扫<div style="display: none;" class="weixinDiv tagshow"><img src="http://localhost:8080/images/wxnew.png">关注领优惠券</div></span>
+    <span class="fix-top" id="gotop">回到顶部</span>
+</div>
+
+<!-- 底部 开始 -->
+<div class="g-main-con g_mac_con">
+    <div class="g-weaper g_new_footer">
+        <dl class="m-footer-dl">
+            <dt class="f_mi"><em class="i-f-icon i-f-icon1 "></em></dt>
+            <dd>中国保监会监制</dd>
+            <dd>保险公司专供</dd>
+        </dl>
+        <dl class="m-footer-dl">
+            <dt class="f_mi"><em class="i-f-icon i-f-icon2 "></em></dt>
+            <dd>全方位一键对比</dd>
+            <dd>1对1保险顾问指导</dd>
+        </dl>
+        <dl class="m-footer-dl">
+
+            <dt class="f_mi"><em class="i-f-icon i-f-icon4 "></em></dt>
+            <dd>电子保单快捷变更</dd>
+            <dd>免费协助理赔无差异</dd>
+        </dl>
+        <dl class="m-footer-dl">
+            <dt class="f_mi"><em class="i-f-icon i-f-icon3 "></em></dt>
+            <dd>7x24小时客服不间断</dd>
+            <dd>风险提示保障安全</dd>
+        </dl>
+        <dl class="m-footer-dl">
+            <dt class="f_mi"><em class="i-f-icon i-f-icon5 "></em></dt>
+            <dd>4年300万用户选择</dd>
+            <dd>2013年最佳保险中介</dd>
+            <dd>20家知名保险公司合作</dd>
+        </dl>
+    </div>
+    <div class="clear"></div>
+    <div class="new_footercopy">
+        <div class="g-weaper ">
+            <div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://resource.kaixinbao.com/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://resource.kaixinbao.com/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+            <div class="copyrightleft">Copyright 2012-2016 版权所有 网金保险销售服务有限公司</div>
+        </div>
+    </div>
+</div>
+<!-- 底部 结束 -->
+
+<script type="text/javascript" src="http://localhost:8080/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_header.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/login.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/artDialog.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/iframeTools.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_evaluating.js"></script>
+<script>
+    jQuery("#page_nav li").tagclickbind({con:'ajaxad',addstyle:'now',nav:'page_nav'});
+    new praise({mestxtFn:showtip,mesbtnFn:submes,tagtnFn:praisefun,deltnFn:delComment});
+    new loadpagetip();
+    new showCommentNum();
+    new autoReadCount();
+
+    jQuery(".eav_nav").fixedNavigation({
+        fixName: "pcfixed"
+    });
+
+    jQuery(".post_right").fixedNavigation({
+        fixName: "pcfixed",
+        boxElm:".posright_box"
+    });
+
+    /**
+     * 阅读数增加
+     *
+     */
+    function autoReadCount() {
+        // 文章ID
+        var relaID = jQuery("#RelaID").val();
+        jQuery.ajax({
+            url: sinosoft.base+"/shop/eval_comment!autoReadCount.action?relaID="+relaID,
+            type: "post",
+            dataType: "json",
+            success: function(data) {
+                if (data.status == "success") {
+                    jQuery("#readCount").html(data.message);
+                }
+            }
+        });
+    }
+    /**
+     * 点赞回调函数
+     *
+     */
+    function praisefun(dom){
+        var commentId = jQuery(dom).attr('name');
+        var flag;
+       // 判断当前点赞状态
+        if(jQuery(".praise").hasClass('pressed')) {
+            // 取消点赞
+            flag = "P";
+        } else {
+            // 点赞
+            flag = "C";
+        }
+        jQuery.ajax({
+                url: sinosoft.base+"/shop/eval_comment!dealPraised.action?commentId="+commentId+"&flag="+flag,
+                type: "post",
+                dataType: "json",
+                success: function(data) {
+                    if (data.status == "success") {
+                        jQuery("#praised_"+commentId).html(data.message);
+                    } else {
+                        art.dialog({
+                            title:'消息',
+                            follow: document.getElementById('user_text'),
+                            content: data.message
+                        });
+                    }
+                }
+            });
+    }
+    /**
+     * 评论数刷新
+     *
+     */
+    function showCommentNum() {
+        jQuery.ajax({
+            url: sinosoft.base+"/shop/eval_comment!getCommentNum.action?relaID=285355",
+            type: "post",
+            dataType: "json",
+            success: function(data) {
+                if (data.status == "success") {
+                    jQuery("#commentNum").html(data.message);
+                }
+            }
+        });
+    }
+    /**
+     * 鼠标移动到评论框中
+     *
+     */
+    function showtip(){
+        var display = jQuery("#YesLogin").css('display');
+        if(display == 'none') {
+            art.dialog({
+                title: '提示',
+                follow: document.getElementById('user_text'),
+                content: '游客身份无法收到评论回复哦~',
+                button: [
+                    {
+                        name: '登陆/注册',
+                        callback: function () {
+                            artLogin();
+                            return;
+                        },
+                        focus: true
+                    }
+                ]
+                ,
+                close: function () {
+                    jQuery("#user_text").focus();
+                }
+            });
+        }
+    }
+    /**
+     * 评论
+     *
+     */
+    function submes(){
+        // 文章ID
+        var relaID = jQuery("#RelaID").val();
+        // 评论内容
+        var comContent = jQuery("#user_text").val();
+        // CatalogID
+        var catalogID  = jQuery("#CatalogID").val();
+        // SiteID
+        var siteID  = jQuery("#SiteID").val();
+        // catalogType
+        var catalogType = jQuery("#CatalogType").val();
+
+        if (comContent == '') {
+            art.dialog({
+                title:'消息',
+                follow: document.getElementById('user_text'),
+                content: '请填写评论内容'
+            });
+            return;
+        }
+        jQuery.ajax({
+            url: sinosoft.base+"/shop/eval_comment!subComment.action",
+            data: {"relaID":relaID,"comContent":comContent,"catalogID":catalogID,"catalogType":catalogType,"siteID":siteID,"title":"去高原旅游买什么保险好 美亚高原保险来保障"},
+            type: "post",
+            dataType: "json",
+            success: function(data) {
+                if (data.status == "success") {
+                    art.dialog({
+                        title:'消息',
+                        follow: document.getElementById('user_text'),
+                        content: '评论已提交，待审核~'
+                    });
+                    jQuery("#user_text").val("");
+                } else {
+                    art.dialog({
+                        title:'消息',
+                        follow: document.getElementById('user_text'),
+                        content: '评论失败了呦，请重新评论吧'
+                    });
+                }
+            }
+        });
+    }
+
+    /**
+     * 删除评论
+     *
+     * @param id
+     */
+    function delComment(dom) {
+        var id = jQuery(dom).attr('name');
+        art.dialog({
+            title:'提示',
+            content: '是否删除此条评论？',
+            button: [
+                {
+                    name: '删除',
+                    callback: function () {
+                        jQuery.ajax({
+                            url: sinosoft.base+"/shop/eval_comment!delComment.action?commentId="+id,
+                            type: "post",
+                            dataType: "json",
+                            success: function(data) {
+                                if (data.status == "success")
+                                {
+                                    art.dialog({
+                                        title:'消息',
+                                        follow: document.getElementById('user_text'),
+                                        content: '评论删除'
+                                    });
+                                    jQuery(dom).parents(".user_mes").slideUp(300, function() {
+                                        jQuery(dom).parents(".user_mes").remove();
+                                    })
+                                } else {
+                                    art.dialog({
+                                        title:'消息',
+                                        follow: document.getElementById('user_text'),
+                                        content: '评论删除发生错误'
+                                    });
+                                }
+                            }
+                        });
+                    },
+                    focus: true
+                },
+                {
+                    name: '取消'
+
+                }
+
+            ]
+
+        });
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+String title = article.getString("MetaTitle");
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css" />
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+   <cms:include file="block/kxb_header_index_new.shtml" />
+	<div class="wrapper cf">
+	    <ul class="car_mininav clearfix">                                               
+		   <li><a href="${Site.URL}/chexian/" title="返回车险首页">返回车险首页</a></li>
+	   <cms:list item="article"  level="all" name="车险对接保险公司" >
+	     <li><a href="${Site.URL}/${Article.Link}" class='<%if("大地车险".equals(article.getString("title"))) write("s_car_nav");%>' title="${Article.title}">${Article.title}</a></li>
+       </cms:list>
+		</ul>
+	<div class="car_banners">
+	<h1 class="dadi_titile meihua_p">| 大地车险报价</h1>
+	<img src="${Site.StaticResourcePath}/images/car/dadicar_10.jpg" width="979" height="286" alt="大地车险" title="大地车险"/>
+	<div class="libaojia"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="bapjia_btn" >立即报价</a>
+	<div class="car_lp"><span class="lp_box lp_box1"></span> <span
+		class="lp_box lp_box2">${Article.Gift}</span> <span class="lp_box lp_box3"></span></div>
+	</div>
+	</div>
+	<p class="car_desp meihua_p">大地车险无限次七星级非事故道路救援</p>
+	<div class="car_border no_top_bor cf car_box1">
+	<div class="col_list meihua_p dadi_p_col floatl">大地车险<br/>
+	投保优势</div>
+	<div class="youshi_list floatr">
+	<p class="ys_ps"><span>快</span><em><i class="p_i_cuowei2">48小时内</i>
+	<i>免费送单上门</i></em></p>
+	<p class="ys_ps"><span>免</span><em><i class="p_i_cuowei1">免费享受</i>
+	<i class="p_i_cuowei2">非事故道路</i> <i>救援无限次</i></em></p>
+	<p class="ys_ps"><span>优</span><em><i class="p_i_cuowei1">网销客户专享</i>
+	<i class="p_i_cuowei2">优先勘察、优先定损、</i> <i>优先理赔</i></em></p>
+	<p class="ys_ps"><span>赔</span><em><i class="p_i_cuowei2">异地出险</i>
+	<i>全国通赔</i></em></p>
+	<p class="ys_ps"><span>代</span><em><i class="p_i_cuowei2">代办车辆</i>
+	<i>年审服务</i></em></p>
+	<p class="ys_ps"><span>援</span><em><i class="p_i_cuowei2">无限次道</i>
+	<i>路救援服务</i></em></p>
+	</div>
+
+	</div>
+	<div class="car_border no_top_bor cf car_box2">
+	<div class="youshi_list floatl">
+	<dl class="fuwu_sf">
+		<dt class="meihua_p">全天投保<br/>
+		协助服务</dt>
+		<dd>95590车险理赔专线，7X24小时受理客户<br/>
+		报案、咨询、投诉、查询、车辆救援及<br/>
+		投保预约服务。</dd>
+	</dl>
+	<dl class="fuwu_sf fuwu_sf_s">
+		<dt class="meihua_p">RAS快速 <br/>
+		定损服务</dt>
+		<dd>小额案件现场打印定损单，最快<br/>
+		3分钟完成查勘、定损等全部理<br/>
+		赔操作。</dd>
+	</dl>
+	<dl class="fuwu_sf">
+		<dt class="meihua_p">车险理赔零单证及 <br/>
+		上门收单服务</dt>
+		<dd>符合条件客户可享受上门收单服务，<br/>
+		同名转账即可完成赔付。</dd>
+	</dl>
+	</div>
+	<div class="col_list meihua_p dadi_p_col floatr col_list2">大地车险</br>
+	专属服务</div>
+	</div>
+	
+	<div class="car_border no_top_bor cf car_box3">
+	<div class="col_list meihua_p dadi_p_col floatl col_list3">大地车险</br>
+	理赔服务</div>
+	<div class="youshi_list floatr">
+	<ul class="serivce_list">
+		<li>简单案件实时反应，迅速处理</li>
+		<li>小额定损可现场赔付</li>
+		<li>移动查勘，理赔零单证</li>
+		<li>一地投保，全国通赔</li>
+		<li>人伤案件免费救援</li>
+		<li>上门定损，提供客户出现维修指导</li>
+	</ul>
+	</div>
+	</div>
+	
+	<div class="car_border no_top_bor cf no_bor_btn car_box4">
+	<div class="col_list meihua_p dadi_p_col floatr col_list4">大地车险</br>
+	介绍</div>
+	<div class="youshi_list floatr">
+	<p class="js_con">中国大地财产保险股份有限公司是一家专业财险公司，总部设在上海，注册资金47.2亿元人民币。大地财险拥有一批专业的管理队伍和业务精英，在车辆保险方面具有丰富的行业经验。公司遵循"技术领先、低成本扩张、总成本领先"的经营策略和"专业化定位、综合化经营、扁平化管理、差异化发展"的经营指导思想，积极开拓保险服务领域，大地车险也备受消费者好评，赢得了良好的经营业绩和社会口碑。</p>
+	</div>
+	
+	</div>
+	<p class="car_desp meihua_p car_desp2">大地电话车险：95590</p>
+	<div class="clear h10"></div>
+	<div class="car_left floatl ">
+	<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html" target="_blank">
+    <img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165"
+			alt="车险快速报价" title="车险快速报价" /></a></div>
+		<cms:list item="Image"  name="车险图片"> 
+	      <div class="car_ad_l clearfix">
+		   <a href="${Image.wangzhi}" target="_blank">
+		       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}"/>
+		   </a>
+		  </div>
+	    </cms:list> 
+	<div class="car_border_q cf">
+	<h2 class="car_l_title">其他车险公司</h2>
+	<ul class="car_gs_list ">
+			<cms:list item="friendlink" name="车险通用底部">
+				<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|CharWidth=15}</a></li>
+	        </cms:list>
+	</ul>
+	</div>
+	</div>
+	<div class="car_right floatr">
+	<div class="car_border_q cf">
+	 <div class="car_l_title">意外保障 畅行无忧</div> 
+	     <cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+			<div class="cp_list_so">
+			    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+		    	<dl class="car_cp_des">
+	                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+		            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+					<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+		    	</dl>
+			</div>
+		 </cms:list>
+	</div>
+	
+	</div>
+	<div class="clear"></div>
+
+			<div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="大地车险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="大地车险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="大地车险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+		<cms:include file="block/community.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/footer.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jqueryupdate.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

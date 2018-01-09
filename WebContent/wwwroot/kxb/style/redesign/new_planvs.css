@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.plan_box{ padding: 30px; }
+.plan_box table{border:1px solid #e8e8e8}
+.plan_box table tr,.plan_box table td{border-collapse:0;border:1px solid #e8e8e8}
+.plan_box td{text-align:center;min-width:80px;border:1px solid #e8e8e8;padding:16px 0 14px;color:#898989}
+.plan_box td span{display:block;line-height:1.7em;text-align:center;background:#F7F7F7;width:203px}
+.light_bg{background:#fafafa}
+.plan_box td span em,{font-size:14px;color:#EA5514;display:block;width:230px;font-weight:bold;margin:0 auto}
+.head_td em{font-size:14px;color:#EA5514;font-weight:bold}
+.head_td{text-align:center}
+.plan_box h2{ padding-bottom: 30px; font-size:16px;font-family:"Microsoft YaHei"; color: #222; line-height: 30px; }
+.plan_box h2 .logo { float: left; vertical-align: top; }
+.plan_box h2 .AL_001 { width: 120px; height: 30px; background:url(../../images/redesign/icon_anlian_demo.gif) no-repeat left top; }
+a.select_plan{ width: 70px; height: 22px; background:url(../../images/redesign/icon_select_plan.png) no-repeat left top; display: block; line-height: 22px; color:#fff; margin: 0 auto; font-family: "Microsoft YaHei"; }
+a.select_plan:hover{ background-position:0px -22px; text-decoration:none;}
+
+.plan_box td.hilisgt_plan{ background:#fff7f0; }
+.plan_box td .pce { font-weight: normal; }
+.plan_box td.hilisgt_plan .pce { color: #ff4343; }
+.plan_l { position: relative; top: -40px; margin-bottom: -24px; padding-left: 6px; background:url(../../images/redesign/now_plan.png) no-repeat left top; }
+.plan_r { padding-right: 6px; background:url(../../images/redesign/now_plan.png) no-repeat right top; }
+.plan_r p { height: 25px; line-height: 25px; background-color: #fd8824; color: #fff; font-family: "Microsoft YaHei"; }
+.head_td{ width:100px; padding: 0 10px; }
+.plan_box h2 span{ padding-left:8px; font-weight: normal;}
+.plan_box .max_val { font-weight: bold; color: #222; }
+.plan_box h2 span.m-list-logo{ display:inline-block; width:120px; height:40px; background-repeat: no-repeat; background-position:  center center; vertical-align: middle;}

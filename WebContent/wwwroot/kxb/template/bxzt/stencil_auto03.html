@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>
+<%
+String title = article.getString("MetaTitle");
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title> 
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/base.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/main.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/product.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/listul.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_news.css">
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body >
+<!--head 开始-->
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<!--head 结束-->
+<div class="wcont_body">
+<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a> 
+		</div>
+	<h1  class="stencil_title">"${Article.Title|CharWidth=26}"</h1>
+	<p class="stencil_min_des02">${Article.Content}</p>
+	<!-- 车辆违章开始 -->
+	<div class="wz_search">
+        <div class="wz_search_l">
+		<iframe name="weizhang" src="http://www.cheshouye.com/api/weizhang/?t=ff9600" width="560" height="280" frameborder="0" scrolling="no"></iframe>
+		</div>
+        <div class="wz_search_r">
+        <cms:ad name="车险违章查询广告位" custom="false" size="410*282" type="1"></cms:ad>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!-- 车辆违章结束 -->
+	<ul class="stencil_nav_li sl-floatcenter clearfix">
+		<li class="sl-floatcenter-item"><a href="#part1"  >${Article.Section1}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part2"  >${Article.Section2}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part3"  >${Article.Section3}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part4"  >${Article.Section4}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part5"  >${Article.Section5}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part6"  >${Article.Section6}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part7"  >${Article.Section7}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part8"  >${Article.Section8}</a></li>
+	</ul>
+	<h2 class="part_titles"  id="part1">${Article.Section1}</h2>
+	<div class="grid-c ">
+		<div class="boder_h clearfix">
+			<div class="fleft boder_h cp_dy_box03">
+				<div class="fimage">
+               		<cms:imageplayer code="carPic" type="0" width="360" height="260" />
+       			</div>
+			</div>
+            <div class="fright stencil_news_box3 bor_s_r">
+				<h3 class="notetit">${Article.zyxx1}：</h3>
+				<p class="notetxt">${Article.zyContent1}</p>
+				<div class="dashbor_b"></div>
+				<h3 class="notetit">${Article.zyxx2}：</h3>
+				<p class="notetxt">${Article.zyContent2}</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+        <div class="bor_shadow_980"></div>
+	</div>
+  	<div class="h10"></div>
+	<h2 class="part_titles"  id="part2">${Article.Section2}</h2>
+	<div class="w980">
+		<div class="bor_s padding10 h150">
+			<ul class="txtlist03 graytxt">
+			<cms:list item="article" level="all"  condition = "zcarticle.title like '%${Article.Titleword1}%' and zcarticle.title like  '%${Article.Titleword2}%'" name="保险资讯,保险百科,保险问答,保险知识" count="6" >
+				<li><h3><a href="${Site.URL}/${Article.Link}" target="_blank">${Article.Title|CharWidth=23}</a></h3>${Article.Content|CharWidth=40}</li>
+			</cms:list>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="bor_shadow_980"></div>
+	</div>
+	<div class="h20"></div>
+	<h2 class="part_titles"  id="part3">${Article.Section3}</h2>
+	<div class="grid-c2-s12">
+	
+			<div class="col-main">
+				<div class="main-wrap up_date_main-warp">
+					<div class="boder_h clearfix">
+               	   <a href="${Article.Section3href1}" rel="nofollow" target="_blank"> <img src="${Site.StaticResourcePath}/${Article.Section3img1}" class="fleft" width="234" height="198" /></a>
+                    <p class="zx_news_des p_h150 p_w_110 fright">
+		                    ${Article.Section3Content1|CharWidth=110}<a href="${Article.Section3href1}"  target="_blank">更多</a> 
+	</p>
+                    </div>
+                      <div class="bor_shadow_470"></div>
+				</div>
+			</div>
+			<div class="col-sub">
+				<div class=" boder_h cp_dy_box cp_dy_box_min">
+	        		<cms:list item="article" level="none" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.ProductId1}' and type='1' and status=30 limit 1 " >
+		        	<div class="cp_stencil_title clearfix">
+		            <div class="cp_box_logo"><span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span></div>
+		            <div class="cp_title_s">
+					<h2><a href="${Site.URL}/${Article.Link}">${Article.title}</a></h2>
+		            <p>${Article.AdaptPeopleInfo}</p>
+		            </div>
+		 	 		</div>
+		            <ul class="stencil_td ">                     
+		            	${Article.FEMRiskBrightSpot}
+		            </ul>
+		            <div class="stencil_cp_des_list">      
+		            	${Article.DutyHTML}
+		            </div>
+		            <div class="cp_price_con">
+		            	<em>RMB</em><span>${Article.InitPrem}</span>
+		                <a href="${Site.URL}/${Article.Link}" >查看详情</a>
+		            </div>
+	            	</cms:list>
+            	</div>
+            <div class="bor_shadow_470"></div>
+			</div>
+		</div>
+    <div class="grid-c2-s12">
+			<div class="col-main">
+				<div class="main-wrap up_date_main-warp">
+					<div class="boder_h clearfix">
+               	    <a href="${Article.Section3href2}" rel="nofollow"  target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section3img2}" class="fleft" width="234" height="198" /></a>
+                    <p class="zx_news_des p_h150 p_w_110 fright">
+	${Article.Section3Content2|CharWidth=110}                   <a href="${Article.Section3href2}" target="_blank">更多</a> 
+	</p>
+                    </div>
+                      <div class="bor_shadow_470"></div>
+				</div>
+			</div>
+			<div class="col-sub">
+			<div class=" boder_h cp_dy_box cp_dy_box_min">
+        	<cms:list item="article" level="none" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Article.ProductId2}' and type='1' and status=30 limit 1" >
+		        	<div class="cp_stencil_title clearfix">
+		            <div class="cp_box_logo"><span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span></div>
+		            <div class="cp_title_s">
+		            <h2><a href="${Site.URL}/${Article.Link}" >${Article.title}</a></h2>
+		            <p>${Article.AdaptPeopleInfo}</p>
+		            </div>
+		 	 		</div>
+		            <ul class="stencil_td ">                     
+		            	${Article.FEMRiskBrightSpot}
+		            </ul>
+		            <div class="stencil_cp_des_list">      
+		            	${Article.DutyHTML}
+		            </div>
+		            <div class="cp_price_con">
+		            	<em>RMB</em><span>${Article.InitPrem}</span>
+		                <a href="${Site.URL}/${Article.Link}" >查看详情</a>
+		            </div>
+	            	</cms:list>
+            </div>
+            <div class="bor_shadow_470"></div>
+			</div>
+		</div>
+  
+	<div class="h20"></div>
+	<div class="w716 floatl">
+		<h2 class="part_titles" id="part4">${Article.Section4}</h2>
+		<div class="bor_s h402 boders01">
+			<ul class="txtlist04 graytxt">
+				<cms:list item="Article" level="all"  type="rand" tag="${Article.Section4tag}"count="24" name='保险知识,保险资讯'>	
+					<li><a href="${Site.URL}/${Article.Link}" target="_blank">${Article.title|CharWidth=26}</a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="bor_shadow_716"></div>
+	</div>
+	<div class="w230 floatr">
+		<h2 class="part_titles" id="part5">${Article.Section5}</h2>
+		<div class="bor_s h95">
+			<ul class="txtlist02 graytxt">
+				<cms:list item="friendlink" name="${Article.Section5friendlink}">
+					<li><a href="${Site.URL}/${friendlink.url}" target="_blank" >${friendlink.Name}</a></li>
+	            </cms:list>
+			</ul>
+		</div>
+		<div class="bor_shadow_230"></div>
+		<div class="h30"></div>
+		<h2 class="part_titles" id="part6">${Article.Section6}</h2>
+		<div class="bor_s h210">
+			${Article.Section6Content1}
+		</div>
+		<div class="bor_shadow_230"></div>
+	</div>
+	
+	<div class="h20"></div>
+	<h2 class="part_titles"  id="part7">${Article.Section7}</h2>
+	<div class="w980">
+		<div class="bor_s padding10">
+			<ul class="txtlist01 graytxt">
+				<cms:list item="friendlink" group="${catalog.Section7friendlink}" count=12>
+					<li>                      	
+						<span ><a href="${Site.URL}/${friendlink.url}" target="_blank" title="${friendlink.name}">${friendlink.name|CharWidth=12}</a> </span>	                   
+                    </li>
+				</cms:list>
+				
+				<cms:list item="Article"  level="none" condition="exists (select 1 from zdcolumnvalue z1 where  z1.relaid = zcarticle.id and z1.columncode ='suoshuchengshi' and z1.textvalue='${article.suoshuchengshi}'  ) and exists (select 1 from zdcolumnvalue z2 where  z2.relaid = zcarticle.id and z2.columncode ='suoshuchengshi1' and z2.textvalue !='${article.suoshuchengshi1}' )  and zcarticle.CatalogInnerCode like '${article.CatalogInnerCode}%'" count=6>
+					<li>                      	
+						<span ><a href="${Site.URL}/${Article.Link}" target="_blank" title="${article.title}">${article.suoshuchengshi1}</a> </span>	                   
+                    </li>
+                    
+				</cms:list>
+			</ul>
+		</div>
+		<div class="bor_shadow_980"></div>
+	</div>
+			
+	<div class="h20"></div>
+    <h2 class="part_titles"  id="part8">${Article.Section8}</h2>
+          <div class="wenda_box boder_h clearfix">
+            	<cms:list item="friendlink" name="${Article.Section8friendlink}">
+          		<dl class="wenda_last">
+            		<dt><a href="${Site.URL}/${friendlink.url}" target="_blank">问：${friendlink.Name}</a></dt>
+                   	<dd><b>答：</b>${friendlink.Prop3|CharWidth=120}</dd>
+            	</dl>
+            </cms:list> 
+          </div>
+	<div class="bor_shadow_980"></div>
+	<div class="h30"></div>
+    <ul class="orter_list">
+		<cms:list item="article" level="none" condition=" type = 1 and id in ( select distinct id from ( select id from zcarticle   where  cataloginnercode like '002354%'  and (title like '%${Article.TitleKeyword1}%' or title like  '%${Article.TitleKeyword2}%') ) a union all  select id from ( select id from zcarticle where  cataloginnercode like '002354%'   order by firstpublishdate desc) b ) and type = 1 and id in ( select id from (select id from (select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword1}%' limit 4) a1 union select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword2}%' limit 5) a2 union select id from ( select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1  order by rand() limit 9 ) a3)c1 limit 9)c2)" count="9" >
+				<li><a href="${Site.URL}/${Article.Link}" target="_blank" target="_blank">${Article.Title} </a></li>
+		</cms:list>
+	</ul>
+	<div class="h30"></div>
+</div>
+
+         
+<!--foot 开始-->
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<!--foot 结束-->
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript">
+     jQuery(function(){
+	 //焦点图切换
+	jQuery('#change_33 div.changeDiv').soChange({
+		thumbObj:'#change_33 .ul_change_a2 span',
+		thumbNowClass:'on',
+		changeTime:4000//自定义切换时间为4000ms
+	});
+	});
+	</script>
+	<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<% DataTable dt_2 = TemplateData.getDocList("article","旅游保险","current","hot","null","5","null","null","null");
+  if(dt_2==null){write("没有找到栏目。parent：null  catalog："+"旅游保险");}else{
+ int rdCnt=dt_2.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_2  = dt_2.getDataRow(i);
+ int rdIdx=i;
+%>
+
+						               	   <li>
+						                       <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${article_2.Link}">${article_2.Title|CharWidth=20}</a></span>
+						                   </li>
+						                 <%}}%>

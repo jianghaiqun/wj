@@ -1,0 +1,320 @@
+/* 
+* @des:开心保保险百科、问答、知识、资讯页面主要css
+* @maker:Huanglei
+* @update:Huanglei(2013-03-05 14:30)
+*/
+@import url("global.css"); 
+/* 布局 */
+.wrap980 { width:980px; margin:0 auto; clear:both; }
+.left336 { width:336px; float:left; }
+.right644 { width:644px; float:right; background:#fff; }
+.left644 { width:644px; float:left; background:#fff; }
+.right336 { width:336px; float:right; }
+.magtop10 { margin-top:10px; }
+.magtop15 { margin-top:10px; }
+.magtop8 { margin-top:8px; }
+.grayborder { border:1px solid #cdcdcd; }
+.graybordert { border-top:1px solid #cdcdcd; }
+.grayborderb { border-bottom:1px solid #cdcdcd; }
+.graydashborder { border:1px dotted #cdcdcd; }
+.graydashbordert { border-top:1px dotted #cdcdcd; }
+.graydashborderb { border-bottom:1px dotted #cdcdcd; }
+.mainbgl336 { background:url(../images/wrap980bg01.gif) repeat-y; }
+.mainbgl644 { background:url(../images/wrap980bg02.gif) repeat-y; }
+.tempfoot { margin-top:-40px; repeat-x;  width:100%; }
+/* btn css */
+.btn300 { background:url(../images/btn300bg.jpg) repeat-x bottom; padding-left:3px; padding-right:3px; height:23px; border:1px solid #999; cursor:pointer; }
+.btnorange { height:25px; cursor:pointer; border:1px solid #A15501; background:#F88504; text-align:center; color:#fff; padding-left:9px; _padding-left:0px; padding-right:9px; _padding-right:0px; }
+.btnorangeover { height:25px; cursor:pointer; border:1px solid #A15501; background:#FAAA03; text-align:center; color:#fff; padding-left:9px; _padding-left:0px; padding-right:9px; _padding-right:0px; }
+
+.btnsa { height:25px; cursor:pointer; width:81px; background:url(../images/inputbg.gif) no-repeat 0px -40px; }
+.btnsaover { height:25px; cursor:pointer; width:81px; background:url(../images/inputbg.gif) no-repeat -90px -40px; }
+.btnask { height:25px; cursor:pointer; width:81px; background:url(../images/inputbg.gif) no-repeat -180px -40px; }
+.btnaskover { height:25px; cursor:pointer; width:81px; background:url(../images/inputbg.gif) no-repeat -270px -40px; }
+.btnsubmitans { height:25px; cursor:pointer; width:81px; background:url(../images/inputbg.gif) no-repeat 0px -70px; }
+.btnsubmitansover { height:25px; cursor:pointer; width:81px; background:url(../images/inputbg.gif) no-repeat -90px -70px; }
+
+/* input css */
+.pageinput { border:1px solid #ccc; height:19px; line-height:19px; }
+/* 通用栏目 css */
+.columntit { height:16px; line-height:16px; padding-left:28px; font-size:16px; font-weight:bold; padding-top:26px; padding-bottom:20px; font-family:"微软雅黑"; background:url(../images/ico01.gif) no-repeat 20px 25px; }
+.columntit a:link,.columntit a:visited,.columntit a:active { color:#333; font-size:16px; text-decoration:none; font-family:"微软雅黑"; }
+.columntit a:hover { color:#333; font-size:16px; text-decoration:underline; font-family:"微软雅黑"; }
+.columnsubtit { height:16px; line-height:16px; padding-left:11px; font-size:14px; font-weight:bold; padding-top:12px; padding-bottom:4px; font-weight:bold; background:url(../images/dashline02.gif) repeat-x top; margin-right:12px; margin-left:16px; }
+.columnsubtit a:link,.columnsubtit a:visited,.columnsubtit a:active { color:#3d3d3d; font-size:14px; text-decoration:none; font-weight:bold; }
+.columnsubtit a:hover { color:#3d3d3d; font-size:14px; text-decoration:underline; font-weight:bold; }
+/* 通用列表 css */
+.txtlist { padding-bottom:20px; }
+.txtlist li { width:280px; height:28px; line-height:28px; padding-left:20px; padding-right:12px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+	.txtlist li a:link,.txtlist li a:visited,.txtlist li a:active { color:#333; font-size:14px; text-decoration:none; line-height:28px; }
+	.txtlist li a:hover { color:#F88602; font-size:14px; text-decoration:underline; line-height:28px; }
+.txtlist12 { padding-bottom:20px; }
+.txtlist12 li { width:210px; height:25px; line-height:25px; padding-left:20px; padding-right:32px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+	.txtlist12 li a:link,.txtlist12 li a:visited,.txtlist12 li a:active { color:#333; font-size:12px; text-decoration:none; line-height:25px; }
+	.txtlist12 li a:hover { color:#F88602; font-size:12px; text-decoration:underline; line-height:25px; }
+.contentlist { width:644px; }	
+.contentlist li { width:596px; padding-left:24px; padding-right:24px; padding-top:15px; padding-bottom:15px; background:url(../images/dashline01.gif) repeat-x bottom; }
+	.contentlist li h3 { height:46px; line-height:46px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:16px; font-weight:bold; width:596px; }
+		.contentlist li h3 a:link,.contentlist li h3 a:visited,.contentlist li h3 a:active { color:#333; font-size:16px; font-weight:bold; text-decoration:none; }
+		.contentlist li h3 a:hover { color:#F88602; font-size:16px; font-weight:bold; text-decoration:underline; }
+	.contentlist li h4 { height:90px; line-height:23px; overflow:hidden; font-size:16px; }
+		.contentlist li h4 a:link,.contentlist li h4 a:visited,.contentlist li h4 a:active { color:#333; font-size:16px; font-weight:bold; text-decoration:underline; }
+		.contentlist li h4 a:hover { color:#F88602; font-size:16px; font-weight:bold; text-decoration:underline; }
+	.contentlist li h5 { color:#aaa; line-height:14px; text-indent:-48px; padding-left:48px; }
+		.contentlist li h5 span { padding-right:6px; color:#aaa}
+		.contentlist li h5 a:link,.contentlist li h5 a:visited,.contentlist li h5 a:active { color:#aaa; font-size:12px; text-decoration:none;  line-height:14px; }
+		.contentlist li h5 a:hover { color:#F88602; font-size:12px; text-decoration:underline; line-height:14px; }
+	.contentlist li h6 { color:#aaa; line-height:23px; }
+/* 广告图片 切换 css */
+.right336 .kinslideshow { margin:0 auto; padding-top:30px; padding-bottom:20px; padding-left:17px;}
+.left336 .kinslideshow {margin:0 auto; padding-top:30px; padding-bottom:20px; padding-left:17px;}
+/* 广告 css */
+.ad300 { margin:0 auto; border:1px solid #cdcdcd; width:300px; margin-top:15px; }
+/* 页码 css */
+.plpage {  margin-top:10px; height:56px; text-align:center; padding-top:1px;}
+.tabcont .plpage{margin-top:5px;padding-top:0px;}
+.plpagecont { padding-bottom:6px; }
+.plpage01 { margin-right:3px; }
+	.plpage01 a:link,.plpage01 a:visited,.plpage01 a:active { padding:4px 7px; border:1px solid #ccc; background:#fff; color:#0066CC; line-height:14px; }
+	.plpage01 a:hover { padding:4px 7px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#0066CC; line-height:14px; }
+.plpage02 { margin-right:3px; }
+	.plpage02 a:link,.plpage02 a:visited,.plpage02 a:active { padding:5px 7px 4px 7px; border:1px solid #ccc; background:#fff; color:#999; height:22px; }
+	.plpage02 a:hover { padding:5px 7px 4px 7px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#999; height:22px; }
+.plpage03 { padding-left:24px; color:#999; }
+.plpage04 { padding:4px 6px 3px 6px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#999; height:22px; }
+	.plpage04 a:active {color:#FFFFFF}
+/*保险问答分页样式*/	
+.plpage1{width:600px;margin-bottom: 1px;}
+/* 位置信息 css */
+.bread { width:978px; margin:0 auto; height:33px; border:1px solid #cdcdcd; background:#fff; line-height:33px; text-indent:14px; }
+/* 最新关注 css */
+.newconcern { width:980px; margin:0 auto; background:#fff; }
+.newconcern h3 { height:24px; line-height:24px; background:#f6f6f6; font-weight:bold; }
+.newconcern ul { height:172px; }
+.newconcern ul li { width:200px; float:left; padding-left:22px; padding-right:22px; }
+.newconcern ul li h4 { height:113px; }
+.newconcern ul li h4 img { width:200px; height:113px; }
+.newconcern ul li h5 { height:27px; line-height:27px; padding-left:6px; padding-right:6px; overflow:hidden; background:#424242; font-weight:bold; text-align:center; }
+.newconcern ul li h5 a:link,.newconcern ul li h5 a:visited,.newconcern ul li h5 a:active { color:#fff; font-size:14px; text-decoration:none; font-weight:bold; }
+.newconcern ul li h5 a:hover { color:#fff; font-size:14px; text-decoration:underline; font-weight:bold; }
+/* 词条分类 css */
+.entryclass { padding:10px; padding-left:12px; padding-top:0px; }
+.entryclass li { width:40px; float:left; height:28px; line-height:28px; overflow:hidden; padding-left:18px; padding-right:3px; background:url(../images/dot01.gif) no-repeat 7px 10px; }
+.entryclass li a:link,.entryclass li a:visited,.entryclass li a:active { color:#333; font-size:14px; text-decoration:none; }
+.entryclass li a:hover { color:#F88602; font-size:14px; text-decoration:underline; }
+/* 栏目分类 css */
+.columnclass { padding:10px; padding-left:12px; padding-top:0px; }
+.columnclass li { width:60px; float:left; height:28px; line-height:28px; overflow:hidden; padding-left:18px; padding-right:3px; background:url(../images/dot01.gif) no-repeat 7px 10px; white-space:nowrap;}
+.columnclass li a:link,.columnclass li a:visited,.columnclass li a:active { color:#333; font-size:14px; text-decoration:none; }
+.columnclass li a:hover { color:#333; font-size:14px; text-decoration:underline; }
+/* 热门标签 css */
+.hottag { padding:10px; height:146px; padding-left:12px; padding-top:0px; }
+.hottag li { width:90px; float:left; height:32px; line-height:32px; overflow:hidden; padding-left:11px; padding-right:3px; }
+.hottag li a:link,.hottag li a:visited,.hottag li a:active { color:#333; font-size:14px; text-decoration:none; }
+.hottag li a:hover { color:#333; font-size:14px; text-decoration:underline; }
+span.htred,span.htorange,span.htgreen,span.htpurple,span.htpink { padding:3px 1px 2px 3px; }
+span.htred { border:1px solid #FE9A9C; background:#FFD0CC; }
+span.htorange { border:1px solid #FFCF6B; background:#FFEED3; }
+span.htgreen { border:1px solid #94FFC9; background:#E9FFEE; }
+span.htpurple { border:1px solid #A0ACFF; background:#E9EAFE; }
+span.htpink { border:1px solid #FFADFF; background:#FFE9FE; }
+/* 搜索词条 css */
+.entrysearch { height:58px; padding-top:22px; border-top:1px solid #ccc;  }
+.entrysearch h4 { float:left; padding-left:19px; }
+.entrysearch h5 { float:left; padding-top:0; _padding-top:1px; }
+.entrysearchinput { height:36px; line-height:36px; width:200px; background:url(../images/inputsearchbg.gif) no-repeat 0px 0px; padding-left:27px; word-break:break-all; }
+.entrysearchbtn { height:36px; width:70px; cursor:pointer; background:url(../images/inputbg.gif) no-repeat 0px 0px; }
+.entrysearchbtnover { height:36px; width:70px; cursor:pointer; background:url(../images/inputbg.gif) no-repeat -80px 0px; }
+/* 热销产品 css */
+.hotprodu { padding-bottom:16px; }
+.hotprodu li { padding-left:19px; height:65px; clear:both; }
+.hotprodu li h4 { width:66px;  float:left; }
+.hotprodu li h4 img { width:50px; height:50px; }
+.hotprodu li .hotproduright { width:230px; float:left; }
+.hotprodu li h5 { line-height:18px; }
+	.hotprodu li h5 a:link,.hotprodu li h5 a:visited,.hotprodu li h5 a:active { color:#333; font-size:14px; text-decoration:none; line-height:18px; }
+	.hotprodu li h5 a:hover { color:#F88602; font-size:14px; text-decoration:underline; line-height:18px; }
+.hotprodu li h6 { height:18px; overflow:hidden; color:#bdbdbd; line-height:18px; width:220px; white-space:nowrap; text-overflow:ellipsis; }
+/* 加关注 css */
+.addattention { margin:0 auto; border:1px solid #cdcdcd; width:300px; margin-top:15px; background:url(../images/addattentionbg.gif) no-repeat right bottom #fff; height:100px; clear:both; }
+.addattentionleft { width:120px; float:left;  }
+.addattentionright { width:170px; float:left; }
+	.addattentionright h4 { height:16px; padding-top:14px; padding-bottom:4px; line-height:16px; overflow:hidden; color:#939393; }
+	.addattentionright h5 { height:28px; line-height:28px; overflow:hidden; color:#bebebe; }
+	.addattentionright h6 { padding-top:2px; }
+	.addattentionbtn { height:22px; width:63px; cursor:pointer; background:url(../images/inputbg.gif) no-repeat -400px 0px;  }
+	.addattentionbtnover { height:22px; width:63px; cursor:pointer; background:url(../images/inputbg.gif) no-repeat -470px 0px;  }
+/* 关注微信 css */
+.micromsg { margin:0 auto; border:1px solid #cdcdcd; width:300px; margin-top:15px; height:100px; clear:both; }
+.micromsgleft { width:120px; float:left; }
+.micromsgright { width:170px; float:left; }
+	.micromsgright h4 { height:16px; padding-top:14px; padding-bottom:4px; line-height:16px; overflow:hidden; font-weight:bold; }
+	.micromsgright h5 { line-height:26px; color:#7e7e7e; }
+/* 人气产品搜索词 css */
+.hotprodukeywordtit { height:16px; line-height:16px; padding-left:32px; font-size:16px; font-weight:bold; padding-top:30px; padding-bottom:20px; font-family:"微软雅黑"; background:url(../images/ico01.gif) no-repeat 24px 29px;}
+.hotprodukeywordtit a:link,.hotprodukeywordtit a:visited,.hotprodukeywordtit a:active { color:#7a7a7a; font-size:16px; text-decoration:none; font-family:"微软雅黑"; }
+.hotprodukeywordtit a:hover { color:#7a7a7a; font-size:16px; text-decoration:underline; font-family:"微软雅黑"; }
+.hotprodukeyword { padding:10px; padding-left:16px; padding-top:0px; }
+.hotprodukeyword li { width:93px; float:left;  height:28px; line-height:28px; overflow:hidden; padding-left:18px; padding-right:10px; background:url(../images/dot01.gif) no-repeat 7px 12px; white-space:nowrap; text-overflow:ellipsis; }
+	.hotprodukeyword li a:link,.hotprodukeyword li a:visited,.hotprodukeyword li a:active { color:#7a7a7a; font-size:12px; text-decoration:none; }
+	.hotprodukeyword li a:hover { color:#F88602; font-size:12px; text-decoration:underline; }
+/* 文章 css */0
+.article { padding:30px 20px 20px 20px; font-size:16px; }
+.article h1 { font-family:"微软雅黑","黑体"; font-size:30px; line-height:40px; font-weight:bold; text-indent:0px; padding-left:0px;}
+.article h2 { font-family:"微软雅黑","黑体"; font-size:18px; line-height:40px; font-weight:bold; }
+.articledate { color:#aaa; font-size:12px; line-height:32px; height:32px; }
+.articledate02 { color:#aaa; font-size:12px; line-height:32px; height:32px; text-align:center; margin-bottom:14px; }
+.articlecard { border:1px solid #cdcdcd; margin-top:10px; margin-bottom:10px; width:590px; }
+	.articlecard h3 { height:28px; line-height:28px;  font-size:16px; font-weight:bold; text-indent:12px; border-bottom:1px solid #cdcdcd; }
+	.articlecard p { }
+.articlecardcont { padding:0px 12px; }
+.article p { font-size:16px; line-height:25px; text-indent:32px; padding-top:10px; padding-bottom:10px; }
+p.articlepic { text-align:center; padding-bottom:0px; text-indent:0px; }
+p.articlepicnote { font-size:12px; color:#a9a9a9; line-height:18px; text-align:center; text-indent:0px; }
+	.artclelink a:link,.artclelink a:visited,.artclelink a:active { color:#333; font-size:16px; text-decoration:underline; }
+	.artclelink a:hover { color:#F88602; font-size:16px; text-decoration:underline; }	
+.shareandkeyword { padding:40px 20px 20px 20px; clear:both; width:600px; }
+.articleshare { float:left; width:250px; color:#797979; }
+	.articleshare img { margin-left:4px; margin-right:4px; }
+/* 文章页关键字 css */
+.articlekeyword { float:left; width:290px; color:#797979; height:27px; line-height:24px; overflow:hidden; }
+.articlekeyword span { padding-right:6px; color:#7a7a7a}
+	.articlekeyword a:link,.articlekeyword a:visited,.articlekeyword a:active { color:#797979; font-size:12px; text-decoration:none; }
+	.articlekeyword a:hover { color:#F88602; font-size:12px; text-decoration:underline; }
+.articlepage { text-align:center; padding:10px 20px 40px 20px; }
+	.articlepage a:link,.articlepage a:visited,.articlepage a:active { color:#333; font-size:12px; text-decoration:none; }
+	.articlepage a:hover { color:#F88602; font-size:12px; text-decoration:underline; }
+h1.articletit { text-align:center; }
+/* 相关资讯和精彩问答 css */
+.inforandaq { padding-left:20px; height:260px; background:url(../images/dashline01.gif) repeat-x top; }
+.relatedinfor { width:295px; float:left; }
+.wonderfulaq { width:295px; float:left; }
+/* 文章页产品推荐 css*/
+.produlist { border-top:1px solid #cdcdcd; clear:both; } 
+.produlist li { padding-top:30px; background:url(../images/dashline01.gif) repeat-x bottom; padding-bottom:20px; clear:both; }
+.produpic { width:180px;  float:left; padding-left:14px; height: 140px;}
+	.produpic img { width:150px; height:150px; }
+.produright { width:367px; float:left; }
+.produnamearea { width:450px; height:60px; clear:both; }
+.produnamearea h4 { float:left; width:80px; height:67px; margin-top:-5px;}
+	
+.produnamearea h5 { float:left; width:350px; font-family:"微软雅黑"; font-size:20px; font-weight:bold; color:#0093D0; height:22px; line-height:22px; overflow:hidden; padding-top:2px; _padding-top:5px; margin-left:20px;}
+	.produnamearea h5 a:link,.produnamearea h5 a:visited,.produnamearea h5 a:active { color:#0093D0; font-size:20px; text-decoration:none; }
+	.produnamearea h5 a:hover { color:#0093D0; font-size:20px; text-decoration:underline; }
+.produnamearea h6 { float:left; width:340px; font-family:"微软雅黑"; font-size:13px; font-weight:bold; color:#333; height:26px; line-height:26px; overflow:hidden; margin-left:20px; }
+.produfeature { color:#9a9a9a; padding-left:7px; height:16px; width:420px; padding-right:20px; overflow:hidden; }
+	.produfeature li{ float:left;}
+	.produfeature li span { color:#9a9a9a; background:url(../images/ico02.gif) no-repeat 0px 2px; padding-left:18px; padding-top:6px; padding-bottom:6px; padding-right:10px;  overflow:hidden; padding-right:12px; }
+.produdutyarea { width:470px; }
+.produduty { width:260px; float:left; padding-top:20px; padding-bottom:1px; color:#b1b1b1; clear:both; }
+	.produduty li { padding-top:0px; width:253px; padding-left:7px; background:none; padding-bottom:0; }
+	.produduty li span { display:block; float:left; width:100px; }
+	.produduty li em { padding-top:0px; float:right; width:50px; text-align:right; }
+.pricearea { width:170px; text-align:right; float:right; padding-top:16px; }
+.price { display:block; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#E76004; width:138px; margin-left:20px; overflow:hidden; line-height:26px; height:26px; text-align:left; }
+	.price em { font-family: Arial, Helvetica, sans-serif; font-size:26px; font-weight:bold; color:#E76004; }
+.produdetailbtnarea { display:block; padding-top:4px; padding-right:40px; }
+	.produdetailbtn { height:33px; width:112px; cursor:pointer; background:url(../images/inputbg.gif) no-repeat -160px 0px;  }
+	.produdetailbtnover { height:33px; width:112px; cursor:pointer; background:url(../images/inputbg.gif) no-repeat -280px 0px; }
+/* 保险问答搜索 css */
+.qasearcharea { height:70px; clear:both; width:576px; padding-left:42px; }
+.qasearcharea02 {padding-left:20px; }
+.qasearcharealeft { width:360px; float:left; padding-top:23px; padding-bottom:23px; padding-right:12px; }
+.qasearcharearight { width:200px; float:left; padding-top:23px; padding-top:23px!important; _padding-top:24px; padding-bottom:23px; padding-bottom:23px!important; _padding-bottom:22px; }
+*+html .qasearcharearight { padding-top:24px!important; padding-bottom:22px!important; }
+.qasearchinput,.qasearchinputclick { height:21px; line-height:21px; width:330px; background:url(../images/searchico.gif) no-repeat 4px 3px #fff; padding-left:27px; word-break:break-all; border:1px solid #cdcdcd; color:#cdcdcd; }
+.qasearchinputclick { color:#333; }
+
+/* 保险问答tab切换 css */
+.produtab { height:31px; padding-left:22px; width:275px; clear:both; }
+.produtab ul { height:31px; background-image:url(../images/tabbg.gif); background-position:0 0; }
+.produtab ul li { float:left; }
+.produtab ul li span { display:block; width:136px; height:31px; line-height:31px; float:left; cursor:pointer; font-family:"微软雅黑"; font-size:18px; font-weight:bold; text-align:center; color:#fff; }
+.produtab ul li.hover { }
+.tabcont { width:600px; margin-left:22px;padding-bottom: 60px; _padding-bottom: 0px;}
+/* 保险问答列表 css */
+.qalist { border:1px solid #F88504; border-bottom:none; }
+.qalist li { padding:10px; border-bottom:1px solid #F88504; }
+.qastatus { text-align:right; }
+.qalisttitarea { width:570px; background:url(../images/dashline01.gif) repeat-x bottom; padding-bottom:6px; padding-left:10px; margin-right:10px; clear:both; }
+.qalisttitarea h3 { width:338px; float:left; line-height:26px; padding-right:12px; }
+	.qalisttitarea h3 a:link,.qalisttitarea h3 a:visited,.qalisttitarea h3 a:active { color:#333; font-family:"微软雅黑"; font-size:18px; text-decoration:none;  font-weight:bold; }
+	.qalisttitarea h3 a:hover { color:#333; font-family:"微软雅黑"; font-size:18px; text-decoration:underline;  font-weight:bold; }
+.qalisttitarea h4 { width:208px; float:left; text-align:right; padding-right:12px; line-height:18px; padding-top:4px; padding-bottom:6px; color:#aaa;}
+.qalistacont { padding:10px 10px; font-size:16px; line-height:24px; }
+/* 保险问答 问题详细 css */
+.questiondetailbg { padding-left:5px; background:url(../images/questionbg01.gif) no-repeat left top; margin-left:15px; margin-top:30px; }
+.questiondetail { border:1px solid #F88504; padding:10px; width:586px; }
+.questiondetail h3 { line-height:26px; padding-right:12px; padding-bottom:12px; padding-top:12px; margin-left:10px; margin-right:10px; background:url(../images/dashline01.gif) repeat-x bottom; color:#333; font-family:"微软雅黑"; font-size:21px; font-weight:bold; }
+.questioncont { padding:10px 10px; font-size:16px; line-height:23px; }
+	.questioncont p { font-size:16px; line-height:24px; }
+.questiondetail h4 { text-align:right; padding-right:12px; line-height:18px; padding-top:12px; padding-bottom:6px; color:#aaa; background:url(../images/dashline01.gif) repeat-x top; margin-left:10px; margin-right:10px; }
+/* 保险问答 回答详细 css */
+.answerdetailbg { padding-left:5px; background:url(../images/questionbg02.gif) no-repeat left top; margin-left:15px; margin-top:6px; }
+.answerdetail { border:1px solid #C00000; padding:10px; width:586px; }
+.answerdetail h3 { height:26px; line-height:26px; padding-right:12px; padding-bottom:12px; padding-top:3px; margin-left:10px; margin-right:10px; background:url(../images/dashline01.gif) repeat-x bottom; color:#333; font-family:"微软雅黑"; font-size:18px; font-weight:bold; }
+.answercont { padding:10px 10px; font-size:16px; line-height:23px; }
+	.answercont p { font-size:16px; line-height:24px; }
+.answerdetail h4 { text-align:right; padding-right:12px; line-height:18px; padding-top:12px; padding-bottom:6px; color:#aaa; background:url(../images/dashline01.gif) repeat-x top; margin-left:10px; margin-right:10px; }
+/* 我来回答 css */
+.answerareabg { padding-left:5px; background:url(../images/questionbg03.gif) no-repeat left top; margin-left:15px; margin-top:20px; }
+.answerareadetail { border:1px solid #cdcdcd; padding:10px; width:586px; clear:both; }
+.answerareadetail h3 { height:26px; line-height:26px; padding-right:12px; padding-bottom:2px; padding-top:3px; margin-left:10px; margin-right:10px; color:#333; font-family:"微软雅黑"; font-size:16px; font-weight:bold; }
+.answerareadetail h4 { padding-left:12px; }
+.answerareadetail h4 textarea { width:546px; height:100px; }
+.answerareadetail h5 { padding:7px 10px 10px 12px; height:25px; }
+.answerareadetail h6 { padding:7px 10px 10px 12px; width:300px; float:right; height:26px; line-height:26px; margin-top:-40px; text-align:right; }
+/* 问答关键词 css */
+.qakeyword { color:#7a7a7a; line-height:18px; margin-left:20px; padding-top:20px; padding-bottom:20px; text-indent:-48px; padding-left:48px; }
+.qakeyword span { padding-right:6px; color:#7a7a7a; }
+	.qakeyword a:link,.qakeyword a:visited,.qakeyword a:active { color:#7a7a7a; font-size:12px; text-decoration:none; line-height:25px; }
+	.qakeyword a:hover { color:#F88602; font-size:12px; text-decoration:underline; line-height:25px; }
+/* 保险资讯首页 css */
+.infortop { width:970px; height:110px; background:#fff; border:5px solid #F98504; }
+.infortop h3 { font-family:"微软雅黑","黑体"; font-size:20px; color:#2B4484; height:30px; line-height:28px; font-weight:bold; background:url(../images/ico03.gif) no-repeat 26px 22px; padding-left:50px; overflow:hidden; padding-right:20px; padding-top:14px; }
+	.infortop h3 a:link,.infortop h3 a:visited,.infortop h3 a:active { color:#2B4484; text-decoration:none; font-family:"微软雅黑","黑体"; font-size:20px; font-weight:bold; }
+	.infortop h3 a:hover { color:#2B4484; text-decoration:underline; font-family:"微软雅黑","黑体"; font-size:20px; font-weight:bold; }
+.infortop p { color:#666; line-height:28px; padding:0 38px; text-indent:24px; }
+.infortop p span { padding-left:12px; }
+.infortit { height:66px; background:url(../images/knline.gif) no-repeat bottom; margin-top:3px; }
+.infortit h3 { background:url(../images/inforico.gif) no-repeat 0 14px; font-family:"微软雅黑","黑体"; font-size:24px; height:66px; line-height:66px; font-weight:bold; float:left; width:120px; padding-left:40px; }
+	.infortit h3 a:link,.infortit h3 a:visited,.infortit h3 a:active { color:#333; text-decoration:none; font-family:"微软雅黑","黑体"; font-size:24px; }
+	.infortit h3 a:hover { color:#333; text-decoration:underline; font-family:"微软雅黑","黑体"; font-size:24px; }
+.moreinfor { height:66px; line-height:66px; width:817px; text-align:right; background:url(../images/dashline.gif) repeat-x center; float:left; }
+.moreinfor span { background:#004484; padding:4px 12px; }
+	.moreinfor span a:link,.moreinfor span a:visited,.moreinfor span a:active { color:#fff; text-decoration:none; }
+	.moreinfor span a:hover { color:#fff; text-decoration:underline; }
+.inforwrapleft { width:479px; float:left; }
+.inforwrapright { width:479px; float:right; }
+.inforcont { padding-top:16px; }
+.inforcont h3 { background:url(../images/ico04.gif) no-repeat 5px 12px; font-size:14px; height:30px; line-height:30px; font-weight:bold; padding-left:20px; overflow:hidden; }
+	.inforcont h3 a:link,.inforcont h3 a:visited,.inforcont h3 a:active { color:#004484; text-decoration:none; font-size:14px; }
+	.inforcont h3 a:hover { color:#004484; text-decoration:underline; font-size:14px; }
+.inforcont h3 span { font-size:12px; font-weight:normal; color:#999; padding-left:6px; }
+.inforcont p { color:#666; line-height:28px; padding:0 18px; text-indent:24px; border-bottom:1px dotted #ccc; padding-bottom:6px; }
+.inforcont p span { padding-left:12px; }
+.inforlist { float:left; padding-top:8px; width:479px; padding-bottom:12px; }
+.inforlist li { height:30px; line-height:30px; background:url(../images/ico04.gif) no-repeat 4px 10px; border-bottom:1px dotted #ccc; padding-left:16px; width:460px; overflow:hidden; color:#004484; }
+.inforlist li span { display:block; float:left; height:28px; line-height:28px; width:378px; overflow:hidden; padding-right:12px; white-space:nowrap; text-overflow:ellipsis; }
+.inforlist li em { display:block; float:right; height:28px; line-height:28px; width:69px; color:#999; }
+	.inforlist li span a:link,.inforlist li span a:visited,.inforlist li span a:active { color:#004484; text-decoration:none; font-size:14px; }
+	.inforlist li span a:hover{ color:#004484; text-decoration:underline; font-size:14px; }
+.borderb30 { border-bottom:2px solid #ccc; }
+/* 后置 css */
+.marg01 { margin-top:-10px; }
+.productright{ float: left; width:472;margin-top:0px; }
+.nodashbordrt { background:none; }
+/*保险问答所有问题*/
+.solve .qastatus{background:url(../../images/qastatussolved.gif) no-repeat;width:63px;height:18px;float:right;}
+/*底部样式只用于 百科 知识 资讯 问答*/
+.footwrap{
+	margin-top:0px !important;
+}
+/*内页内链增加样式调整*/
+.article a:link,.article a:visited,.article a:active{ font-size:16px; color:#333333;     border-bottom: 1px dotted #536DA6;}
+     .article h1 a:link,.article h1 a:visited,.article h1 a:active{ font-size:30px; color:#333333; }
+     .article h1 {  font-family:"宋体","Arial"; }
+     .article h2,.article h3,.article h4,.article h5,.article h6{ font-size:16px; font-weight:bold;     text-indent: 2em; font-family:"宋体","Arial";}
+     .article li{ font-size:16px;    line-height: 24px; background:url(../../images/dia_03.gif) no-repeat 15px 11px; text-indent:2em;}
+     .article p{ text-align: justify; word-wrap: break-word; padding:15px 0; line-height:28px;}
+     .article a:hover{ color:#EF6B00; font-size:16px;}

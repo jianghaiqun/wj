@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}_第${Page.PageIndex}页_${site.Meta_Keywords}</title>
+<link href="${Site.StaticResourcePath}/style/new/global.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/base.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/information.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload="navHeight();">
+<cms:include file="block/car_header.shtml" />
+<!--mainbody start-->
+<div class="mainbody">
+	<div class="wrapper">
+    	<input id="type" type="hidden" value="E" />
+			<div class="your_site">
+				<cms:link type="currentPositionList"></cms:link>
+			</div>
+        <!--主体部分 左侧 开始-->
+    	<div class="leftmain">
+        	<!--问答搜索 开始-->
+            <div class="memeber_wdcheck">
+				<form action="${Site.prop6}/Search/bxwd_SearchResult.jsp">
+					<input type="hidden" name="id" value="40" id="id" />
+					<input type="hidden" name="site" value="221" />
+					<input class="qasearchinput" name="query" type="text" class="qasearchinput" value="请输入保险问题进行搜索..." onclick="this.className='qasearchinputclick'" onfocus="if(this.value=='请输入保险问题进行搜索...'){this.value='';}" onblur="if(this.value==''){this.value='请输入保险问题进行搜索...';this.className ='qasearchinput';}" />
+					<input class="member_wdsummit" type="submit" class="Btn_1" value="搜索答案" />
+					<input class="member_wdsummit" type="button" class="Btn_2" value="我要提问" onclick="location.href='<cms:link type='Catalog' name='车险提问'/>'" />
+				</form>
+			</div>
+            <!--问答搜索 结束-->
+            <!--问答列表 开始-->
+            <div class="index_news">
+                <div class="index_news_tit">
+                    <ul>
+                        <li id="hsxw1" onclick="setTab('hsxw',1,2)" class="hover">所有问题</li>
+                        <li id="hsxw2" onclick="setTab('hsxw',2,2)">热点问题</li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="index_news_list">
+                    <div class="hide" id="con_hsxw_1">
+                        <!--所有问题 开始-->
+                        <ul class="questions">
+	                        <cms:list item="Article" level="all" page="true" pagesize="5">
+	                            <li>
+	                                <h3><a href="${Article.link}" title="${Article.title}">${Article.title}</a></h3>
+	                                <p> <%write("solve".equals(article.getString("isOk"))? "答:":" "); %>
+									</b>
+									${article.summary|CharWidth=100}
+									 <%if("solve".equals(article.getString("isOk"))){%>
+									 <a href="${Article.link}" class="more" rel="nofollow">［详细］</a>
+	                                <%}%>
+									</p>
+	                                <h6><span>${Article.author}</span> | <span>发起于：${Article.AskTime|Format=yyyy-MM-dd HH:mm}</span></h6>
+	                                <%if("solve".equals(article.getString("isOk"))){%>
+	                                <img src="${Site.StaticResourcePath}/images/new_car/jjico.jpg" width="79" height="22" align="absmiddle" />
+	                                <%}else{%>
+	                                <img src="${Site.StaticResourcePath}/images/new_car/jjicow.jpg" width="79" height="22" align="absmiddle" />
+	                                <%}%>
+	                            </li>
+	                        </cms:list>
+                        </ul>
+                        <!--所有问题 结束-->
+                    </div>
+                    <div class="hide" id="con_hsxw_2">
+                        <!--热点问题 开始-->
+                        <ul class="questions">
+                            <cms:list item="Article" level="all" hasAttribute="hot,newRecommend" pagesize="5" name="车险问答">
+	                            <li>
+	                                <h3><a href="${Article.link}" title="${Article.title}">${Article.title}</a></h3>
+	                                <p>
+	                                <%write("solve".equals(article.getString("isOk"))? "答:":" "); %>
+									</b>
+									${article.summary|CharWidth=100}
+									<%if("solve".equals(article.getString("isOk"))){%>
+									 <a href="${Article.link}" class="more" rel="nofollow">［详细］</a>
+	                                <%}%></p>
+	                                <h6><span>${Article.author}</span> | <span>发起于：${Article.AskTime|Format=yyyy-MM-dd HH:mm}</span></h6>
+	                                 <%if("solve".equals(article.getString("isOk"))){%>
+	                                <img src="${Site.StaticResourcePath}/images/new_car/jjico.jpg" width="79" height="22" align="absmiddle" />
+	                                <%}else{%>
+	                                <img src="${Site.StaticResourcePath}/images/new_car/jjicow.jpg" width="79" height="22" align="absmiddle" />
+	                                <%}%>
+	                            </li>
+	                        </cms:list>
+                        </ul>
+                        <!--热点问题 结束-->
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--问答列表 结束-->
+            <!--页码 开始-->
+            <div class="plpage1">
+                <div id="plpagecont">${PageCarBar}</div>
+					<div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+            <!--页码 结束-->
+            <div class="related_news">
+                <!--人气搜索 开始-->
+                <div>
+                	<div class="related_title"><h2>人气搜索</h2></div>
+                    <ul class="search_list">
+                     	<cms:list item="friendlink" name="车险产品搜索词">
+								<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|CharWidth=7}</a></li>
+						</cms:list>
+                    </ul>
+                </div>
+                <!--人气搜索 结束-->
+            <div class="clear"></div>
+            </div>
+        </div>
+        <!--主体部分 左侧 结束-->
+        <!--主体部分 右侧边栏 开始-->
+        <div class="rightbar">
+        	<!--品牌推荐 开始-->
+            <div class="hotnews_mt0">
+            	<div class="hotnews_title">
+                	<h2>品牌推荐</h2>
+                </div>
+                <div class="pptj">
+                	<ul>
+                       <li><a href="${Site.URL}/chexian/pingan.shtml" target="_blank"
+								title="中国平安"><img
+									src="${Site.StaticResourcePath}/images/new_car/pptj_01.jpg" width="92"
+									height="32" align="absmiddle" /></a></li>
+							<li><a href="${Site.URL}/chexian/taipingyang.shtml" target="_blank"
+								title="太平洋保险"><img
+									src="${Site.StaticResourcePath}/images/new_car/pptj_02.jpg" width="92"
+									height="32" align="absmiddle" /></a></li>
+							<li><a href="${Site.URL}/chexian/yangguang.shtml" target="_blank"
+								title="阳光保险集团"><img
+									src="${Site.StaticResourcePath}/images/new_car/pptj_03.jpg" width="92"
+									height="32" align="absmiddle" /></a></li>
+							<li><a href="${Site.URL}/chexian/dadi.shtml" target="_blank"
+								title="中国大地保险"><img
+									src="${Site.StaticResourcePath}/images/new_car/pptj_04.jpg" width="92"
+									height="32" align="absmiddle" /></a></li>
+							<li><a href="${Site.URL}/chexian/tianping.shtml" target="_blank"
+								title="安盛天平汽车保险"><img
+									src="${Site.StaticResourcePath}/images/new_car/pptj_05.jpg" width="92"
+									height="32" align="absmiddle" /></a></li>
+                    </ul>
+                    <div class="clear"></div>
+            	</div>
+            </div>
+            <!--品牌推荐 结束-->
+            <!--车险问答 开始-->
+				<div class="hotnews">
+					<div class="hotnews_title">
+						<h2>车险问答</h2>
+						<h6>
+							<a href="${Site.URL}/chexian/club/wenda/" target="_blank">更多&gt;&gt;</a>
+						</h6>
+					</div>
+					<ul class="hotnews_list">
+						<cms:list item="Article" level="all" type="modifyzx" count="6" name="车险问答">
+							<li><a href="${article.link}" title="${Article.title}"
+								target="_blank">${Article.title}</a></li>
+						</cms:list>
+					</ul>
+				</div>
+				<!--车险问答 结束-->
+				<!--车险案例 开始-->
+				<div class="hotnews">
+					<div class="hotnews_title">
+						<h2>车险案例</h2>
+						<h6>
+							<a href="${Site.URL}/chexian/club/anli/" target="_blank">更多&gt;&gt;</a>
+						</h6>
+					</div>
+					<ul class="hotnews_list">
+						 <cms:list item="Article" level="all" type="modifyzx" count="6"  name="车险案例" >	
+							<li><a href="${article.link}" title="${Article.title}" target="_blank">${Article.title}</a></li>
+			        	</cms:list>
+					</ul>
+				</div>
+				<!--车险案例 结束-->
+				<!--车险知识 开始-->
+				<div class="hotnews">
+					<div class="hotnews_title">
+						<h2>车险知识</h2>
+						<h6>
+							<a href="${Site.URL}/chexian/club/zhishi/" target="_blank" >更多&gt;&gt;</a>
+						</h6>
+					</div>
+					<ul class="hotnews_list">
+						 <cms:list item="Article" level="all" type="modifyzx" count="6"  name="车险知识" >	
+							<li><a href="${article.link}" title="${Article.title}" target="_blank">${Article.title}</a></li>
+			        	</cms:list>
+					</ul>
+				</div>
+				<!--车险知识 结束-->
+				<!--热门标签 开始-->
+				<div class="hotnews">
+					<div class="hotnews_title">
+						<h2>热门标签</h2>
+					</div>
+					<div class="clear hotnews_tag">
+						<ul>
+							<cms:list item="hotlabels"  name="热门标签" count="9" type="hot" tag="车险">
+							<% if(i%7==0){%>
+									<li><a class="bg01" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a></li>
+								<% }else if(i%7==1){%>
+									<li><a class="bg02" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a></li>
+								<% }else if(i%7==2){%>
+									<li><a class="bg03" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a></li>
+								<% }else if(i%7==3){%>
+									<li><a class="bg04" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a></li>
+								<% }else if(i%7==4){%>
+									<li><a class="bg05" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a></li>
+								<% }else if(i%7==5){%>
+									<li><a class="bg06" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a></li>
+								<% }else if(i%7==6){%>
+									<li><a class="bg01" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a></li>
+								<% } %>
+							</cms:list>
+						</ul>
+					</div>
+				</div>
+				<!--热门标签 结束-->
+				<div class="right_banner mt10">
+					<cms:ad name="车险资讯1" custom="false" size="223*96" type="1"> </cms:ad>
+				</div>
+				<div class="right_banner mt10">
+					<cms:ad name="车险资讯2" custom="false" size="223*96" type="1"> </cms:ad>
+				</div> 
+        </div>
+        <!--主体部分 右侧边栏 开始-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mainbody end-->
+
+
+<cms:include file="block/car_footer.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/car.js"></script>  
+<script type="text/javascript">
+/*tab切换 选项卡*/
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);/* zzjs1 */
+var con=document.getElementById("con_"+name+"_"+i);/* con_zzjs_1 */
+menu.className=i==cursel?"hover":"";/*三目运算 等号优先*/
+con.style.display=i==cursel?"block":"none";
+}
+}
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('div, ul, img, li, input , a');
+</script>
+<![endif]-->
+</body>
+</html>

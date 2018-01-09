@@ -1,0 +1,184 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="${catalog.Meta_Keywords}" />
+	<meta name="description" content="${catalog.Meta_Description}" />
+	<title>
+	${catalog.meta_title}-${site.Meta_Keywords}
+	</title>
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/money/new_money.css"/>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="money_warper cf">
+		<div class="money_nav cf">
+			<ul class="money_main_nav cf">
+				<li class="mon_nav1">
+					<a href="${Site.URL}/touzi-licai/" >理财首页</a>
+				</li> 
+				<li class="mon_nav2">
+					<a href="${Site.URL}/touzi-licai/zhishi/">如何理财</a>
+				</li>
+				<li class="mon_nav3">
+					<a href="${Site.URL}/touzi-licai/guihua/" >理财规划</a>
+				</li>
+			</ul>
+		</div>
+	
+	<div class="money_warper_up">
+		<div class="clear"></div>
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link>
+		</div>
+		<div class="h10"></div>
+		<div class="money_flash money_flash2 cf" >
+
+			<div id="change_32" class="changeBox_a1">
+				<cms:list item="Image" name="如何理财广告" count="4">
+				    <a target="_blank" class="a_bigImg" href="${Image.wangzhi}">
+						<img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="980" height="250"  alt=""/>
+					</a>
+			   </cms:list>
+				<a class="a_last" title="上一个" href="#">上一个</a>
+				<a class="a_next" title="下一个" href="#">下一个</a>
+				<ul class="ul_change_a2">
+					<cms:list item="Image" name="如何理财广告" count="4">
+					    <li>
+							<span class="">&nbsp;</span>
+						</li>
+				    </cms:list>
+				</ul>
+			</div>
+
+		</div>
+		<h2 class="money_ztitle cf">
+			<span class="fleft">理财资讯</span>
+			<ul class="money_new_tag">
+				<li>
+					<span id="hot_money1" onclick="setTab('hot_money',1,3)">理财技巧</span>
+				</li>
+				<li>
+					<span id="hot_money2" onclick="setTab('hot_money',2,3)">理财常识</span>
+				</li>
+				<li>
+					<span id="hot_money3" onclick="setTab('hot_money',3,3)" class="hover">理财新闻</span>
+				</li>
+			</ul>
+			
+		</h2>
+		<div class="money_news cf">
+			<h3 class="money_l_title2">热点推荐</h3>
+
+			<div class="money_news_box"  >
+				<div id="con_hot_money_3">
+					<cms:list item="Article" level="all" hasAttribute="hot" count="3" name="理财新闻">	
+						<dl class="licai_list">
+							<dt  class="licai_list_tit">
+								<a href="${Article.Link}" target="_blank">${Article.title|CharWidth=20}</a>
+							</dt>
+							<dd class="licai_list_dd">
+								${Article.summary|CharWidth=100}
+							</dd>
+						</dl>
+	           	 	</cms:list>
+				</div>
+				<div id="con_hot_money_2" style="display:none">
+					<cms:list item="Article" level="all" hasAttribute="hot" count="3" name="理财常识">	
+						<dl class="licai_list">
+							<dt  class="licai_list_tit">
+								<a href="${Article.Link}" target="_blank">${Article.title|CharWidth=20}</a>
+							</dt>
+							<dd class="licai_list_dd">
+								${Article.summary|CharWidth=100}
+							</dd>
+						</dl>
+	           	 	</cms:list>
+				</div>
+				<div id="con_hot_money_1" style="display:none">
+					<cms:list item="Article" level="all" hasAttribute="hot" count="3" name="理财技巧">	
+						<dl class="licai_list">
+							<dt  class="licai_list_tit">
+								<a href="${Article.Link}" target="_blank">${Article.title|CharWidth=20}</a>
+							</dt>
+							<dd class="licai_list_dd">
+								${Article.summary|CharWidth=100}
+							</dd>
+						</dl>
+	           	 	</cms:list>
+				</div>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="m_news_listbox cf">
+
+			<div class="news_list_con cf">
+				<h3 class="money_l_title2"><a class="money_more_m" href="${Site.URL}/touzi-licai/zixun/xinwen/" target="_blank">理财新闻</a></h3>
+				<ul class="m_list_ul cf">
+					<cms:list item="Article" level="all" type="rand" count="10" name="理财新闻">	
+						<li class="m_list_li">
+							<a href="${Article.Link}" target="_blank">${Article.title}</a>
+						</li>
+	           	 	</cms:list>
+				</ul>
+				<a href="${Site.URL}/touzi-licai/zixun/xinwen/" target="_blank" rel="nofollow" class="money_more_l">更多>></a>
+			</div>
+			<div class="news_list_con cf">
+				<h3 class="money_l_title2"><a class="money_more_m" href="${Site.URL}/touzi-licai/zixun/changshi/" target="_blank">理财常识</a></h3>
+				<ul class="m_list_ul cf">
+					<cms:list item="Article" level="all" type="rand" count="10" name="理财常识">	
+						<li class="m_list_li">
+							<a href="${Article.Link}" target="_blank">${Article.title}</a>
+						</li>
+	           	 	</cms:list>
+				</ul>
+				<a href="${Site.URL}/touzi-licai/zixun/changshi/" target="_blank" rel="nofollow" class="money_more_l">更多>></a>
+			</div>
+			<div class="news_list_con cf">
+				<h3 class="money_l_title2"><a class="money_more_m" href="${Site.URL}/touzi-licai/zixun/jiqiao/" target="_blank">理财技巧</a></h3>
+				<ul class="m_list_ul cf">
+					<cms:list item="Article" level="all" type="rand" count="10" name="理财技巧">	
+						<li class="m_list_li">
+							<a href="${Article.Link}" target="_blank">${Article.title}</a>
+						</li>
+	           	 	</cms:list>
+				</ul>
+				<a href="${Site.URL}/touzi-licai/zixun/jiqiao/" target="_blank" rel="nofollow" class="money_more_l">更多>></a>
+			</div>
+		</div>
+
+		<h3 class="money_hot cf">热门推荐</h3>
+		<div class="money_tj_box money_tj_up cf">
+			<cms:list item="article" level="all" count="2" hasAttribute="hot,newRecommend" name="理财保险">
+				<dl class="money_tj <% if(i==0) write("money_bor_bg");%>">
+				<dd>
+					<h2 class="money_tj_titile">
+						<a target="_blank" href="${article.link}">${article.title|CharWidth=15}</a>
+					</h2>
+					<p class="money_tj_des">${article.ERiskFeatures|CharWidth=60}</p>
+
+				</dd>
+				<dd class="money_tj_bom">
+					<p class="money_tj_sy">
+						预期年化收益率 <em>${article.ProfitRate}</em>
+					</p>
+					<a target="_blank" href="${article.link}" class="money_tj_go">查看详情</a>
+				</dd>
+				</dl>
+          	 </cms:list>
+		</div>
+	</div>
+</div>
+	<div class="clear"></div>
+
+<cms:include file="block/kxb_footer_new_common.shtml"></cms:include>
+<cms:include file="block/community_v1.shtml" />
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/money.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+	<div class="wrapper">
+		<div class="InsuQAMiddArea">
+			<div class="daohang">
+				<span class="daohang_home"></span>
+				<cms:link type="currentPosition"></cms:link> <span class="separator">></span><p   >我要提问</p>
+			</div>
+
+			<div class="InsuQALeft w190">
+				<div class="InsuQAColumnArea_2 mb10">
+					<!--    精彩问题推荐   begin     -->
+					<div class="TitleArea">精彩问题推荐</div>
+					<div class="ColumnCont">
+						<div class="TxtListArea">
+							<ul>
+								<cms:list item="article" count="8" hasAttribute="hot">
+									<li><a target="_blank" href="${Article.Link}" class="sys_url">${Article.Title|CharWidth=12}</a></li>
+								</cms:list>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--    精彩问题推荐   end     -->
+				<div class="mb10">
+					<a href="#"><img src="${Site.StaticResourcePath}/images/Pic_12.gif" /> </a>
+				</div>
+				<div class="InsuQAColumnArea_2 mb10">
+					<!--    产品推荐   begin     -->
+					<div class="TitleArea">
+						<div class="TitleArea">产品推荐</div>
+						<div class="TitleMore">
+							<a href="#">更多>></a>
+						</div>
+					</div>
+					<div class="ColumnCont">
+						<div class="TxtListArea">
+							<ul>
+								<cms:list item="article" count="8" hasAttribute="newRecommend" name="产品中心">
+									<li><a target="_blank" href="${Article.Link}" class="sys_url">${Article.Title|CharWidth=12}</a></li>
+								</cms:list>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--    产品推荐   end     -->
+			</div>
+
+			<div class="InsuQARight w800">
+				<div class="InsuQAColumnArea_5 mb10">
+					<div class="TitleArea">
+						<h3 class="mb10">我要提问</h3>
+						<div class="clear"></div>
+					</div>
+					<div class="ColumnCont">
+						<div class="TxtArea" align="center">
+							<form action="#" id="f1">
+								<table cellpadding="0" cellspacing="5" align="center">
+									<tr height="40">
+										<td valign="top" align="right" class="f14">您的提问：</td>
+										<td valign="top" align="left"><input type="text" size="50" name="title" id="title" /></td>
+									</tr>
+
+									<tr height="130">
+										<td valign="top" align="right" class="f14">问题补充说明：</td>
+										<td valign="top" align="left"><textarea cols="50" rows="6" name="content" id="content" style="height:100px!important;"></textarea>
+											<div>问题说明越详细，回答越准确.</div></td>
+									</tr>
+									
+									<tr>
+										<td valign="top" align="right" class="f14">验证码：</td>
+										<td valign="top" align="left"><input name="VerifyCode" type="text" style="width:60px" id="VerifyCode"  onfocus="this.select();">
+										<img src="${Site.Prop6}/Services/AuthCode.jsp?Height=24&Width=78&type=Comment" id="yzm" alt="点击刷新验证码" height="18"  align="absmiddle" style="cursor:pointer;" onClick="this.src='${Site.Prop6}/Services/AuthCode.jsp?Height=24&Width=78&type=Comment&'+ Math.random()" >
+									</tr>
+
+									<tr height="60">
+										<td colspan="2" align="center" valign="top"><input type="button" class="Btn_3" id="add" name="add" /></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+    <cms:include file="block/community_v1.shtml" />
+    <script type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(
+						function() {
+							jQuery("#add").click(
+											function() {
+												var tContent = document
+														.getElementById("content").value;
+												var tTitle = document
+														.getElementById("title").value;
+												var tVerifyCode = document
+														.getElementById("VerifyCode").value;
+												var now = new Date().getTime();
+												var data = {
+													Title : encodeURI(tTitle,
+															"UTF-8"),
+													Content : encodeURI(
+															tContent, "UTF-8"),
+													VerifyCode : encodeURI(
+															tVerifyCode, "UTF-8"),
+													operate : "Question",
+													method : "save"
+												};
+												jQuery
+														.getJSON(
+																'${site.prop6}/shop.jsp?now='
+																		+ now,
+																data,
+																function(json) {
+																	if (json.test == 'nologin') {
+																		//window.location("http://localhost:8080/wj/html/login.html").href;
+																		artLogin();//使用弹出窗口登录
+																	} else if(json.test == '验证码输入错误！'){
+																		alert(json.test);
+																		document.getElementById("yzm").click();
+																	}else{
+																		alert(json.test);
+																		window.location.href = "${Site.URL}/wenda/index.shtml";
+																	}
+																});
+											});
+						});
+	</script>

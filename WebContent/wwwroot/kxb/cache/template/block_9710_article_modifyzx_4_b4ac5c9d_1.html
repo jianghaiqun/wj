@@ -1,0 +1,17 @@
+<% DataTable dt_1 = TemplateData.getDocList("article","保险百科","all","hp_recommend","modifyzx","4","null","null","null");
+  if(dt_1==null){write("没有找到栏目。parent：null  catalog："+"保险百科");}else{
+ int rdCnt=dt_1.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_1  = dt_1.getDataRow(i);
+ int rdIdx=i;
+%>
+              
+	                    <li >
+	                    	<% if(i==0){%>
+	                        <a  class="hover" id="top_Lv<%=(i+1) %>" onmouseover="setTab('top_Lv',<%=(i+1) %>,<%=rdCnt %>)" class="ellipsis" href="javascript:void(0);" >${article_1.Title} <i class="icon"></i></a>
+	                    	<% }else{%>
+	                    	<a  class="" id="top_Lv<%=(i+1) %>" onmouseover="setTab('top_Lv',<%=(i+1) %>,<%=rdCnt %>)" class="ellipsis" href="javascript:void(0);" >${article_1.Title} <i class="icon"></i></a>
+	                    	<% }%>
+	                    </li>
+	                <%}}%>

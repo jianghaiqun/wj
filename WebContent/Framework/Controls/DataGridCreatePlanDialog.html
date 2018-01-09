@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>菜单</title>
+    <link href="../../Include/Default.css" rel="stylesheet" type="text/css"/>
+    <script src="../../Framework/Main.js"></script>
+    <script>
+        Page.onLoad(function () {
+            var id = Args["DataGridID"];
+            var arr = Parent.$(id).getColumnInfo();
+            var html = [];
+            html.push("<table width='100%'>");
+            for (var i = 0; i < arr.length; i++) {
+                if (i % 4 == 0) {
+                    html.push("<tr>");
+                }
+                html.push("<td height='25' width='25%'><input type='checkbox' columnWidth='" + arr[i][2] + "' columnName='" + arr[i][0] + "' name='Column' checked id='Column" + i + "' value='" + arr[i][1] + "'>");
+                html.push("<lable for='Column" + i + "'>" + arr[i][0] + "</label></td>\n");
+                if (i % 4 == 3) {
+                    html.push("</tr>");
+                }
+            }
+            if (arr.length % 4 != 0) {
+                html.push("</tr>");
+            }
+            html.push("</table>");
+            $("tdNames").innerHTML = html.join('');
+        });
+
+        function onAllClick() {
+            var arr = $N('Column');
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].checked = $('all').checked;
+            }
+        }
+
+    </script>
+</head>
+<body>
+<table width="90%" height="100%" border="0" align="center">
+
+    <tr>
+        <td>任务名称:</td>
+        <td colspan="3"><input type="text" id="plan_name" name="plan_name"></td>
+    </tr>
+    <tr>
+        <td>统计周期:</td>
+        <td><input type="radio" name="period" id="period_once" checked value="ONCE"><label
+                for="period_once">单次</label></td>
+        <td><input type="radio" name="period" id="period_day" value="DAY"><label
+                for="period_day">每天</label>
+        </td>
+        <td><input type="radio" name="period" id="period_week" value="WEEK"><label
+                for="period_week">每周</label>
+        </td>
+        <td><input type="radio" name="period" id="period_month" value="MONTH"><label
+                for="period_month">每月</label>
+        </td>
+    </tr>
+    <tr>
+        <td height="40" colspan="4">
+            <fieldset>
+                <legend>
+                    <input type="checkbox" name="all" id="all" checked onClick="onAllClick()">
+                    <label for="all"><strong>全部列</strong></label>
+                </legend>
+                <div id="tdNames">&nbsp;</div>
+            </fieldset>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

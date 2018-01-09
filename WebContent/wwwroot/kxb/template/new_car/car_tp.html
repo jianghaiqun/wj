@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link href="${Site.StaticResourcePath}/style/new/global.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/base.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/information.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/howbuy.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload="navHeight();">
+<cms:include file="block/car_header.shtml" />
+<!--mainbody start-->
+<div class="mainbody">
+	<div class="wrapper">
+	<input id="type" type="hidden" value="B05"/>
+    	<div class="your_site"><cms:link type="currentPositionList"></cms:link></div>
+        <!--主体部分 左侧边栏 开始-->
+        <div class="buyleftbar">
+        	<!--获取报价 开始-->
+        	<div class="price_pa">
+                <ul>
+                    <li><span class="bg07 white">车主姓名</span><input id="carUser" name="carUser" type="text" class="text" maxlength="30"/></li>
+                    <li><span class="bg08 white">联系电话</span><input id="carPhone" name="carPhone" type="text" class="text" maxlength="11"/></li>
+                    <li><span class="bg09 white">车牌号</span><input id="carNO" name="carNO" type="text" class="text" maxlength="9"/></li>
+                    <li><input name="" type="checkbox" value="" id="guidtype" align="absmiddle"/><label for="guidtype">新车未上牌</label></li>
+                    <li><input name="" type="button" onclick="getComNowCpslinkNew('${catalog.CpsUrl}','${catalog.ComName}','${Article.carGoto}')" class="btn" value="获取报价" /></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <!--获取报价 结束-->
+            <div class="right_banner mt10 border_gray"><a href="${catalog.LeftHref}" target="_blank"><img src="${Site.StaticResourcePath}/${catalog.LeftAd}" width="223" height="113" /></a></div>
+            <!--常见问题 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>常见问题</h2>
+                    <h6><a href="${Site.URL}/chexian/club/wenda/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article"  name="车险问答" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--常见问题 结束-->
+            <!--投保案例 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>投保案例</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article"  name="投保案例" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--投保案例 结束-->
+            <!--理赔技巧 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>理赔技巧</h2>
+                    <h6><a href="${Site.URL}/chexian/club/zhishi/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article"  name="理赔技巧" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--理赔技巧 结束-->
+            <!--理赔案例 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>理赔案例</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article"  name="车险案例" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--理赔案例 结束--> 
+        </div>
+        <!--主体部分 左侧边栏 开始-->
+        <!--主体部分 右侧 开始-->
+    	<div class="buymain">
+        	<!--焦点图片 end-->
+        	<div class="pinganpic">
+            	<cms:imageplayer code="com_tp" type="0" width="745" height="175" />
+            </div>
+            <!--焦点图片 end-->
+   	    	<!--平安车险简介 开始-->
+        	<div class="howbuy mt10">
+            	<div class="pinganh2">
+                    <h1>安盛天平车险</h1>
+                    <img src="${Site.StaticResourcePath}/images/new_car/pinganimg04.jpg" width="228" height="108" />
+                </div>
+                <div class="pingantit">
+                	<img src="${Site.StaticResourcePath}/images/new_car/pinganimg09.jpg" width="282" height="43" />
+                    <p>安盛天平由原中国第一家专业车险公司天平汽车保险与全球最大保险集团AXA安盛集团在华全资财产险子公司合并而设立。
+                    依托AXA安盛集团雄厚的财务实力，卓越的品牌价值和领先的专业能力，并融合了天平保险丰富的本土经验资源和服务网络，
+                    致力于为广大客户提供及时、便捷、值得信赖的保险服务。</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--平安车险简介 结束-->
+        	<!--详细理赔步骤 开始-->
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" class="claimstable">
+              <tr>
+                <td colspan="2" class="claimstit center"><h2><span>省钱实惠</span><span>省时便捷</span><span>省心安全</span></h2></td>
+              </tr>
+              <tr>
+                <td width="101" class="center claimsred tp_text"><h2>安盛天平<br />服务优势</h2></td>
+                <td width="638">
+                	<div class="tp_youshi">　　　　　　　　　 
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="20%"><span>沟通无忧</span></td>
+                            <td width="80%">车险管家理赔全程跟踪服务</td>
+                          </tr>
+                          <tr>
+                            <td><span>定损无忧</span></td>
+                            <td>2000元以下纯车物损案件，损失确定，现场定损服务</td>
+                          </tr>
+                          <tr>
+                            <td><span>交单无忧</span></td>
+                            <td>万元以下纯车物损案件预约上门收单服务</td>
+                          </tr>
+                          <tr>
+                            <td><span>赔付无忧</span></td>
+                            <td>万元以下（含简易人伤）案件资料齐全，案件无异议，1个工作日内通知付款</td>
+                          </tr>
+                          <tr>
+                            <td><span>全程无忧</span></td>
+                            <td>绿色特快通道,电销和网销案件各环节优先处理</td>
+                          </tr>
+                          <tr>
+                            <td><span>保障全非</span></td>
+                            <td>非事故道路救援服务</td>
+                          </tr>
+                          <tr>
+                            <td><span>资信全资</span></td>
+                            <td>资信通短信提醒服务</td>
+                          </tr>
+                        </table>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="center claimsred tp_text" ><h2>安盛天平<br />帮您省</h2></td>
+                <td>
+                	<div class="youshi_list">
+                        <dl class="fuwu_sf">
+                            <dt class="meihua_p tp_text">省钱实惠</dt>
+                            <dd>省去中间渠道费用，私家商业车险<br />多省15%。车损综合险比同行业多<br />"涉水"和"自燃"责任，免除"涉水、<br />自燃"省更多。</dd>
+                        </dl>
+                        <dl class="fuwu_sf fuwu_sf_s">
+                            <dt class="meihua_p tp_text">省时便捷</dt>
+                            <dd>24小时不间断报价；48小时免费送<br />单上门，3G手机远程查勘定损最快<br />1小时赔付。</dd>
+                        </dl>
+                        <dl class="fuwu_sf">
+                            <dt class="meihua_p tp_text">省心安全</dt>
+                            <dd>免费享受非事故道路救援无限次，<br />免费服务放心用。</dd>
+                        </dl>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="center claimsred tp_text"><h2>安盛天平<br />理赔服务</h2></td>
+                <td>
+                	<div class="youshi_list">                
+                        <ul class="serivce_list">
+                            <li>365天*24小时全年无休接报案、事故救援、查勘、咨询服务</li>
+                            <li>事故损失金额万元以下单证齐全的1个工作日内通知银行支付赔款</li>
+                            <li>损失1万元以下的纯车物损且无异议案件可享受上门收单服务</li>
+                            <li>在安盛天平维修网络内修车享受代办理赔服务及事故救援服务</li>
+                            <li>全国异地通赔，网上支付赔款、无需辛苦往返</li>
+                        </ul>
+                        <div class="want_claims">
+                        	<h2>我要理赔</h2>
+                            <p><a href="http://www.kaixinbao.com/chexian/club/zhishi/A07G20140428001.shtml" target="_blank">了解理赔服务</a></p>
+                            <p><a href="http://www.axatp.com/claim/" target="_blank">理赔网点查询</a></p>
+                            <p><a href="http://www.kaixinbao.com/chexian/club/zhishi/A07F20140328001.shtml" target="_blank">常见索赔单证下载</a></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </td>
+              </tr>
+            </table>
+            <!--详细理赔步骤 结束-->
+            <!--平安车险理赔流程 开始-->
+       	    <div class="howbuy">
+                <div class="buymaintit">
+                  <h2>安盛天平车险理赔流程</h2></div>
+                <div class="claims_lc">
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tp_lc">
+                      <tr>
+                        <td width="106">95550<br />报案</td>
+                        <td width="112">处理事故现场</td>
+                        <td width="104">了解原因确定损伤</td>
+                        <td width="108">车辆维修</td>
+                        <td width="111">提交索赔资料</td>
+                        <td width="107">等待审核赔案</td>
+                        <td width="97">领取<br />赔款</td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <!--平安车险理赔流程 结束-->
+            <!--专题解读 开始-->
+       	    <div class="howbuy">
+                <div class="buymaintit"><h2>专题解读</h2></div>
+                <div class="topic">
+                	<ul>
+                    	<cms:list item="Image"  name="车险理赔" >
+							<li><a href="${Image.wangzhi}" title="${Image.title}" target="_blank"><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="133" height="78" align="absmiddle" /><span>${Image.title}</span></a></li>
+                        </cms:list> 
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--专题解读 结束-->
+        </div>
+        <!--主体部分 右侧 结束-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mainbody end-->
+<cms:include file="block/car_footer.shtml" /> 
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/bigpicroll.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/car.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('div, ul, img, li, input , a');
+</script>
+<![endif]-->
+</body>
+</html>

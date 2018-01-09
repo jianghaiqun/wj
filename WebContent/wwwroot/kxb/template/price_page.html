@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>计划对比</title>
+<link href="${Site.StaticResourcePath}/style_index/new/main.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/listul.css" type="text/css" rel="stylesheet">
+<link href="${Site.StaticResourcePath}/style/redesign/new_planvs.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="${Site.JsResourcePath}/js/artDialog.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4a2.min.js"></script>  
+<script	src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+
+
+
+<script type="text/JavaScript">
+
+//表格高亮
+   
+var hilightClass = "hoverHilight";
+var activeHilightClass = "activeCellHilight";
+var hilightActive = 1;
+var hilightCol = 1;
+var hilightRow = 1;
+var hilightTopHeader = 0;
+var hilightLeftHeader = 0;
+var hilightRightHeader = 0;
+var hilightBottomHeader = 0;
+var surroundActive = 0;
+function initCrossHairsTable(id, topPad, rightPad, bottomPad, leftPad) {
+	var tableObj = document.getElementById(id);
+	var c = tableObj.rows[0].cells.length - rightPad;
+	var r = tableObj.rows.length - bottomPad;
+	for ( var i = topPad; i < r; i++) {
+		for ( var j = leftPad; j < c; j++) {
+			if (!document.all) {
+				tableObj.rows[i].cells[j].setAttribute("onmouseover",
+						"addHilight(this);");
+				tableObj.rows[i].cells[j].setAttribute("onmouseout",
+						"removeHilight(this);");
+			} else {
+				tableObj.rows[i].cells[j].onmouseover = function() {
+					addHilight(this);
+				}
+				tableObj.rows[i].cells[j].onmouseout = function() {
+					removeHilight(this);
+				}
+			}
+		}
+	}
+}
+function addHilight(cell) {
+	applyHilight(cell.parentNode.parentNode.parentNode,
+			cell.parentNode.rowIndex, cell.cellIndex, 1);
+}
+function removeHilight(cell) {
+	applyHilight(cell.parentNode.parentNode.parentNode,
+			cell.parentNode.rowIndex, cell.cellIndex, 0);
+}
+var oldRowClasses = "";
+var oldHeaderClasses = "";
+var oldCellClasses = new Array();
+function applyHilight(obj, rowIndex, colIndex, state) {
+	var W3CDOM = (document.createElement && document.getElementsByTagName);
+	if (!W3CDOM) {
+		alert("This script requires W3C DOM support")
+		return;
+	}
+	if (hilightClass == "")
+		alert("Please set a hilight class.");
+	if (hilightRow)
+		applyHilightRow(obj, rowIndex, colIndex, state);
+	if (hilightCol)
+		applyHilightCol(obj, rowIndex, colIndex, state);
+	if (hilightTopHeader)
+		applyHilightTopHeader(obj, rowIndex, colIndex, state);
+	if (hilightLeftHeader)
+		applyHilightLeftHeader(obj, rowIndex, colIndex, state);
+	if (hilightRightHeader)
+		applyHilightRightHeader(obj, rowIndex, colIndex, state);
+	if (hilightBottomHeader)
+		applyHilightBottomFooter(obj, rowIndex, colIndex, state);
+	if (hilightActive)
+		applyHilightActiveCell(obj, rowIndex, colIndex, state);
+	if (surroundActive)
+		applySurroundActiveHilight(obj, rowIndex, colIndex, state);
+}
+function applyHilightLeftHeader(obj, rowIndex, colIndex, state) {
+	var classArray;
+	var rowClasses = "";
+	if (state == 1) {
+		obj.rows[rowIndex].cells[0].className += " " + hilightClass;
+	} else {
+		classArray = obj.rows[rowIndex].cells[0].className.split(" ");
+		for ( var i = 0; i < (classArray.length - 1); i++)
+			if (classArray[i] != "")
+				rowClasses += " " + classArray[i];
+		obj.rows[rowIndex].cells[0].className = rowClasses;
+	}
+}
+function applyHilightRightHeader(obj, rowIndex, colIndex, state) {
+	var classArray;
+	var rowClasses = "";
+	if (state == 1) {
+		obj.rows[rowIndex].cells[obj.rows[rowIndex].cells.length - 1].className += " "
+				+ hilightClass;
+	} else {
+		classArray = obj.rows[rowIndex].cells[obj.rows[rowIndex].cells.length - 1].className
+				.split(" ");
+		for ( var i = 0; i < (classArray.length - 1); i++)
+			if (classArray[i] != "")
+				rowClasses += " " + classArray[i];
+		obj.rows[rowIndex].cells[obj.rows[rowIndex].cells.length - 1].className = rowClasses;
+	}
+}
+function applyHilightTopHeader(obj, rowIndex, colIndex, state) {
+	var classArray;
+	var colClasses = "";
+	if (state == 1) {
+		obj.rows[0].cells[colIndex].className += " " + hilightClass;
+	} else {
+		classArray = obj.rows[0].cells[colIndex].className.split(" ");
+		for ( var i = 0; i < (classArray.length - 1); i++)
+			if (classArray[i] != "")
+				colClasses += " " + classArray[i];
+		obj.rows[0].cells[colIndex].className = colClasses;
+	}
+}
+function applyHilightBottomFooter(obj, rowIndex, colIndex, state) {
+	var classArray;
+	var colClasses = "";
+	if (state == 1) {
+		obj.rows[obj.rows.length - 1].cells[colIndex].className += " "
+				+ hilightClass;
+	} else {
+		classArray = obj.rows[obj.rows.length - 1].cells[colIndex].className
+				.split(" ");
+		for ( var i = 0; i < (classArray.length - 1); i++)
+			if (classArray[i] != "")
+				colClasses += " " + classArray[i];
+		obj.rows[obj.rows.length - 1].cells[colIndex].className = colClasses;
+	}
+}
+function applyHilightRow(obj, rowIndex, colIndex, state) {
+	if (state == 1) {
+		oldRowClasses = obj.rows[rowIndex].className;
+		obj.rows[rowIndex].className = hilightClass;
+	} else {
+		obj.rows[rowIndex].className = oldRowClasses;
+	}
+}
+function applyHilightCol(obj, rowIndex, colIndex, state) {
+	var cellClasses = new Array();
+	if (state == 1) {
+		for ( var i = 0; i < obj.rows.length; i++) {
+			cellClasses.push(obj.rows[i].cells[colIndex].className);
+			obj.rows[i].cells[colIndex].className += " " + hilightClass;
+		}
+		oldCellClasses = cellClasses;
+	} else {
+		oldCellClasses.reverse();
+		for ( var i = 0; i < obj.rows.length; i++)
+			obj.rows[i].cells[colIndex].className = oldCellClasses.pop();
+	}
+}
+var oldActiveCellClasses;
+function applyHilightActiveCell(obj, rowIndex, colIndex, state) {
+	if (state == 1) {
+		oldActiveCellClasses = null;
+		oldActiveCellClasses = obj.rows[rowIndex].cells[colIndex].className;
+		obj.rows[rowIndex].cells[colIndex].className += " "
+				+ activeHilightClass;
+	} else {
+		var oldClasses = oldActiveCellClasses.split(" ");
+		obj.rows[rowIndex].cells[colIndex].className = "";
+		for ( var i = 0; i < oldClasses.length; i++) {
+			if (oldClasses[i] != hilightClass)
+				obj.rows[rowIndex].cells[colIndex].className += " "
+						+ oldClasses[i];
+			oldActiveCellClasses = "";
+		}
+	}
+}
+function applySurroundActiveHilight(obj, rowIndex, colIndex, state) {
+	var surroundRadius = 1;
+	var radiusColor = "#c0dbff"
+	var cell;
+	if (!parseInt(surroundRadius))
+		return;
+	if (state == 1) {
+		for ( var i = (rowIndex - surroundRadius); i <= (rowIndex + surroundRadius); i++) {
+			if (i < 0)
+				continue;
+			if (!obj.rows[i])
+				continue;
+			for ( var j = (colIndex - surroundRadius); j <= (colIndex + surroundRadius); j++) {
+				if (j < 0)
+					continue;
+				if (!obj.rows[i].cells[j])
+					continue;
+				cell = obj.rows[i].cells[j].style
+				cell.backgroundColor = radiusColor;
+				cell.opacity = (.5);
+				cell.MozOpacity = (.5);
+				cell.KhtmlOpacity = (.5);
+				cell.filter = "alpha(opacity=50)";
+			}
+		}
+		obj.rows[rowIndex].cells[colIndex].style.backgroundColor = "";
+	} else {
+		for ( var i = (rowIndex - surroundRadius); i <= (rowIndex + surroundRadius); i++) {
+			if (i < 0)
+				continue;
+			if (!obj.rows[i])
+				continue;
+			for ( var j = (colIndex - surroundRadius); j <= (colIndex + surroundRadius); j++) {
+				if (j < 0)
+					continue;
+				if (!obj.rows[i].cells[j])
+					continue;
+				cell = obj.rows[i].cells[j].style
+				cell.backgroundColor = "";
+				cell.opacity = (1);
+				cell.MozOpacity = (1);
+				cell.KhtmlOpacity = (1);
+				cell.filter = "alpha(opacity=100)";
+			}
+		}
+	}
+}
+//显示"当前计划" 图标
+function displayDQPlan(){
+	  $("#crossTable").find("tr:first-child .hilisgt_plan").prepend("<div class='dq_plan'><div class='dq_plan_s'></div></div>");
+}
+//选择计划后返回来源页面
+function retBack(){
+    $('#crossTable a').click(
+ 		    function () {
+ 			var bValue = $(this).attr("id");
+ 			var bHref = $(this).attr("href");
+ 		    var win = art.dialog.open.origin;//来源页面
+ 		    var name = win.document.getElementById(bValue);
+ 			$(name).trigger("click");
+ 			if($(name).find("a").length>=1){
+ 				win.location.href = bHref;
+ 			}
+ 			art.dialog.close();
+ 		    } );
+}
+</script>
+
+</head>
+
+<body onload="getInfo();" id="PlanCompare">
+
+
+</body>
+
+   <script type="text/javascript">
+	// 页面加载的完成后，通过ajax异步后台调去数据,得到计划对比的信息
+		function getInfo(){
+			var productId=art.dialog.data('productId');//产品编码
+			var tempURL=art.dialog.data('tempURL');//计划编码
+			var host="http://"+window.location.host;
+			jQuery.ajax({
+				url:  host+"/wj/shop/plan!planCompare.action?productId="+productId+tempURL,
+				dataType: "json",
+				async: false,
+				error: function(data){
+			    	var erroHtml='<br><br><br><div class="plan_box"><span><h2 align="center">获取计划对比信息失败，可能由于该产品已经下架！</h2></span></div>';
+		    		$("#PlanCompare").html(erroHtml);
+		    		},
+				success: function(data) {
+			    	 if(data==null) {
+				    	var erroHtml='<br><br><br><div class="plan_box"><span><h2 align="center">获取计划对比信息失败，可能由于该产品已经下架！</h2></span></div>';
+			    		$("#PlanCompare").html(erroHtml);
+				 	 }
+			    	 else{
+					    var obj = eval(data);
+					 	$("#PlanCompare").html(obj.result);
+                        displayDQPlan();
+					 	initCrossHairsTable("crossTable", 0, 1, 0, 1);
+		                retBack();
+				      }
+
+					}
+				});
+		}
+	</script>  
+	
+	
+</html>

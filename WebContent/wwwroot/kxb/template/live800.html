@@ -1,0 +1,76 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+html,body,div,h3,p,ul,li,dl,dt,dd,img{margin:0;padding:0;border:none}
+html,body{height:100%}
+ul,li{list-style:none outside none;}
+.right{float:left;background-color:#eff5fb;font:12px Arial,Helvetica,sans-serif;width:270px;height:100%}
+.slideBox{position:relative;height:380px;_overflow:hidden}
+.slideBox ul li.select,.slideBox ul li a{display:block}
+.imgNav{position:absolute;left:110px;top:359px;text-align:center}
+.imgNav a{display:inline-block;zoom:1;width:20px;height:20px;margin-left:5px;cursor:pointer}
+.imgNav span{display:none}
+.cases{border-top:1px solid #6392c8;width:100%;overflow:hidden}
+.cases dt{color:#5ea8d5;font-size:16px;height:32px;line-height:32px;margin:10px 15px 0;text-align:center}
+.cases dt h3{display:inline;padding:0 5px;background-color:#eff5fb;font-weight:100}
+.cases dd{padding:10px 0;width:50%;display:inline-block;float:left;text-align:center;height:52px;text-align:left}
+.cases dd.font_ad{text-align: left; width: 100%; height: auto;  padding: 8px 0 8px 4px;}
+.cases dd.font_ad a{ color:#00308B; text-decoration: none; font-family: "Microsoft YaHei"}
+.cases dd.font_ad a:hover{ color: #FF6D00;}
+.search{ height: 34px; background: #E5E5E5; padding:4px 0; }
+.search_link{ width: 90%; height: 23px;  margin:4px auto; display: block; background: #fff ; padding-top: 3px; padding-left: 4px;}
+.search_link:hover{ background-color: #F5D5BB;}
+.clear{clear: both;}
+.cases dd{ text-align: center;}
+
+.changeBox_a1{float:left;width:270px;height:380px;position:relative}
+.changeBox_a1 .a_bigImg{position:absolute;top:0px;left:0px;display:none}
+.changeDiv{position:absolute;top:0px;left:0px;display:none}
+.changeDiv h3{position:absolute;left:0px;bottom:0;width:270px;height:30px;line-height:30px;background:#fff;filter:alpha(opacity=70);opacity:0.7}
+.changeDiv h3 a{display:block;padding-left:15px;color:#FF6600}
+.ul_change_a2{position:absolute;right:1px;bottom:6px;padding-left:19px;overflow:hidden}
+.ul_change_a2 li{float:left;margin-right:6px}
+.ul_change_a2 img{border:1px solid #ddd}
+.ul_change_a2 img.now{border:1px solid #FF6600}
+.ul_change_a2{position:absolute;right:0px;bottom:6px;overflow:hidden;padding-left:19px;z-index:56}
+.ul_change_a2 li{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1}
+.ul_change_a2 span{display:-moz-inline-stack;display:inline-block;margin-right:2px;padding:0px 8px;background:url(../../images/redesign/list_ips_01.png) no-repeat -13px -196px;font-size:1em;opacity:0.85;cursor:hand;cursor:pointer;*display:inline;*zoom:1;filter:alpha(opacity=85);text-indent: -2000em;}
+.ul_change_a2 span.on{background-position:-13px -233px;color:#fff}
+.m-abn-right{width:190px;float:right;height:190px;background:#F2FEFF}
+</style>
+</head>
+	
+<body>
+<div class="right">
+		<div class="slideBox"><cms:imageplayer code="Live800_ad" type="0" width="270" height="380" />
+		</div>
+		<dl id="cases" class="cases">
+	        <cms:list item="friendlink" name="live800_Text" count="10">
+						<dd class="font_ad"><a target="_blank" href="${friendlink.URL}">${friendlink.Name}</a></dd>
+			</cms:list>
+	        <cms:list item="friendlink" name="live800_Image" count="10">
+	      		 <dd><a target="_blank" href="${friendlink.URL}"><img src="${Site.StaticResourcePath}/${friendlink.ImagePath}"></a></dd>
+			</cms:list>
+		</dl>
+		<div class="clear"></div>
+		<div class="search">
+			<cms:list item="friendlink" name="live800_Image_1" count="1">
+	      		 <a href="${friendlink.URL}" class="search_link" target="_blank">
+					<img src="${Site.StaticResourcePath}/${friendlink.ImagePath}" alt="">
+				</a>
+			</cms:list>
+		</div>
+		</div>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	 <script type="text/javascript">
+	 	$('#change_33  div.changeDiv').soChange({
+			thumbObj:'#change_33 .ul_change_a2 span',
+			thumbNowClass:'on',
+			changeTime:6000
+		});
+	 </script>
+</body>
+</html>

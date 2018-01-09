@@ -1,0 +1,23 @@
+body{
+background:#FBFDFC;
+}
+.tree {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 10px;
+	white-space: nowrap;
+	background:url(img/left-bg.jpg) no-repeat bottom;
+	height:100%
+}
+.tree img {
+	border: 0px;
+	height: 18px;
+	vertical-align: text-bottom;
+}
+.tree a {
+	color: #000;
+	text-decoration: none;
+}
+.tree a:hover {
+	color: #345373;
+}

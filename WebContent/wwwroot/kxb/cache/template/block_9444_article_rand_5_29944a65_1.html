@@ -1,0 +1,11 @@
+<% DataTable dt_21 = TemplateData.getDocList("article","9444","all","null","rand","5","(tag like '%营销%' or tag like '%销售%' or tag like '%网销%' or tag like '%电销%' or tag like '%渠道%')","null","null");
+  if(dt_21==null){write("没有找到栏目。parent：null  catalog："+"9444");}else{
+ int rdCnt=dt_21.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_21  = dt_21.getDataRow(i);
+ int rdIdx=i;
+%>
+
+									<li><a href="${article_21.Link}" >${article_21.Title}</a></li>
+								<%}}%>

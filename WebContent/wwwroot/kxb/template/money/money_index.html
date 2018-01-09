@@ -1,0 +1,373 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/money/new_money.css"/>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="money_warper cf"> 
+		<div class="money_nav cf">    
+			<ul class="money_main_nav cf">
+				<li class="mon_nav1">
+					<a href="${Site.URL}/touzi-licai/" class="active">理财首页</a>
+				</li>
+				<li class="mon_nav2">
+					<a href="${Site.URL}/touzi-licai/zhishi/">如何理财</a>
+				</li>
+				<li class="mon_nav3">
+					<a href="${Site.URL}/touzi-licai/guihua/">理财规划</a>
+				</li>
+			</ul>
+		</div>
+ 
+		<div class="grid-c2-s7f">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="money_flash  cf" >
+
+						<div id="change_32" class="changeBox_a1">
+                           <cms:list item="Image" name="理财首页广告 " count="4">
+	                           <a target="_blank" class="a_bigImg" href="${Image.wangzhi}">
+									<img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="740" height="300"  alt=""/>
+								</a>
+                           </cms:list>
+							
+							<a class="a_last" title="上一个" href="#">上一个</a>
+							<a class="a_next" title="下一个" href="#">下一个</a>
+							<ul class="ul_change_a2">
+								<cms:list item="Image" name="理财首页广告 " count="4">
+		                          <li>
+										<span class="">&nbsp;</span>
+									</li>
+	                            </cms:list>
+							</ul>
+						</div>
+
+					</div>
+					<h3 class="money_hot cf">热门推荐</h3>
+
+					<div class="money_mainbox">
+					<div class="money_tj_box money_tj_up cf">
+		  
+					    <cms:list item="article" level="all" count="2" hasAttribute="hot,newRecommend" name="理财保险">
+							<dl class="money_tj <% if(i==0) write("money_bor_bg");%>">
+							<dd>
+								<h2 class="money_tj_titile">
+									<a target="_blank" href="${article.link}">${article.title|CharWidth=15}</a>
+								</h2>
+								<p class="money_tj_des">${article.ERiskFeatures|CharWidth=60}</p>
+			
+							</dd>
+							<dd class="money_tj_bom">
+								<p class="money_tj_sy">
+									预期年化收益率 <em>${article.ProfitRate}</em>
+								</p>
+								<a target="_blank" href="${article.link}" class="money_tj_go">查看详情</a>
+							</dd>
+							</dl>
+          	          </cms:list>
+			
+		           </div>
+						<h3 class="money_l_title">投资理财产品</h3>
+						<div class="money_cp_box cf">
+							<cms:list name="理财保险" level="all" item="article" count="6">
+                       			 <div class="money_linshi"><a target="_blank" href="${article.link}"><img src="${Site.StaticResourcePath}/${Article.ProductImg}" width="660" height="200"  alt=""/></a></div>
+							</cms:list>
+						</div>
+
+						<h3 class="money_l_title">理财规划</h3>
+						<div class="licai_zt cf">
+							<div class="licai_img1">
+								<a href="${Site.URL}/touzi-licai/guihua/30000001/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_03.jpg" width="146" height="220"  alt="养老理财规划" title="养老理财规划"/>
+								</a>
+							</div>
+							<div class="licai_img2">
+								<a href="${Site.URL}/touzi-licai/guihua/10000001/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_04.jpg" width="169" height="111"  alt="工薪家庭理财规划" title="工薪家庭理财规划"/>
+								</a>
+								<a href="${Site.URL}/touzi-licai/guihua/10000002/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_05.jpg" width="102" height="111"  alt="单身青年理财规划" title="单身青年理财规划"/>
+								</a>
+								<a href="${Site.URL}/touzi-licai/guihua/30000003/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_06.jpg" width="121" height="111"  alt="投资理财规划" title="投资理财规划"/>
+								</a>
+								<a href="${Site.URL}/touzi-licai/guihua/20000003/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_07.jpg" width="199" height="111"  alt="女性理财规划" title="女性理财规划"/>
+								</a>
+								<a href="${Site.URL}/touzi-licai/guihua/20000002/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_09.jpg" width="125" height="109"  alt="少儿理财规划" title="少儿理财规划"/>
+								</a>
+								<a href="${Site.URL}/touzi-licai/guihua/30000002/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_10.jpg" width="165" height="109"  alt="教育理财规划" title="教育理财规划"/>
+								</a>
+								<a href="${Site.URL}/touzi-licai/guihua/10000003/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_11.jpg" width="162" height="109"  alt="退休家庭理财规划" title="退休家庭理财规划"/>
+								</a>
+								<a href="${Site.URL}/touzi-licai/guihua/20000001/" target="_blank">
+									<img src="${Site.StaticResourcePath}/images/money/mone_zt_12.jpg" width="139" height="109"  alt="老年理财规划" title="老年理财规划"/>
+								</a>
+							</div>
+						</div>
+						<h3 class="money_l_title">网购理财流程</h3>
+
+						<div class="licai_lc">
+							<img src="${Site.StaticResourcePath}/images/money/licai_lc2_15.gif" width="562" height="220"  alt=""/>
+							<div class="licai_lc_bor"></div>
+							<img src="${Site.StaticResourcePath}/images/money/licai_lc2_16.gif" width="562" height="220"  alt=""/>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<div class="col-sub">
+				<!--<div class="my_mon_login">-->
+				<div style="display:none">
+					<b class="my_money_b">我的理财</b>
+					<div class="my_licai_mes" style="display:none">
+						<a href="###" class="my_login_btn">登陆帐号</a>
+						<p class="my_money_p">
+							没有帐号？点击
+							<a href="">注册</a>
+						</p>
+						<p class="my_money_p2">登录以后您可以查看实时收益，领取与追加投资等。</p>
+					</div>
+					<div class="my_licai_mes">
+						<p class="my_money_mes">尊敬的用户，您好</p>
+						<p class="my_money_dd">
+							您的理财订单
+							<em>2</em>
+							单
+						</p>
+						<a href="###" class="my_login_btn">进入我的理财</a>
+					</div>
+
+				</div>
+				<div class="money_right">
+			     	<b class="my_money_b">理财早知道</b>
+					<ul class="money_zd">
+						<li class="money_r_nav1">
+							<a href="${Site.URL}/touzi-licai/baoxian/" target="_blank">保险理财</a>
+						</li>
+						<li class="money_r_nav2">
+							<a href="${Site.URL}/touzi-licai/jijin/" target="_blank">基金理财</a>
+						</li>
+						<li class="money_r_nav3">
+							<a href="${Site.URL}/touzi-licai/daikuan/" target="_blank">贷款理财</a>
+						</li>
+						<li class="money_r_nav4">
+							<a href="${Site.URL}/touzi-licai/yinhang" target="_blank">银行理财</a>
+						</li>
+						<li class="money_r_nav5">
+							<a href="${Site.URL}/touzi-licai/xintuo/" target="_blank">信托理财</a>
+						</li>
+					</ul>
+					<div class="money_r_bor"></div>
+					<b class="my_money_b"><a href="${Site.URL}/touzi-licai/zixun/" target="_blank">理财资讯 </a> </b>
+
+                         <ul id="car_news_tag" class="car_news_tags cf">   
+                              <li><span class="hover">理财新闻</span></li>
+                              <li><span>理财常识</span></li>
+                              <li><span>理财技巧</span></li>
+                         </ul>
+                         <div class="clear"></div>
+                         <div id="car_mews_body">
+                         <ul class="lizx_list">
+	                          <cms:list item="article" level="all" hasAttribute="lc_recommen" name="理财新闻" count="5">
+							 	<li>
+									<a href="${Article.Link}" target="_blank">${Article.title}</a>
+								</li>
+		   					 </cms:list>
+                         </ul>
+                         <ul class="lizx_list"  style="display:none">
+                          <cms:list item="article" level="all" hasAttribute="lc_recommen" name="理财常识" count="5">
+						 	<li>
+								<a href="${Article.Link}" target="_blank">${Article.title}</a>
+							</li>
+	   					 </cms:list>
+                         </ul>
+                         <ul class="lizx_list" style="display:none">
+                          <cms:list item="article" level="all" hasAttribute="lc_recommen" name="理财技巧" count="5">
+						 	<li>
+								<a href="${Article.Link}" target="_blank">${Article.title}</a>
+							</li>
+	   					 </cms:list>
+                         </ul>
+                         </div>
+                         <a href="${Site.URL}/touzi-licai/zixun/" rel="nofollow" class="money_more">更多>></a>
+					<div class="money_r_bor"></div>
+						<div class="caculator_box1">
+							<dl class="clearfix caculator">
+								<dt>购买金额</dt>
+								<dd>
+									<input type="text" id="buyAmount" autocomplete="off" value="1" class="input_de1" name="" />
+									万
+								</dd>
+							</dl>
+							<dl class="clearfix caculator">
+								<dt>投资天数</dt>
+								<dd>
+									<input type="text" id="buyDay" autocomplete="off" value="1" class="input_de1" name=""/>
+									天
+								</dd>
+							</dl>
+							<dl class="clearfix caculator">
+								<dt>预期结算率</dt>
+								<dd>
+									<input type="text" id="buyRate" autocomplete="off" value="1" class="input_de1" name=""/>
+									%
+								</dd>
+							</dl>
+							<div id="cal_rsPart" class="cal_result pt10">
+								<p class="slider_ca"></p>
+								<div class="result_info">
+									<p id="cal_tip" class="gray5" >点击按钮可计算收益</p>
+									<div class="hide" id="cal_rs"  style="display: none;">
+										<p class="money_jsq_p">
+											收益金额：
+											<span id="getAmount"> <strong>10115.85 元</strong></span>
+										</p>
+										<p class="money_jsq_p">
+											 总计金额：
+											<span id="allAmount"> 10115.85 元</span>
+										</p>
+									</div>
+									<p class="t_c">
+										<input type="button" id="toCaculate" class="btn_caculator" onclick="getMonney();" alt="开始计算" value=""/></p>
+									<p id="cal_err"  style="display: none;"><strong style="color: red;">购买金额在大于等于0.1有效数字</strong></p>
+									<p id="cal_err1" style="display: none;"><strong style="color: red;">投资天数大于等于0的有效数字</strong></p>
+									<p id="cal_err2" style="display: none;"><strong style="color: red;">预期结算率为有效数字</strong></p>
+								</div>
+							</div>
+						</div>
+					<div class="money_r_bor"></div>
+					<b class="my_money_b">常见问题问答</b>
+					<dl class="money_question">
+						<dt class="que_q">
+							<em class="que_sjx"></em>
+							<p>什么是年化结算利率？</p>
+						</dt>
+						<dd class="que_a">
+							<p>用户购买的理财产品，均为每日滚利复利计算收益。预期每日结算利率所对应的全年预期结算利率，就是预期年化结算利率</p>
+							<em class="que_sjx"></em>
+						</dd>
+					</dl>
+					<dl class="money_question">
+						<dt class="que_q">
+							<em class="que_sjx"></em>
+							<p>购买后会提供什么凭证？</p>
+						</dt>
+						<dd class="que_a">
+							<p>我们提供电子保单，电子保单和纸质保单具有同等法律效应，请您放心！购买后，您可以登陆到保险公司官网-->我的保单-->下载电子保单 或您收到的邮件内链接，进行电子保单的下载。如在操作中有任何疑问，可以联系我们的在线客服。</p>
+							<em class="que_sjx"></em>
+						</dd>
+					</dl>
+					<dl class="money_question">
+						<dt class="que_q">
+							<em class="que_sjx"></em>
+							<p>购买理财险有扣费吗？</p>
+						</dt>
+						<dd class="que_a">
+							<p>理财险有两部分扣费：初始购买扣费、提取时扣费。由于各产品收益及设计不同，有不同的扣取方式，以不同产品的情况而定。</p>
+							<em class="que_sjx"></em>
+						</dd>
+					</dl>
+					<div class="money_r_bor"></div>
+					<b class="my_money_b">理财热门词汇</b>
+					<div class="money_tag">
+						<cms:list item="hotlabels"  name="热门标签" count="9" type="hot" tag="理财">
+						<% if(i%7==0){%>
+								<a class="news_color12" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a>
+							<% }else if(i%7==1){%>
+								<a class="news_color14" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a>
+							<% }else if(i%7==2){%>
+								<a class="news_color19" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a>
+							<% }else if(i%7==3){%>
+								<a class="news_color13" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a>
+							<% }else if(i%7==4){%>
+								<a class="news_color15" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a>
+							<% }else if(i%7==5){%>
+								<a class="news_color16" href="${Site.URL}${hotlabels.linkurl}" target="_blank">${hotlabels.tag}</a>
+							<% }else if(i%7==6){%>
+								<a class="news_color14" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% } %>
+						</cms:list>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+			<div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="理财险首页" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="理财险首页" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="理财险首页" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+<cms:include file="block/kxb_footer_new_common.shtml"/>
+<cms:include file="block/community_v1.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/money.js"></script>
+<script > 
+//理财险计算器
+function getMonney(){
+	var amount = jQuery('#buyAmount').val();
+	var day = jQuery('#buyDay').val();
+	var rate = jQuery('#buyRate').val();
+	if(!amount.match(/^[0-9]+(.[0-9]{1})?$/)){
+		jQuery("#cal_err").show();
+		jQuery("#cal_rs").hide();
+		return;
+	}
+	if(!day.match(/^(0|[1-9][0-9]*)$/)){
+		jQuery("#cal_err1").show();
+		jQuery("#cal_rs").hide();
+		jQuery("#cal_err").hide();
+		return;
+	}
+	if(!rate.match(/^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/)){
+		jQuery("#cal_err2").show(); 
+		jQuery("#cal_rs").hide();
+		jQuery("#cal_err").hide();
+		jQuery("#cal_err1").hide();
+		return;
+	}
+	var amt = amount*10000*(day/365)*(rate/100);
+	var samt = amount*10000 + amt;
+	amt = amt.toFixed(2);
+	samt = samt.toFixed(2);
+	jQuery('#getAmount').html('<strong>'+amt+'</strong>');
+	jQuery('#allAmount').html('<strong>'+samt+'</strong>');
+	jQuery("#cal_err").hide();
+	jQuery("#cal_err1").hide();
+	jQuery("#cal_err2").hide();
+	jQuery("#cal_rs").show();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>计划对比</title>
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/new_planvs.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/artDialog.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4a2.min.js"></script>
+<script src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+<script type="text/JavaScript">
+//显示"当前计划" 图标
+function displayDQPlan(){
+	  $("#crossTable").find("tr:first-child .hilisgt_plan").prepend("<div class='plan_l'><div class='plan_r'><p>当前计划</p></div></div>");
+}
+//选择计划后返回来源页面
+function retBack(){
+    $('#crossTable a').click(
+ 		    function () {
+ 			var bValue = $(this).attr("id");
+ 			var bHref = $(this).attr("href");
+ 		    var win = art.dialog.open.origin;//来源页面
+ 		    var name = win.document.getElementById(bValue);
+ 			$(name).trigger("click");
+ 			if($(name).find("a").length>=1){
+ 				win.location.href = bHref;
+ 			}
+ 			art.dialog.close();
+ 		    } );
+}
+</script>
+</head>
+
+<body onload="getInfo();">
+
+</body>
+  <script type="text/javascript">
+	// 页面加载的完成后，通过ajax异步后台调去数据,得到计划对比的信息
+		function getInfo(){
+			var productId=art.dialog.data('productId');//产品编码
+			var tempURL=art.dialog.data('tempURL');//计划编码
+			var host="http://"+window.location.host;
+			jQuery.ajax({
+				url:  host+"/wj/shop/plan!planCompare.action?productId="+productId+tempURL,
+				dataType: "json",
+				async: false,
+				error: function(data){
+			    	var erroHtml='<br><br><br><div class="plan_box"><span><h2 align="center">获取计划对比信息失败，可能由于该产品已经下架！</h2></span></div>';
+		    		$("#PlanCompare").html(erroHtml);
+		    		},
+				success: function(data) {
+			    	 if(data==null) {
+				    	var erroHtml='<br><br><br><div class="plan_box"><span><h2 align="center">获取计划对比信息失败，可能由于该产品已经下架！</h2></span></div>';
+			    		$("body").html(erroHtml);
+				 	 }
+			    	 else{
+					    var obj = eval(data);
+					 	$("body").html(obj.result);
+                        displayDQPlan();
+                        /*initCrossHairsTable("crossTable", 0, 1, 0, 1);*/
+		                retBack(); 
+				      }
+
+					}
+				});
+		}
+	</script> 
+</html>

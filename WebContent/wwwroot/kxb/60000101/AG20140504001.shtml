@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>城市旅游-华东</title>
+</head>
+<link rel="stylesheet" type="text/css"
+ href="http://localhost:8080/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css"
+ href="http://localhost:8080/style/reset-grids.css" />
+<link rel="stylesheet" type="text/css"
+ href="http://localhost:8080/style/stencil.css" />
+<link rel="stylesheet" type="text/css"
+ href="http://localhost:8080/style/new_logo.css" />
+<style>
+.ste_banner {
+	background: url(http://localhost:8080/upload/Image/tpbf/2014/05/2822247545.jpg) no-repeat center top;
+	height: 600px;	
+}
+.g-resale-nav{display:none; }
+</style>
+<body>
+	<!--top头部-->
+		<div class="g-top">
+            <div class="g-weaper1200">
+                <div class="m-login">
+                <div id="NotLogin"><span class="m-login-p f-ib">您好，请</span><span class="m-login-a" id="NotLoginSpan"><a href="javascript:void(0);" id="headerShowLoginWindow" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">登录</a><em>/</em><a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">注册</a>
+                <span class="m-login-x" style="display:none"></span>
+                <!-- 未登录状态 显示图层 -->
+                    <div class="m-login-no" style="display:none;">
+                        <div class="m-lo-p">
+                            <div class="m-lo-img"></div>
+                            <img src="http://localhost:8080/images/redesign/photo_06.gif" alt="">
+                        </div>
+                        <div class="m-login-jf">
+                            <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag">会员专享，<br>积分换优惠</a>
+                        </div>
+                        <div class="clear h12"></div>
+                        <div class="m-integral">
+                            <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                        </div>
+                        <div class="m-Coupon">
+                        <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em>
+                        </div>
+                    </div>
+                <!-- 未登录状态 显示图层 end -->
+                </span></div>
+                <div id="YesLogin" style="display: none"><span class="m-login-p f-ib" id="YesLoginSpan">
+                                                         您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a>
+                                                         <i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                
+                <span class="m-login-x" style="display:none"></span>
+                <!--登录状态显示图层 -->
+                    <div class="m-login-yes z-hover-shadow"  style="display:none;">
+                           <div class="m-login-back">
+                               <span class="m-login-p m-login_p2">您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a><i id="headerLoginMemGradeIcon"  class="vip_k vip_top vip_k1" title=""></i></span><a href="javascript:void(0);" id="headerLogout" class="m-go-back">退出登录</a>
+                           </div> 
+                           <div class="m-lo-p">
+                            <div class="m-lo-img"><a href="###"></a></div>
+                            <img id="memberphoto" alt="">
+                           </div>
+                            <div class="m-login-user">
+                                <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="f_mi m-login-name2"></a><i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                                <p id="gradeinfo"></p>
+                            </div>
+                            <div class="clear h6"></div>
+                            <div class="m-integral2">
+                                <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                                <a id="memberPointsCount" href="http://localhost:8080/wj/shop/point!newList.action" class="m-jf-num"></a>
+                            </div>
+                            <div class="m-Coupon2">
+                            <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em><a id="CouponCount" href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="m-jf-num"></a>
+                            </div>
+                    </div>
+                <!--登录状态显示图层 end -->
+                   
+                </span></div>
+                </div>
+                <div class="m-top-fun">
+                      <span class="m-fun-span f-ib m-tel"><em class="i-tel"></em><i class="p-tel">4009-789-789</i></span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-WeChat" id="i-WeChat">
+                            <a href="###" class="m-fun-a hover"><em class="i-WeChat"></em></a>
+                            <div class="m-WeChatImg z-hover-shadow" style="display:none;">
+                                    <img src="http://localhost:8080/images/redesign/wechart.gif" alt="">
+                                    <p>关注微信公众号<br>轻松管理账单</p>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-service" id="i-service">
+                            <a href="###"  class="m-fun-a "><em class="i-service"></em></a>
+                            <div class="m-service_con z-hover-shadow" style="display:none;">
+                                 <ul class="m-service-li">
+                                <li><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单服务</a></li>
+                                <li><a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a></li>
+                                <li><a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔申请</a></li>
+                            </ul>
+                            </div> 
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-cart" id="i-user-cart-span"><a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-fun-a " onclick="wxsend('gwclogin');">
+                            <em class="i-cart"></em><i class="m-cartNum" id="shopCartNo">0</i></a>
+                              <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-nologin" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>请先登录</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/gwclogin" vlpageid="gwclogin">登录</a>
+                            </div>
+                             <!-- 购物车为空 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>购物车中没有商品</span>
+                                    <a href="http://www.kaixinbao.com" class="m-btn-login">去选购商品</a>
+                            </div>
+                             <!-- 购物车不为空 -->
+                           <div class="m-cart_list z-hover-shadow" id="m-cart-yes" style="display:none;">
+                                <ul class="m-cart-ul" id="shopcartinfo">
+                                
+                                </ul>
+                                <div class="m-cart-go">
+                                    	共计<em id="shoptotal"></em> <a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-cart-to">去购物车</a>
+                                </div>
+                           </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-user" id="i-user-span"><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-fun-a " onclick="wxsend('memlogin');"><em class="i-user"></em></a>
+                            <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-user-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>会员中心</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/memlogin" vlpageid="memlogin">登录</a>
+                            </div>
+                            <!-- 用户已登录状态 -->
+                            <div class="m-user-yes z-hover-shadow" id="m-user-yes" style="display:none;">
+                              <dl class="m-order_dl m-order_dl1">
+                                  <dt>我的保单</dt>
+                                  <dd>
+	                                  <a id="prepay" href="http://localhost:8080/wj/shop/order_query!queryNoPayOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="preeffecitive" href="http://localhost:8080/wj/shop/order_query!queryNoEffectOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="effecitive" href="http://localhost:8080/wj/shop/order_query!queryEffectingOrder.action" class="f-ib" rel="nofollow"></a>
+                                  </dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>账户中心</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/profile!edit.action" class="f-ib" rel="nofollow">账户信息</a>
+                                  <a href="http://localhost:8080/wj/shop/point!newList.action" class="f-ib" rel="nofollow">我的积分</a>
+                                  <a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="f-ib" rel="nofollow">我的优惠券</a></dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>客户服务</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/stow!queryScan.action" class="f-ib" rel="nofollow">我的收藏</a>
+                                  <a href="http://localhost:8080/wj/shop/question!questionList.action" class="f-ib" rel="nofollow">保险问答</a>
+                                  <a href="http://localhost:8080/wj/shop/member_comment!queryComment.action" class="f-ib" rel="nofollow">商品评价</a><a href="http://localhost:8080/wj/shop/my_compare!show.action" class="f-ib" rel="nofollow">对比记录</a>
+                                  <a href="http://localhost:8080/wj/shop/my_consult!show.action" class="f-ib" rel="nofollow">我的咨询</a></dd>
+                              </dl>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                </div>
+                <div class="g-resale-nav">
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/jiankang-baoxian/">健康险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/lvyou-baoxian/">旅游险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/yiwai-baoxian/">意外险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/">首页</a></span>
+                </div>
+            </div>
+        </div>
+<!--top头部end-->
+	<div class="ste_main_nav">
+		<div class="ste_warper">
+			<div class="ste_logo">
+				<a href="http://localhost:8080/"> <img src="http://localhost:8080/images/stencil/stencil_logo.gif"
+					alt="">
+				</a>
+			</div>
+			<div class="ste_nav">
+				<ul class="ste_navs">
+					<li><a href="http://localhost:8080/">首页</a></li>
+					<li><a href="http://localhost:8080/lvyou-baoxian/">旅游险</a></li>
+					<li><a href="http://localhost:8080/yiwai-baoxian/">意外险</a></li>
+					<li><a href="http://localhost:8080/jiankang-baoxian/">健康险</a></li>
+					<li><a href="http://localhost:8080/renshou-baoxian/">人寿险</a></li>
+					<li><a href="http://localhost:8080/jiacai-baoxian/">家财险</a></li>
+					<li><a href="http://localhost:8080/chexian/">车险</a></li>
+					<li><a href="http://localhost:8080/tx/">团体险</a></li>
+					<li class="ste_nav_last"><a href="http://localhost:8080/touzi-licai/">理财险</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ste_banner">
+	<div class="ste_banners_box">   <h1 class="ste_baner_text"></h1></div>
+	</div>
+	<div class="city_con">
+		<h2 class="ctiy_title" id="city_1">测试</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_c_l"></div>
+			<div class="city_c_c">
+				<div class="city_n_img">
+					<a href="http://www.baidu.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/lcbjsx/2820166173.jpg" width="316px" heigh="211px"
+						alt="">
+					</a>
+				</div>
+				<div class="city_n_list">
+					<h3 class="ciyt_tit_h3">
+						<a href="http://www.baidu.com" target="_blank">测试使用</a>
+					</h3>
+					<p class="city_news_d">
+						test华东三省江浙沪包邮
+						<a href="http://www.baidu.com" target="_blank">...更多</a></p>
+					<div class="city_height20"></div>
+					<h3 class="ciyt_tit_h3">
+						<a href="http://www.baidu.com" target="_blank">杭州</a>
+					</h3>
+					<p class="city_news_d">
+						杭州是个美丽文明但是夏天很热的城市
+						<a href="http://www.baidu.com" target="_blank">...更多</a></p>
+				</div>
+				<div class="city_x_bor"></div>
+        <div class="cp_dy_box cp_dy_box_min fleft">
+        
+					</div>
+				<div class="cp_dy_box cp_dy_box_min fright">
+				
+
+					<div class="cp_stencil_title clearfix">
+						<div class="cp_box_logo">
+							<span class="CInsuranceCompany icon_C1018"></span>
+						</div>
+						<div class="cp_title_s">
+							<h2>
+								<a href="http://localhost:8080/yiwai-baoxian/257918.shtml" target="_blank">太平晚年安顺意外险B款</a>
+							</h2>
+							<p>适合经常乘坐公共交通工具以及经常到公园活动的中晚年人士</p>
+						</div>
+					</div>
+					<ul class="stencil_td ">
+						<ul class="ld_list_box"><li><span>户外保障</span></li><li><span>交通保障</span></li><li><span>老年专享</span></li><li><span>价格低廉</span></li><li><span>意外医疗和津贴</span></li></ul>
+					</ul>
+					<div class="stencil_cp_des_list">
+						<p><div id="divRiskAppDuty_10180101071" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_00000000000000003123" ><span class="CDutyCol1">意外身故、残疾</span><span class="CDutyCol2">3万</span><span class="CDutyCol3">保障被保险人因意外伤害导致的身故及残疾。仅限搭乘公共交通工具及在公园内发生的意外导致的保险事故。</span></div><div class="list_2 row0" id="Duty_00000000000000003122" ><span class="CDutyCol1">意外医疗</span><span class="CDutyCol2">0.2万</span><span class="CDutyCol3">赔偿被保险人因遭受意外伤害发生的治疗费用。</span></div><div class="list_3 row1" id="Duty_00000000000000003121" ><span class="CDutyCol1">意外住院津贴</span><span class="CDutyCol2">30元/天</span><span class="CDutyCol3">被保险人因意外伤害住院每天赔偿30元，每一个年度内累计不超过180天。</span></div></div></p>
+					</div>
+					<div class="cp_price_con">
+						<em>RMB</em><span name="Ajax_Prict_10180101071">80.00</span>
+		                    <a href="http://localhost:8080/yiwai-baoxian/257918.shtml" target="_blank">查看详情</a>
+					</div>
+				
+				</div>
+			</div>
+			<div class="city_c_r"></div>
+		</div>
+		<h2 class="ctiy_title" id="city_2">旅游</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_c_l"></div>
+			<div class="city_c_c">
+				<div class="city_n_img">
+					<a href="http://www.taobao.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/lcbjsx/2820166173.jpg" width="316px"
+						heigh="211px" alt="">
+					</a>
+				</div>
+				<div class="city_n_list">
+					<div class="city_n_box">
+						<h3 class="ciyt_tit_h3">
+							<a href="http://www.taobao.com" target="_blank">上海</a>
+						</h3>
+						<p class="city_news_d">
+							上海--东方明珠，时尚又古老
+							<a href="http://www.taobao.com" target="_blank">...更多</a>
+						</p>
+					</div>
+					<div class="city_n_box">
+			            <h3 class="ciyt_tit_h3">
+			              你造吗
+			            </h3>
+			            <ul class="city_list_n">
+			            
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			             
+			            </ul>
+			         </div>
+				</div>
+				<div class="city_x_bor"></div>
+
+				<div class="cp_dy_box cp_dy_box_min fleft">
+					
+				</div>
+				<div class="cp_dy_box cp_dy_box_min fright">
+					
+				</div>
+			</div>
+			<div class="city_c_r"></div>
+		</div>
+
+		<div class="ste_cp_ad">
+			<a href="http://www.taobao.com" target="_blank"> <img
+			 src="http://localhost:8080/upload/Image/bjgclogo/zdlogo2/2822182521.jpg" width="986px"
+				height="137px" alt="">
+			</a>
+		</div>
+
+		<h2 class="ctiy_title" id="city_3">热门</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_m_l"></div>
+			<div class="city_m_c">
+				<div class="city_mm">
+					<div class="city_mm_des">
+						<h3 class="ciyt_tit_h3">
+							<a target="_blank" href="http://www.taobao.com">南京</a>
+						</h3>
+						<p class="city_news_d">
+						    南京--一个历史名城，文化底蕴深厚
+							<a target="_blank" href="http://www.taobao.com">...更多</a>
+						</p>
+						<div class="clear h20"></div>
+				          <h3 class="ciyt_tit_h3">
+				            系不系
+				          </h3>
+				           <ul class="city_list_n city_fj_list">
+				           
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			             
+				       </ul>
+					</div>
+				</div>
+				<div class="city_jd">
+					<div id="change_city" class="changeBox_ctiy">
+						<a class="a_bigImg" href="http://www.baidu.com"
+							target="_blank" style="display: inline;"><img width="364"
+							height="227" alt="" src="http://localhost:8080/upload/Image/cxzmlb/2014/04/2821408828.jpg">
+						</a> <a class="a_bigImg" href=""
+							target="_blank" style="display: none;"><img width="364"
+							height="227" alt="" src="http://localhost:8080/upload/Image/cxzmlb/2014/04/2821393075.jpg">
+						</a> <a class="a_bigImg" href=""
+							target="_blank" style="display: none;"><img width="364"
+							height="227" alt="" src="http://localhost:8080/upload/Image/pptj/2014/04/2821267823.jpg">
+						</a> <a class="a_bigImg" href=""
+							target="_blank" style="display: none;"><img width="364"
+							height="227" alt="" src="http://localhost:8080/upload/Image/pptj/2014/04/2821237550.JPG">
+						</a>
+
+						<ul class="ul_change_city">
+							<li><span class="on">1</span>
+							</li>
+							<li><span class="">2</span>
+							</li>
+							<li><span class="">3</span>
+							</li>
+							<li><span class="">4</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="city_m_r"></div>
+		</div>
+		<h2 class="ctiy_title" id="city_4">推荐</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_m_l"></div>
+			<div class="city_m_c">
+				<div class="city_ms_box">
+					<a href="http://www.taobao.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/lcbjsx/2820166173.jpg" alt="" width="226px"
+						height="156px" class="city_mm_img">
+					</a>
+					<div class="city_ms_p">
+						<h3 class="ciyt_tit_h3">
+							<a target="_blank" href="http://www.taobao.com">安徽</a>
+						</h3>
+						<p class="city_news_d">
+						安徽黄山--一览黄山，天下无山
+							<a target="_blank" href="http://www.taobao.com">...更多</a>
+						</p>
+					</div>
+					<a href="http://www.taobao.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/lcbjsx/2820145671.jpg" alt="" width="226px"
+						height="156px" class="city_mm_img">
+					</a>
+					<div class="city_ms_p">
+						<h3 class="ciyt_tit_h3">
+							<a target="_blank" href="http://www.taobao.com">舟山</a>
+						</h3>
+						<p class="city_news_d">
+						浙江舟山群岛，普陀寺
+							<a target="_blank" href="http://www.taobao.com">...更多</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="city_m_r"></div>
+
+		</div>
+		<h2 class="ctiy_title" id="city_5">景点</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_m_l"></div>
+			<div class="city_m_c">
+				<div class="city_ms_box">
+					<a href="http://www.taobao.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/tpbf/2014/03/2594174927.jpg" alt="" width="226px"
+						height="156px" class="city_mm_img">
+					</a>
+					<div class="city_lv_box">
+						<h3 class="ciyt_tit_h3">
+							<a target="_blank" href="http://www.taobao.com">舟山</a>
+						</h3>
+						<p class="city_news_d">
+						美丽的东海
+							<a target="_blank" href="http://www.taobao.com">...更多</a>
+						</p>
+					</div>
+					<div class="city_n_box city_n_box2">
+			            <h3 class="ciyt_tit_h3">
+			              热门
+			            </h3>
+			            <ul class="city_list_n ">
+			            
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			             
+			            </ul>
+			         </div>
+				</div>
+			</div>
+			<div class="city_m_r"></div>
+
+		</div>
+		<h2 class="ctiy_title">精彩专题推荐</h2>
+		<div class="city_con_1 clearfix">
+			<div class="city_m_l"></div>
+			<div class="city_m_c">
+				<div class="city_ms_box city_up_imgs">
+					<a href="http://www.taobao.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/lcbjsx/2820151424.jpg" alt="" width="226px"
+						height="156px" class="city_mm_img city_tz">杭州</a> <a
+					 href="http://www.taobao.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/lcbjsx/2820166173.jpg" alt="" width="226px"
+						height="156px" class="city_mm_img city_tz">上海</a> <a
+					 href="http://www.taobao.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/cxzmm/2014/04/2821139057.jpg" alt="" width="226px"
+						height="156px" class="city_mm_img city_tz">南京</a> <a
+					 href="http://www.taobao.com" target="_blank"> <img
+					 src="http://localhost:8080/upload/Image/lcbjsx/282013922.jpg" alt="" width="226px"
+						height="156px" class="city_mm_img city_tz">安徽</a>
+				</div>
+			</div>
+			<div class="city_m_r"></div>
+
+		</div>
+	</div>
+	<div class="g-weaper"></div>
+	<!-- 公共底部 -->
+    <div class="g-main-con">
+       <div class="clear h20"></div>  
+            <!-- foot -->
+            <div class="g-weaper1200">
+                <div class="g-footer">
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon1 "></em>正品保险</dt>
+                      <dd>中国保监会监制</dd>
+                      <dd>保险公司专供</dd>
+                      <dd>高性价比产品</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon2 "></em>快捷投保</dt>
+                      <dd>全方位一键对比</dd>
+                      <dd>1对1保险顾问指导</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon3 "></em>省心服务</dt>
+                      <dd>电子保单快捷变更</dd>
+                      <dd>满200元发票包邮</dd>
+                      <dd>免费协助理赔无差异</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon4 "></em>安全可靠</dt>
+                      <dd>7x24小时客服不间断</dd>
+                      <dd>风险提示保障安全</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon5 "></em>品牌实力</dt>
+                      <dd>3年200万用户选择</dd>
+                      <dd>2013年最佳保险中介</dd>
+                      <dd>30家知名保险公司合作</dd>
+                    </dl>
+
+                    <div class="clear h20"></div>
+                </div>
+              </div>
+                  <div class="clear h20"></div>
+                        <div class="g-footer-bg">
+                <div class="g-weaper1200">
+                     <div class="g-footer2">
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon6 "></em>新手指南</dt>
+                            <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn1" target="_blank" rel="nofollow">如何注册</a>
+                            <a href="http://localhost:8080/about//xszn/index.shtml#xszn4" target="_blank" rel="nofollow">如何投保</a>
+                            <a href="http://localhost:8080/about/xszn/index.shtml#xszn3" target="_blank" rel="nofollow">找回密码</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon7 "></em>支付帮助</dt>
+                            <dd><a href="http://localhost:8080/about/4/index.shtml#zfbz2" target="_blank" rel="nofollow">支付方式</a><a href="http://localhost:8080/about/4/index.shtml#zfbz1" target="_blank" rel="nofollow">支付说明</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon8 "></em>保单服务</dt>
+                            <dd><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单查询</a>
+                            <a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg2" target="_blank" rel="nofollow">保单变更</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg3" target="_blank" rel="nofollow">保单取消</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg1" target="_blank" rel="nofollow">保单寄送</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon9 "></em>理赔服务</dt>
+                            <dd><a href="http://localhost:8080/about/2/index.shtml#lpbz1" target="_blank" rel="nofollow">理赔指南</a><a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔报案</a>
+                            <a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔案例</a></dd>
+                          </dl>
+                           <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon10 "></em>服务中心</dt>
+                            <dd><a href="http://localhost:8080/wj/shop/bill_query!queryBill.action" target="_blank" rel="nofollow">发票索取</a>
+                            <a href="http://localhost:8080/about/3/dayizonghui/index.shtml" target="_blank" rel="nofollow">常见问题</a></dd>
+                          </dl>
+                          <div class="clear h20"></div>
+                     </div>
+                     
+                    <div class="clear h20"></div>
+                     <!-- 热门专题 -->
+                </div>
+              </div>
+             <!-- 底部 -->
+                <div class="g-btn-footer">
+                <div class="g-weaper1200">
+                        <div class="g-f-left">
+                          <div class="botlink02">
+                <ul  class="clearfix">
+					<li><a href="http://localhost:8080/other/about/" rel="nofollow">关于开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/news/" rel="nofollow">开心保要闻</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/jobs/" rel="nofollow">加入开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/sitemap/" >网站地图</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/legal/" rel="nofollow">法律声明</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/contact/" rel="nofollow">联系我们</a></li>
+					<li>|</li>
+					<li><a href="http://u.kaixinbao.com/" target="_blank" rel="nofollow">分销联盟</a></li>
+					<li>|</li>
+					<!-- <li><a href="http://kaixinbao.tmall.com/" target="_blank" rel="nofollow">开心保天猫店</a></li>
+					<li>|</li>
+					<li><a href="http://temai.kaixinbao.com/" target="_blank" rel="nofollow">特价机票</a></li>
+					<li><a href="http://wap.kaixinbao.com/" target="_blank" >移动版</a></li> -->
+					<li><a href="http://www.kaixinbao.com/yxhd/isl-tra/" target="_blank" rel="nofollow">微信版</a></li>                
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="copyright">		
+				<div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+				<div class="copyrightleft">Copyright 2012-2016 版权所有 网金保险销售服务有限公司</div>
+			</div>
+                        </div>
+                        <div class="g-f-right">
+                            <ul class="sl-floatcenter">
+          					
+ 
+				      			<li class="sl-floatcenter-item" ><a href="../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36" height="33"/></a></li>
+				    		
+ 
+				      			<li class="sl-floatcenter-item" ><a href="../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69" height="33"/></a></li>
+				    		 
+                          </ul>
+                        </div>
+                        <div class="clear"></div>
+                </div>
+          </div>
+    </div>
+  <div id="fix_nav" class="fix_nav">
+       <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" >在线客服</a>
+       <span class="fix-RichScan ">保单查询<div style="display: none;" class="weixinDiv tagshow"><img src="http://localhost:8080/images/wxnew.png">微信查保单</div></span>
+       <span class="fix-top" id="gotop">回到顶部</span>
+  </div>
+    <!-- 公共底部 -->
+	<script type="text/javascript" src="http://localhost:8080/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jqueryupdate.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_header.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/xiaoneng_CustomerService.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/artDialog.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/login.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/iframeTools.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+	<!-- 导航浮动层 开始 -->
+	<div class="ClassificationArea" id="ClassificationArea">
+		<div class="city_sidr_top"></div>
+		<div class="cp_nav" id="sidebar">
+			<a href="#city_1">测试</a><a href="#city_2">旅游</a>
+			<a href="#city_3">热门</a><a href="#city_4">推荐</a><a
+			 href="#city_5">景点</a>
+		</div>
+		<span class="city_go_top"></span>
+	</div>
+	<!-- 代码结束 -->
+
+	<!--通用footer-->
+	<script type="text/javascript"
+	 src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/js/stencil/stencil_CityTravel.js"></script>
+
+</body>
+</html>

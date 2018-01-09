@@ -1,0 +1,15 @@
+<% DataTable dt_5 = TemplateData.getDocList("article","车辆违章查询","current","null","null","1","null","null","null");
+  if(dt_5==null){write("没有找到栏目。parent：null  catalog："+"车辆违章查询");}else{
+ int rdCnt=dt_5.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_5  = dt_5.getDataRow(i);
+ int rdIdx=i;
+%>
+
+				<h3 class="notetit">${article_5.zhuyitimu1}：</h3>
+				<p class="notetxt">${article_5.zhuyishixiang1|CharWidth=195}</p>
+				<div class="dashbor_b"></div>
+				<h3 class="notetit">${article_5.zhuyitimu2}：</h3>
+				<p class="notetxt">${article_5.zhuyishixiang2|CharWidth=195}</p>
+				<%}}%>

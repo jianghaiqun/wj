@@ -1,0 +1,11 @@
+<% DataTable dt_15 = TemplateData.getDocList("article","9444","all","null","rand","5","tag like '%车险%'","null","null");
+  if(dt_15==null){write("没有找到栏目。parent：null  catalog："+"9444");}else{
+ int rdCnt=dt_15.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_15  = dt_15.getDataRow(i);
+ int rdIdx=i;
+%>
+
+										<li><a href="${article_15.Link}" >${article_15.Title}</a></li>
+									<%}}%>

@@ -1,0 +1,21 @@
+<% DataTable dt_9 = TemplateData.getDocList("article","保险问答/险种咨询/车辆保险","current","hot","null","4","null","null","null");
+  if(dt_9==null){write("没有找到栏目。parent：null  catalog："+"保险问答/险种咨询/车辆保险");}else{
+ int rdCnt=dt_9.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_9  = dt_9.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	                        	<% if(i==0){%>
+                        			<li class="cur">
+		                                <a class="rnews_tl" href="${article_9.Link}" >${article_9.Title}</a>
+		                                <p class="rnews_prg">${article_9.metadescription|CharWidth=38}</p>
+		                                <a class="more_detail" href="${article_9.Link}">【详情】</a>
+		                            </li>
+                        		<% } else {%>
+                        			<li>
+		                                <a href="${article_9.Link}" >${article_9.Title}</a>
+		                            </li>
+                        		<% }%>
+	                        <%}}%>

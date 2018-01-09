@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css"
+	href="${Site.StaticResourcePath}/style/new_header.css" />
+<link rel="stylesheet" type="text/css"
+	href="${Site.StaticResourcePath}/style/car/car_style.css" />
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet"
+	type="text/css" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/iframe.js"></script>
+
+<script type="text/javascript" >
+function sethash() {
+            var hashH =document.body.offsetHeight+60; //获取自身高度
+            document.getElementById("iframeA").src =p_url + "/iframe.html#" + hashH;
+} 
+</script>
+
+<style type="text/css">
+#hovers_F {
+	background: none repeat scroll 0 0 #CD4800
+}
+
+.floatr {
+	float: left;
+}
+</style>
+</head>
+
+<body onload="mysethash()">
+<iframe id="iframeA" name="iframeA" src="" width="0" height="0" style="display:none;" ></iframe> 
+<div class="car_right floatr">
+<div class="car_border_q hzpp_main cf">
+<cms:imageplayer code="dlr_CarFlash" type="0" width="748" height="265" />
+<div class="car_l_title2 meihua_p">合作品牌</div>
+<cms:list item="article" level="all" name="车险对接保险公司">
+	<div class="hzpp_box">
+	<div class="pp_logo"><span
+		class="car_cp_logo icon_C${Article.comcode}"><a
+		href="${Article.link}" title="${Article.title}"></a></span></div>
+	<div class="pp_des"><em class="em_red">${Article.red}</em>${Article.redtext}</div>
+	<div class="pp_des"><em class="em_yel">${Article.yellow}</em>${Article.yellowtext}</div>
+	<div class="pp_des"><em class="em_blue">${Article.blue}</em>${Article.bluetext}</div>
+	<div class="pp_ljbj"><a target="_blank" 
+		href="#" href="#" onclick="javascript:getNowCpslink('${catalog.Dlr_ServerContext}','${Article.comcode}','${Article.CpsLink}');return false;" 
+		 class="car_see">立即报价</a></div>
+	</div>
+</cms:list></div>
+</div>
+<script type="text/javascript"
+	src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+</body>
+</html>

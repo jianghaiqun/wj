@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title><%
+String title = article.getString("MetaTitle"); 
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%></title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+<ul class="car_mininav clearfix lyg_nav">                                                       
+		<li><a  href="${Site.URL}/chexian/"  title="车辆保险首页">返回车险首页</a></li>
+	</ul>
+<div class="car_index_s"><div class="meihua_p">买车险 首选开心保 <b>直降15%</b></div></div>
+<div class="car_gs_box car_border_q no_top_bor cf">
+	<div class="car_bxgs floatl">
+    
+      	<div class="search_bxgs"><div class="car_bxzscon">保险公司:</div>  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+				   <cms:list item="article"  level="all" name="车险对接保险公司" >
+		              <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+		           </cms:list>
+                </div>
+            </div>
+             </div>
+          
+             	<ul  id="car_tag_con" class="car_lipin  cf">
+				   <cms:list item="article" level="all" name="车险对接保险公司" >
+		             <li style="display:none">${Article.Gift}</li>
+		           </cms:list>
+             	</ul>
+            
+                <div class="ljbj_sc"> <input name="" type="button" value="开始报价" onclick="guodu('${Site.URL}/cx/gd/')" class="input_ksbj"></div>
+    </div>
+    <div class="car_adjd floatr">
+    <img src="${Site.StaticResourcePath}/images/car/huahen_11.jpg" width="700" height="246" alt="车辆刮损不发愁">
+    </div>
+</div>
+<div class="h10 clear"></div>
+<div class="car_left floatl ">
+<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html" target="_blank">
+<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165" alt="车险快速报价" title="车险快速报价"></a></div>
+            <cms:list item="Image"  name="车险图片"> 
+		      <div class="car_ad_l clearfix">
+			   <a href="${Image.wangzhi}" target="_blank">
+			       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+			   </a>
+			  </div>
+		    </cms:list>
+            <div class="car_border_q mar_btn_10">
+            <ul class="car_zx_title zs_list cf">
+            	<li class="zslist_1"><span class="hover" id="zslist1" onclick="setTab('zslist',1,3)">资讯</span></li>
+            	<li class="zslist_1"> <span  id="zslist2"  onclick="setTab('zslist',2,3)">知识</span></li>
+                <li class="zslist_1"> <span  id="zslist3"  onclick="setTab('zslist',3,3)">问答</span></li>
+            </ul>
+             <ul class="zx_list cf " id="con_zslist_1">
+				<cms:list item="article" level="all" type="rand" tag="自燃险" count="6" name="保险资讯">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_2" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="自燃险" count="6" name="保险知识">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_3" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="自燃险" count="6" name="保险问答">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+            </div>
+           <div class="car_border_q mar_btn_10">
+             <h2 class="car_l_title3">商业车险种类</h2>
+             <ul class="car_gs_list xz_list cf ">
+			   <cms:list item="friendlink" name="商业车险种类">
+				 <li><a href="${friendlink.URL}" target='<%String url = friendlink.getString("url");if(url.startsWith("h"))write("_blank");%>'>${friendlink.Name|CharWidth=7}</a></li>
+		       </cms:list>
+             </ul>
+            </div>
+               <div class="car_border_q mar_btn_10">
+              	 <h3 class="car_l_title3">理赔案例资讯</h3>
+                 <ul class="car_gs_list lp_list cf">
+                 <cms:list item="article" level="all" type="rand" tag="自燃险案例" count="10" name="保险知识,保险资讯">
+						<li>
+							<a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a>
+	                		<%if(i==0){
+	                		write("<p class='p_text_des'>");
+	                		String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>50){
+							description = description.substring(0,50);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>50){
+							summary = summary.substring(0,50);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==50){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==50){
+							write("...");
+							}
+						    write("</p>");
+						    }%>
+						</li>
+					</cms:list>
+                 </ul>
+              </div>
+  </div>
+       <div class="car_right floatr">
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h1 class="car_l_title">自燃损失险</h1>
+			<p >
+自燃损失险也称为自燃险，可以赔偿因本车电器、线路、供油系统发生故障及运载货物自身原因起火造成车辆本身的损失。自燃损失险是车辆损失险的附加险，投保了车辆损失险的车辆方可投保自燃险。
+
+            </p>
+
+            
+        </div>
+        
+         <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A02F20130729019.shtml" target="_blank">购买自燃险注意事项</a></h2>
+			
+            <p>购买自燃险注意事项1：按车龄购买自燃险<br>
+从时间上考虑，新车一般都有两年的质保期，出现自燃等问题属于车辆质量问题，可以找厂家。车龄3年以上，随着使用次数的增加，车身部分零件已经开始老化，产生自燃的风险也在增加。因此，车龄达3年以上可根据实际情况考虑购买“自燃险”。<br>
+购买自燃险注意事项2：保费与车龄挂钩<br>
+自燃险的保费主要与所投保车辆的车龄、车损险的保险金额有关，保险车辆车龄越高，车龄费率就越高，投保自燃险时所需保费也就越高。这是因为车辆车龄越高，其电路、电器等部件耗损越严重，发生自燃的概率越高，因此及时投保自燃险更为必要。<br>
+购买自燃险注意事项3：注意免责条款<br>
+自燃险设有免责条款，包括被保险人在使用保险车辆过程中，因人工直接供油、明火烘烤等违反车辆安全操作规则造成的车辆损失；因自燃仅造成电器、线路、供油系统的损失；运载货物自身的损失；被保险人的故意行为或违法行为造成保险车辆的损失。<br>
+
+</p>
+            
+        </div>
+        
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A02F20130729020.shtml" target="_blank">什么是自燃险</a></h2>
+			
+            <p>自燃险的全称为车辆自燃损失保险，它是机动车车辆损失保险的一个附加险种，车主只有在投保机动车辆损失保险的基础上，方可投保车辆自燃险。自燃险的保险金额一般按保险车辆的实际价值协商确定，保费并不高，一般仅为几十元。汽车发生自燃后，保险公司将根据车辆损坏的程度进行相应的赔偿。</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A02F20130729021.shtml" target="_blank">如何防止车辆自燃 </a></h2>
+			
+            <p>在拥有保障的同时，学习一些如何防止车辆自燃的保养知识也是必不可少的。车主应对保险车辆进行及时保养，特别是要注意保养电器、线路、油路、供油系统、供气系统，因为很多车辆的自燃事故就是因为这些设备的老化造成的。车主有必要对上述配件进行定期检查，特别是在天气炎热的夏季，这样才能降低车辆发生自燃的概率。这既是车主对自身生命安全的重视，也是减少车主经济损失的有效手段。
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A02F20130729022.shtml" target="_blank">自燃险多少钱</a></h2>
+			
+            <p>各保险公司在“自燃险多少钱”的规定上有着微小的差别，但大体上相同。一般来说，自燃险的保费主要与所投保车辆的车龄、车损险的保险金额有关，计算公式为：自燃险保费=车龄费率×车损险保险金额。<br>
+就车龄费率来说，车龄为1年以下的新车，车龄费率在0.15%左右；车龄为1年-2年的车辆，车龄费率在0.18%左右；车龄为2年-6年的车辆，车龄费率在0.2%左右；而车龄在6年以上的车辆，车龄费率在0.23%左右。
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A02G20130729023.shtml" target="_blank">汽车自燃险理赔限额</a></h2>
+			
+            <p>汽车自燃险理赔限额由车主和保险公司在保险车辆的实际价值内协商确定。实际价值是指用新车购置价减去折旧金额的价格。例如，王先生一辆新车购置价为12万的轿车，行驶证上初次登记日期为98年5月，2001年5月投保，自燃损失险保额为12万，1-3年的折旧率20%，就应该投保等于9.6万或低于9.6万的其它保额。需特别注意的是，如果您的车是二手车，请按实际价值和购车发票金额的低者投保，保高了也不能赔偿那么多。
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A02F20130729025.shtml" target="_blank">自燃损失险赔偿范围 	</a></h2>
+			
+            <p>自燃损失险赔偿范围包括：<br>
+（一）投保了本附加险的机动车在使用过程中，因下列原因造成保险机动车燃烧导致的保险机动车自身的损失，保险人按照保险合同约定负责赔偿：<br>
+1、本车电器、线路、供油系统、供气系统发生故障；<br>
+2、运载货物自身原因起火燃烧；<br>
+（二）发生本附加险保险责任范围内的事故时，被保险人或其代表为防止或者减少保险机动车损失而采取施救、保护措施所支出的必要合理的费用，保险人负责赔偿。本项费用的最高赔偿金额以本附加险的保险金额为限。<br>
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A02G20130729026.shtml" target="_blank">自燃损失险理赔流程 	</a></h2>
+			
+            <p>车俩发生自燃后，车上人员应立即离车，并拨打119火警，因为保险公司一般要有火警的出警证明才可理赔。在汽车发生自燃后，投保人可先拨打保险公司电话，向工作人员报车牌、发生意外的时间、地点、原因，保险公司技术人员到现场对车辆进行鉴定后，确定为自燃的便可以理赔。
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title">保险公司对比板块</h2>
+		<table width="100%" border="0" class="huahen_table">
+  <tr>
+    <th scope="col" class="table_no_bor_l" style="width:134px;">&nbsp;</th>
+    <cms:list item="article" level="all" name="太平洋车险" >
+         <th scope="col">太平洋车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="平安车险" >
+         <th scope="col">平安车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="阳光车险" >
+        <th scope="col">阳光车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="大地车险" >
+        <th scope="col">大地车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+  </tr>
+  <tr>
+    <td  class="table_no_bor_l">自燃险保障范围</td>
+    <td colspan="4">因本车电器、线路、供油系统发生故障及运载货物自身原因起火造成车辆本身的损失，保险公司负责赔偿</td>
+    </tr>
+  <tr>
+    <td  class="table_no_bor_l">免责范围</td>
+    <td colspan="4">(一)被保险人在使用保险车辆过程中，因人工直接供油、高温烘烤等违反车辆安全操作规则造成的损失；<br>
+(二)因自燃仅造成电器、线路、供油系统的损失；<br>
+(三)运载货物的损失；<br>
+(四)被保险人的故意行为或违法行为造成保险车辆的损失。<br>
+</td>
+    </tr>
+  <tr>
+    <td valign="top"  class="table_no_bor_l table_no_bor_btn">自燃险车龄费率</td>
+    <td colspan="4" valign="top" class="table_no_bor_btn">车龄为1年以下的新车，车龄费率在0.15%左右；<br>
+车龄为1-2年的车辆，车龄费率在0.18%左右；<br>
+车龄为2-6年的车辆，车龄费率在0.2%左右；<br>
+车龄在6年以上的车辆，车龄费率在0.23%左右。<br>
+</td>
+    </tr>
+</table>
+ 
+        </div>
+        
+        
+         <div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+        <div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="自燃险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="自燃险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="自燃险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+ <cms:include file="block/kxb_footer_new.shtml" />
+	<cms:include file="block/community.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

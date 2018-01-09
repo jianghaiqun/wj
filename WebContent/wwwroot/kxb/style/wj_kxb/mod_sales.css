@@ -1,0 +1,751 @@
+@charset "utf-8";
+body{
+    font-family: "Microsoft YaHei";
+}
+/* 导购页面 */
+.guide_header{
+    background:#fd8824;
+    overflow:hidden;
+}
+.g-guide-pktit{
+    height: 98px;
+    background: #FD8824;
+    color: #fff;
+    position: relative;
+}
+.g-guide-icon{
+    width: 70px;
+    height: 80px;
+    background: url(../../images/sales/db_sprint.png) no-repeat 0px 0px;
+    float: left;
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.g-guide-back .guide_1{
+    background:url(../../images/sales/db_sprint.png) no-repeat  -22px -106px;
+}
+.g-guide-back p{
+    color: #222222;
+}
+.g-guide-back{
+    padding: 18px 0px  18px 46px;
+}
+.g-guide-dds{
+    width: 600px;
+    float: left;
+    padding-top: 10px;
+    padding-top: 30px;
+    font-size: 16px;
+}
+.g-guide-b{
+    font-size: 1.8em;
+    display: inline;
+}
+.g-guide-b a{
+    color: #FFFFFF;
+    font-weight: normal;
+    text-decoration: none;
+}
+.re-bg{
+    background:#f5f5f5;
+}
+.guide_banner{
+    height:204px;
+    background:#c0f0fa;
+}
+.guide_banner .g-weaper{
+    position:relative;
+}
+.guide_banimg{
+    width:422px;
+    height:204px;
+    background:url(../../images/guide/guide_26.png) no-repeat  center -41px;
+}
+.banner_icon1,.banner_icon2,.banner_icon3,.banner_icon4{
+    width:84px;
+    height:84px;
+    background:url(../../images/guide/guide_30.png) no-repeat 0px 0px; position:absolute;
+    left:-70px;
+    top:40px;
+    position:absolute;
+}
+.banner_icon2{
+    background-position:-127px 0px;
+    left:-150px;
+    top:105px;
+}
+.banner_icon3{
+    background-position:-245px 0;
+    left:302px;
+    top:30px;
+}
+.banner_icon4{
+    background-position:-366px 0;
+    right:-80px;
+    left:auto;
+    top:114px;
+}
+.guider_banner_des{
+    width:586px;
+    height:151px;
+    background:#2ec2ce;
+    position:absolute;
+    top:25px;
+    right:0;
+    color:#fff;
+}
+.guider_banner_p{
+    padding:26px 20px;
+    padding-bottom: 10px;
+    line-height: 1.6em;
+    font-size: 13px;
+    position:relative;
+}
+.guider_banner_p p{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.guider_dz_icon1,.guider_dz_icon2{
+    width:10px;
+    height:40px;
+    background:url(../../images/guide/cisf_33.png) no-repeat top center;
+    position:absolute;
+    top:-25px;
+    left:24px;
+}
+.guider_dz_icon2{
+    left:auto;
+    right:24px;
+}
+.guide_con{
+    background:#fff;
+    padding-top: 36px;
+}
+.plan_title{
+    margin-bottom: 36px;
+    background:#fff;
+    position:relative;
+    z-index: 20;
+}
+.plan_pay{
+    width:420px;
+    height:138px;
+    background:url(../../images/guide/titbg_03.png) no-repeat center center;
+    float:left;
+    margin-left: 8px;
+}
+.plan_days{
+    width:114px;
+    float:left;
+    background:url(../../images/guide/charem_36.png) no-repeat  center 0px;
+    margin-left: 8px;
+    padding-top: 56px;
+    position:relative;
+}
+.plan_days p{
+    font-size: 22px;
+    color:#fb6768;
+    text-align: center;
+}
+.plan_pay dt{
+    position:relative;
+    height:66px;
+}
+.plan_pay dt span{
+    width:70px;
+    height:24px;
+    line-height: 24px;
+    display:block;
+    color:#fff;
+    text-align: center;
+    float:left;
+    font-size: 14px;
+}
+.plan_pay dt  a{
+    display:block;
+    width:335px;
+    float:left;
+    overflow:hidden;
+    height:48px;
+    padding-top: 10px;
+    line-height: 1.4em;
+    color:#fff;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.plan_pay dd{
+    padding-top: 20px;
+    margin-left: 16px;
+}
+.plan_pay dd em{ 
+    color:#eb6c00;
+    font-size: 20px;
+    font-weight: normal;
+    padding-top: 8px;
+    overflow:hidden;
+    display:block;
+    float:left;
+}
+.plan_pay dd i{
+    color:#888888;
+    font-size: 18px;
+    padding-left: 10px;
+    text-decoration: line-through;
+    padding-top: 8px;
+    display:block;
+    float:left;
+}
+.plan_pay dd a{
+    display:block;
+    width:88px;
+    height:34px;
+    line-height: 34px;
+    color:#fff;
+    background:url(../../images/guide/jt_29.png) no-repeat 83px 10px#fd8824;
+    border-radius: 3px;
+    font-size: 16px;
+    float:right;
+    padding-left: 25px;
+    margin-right: 30px;
+}
+.plan_pay dd a:hover{
+    background-color: #fc7502;
+}
+.plan_days{
+    margin-top: -10px;
+}
+.plan_days a.titcons{
+    display:block;
+    width:92px;
+    height:34px;
+    background:#fd8824;
+    color:#fff;
+    line-height: 34px;
+    font-size: 14px;
+    margin:6px auto 0;
+    text-align: center;
+    border-radius: 3px;
+    padding-left: 5px;
+    cursor:pointer;
+}
+.g-max-tit{
+    border-bottom: 1px dashed #ababab;
+    height: 20px;
+    position: relative;
+    margin: 30px 0 40px;
+}
+.g-max-tit span{
+    display:block;
+    width: 140px;
+    background: #fff;
+    height: 42px;
+    padding-left: 32px;
+    line-height: 38px;
+    font-size: 24px;
+    color: #FB5759;
+    left: 50%;
+    position: absolute;
+    margin-left: -70px;
+    text-align: center;
+    top:0px;
+}
+.g-max-tit .pk-max{
+    background: url(../../images/sales/db_sprint.png) no-repeat -18px -176px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    top: 0px;
+}
+.g-max-tit .pk-max1{
+   background:url(../../images/guide/guide_13.png) no-repeat 0 -99px;
+}
+.g-max-tit .pk-max2{
+    background:url(../../images/guide/guide_13.png) no-repeat 0 -183px;
+}
+.g-bzpk-dl{
+    width:892px;
+    overflow:hidden;
+    margin:0 auto 10px;
+}
+.g-pk-left, .g-pk-right {
+    background:url("../../images/guide/guide_03.png") repeat-x scroll 0 13px;
+    color: #222222;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    position: relative;
+    text-align: center;
+    width: 393px;
+    margin-top: 4px;
+}
+.g-pk-right{
+    background:url("../../images/guide/guide_07.png") repeat-x scroll 0 13px;
+}
+.g-pk-dt {
+    border: 1px dashed #ffad66;
+    color: #222;
+    float: left;
+    font-size: 12px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    width: 104px;
+}
+.g-pk-left span {
+    background: #feb373 ;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 13px;
+    margin-top: 10px;
+    opacity:0.7;
+    clear:both;
+}
+.g-pk-right span {
+    background: #80e1e7 ;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 13px;
+    margin-top: 10px;
+    opacity:0.7;
+    clear:both;
+}
+.g-pk-left span em{
+    position:absolute;
+    left:15px;
+    top:-4px;
+    font-weight: normal;
+}
+.g-pk-right span em{
+    position:absolute;
+    right:15px;
+    top:-4px;
+    font-weight: normal;
+}
+.g-pk-left .g-pk-desf,.g-pk-right .g-pk-desf{
+    width:369px;
+    padding:10px;
+    border:1px dashed #f19a5a;
+    background:#fff0e4;
+    color:#fe7908;
+    margin-top: 25px;
+    text-align: left;
+    display:none;
+}
+.g-pk-right .g-pk-desf{
+    background:#dffdff;
+    border-color: #4ac0f0;
+    color:#16939d;
+}
+.gys-pk-dl{
+    width: 392px;
+    float: left;
+    position: relative;
+}
+.gys-pk-con{
+    margin-top: 40px;
+    background-color: #e7f7f8;
+    padding-top: 1px;
+    padding-bottom:20px ;
+}
+.gys-pk-icon{
+    width: 170px;
+    height: 170px;
+    margin: 20px auto 0;
+    background: url(../../images/sales/dx_icon.gif) no-repeat;
+    float: left;
+}
+.gys-pk-dll{
+    margin-left: 95px;
+}
+.gys-pk-dl dd{
+    width: 392px;
+    height: 30px;
+    line-height: 30px;
+    background: url(../../images/guide/guide_16.png) no-repeat 0px 0;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: right;
+    color: #222222;
+}
+.gys-pk-dll dd{
+    float: left;
+    position: relative;
+}
+.gys-pk-dlr dd{
+    background:url(../../images/guide/guide_20.png) no-repeat;
+    text-align: left;
+    padding-left: 70px;
+    float: left;
+}
+.gys-pk-dlr.gys-pk-dd3 {
+    padding-top: 18px;
+}
+.gys-pk-dll dd span{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    width: 303px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 70px;
+}
+.gys-pk-dlr dd span{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    width: 302px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.gys-pk-dll em{
+    position: absolute;
+    right: 25px;
+    top: 0px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+}
+.gys-pk-dlr em{
+    position: absolute;
+    left: 25px;
+    top: 0px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+}
+.gys-pk-con .g-max-tit span{
+    background-color: #e7f7f8;
+
+}
+
+.g-pk-cficon{
+    display: block;
+    width: 30px;
+    height: 30px;
+    left: -10px;
+    top: -7px;
+    background: url(../../images/guide/ionsf1.png) no-repeat 0px 0px;
+    position: absolute;
+}
+.g-pk-jiao{
+    display: block;
+    width:30px;
+    height: 18px;
+    left: 224px;
+    bottom: 10px;
+    background: url(../../images/guide/ionsf4.png) no-repeat  0px 0px;
+    position: absolute;
+}
+.g-pk-left .g-pk-desf{
+    left: -91px;
+}
+.g-pk-left .g-pk-jiao{
+    left: 350px;
+}
+.gys-pk-dll .g-pk-desf{
+    left: -45px;
+}
+.gys-pk-dlr .g-pk-desf{
+    left: -9px;
+}
+.guide_shop_mes{
+    width:430px;
+    float:left;
+    margin-left: 20px;
+    height:300px;
+    overflow:hidden;
+}
+.guide_shop_mes dl{
+    border:1px dashed #ffad66;
+}
+.guide_shop_mes ul li{
+    overflow:hidden;
+    margin-bottom: 15px;
+}
+.guide_shop_mes dt{
+    height:36px;
+    border-bottom: 1px dashed #ffad66;
+    background-color: #ffecdb;
+    color:#646464;
+    padding-left: 8px;
+    padding-top: 4px;
+}
+.guide_shop_mes dt span{
+    font-size: 14px;
+    padding-left: 8px;
+    padding-top: 8px;
+    overflow:hidden;
+    display:inline-block;
+    vertical-align: middle;
+}
+.guide_shop_mes dt  em{
+    font-weight: normal;
+    display:inline-block;
+    padding-top: 10px;
+    float:right;
+    padding-right: 10px;
+}
+.guide_shop_mes dd{
+    margin:15px;
+    color:#8a8a8a;
+    height:38px;
+    overflow:hidden;
+    line-height: 1.6em;
+}
+.guide_mes_left{
+    margin-left: 50px;
+}
+.guide_mes_right  dl{
+    border:1px dashed #69c0ca;
+}
+.guide_mes_right  dt{
+    border-bottom: 1px dashed #89d2dc;
+    background-color: #d0eef1;
+}
+.guide_message{
+    padding-bottom: 80px;
+    overflow:hidden;
+}
+.guide_gobak{
+    background:#9bdbe2;
+    height:116px;
+}
+.guide_gobak .g-weaper{
+    position:relative;
+}
+.guide_gobank_img{
+    width:177px;
+    height:171px;
+    background:url(../../images/guide/guide_10.png) no-repeat;
+    top:-55px;
+    position:absolute;
+    left:45px;
+}
+.guide_gobak p{
+    font-size: 26px;
+    color:#47a0aa;
+    padding-top: 40px;
+    padding-left: 267px;
+}
+.guide_gobak a{
+    width:136px;
+    height:46px;
+    line-height: 46px;
+    text-align: center;
+    background-color: #ff9933;
+    color:#fff;
+    display:block;
+    border-radius: 3px;
+    position:absolute;
+    right:68px;
+    top:35px;
+    font-size: 24px;
+}
+.guide_gobak a:hover{
+    background-color: #f57e07;
+}
+.ga-again-table{
+    margin-left: 6px;
+}
+.ga-again-table td,.ga-again-table{
+    border: none;
+    padding-top: 6px;
+}
+.ga-again-table td{
+    height: 30px;
+    line-height: 30px;
+    color: #888888;
+}
+.ga-again-table input{
+    border: 1px solid   #C2C2C2;
+    font-size: 14px;
+    color: #222222;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 8px;
+    width: 116px;
+}
+.ag-again-td{
+    width: 83px;
+    text-align: center;
+    font-size: 14px;
+}
+.ga-again-time{
+    display:none;
+    background:#fff;
+    background: #fff;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px;
+    background-clip: padding-box;
+    z-index: 20;
+    width: 225px;
+    position: absolute;
+    left: 7px;
+    top: 135px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.g-again-ok{
+    margin-left: 14px;
+}
+.g-again-ok:hover{
+    color: #FFFFFF;
+}
+.g-again-ok,.g-again-no{
+    display:block;
+    width: 92px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #FD8824;
+    color: #fff;
+    float: left;
+    margin-left: 8px;
+    font-size: 14px;
+    border-radius: 2px;
+    background-clip: padding-box;
+    cursor: pointer;
+}
+.g-again-no{
+    width: 90px;
+    height: 28px;
+    background: #fff;
+    border: 1px solid #C7C7C7;
+    color:#222222;
+    font-size: 14px;
+}
+.ag-jiao-s{
+    width:20px;
+    height: 14px;
+    position: absolute;
+    top: -14px;
+    left: 8px;
+    background: url(../../images/sales/db_sprint.png) no-repeat -127px -460px;
+}
+.day-error{
+    color:red;
+    display: block;
+    font-size:12px;
+    padding-left:8px;
+}
+.g-pk-desd{
+    width:204px;
+    border:1px solid #e6e6e6;
+    background:#fff;
+    position:absolute; 
+    left:0;
+    bottom:0;
+    padding:10px;
+    border-radius: 3px;
+    display:none;
+}
+.g-pk-desd p{
+    text-align: left;
+    line-height: 1.6em;
+}
+.gys-pk-dll .g-pk-desd{
+    left:-235px;
+}
+.gys-pk-dlr .g-pk-desd{
+    left:400px;
+}
+.gys-pk-dlr .g-pk-cficon{
+     background:url(../../images/guide/ionsf3.png) no-repeat 0px 0px;
+     left: auto;
+     right:-17px;
+}
+.gys-pk-dlr .g-pk-jiao{
+    background:url(../../images/guide/ionsf2.png) no-repeat 0px 0px;
+    left:-7px;
+}
+.plan_pay_right{
+    background:url(../../images/guide/titbg_04.png) no-repeat center center;
+}
+.plan_pay_right dd a{
+    background-color:#3aceda;
+}
+.plan_pay_right dd a:hover{
+    background-color:#35e8f6;
+}
+.guide_lv{
+    background:url(../../images/guide/lvxbg_02.png) center center;
+}
+.guide_lv .guider_dz_icon1,.guide_lv .guider_dz_icon2{
+        background:url(../../images/guide/cisf_34.png) no-repeat top center;
+}
+.guide_lv .guider_banner_des{
+     background-color: #58a9b7;
+     opacity:0.8;
+}
+.guide_yw{
+    background:url(../../images/guide/ywxbg_02.png) center center;
+}
+.guide_yw .guider_dz_icon1,.guide_yw .guider_dz_icon2{
+        background:url(../../images/guide/cisf_35.png) no-repeat top center;
+}
+.guide_yw .guider_banner_des{
+     background-color: #58ab61;
+     opacity:0.8;
+}
+.g-pk-icon{
+    background:url("../../images/guide/pk_03.png") no-repeat scroll  center center;
+    float: left;
+    height: 138px;
+    width: 100px;
+}
+.g-pk-plan{
+    background:#ebebeb;
+    margin:0 40px;
+    overflow:hidden;
+    padding:6px 0;
+}
+.g-pk-planli{
+    width:393px;
+    float:left;
+}
+.g-pk-planli span{
+    width:106px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    background:#fff;
+    border:1px dashed #ea6b48;
+    display:block;
+    float:left;
+    margin-left: 18px;
+    margin-top: 6px;
+    cursor:pointer;
+}
+.g-pk-planli span.sel{
+    background-color: #f7a45e;
+    border-color: #fff;
+    color:#ffffff;
+}
+.g-pk-plan .g-pk-dt{
+    background-color: #fff;
+    border-color: #9f9f9f;
+    font-size: 16px;
+}
+.g-pk-planli_right span{
+    border-color: #3fbcef;
+}
+.g-pk-planli_right span.sel{
+    background-color: #64d4db;
+    border-color: #fff;
+    color:#ffffff;
+}
+.cpl-plan1,.cpl-plan2,.cpl-plan3,.cpr-plan1,.cpr-plan2,.cpr-plan3{
+    display:none;
+}
+.fixd{
+    position:fixed;
+    top:0;
+    width:980px;
+}

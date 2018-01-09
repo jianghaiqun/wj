@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+/***
+ *
+ *	  
+ *
+ *	  
+ **/
+
+.loginWindow {
+	width: 770px;
+	_width: 770px;
+	margin-left: -200px;
+	_margin-left: -200px;
+	display: none;
+	_display: none;
+	position: fixed;
+	_position: fixed;
+	top: 15%;
+	_top: 5%;
+	left: 35%;
+	_left: 35%;
+	z-index: 100;
+	_z-index: 100;
+	background:url(../images/loginbgpic.gif) repeat-y  ;
+	_background:url(../images/loginbgpic.gif) repeat-y  ;		
+	border: 5px solid #F7941F;
+	_border: 5px solid #F7941F;
+	height: 400px;
+	_height: 400px;
+	_overflow:hidden;
+}
+
+.loginWindow2 {
+	padding-top:20px;
+	margin-top:20px;
+	margin-bottom:40px;
+	width: 490px;
+	background:url(../images/loginbgpic2.gif)   repeat-y  ;	
+	border: 5px solid #F7941F;
+	height: 350px;
+	margin-left: 265px;
+}
+
+.loginWindow .windowTop {
+	margin-top:5px;
+	width: 750px;
+	height: 20px;
+	clear: both;
+	overflow: hidden;
+	cursor: move;
+}
+
+.loginWindow .windowMiddle {
+	width: 400px;
+	clear: both;
+	padding: 10px 0px;
+	text-align: center;
+	background: url(../images/login_y_bg.gif) repeat-y 0px 0px;
+}
+
+.loginWindow .windowBottom {
+	width: 400px;
+	height: 5px;
+	clear: both;
+	overflow: hidden;
+	background: url(../images/login_bg.gif) no-repeat 0px -30px;
+}
+
+.loginWindow .windowTitle {
+	height: 35px;
+	line-height: 32px;
+	_display: inline;
+	float: left;
+	text-align:center;
+	margin-left: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #5a5a5a;
+}
+
+.loginWindow .windowClose {
+	width: 29px;
+	height: 30px;
+	line-height: 20px;
+	display: block;
+	outline: none;
+	padding-top:0px;
+	float: right;
+	cursor: pointer;
+	background: url(../images/login_bg.gif) no-repeat -30px -64px;
+	_width: 29px;
+	_height: 30px;
+	_line-height: 20px;
+	_display: block;
+	_outline: none;
+	_padding-top:0px;
+	_float: right;
+	_cursor: pointer;
+	_background: url(../images/login_bg.gif) no-repeat -30px -64px;
+}
+
+.loginWindow .windowClose:hover {
+	background: url(../images/login_bg.gif) no-repeat 0px -64px;
+}
+
+.loginWindow table {
+	width: 100%;
+}
+
+.loginWindow th {
+	width: 115px;
+	line-height: 35px;
+	padding-right: 10px;
+	text-align: right;
+	font-weight: normal;
+}
+
+.loginWindow td {
+	line-height: 35px;
+	text-align: left;
+}
+
+.loginWindow input.formText {
+	width: 180px;
+}
+
+.loginWindow input.formTextS {
+	width: 95px;
+	margin-right: 5px;
+	text-transform: uppercase;
+}
+
+.loginWindow #loginWindowCaptchaImage {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.loginWindow .loginSubmit {
+	width: 80px;
+	height: 28px;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	background: url(../images/login_bg.gif) 0px -90px no-repeat;
+}
+
+.loginWindow .loginSubmit:hover {
+	background: url(../images/login_bg.gif) -90px -90px no-repeat;
+}
+
+* iframe.jqm {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+
+* html .loginWindow {
+	position: absolute;
+	top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(25 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+.login .body {
+	width: 1000px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.login .loginDetail {
+	width: 500px;
+	margin: 0px auto;
+}
+
+.login .loginDetail .top {
+	width: 455px;
+	height: 41px;
+	line-height: 38px;
+	clear: both;
+	padding-top: 4px;
+	padding-left: 45px;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+	color: #515151;
+	overflow: hidden;
+	background: url(../images/login_bg.gif) no-repeat 0px -120px;
+}
+
+.login .loginDetail .middle {
+	width: 500px;
+	clear: both;
+	padding-top: 10px;
+	text-align: center;
+	background: url(../images/login_y_bg.gif) repeat-y -400px 0px;
+}
+
+.login .loginDetail .bottom {
+	width: 500px;
+	height: 60px;
+	clear: both;
+	overflow: hidden;
+	background: url(../images/login_bg.gif) no-repeat 0px -180px;
+}
+
+.login .loginDetail table {
+	width: 100%;
+}
+
+.login .loginDetail th {
+	width: 160px;
+	line-height: 35px;
+	padding-right: 10px;
+	text-align: right;
+	font-weight: normal;
+}
+
+.login .loginDetail td {
+	line-height: 35px;
+	text-align: left;
+}
+
+.login .loginDetail input.formTextS {
+	margin-right: 1px;
+	text-transform: uppercase;
+}
+
+.login .loginDetail #loginCaptchaImage {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.login .loginDetail .submitButton {
+	width: 80px;
+	height: 28px;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	background: url(../images/login_bg.gif) 0px -90px no-repeat;
+}
+
+.login .loginDetail .submitButton:hover {
+	background: url(../images/login_bg.gif) -90px -90px no-repeat;
+}
+
+.buttonSendVcode {	padding: 0px; margin-left:28px;  height: 27px;  background-color: #F7941F;line-height: 26px; font-size: 14px; font-weight: bold; cursor: pointer; width:100px; }

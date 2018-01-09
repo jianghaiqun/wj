@@ -1,0 +1,65 @@
+<!-- 产品分类浮动层 开始 -->
+<div class="ClassificationArea">
+	<h1>保险产品分类</h1>
+	<ul>
+    	<li><a href="${Site.URL}/bxcpfl/jcyz/">驾车一族</a></li>
+    	<li><a href="${Site.URL}/bxcpfl/axly/">安心旅游</a></li>
+    	<li><a href="${Site.URL}/bxcpfl/jkbx/">健康保险</a></li>
+    	<li><a href="${Site.URL}/bxcpfl/gahz/">关爱孩子</a></li>
+    	<li><a href="${Site.URL}/bxcpfl/xjfm/">孝敬父母</a></li>
+    	<li><a href="${Site.URL}/bxcpfl/jcwy/">家财无忧</a></li>
+    	<li><a href="${Site.URL}/bxcpfl/gazj/">关爱自己</a></li>
+        <li class="ShowAll"><a href="${Site.URL}/bxcpfl/"><img src="image/showall.gif" width="30" height="30" /></a></li>
+    </ul>
+</div>
+<!--产品分类浮动层 结束-->
+<!-- 客服类浮动层 开始 -->
+<div class="servfloat" id="servfloat" style="_margin-right:0;">
+  <ul>
+	<li><a class="weixin" href="javascript:void(0);"><span>加入微信</span></a>
+	<div class="weixinDiv" style="display: none;">
+	<img src="${Site.StaticResourcePath}/images/wxnew.png">关注领优惠券</div>
+	</li>
+	<li><a class="zixun" href="javascript:void(0);" vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" ><span style="color: #cc1d00;">
+	在线客服</span></a>
+	 </li>
+	
+	<li class="top"><a class="top" id="gotop" href="javascript:void(0);"></a>
+	</li>
+</ul>
+</div>
+<!-- 代码结束 -->
+
+<script type="text/javascript">
+	var getDiv=document.getElementById('returntop');
+	getDiv.onclick=function(){
+		window.scrollTo(0,0);
+	}
+	window.onscroll=function(){
+		if(document.documentElement.scrollTop){
+			getDiv.style.display="block";
+		}else if(document.body.scrollTop){
+			getDiv.style.display="block";
+		}else{
+			getDiv.style.display="none";	
+		}
+	}
+	function getWinSize(){
+		var winHeight=window.innerHeight,winWidth=window.innerWidth;
+		if(document.documentElement.clientHeight){
+			winHeight=document.documentElement.clientHeight;
+			winWidth=document.documentElement.clientWidth;
+		}else{
+			winHeight=document.body.clientHeight;
+			winWidth=document.body.clientWidth;
+		}
+	    var height=winHeight-50;
+		var width=winWidth-100;
+		getDiv.style.top=height+"px";
+		getDiv.style.left=width+"px";
+	}
+	getWinSize();
+	window.onresize=getWinSize;
+</script>
+<!-- 客服类浮动层 结束 -->
+

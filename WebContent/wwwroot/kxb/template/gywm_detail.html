@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_about.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>	
+<cms:include file="block/kxb_custom_header.shtml"/>
+</head>
+<body class="re-bg">
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="abouBox">
+	 	<div class="wrapper">
+		<!-- 顶部 开始 -->
+			<div class="daohang">
+				<span class="daohang_home"></span>
+				<cms:link type="currentPositionList"></cms:link>
+			</div>
+		</div>
+		<div class="about_con">
+		    <div class="about_nav">
+		      <ul>
+		        <li><a href="<cms:link type='Catalog' name='关于开心保' />">关于开心保</a></li>
+		        <li><a href="<cms:link type='Catalog' name='媒体报道' />">媒体报道</a></li>
+		        <!--<li><a href="<cms:link type='Catalog' name='加入我们' />">加入我们</a></li>-->
+		        <li><a href="<cms:link type='Catalog' name='联系我们' />">联系我们</a></li>
+		        <li><a href="<cms:link type='Catalog' name='分销平台' />">分销平台</a></li>
+		        <li><div class="about_nav_m "><span class="div_more">更多</span>
+		            <ul>
+		              <li><a href="<cms:link type='Catalog' name='注册协议' />">注册协议</a></li>
+		              <li><a href="<cms:link type='Catalog' name='网站地图' />">网站地图</a></li>
+		              <li><a href="<cms:link type='Catalog' name='法律声明' />">法律声明</a></li>
+		            </ul></div></li>
+		      </ul>
+		    </div>
+		    <cms:list item="article" count="1">
+			<div class="kxb_about">
+				${article.content}
+			</div>
+			</cms:list>
+		</div>
+	</div>
+<cms:include file="block/kxb_footer_new_common.shtml"></cms:include>
+<cms:include file="block/community_v1.shtml" />
+		<script type="text/javascript">
+		  jQuery(document).ready(function() {
+			    jQuery(".about_nav_m").hover(function(){
+			        jQuery(this).addClass("div_hover");
+			    },function(){
+			        jQuery(this).removeClass("div_hover");
+			    })
+			  });
+		</script>
+	</body>
+</html>
+

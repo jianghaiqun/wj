@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+String title = article.getString("MetaTitle"); 
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+		<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css"/>
+		<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css"/>
+		<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+		<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+		<style type="text/css">
+		     #hovers_{background:none repeat scroll 0 0 }
+		     #hovers_F {background:none repeat scroll 0 0 #CD4800}
+		</style>
+		<cms:include file="block/kxb_custom_header.shtml" />
+		</head>
+		
+		<body>
+        <cms:include file="block/kxb_header_index_new.shtml" />
+		<div class="wrapper cf">
+		<ul class="car_mininav clearfix lyg_nav">
+			<li><a class="s_car_nav" href="${Site.URL}/chexian/" title="车辆保险首页">车辆保险首页</a></li>
+			<li><a href="${Site.URL}/chexian/chexianduibi.shtml" title="车险哪家好">车险哪家好</a></li>
+			<li><a href="${Site.URL}/chexian/chexianzhishi.shtml"  title="车险知识学堂">车险知识学堂</a></li>
+			<li><a href="${Site.URL}/chexian/lipei.shtml"  title="车险理赔指南">车险理赔指南</a></li>
+		</ul>
+		<div class="car_index_s">
+		<h1 class="meihua_p">买车险 首选开心保 <b>直降15%</b></h1>
+		</div>
+		<div class="car_gs_box car_border_q no_top_bor cf">
+		<div class="car_bxgs floatl">
+		<div class="search_bxgs">
+		<div class="car_bxzscon">保险公司:</div>
+		<div class="car_select_box"><span id="car_select_value" class="car_select_txt">请选择</span>
+		<a class="car_selet_open"><b></b></a>
+		<div class="car_option" id="car_tag">
+		   <cms:list item="article"  level="all" name="车险对接保险公司" >
+              <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+           </cms:list>
+		</div>
+		</div>
+		</div>
+		<ul id="car_tag_con" class="car_lipin  cf">
+		   <cms:list item="article" level="all" name="车险对接保险公司" >
+             <li style="display:none">${Article.Gift}</li>
+           </cms:list>
+		</ul>
+		<div class="ljbj_sc"><input name="" type="button" value="开始报价" onclick="guodu('${Site.URL}/cx/gd/')" class="input_ksbj"></div>
+		</div>
+		<div class="car_adjd floatr">
+		<div class="changeBox_a1" id="change_33">
+		<cms:imageplayer code="CarFlash" type="0" width="700" height="246"  />
+		</div>
+		</div>
+		</div>
+		<img src="${Site.StaticResourcePath}/images/car/car_ad_08.gif" width="980" height="62" title="车险" alt="车险"/>
+		<div class="car_left floatl ">
+		<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html" target="_blank">
+		<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165" alt="车险快速报价" title="车险快速报价"/></a></div>
+		<cms:list item="Image"  name="车险图片"> 
+	      <div class="car_ad_l clearfix">
+		   <a href="${Image.wangzhi}" target="_blank">
+		       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}"/>
+		   </a>
+		  </div>
+	    </cms:list> 
+		<div class="car_border_q mar_btn_10">
+		<h2 class="car_l_title3">商业车险种类</h2>
+		<ul class="car_gs_list xz_list cf ">
+		   <cms:list item="friendlink" name="商业车险种类">
+			 <li><a href="${friendlink.URL}" target='<%String url = friendlink.getString("url");if(url.startsWith("h"))write("_blank");%>'>${friendlink.Name|CharWidth=7}</a></li>
+	       </cms:list>
+		</ul>
+		</div>
+		
+		<div class="car_border_q mar_btn_10">
+		<ul class="car_zx_title cf">
+			<li class="tag_1 "><span class="hover" id="hot1"
+				onclick="setTab('hot',1,2)">最新优惠政策</span></li>
+			<li class="tag_2"><span id="hot2" onclick="setTab('hot',2,2)">车险购买</span></li>
+		</ul>
+		<ul class="zx_list cf " id="con_hot_1">
+			<cms:list item="friendlink" name="最新优惠政策">
+				<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|CharWidth=15}</a></li>
+	        </cms:list>
+		</ul>
+		<ul class="zx_list cf " id="con_hot_2" style="display: none;">
+			<cms:list item="article" level="all" type="rand" tag="车险" count="5" name="购买保险">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+		</ul>
+		</div>
+		
+		<div class="car_border_q mar_btn_10">
+		<ul class="car_zx_title cf">
+			<li class="tag_1 "><span class="hover" id="car1"
+				onclick="setTab('car',1,2)">车辆保险知识</span></li>
+			<li class="tag_2"><span id="car2" onclick="setTab('car', 2, 2)">车险案例</span></li>
+		</ul>
+		<ul class="zx_list cf " id="con_car_1">
+			<cms:list item="article" level="all" type="rand"  count="5" name="车辆保险知识">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+		</ul>
+		<ul class="zx_list cf " id="con_car_2" style="display: none;">
+			<cms:list item="article" level="all" type="rand" tag="车险案例" count="2" name="保险知识">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" tag="车险案例" count="3" name="保险资讯 ">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+		</ul>
+		</div>
+		</div>
+		<div class="car_right floatr">
+		<div class="car_border_q hzpp_main cf">
+		    <div class="car_l_title2 meihua_p">合作品牌</div>
+		    <cms:list item="article"  level="all" name="车险对接保险公司" >
+				<div class="hzpp_box">
+					<div class="pp_logo"><span class="car_cp_logo icon_C${Article.comcode}"><a href="${Article.link}" title="${Article.title}"></a></span></div>
+					<div class="pp_des"><em class="em_red">${Article.red}</em>${Article.redtext}</div>
+					<div class="pp_des"><em class="em_yel">${Article.yellow}</em>${Article.yellowtext}</div>
+					<div class="pp_des"><em class="em_blue">${Article.blue}</em>${Article.bluetext}</div>
+					<div class="pp_ljbj"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div>
+				</div>
+           </cms:list>
+		</div>
+		<div class="car_border_q cf">
+		 <div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+		</div>
+		</div>
+		<div class="clear"></div>
+			<div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="车险首页" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="车险首页" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="车险首页" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+		<cms:include file="block/community.shtml" />
+        <script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+		<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+		</body>
+		</html>

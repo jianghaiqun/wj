@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link href="${Site.StaticResourcePath}/style/new/global.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/base.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/information.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/howbuy.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload="navHeight();"> 
+<cms:include file="block/car_header.shtml" />
+
+<!--mainbody start-->
+<div class="mainbody">    
+	<div class="wrapper">
+	<input id="type" type="hidden" value="B03"/>
+    	<div class="your_site"><cms:link type="currentPositionList"></cms:link></div>
+        <!--主体部分 左侧边栏 开始-->
+        <div class="buyleftbar">
+        	<!--获取报价 开始-->
+        	<div class="price_pa">
+                <ul>
+                    <li><span class="bg07 white">车主姓名</span><input id="carUser" name="carUser" type="text" class="text" maxlength="30"/></li>
+                    <li><span class="bg08 white">联系电话</span><input id="carPhone" name="carPhone" type="text" class="text" maxlength="11"/></li>
+                    <li><span class="bg09 white">车牌号</span><input id="carNO" name="carNO" type="text" class="text" maxlength="9"/></li>
+                    <li><input name="" type="checkbox" value="" id="guidtype" align="absmiddle"/><label for="guidtype">新车未上牌</label></li>
+                    <li><input name="" type="button" onclick="getComNowCpslinkNew('${catalog.CpsUrl}','${catalog.ComName}','${Article.carGoto}')" class="btn" value="获取报价" /></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <!--获取报价 结束-->
+            <div class="right_banner mt10 border_gray"><a href="${catalog.LeftHref}" target="_blank"><img src="${Site.StaticResourcePath}/${catalog.LeftAd}" width="223" height="113" /></a></div>
+            <!--常见问题 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>常见问题</h2>
+                    <h6><a href="${Site.URL}/chexian/club/wenda/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险问答" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--常见问题 结束-->
+            <!--投保案例 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>投保案例</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="投保案例" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--投保案例 结束-->
+            <!--理赔技巧 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>理赔技巧</h2>
+                    <h6><a href="${Site.URL}/chexian/club/zhishi/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="理赔技巧" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--理赔技巧 结束-->
+            <!--理赔案例 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>理赔案例</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险案例" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--理赔案例 结束--> 
+        </div>
+        <!--主体部分 左侧边栏 开始-->
+        <!--主体部分 右侧 开始-->
+    	<div class="buymain">
+        	<!--焦点图片 end-->
+        	<div class="pinganpic">
+            	<cms:imageplayer code="com_sun" type="0" width="745" height="175" />
+            </div>
+            <!--焦点图片 end-->
+   	    	<!--平安车险简介 开始-->
+        	<div class="howbuy mt10">
+            	<div class="pinganh2">
+                    <h1>阳光车险</h1>
+                    <img src="${Site.StaticResourcePath}/images/new_car/pinganimg03.jpg" width="228" height="108" />
+                </div>
+                <div class="pingantit">
+                	<img src="${Site.StaticResourcePath}/images/new_car/pinganimg08.jpg" width="282" height="43" />
+                    <p>阳光车险近年来市场占有率迅速提升，并以出色的客户服务赢得了用户的信赖，曾荣获最具社会责任保险公司、中国最佳客户服务中心、中国最佳服务管理团队等多项殊荣。阳光车险的优势在于服务迅速，其主推的 "闪电服务"深受好评，累积为4千万车主提供优质服务，是值得信任的优秀保险品牌。</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--平安车险简介 结束-->
+        	<!--详细理赔步骤 开始-->
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" class="claimstable">
+              <tr>
+                <td colspan="2" class="claimstit center"><h2>阳光车险24小时闪赔&nbsp;&nbsp;7x24小时服务&nbsp;&nbsp;千万车险用户信任托付</h2></td>
+              </tr>
+              <tr>
+                <td width="101" class="center claimsred"><h2>阳光车险<br />投保优势</h2></td>
+                <td width="638">
+                	<div class="yg_youshi">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="37%"><span>网上通道</span></td>
+                            <td width="63%">网上专属投保通道，私家车商业险多省15%，更有多重豪礼赠送！</td>
+                          </tr>
+                          <tr>
+                            <td><span>24小时闪赔</span></td>
+                            <td>24小时闪赔：报案24小时内闪电赔付!</td>
+                          </tr>
+                          <tr>
+                            <td><span>小额快赔</span></td>
+                            <td>5000元以下，手续齐全，一个工作日赔付!</td>
+                          </tr>
+                          <tr>
+                            <td><span>非事故道路救援</span></td>
+                            <td>1、现场维修;2、拖车; 3、换轮胎;4、应急加油; 5、电瓶充电; 6、应急加水等；</td>
+                          </tr>
+                          <tr>
+                            <td><span>旅行医疗救援</span></td>
+                            <td>1、事故现场紧急医疗救援服务;2、紧急救援指导;3、旅行期间保障性救援服务。</td>
+                          </tr>
+                        </table>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="center claimsred"><h2>阳光车险<br />特快专属服务</h2></td>
+                <td>
+                	<div class="cf yg_service_box">
+                        <dl class="car_service_list">
+                            <dt class="meihua_p">1.反应快</dt>
+                            <dd>7X24小时无休，网销客户专享快速理赔通道</dd>
+                        </dl>
+                        <dl class="car_service_list">
+                            <dt class="meihua_p">2.救援快</dt>
+                            <dd>非事故道路救援无限次，提供旅行快速医疗救援服务</dd>
+                        </dl>
+                        <dl class="car_service_list">
+                            <dt class="meihua_p">3.定损快</dt>
+                            <dd>小额案件30分钟内定损</dd>
+                        </dl>
+                        <dl class="car_service_list">
+                            <dt class="meihua_p">4.赔付快</dt>
+                            <dd>5000元以下非人伤案件，免单证，24小时内赔付</dd>
+                        </dl>
+                        <dl class="car_service_list">
+                            <dt class="meihua_p">5.服务快</dt>
+                            <dd>4s店直赔不限制送修点，享受4S店直赔</dd>
+                        </dl>
+                        <dl class="car_service_list">
+                            <dt class="meihua_p">6.回访快</dt>
+                            <dd>结案后100%回访，热情服务，细致入微</dd>
+                        </dl>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="center claimsred"><h2>阳光车险<br />理赔服务</h2></td>
+                <td>
+                	<div class="youshi_list">                
+                        <div class="yg_liserivce cf">
+                            <dl class="car_service_list">
+                                <dt class="meihua_p">全国三维赔付</dt>
+                                <dd>全国范围内，甲地承保，乙地查勘、丙地领款的三维通赔</dd>
+                            </dl>
+                            <dl class="car_service_list">
+                                <dt class="meihua_p">24小时超快理赔</dt>
+                                <dd>中国消费者协会监督，超24小时赔付百倍罚息</dd>
+                            </dl>
+                        </div>
+                        <div class="want_claims">
+                        	<h2>我要理赔</h2>
+                            <p><a href="http://www.kaixinbao.com/chexian/club/zhishi/A6F20140327032.shtml" target="_blank">了解理赔救援</a></p>
+                            <p><a href="http://chexian.sinosig.com/service2013/khwangdian.shtml" target="_blank">理赔网点查询</a></p>
+                            <p><a href="http://www.kaixinbao.com/chexian/club/zhishi/A07F20140328001.shtml" target="_blank">常见索赔单证下载</a></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </td>
+              </tr>
+            </table>
+            <!--详细理赔步骤 结束-->
+            <!--平安车险理赔流程 开始-->
+       	    <div class="howbuy">
+                <div class="buymaintit"><h2>阳光车险理赔流程</h2></div>
+                <div class="claims_lc">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="sun_lc">
+                      <tr>
+                        <td width="154">95510报案</td>
+                        <td width="147">现场查勘<br />事故处理<br />损失确定</td>
+                        <td width="147">提交索赔材料</td>
+                        <td width="151">审核赔案</td>
+                        <td width="146">领取赔款</td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <!--平安车险理赔流程 结束-->
+            <!--专题解读 开始-->
+       	    <div class="howbuy">
+                <div class="buymaintit"><h2>专题解读</h2></div>
+                <div class="topic">
+                	<ul>
+                    	<cms:list item="Image"  name="车险理赔" >
+							<li><a href="${Image.wangzhi}" title="${Image.title}" target="_blank"><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="133" height="78" align="absmiddle" /><span>${Image.title}</span></a></li>
+                        </cms:list>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--专题解读 结束-->
+        </div>
+        <!--主体部分 右侧 结束-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mainbody end-->
+<cms:include file="block/car_footer.shtml" /> 
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/bigpicroll.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/car.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('div, ul, img, li, input , a');
+</script>
+<![endif]-->
+</body>
+</html>
+
+
+

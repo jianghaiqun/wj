@@ -1,0 +1,57 @@
+@charset "utf-8";
+/*
+*make:小奇
+*updatetime:2014-11-03
+*团险页面
+*/
+.group_banner{ overflow:hidden; margin-top:10px;}
+/*冗余*/
+.g_l_box{ border:1px solid #D9D9D9; margin-bottom:10px; overflow:hidden;}
+.group_l_title{ height:30px; border-left:2px solid #ED6D00; background:#F4F4F4; color:#767676; line-height:30px; padding-left:15px; font-size:14px;}
+.group_img{ display:block; margin:13px auto;}
+.g_bxzs_list{ padding-left:15px; margin-right:10px; line-height:1.8em; margin:10px 0;}
+.g_bxzs_list li{ height:22px; overflow:hidden; white-space:nowrap; }
+.g_bxzs_list a{ color:#A1A1A1;}
+.g_bxzs_list a:hover{ color:#ED6D00;}
+.group_s_titile{height:32px; border-left:2px solid #ED6D00; background:#F4F4F4; color:#545454; line-height:32px; padding-left:15px; font-size:14px;}
+.group_top{ border:1px solid #CCCCCC; margin-bottom:10px;}
+.group_top p{ text-indent:2em; color:#747474; line-height:1.7em;}
+.group_p{ padding:15px 20px;}
+.group_tag{ overflow:hidden; margin-bottom:10px; border-bottom:2px solid #ED6D00; height:35px;}
+.group_tag li{ float:left; margin-right:5px; width:102px; _display:inline;}
+.group_tag em{ height:35px; line-height:35px; display:block; text-align:center; color:#5D5D5D; background:#DEDEDE; padding:0 15px; cursor:pointer;}
+.group_tag em.select_tab_hzpp1{ background:#ED6D00; color:#fff;}
+.group_yy{ border:1px solid #ccc; margin-top:10px; overflow:hidden;}
+.yy_left{ width:500px; float:left; border-right:1px solid #CCCCCC; height:195px}
+.yy_right{ float:right; width:195px; padding-top:35px; line-height:1.7em; color:#3D3D3D; padding:50px 20px;}
+.yy_right p{ margin-bottom:10px;}
+.yy_btn{ height:29px; border-top:1px solid #ccc; text-align:center; color:#858585; line-height:29px; }
+.group_table td{ height:35px; line-height:24px;}
+.group_table td span{ display:block; text-align:right; color:#3F3E3E;}
+.gropu_t_box{ margin-top:5px;}
+.gropu_t_box input{ border:none; border:1px solid #CCCCCC; width:132px; height:23px; color:#666; line-height:23px;}
+.gropu_t_box input.group_btn{ border:none; background:#FF7400; width:169px; height:31px; color:#fff;display:block; cursor:pointer; font-size:14px;}
+.gropu_t_box input.group_btn:hover{ background:#FF9135;}
+.button-wrapper {margin:5px auto 0; display:block; padding:0;width:169px; border: #C85B00 1px solid;cursor: pointer;}
+.yy_left{ width:500px; float:left; border-right:1px solid #CCCCCC; height:214px}
+
+.group_lc{ border: 1px solid  #ccc; overflow: hidden;}
+.group_lcimg{ float: left; display: block;  margin-top: 18px; margin-left: 25px;}
+.group_kf{ width: 265px; float: right;  height: 160px; background: #ebebeb;}
+.ke_icons{ display: block;}
+.ms_yahei{ font-family: "微软雅黑"}
+.group_kf b{ text-align: center; display: block; padding:23px 0 20px; color: #4d4c4c}
+.ke_icons{ display: block;  height: 83px; background: url(../images/kf_group_03.png) no-repeat 13px 0px;}
+.ke_icons:hover{ background-position: 13px -119px;}
+.gropu_imgs{display: block; margin-bottom: 20px;}
+.gropu_shopbox{ width: 740px; margin: 0 auto; padding-bottom: 20px;}
+.gropu_shopbox .nlist_con{ border-bottom: 1px solid  #d9d9d9;}
+.gropu_shopbox .n_bor{border-bottom: none;}
+.gropu_tdb{ border-bottom: 2px solid #fff;}
+.gropu_td{ background: #f4f4f4; color: #787878; font-weight: bold; height: 42px; width: 200px; text-align: center;}
+select.group_text{ padding: 2px 4px;}
+.group_tables{ border: 1px solid #ccc; width: 100%;}
+.group_tables td.gropu_pd{ padding-left: 8px;}
+.group_btnto{display: block; border: none; width: 133px; height: 43px; text-indent: -2000em; background: url(../images/yy_btns_06.gif) no-repeat; cursor: pointer;}
+.group_text{ width: 210px; height: 27px; line-height: 29px;  color:#666; border: 1px solid #d9d9d9; }
+.group_btnto:hover{ background-position: 0px -49px;}

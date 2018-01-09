@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sdong
+{
+	margin-left:45px;
+	margin-top:20px;
+	margin-bottom:20px;
+	width:861px;
+	height:86px;
+	background-image:url(../images/dongshopa.png);
+	background-position:-5px -96px;
+}
+.PayStatusArea{width:1000px; margin:0 auto; padding-top:20px; padding-bottom:20px;}
+.PayStatusArea .PayStatus_1{background:#fff url(../images/Bg_2a.gif) 0 0 no-repeat; width:842px; height:79px;}
+.PayStatusArea .PayStatus_2{background:#fff url(../images/Bg_2a.gif) 0 -93px no-repeat; width:844px; height:79px;}
+.PayStatusArea .PayStatus_3{background:#fff url(../images/Bg_2.gif) 0 -630px no-repeat; width:842px; height:79px;}
+.PayStatusArea .PayStatus_4{background:#fff url(../images/Bg_2.gif) 0 -721px no-repeat; width:844px; height:79px;}

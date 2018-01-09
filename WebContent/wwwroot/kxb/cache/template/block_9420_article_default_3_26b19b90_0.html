@@ -1,0 +1,44 @@
+<% DataTable dt_12 = TemplateData.getDocList("article","9420","all","hp_topical","null","3","null","null","null");
+  if(dt_12==null){write("没有找到栏目。parent：null  catalog："+"9420");}else{
+ int rdCnt=dt_12.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_12  = dt_12.getDataRow(i);
+ int rdIdx=i;
+%>
+
+						            
+						                 
+						                 <%if(i==0){%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${article_12.URL}" target="_blank" class="m-in-shtit f_mi">${article_12.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${article_12.AdaptPeopleInfo|CharWidth=14}</p>
+		                                      <p class="m-in-nfsf"><span class="m-in-shop-num"><i id="SalesI_${article_12.RiskCode}" class="SalesI_${article_12.RiskCode}" >0人</i>购买</span><span class="m-in-pj-num"><a id="CommentI_${article_12.RiskCode}" href="javascript:void(0);">0人</a>评价</span></p>
+			                                      <ul class="m-in-ul">
+			                                       		${article_12.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${article_12.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${article_12.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>
+			                                  </div>	
+			                                  
+			                                  <div class="m-in-box m-in-box2">				                 
+						                 <%}else{%>
+			                                    <div class="m-in-shopdes">
+			                                      <a href="${Site.URL}/${article_12.URL}" target="_blank" class="m-in-shtit f_mi">${article_12.shorttitle|CharWidth=16}</a>
+			                                      <p class="m-in-syrq">适用人群：${article_12.AdaptPeopleInfo|CharWidth=14}</p>
+			                                      <ul class="m-in-ul">
+			                                       		${article_12.DutyHtmlV4}
+			                                      </ul>
+			                                      <div class="clear h10"></div>
+			                                      <div class="m-in-money f_mi"><em>￥</em>${article_12.BasePremValue}</div>
+			                                      <a href="${Site.URL}/${article_12.URL}" target="_blank" class="m-in-ck f_mi" rel="nofollow">查看/投保</a>
+			                                      <div class="clear"></div>
+			                                    </div>					                 	
+					                 <%}%>
+					                 <%if(i == (rdCnt - 1)){%>
+					                 </div>
+					                 <%}%>
+									<%}}%>

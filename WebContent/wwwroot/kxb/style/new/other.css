@@ -1,0 +1,95 @@
+﻿.wenbin_percent {
+    background: url(../../images/new_car/percent94.gif) no-repeat center top;
+    width: 175px;
+    text-align: center;
+}
+
+.wenbin_percent2 {
+    background: url(../../images/new_car/percent96.gif) no-repeat center top;
+    text-align: left;
+}
+
+.wenbin_percent3 {
+    background: url(../../images/new_car/percent92.gif) no-repeat left top;
+    text-align: left;
+}
+
+.wenbin_percent4 {
+    background: url(../../images/new_car/percent95.gif) no-repeat center top;
+    text-align: center;
+    width: 175px;
+}
+
+    .wenbin_percent4 h2 {
+        background: url(../../images/new_car/long_blue.gif) no-repeat top;
+        padding-left: 0px;
+        margin-left: 5px;
+    }
+
+.wenbin_longyellow {
+    width: 565px;
+}
+
+    .wenbin_longyellow h1 {
+        background: url(../../images/new_car/long_yellow.gif) no-repeat left top;
+    }
+
+    .wenbin_longyellow h6 {
+       height:60px;
+    }
+
+.wenbin_percent h2 {
+    background: url(../../images/new_car/long_blue.gif) no-repeat top;
+    padding-left: 0px;
+    margin-left: 5px;
+}
+
+.wenbin_percent2 h2 {
+    background: url(../../images/new_car/wrapper_bg.png) no-repeat 11px -350px;
+}
+
+.wenbin_tianping {
+    margin-top: 10px;
+}
+
+.wenbin_suojin h6 a {
+    padding: 5px 30px 5px 24px;
+}
+
+.wenbin_sigle_line p {
+    padding-bottom: 10px;
+}
+
+.wenbin_sigle_line a {
+    margin-top: -10px;
+}
+
+.wenbin_left_title h1 {
+    background: url(../../images/new_car/wenbin_left_title.gif) no-repeat;
+}
+
+.wenbin_right_cont li p {
+    width: 538px;
+}
+
+.wenbin_center_title h6
+{
+text-align:center;
+color:#ff6d00;
+}
+
+.wenbin_top_cont p
+{
+    height: 100px;
+}
+
+.wenbin_top_cont h6 a
+{
+    padding: 5px 25px 5px 26px;
+}
+
+.wenbin h2
+{
+    padding:0px;
+    text-align:center;
+}

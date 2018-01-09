@@ -1,0 +1,159 @@
+<div class="footwrap">
+	<div class="botlink">
+		<div class="botlinkcont">
+			<h3>网站操作</h3>
+			<ul class="liststyle04">
+				<li><a href="../about/5/toubaosm/">在线投保说明</a></li>
+				<li><a href="../about/5/kaixinguosm/">开心果说明</a></li>
+				<li><a href="../about/5/kaixinzhism/">开心值说明</a></li>
+			</ul>
+		</div>
+		<div class="botlinkcont">
+			<h3>业务相关</h3> 
+			<ul class="liststyle04">
+				<li><a href="../about/1/baodansongda/">保单送达说明</a></li>
+				<li><a href="../about/1/baodanbiangeng/">保单变更说明</a></li>
+				<li><a href="../about/1/baodanquxiao/">保单取消说明</a></li>
+			</ul>
+		</div>
+		<div class="botlinkcont">
+			<h3>理赔帮助</h3>
+			<ul class="liststyle04">
+				<li><a href="../about/2/lipeifuwu/">理赔服务说明</a></li>
+				<li><a href="../about/2/lipeianli/">理赔案例</a></li>
+				<li><a href="../about/2/lipeibaoan/">理赔报案电话</a></li>
+			</ul>
+		</div>
+		<div class="botlinkcont">
+			<h3>支付帮助</h3>
+			<ul class="liststyle04">
+				<li><a href="../about/4/ruhekaitong/">如何开通网银</a></li>
+				<li><a href="../about/4/zhifusm/">支付说明及演示</a></li>
+				<li><a href="../about/4/zhifuwenti/">支付问题联系方式</a></li>
+			</ul>
+		</div>
+		<div class="botlinkcont" style="border-right:none;">
+			<h3>服务中心</h3>
+			<ul class="liststyle04">
+				<li><a href="../about/3/guanyukefu/">关于在线客服</a></li>
+				<li><a href="../about/3/danzhengxiazai/">业务单证下载</a></li>
+				<li><a href="../about/3/dayizonghui/">产品答疑总汇</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="authenticate">
+   		<ul class="sl-floatcenter">
+			
+  
+		      <li class="sl-floatcenter-item"><a href="" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36" height="33" /></a></li>
+		    
+  
+		      <li class="sl-floatcenter-item"><a href="" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69" height="33" /></a></li>
+		     
+   		</ul>
+    </div>
+	<div class="botlink02">
+		<ul>
+		<li><a href="http://localhost:8080/other/about/">关于网金</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/news/">网金要闻</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/jobs/">加入网金</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/sitemap/">网站地图</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/legal/">法律声明</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/contact/">联系我们</a></li>
+			<li>|</li>
+			<li><a href="http://www.kaixinbao.com/other/union/" target="_blank" rel="nofollow">分销平台</a></li>
+			<div class="clear"></div>
+		</ul>
+		<!--   <div class="rz_list"><a href="http://trust.360.cn/search.php" target="_blank" title="360绿色网站"><img src="http://trust.360.cn/img.php?sn=1017&id=3" border="0" /></a></div> -->
+	</div>
+	<div class="copyright">		
+		<div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+		<div class="copyrightleft">Copyright 2012-2017 版权所有 网金保险销售服务有限公司</div>
+	</div>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.cookie.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.form.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.metadata.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.validate.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.validate.methods.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.validate.cn.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.dimensions.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.jqDnR.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.jqModal.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.tools.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.qtip.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.pager.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.livequery.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.superfish.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.hoverIntent.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.datepicker.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.bCheckbox.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.lSelect.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.ajaxfileupload.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.zoomimage.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/tiny_mce/jquery.tinymce.js"></script>
+			<!--[if lte IE 6]>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/belatedPNG.js"></script>
+			<![endif]-->
+		    <script type="text/javascript" src="http://localhost:8080/js/template/common/js/base.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/shop/js/login.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/shop/js/header1.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/footer.js"></script>
+</div>
+
+<!-- 产品分类浮动层 开始 -->
+<!-- <div class="ClassificationArea">
+	<h1>保险产品分类</h1>
+	<ul>
+    	<li><a href="http://localhost:8080/bxcpfl/jcyz/index.shtml">驾车一族</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/axly/index.shtml">安心旅游</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/jkbx/index.shtml">健康保险</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/gahz/index.shtml">关爱孩子</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/xjfm/index.shtml">孝敬父母</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/jcwy/index.shtml">家财无忧</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/gazj/index.shtml">关爱自己</a></li>
+        <li class="ShowAll"><a href="http://localhost:8080/bxcpfl/index.shtml"><img src="http://localhost:8080/image/showall.gif" width="30" height="30" /></a></li>
+    </ul>
+</div> -->
+<!--产品分类浮动层 结束-->
+<!-- 客服类浮动层 开始 -->
+<!--<div class="servfloat">
+	<span><a href="http://chat10.live800.com/live800/chatClient/chatbox.jsp?companyID=200975&jid=6736147584&enterurl=http%3A%2F%2Fwww%2Ekaixinbao%2Ecom%2F&pagereferrer=&tm=1347850489403"><img src="http://localhost:8080/image/floatserv01.gif" width="28" height="70" target="_blank"/></a></span>
+	<span class="guanzhu"><a href="#"></a></span>
+	<span><a href="#top" id="returntop"><img src="http://localhost:8080/image/floatserv03.gif" width="28" height="70" /></a></span>
+</div>-->
+<!-- <script type="text/javascript">
+/*
+	window.onscroll=function(){
+		if(document.documentElement.scrollTop){
+			getDiv.style.display="block";
+		}else if(document.body.scrollTop){
+			getDiv.style.display="block";
+		}else{
+			getDiv.style.display="none";	
+		}
+	}
+	function getWinSize(){
+		var winHeight=window.innerHeight,winWidth=window.innerWidth;
+		if(document.documentElement.clientHeight){
+			winHeight=document.documentElement.clientHeight;
+			winWidth=document.documentElement.clientWidth;
+		}else{
+			winHeight=document.body.clientHeight;
+			winWidth=document.body.clientWidth;
+		}
+	    var height=winHeight-50;
+		var width=winWidth-100;
+		getDiv.style.top=height+"px";
+		getDiv.style.left=width+"px";
+	}
+	getWinSize();
+	window.onresize=getWinSize;
+	*/
+</script> -->
+<!-- 客服类浮动层 结束 -->

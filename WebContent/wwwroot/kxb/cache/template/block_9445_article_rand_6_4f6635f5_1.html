@@ -1,0 +1,11 @@
+<% DataTable dt_1 = TemplateData.getDocList("article","9445","all","null","rand","6","null","null","2");
+  if(dt_1==null){write("没有找到栏目。parent：null  catalog："+"9445");}else{
+ int rdCnt=dt_1.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_1  = dt_1.getDataRow(i);
+ int rdIdx=i;
+%>
+
+						<li>问：<a href="${Site.URL}/${article_1.URL}" target="_blank">${article_1.title}</a></li>
+					<%}}%>

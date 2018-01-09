@@ -1,0 +1,24 @@
+<% DataTable dt_4 = TemplateData.getDocList("article","购买保险","all","hot","modifyzx","1","null","null","null");
+  if(dt_4==null){write("没有找到栏目。parent：null  catalog："+"购买保险");}else{
+ int rdCnt=dt_4.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_4  = dt_4.getDataRow(i);
+ int rdIdx=i;
+%>
+
+    			<div class="tri_img">
+                        <img src="${Site.StaticResourcePath}/${catalog.Image2}" width="320" height="88">
+                </div>
+                <div class="tri_detail">
+                    <h2 class="tri_title ellipsis">
+                        <a href="${article_4.Link}">${article_4.Title}</a>
+                    </h2>
+                    <div class="news_tab_zxT">
+                        <p class="news_zxoverT rnews_prg">${article_4.Summary|CharWidth=68}</p>
+                        <span class="tri_more">
+                            <a href="${article_4.Link}" rel="nofollow">【&nbsp;详情&nbsp;】</a>
+                        </span>
+                    </div>
+                </div>
+                <%}}%>

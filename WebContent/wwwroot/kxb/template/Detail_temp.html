@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link  href="${Site.StaticResourcePath}/style/commonality.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="wrapper">
+		<cms:include file="block/kxb_header.shtml" />
+		
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link>
+		</div>
+		
+			<div class="BaikeLeft mt8 mb10 w190"><!--   Left  begin   -->
+	    		<div class="BaikeColumnArea_7">
+	        	<div class="TitleArea">帮助中心</div>
+	            	<div class="ColumnCont">
+		            	<div class="TxtArea">
+		                	<ul>
+		                    	<cms:list item="catalog" level="root" name="帮助中心" count="all">          
+		                     	<li><a href="${catalog.link}">${catalog.name}</a></li>
+			                     	<cms:sublist  item="catalog" parent="ID" count="all">
+			                     		<li class="subCatalog"><a href="${catalog.link}">${catalog.name}</a></li>
+			                     	</cms:sublist>
+		                     	</cms:list>
+		                    </ul>
+		             	 </div>
+	            	</div>
+	        	</div>
+    		</div><!--   Left  end   -->
+    		
+   			<div class="BaikeRight mt8 mb10 w800"  >				
+				 <!--文章 开始-->
+				 <div class="artical">
+        			
+		            	<h3>${article.title}</h3>
+		                <div class="date"><span>作者：${article.author}</span><span>发布时间：${article.addTime}</span></div>					
+		                <div class="cont">${article.content}</div>
+		           
+		          </div>  
+				<!--文章 结束-->
+			</div>
+			<div class="clear"></div>
+	</div>
+<cms:include file="block/kxb_footer_new_common.shtml"></cms:include>
+<cms:include file="block/community_v1.shtml" />
+</body>
+</html>
+

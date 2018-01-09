@@ -1,0 +1,24 @@
+<% DataTable dt_6 = TemplateData.getDocList("article","9521","all","hot","modifyzx","1","null","null","null");
+  if(dt_6==null){write("没有找到栏目。parent：null  catalog："+"9521");}else{
+ int rdCnt=dt_6.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_6  = dt_6.getDataRow(i);
+ int rdIdx=i;
+%>
+
+    			<div class="tri_img">
+                        <img src="${Site.StaticResourcePath}/${catalog.Image3}" width="320" height="88">
+                </div>
+                <div class="tri_detail">
+                    <h2 class="tri_title ellipsis">
+                        <a href="${article_6.Link}">${article_6.Title}</a>
+                    </h2>
+                    <div class="news_tab_zxT">
+                        <p class="news_zxoverT rnews_prg">${article_6.Summary|CharWidth=68}</p>
+                        <span class="tri_more">
+                            <a href="${article_6.Link}" rel="nofollow">【&nbsp;详情&nbsp;】</a>
+                        </span>
+                    </div>
+                </div>
+    			<%}}%>

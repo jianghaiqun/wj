@@ -1,0 +1,181 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<cms:include file="block/bxbk_css.shtml" includetype="virtual"/>
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<title>${catalog.meta_title}-第${Page.PageIndex}页-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<div class="BaikeMiddArea">
+
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+	</div>
+	<!-- 最新关注开始 -->
+	<div class="newconcern">
+		<div class="columntit">最新关注</div>
+	<ul>
+		<cms:list item="Image"  name="保险百科1"> 
+		      <li>
+		      		<h4><a href="${Image.wangzhi}" target="_blank" rel="nofollow"><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="213px;" height="153px;"/></a></h4>
+		      		<h5><a href="${Image.wangzhi}" target="_blank" rel="nofollow">${Image.timu}</a></h5>
+		      </li>
+		</cms:list> 
+	</ul>
+		
+	</div>
+	<!-- 最新关注结束 -->
+	<!--主体 开始-->
+<div class="wrap980 mainbgl336 graybordert">
+	<!--左边 开始-->
+	<div class="left336 re_left">
+		<!--词条分类浏览 开始-->
+		<div class="columntit">词条分类浏览</div>
+		<ul class="entryclass">			
+           <cms:include file="block/bxbk_ctfl.shtml" includetype="virtual"/>            
+		</ul>
+		<div class="h12"></div>
+		<!--词条分类浏览 结束-->
+		<!--搜索词条 开始-->
+		<div class="entrysearch">
+		<form name="myformname" action="${site.url}/Search/Result.jsp">
+				<input type="hidden" name="id" value="43" id="id" />
+				<input type="hidden" name="site" value="221" />
+				<input type="hidden" name="order"  value="time" /> 
+		<h4><input id="valueid" name="query" type="text" class="entrysearchinput" value="旅游保险" onfocus="if(this.value=='旅游保险'){this.value='';}" onblur="if(this.value==''){this.value='旅游保险';}"/></h4>
+		<h5><input name="" type="submit" value="搜索词条" class="entrysearchbtn" onclick="jQuery.ajaxLoadImg.show('searchResult');" onmouseover="this.className='entrysearchbtnover'" onmouseout="this.className='entrysearchbtn'" /></h5>
+		</form>
+		</div>
+		<!--搜索词条 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			<cms:list item="Article" level="all" hasAttribute = "hot" count="5" name='意外保险'>	
+                        <li>
+                        	<h4><a href="${Article.Link}"><img src="${Article.LogoLink}" alt="${Article.title}" width="50" height="50" /></a></h4>
+                        	<div class="hotproduright">
+								<h5><a href="${Article.Link}" title="${Article.title}">${Article.title|CharWidth=32}</a> </h5>
+								<h6>${Article.AdaptPeopleInfo}</h6>
+							</div>
+                        	                   
+                        </li>                      
+			</cms:list>
+			
+		</ul>
+	
+		<!--热销保险产品 结束-->
+		<!--热门词条推荐 开始-->
+		<div class="columntit graybordert">热门词条推荐</div>
+		<ul class="txtlist">
+			<cms:list item="Article" level="all" hasAttribute = "hot" count="7" name='保险百科'>	
+                        <li>                      	
+								<a href="${Article.Link}" title="${Article.title}" target="_blank">${Article.title}</a> 	                   
+                        </li>                      
+			</cms:list>
+		</ul>
+		<!--热门词条推荐 结束-->
+		<div class="h12"></div>
+		<cms:include file="block/bxbk_tpgg.shtml" includetype="virtual"/>
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	
+		<!--列表 开始-->
+		<div class="right644 re_right">
+             <ul class="contentlist ">
+                  <cms:list item="article" level="current" page="true" pagesize="10">
+                		<li>
+                        	<h3><a href="${Article.Link}" title ="${Article.Title}" >${Article.Title}</a></h3> 
+                        	<h4><b>摘要：</b><%
+							String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>100){
+							description = description.substring(0,100);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>100){
+							summary = summary.substring(0,100);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==100){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==100){
+							write("...");
+							}
+								
+						%><a href="${Article.Link}" rel="nofollow">【详情】</a></h4>                       
+                       	 	<h5>关键词：${Article.tag|taglink=Y}&nbsp;&nbsp; 创建日期：${Article.FirstPublishDate|Format=yyyy-MM-dd}</h5>
+                        </li>  
+                  </cms:list>
+             </ul>	
+       
+		
+		<!--列表 结束-->
+		<div class="clear h20"></div>
+		<!--页码 开始-->
+			<div class="plpage">
+					<!--    翻页    -->
+					<div id="productsPageBar" class="page_area">
+						<div id="pagination">${pageBarNew}</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			<!--页码 结束-->
+			<!--人气产品搜索词 开始-->
+			<div class="hotprodukeywordtit graybordert">人气产品搜索词</div>
+			<ul class="hotprodukeyword">
+				<cms:list item="friendlink" group="保险百科" count=10>
+					<li>                      	
+						<span ><a href="${friendlink.Url}" title="${friendlink.name}">${friendlink.name}</a> </span>	                   
+                    </li>
+				</cms:list>
+			</ul>
+			<div class="h20"></div>
+			<!--人气产品搜索词 结束-->
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<div class="clear"></div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="百科列表页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="百科列表页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="百科列表页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<div class="clear"></div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script src="${Site.JsResourcePath}/js/tabchange.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
+
+
+
+
+
+	

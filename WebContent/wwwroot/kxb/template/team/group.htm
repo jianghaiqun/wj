@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+<!--new_header.css头部脚部全站样式-->
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css" />
+<!--new_list.css产品列表样式-->
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_list.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_sales.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css" />
+<style type="text/css">
+		     #hovers_{background:none repeat scroll 0 0 }
+		     #hovers_G {background:none repeat scroll 0 0 #CD4800}
+</style>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body class="re-bg" onload="salesVolumeLoad();initProduct();commnetLoad();">
+	<!-- 新头文件开始 --> 
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<!-- 新头文件结束 -->
+	<!--list改版-->
+	<!-- 其他栏目背景色 
+	* 对应样式：re_travelbg   旅游
+	* 对应样式：re_travelbg_0 意外
+	* 对应样式：re_travelbg_1 人寿
+	* 对应样式：re_travelbg_2 健康
+	* 对应样式：re_travelbg_3 家财 
+	* 对应样式：re_travelbg_4 团购 -->
+	<div class="re-list-banner re_travelbg_4">
+	    <div class="weaper g-list-tree">
+	
+	    </div>
+	    <div class="weaper">
+	    <!-- 栏目介绍 -->
+	      <div class="m-list-desc f_mi">
+	        <p><em>团体险</em>提供被保险人在旅游期间因遭受意外伤害事故而死亡。</p>
+	      </div>
+	    </div>
+	</div>
+	<div class="weaper">
+     	<div class="g_group_table">
+		    <table class="group_tables">
+		        <tbody>
+		            <tr>
+		                <td class="gropu_td gropu_tdb "><span class="gropu_tdb2">投保在线预约</span></td>
+		                <td class="gropu_pd">企业名称</td>
+		                <td>
+		                    <input type="text" id="companyname" name="companyname" tabindex="1" class="group_text inputText">
+		                </td>
+		                <td class="gropu_pd">联系人姓名</td>
+		                <td>
+		                    <input type="text" tabindex="2" id="connectname" name="connectname" class="group_text inputText" style="">
+		                </td>
+		                <td rowspan="2">
+		                    <input type="submit" name="" tabindex="5" class="group_btnto" onclick="sure();" value="提交预约" id="group_btn"> <span style="color:red; display:block;  text-align:center;" id="yes"></span></td>
+		            </tr>
+		            <tr>
+		                <td class="gropu_td gropu_tdb">免费获得专业保险方案</td>
+		                <td class="gropu_pd">联系电话</td>
+		                <td>
+		                    <input type="text" tabindex="3" id="connectiphone" name="connectiphone" class="group_text inputText">
+		                </td>
+		                <td class="gropu_pd">联系时间</td>
+		                <td>
+		                    <select tabindex="4" id="connecttime" class="group_text" name="connecttime">
+		                        <option value="-1">--请输入最佳联系时间--</option>
+		                        <option value="9:00～11:00">9:00-11:00</option>
+		                        <option value="11:00～13:00">11:00-13:00</option>
+		                        <option value="13:00～18:00">13:00-18:00</option>
+		                        <option value="18:00～20:00">18:00-20:00</option>
+		                    </select>
+		                </td>
+		            </tr>
+		        </tbody>
+		    </table>
+		</div>
+      	<img width="980px" height="120px" alt="" class="gropu_imgs" src="${Site.StaticResourcePath}/images/redesign/group2_06.gif">
+		<cms:list item="article" level="none" condition="cataloginnercode like '002313%' and type='1' and id in (SELECT prop1 FROM sdsearchrelaproduct WHERE productid IN (${catalog.product3}))" >
+            <div class="g-gour-box">
+                <div class="nlist_con cf">
+                	<div class="nlist_des">
+	                	<div class="icon_C${article.SupplierCode} m-list-logo"></div>
+	                   	<div class="m-list-cn">
+                          	<a class="nlist_title" target="_blank" href="${article.Link}">${article.title}</a>
+                          	<div class="shop_tj_shrq cf">
+                                <p class="shop_shrd_con">
+                                <span class="shop_shrq_bg">适合人群</span>${article.AdaptPeopleInfoListV3}
+                                </p>
+                        	</div>
+                        </div>
+                        <div class="clear"></div>
+                        <ul class="recommend_list">${article.DutyHTMLV3}</ul>
+						<div class="price_tj">
+							<span class="recom_xl" id="SalesV_${Article.RiskCode}">(累计销量：加载中...)</span>
+							<span class="recom_xl"><i><a
+									href="javascript:void(0)"
+									onclick="openCommnet('${Article.link}')"
+									class="shop_tj_num" id="CommentV_${Article.RiskCode}">评论加载中...</a></i></span>
+						</div>
+					</div>
+                    <div class="nlist_price">
+                        <p class="list_Sale" id="Activity_${Article.RiskCode}">
+                        	<span id="Diy_Title_Activity_${Article.RiskCode}" style="display: none;"></span>
+                        	<em id="Diy_Activity_${Article.RiskCode}" style="display: none;"></em>
+                        </p>
+                        <span class="nlist_pay moneys" name="Ajax_Prict_${Article.RiskCode}"><em>￥</em>${article.InitPrem}</span>
+                       	<em class="nlist_pay_t moneys"> 
+						    <span name="Clear_Ajax_Prict_${Article.RiskCode}"><%
+								String initPrem = "￥"+article.getString("InitPrem"); String
+								basePrem = article.getString("BasePremV3");
+								if(!initPrem.equals(basePrem) && basePrem!=null &&!"".equals(basePrem)){ write("原价 "+basePrem); } %> </span>
+						</em>
+                        <div class="remcon_desmore">
+                        	<a rel="nofollow" href="${Article.link}" target="_blank">去看看</a>
+                        
+                    		<label class="nlist_add_db" onclick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.producttype}','${Article.logolink}','${Article.InitPrem}');">加入对比</label>
+                    		
+                    	</div>
+                	</div>
+        		</div>
+        	</div>
+	    </cms:list>
+     	<img width="979px" height="120px" alt="" class="gropu_imgs" src="${Site.StaticResourcePath}/images/redesign/group1_03.gif">
+		<cms:list item="article" level="none" condition="cataloginnercode like '002313%' and type='1' and id in (SELECT prop1 FROM sdsearchrelaproduct WHERE productid IN (${catalog.product2}))" >
+				<div class="g-gour-box">
+	                <div class="nlist_con cf">
+                    <div class="nlist_des">
+                    	<div class="icon_C${article.SupplierCode} m-list-logo"></div>
+                        <div class="m-list-cn">
+                        	<a class="nlist_title" target="_blank" href="${article.Link}">${article.title}</a>
+                        <div class="shop_tj_shrq cf">
+                             <p class="shop_shrd_con">
+                             <span class="shop_shrq_bg">适合人群</span>${article.AdaptPeopleInfoListV3}
+                             </p>
+                        </div>
+                        </div>
+                        <div class="clear"></div>
+                        <ul class="recommend_list">${article.DutyHTMLV3}</ul>
+						<div class="price_tj">
+							<span class="recom_xl" id="SalesV_${Article.RiskCode}">(累计销量：加载中...)</span>
+							<span class="recom_xl"><i><a
+									href="javascript:void(0)"
+									onclick="openCommnet('${Article.link}')"
+									class="shop_tj_num" id="CommentV_${Article.RiskCode}">评论加载中...</a></i></span>
+						</div>
+					</div>
+                    <div class="nlist_price">
+                        <p class="list_Sale" id="Activity_${Article.RiskCode}">
+                        	<span id="Diy_Title_Activity_${Article.RiskCode}" style="display: none;"></span>
+                        	<em id="Diy_Activity_${Article.RiskCode}" style="display: none;"></em>
+                        </p>
+                        <span class="nlist_pay moneys" name="Ajax_Prict_${Article.RiskCode}"><em>￥</em>${article.InitPrem}</span>
+                       	<em class="nlist_pay_t moneys"> 
+						    <span name="Clear_Ajax_Prict_${Article.RiskCode}"><%
+								String initPrem = "￥"+article.getString("InitPrem"); String
+								basePrem = article.getString("BasePremV3");
+								if(!initPrem.equals(basePrem) && basePrem!=null &&!"".equals(basePrem)){ write("原价 "+basePrem); } %> </span>
+						</em>
+                        <div class="remcon_desmore">
+                        	<a rel="nofollow" href="${Article.link}" target="_blank">去看看</a>
+                        	<label class="nlist_add_db" onclick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.producttype}','${Article.logolink}','${Article.InitPrem}');">加入对比</label>
+                    		
+                    	</div>
+                	</div>
+        		</div>
+        	</div>
+	    </cms:list>
+	    <div class="g-group-help">
+          	<p>联系客服<br>
+			帮您提供合适保险方案</p>
+			<a class="group_btnto " href="javascript:void(0);" vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap2" onclick="return(VL_FileDL(this));return false;" >联系客服</a>
+      	</div>
+	</div>
+
+	<div class="clear"></div>
+<!--底部 开始-->
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<!--底部结束-->
+<cms:include file="block/kxb_product_compare_v1.shtml" />
+<script	type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+<script type="text/javascript">
+function sure(){
+	jQuery("#group_btn").attr("disabled", true);
+//	var name = document.getElementById("peoplenum").value;
+	var tel = document.getElementById("companyname").value;
+//	var area1 = document.getElementById("connecttime").value;
+	var area1= jQuery("#connecttime").find("option:selected").text();//getSelectedText("connecttime");
+	var area2 = document.getElementById("connectname").value;
+	var productName = document.getElementById("connectiphone").value;
+	var isTeam="Y";
+	/* if(name==null || name=="请输入参加保险人数"){
+		art.dialog({
+			title:'提示',
+		    icon: 'error',
+		    content: '请输入参险人数',
+		    cancelVal: '确认',
+		    cancel: true
+		});
+		jQuery("#group_btn").attr("disabled", false);
+		return false;
+	} */
+	if(tel==null || tel==""){
+		art.dialog({
+			title:'提示',
+		    icon: 'error',
+		    content: '请输入企业名称',
+		    cancelVal: '确认',
+		    cancel: true
+		});
+		jQuery("#group_btn").attr("disabled", false);
+		return false;
+	}
+	if(area2==null || area2==""){
+		art.dialog({
+			title:'提示',
+		    icon: 'error',
+		    content: '请输入联系人姓名',
+		    cancelVal: '确认',
+		    cancel: true
+		});
+		jQuery("#group_btn").attr("disabled", false);
+		return false;
+	}
+	if(productName != null && productName != ""){
+		var patrn = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/;
+	    if (!patrn.exec(productName)) {
+	    	art.dialog({
+				title:'提示',
+			    icon: 'error',
+			    content: '请输入正确的手机号码！',
+			    cancelVal: '确认',
+			    cancel: true
+			});
+	    	jQuery("#group_btn").attr("disabled", false);
+	        return false;
+	    }
+	}else{
+		art.dialog({
+			title:'提示',
+		    icon: 'error',
+		    content: '请输入手机号码',
+		    cancelVal: '确认',
+		    cancel: true
+		});
+		jQuery("#group_btn").attr("disabled", false);
+		return false;
+	}
+	if(area1==null || area1=="--请输入最佳联系时间--"){
+		art.dialog({
+			title:'提示',
+		    icon: 'error',
+		    content: '请输入最佳联系时间',
+		    cancelVal: '确认',
+		    cancel: true
+		});
+		jQuery("#group_btn").attr("disabled", false);
+		return false;
+	}
+//	name = encodeURI(encodeURI(name));
+	tel = encodeURI(encodeURI(tel));
+	area2 = encodeURI(encodeURI(area2));
+	jQuery.ajax({
+		type:'get',
+        url: '${Site.prop6}/shop/reservation!save.action?isTeam='+isTeam+'&tel='+tel+'&area1='+area1+'&area2='+area2+'&productName='+productName,
+        dataType:'html',
+        success:function(de){
+        	if(de == "ok"){
+        		document.getElementById("yes").innerHTML="您的预约信息已经提交";
+        		jQuery("#group_btn").attr("disabled", false);
+        	}else{
+        		document.getElementById("yes").innerHTML="预约失败，请重新预约";
+        		jQuery("#group_btn").attr("disabled", false);
+        	}
+        }
+	});
+}
+</script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_productCompare.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_productlistv3.js"></script>
+</body>
+</html>

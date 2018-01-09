@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+.cmwrap{ margin:1px 12px 20px 12px;}
+.cmli{ margin-bottom:16px;}
+.cmli h3{ height:40px; line-height:40px; background:#f6f6f6; border-top:1px solid #ccc; padding-left:12px;}
+.cmli span{ padding-right:30px;line-height:40px;}
+.cmli .username{background:url(../images/icouser.gif) no-repeat 0px 0px; padding-left:19px;}
+.star5{background:url(../images/xingbutton.gif) no-repeat 0px -178px; padding-left:100px;}
+.cmcont{ padding:10px;}
+.sreplywrap{ padding-left:43px;}
+.sreplywrap .top{background:url(../images/replybgtop.gif) no-repeat; height:12px; clear:both; font-size:0px;}
+.sreplywrap .cont{background:url(../images/replybgcenter.gif) repeat-y; padding:4px 12px 0px 12px;}
+.sreplywrap .bottom{background:url(../images/replybgbot.gif) no-repeat; height:12px;}
+.sreplywrap .cont .sico{background:url(../images/icoserv.gif) no-repeat; padding-left:26px;}
+
+.sreplywrap2{ padding-left:43px;}
+.sreplywrap2 .top{background:url(../images/replybgtop2.gif) no-repeat; height:12px; clear:both; font-size:0px;}
+.sreplywrap2 .cont{background:url(../images/replybgcenter2.gif) repeat-y; padding:4px 12px 0px 12px;}
+.sreplywrap2 .bottom{background:url(../images/replybgbot2.gif) no-repeat; height:12px;}
+.sreplywrap2 .cont .sico{background:url(../images/icoserv.gif) no-repeat; padding-left:26px;}

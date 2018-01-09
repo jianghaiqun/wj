@@ -1,0 +1,28 @@
+<% DataTable dt_0 = TemplateData.getDocList("article","产品中心","all","Dailyoffers","null","1","null","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"产品中心");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	                <div class="m-day-privilege z-hover-shadow">
+	                <span class="m-day-tips"></span>
+	                    <a target="_blank" href="${Site.URL}/${article_0.URL}" class="m-day-tit f_mi" >${article_0.title}</a>
+	                    <span class="m-day-ftit f_mi">${article_0.DisInfo}</span>
+	                    <p class="m-day-des">适用人群：${article_0.AdaptPeopleInfoV3}</p>
+	                    <ul class="m-day-ul">
+	                      ${article_0.DutyHTMLV4}
+	                    </ul>
+						<div class="tribe-action main_vip" id="Activity_${article_0.RiskCode}">
+							<span id="Diy_Title_Activity_${article_0.RiskCode}" style="display: none;" class="vip_tag"></span>
+							<span class="vip_tag_des" id="Diy_Activity_${article_0.RiskCode}" style="display: none;"></span>
+						</div>
+	                    <div class="m-day-pri">
+	                        <span class="m-day-ypay f_mi" style="display:none">${article_0.BasePremV3}</span>
+	                        <span class="m-day-zpay f_mi"><i>￥</i>${article_0.BasePremValue}</span>
+	                    </div>
+	                    <a target="_blank" href="${Site.URL}/${article_0.URL}" class="m-day-goto" rel="nofollow">立即购买</a>
+	                </div>
+                <%}}%>

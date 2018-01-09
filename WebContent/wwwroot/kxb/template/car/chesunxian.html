@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title><%
+String title = article.getString("MetaTitle"); 
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%></title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+<ul class="car_mininav clearfix lyg_nav">                                                       
+		<li><a  href="${Site.URL}/chexian/"  title="车辆保险首页">返回车险首页</a></li>
+	</ul>
+<div class="car_index_s"><div class="meihua_p">买车险 首选开心保 <b>直降15%</b></div></div>
+<div class="car_gs_box car_border_q no_top_bor cf">
+	<div class="car_bxgs floatl">
+    
+      <div class="search_bxgs"><div class="car_bxzscon">保险公司:</div>  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+				   <cms:list item="article"  level="all" name="车险对接保险公司" >
+		              <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+		           </cms:list>
+                </div>
+            </div>
+             </div>
+          
+             	<ul  id="car_tag_con" class="car_lipin  cf">
+				   <cms:list item="article" level="all" name="车险对接保险公司" >
+		             <li style="display:none">${Article.Gift}</li>
+		           </cms:list>
+             	</ul>
+            
+                <div class="ljbj_sc"> <input name="" type="button" value="开始报价" onclick="guodu('${Site.URL}/cx/gd/')" class="input_ksbj"></div>
+    </div>
+    <div class="car_adjd floatr">
+    <img src="${Site.StaticResourcePath}/images/car/huahen_06.jpg" width="700" height="246" alt="车辆刮损不发愁">
+    </div>
+</div>
+<div class="h10 clear"></div>
+<div class="car_left floatl ">
+<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html" target="_blank">
+<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165" alt="车险快速报价" title="车险快速报价"></a></div>
+           <cms:list item="Image"  name="车险图片"> 
+		      <div class="car_ad_l clearfix">
+			   <a href="${Image.wangzhi}" target="_blank">
+			       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+			   </a>
+			  </div>
+		    </cms:list> 
+            
+            <div class="car_border_q mar_btn_10">
+            <ul class="car_zx_title zs_list cf">
+            	<li class="zslist_1"><span class="hover" id="zslist1" onclick="setTab('zslist',1,3)">资讯</span></li>
+            	<li class="zslist_1"> <span  id="zslist2"  onclick="setTab('zslist',2,3)">知识</span></li>
+                <li class="zslist_1"> <span  id="zslist3"  onclick="setTab('zslist',3,3)">问答</span></li>
+            </ul>
+              <ul class="zx_list cf " id="con_zslist_1">
+				<cms:list item="article" level="all" type="rand" tag="车辆损失险" count="6" name="保险资讯">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_2" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="车辆损失险" count="6" name="保险知识">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_3" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="车辆损失险" count="6" name="保险问答">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+            </div>
+           <div class="car_border_q mar_btn_10">
+             <h2 class="car_l_title3">商业车险种类</h2>
+             <ul class="car_gs_list xz_list cf ">
+			   <cms:list item="friendlink" name="商业车险种类">
+				 <li><a href="${friendlink.URL}" target='<%String url = friendlink.getString("url");if(url.startsWith("h"))write("_blank");%>'>${friendlink.Name|CharWidth=7}</a></li>
+		       </cms:list>
+             </ul>
+            </div>
+               <div class="car_border_q mar_btn_10">
+              	 <h3 class="car_l_title3">理赔案例资讯</h3>
+                 <ul class="car_gs_list lp_list cf">
+                 <cms:list item="article" level="all" type="rand" tag="车辆损失险案例" count="10" name="保险知识,保险资讯">
+						<li>
+							<a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a>
+	                		<%if(i==0){
+	                		write("<p class='p_text_des'>");
+	                		String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>50){
+							description = description.substring(0,50);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>50){
+							summary = summary.substring(0,50);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==50){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==50){
+							write("...");
+							}
+						    write("</p>");
+						    }%>
+						</li>
+					</cms:list>
+                 </ul>
+              </div>
+  </div>
+       <div class="car_right floatr">
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h1 class="car_l_title">车辆损失险</h1>
+			<p >
+       车辆损失险也被称为“车损险”，是商业车险中用途最广、投保率最高的保险。车辆损失险能够赔偿因自然灾害和意外事故造成投保车辆本身的损失。从一般的小刮小蹭，到严重的车辆损坏，投保车损险都可以获得保险公司支付的修理费用。车辆损失险在商业车险中通常保费最高，基本计算公式为： 基本保费+新车购置价X费率。当车主不足额投保车损险时，尽管保费有所降低，但赔付金额也会大打折扣。因此建议车主足额投保车辆损失险。
+
+            </p>
+
+            
+        </div>
+        
+         <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/goumai/CF20130722010.shtml" target="_blank">购买车辆损失险注意事项</a></h2>
+			
+            <p>一、注意投保车辆是否足额投保。<br>
+二、注意弄清事故责任的赔偿。<br>
+三、注意特别约定内容。<br>
+四、购买车辆损失险时货比三家<br>
+</p>
+            
+        </div>
+        
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/C03F20130402043.shtml" target="_blank">车辆损失险是什么意思</a></h2>
+			
+            <p>很多车主不了解车辆损失险是什么意思？车损险可以保障车辆因外力造成的损害，是商业车险中用途最广泛的保险。要了解车辆损失险是什么意思，首先需要了解车辆损失险的免赔责任。在平时生活当中，驾驶员会遇到许多情况，却不知道是否能得到公司的赔偿，而了解车损险的保障范围，可以让您投保更安心，理赔更顺利。</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/C02G20130627006.shtml" target="_blank">车辆损失险多少钱 </a></h2>
+			
+            <p>车损险是按照被保险车辆的使用用途、车辆种类、车辆使用年限等因素所属档次查找固定保费和费率。其计算公式为基准保费 = 固定保费 + 保险金额 × 费率。
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/goumai/CF20121105019.shtml" target="_blank">车辆损失险理赔限额</a></h2>
+			
+            <p>保险公司会根据您在事故中所负责任的大小，赔偿所有应赔偿总金额的80%-95%(其余部分为保险条款规定的免于赔偿部分)。被保险人在事故中负全部责任的赔偿80%，负主要责任的赔偿85%，事故双方负同等责任的赔偿90%，被保险人负次要责任的赔偿95%。
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/renshi/CF20121108035.shtml" target="_blank">车辆损失险赔偿范围</a></h2>
+			
+            <p>车辆损失险赔偿范围一般包括五种情况，一是车辆发生碰撞、倾覆；二是车辆发生火灾、爆炸；三是外界物体倒塌或坠落、保险车辆行驶中平行坠落造成车辆损失；四是车辆遭遇雷击、暴风、龙卷风、暴雨、洪水、海啸、地陷、冰陷、崖崩、雪崩、雹灾、泥石流、滑坡等自然灾害；五是在车辆有驾驶人随船照料的情况下，载运保险车辆的渡船遭受以上自然灾害造成车辆损失。
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/lipei/CF20130722013.shtml" target="_blank">车辆损失险理赔流程 	</a></h2>
+			
+            <p>车辆损失险理赔流程简单的可分为：现场勘查-定损-维修（赔款）三个环节。由于在勘查和定损环节，保险公司占据强势地位，所以在这两个环节也是引发矛盾最多的环节。了解车辆损失险理赔流程，可以帮助车主更快的进行车损险理赔。
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title">保险公司对比板块</h2>
+		<table width="100%" border="0" class="huahen_table">
+  <tr>
+    <th scope="col" class="table_no_bor_l" style="width:134px;">&nbsp;</th>
+    <cms:list item="article" level="all" name="太平洋车险" >
+         <th scope="col">太平洋车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="平安车险" >
+         <th scope="col">平安车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="阳光车险" >
+        <th scope="col">阳光车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="大地车险" >
+        <th scope="col">大地车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+  </tr>
+  <tr>
+    <td  class="table_no_bor_l">车损险保障范围</td>
+    <td colspan="4">被保险人或其允许的驾驶员在驾驶保险车辆时发生保险事故，造成保险车辆受损，保险公司在合理范围内予以赔偿。</td>
+    </tr>
+  <tr>
+    <td  class="table_no_bor_l">免责范围</td>
+    <td colspan="4">一般来说，地震及其次生灾害、自燃及不明原因火灾、醉酒驾车、无证驾驶等原因造成的车辆损失，都会被列为除外责任</td>
+    </tr>
+  <tr>
+    <td valign="top"  class="table_no_bor_l table_no_bor_btn">不同公司免责条款对比</td>
+    <td valign="top" class="table_no_bor_btn">1、自燃、涉水损失<br>
+2、动物侵扰造成的车辆损失
+</td>
+    <td valign="top" class="table_no_bor_btn">1、车载货物、车上人员以外撞击导致车辆损失<br>
+2、自燃、涉水损失<br>
+3、动物侵扰造成的车辆损失<br>
+</td>
+    <td valign="top" class="table_no_bor_btn">1、车载货物、车上人员以外撞击导致车辆损失<br>
+2、自燃、涉水损失<br>
+3、动物侵扰造成的车辆损失<br>
+</td>
+    <td valign="top" class="table_no_bor_btn">1、车载货物、车上人员以外撞击导致车辆损失<br>
+2、自燃、涉水损失<br>
+3、动物侵扰造成的车辆损失<br>
+</td>
+  </tr>
+</table>
+ 
+        </div>
+        
+        
+        <div class="car_border_q cf"> 
+         	<div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+        <div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="车损险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="车损险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="车损险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+	<cms:include file="block/kxb_footer_new.shtml" />
+	<cms:include file="block/community.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

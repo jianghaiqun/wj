@@ -1,0 +1,283 @@
+/* buyleftbar start */
+.buyleftbar { float:left; overflow:hidden; width:225px; }
+.role { background:#f8f8f8; border:#40c100 1px solid; overflow:hidden; }
+.roletit { height:48px; line-height:48px; padding:0 5px; overflow:hidden; position:relative; width:213px; }
+.borbottom { background:url(../../images/new_car/borbottom.jpg) repeat-x center bottom; }
+.roletit h2 { color:#f60; display:inline; font-family:"微软雅黑"; font-size:18px; font-weight:bold; height:48px; line-height:48px; margin-left:2px; }
+.roletit span { color:#51a400; bottom:0px; position:absolute; right:5px; }
+.rolelist { width:100%; }
+.rolelist ul { padding:10px 20px; }
+.rolelist li { line-height:24px; }
+.rolelist li a { color:#838383; padding:0 2px; }
+.rolelist li a:hover { color:#f60; text-decoration:underline; }
+/* buyleftbar end */
+/* buymain start */
+.buymain { float:right; overflow:hidden; width:745px; }
+.picmain { height:270px; overflow:hidden; padding-bottom:28px; width:100%; }
+/*理赔进度查询*/
+.searchprice{ border:#c3c3c3 1px solid; float:right; overflow:hidden; padding:5px 10px; width:203px; }
+.searchprice h2 { border-bottom:#a5a5a5 1px solid; color:#838383; font-family:"微软雅黑"; font-size:18px; font-weight:bold; height:40px; line-height:40px; }
+.searchprice h6 { font-weight:bold; height:30px; line-height:30px;}
+.searchprice input { border:none; background:none; }
+.searchprice .btn { background:#40c100; color:#fff; cursor:pointer; font-family:"微软雅黑"; font-size:16px; height:31px; line-height:31px; text-align:center; width:100%; }
+.searchprice .btn:hover { text-decoration:underline; }
+.searchprice a { margin-right:10px; }
+/*获取报价*/
+.price_pa { border:#f60 1px solid; float:left; overflow:hidden; padding:5px 10px; width:203px; }
+.price_pa li { float:left; line-height:31px; width:100%; padding:5px 0; }
+.price_pa li span { display:block; float:left; height:31px; line-height:31px; text-align:center; width:58px;}
+.price_pa li input { border:none; background:none; vertical-align:middle; }
+.price_pa li label { vertical-align:middle; cursor:pointer; }
+.price_pa li .text { border:#cacaca 1px solid; border-left:none; float:left; height:27px; line-height:29px; overflow:hidden; width:142px; }
+.price_pa li .btn { background:#40c100; color:#fff; cursor:pointer; font-family:"微软雅黑"; font-size:16px; height:31px; line-height:31px; text-align:center; width:100%; }
+.price_pa li .btn:hover { text-decoration:underline; }
+/* 菜鸟开车 */
+.rolenav { background:url(../../images/new_car/howbuy_bg.png) no-repeat 10px -10px; padding-bottom:10px; width:100%; }
+.rolenav li { float:left; padding-left:66px; width:174px; }
+.rolenav li h2 { color:#5b5c5c; font-family:"微软雅黑"; font-size:18px; font-weight:bold; height:24px; line-height:24px; }
+.rolenav li h2 a { color:#5b5c5c; font-size:18px; font-weight:bold; height:24px; line-height:24px; }
+.rolenav li h2 a:hover { color:#f60; font-size:18px; }
+.rolenav li p { height:60px; line-height:20px; margin-top:10px; overflow:hidden; position:relative; word-break:break-all; word-wrap:break-word; }
+.rolenav li p a { position:absolute; right:0px; bottom:0px; }
+.rolenav li p a.colorblue { color:#00c1ea; }
+.rolenav li p a.colorgreen { color:#0fbc99; }
+.rolenav li p a.colorred { color:#eb3f3f; }
+.rolenav li p a.colorblue:hover { color:#00c1ea; text-decoration:underline; }
+.rolenav li p a.colorgreen:hover { color:#0fbc99; text-decoration:underline; }
+.rolenav li p a.colorred:hover { color:#eb3f3f; text-decoration:underline; }
+/*车险怎么买*/
+.howbuy { overflow:hidden; width:100%; }
+.buymaintit { border-bottom:#f60 1px solid; padding:17px 0 10px; }
+.buymaintit h1,
+.buymaintit h2 { border-left:#f60 3px solid; color:#f60; font-family:"微软雅黑"; font-size:18px; font-weight:bold; height:24px; line-height:24px; padding-left:10px; vertical-align:middle; }
+.buymainlist { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0 -130px; display:inline-block; width:100%; padding:10px 0; }
+.buymainlist li { float:left; height:156px; text-align:center; width:106px; }
+.buymainlist li a { color:#838383; display:block; line-height:36px; padding-top:120px; }
+.buymainlist li a:hover { color:#f60; text-decoration:underline; }
+/*车险种类*/
+.carspecies { background:url(../../images/new_car/car_is_07.jpg) no-repeat; height:400px; margin-top:33px; overflow:hidden; position:relative; width:100%; }
+.carxiantit { background:#636272; color:#fff; font-family:"微软雅黑"; font-size:14px; height:30px; line-height:30px; padding:5px 20px; }
+.carxiantit:hover { background:#f60; font-size:14px;}
+.car_clssx{position:absolute;top:70px;left:60px;z-index:91;}
+.car_blddpsx{position:absolute;top:33px;left:200px;z-index:99;}
+.car_sjzwzrx{position:absolute;top:16px;left:380px;z-index:98;}
+.car_ckzwzrx{position:absolute;top:60px;left:548px;z-index:95;}
+.car_cshhx{position:absolute;top:115px;left:608px;z-index:97;}
+.car_ssxsssx{position:absolute;top:192px;left:580px;z-index:96;}
+.car_qcfdx{position:absolute;top:280px;left:520px;z-index:92;}
+.car_zrssx{position:absolute;top:360px;left:390px;z-index:100;}
+.car_bjmpx{position:absolute;top:340px;left:230px;z-index:93;}
+.car_sydszzrx{position:absolute;top:320px;left:40px;z-index:94;}
+.p_conss { background:url(../../images/new_car/carspecies_bg.png) repeat; color:#fff; display:none; line-height:20px; overflow:hidden; padding:20px 20px 40px; position:absolute; width:300px; }
+.p_conss strong { color:#FF0; }
+.p_conss a { color:#ffb680; position:absolute; right:20px; bottom:20px; }
+.p_conss a:hover { color:#ffb680; text-decoration:underline; }
+.car_clssx .p_conss { top:30px;left:0px;}
+.car_blddpsx .p_conss { top:30px;left:0px;}
+.car_sjzwzrx .p_conss { top:30px;left:0px;}
+.car_ckzwzrx .p_conss { top:0px;left:-340px;}
+.car_cshhx .p_conss { top:-50px;left:-340px;}
+.car_ssxsssx .p_conss { top:-130px;left:-340px;}
+.car_qcfdx .p_conss { top:-220px;left:-340px;}
+.car_zrssx .p_conss { bottom:30px;left:-230px;}
+.car_bjmpx .p_conss { bottom:30px;left:0px;}
+.car_sydszzrx .p_conss { bottom:30px;left:0px;}
+/* buymain end */
+/*车险理赔 开始*/
+/*车险理赔流程*/
+.car_claims { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0px -572px; overflow:hidden; width:100%; }
+.car_claims table{ font-size:14px; height:80px; line-height:20px; vertical-align:middle; }
+.claimsred { color:#f72723; }
+/*详细理赔步骤*/
+.claimstable { border-left:#c3c3c3 1px solid; border-top:#c3c3c3 1px solid; margin-top:10px; }
+.claimstable td { border-bottom:#c3c3c3 1px solid; border-right:#c3c3c3 1px solid; line-height:24px; overflow:hidden; padding:10px; vertical-align:middle; word-break:break-all; word-wrap:break-word; }
+.claimstable td h2 { font-family:"微软雅黑"; font-size:18px; font-weight:bold; line-height:20px; }
+.claimstable td h2 span { padding:0 20px;}
+.claimstit { background:#f60; color:#fff; }
+.claimstit strong { font-size:14px; }
+.claimspop { background:#40c100; color:#fff; }
+.claimsred { color:#dd3400; }
+/*专题解读*/
+.topic { overflow:hidden; padding-top:15px; width:100%; }
+.topic ul { display:inline-block; }
+.topic li { float:left; height:100px; overflow:hidden; padding:0 7px; text-align:center; width:135px; }
+.topic li img { display:block; }
+.topic li span { height:26px; line-height:26px; overflow:hidden; word-break:break-all; word-wrap:break-word; width:100%; }
+.topic li a { color:#838383; display:block; }
+.topic li a:hover { color:#f60; }
+/*投保建议*/
+.proposal { margin-top:10px; overflow:hidden; width:100%; }
+.proposaltit { background:#07a2e3; float:left; height:125px; overflow:hidden; text-align:center; vertical-align:middle; width:30px; }
+.proposaltit h2 { color:#fff; font-family:"微软雅黑"; font-size:14px; font-weight:bold; margin-top:26px; }
+.proposallist { float:right; height:105px; overflow:hidden; padding:10px; width:685px; }
+.proposallist li { float:left; padding:5px 0; position:relative; width:100%; }
+.proposallist li p{ line-height:22px; width:520px; word-break:break-all; word-wrap:break-word;}
+.proposallist li a{ background:url(../../images/new_car/wrapper_bg.png) no-repeat 0 -350px; color:#fff; height:23px; line-height:23px; position:absolute; right:20px; text-align:center; top:14px; width:120px;}
+.proposallist li a:hover{ color:#fff; text-decoration:underline;}
+.borb { border-bottom:#c3c3c3 1px solid; }
+/*品牌推荐*/
+.recommendtit { background:#515353; float:left; height:150px; overflow:hidden; text-align:center; vertical-align:middle; width:30px; }
+.recommendtit h2 { color:#fff; font-family:"微软雅黑"; font-size:14px; font-weight:bold; margin-top:42px; }
+/*理赔服务介绍*/
+.servicetit { background:#fdeed5; float:left; height:150px; overflow:hidden; text-align:center; vertical-align:middle; width:30px; }
+.servicetit h2 { color:#f60; font-family:"微软雅黑"; font-size:14px; font-weight:bold; margin-top:20px; }
+.servicellist { float:right; height:150px; overflow:hidden; width:715px; }
+.servicellist ul { display:inline-block; overflow:hidden; }
+.servicellist li { border:#cacaca 1px solid; float:left; height:128px; margin-left:10px; _margin-left:9px; overflow:hidden; padding:10px 0; text-align:center; width:130px; }
+.servicellist li:hover { border:#f60 1px solid; }
+.servicellist li img { margin-bottom:8px; }
+.servicellist li span { background:#f60; color:#fff; line-height:24px; padding:3px 5px; }
+.servicellist li a { color:#fff; }
+.servicellist li a:hover{ color:#fff; text-decoration:underline;}
+/*比较组*/
+.threeratio { background:#f9f9f9; margin-top:10px; overflow:hidden; width:100%; }
+.threeratio ul{ display:inline-block; overflow:hidden; padding:20px 0 20px 60px;}
+.threeratio li { background:url(../../images/new_car/wrapper_bg.png) no-repeat 0px -231px; float:left; height:30px; line-height:30px; overflow:hidden; padding:0 20px; width:120px; }
+.threeratio li a { color:#838383; }
+.threeratio li a:hover { color:#f60; text-decoration:underline; }
+.threeratio h2 { color:#f60; font-family:"微软雅黑"; font-size:18px; font-weight:bold; margin:20px 0 0 20px; }
+.threeratio p { line-height:20px; margin:20px 50px; word-break:break-all; word-wrap:break-word; }
+/*险种介绍*/
+.whatthree { padding:10px 0; width:100%; }
+.whatleft { float:left; width:580px; }
+.whatleft h1 { background:url(../../images/new_car/wrapper_bg.png) no-repeat -220px -350px; _background:url(../../images/new_car/wrapper_bg.png) no-repeat -220px -353px; color:#fff; font-family:"微软雅黑"; font-size:14px; font-weight:bold; height:30px; line-height:30px; padding-left:10px; }
+.whatleft p { height:63px; line-height:21px; padding:10px 0; }
+.whatleft h6 { height:30px; line-height:30px; overflow:hidden; width:100%;}
+.whatleft h6 a { background:url(../../images/new_car/wrapper_bg.png) no-repeat -360px -236px; color:#07a2e3; padding:5px 40px 5px 26px; }
+.whatleft h6 a:hover { color:#07a2e3; text-decoration:underline; }
+.whatright { background:url(../../images/new_car/wrapper_bg.png) no-repeat 0px -540px; float:right; width:140px; }
+.whatright h2 { background:url(../../images/new_car/wrapper_bg.png) no-repeat 0 -350px; height:23px; line-height:23px; margin-top:130px; padding-left:18px; }
+.whatright h2 a { color:#fff; }
+.whatright h2 a:hover { color:#fff; text-decoration:underline; }
+/*"险"比三家*/
+.ratio { border-left:#c3c3c3 1px solid; border-top:#c3c3c3 1px solid; margin-top:20px; }
+.ratio td { border-bottom:#c3c3c3 1px solid; border-right:#c3c3c3 1px solid; line-height:24px; overflow:hidden; padding:10px; word-break:break-all; word-wrap:break-word; }
+.ratio td img { margin:10px 0; }
+.vtop { vertical-align:middle; }
+/*驾驶状况描述*/
+.drivestatus { padding:10px 0; overflow:hidden; width:100%; }
+.driveimg { float:left; width:100px; }
+.driveimg img { border:#f60 1px solid; display:block; }
+.drivetext { float:right; width:645px; }
+.drivetext h2 { background:url(../../images/new_car/wrapper_bg.png) no-repeat -256px -352px; color:#fff; font-family:"微软雅黑"; font-weight:bold; font-size:14px; height:30px; line-height:30px; padding-left:14px; }
+.drivetext p { height:63px; line-height:21px; padding:10px 60px 0 30px; word-break:break-all; word-wrap:break-word; }
+
+/*平安车险 开始*/
+.pinganpic { height:175px; overflow:hidden; position:relative; width:745px; }
+.ad_jiaodian { height:175px; overflow:hidden; position:relative; width:745px; }
+.youshi_list { overflow:hidden; padding:20px 0; width:100%; }
+/*平安车险简介*/
+.pinganh2 { float:left; overflow:hidden; padding-right:20px; width:250px; }
+.pinganh2 h1 { background:url(../../images/new_car/wrapper_bg.png) no-repeat -270px -350px; color:#fff; font-family:"微软雅黑"; font-size:14px; height:30px; line-height:30px; padding-left:20px; }
+.pinganh2 img { margin:10px 0 0 20px; }
+.pingantit { float:right; overflow:hidden; width:470px; }
+.pingantit p { border-top:#f60 1px solid; line-height:24px; padding-top:10px; } 
+/*特色服务*/
+.ys_ps{width:180px;height:80px;float:left;position:relative; margin:10px 0; }
+.ys_ps em{display:block;position:absolute;left:39px;top:29px;width:140px;background:url(../../images/new_car/p_bg.png) no-repeat;height:35px;padding-left:22px;}
+.ys_ps span{display:block;color:#69C5FF;font-family:"微软雅黑",Arial,Helvetica,sans-serif;font-size:5em;margin-left:15px;height:58px;line-height:58px;}
+.ys_ps i{display:block;color:#8A8A8A;}
+.pa_ps span{color:#6DAA26;}
+.pa_ps span:hover{color:#609421;}
+.dd_ps span{color:#64c4ff;}
+.tpy_ps span{color:#74a5e8;}
+.p_i_cuowei1{text-indent:2em;}
+.p_i_cuowei2{text-indent:1em;}
+/*投保优势*/
+.fuwu_sf{float:left; padding:0 6px;}
+.fuwu_sf dt{font-size:24px;color:#69C5FF;text-align:center;line-height:1.2em;margin:7px 0;}
+.fuwu_sf dt.tp_text { color:#3f8ee1; }
+.fuwu_sf dd{text-align:center;color:#8A8A8A;}
+.pa_fuwu_sf dt{color:#6DAA26;}
+.meihua_p{font-family:"微软雅黑",Arial,Helvetica,sans-serif;}
+/*理赔服务*/
+.serivce_list { float:left; overflow:hidden; width:370px; }
+.serivce_list li { width:268px; float:left;background:url(../../images/new_car/gous_06.gif) no-repeat 14px 9px; padding:5px 0 5px 40px; color:#8A8A8A; line-height:22px; }
+.want_claims { background:url(../../images/new_car/wrapper_bg.png) no-repeat 0px -780px; float:right; overflow:hidden; padding:10px 50px 10px 42px; width:120px; }
+.want_claims h2 { font-family:"微软雅黑"; height:31px; line-height:31px; padding:7px 10px;}
+.want_claims p { border:#f60 1px solid; height:32px; line-height:32px; margin-bottom:10px; padding-left:10px; }
+.want_claims p a { color:#838383; }
+.want_claims p a:hover { color:#f60; }
+/*平安车险理赔流程*/
+.claims_lc{ background:#f9f9f9; margin-top:10px; overflow:hidden; padding:10px 0; width:100%; }
+.claims_lc ul { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0px -1065px; float:left; padding:20px 0; width:745px; }
+.claims_lc li { float:left; font-size:14px; line-height:20px;  padding:0 6px 0 40px; }
+
+/*太平洋车险 开始*/
+.cf:before,.cf:after{content:"";display:table;}
+.cf:after{clear:both;}
+.cf{*zoom:1;}
+/*六个承诺*/
+.tpy_cn{ padding-bottom:30px;}
+.tpy_ts{ color:#235ba6;}
+.tpy_ts_p b{color:#0265B7;}
+.tpy_ts_p{font-size:3em;color:#74a5e8;text-align:center;margin-top:20px;margin-bottom:10px;}
+.meihua_p{font-family:"微软雅黑",Arial,Helvetica,sans-serif;}
+.tpy_cn_list{width:580px;margin:0 auto;}
+.tpy_cn_list li{width:170px;height:50px; background:#FFF;line-height:1.6em;text-align:center;color:#8A8A8A;float:left;margin:23px 14px 0 0;padding-top:10px;}
+.tpy_cn_list li b{font-size:14px;color:#0265B7;}
+/*九个支持*/
+.tpy_zc{ margin:20px auto 0px; }
+.tpy_zc li{height:22px;line-height:22px;background:url(../../images/new_car/cardiansc_03.gif) no-repeat 8px -47px;padding-left:25px;float:left;color:#8A8A8A;margin-bottom:15px;}
+.tpy_lpfw{background-position:8px 7px; float:left; overflow:hidden; width:310px;}
+.tpy_lpfw li{background-position:8px 7px;}
+.firstfr{margin-right:60px;}
+.firstfr2{margin-right:70px;}
+.firstt{width:310px;}
+/*流程*/
+.tpy_lc { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0px -1224px; width:745px; }
+.tpy_lc td { font-size:14px; line-height:20px;  padding:0 6px 0 40px; word-break:break-all; word-wrap:break-word; }
+
+
+/*阳光保险 开始*/
+/*投保优势*/
+.yg_youshi td{ border:0; word-break:break-all; word-wrap:break-word;}
+.yg_youshi span { background:url(../../images/new_car/cardiansc_03.gif) no-repeat 0px -105px; padding-left:20px; font-family:"微软雅黑"; font-size:24px; color:#fcbc4b; font-weight:bold; height:35px; line-height:35px; }
+/*专属服务*/
+.car_service_list { float:left; height:100px; margin:0 10px 20px; text-align:center; width:160px; }
+.car_service_list dt { font-size:2.5em; color:#FABB56; font-style:oblique; font-weight:bold; height:35px; line-height:35px; margin-bottom:5px; }
+.car_service_list dd { color:#AAA; font-size:14px; }
+.yg_service_box { width:580px; margin:20px auto 0; }
+/*理赔服务*/
+.yg_liserivce{ float:left; width:305px; margin-left:30px;}
+.yg_liserivce dt{font-style:normal;}
+.yg_liserivce .car_service_list{ width:305px;}
+/*流程*/
+.sun_lc { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0px -1396px; width:745px; }
+.sun_lc td { font-size:14px; line-height:20px;  padding:0 6px 0 40px; word-break:break-all; word-wrap:break-word; }
+
+
+/*天平车险 开始*/
+.tp_lc { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0px -1566px; width:745px; }
+.tp_lc td { font-size:14px; line-height:20px;  padding:0 6px 0 40px; }
+.tp_youshi td{ border:0; word-break:break-all; word-wrap:break-word;}
+.tp_youshi span { background:url(../../images/new_car/cardiansc_03.gif) no-repeat 0px 7px; font-weight:bold; padding-left:20px; font-size:16px; font-family:"微软雅黑"; color:#3f8ee1; height:35px; line-height:35px; }
+.tp_text { color:#3f8ee1; }
+/*大地车险 开始*/
+.dd_tit { color:#0076B4; }
+/*流程*/
+.dd_lc { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0px -1696px; width:745px; }
+.dd_lc td { font-size:14px; line-height:20px;  padding:0 6px 0 40px; word-break:break-all; word-wrap:break-word; }
+/*club_index*/
+.club_index_bg { background:url(../../images/new_car/howbuy_bg.png) no-repeat 0 -2250px; overflow:hidden; width:100%; }
+.club_index { float:left; overflow:hidden; width:366px; }
+.indexnewstit { border:#cacaca 1px solid; overflow:hidden; padding:10px 0 0; position:relative; }
+.indexnewstit h2{ background:url(../../images/new_car/wrapper_bg.png) no-repeat -250px -350px; color:#fff; font-family:"微软雅黑"; font-size:18px; height:30px; line-height:30px; overflow:hidden; padding-left:20px; }
+.indexnewstit h2 a { color:#fff; font-size:18px; }
+.indexnewstit h2 a:hover{ color:#fff; font-size:18px; text-decoration:underline; }
+.indexnewstit h5 { font-size:14px; font-weight:bold; height:30px; line-height:30px; margin:30px 10px 0px; text-align:center; }
+.indexnewstit h5 a { color:#838383; font-size:14px; }
+.indexnewstit h5 a:hover { color:#f60; font-size:14px; }
+.indexnewstit h6 { line-height:20px; position:absolute; right:10px; _right:30px; top:10px; }
+.indexnewstit h6 a { color:#51a400; }
+.indexnewstit h6 a:hover { color:#51a400; text-decoration:underline; }
+.indexnewslist { background:#f7f7f7; overflow:hidden; padding:15px; }
+.indexnewslist ul { overflow:hidden; width:100%; }
+.indexnewslist li{ background:url(../../images/new_car/wrapper_bg.png) no-repeat 0 -158px; height:22px; line-height:22px; overflow:hidden; padding-left:10px; }
+.indexnewslist li a { color:#838383; height:22px; line-height:22px; overflow:hidden; word-break:break-all; word-wrap:break-word; }
+.indexnewslist li a:hover { color:#f60; }
+.club_main { overflow:hidden; padding:0 10px 10px 140px; height: 150px;}
+.club_main h3 { border-bottom:#bebebe 1px dashed; font-size:14px; font-weight:bold; height:30px; line-height:30px; overflow:hidden; padding-bottom:10px; text-align:center; word-break:break-all; word-wrap:break-word; }
+.club_main h3 a { color:#838383; font-size:14px; }
+.club_main h3 a:hover { color:#f60; font-size:14px; }
+.club_main h4 { line-height:20px; overflow:hidden; padding:10px 0; text-indent:2em; word-break:break-all; word-wrap:break-word; }

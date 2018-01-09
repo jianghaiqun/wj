@@ -1,0 +1,12 @@
+<% DataTable dt_10 = TemplateData.getDocList("article","医疗保险专题","current","null","null","1","null","null","null");
+  if(dt_10==null){write("没有找到栏目。parent：null  catalog："+"医疗保险专题");}else{
+ int rdCnt=dt_10.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_10  = dt_10.getDataRow(i);
+ int rdIdx=i;
+%>
+ 
+	<h2 class="part_titles" id="part3">${article_10.Section3}</h2>
+	<div class="stenmore orange"><a href="${article_10.Section3link}" target="_blank">更多</a></div>
+	<%}}%>

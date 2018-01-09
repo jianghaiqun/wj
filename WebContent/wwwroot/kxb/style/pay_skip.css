@@ -1,0 +1,5 @@
+/*过渡页面*/
+.guodu_box{ width:420px; margin:125px auto;  text-align:center; overflow:hidden; }
+.guodu_logo{ width:200px; height:73px; background:url(../images/logo_03.gif) no-repeat -8px 0px; margin:0 auto;}
+.guodu_box p{ font-size:24px; line-height:1.3em; margin:5px 0}
+.font_guodu_p{ color:#ED6D00;}

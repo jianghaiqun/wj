@@ -1,0 +1,11 @@
+<% DataTable dt_0 = TemplateData.getDocList("article","公积金管理","current","null","null","50","null","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"公积金管理");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+
+				<li><a href="${article_0.Link}" target="_blank">${article_0.Title|CharWidth=15}</a></li>
+			<%}}%>

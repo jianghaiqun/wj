@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>
+测试一下-开心保保险网yhy
+</title>
+<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body>  
+<table>
+ <tr>
+	 <td>
+		 <table>
+					<tr>
+						<td>
+							<p class="path">您当前的位置：<a href='../' target='_self' ><span class="orange">您所在的位置：首页</span></a><span class="separator">></span><a href='../yxhd/' target='_self'>营销活动</a></p> 
+						</td>
+						<td>
+						</td>
+						
+					</tr> 
+					<tr>
+						<td>
+						    <input type="hidden" name="QuestionId" id="QuestionId" value="282717"/>
+					        <input type="hidden" name="QuestionTitle" id="QuestionTitle" value="测试一下"/>
+							<p>测试一下</p>
+
+                           <p>作者：超级管理员</p>
+						</td>
+					</tr> 
+					<tr>
+						<td>
+							 <p>测试下看看格式怎么样</p>
+						</td>
+                     
+					</tr> 
+                   <tr>
+						<td>
+							 
+						</td>
+                    
+					</tr>
+                   <tr>
+						<td>
+<script src="http://localhost:8080/wj/Services/CommentList.jsp?RelaID=282717&CatalogID=9767&CatalogType=1&SiteID=221&Count=5"></script> 
+                       </td>
+                
+					</tr>
+		</table>
+	</td>
+<td>
+
+ <p >推荐文章</p>
+           <ul>
+           
+           </ul>
+
+	
+
+</td>
+
+</tr>
+
+</table>
+</body>
+</html>

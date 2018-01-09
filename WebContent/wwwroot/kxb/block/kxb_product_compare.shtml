@@ -1,0 +1,58 @@
+<div class="clear"></div>
+    <div id="cpdiv" class="cpdiv">
+            <div class="comparediv">
+                <h3>产品比较</h3>
+                <div class="closebtn">
+                    <span onclick="close_h()" class="close_compare"></span>
+                </div>
+                <div class="comparedivcont">
+                    <div class="comparedetail" style="display: none;" id="cpprodu1">
+                           <img id="productLogoA" width="73" height="73" class="compare_img" alt="" src="http://localhost:8080/images/list/zd_img_03.jpg" alt="">
+                        <input type="hidden" name="productCodeA" id="productCodeA" />
+                        <p>
+                            <span id="productnameA" class="compare_name"></span>
+                            <span id="productPremA" class="compare_pric" id=""></span>
+                            <span class="dblue cpdelico" onclick="closecp1()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail" style="display: none;" id="cpprodu2">
+                         <img id="productLogoB" width="73" height="73" class="compare_img" alt="" src="http://localhost:8080/images/list/zd_img_03.jpg" alt="">
+                        <input type="hidden" name="productCodeB" id="productCodeB" />
+                       
+                        <p>
+                            <span id="productnameB" class="compare_name"></span>
+                            <span id="productPremB" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp2()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail" style="display: none;" id="cpprodu3">
+                        <input type="hidden" name="productCodeC" id="productCodeC" />
+                        <img id="productLogoC" width="73" height="73" class="compare_img" alt="" src="http://localhost:8080/images/list/zd_img_03.jpg" alt="">
+                        <p>
+                            <span id="productnameC"  class="compare_name"></span>
+                            <span id="productPremC" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp3()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail" style="display: none;" id="cpprodu4">
+                        <input type="hidden" name="productCodeD" id="productCodeD" />
+                        <img id="productLogoD" width="73" height="73" class="compare_img" alt="" src="http://localhost:8080/images/list/zd_img_03.jpg" alt="">
+                        <p>
+                            <span id="productnameD" class="compare_name"></span>
+                            <span id="productPremD" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp4()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparebtn">
+                        <a class="compare_submit" href="javascript:void(0);" vlpageid="tjdb01" exturl="http://www.kaixinbao.com/tjdb01" onClick="javascript:begincompare('http://localhost:8080/wj');subclosecp();return(VL_FileDL(this));return false;">提交对比</a>
+                        <span class="compare_none" onclick="close_all();">清空</span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <span class="cpdiv_jao"></span>
+            </div>
+        </div>

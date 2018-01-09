@@ -1,0 +1,16 @@
+<% DataTable dt_1 = TemplateData.getDocList("article","9385","current","newRecommend","null","5","null","null","null");
+  if(dt_1==null){write("没有找到栏目。parent：null  catalog："+"9385");}else{
+ int rdCnt=dt_1.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_1  = dt_1.getDataRow(i);
+ int rdIdx=i;
+%>
+
+            		<li class="clearfix">
+            			<a href="${article_1.Link}">${article_1.title}</a>
+                		<em class="list_xls">销量：${article_1.SalesVolume}</em>
+                		<em class="list_pays"><span name="Ajax_Prict_${article_1.RiskCode}">￥${article_1.InitPrem}</span></em>
+					    <em class="list_pays_price moneys">${article_1.BasePremV3}</em>
+                	</li>
+          	   		<%}}%>

@@ -1,0 +1,100 @@
+<!--mini_nav start-->
+<div class="mini_nav">
+	<div class="wrapper">
+    	<div class="welcome">您好，欢迎来到开心保！</div>
+        <div class="q_link"> 
+            <ul class="top_nav_link" id="topnav_link">
+                <li><a href="${Site.URL}/about/" class="q_link_c" target="_blank">帮助中心</a></li>
+                <li class="topNavDropMenuBox"><a href="javascript:void(0);" class="q_link_c q_link_d" id="wz_nav">网站导航<b id="nav_wfs" class="nav_wf switch"></b></a>
+                    <div id="topNavDropMenu" class="wz_nav_box topNavDropMenu " style="display: none; ">   
+                        <dl class="clearfix">
+                            <dt>保险产品</dt>
+                            <dd class="navmin1"><a href="${Site.URL}/lvyou-baoxian/" target="_blank">旅游险</a></dd>
+                            <dd class="navmin1"><a href="${Site.URL}/yiwai-baoxian/" target="_blank">意外险</a></dd>
+                            <dd class="navmin1"><a href="${Site.URL}/jiankang-baoxian/" target="_blank">健康险</a></dd>
+                            <dd class="navmin1"><a href="${Site.URL}/renshou-baoxian/" target="_blank">人寿险</a></dd>
+                            <dd class="navmin1"><a href="${Site.URL}/jiacai-baoxian/" target="_blank">家财险</a></dd>
+                            <dd class="navmin1"><a href="${Site.URL}/chexian/" target="_blank">车险</a></dd>
+                            <dd class="navmin1"><a href="${Site.URL}/tx/" target="_blank">团体险</a></dd>
+                            <dd class="navmin1"><a href="${Site.URL}/touzi-licai/" target="_blank">理财险</a></dd>
+                        </dl>
+                        <dl class="clearfix">  
+                        <dt>保险社区</dt>
+                            <dd class="navmin2"><a href="${Site.URL}/zhishi/" target="_blank">保险知识</a></dd>
+                            <dd class="navmin2"><a href="${Site.URL}/zixun/" target="_blank">保险资讯</a></dd>
+                            <dd class="navmin2"><a href="${Site.URL}/wenda/" target="_blank">保险问答</a></dd>
+                            <dd class="navmin2"><a href="${Site.URL}/baike/" target="_blank">保险百科</a></dd>
+                            <dd class="navmin2"><a href="${Site.URL}/zhuanti/" target="_blank">保险专题</a></dd>
+                            <dd class="navmin2"><a href="${Site.URL}/gongsi/" target="_blank">保险公司</a></dd>
+                            <dd class="navmin2"><a href="${Site.URL}/jifen/" target="_blank" rel="nofollow" >积分商城</a></dd>
+                            <dd class="navmin2"><a href="${Site.URL}/huati/"  target="_blank">热门话题</a></dd>
+                        </dl>
+                        <dl class="clearfix clear_bors">    
+                            <dt>服务中心</dt>
+                            <dd class="navmin3"><a href="${Site.URL}/group/" target="_blank">合作商入口</a></dd>
+                            <dd class="navmin3"><a href="${Site.URL}/ddkscx/" target="_blank">订单快速查询</a></dd>
+                            <dd class="navmin3"><a href="${Site.URL}/bdyz/" target="_blank">保单验真</a></dd> 
+                        </dl>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mini_nav end-->
+<div id="TopAd"></div>
+<!--header start-->
+<div class="header">
+    <div class="wrapper">
+        <div class="new_logo"><a href="${Site.URL}"><img src="${Site.StaticResourcePath}/images/new_car/logo.png" alt="" title="" width="230" height="60"></a></div>
+        <div class="nav_bgs">
+            <div class="select_box">
+                <form action="${Site.prop6}/Search/car_SearchResult.jsp">
+	                <input type="hidden" name="id" value="38" id="id" />
+					<input type="hidden" name="site" value="221" />
+                    <span><input name="query" type="text" class="txt_soso" value="平安车险" 
+                    onBlur="if (this.value == '') {this.value = '平安车险';}" 
+                    onFocus="if (this.value == '平安车险') {this.value = '';}"></span>
+                    <span><input name="" type="submit" value="搜索" class="input_soso"></span>
+                    <div class="clear"></div>
+                    <span class="so_ps">热门搜索：
+                       <cms:list item="friendlink" count="5" name="车险头部热门搜索">
+			 	     		<a href="${friendlink.url}" target="_blank">${friendlink.name|substrwidth=8}</a>
+					   </cms:list>
+                    </span>
+                </form>        
+            </div>
+        </div>
+        <div class="nav_tel"><img src="${Site.StaticResourcePath}/images/new_car/logo_06v.gif" width="206" height="56"></div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--header end-->
+<!--main_nav start-->
+<div class="main_navs">
+    <div class="wrapper">
+         <ul class="floatl">                                   
+            <li id="A"><img src="${Site.StaticResourcePath}/images/new_car/home.png" width="13" height="13" align="absmiddle" /><a href="${Site.URL}/chexian">车险首页</a></li>
+            <li id="B" class="special"><a href="javascript:;">车险哪家好</a></li>
+            <li id="C"><a href="${Site.URL}/chexian/shangyechexian.shtml">车险怎么买</a></li>
+            <li id="D"><a href="${Site.URL}/chexian/lipei.shtml">车险理赔</a></li>
+            <li id="F"><a href="http://www.kaixinbao.com/chexian/zhuanti/A07G20140721065.shtml">车险计算器</a></li>
+         </ul>
+         <ul class="floatr">
+         	<li id="E" ><a href="${Site.URL}/chexian/club/">车险俱乐部</a></li>
+         </ul>
+    </div>
+</div>
+<div class="main_navs_two">
+    <div class="wrapper">
+         <ul>
+         	<li id="B01"><a href="${Site.URL}/chexian/pingan.shtml">平安车险</a></li>
+            <li id="B02"><a href="${Site.URL}/chexian/taipingyang.shtml">太平洋车险</a></li>
+            <li id="B03"><a href="${Site.URL}/chexian/yangguang.shtml">阳光车险</a></li>
+            <li id="B04"><a href="${Site.URL}/chexian/dadi.shtml">大地车险</a></li>
+            <li id="B05"><a href="${Site.URL}/chexian/tianping.shtml">安盛天平车险</a></li>
+         </ul>
+    </div>
+</div>
+<!--main_nav end-->

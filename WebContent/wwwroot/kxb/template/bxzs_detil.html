@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href="${Site.StaticResourcePath}/style/StyCss.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/BaikeSty.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/commonality.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/infor.css" rel="stylesheet" type="text/css" />
+<title>${catalog.name}</title>
+</head>
+
+<body>
+<!-- 顶部 开始 -->
+<div align="center">
+	<cms:include file="block/kxb_header.shtml" />
+</div>
+<!-- 顶部 结束 --
+
+<div class="clear"></div>
+
+<!--  主体 开始 -->
+<div class="wrap1000">
+	<div class="NonCarNavArea">
+    	<ul>
+        	<cms:link type="currentPosition"></cms:link> <span class="separator">></span><p   >${Article.title}</p>
+        </ul>
+    	<div class="clear"></div>
+    </div>
+	
+	<div class="newpart">
+		<div class="newleft02">
+		<!--<div class="newtxtarea02">-->
+		  <!--文章 开始-->
+			<div class="artical">
+            	<h3>${article.title}</h3>
+                <div class="date"><span>作者：${article.author}</span><span>发布时间：${Article.PublishDate|Format=yyyy-MM-dd HH:mm}</span></div>
+				<div class="keyword"><span>关键词：${article.Keyword}</span></div>
+                <div class="cont">
+					${article.content}
+              </div>
+            </div>
+            
+			<!--文章 结束-->
+	  </div>
+		
+		
+		<div class="newleft04">
+			<h3 class="titnew04">险种</h3>
+				<div class="morenew02"></div>
+				  	<div class="newtxtarea01">
+						<ul class="newlist01">
+						<cms:list item="catalog" type="article" level="child" name="产品中心">
+							<li><a href="${catalog.link}">${catalog.name}</a></li>
+		                </cms:list>					
+						</ul>
+					</div>		
+			<!--    精彩问题推荐   begin     -->
+					
+			
+			<h3 class="titnew04">频道推荐</h3>
+						<div class="morenew02"></div>
+					  	<div class="newtxtarea01">
+							<ul class="newlist01">
+							<cms:list item="article" level="all" count="5" hasAttribute="recemmend" name="保险知识">
+								<li><a target="_blank" href="${Article.Link}" class="sys_url">${Article.Title|CharWidth=12}</a>
+								</li>
+							</cms:list>				
+							</ul>
+						</div>
+					<div class="clear"></div>
+					<!-- 频道推荐   end    -->
+												  			 
+					<h3 class="titnew04">热门文章</h3>
+					<div class="morenew02"></div>
+					  	<div class="newtxtarea01">
+					  	<ul class="newlist01">
+							<cms:list item="article" level="all" count="5" hasAttribute="hot" name="保险知识">
+								<li>
+									<a target="_blank" href="${Article.Link}" class="sys_url">${Article.Title|CharWidth=12}</a>
+								</li>
+							</cms:list>			
+							</ul>
+						</div>
+				    <div class="clear"></div>
+				    
+				    
+				    <div class="mb10">
+					  	<cms:ad name="测试广告" custom="false" size="468*60" type="1"> 
+				    	</cms:ad>
+				  	</div>
+				  
+				<!------- 标签云   ----- -->
+				<h3 class="titnew04">标签云</h3>
+					<div class="morenew02"></div>
+					  	<div class="newtxtarea01">
+					  		<cms:include file="../../message/test.html" />
+						</div>  	  		  
+  	   </div>
+		  
+	  </div>
+		<div class="clear"></div>
+  </div>
+	
+</div>
+<!--  主体 结束 -->
+
+<div class="clear"></div>
+<!--底部 开始-->
+	<center>
+	<cms:include file="block/kxb_footer_new_common.shtml"></cms:include>
+	</center><!--底部 结束-->
+ <cms:include file="block/community_v1.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/tagcloud.js"></script>
+</body>
+</html>
+
+
+

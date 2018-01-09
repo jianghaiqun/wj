@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/base.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+<div class="wcont_body">
+<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href="${Site.URL}/zhuanti/"><span class="separator1">保险专题</span></a> 
+		</div>
+	<h1  class="stencil_title">${Article.Title|substrwidth=26}</h1>
+	<div class="stencil_min_des02">${Article.Content}</div>
+	<ul class="stencil_nav_li sl-floatcenter clearfix">
+		<li class="sl-floatcenter-item"><a href="#part1"  >${Article.Section1}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part2"  >${Article.Section2}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part3"  >${Article.Section3}</a></li>
+	</ul>
+	<h2 class="part_titles" id="part1">${Article.Section1}</h2>
+	<div class="w980">
+		<div class="bor_s">
+			<ul class="cplogolist h200">
+				<cms:list item="Image" name="人寿保险专题1"> 
+					<li class="cphover"><a href="#${Image.CompanyCode}" ><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}"  width="144" height="80"/></a></li>
+				</cms:list> 	
+			</ul>
+			<div class="clear"></div>
+			<ul class="cplist">
+				<cms:list item="Image" name="人寿保险专题1"> 
+				    <li>
+						<div class="pic"><a href="${Image.InsuranceCompanyLink}" target="_blank"><img src="${Site.StaticResourcePath}/${Image.InsuranceSmallLogo}" width="97" height="48" id="${Image.CompanyCode}"/></a></div>
+						<h3><a href="${Image.InsuranceCompanyLink}" target="_blank">${Image.SmallLogoTitle}</a></h3>
+						<p>${Image.SmallLogoDescription|substrwidth=110}</p>
+					  <span class="more10 orange"><a href="${Image.InsuranceCompanyLink}" rel="nofollow" target="_blank">更多</a></span>
+					</li>
+				</cms:list> 	
+			</ul>
+		
+		</div>
+		<div class="bor_shadow_980"></div>
+	</div>
+	<div class="h20"></div>
+	
+	<h2 class="part_titles"  id="part2">${Article.Section2}</h2>
+	<div class=" clearfix  fleft one_box02">
+		<div class="bor_s h293 padding10 nopad"><!-- 2013-03-27 update -->
+			<span class="floatlpic"><a href="${Article.Section2Title1Link}" rel="nofollow" target="_blank"><img src="${Site.StaticResourcePath}/${Article.Section2Image}" width="267" height="200" /></a></span>
+			<h3 class="zx_news_title margt11"><a href="${Article.Section2Title1Link}" target="_blank">${Article.Section2Title1}</a></h3>
+			<p class="p01">${Article.Section2Content1|substrwidth=80}</p>
+			<span class="more10 orange"><a href="${Article.Section2Title1Link}" rel="nofollow" target="_blank">更多</a></span>	
+			<div class="dashbor_bnor"></div>
+			<h3 class="zx_news_title"><a href="${Article.Section2Title2Link}" target="_blank">${Article.Section2Title2}</a></h3>
+			<p class="p01">${Article.Section2Content2|substrwidth=80}</p>
+			<span class="more10 orange"><a href="${Article.Section2Title2Link}" rel="nofollow" target="_blank">更多</a></span>	
+			<div class="dashbor_bnor"></div>
+			<h3 class="zx_news_title"><a href="${Article.Section2Title3Link}" target="_blank">${Article.Section2Title3}</a></h3>
+			<p class="p01">${Article.Section2Content3|substrwidth=148}</p>
+			<span class="more10 orange"><a href="${Article.Section2Title3Link}" rel="nofollow" target="_blank">更多</a></span>	
+		</div>
+		<div class="bor_shadow_660"></div>
+	</div>
+    <div class="clearfix  fright one_box03">
+		<div class="bor_s h300">
+			<h3 class="img_p_title">热销保险产品推荐</h3>
+			<ul class="hotprodulist">
+				<cms:list item="article" level="all" name="${Article.ProductArea}" type="rand"  count="5" >
+					<li><span class="produpic53"><a href="${Site.URL}/${Site.URL}/${Article.Link}" ><img src="${Site.ProductResourcePath}${Article.ProductLogo}" width="53" height="53" /></a></span>
+					<h3 class="font14 rxtiti"><a href="${Site.URL}/${Article.Link}" >${Article.title}</a></h3>
+					<p class="gray">${Article.AdaptPeopleInfo}</p>
+					<div class="clear"></div></li>
+				</cms:list>	
+			</ul>
+		</div>
+		<div class="bor_shadow_294"></div>
+	</div>
+    <div class="h20"></div>
+	<h2 class="part_titles" id="part3">${Article.Section3}</h2>
+	<div class="w980">
+		<div class="bor_s padding10 h160">
+		<div class="tab"> 
+             <ul> 
+                <li id="one1" onMouseOver="setTab('one',1,4)" class="hover"><a href="javascript:void(0);">资讯</a></li>
+				<li id="one2" onMouseOver="setTab('one',2,4)" ><a href="javascript:void(0);">百科</a></li>
+				<li id="one3" onMouseOver="setTab('one',3,4)" ><a href="javascript:void(0);">问答</a></li>
+				<li id="one4" onMouseOver="setTab('one',4,4)" ><a href="javascript:void(0);">知识</a></li>
+				<li ><a href="#">&nbsp;</a></li>
+             </ul>
+             <div class="clear"></div>
+        </div>
+		<div class="tabcont" id="con_one_1">
+			<p><a href="${Site.URL}/zixun/" style="color:#FF6600" target="_blank">更多</a></p>
+			<ul class="txtlist05 graytxt">
+				<cms:list item="article" level="none" type="rand" condition=" type = 1 and cataloginnercode like '002307%' and tag like '%${Article.tag1}%' and status in (30,60)" count="16" >
+					<li><a href="${Site.URL}/${Article.Link}" target="_blank">${Article.Title|substrwidth=15} </a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="tabcont" id="con_one_2" style="display:none;">
+			<p><a href="${Site.URL}/baike/" style="color:#FF6600" target="_blank">更多</a></p>
+			<ul class="txtlist05 graytxt">
+				<cms:list item="article" level="none" type="rand" condition=" type = 1 and cataloginnercode like '002347%' and tag like '%${Article.tag1}%' and status in (30,60)" count="16" >
+					<li><a href="${Site.URL}/${Article.Link}" target="_blank">${Article.Title|substrwidth=15} </a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="tabcont" id="con_one_3" style="display:none;">
+			<p><a href="${Site.URL}/wenda/" style="color:#FF6600" target="_blank">更多</a></p>
+			<ul class="txtlist05 graytxt">
+				<cms:list item="article" level="none" type="rand" condition=" type = 1 and cataloginnercode like '002308%' and tag like '%${Article.tag1}%' and status in (30,60)" count="16" >
+					<li><a href="${Site.URL}/${Article.Link}" target="_blank">${Article.Title|substrwidth=15} </a></li>
+				</cms:list>
+			</ul>
+		</div>
+		<div class="tabcont" id="con_one_4" style="display:none;">
+			<p><a href="${Site.URL}/zhishi/" style="color:#FF6600" target="_blank">更多</a></p>
+			<ul class="txtlist05 graytxt">
+				<cms:list item="article" level="none" type="rand" condition=" type = 1 and cataloginnercode like '002306%' and tag like '%${Article.tag1}%' and status in (30,60)" count="16" >
+					<li><a href="${Site.URL}/${Article.Link}" target="_blank">${Article.Title|substrwidth=15} </a></li>
+				</cms:list>
+			</ul>
+		</div>
+		</div>
+		<div class="bor_shadow_980"></div>
+	</div>
+	<div class="h30"></div>
+    <ul class="orter_list">
+		<cms:list item="article" level="none" condition="type = 1 and id in ( select id from (select id from (select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword1}%' limit 4) a1 union select distinct id from (select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1 and title like '%${Article.TitleKeyword2}%' limit 5) a2 union select id from ( select id from zcarticle where cataloginnercode like '002354%' and status = '30' and type = 1  order by rand() limit 9 ) a3)c1 limit 9)c2)" count="9" >
+			<li><a href="${Article.Link}" target="_blank">${Article.Title|substrwidth=12} </a></li>
+		</cms:list>
+	</ul>
+	<div class="h30"></div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+</body>
+</html>

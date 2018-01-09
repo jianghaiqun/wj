@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:url(img/bg_.bmp) bottom;
+}
+.wclcome{
+	font-size:38pt;
+	color:#009A94;
+	text-align:center;
+	font-weight:bold;
+}
+/*======================BF=========================*/
+.title{
+font-size:18pt;
+font-weight:bold;
+text-align:center;
+height:25px;
+color:#009992;
+}
+.titlesmall{
+font-size:10pt;
+line-height:30px;
+padding-left:50px;
+color:#606871;
+}
+.Inputsty{
+width:150px;
+height:18px;
+border:1px solid #999999;
+font-size:9pt;
+}
+.titleHome{
+background:url(img/titlehome-bg.jpg) repeat-x;
+height:30px;
+text-align:center;
+font-size:12px;
+font-weight:bold;
+color:#009992;
+}
+.data_td{
+background:#FFFFFF;
+font-size:12px;
+padding-left:3px;
+line-height:24px;
+}
+.data_td_bold{
+font-weight:bold;
+font-size:12px;
+padding-left:3px;
+background:#F5FBFB;
+line-height:24px;
+}
+
+/*==============search==================================*/
+.sear_titleHome{
+	background:url(img/titlehome-bg.jpg) repeat-x;
+	height:30px;
+	text-align:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#009992;
+	padding-left:20px;
+}
+.sear_data_title{
+	font-size:12px;
+	background:#F5FBFB;
+	line-height:26px;
+	text-align:right;
+	padding-right:4px;
+}
+.sear_data_td{
+	background:#FFFFFF;
+	font-size:12px;
+	padding-left:4px;
+	line-height:26px;
+}
+.select_list{
+	font-size:12px;
+	background:#F5FBFB;
+	width:50%;
+}
+.btn_td{
+	background:#FFFFFF;
+	line-height:150%;
+	text-align:center;
+	padding-top:5px;
+}
+.sear_botton{
+	background:url(img/titlehome-bg.jpg) repeat-x;
+	height:25px;
+	text-align:center;
+	color:#000000;
+	font-size:12px;
+	border:1px solid #5DB8B1;
+	width:60px;
+}

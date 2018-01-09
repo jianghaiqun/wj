@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<meta name="robots" content="noindex, nofollow" />
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<style type="text/css">
+	#content {
+		width:100%;
+		margin: 0 auto;
+		padding-top:10px;
+	} 
+</style>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_list.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_detail.css" />
+<link href="${Site.StaticResourcePath}/style/skins/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/iframe.js"></script>
+</head>
+<body onload="mysethash();">
+<iframe id="iframeA" name="iframeA" src="" width="0" height="0" style="display:none;" ></iframe> 
+	<div id="content">
+			<input type="hidden" name="RiskCode" id="RiskCode" value='${Article.RiskCode}' />
+			<div class="content_right">
+				<div class="cp_gscon">
+					<div class="max_icon_C${Article.SupplierCode} cp_logos"></div>
+
+					<cms:list item="article" level="none" condition="ZCArticle.URL like 'gongsi%' and ZCArticle.Title like '${Article.CompanyShortName}%'" count="5" >
+					<a href="${Article.Link}" target="_blank" class="gs_links"/>
+					</cms:list>
+					<p class="gs_des_con">${Article.CompanyDesc}</p>
+					<div class="share_link">
+							<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"
+								data="{'text':'我刚刚在#金融会所#发现了一款产品挺不错的，推荐你也看一下【${Article.title}】>>>'}">
+								<span class="share_p">分享到：</span><a href="" class="bds_tsina"></a><a href="" class="bds_tqq"></a>
+							</div>
+					</div>
+				</div>
+
+				<div class="cp_descon">
+					<div class="cp_titile_con">
+						<h1>${Article.title}</h1>
+						<!--<em><span class="SalesVolume" id="SalesV_${Article.RiskCode}">销量：加载中...</span></em>-->
+					</div>
+					<div class="crowd clearfix">
+						<em class="cp_title_ms">适合人群：</em>
+						<p>${Article.AdaptPeopleInfo}</p>
+					</div>
+<!--					<div class="tb_yh clearfix">-->
+<!--						<em class="cp_title_ms">优惠信息：</em>-->
+<!--						<p>-->
+<!--							您将获得<span id="productIntegral_${Article.RiskCode}"><span class="jf_red">${Article.ProductInt}</span></span>个积分-->
+<!--						</p>-->
+<!--					</div>-->
+					${Article.CalHTML}
+					<div class="price_con clearfix">
+						<em class="cp_title_ms">价格：</em>
+						<ul class="price">
+							${Article.prodcutMarkPrice}
+						</ul>
+					</div>
+
+					<div class="button_b clearfix" id="button_b clearfix">
+						<span onClick="doBuy();" class="button_b1">直接购买</span> 
+					</div>
+				</div>
+				<div class="clear"></div>
+
+
+				<div class="cp_contents">
+					<p id="min_tag" class="title">
+						<em><a class="selects_tag" href="javascript:void(0);">产品详情</a>
+						</em><em><a href="javascript:void(0);" class="">投保示例</a> </em><em><a
+							class="" href="javascript:void(0);">理赔服务</a> </em>
+					</p>
+					<div class="cp_des" id="tag_box">
+						<div class="cp_xq_con">
+							<div class="ccp_box_con">
+								<h3 class="n_title ">基本信息</h3>
+								<div class="bor_de"></div>
+								<div class="li_list">
+									<b class="ld_b">产品亮点：</b>${Article.FEMRiskBrightSpot}
+								</div>
+								<div class="li_list">
+									<b>可购份数：</b>${Article.limcount}
+								</div>
+								${Article.Doc2}
+								<div class="li_list">
+									<b>支付方式：</b> <img src="${Site.StaticResourcePath}/style/shop/images/pay/pay_fs_03.gif"
+										width="85" height="27"/><img
+										src="${Site.StaticResourcePath}/style/shop/images/pay/pay_fs_05.gif" width="85"
+										height="27"/><img
+											src="${Site.StaticResourcePath}/style/shop/images/pay/pay_fs_07.gif" width="85"
+											height="27"/><img
+												src="${Site.StaticResourcePath}/style/shop/images/pay/pay_fs_09.gif" width="85"
+												height="27"/><img
+													src="${Site.StaticResourcePath}/style/shop/images/pay/pay_fs_11.gif" width="85"
+													height="27"/><img
+														src="${Site.StaticResourcePath}/style/shop/images/pay/pay_fs_13.gif" width="85"
+														height="27"/>
+								</div>
+							</div>
+							<div class="bor_h"></div>
+<!--							<div class="ccp_box_con">-->
+<!--								<h3 class="n_title ">-->
+<!--									保障权益 <em>如果您对保障权益有任何疑问，请点击<a-->
+<!--										href="javascript:openChat('http://chat10.live800.com/live800/chatClient/chatbox.jsp?companyID=200975&jid=6736147584&enterurl=http%3A%2F%2Fwww%2Ekaixinbao%2Ecom%2F&pagereferrer=&tm=1347850489403');"-->
+<!--										rel="nofollow">在线客服</a> </em>-->
+<!--								</h3>-->
+<!--								${Article.DutyHTML1}-->
+<!--							</div>-->
+
+
+
+						<div class="bor_h"></div>
+						<div class="ccp_box_con">
+							<h3 class="n_title ">产品特色</h3>
+							<p>${Article.ERiskFeatures}</p>
+						</div>
+						<div class="bor_h"></div>
+						${Article.Instruction}
+
+						<div class="bor_h"></div>
+						<div class="ccp_box_con">
+							<h3 class="n_title ">友情提示</h3>
+							<ul class="zr_list_conbs">
+								<li><em>1、</em>金融会所上的投保责任描述仅供了解产品使用，详细内容请参阅相关条款。</li>
+								<li><em>2、</em>18周岁以下的被保险人，其以死亡为给付责任的保险金额不得超出中国保监会所规定的10万元限额。</li>
+								<li><em>3、</em>对于保障期在一年以内的非寿险产品，不办理撤保、退保和加保，敬请谅解。 </li>
+								<li><em>4、</em>经金融会所购买产品的顾客，若发生保险事故，客户经理将尽全力协助办理理赔服务。</li>
+							</ul>
+						</div>
+						<div class="bor_h"></div>
+						<div class="ccp_box_con">
+							<h3 class="n_title ">保险条款</h3>
+							<p>
+								保险责任请参考产品对应条款，并敬请特别留意条款中的 <span class="col_reds">"责任免除"</span>
+								部分。
+							</p>
+							<ul class="bxtk_list_box">
+								${Article.Doc1}
+							</ul>
+						</div>
+					</div>
+
+					<div class="cp_tbsl_con" style="display: none">
+						<div class="ccp_box_con">
+							<h3 class="n_title ">投保示例</h3>
+							<p>${Article.toubaoshili}
+							</p>
+						</div>
+					</div>
+
+					<div class="cp_lpfu_con" style="display: none">
+							<div class="ccp_box_con">
+							<h3 class="n_title ">理赔服务</h3>
+							<img src="${Site.StaticResourcePath}/style/shop/images/desc_03.jpg" width="678"
+								height="225" alt="一站式服务，理赔更安心" title="一站式服务，理赔更安心">
+								<h4 class="bllc_title">理赔办理流程</h4> <img
+								src="${Site.StaticResourcePath}/style/shop/images/desc_07.gif" width="431" height="27">
+									<div class="clear"></div>
+									<p class="bz_list_con">
+										<b>第一步：</b>发生保险事故后，请第一时间理赔报案。您可以直接向百年人寿报案，也可以请客户经理协助报案。<br>
+									</p>
+									<p class="bz_list_con">
+										<b style="float: left;">第二步：</b>请您根据下方理赔申请指引中关于理赔材料说明，收集、整理、提交理赔材料进行理赔申请。为了最大程度缩短理赔时间，理赔材料齐全后，请就近送至百年人寿保险股份有限公司各分、支公司，或请联系客户经理协助办理。<br>
+									</p>
+									<p class="bz_list_con">
+										<b>第三步：</b>百年人寿收到申请材料以后，会开启"金融会所理赔特别通道"，会以最快的速度完成理赔案件的审核。<br>
+									</p>
+									<p class="bz_list_con">
+										<b>第四步：</b>理赔审核完成后，理赔结果会及时通知您！也请您及时查看您申请理赔的银行账户，确认钱款是否及时到帐。<br>
+									</p>
+									<h4 class="bllc_title2">理赔申请指引</h4>
+									<p>
+										保险公司报案理赔专线：${Article.Phone}<br>
+									</p>
+									<h4 class="bllc_title3">理赔温馨提示</h4>
+									<p>
+										出于对客户健康的关怀，百年人寿通常都会要求客户选择医疗质量高的公立二级甲等（县区级）以上医院进行就诊治疗，在接诊医生询问事故经过或者伤病历史时，应如实说明并请医生在病历上记录。（若特殊原因无法按照要求选择医院时，请拨打报案电话向百年人寿咨询或咨询您的客户经理）<br />
+发生交通工具等意外伤害事故，如有公安交警、急救中心、司法鉴定等相关机构介入处理的，请注意索要和保管好相应的证明、急救病历和鉴定报告等书面材料，作为事后申请理赔的重要依据。
+										
+									</p>
+						</div>
+					</div>
+				</div>
+				<div class="ligm_consf" id="ligm_consf">
+					<div class="button_b clearfix">
+						<span class="button_b1" onClick="doBuy();">直接购买</span>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+	<div class="clear"></div>
+<script type="text/javascript">
+		function doBuy(){
+			var rootEle = document.getElementById("divRiskAppFactor_" + "${Article.RiskCode}");
+			var tempURL = "";
+			if (rootEle != null) {
+				var dc = new DataCollection();
+				var ulNodeList = rootEle.getElementsByTagName("UL");
+				for ( var i = 0; i < ulNodeList.length; i++) {
+					for ( var j = 0; j < ulNodeList[i].childNodes.length; j++) {
+						if (ulNodeList[i].childNodes[j].className == "li_selected") {
+							var param = ulNodeList[i].id;
+							param = param.substring(param.indexOf("_")+1);
+							var nameval=ulNodeList[i].childNodes[j].firstChild.getAttribute("name");
+							if(nameval==null){
+								var day=parseInt(getDay(jQuery("#LiDayItemAuto").html()));
+								tempURL += "@"+param + "="+encodeURIComponent(day+"X");
+							}else{
+								tempURL += "@"+param + "="+encodeURIComponent(encodeURIComponent(ulNodeList[i].childNodes[j].firstChild.getAttribute("name")));
+							}
+							continue;
+						}
+					}
+
+				}
+			}
+			var supplierCode=${Article.SupplierCode};
+			var isCpsProduct = '${Article.isCpsProduct}';
+			var url = "";
+			if(isCpsProduct=="01"){
+				_gaq.push(['_trackEvent', 'CPS','TO']);
+				url ="${Site.prop6}/shop/order_cps!recordJump.action?productId=${Article.RiskCode}";
+			}else{
+				url="${Site.prop6}/shop/order_config_new!buyNow.action?productId=${Article.RiskCode}"+tempURL     ;
+			}
+			var sendurl=document.location.toString();
+			 var str=sendurl.substring(parseInt(sendurl.indexOf("?"))+1,sendurl.indexOf("|"));
+			 var s = str.split("&") ;
+			top.location.href="${Site.prop2}url="+url+"@typeFlag=02&UserCode="+s[0]+"&defaultNav="+s[1] ;
+		}
+	var isCpsProduct = '${Article.isCpsProduct}';
+	if(isCpsProduct=='02')
+	{
+		var ddd1=document.getElementById("button_b clearfix"); 
+		var ddd2=document.getElementById("button_b cf");
+		var ddd3=document.getElementById("ccp_box_con");
+		var ddd4=document.getElementById("ligm_consf");
+		ddd1.style.cssText="display:none";
+		ddd2.style.cssText="display:block";
+		ddd3.style.cssText="display:block";
+		ddd4.style.cssText="display:none";
+	}
+	</script>
+	
+<script type="text/javascript">
+function loadXMLDoc(url)
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("RecentView").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET",url+'&url='+window.href,true);
+xmlhttp.send();
+}
+function salesVolumeLoad() {
+	sethash();
+	var list=jQuery('span[id^=SalesV_]');
+	var id = new Array(list.length);
+	for (var i = 0; i < list.length; i++) {
+           id[i] = list[i].id;
+	}
+	jQuery.ajax({
+		type: 'post',
+		url: '${Site.prop6}/shop/sales_volume!search.action?productIds='+id,
+		dataType: "json",
+		async: false,
+		success: function(data) {
+			jQuery.each(data, function(index, object) {
+				document.getElementById(index).innerHTML="销量："+object;
+			});
+		}
+	});
+}
+</script>
+
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.form.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jqueryupdate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/template/common/js/base.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/artDialog.js"></script>
+	<!--WdatePicker.js 日期控件 调用原日期控件-->
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/template/shop/js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+    <script type="text/javascript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+    <!--detail.js 详细页独有样式-->
+    <script type="text/javascript" src="${Site.JsResourcePath}/js/detail.js"></script>
+    
+      <!--jquery.poshytip.js 责任描述tip提示-->
+    <script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.poshytip.js"></script>
+		<!-- Baidu Button BEGIN -->
+	<script type="text/javascript" id="bdshare_js" data="type=tools&amp;mini=1&amp;uid=1265131" ></script>
+	<script type="text/javascript" id="bdshell_js"></script>
+	<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+	</script>
+	<!-- Baidu Button END -->
+</body>
+</html>

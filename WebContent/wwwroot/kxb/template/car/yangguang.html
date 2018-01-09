@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+String title = article.getString("MetaTitle");
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css"/>
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+    <ul class="car_mininav clearfix">                                               
+	   <li><a href="${Site.URL}/chexian/" title="返回车险首页">返回车险首页</a></li>
+	   <cms:list item="article"  level="all" name="车险对接保险公司" >
+	     <li><a href="${Site.URL}/${Article.Link}" class='<%if("阳光车险".equals(article.getString("title"))) write("s_car_nav");%>' title="${Article.title}">${Article.title}</a></li>
+       </cms:list>
+	</ul>
+    <div class="car_banners yangguang_img">
+    <h1 class="dadi_titile meihua_p yangguang_title">| 阳光车险</h1>
+    <img src="${Site.StaticResourcePath}/images/car/ygcx_img_05.jpg" width="980" height="434" alt="阳光车险" title="阳光车险"/>
+	    <div class="libaojia yg_baojia">
+	    <a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="bapjia_btn yangguang_btn">立即报价</a>
+        <div class="car_lp">
+        <span class="lp_box lp_box1"></span>
+        <span class="lp_box lp_box2">${Article.Gift}</span>
+        <span class="lp_box lp_box3"></span></div>
+	    </div>
+    </div>
+    <div class="yanggas"> <p class="meihua_p">阳光车险24小时闪赔，7X24小时服务 千万车险用户信任托付！</p></div>
+   
+ <div class="yangguang_youshi">
+ 	<h2 class="meihua_s yg_titile1 meihua_p">阳光车险<br>投保优势</h2>
+ 	<h2 class="meihua_s yg_titile2 meihua_p">24小时<br>闪赔</h2>
+ 	<h2 class="meihua_s yg_titile3 meihua_p">非事故<br>道路救援</h2>
+ 	<h2 class="meihua_s yg_titile4 meihua_p">小额<br>快赔</h2>
+ 	<h2 class="meihua_s yg_titile5 meihua_p">旅行医疗<br>救援</h2>
+ 	<h2 class="meihua_s yg_titile6 meihua_p">网上<br>通道</h2>
+    <p class="youshi_cadf yg_con1 ">报案24小时内<br>闪电赔付</p>
+    <p class="youshi_cadf yg_con2">1、现场维修<br>2、拖车<br>3、换轮胎<br>4、应急加油<br>5、电瓶充电<br>6、应急加水等<br></p>
+    <p class="youshi_cadf yg_con3">5000元以下，<br>手续齐全，<br>一个工作日赔付。<br></p>
+    <p class="youshi_cadf yg_con4">1、事故现场紧急医疗救援服务<br>2、紧急救援指导<br>3、旅行期间保障性救援服务。<br></p>
+    <p class="youshi_cadf yg_con5">网上专属投保通道，<br>私家车商业险多省15%，<br>更有多重豪礼赠送！<br></p>
+ </div>
+ <p class="yangguang_service cf meihua_p">阳光车险<br>
+特快专属服务</p>
+<div class="cf yg_service_box">
+<dl class="car_service_list">
+	<dt class="meihua_p">1.反应快</dt>
+    <dd>7X24小时无休，网销客户专享快速理赔通道</dd>
+</dl>
+<dl class="car_service_list">
+	<dt class="meihua_p">2.救援快</dt>
+    <dd>非事故道路救援无限次，提供旅行快速医疗救援服务</dd>
+</dl>
+<dl class="car_service_list">
+	<dt class="meihua_p">3.定损快</dt>
+    <dd>小额案件30分钟内定损</dd>
+</dl>
+<dl class="car_service_list">
+	<dt class="meihua_p">4.赔付快</dt>
+    <dd>5000元以下非人伤案件，免单证，24小时内赔付</dd>
+</dl>
+<dl class="car_service_list">
+	<dt class="meihua_p">5.服务快</dt>
+    <dd>4s店直赔不限制送修点，享受4S店直赔</dd>
+</dl>
+<dl class="car_service_list">
+	<dt class="meihua_p">6.回访快</dt>
+    <dd>结案后100%回访，热情服务，细致入微</dd>
+</dl>
+</div>
+<h2 class="yg_big_title meihua_p yg_titilesfssf1">阳光车险理赔服务</h2>
+<div class="yg_liserivce cf">
+<dl class="car_service_list">
+	<dt class="meihua_p">全国三维赔付</dt>
+    <dd>全国范围内，甲地承保，乙地查勘、丙地领款的三维通赔</dd>
+</dl>
+<dl class="car_service_list">
+	<dt class="meihua_p">24小时超快理赔</dt>
+    <dd>中国消费者协会监督，超24小时赔付百倍罚息</dd>
+</dl>
+</div>
+
+<h2 class="yg_big_title meihua_p yg_titilesfssf2">阳光车险介绍</h2>
+<p class="yg_jieshao">阳光车险近年来市场占有率迅速提升，并以出色的客户服务赢得了用户的信赖。
+阳光车险公司曾荣获最具社会责任保险公司、中国最佳客户服务中心、中国最佳服务管理团队等多项殊荣，重点突出客户服务，其主推的 “闪电服务”深受好评，累积为4千万车主提供优质服务，是值得信任的优秀保险品牌。</p>
+<h2 class="yg_tel meihua_p">阳光电话车险: <b>95510</b> </h2>
+       	<div class="clear h10"></div>
+		<div class="car_left floatl ">
+		<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html " target="_blank">
+		<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165"
+				alt="车险快速报价" title="车险快速报价"></a></div>
+			<cms:list item="Image"  name="车险图片"> 
+		      <div class="car_ad_l clearfix">
+			   <a href="${Image.wangzhi}" target="_blank">
+			       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}"
+			       >
+			   </a>
+			  </div>
+		    </cms:list> 
+		<div class="car_border_q cf">
+		<h2 class="car_l_title">其他车险公司</h2>
+		<ul class="car_gs_list ">
+				<cms:list item="friendlink" name="车险通用底部">
+					<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|CharWidth=15}</a></li>
+		        </cms:list>
+		</ul>
+		</div>
+		</div>
+       <div class="car_right floatr">
+         <div class="car_border_q cf"> 
+         	  <div class="car_l_title">意外保障 畅行无忧</div> 
+		     <cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+			 </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+			<div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="阳光车险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="阳光车险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="阳光车险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+		<cms:include file="block/community.shtml" />
+		<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+		<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

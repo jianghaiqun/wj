@@ -1,0 +1,247 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/commonality.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/product.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+</head>
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<div class="wrapper">
+
+	<div class="clear"></div>
+	<div class="daohang">
+		<span class="daohang_home"></span>
+		<cms:link type="currentPosition"></cms:link>
+	</div>
+	<div class="content">
+		<div class="content_left">
+			<div class="top">
+				<div class="c1">推荐产品</div>
+				<cms:list item="article" level="all" count="5" name="人身意外险" hasAttribute="newRecommend">
+					<div class="c4">
+						<span class="CInsuranceCompany icon_C${Article.SupplierCode2}" onclick="hzpp('${Article.SupplierCode2}');"></span><a href="${article.link}">${article.title}</a><br /> <span class="InitPrem">￥${Article.InitPrem}</span>
+					</div>
+				</cms:list>
+
+			</div>
+			<div class="bottom">
+<div class="part1left">
+		<div class="top5">
+			<h3 class="top5tit"><img src="${Site.StaticResourcePath}/image/top5tit.gif" width="115" height="19" /></h3>
+			<div class="tab01">
+                    <ul> 
+                        <li id="one1" onMouseOver="setTab('one',1,2)" class="hover">意外</li>
+                        <li id="one2" onMouseOver="setTab('one',2,2)">旅游</li>
+                    </ul>
+                    <div class="clear"></div>
+          </div>
+		  <div id="con_one_1">
+			<ul class="liststyle05">
+          		<cms:list item="article"  name="9385" level="current" count="5" hasAttribute="hot" >
+              	  <li>
+                      <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span>
+                  </li>
+                </cms:list>
+            </ul>
+          </div>
+		  <div id="con_one_2" style="display:none;">
+			<ul class="liststyle05">
+               	<cms:list item="article"  name="旅游保险" level="current" count="5" hasAttribute="hot" >
+               	   <li>
+                       <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span>
+                   </li>
+                 </cms:list>
+            </ul>
+          </div>
+		</div>
+	</div>
+			</div>
+		</div>
+	
+		<div class="productdetail_right">
+
+			<div class="prodcutDetail">
+				<div class="prodcutMark">
+					<p id="productPrem_${Article.RiskCode}">${Article.InitPrem}</p>
+				</div>
+				<div class="title">
+					<div class="CInsuranceCompany icon_C${Article.SupplierCode2}" onclick="hzpp('${Article.SupplierCode2}');" style="cursor: pointer"></div>
+					<span class="productName">${Article.title}</span>
+				</div>
+				<div class="CProduct">
+					<img src="${Site.ProductResourcePath}/${Article.logo}" alt="${Article.title}" />
+				</div>
+				<div class="AdaptPeopleInfo">
+					<span class="title">适合人群</span> <span>${Article.AdaptPeopleInfo}</span>
+				</div>
+				${Article.CalHTML}
+				<div class="clear"></div>
+			</div>
+	
+	<div class="prodcutDetail2">
+	          <p class="title">保障权益</p>
+				${Article.DutyHTML}	
+				<p class="title">产品亮点</p>
+				${Article.FEMRiskBrightSpot}
+				<p class="title">产品特色</p>
+				<p class="CERiskFeatures">${Article.ERiskFeatures}</p>
+				<p class="title">预约信息</p>
+				<p class="CERiskFeatures" style="margin-left: 100px;">非常感谢您选择开心保，为了确保能联系到您，请准确填写以下信息 </p>
+				<p class="CERiskFeatures">
+				<input type="hidden" id="productName" name="productName" value="${Article.title}" />				    
+				    <table width="100%" style="margin-top: 0px;">
+				      <tr valign="top">
+				         <td align="right" style="height:30px">您的姓名：</td>
+				         <td align="left"><input type="text" id="name" name="name" maxlength=50 value =""/></td>
+				      </tr>
+				      <tr>
+				         <td align="right" style="height:30px">联系电话：</td>
+				         <td align="left"><input type="text" id="tel" name="tel"  value ="" /></td>
+				      </tr>
+				      <tr>
+				         <td align="right" style="height:30px">您所在的城市：</td>
+				         <td align="left">
+				             <select id="area1" name="area1"  onchange="getChildCity(this.value);" >
+								<option value="-1">--请选择地区--</option>
+								<option value="110000">北京市</option>
+								<option value="120000">天津市</option>
+								<option value="130000">河北省</option>
+								<option value="140000">山西省</option>
+								<option value="150000">内蒙古自治区</option>
+								<option value="210000">辽宁省</option>
+								<option value="220000">吉林省</option>
+								<option value="230000">黑龙江省</option>
+								<option value="310000">上海市</option>
+								<option value="320000">江苏省</option>
+								<option value="330000">浙江省</option>
+								<option value="340000">安徽省</option>
+								<option value="350000">福建省</option>
+								<option value="360000">江西省</option>
+								<option value="370000">山东省</option>
+								<option value="410000">河南省</option>
+								<option value="420000">湖北省</option>
+								<option value="430000">湖南省</option>
+								<option value="440000">广东省</option>
+								<option value="450000">广西壮族自治区</option>
+								<option value="460000">海南省</option>
+								<option value="500000">重庆市</option>
+								<option value="510000">四川省</option>
+								<option value="520000">贵州省</option>
+								<option value="530000">云南省</option>
+								<option value="540000">西藏自治区</option>
+								<option value="610000">陕西省</option>
+								<option value="620000">甘肃省</option>
+								<option value="630000">青海省</option>
+								<option value="640000">宁夏回族自治区</option>
+								<option value="650000">新疆维吾尔自治区</option>
+							 </select>
+				             <select id="area2" name="area2" >
+								<option value="-1">--请选择地区--</option>
+						      </select>
+						 </td>
+					   </tr>
+				       <tr>
+						 <td align="right" style="height:30px"></td>
+				         <td align="left">
+	           				<input type="button" onclick="sure();"  value="提交预约"/>
+						 </td>
+				      </tr>
+				    </table>
+				</p>
+		        </div>
+	        		
+
+         <cms:comment count="5">{ZCMS:评论区域}</cms:comment>
+		</div>
+
+	</div>
+</div>
+<div class="clear"></div>
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+<script type="text/javascript">
+function sure(){
+	var name = document.getElementById("name").value;
+	var tel = document.getElementById("tel").value;
+	var area1 = document.getElementById("area1").value;
+	var area2 = document.getElementById("area2").value;
+	var productName = document.getElementById("productName").value;
+	if(name==null || name==""){
+		alert("请填写姓名");
+		document.getElementById("name").focus();
+		return false;
+	}
+	if(tel==null || tel==""){
+		alert("请填写联系方式");
+		document.getElementById("tel").focus();
+		return false;
+	}
+	if(tel != null && tel != ""){
+		var patrn = /(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/;
+	    if (!patrn.exec(tel)) {
+	    	alert("请输入正确的手机号码！");
+	    	document.getElementById("tel").focus();
+	        return false;
+	    }
+	}
+	if(area1=="-1"){
+		alert("请填写省级地区");
+		document.getElementById("area1").focus();
+		return false;
+	}
+	if(area2=="-1"){
+		alert("请填写市级地区");
+		document.getElementById("area2").focus();
+		return false;
+	}
+	jQuery.ajax({
+		type:'get',
+        url: "${Site.prop6}/admin/reservation!save.action?name="+encodeURIComponent(name)+"&tel="+tel+"&area1="+area1+"&area2="+area2+"&productName="+encodeURIComponent(productName),
+        dataType:'html',
+        success:function(de){
+        	if(de == "ok"){
+        		alert("预约成功，我们会尽快与您取得联系！");
+        	}else{
+        		alert("预约失败，请重试！");
+        	}
+        }
+	});
+}
+function getChildCity(areaId){
+	jQuery.ajax({
+		type:'get',
+        url: "${Site.prop6}/admin/reservation!getChildArea.action?areaId="+areaId,
+        dataType:'json',
+        success:function(de){
+        	if(de!=null){
+        		fillChildCity(de);
+        	}
+        }
+	});
+}
+function fillChildCity(item){
+	var childAreaOPT = document.getElementById("area2");
+	childAreaOPT.options.length=1;
+    for(var i=0;i<item.length;i++){
+     	var oo=new Option(item[i].placeName,item[i].placeCode);
+     	childAreaOPT.options[childAreaOPT.options.length]=oo;
+    }
+}
+  function hzpp(_value){
+	window.location.href="${site.url}/hzpp/"+_value+"/index.shtml";
+}
+</script>
+</body>
+</html>
+
+
+
+
+

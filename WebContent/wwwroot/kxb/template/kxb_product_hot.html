@@ -1,0 +1,34 @@
+				<div class="bottom">
+				     <div class="product_recommend">
+						<div class="part1left">
+								<div class="top5">
+									<h3 class="top5tit"><img src="${Site.StaticResourcePath}/image/top5tit.gif" width="115" height="19" /></h3>
+									<div class="tab01">
+						                    <ul> 
+						                        <li id="one1" onMouseOver="setTab('one',1,2)" class="hover">意外</li>
+						                        <li id="one2" onMouseOver="setTab('one',2,2)">旅游</li>
+						                    </ul>
+						                    <div class="clear"></div>
+						          </div>
+								  <div id="con_one_1">
+									<ul class="liststyle05">
+						          		<cms:list item="article"  name="9385" level="current" count="5" hasAttribute="hot" >
+						              	  <li>
+						                      <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span>
+						                  </li>
+						                </cms:list>
+						            </ul>
+						          </div>
+								  <div id="con_one_2" style="display:none;">
+									<ul class="liststyle05">
+						               	<cms:list item="article"  name="旅游保险" level="current" count="5" hasAttribute="hot" >
+						               	   <li>
+						                       <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span>
+						                   </li>
+						                 </cms:list>
+						            </ul>
+						          </div>
+								</div>
+							</div>
+					</div>
+				</div>

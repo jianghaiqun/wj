@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<script type="text/javascript" src="../json/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#add").click(function(){
+			var tContent=document.getElementById("content").value;
+			var tTitle=document.getElementById("title").value;
+			var now=new Date().getTime();
+			var data = {Title:encodeURI(tTitle,"UTF-8"), Content:encodeURI(tContent,"UTF-8") , operate:"BkSave" ,method:"save"};
+			$.getJSON('http://localhost:8080/sjcms/shop.jsp?now='+now, data, function(json){//now表示每次点击都会发送新的请求
+				alert(json.test);
+				 $('#f1')[0].reset(); 
+			});                          
+    	});
+   });
+</script>
+</head>
+<body>
+<form action="#" id="f1">
+	<table width="100%" border="0" height="100%">
+		<tr>
+			<td align="right">词条名称：</td>
+			<td height="30" align="left"><input type="text" name="title" id="title"></td>
+		</tr>
+		<tr>
+			<td align="right">词条分类：</td>
+			<td height="30" align="left"><input type="text" name="title" id="title"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td height="30" align="left"><input type="button" id="add" value="创建词条"></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

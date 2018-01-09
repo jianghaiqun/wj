@@ -1,0 +1,14 @@
+<% DataTable dt_0 = TemplateData.getDocList("image","保险百科1","current","null","null","50","null","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"保险百科1");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow image_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+ 
+		      <li>
+		      		<h4><a href="${image_0.wangzhi}" target="_blank" rel="nofollow"><img src="${Site.StaticResourcePath}/${image_0.Path}${image_0.SrcFileName}" /></a></h4>
+		      		<h5><a href="${image_0.wangzhi}" target="_blank" rel="nofollow">${image_0.timu}</a></h5>
+		      </li>
+		<%}}%>

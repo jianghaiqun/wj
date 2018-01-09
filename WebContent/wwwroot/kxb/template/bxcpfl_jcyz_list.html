@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/commonality.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/product.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+	<body onload="moveR();">
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="wrapper">
+<!-- 顶部 开始 -->
+
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+<!-- 顶部 结束 -->
+
+	<center>
+            
+            <div class="topicpic"><img src="${Site.StaticResourcePath}/images/topicpic01.jpg" /></div>
+            <div class="content">
+            	<div class="content_left">
+                	
+                	<div class="top">
+                    	<div class="c1">浏览${catalog.name}的用户</div>
+                    	<div class="line"></div>
+                    	<div class="c2">
+                        	<span style=" color:red;">88%</span>&nbsp;&nbsp;&nbsp;
+                            <span style="color:#666666;">购买了</span>
+                      </div>
+                    	<div class="c3">                    
+                    		<p style="font-size:14px; color:#000000;">境外旅游-商旅护航</p>
+                        	<p style="font-size:12px; color:#666666;">基础计划</p>
+               		    </div>
+                        <div class="fenggexian"></div>
+                    </div>
+                    
+                    <div class="bottom">
+                    	<div class="c1" style=" text-align:left; text-indent:20px;">帮助</div>
+                    	<div class="line"></div>
+                        <div class="c4">什么是保费试算？</div>
+                        <div  class="line1"></div>
+                    </div>
+                    
+                    <div class="center"> </div>
+                
+                </div> <!-- content_left -->
+                
+                <div class=" content_right">
+                    
+									<div id="divSearchOrder" class="top_c">
+										<span class="title">排序</span>
+										<span name="Popular" class="two" onclick="doOrder(this);">人气</span>
+										<span name="SalesVolume" class="two" onclick="doOrder(this);">销量</span>
+										<span name="InitPrem" class="two" onclick="doOrder(this);">价格</span>
+									</div>
+                    
+ 						<div id="products">
+							<cms:list item="article" level="current" pagesize="10" page="true">
+								<div class="product_title">
+									<div class="CInsuranceCompany icon_C${Article.SupplierCode}"></div>
+									<ul>
+										<li><span onclick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}');">加入比对</span></li>
+										<li><span onclick="">直接购买</span></li>
+										<li><span onclick="">加入购物车</span></li>
+										<li><span onclick="">加入收藏</span></li>
+									</ul>
+									<div class="prodcutMark">
+										<p>${Article.InitPrem}</p>
+									</div>
+								</div>
+								<div class="product_info">
+									<div class="CProduct">
+										<img src="${Article.logo}" alt="${Article.title}" />
+									</div>
+									<div class="productName">
+										<a href="${Article.Link}" target="_blank">${Article.title}</a>
+									</div>
+									<div class="CPopular icon_P_M icon_P_M${Article.Popular}"></div>
+									<div class="productFeature">${Article.FEMRiskBrightSpot}</div>
+									<div class="moreFeature">
+										<span onclick="showMoreFeature(this)；">查看更多</span>
+									</div>
+								</div>
+							</cms:list>
+						</div>
+						<div id="productsPageBar">
+						${PageBar}
+						</div>
+ 
+				<div class="clear"></div>
+            </div>
+        </div>
+	</center>
+    
+<!--底部 开始-->
+	<center>
+			<div class="clear"></div>
+		<cms:include file="block/kxb_footer_new_common.shtml" />
+		<cms:include file="block/community_v1.shtml" />
+		<div class="clear"></div>
+</center><!--底部 结束-->    
+
+<div id="cpdiv">
+			<div class="comparedivcont">
+				<div class="comparedetail" style="display: none;" id="cpprodu1">
+					<input type="hidden" name="insuranceCom" id="insuranceCom" />
+					<p>
+						<span id="productname1"></span><br /> <span class="dblue cpdelico" onclick="closecp1()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu2">
+					<input type="hidden" name="insuranceComB" id="insuranceComB" />
+					<p>
+						<span id="productname2"></span><br /> <span class="dblue cpdelico" onclick="closecp2()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu3">
+					<input type="hidden" name="insuranceComC" id="insuranceComC" />
+					<p>
+						<span id="productname3"></span><br /> <span class="dblue cpdelico" onclick="closecp3()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu4">
+					<input type="hidden" name="insuranceComD" id="insuranceComD" />
+					<p>
+						<span id="productname4"></span><br /> <span class="dblue cpdelico" onclick="closecp4()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparebtn">
+					<span><img src="${Site.StaticResourcePath}/webImages/btncp.gif" width="72" height="28" alt="提交对比" onclick="javascript:begincompare('${Site.prop6}');subclosecp();" /></span>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	<script type="text/javascript">
+	var productType="${Catalog.ProductType}";
+	</script>
+	<script src="${Site.JsResourcePath}/js/Framework/Main.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/productCompare.js"></script>
+	<script language="javascript">
+			//已保存价格 展开收起
+			function showprice01(){
+			document.getElementById("price01").style.display="block";
+			}
+			function closeprice01(){
+			document.getElementById("price01").style.display="none";
+			}
+	</script>
+</body>
+</html>

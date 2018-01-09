@@ -1,0 +1,1105 @@
+INFO: 17-03-30 08:16:09 1ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:16:09 Could not refresh JMS Connection for destination 'queue://kxb.order.point2' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://172.100.101.96:61616. Reason: java.net.SocketException: Network is unreachable: connect
+ERROR: 17-03-30 08:16:14 Default.:连接失效重连时发生错误:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+INFO: 17-03-30 08:16:14 pageSQL:select * from ZDSchedule
+ERROR: 17-03-30 08:16:14 操作表ZDSchedule时发生错误:No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:14 com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:14 	at sun.reflect.GeneratedConstructorAccessor3148.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:14 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1160)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1147)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4224)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4190)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConn.prepareStatement(DBConn.java:360)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:517)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:104)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:92)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:21)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:14 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:14 	at java.util.TimerThread.run(Timer.java:462)
+ERROR: 17-03-30 08:16:14 Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 42,112,843 milliseconds ago.  The last packet sent successfully to the server was 42,112,868 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+ERROR: 17-03-30 08:16:14 	at sun.reflect.GeneratedConstructorAccessor3146.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:14 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3313)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2109)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2648)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2077)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2228)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DataAccess.executeOneValue(DataAccess.java:373)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConnPoolImpl.getConnection(DBConnPoolImpl.java:204)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:85)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:56)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:18)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DataAccess.getConnection(DataAccess.java:34)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:457)
+ERROR: 17-03-30 08:16:14 	... 8 more
+ERROR: 17-03-30 08:16:14 Caused by: java.net.SocketException: Connection reset by peer: socket write error
+ERROR: 17-03-30 08:16:14 	at java.net.SocketOutputStream.socketWrite0(SocketOutputStream.java)
+ERROR: 17-03-30 08:16:14 	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+ERROR: 17-03-30 08:16:14 	at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+ERROR: 17-03-30 08:16:14 	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:65)
+ERROR: 17-03-30 08:16:14 	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:123)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3294)
+ERROR: 17-03-30 08:16:14 	... 20 more
+ERROR: 17-03-30 08:16:14 java.lang.NullPointerException
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:26)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:14 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:14 	at java.util.TimerThread.run(Timer.java:462)
+INFO: 17-03-30 08:16:14 0ms	select 1 from ZDMaxNo where 1=2	{}
+ERROR: 17-03-30 08:16:14 Default.:连接失效重连时发生错误:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+INFO: 17-03-30 08:16:14 pageSQL:select * from ZDSchedule
+ERROR: 17-03-30 08:16:14 操作表ZDSchedule时发生错误:No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:14 com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:14 	at sun.reflect.GeneratedConstructorAccessor3148.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:14 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1160)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1147)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4224)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4190)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConn.prepareStatement(DBConn.java:360)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:517)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:104)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:92)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:21)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:14 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:14 	at java.util.TimerThread.run(Timer.java:462)
+ERROR: 17-03-30 08:16:14 Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 42,112,843 milliseconds ago.  The last packet sent successfully to the server was 42,112,868 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+ERROR: 17-03-30 08:16:14 	at sun.reflect.GeneratedConstructorAccessor3146.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:14 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3313)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2109)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2648)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2077)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2228)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DataAccess.executeOneValue(DataAccess.java:373)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConnPoolImpl.getConnection(DBConnPoolImpl.java:204)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:85)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:56)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:18)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.data.DataAccess.getConnection(DataAccess.java:34)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:457)
+ERROR: 17-03-30 08:16:14 	... 8 more
+ERROR: 17-03-30 08:16:14 Caused by: java.net.SocketException: Connection reset by peer: socket write error
+ERROR: 17-03-30 08:16:14 	at java.net.SocketOutputStream.socketWrite0(SocketOutputStream.java)
+ERROR: 17-03-30 08:16:14 	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+ERROR: 17-03-30 08:16:14 	at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+ERROR: 17-03-30 08:16:14 	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:65)
+ERROR: 17-03-30 08:16:14 	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:123)
+ERROR: 17-03-30 08:16:14 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3294)
+ERROR: 17-03-30 08:16:14 	... 20 more
+ERROR: 17-03-30 08:16:14 java.lang.NullPointerException
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:26)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:14 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:14 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:14 	at java.util.TimerThread.run(Timer.java:462)
+INFO: 17-03-30 08:16:15 0ms	select 1 from ZDMaxNo where 1=2	{}
+ERROR: 17-03-30 08:16:15 Default.:连接失效重连时发生错误:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+INFO: 17-03-30 08:16:15 pageSQL:select * from ZDSchedule
+ERROR: 17-03-30 08:16:15 操作表ZDSchedule时发生错误:No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:15 com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:15 	at sun.reflect.GeneratedConstructorAccessor3148.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:15 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1160)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1147)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4224)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4190)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.data.DBConn.prepareStatement(DBConn.java:360)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:517)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:104)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:92)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:21)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:15 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:15 	at java.util.TimerThread.run(Timer.java:462)
+ERROR: 17-03-30 08:16:15 Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 42,112,843 milliseconds ago.  The last packet sent successfully to the server was 42,112,868 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+ERROR: 17-03-30 08:16:15 	at sun.reflect.GeneratedConstructorAccessor3146.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:15 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3313)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2109)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2648)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2077)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2228)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.data.DataAccess.executeOneValue(DataAccess.java:373)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.data.DBConnPoolImpl.getConnection(DBConnPoolImpl.java:204)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:85)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:56)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:18)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.data.DataAccess.getConnection(DataAccess.java:34)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:457)
+ERROR: 17-03-30 08:16:15 	... 8 more
+ERROR: 17-03-30 08:16:15 Caused by: java.net.SocketException: Connection reset by peer: socket write error
+ERROR: 17-03-30 08:16:15 	at java.net.SocketOutputStream.socketWrite0(SocketOutputStream.java)
+ERROR: 17-03-30 08:16:15 	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+ERROR: 17-03-30 08:16:15 	at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+ERROR: 17-03-30 08:16:15 	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:65)
+ERROR: 17-03-30 08:16:15 	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:123)
+ERROR: 17-03-30 08:16:15 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3294)
+ERROR: 17-03-30 08:16:15 	... 20 more
+ERROR: 17-03-30 08:16:15 java.lang.NullPointerException
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:26)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:15 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:15 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:15 	at java.util.TimerThread.run(Timer.java:462)
+INFO: 17-03-30 08:16:16 0ms	select 1 from ZDMaxNo where 1=2	{}
+ERROR: 17-03-30 08:16:16 Default.:连接失效重连时发生错误:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+INFO: 17-03-30 08:16:16 pageSQL:select * from ZDSchedule
+ERROR: 17-03-30 08:16:16 操作表ZDSchedule时发生错误:No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:16 com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:16 	at sun.reflect.GeneratedConstructorAccessor3148.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:16 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1160)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1147)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4224)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4190)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.data.DBConn.prepareStatement(DBConn.java:360)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:517)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:104)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:92)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:21)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:16 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:16 	at java.util.TimerThread.run(Timer.java:462)
+ERROR: 17-03-30 08:16:16 Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 42,112,843 milliseconds ago.  The last packet sent successfully to the server was 42,112,868 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+ERROR: 17-03-30 08:16:16 	at sun.reflect.GeneratedConstructorAccessor3146.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:16 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3313)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2109)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2648)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2077)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2228)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.data.DataAccess.executeOneValue(DataAccess.java:373)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.data.DBConnPoolImpl.getConnection(DBConnPoolImpl.java:204)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:85)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:56)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:18)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.data.DataAccess.getConnection(DataAccess.java:34)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:457)
+ERROR: 17-03-30 08:16:16 	... 8 more
+ERROR: 17-03-30 08:16:16 Caused by: java.net.SocketException: Connection reset by peer: socket write error
+ERROR: 17-03-30 08:16:16 	at java.net.SocketOutputStream.socketWrite0(SocketOutputStream.java)
+ERROR: 17-03-30 08:16:16 	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+ERROR: 17-03-30 08:16:16 	at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+ERROR: 17-03-30 08:16:16 	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:65)
+ERROR: 17-03-30 08:16:16 	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:123)
+ERROR: 17-03-30 08:16:16 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3294)
+ERROR: 17-03-30 08:16:16 	... 20 more
+ERROR: 17-03-30 08:16:16 java.lang.NullPointerException
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:26)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:16 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:16 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:16 	at java.util.TimerThread.run(Timer.java:462)
+INFO: 17-03-30 08:16:17 0ms	select 1 from ZDMaxNo where 1=2	{}
+ERROR: 17-03-30 08:16:17 Default.:连接失效重连时发生错误:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+INFO: 17-03-30 08:16:17 pageSQL:select * from ZDSchedule
+ERROR: 17-03-30 08:16:17 操作表ZDSchedule时发生错误:No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:17 com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.Connection was implicitly closed by the driver.
+ERROR: 17-03-30 08:16:17 	at sun.reflect.GeneratedConstructorAccessor3148.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:17 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1160)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1147)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4224)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4190)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.data.DBConn.prepareStatement(DBConn.java:360)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:517)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:104)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.schema.ZDScheduleSchema.query(ZDScheduleSchema.java:92)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:21)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:17 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:17 	at java.util.TimerThread.run(Timer.java:462)
+ERROR: 17-03-30 08:16:17 Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 42,112,843 milliseconds ago.  The last packet sent successfully to the server was 42,112,868 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+ERROR: 17-03-30 08:16:17 	at sun.reflect.GeneratedConstructorAccessor3146.newInstance(Unknown Source)
+ERROR: 17-03-30 08:16:17 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3313)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2109)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2648)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2077)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2228)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.data.DataAccess.executeOneValue(DataAccess.java:373)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.data.DBConnPoolImpl.getConnection(DBConnPoolImpl.java:204)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:85)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:56)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.data.DBConnPool.getConnection(DBConnPool.java:18)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.data.DataAccess.getConnection(DataAccess.java:34)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:457)
+ERROR: 17-03-30 08:16:17 	... 8 more
+ERROR: 17-03-30 08:16:17 Caused by: java.net.SocketException: Connection reset by peer: socket write error
+ERROR: 17-03-30 08:16:17 	at java.net.SocketOutputStream.socketWrite0(SocketOutputStream.java)
+ERROR: 17-03-30 08:16:17 	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+ERROR: 17-03-30 08:16:17 	at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+ERROR: 17-03-30 08:16:17 	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:65)
+ERROR: 17-03-30 08:16:17 	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:123)
+ERROR: 17-03-30 08:16:17 	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3294)
+ERROR: 17-03-30 08:16:17 	... 20 more
+ERROR: 17-03-30 08:16:17 java.lang.NullPointerException
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.platform.pub.ConfigEanbleTaskManager.getUsableTasks(ConfigEanbleTaskManager.java:26)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.schedule.CronMonitor$1.run(CronMonitor.java:55)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.schedule.CronMonitor.runMain(CronMonitor.java:53)
+ERROR: 17-03-30 08:16:17 	at com.sinosoft.framework.schedule.CronMonitor.run(CronMonitor.java:40)
+ERROR: 17-03-30 08:16:17 	at java.util.TimerThread.mainLoop(Timer.java:512)
+ERROR: 17-03-30 08:16:17 	at java.util.TimerThread.run(Timer.java:462)
+INFO: 17-03-30 08:16:18 0ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:16:18 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:16:19 Established shared JMS Connection: ActiveMQConnection {id=ID:liyinfeng-PC-53611-1490768767425-1:8,clientId=null,started=false}
+INFO: 17-03-30 08:16:19 Successfully refreshed JMS Connection
+INFO: 17-03-30 08:16:31 1ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:16:31 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:16:31 128ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:16:31 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:16:31 34ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:16:31 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:16:31 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:16:31 CST 2017}
+INFO: 17-03-30 08:16:31 17ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:16:31 CST 2017}
+INFO: 17-03-30 08:16:31 16ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:16:33 2204ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:16:31 CST 2017}
+INFO: 17-03-30 08:16:33 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:17:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:17:00 PublishTask定时发布任务
+INFO: 17-03-30 08:17:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:17:00 0ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:17:00 pageSQL:select * from ZCInnerGather
+ERROR: 17-03-30 08:17:00 Default.:检测到连接使用超时42179223，程序可能存在连接池泄漏，将自动关闭连接。以下是调用堆栈:
+ERROR: 17-03-30 08:17:00 	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:85
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:56
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:18
+	com.sinosoft.framework.data.DataAccess.getConnection(),行号:34
+	com.sinosoft.framework.orm.Schema.querySet(),行号:457
+	com.sinosoft.schema.ZCInnerGatherSchema.query(),行号:120
+	com.sinosoft.schema.ZCInnerGatherSchema.query(),行号:108
+	com.sinosoft.datachannel.InnerSyncTask$1.run(),行号:35
+
+ERROR: 17-03-30 08:17:00 操作表ZCInnerGather时发生错误:Communications link failure
+
+The last packet successfully received from the server was 41 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+ERROR: 17-03-30 08:17:00 com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+ERROR: 17-03-30 08:17:00 	at sun.reflect.GeneratedConstructorAccessor3146.newInstance(Unknown Source)
+ERROR: 17-03-30 08:17:00 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3052)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2938)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3481)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1959)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2109)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2648)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2077)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2228)
+ERROR: 17-03-30 08:17:00 	at com.sinosoft.framework.orm.Schema.querySet(Schema.java:519)
+ERROR: 17-03-30 08:17:00 	at com.sinosoft.schema.ZCInnerGatherSchema.query(ZCInnerGatherSchema.java:120)
+ERROR: 17-03-30 08:17:00 	at com.sinosoft.schema.ZCInnerGatherSchema.query(ZCInnerGatherSchema.java:108)
+ERROR: 17-03-30 08:17:00 	at com.sinosoft.datachannel.InnerSyncTask$1.run(InnerSyncTask.java:35)
+ERROR: 17-03-30 08:17:00 Caused by: java.net.SocketException: socket closed
+ERROR: 17-03-30 08:17:00 	at java.net.SocketInputStream.socketRead0(SocketInputStream.java)
+ERROR: 17-03-30 08:17:00 	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:113)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:160)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:188)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2494)
+ERROR: 17-03-30 08:17:00 	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2949)
+ERROR: 17-03-30 08:17:00 	... 11 more
+ERROR: 17-03-30 08:17:00 java.lang.NullPointerException
+ERROR: 17-03-30 08:17:00 	at com.sinosoft.datachannel.InnerSyncTask$1.run(InnerSyncTask.java:36)
+INFO: 17-03-30 08:17:00 Default.:创建新连接，总数：11
+INFO: 17-03-30 08:17:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:17:00 0ms	select 1 from admin where 1=2	{}
+INFO: 17-03-30 08:17:00 511ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:17:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:17:00 PublishTask发布任务结束
+INFO: 17-03-30 08:17:01 452ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Wed Mar 29 20:34:01 CST 2017,Wed Mar 29 20:34:01 CST 2017}
+INFO: 17-03-30 08:17:01 52ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:17:01 271ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:17:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:17:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:17:01 446ms	select id from BZCArticle where status=30 and backuptime>?	{Wed Mar 29 20:34:01 CST 2017}
+INFO: 17-03-30 08:17:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:17:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:17:01 建立索引共耗时 1463 毫秒.
+INFO: 17-03-30 08:17:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:17:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:17:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:17:01 23ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:17:01 16ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:17:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:17:01 19ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:17:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:17:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:17:01 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:17:01 116ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:17:01 数据库采集任务耗时：1630毫秒
+INFO: 17-03-30 08:17:19 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:17:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:17:30 2ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:17:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:17:30 0ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:17:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:17:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:17:30 CST 2017}
+INFO: 17-03-30 08:17:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:17:30 CST 2017}
+INFO: 17-03-30 08:17:30 4ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:17:31 1382ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:17:30 CST 2017}
+INFO: 17-03-30 08:17:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:18:00 PublishTask定时发布任务
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:18:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:18:00 1ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:18:00 正在更新统计信息......
+ERROR: 17-03-30 08:18:00 Default.:检测到连接使用超时42239424，程序可能存在连接池泄漏，将自动关闭连接。以下是调用堆栈:
+ERROR: 17-03-30 08:18:00 	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:85
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:56
+	com.sinosoft.framework.data.DBConnPool.getConnection(),行号:18
+	com.sinosoft.framework.data.DataAccess.getConnection(),行号:34
+	com.sinosoft.framework.orm.Schema.fill(),行号:396
+	com.sinosoft.cms.api.SearchAPI.update(),行号:62
+	com.sinosoft.cms.dataservice.FullTextTaskManager$1.run(),行号:26
+
+WARN: 17-03-30 08:18:00 操作表ZCFullText时发生错误:Communications link failure
+
+The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+ERROR: 17-03-30 08:18:00 java.lang.RuntimeException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+ERROR: 17-03-30 08:18:00 	at com.sinosoft.framework.orm.Schema.fill(Schema.java:419)
+ERROR: 17-03-30 08:18:00 	at com.sinosoft.cms.api.SearchAPI.update(SearchAPI.java:62)
+ERROR: 17-03-30 08:18:00 	at com.sinosoft.cms.dataservice.FullTextTaskManager$1.run(FullTextTaskManager.java:26)
+ERROR: 17-03-30 08:18:00 Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+ERROR: 17-03-30 08:18:00 	at sun.reflect.GeneratedConstructorAccessor3146.newInstance(Unknown Source)
+ERROR: 17-03-30 08:18:00 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3052)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2938)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3481)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1959)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2109)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2648)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2077)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2228)
+ERROR: 17-03-30 08:18:00 	at com.sinosoft.framework.orm.Schema.fill(Schema.java:410)
+ERROR: 17-03-30 08:18:00 	... 2 more
+ERROR: 17-03-30 08:18:00 Caused by: java.net.SocketException: socket closed
+ERROR: 17-03-30 08:18:00 	at java.net.SocketInputStream.socketRead0(SocketInputStream.java)
+ERROR: 17-03-30 08:18:00 	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:113)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:160)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:188)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2494)
+ERROR: 17-03-30 08:18:00 	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2949)
+ERROR: 17-03-30 08:18:00 	... 10 more
+INFO: 17-03-30 08:18:00 Default.:创建新连接，总数：11
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:18:00 0ms	update ZCStatItem set Count29=Count29+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCStatItem set Count29=Count29+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCAdvertisement set HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCArticle set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCImage set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCVideo set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCStatItem set Count29=Count29+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCStatItem set Count29=Count29+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCStatItem set Count29=Count29+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCStatItem set Count29=Count29+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCStatItem set Count29=Count29+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:18:00 0ms	update ZCStatItem set Count29=Count29+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:18:00 2ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:18:00 更新统计信息耗时 195 毫秒.
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCInnerDeploy
+WARN: 17-03-30 08:18:00 没有ID=37的全文检索!
+INFO: 17-03-30 08:18:00 59ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:18:00 网站群任务耗时：336毫秒
+INFO: 17-03-30 08:18:00 408ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:18:00 PublishTask发布任务结束
+INFO: 17-03-30 08:18:00 241ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:18:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:18:00 42ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:18:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:18:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:18:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:18:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:18:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:18:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:18:01 121ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:18:01 数据库采集任务耗时：813毫秒
+INFO: 17-03-30 08:18:01 529ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:17:01 CST 2017,Thu Mar 30 08:17:01 CST 2017}
+INFO: 17-03-30 08:18:01 322ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:17:01 CST 2017}
+INFO: 17-03-30 08:18:01 建立索引共耗时 1293 毫秒.
+INFO: 17-03-30 08:18:19 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:18:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:18:30 10ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:18:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:18:30 0ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:18:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:18:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:18:30 CST 2017}
+INFO: 17-03-30 08:18:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:18:30 CST 2017}
+INFO: 17-03-30 08:18:30 4ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:18:31 1468ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:18:30 CST 2017}
+INFO: 17-03-30 08:18:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:19:00 PublishTask定时发布任务
+INFO: 17-03-30 08:19:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:19:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:19:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:19:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:19:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:19:00 网站群任务耗时：57毫秒
+INFO: 17-03-30 08:19:00 216ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:19:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:19:00 PublishTask发布任务结束
+INFO: 17-03-30 08:19:00 361ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:19:00 254ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:18:01 CST 2017,Thu Mar 30 08:18:01 CST 2017}
+INFO: 17-03-30 08:19:01 313ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:19:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:19:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:19:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:19:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:19:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:19:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:19:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:19:01 17ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:19:01 14ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:19:01 7ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:19:01 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:19:01 338ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:18:01 CST 2017}
+INFO: 17-03-30 08:19:02 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:19:02 9ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:19:02 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:19:02 建立索引共耗时 1721 毫秒.
+INFO: 17-03-30 08:19:02 49ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:19:02 数据库采集任务耗时：1834毫秒
+INFO: 17-03-30 08:19:19 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:19:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:19:30 10ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:19:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:19:30 2ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:19:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:19:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:19:30 CST 2017}
+INFO: 17-03-30 08:19:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:19:30 CST 2017}
+INFO: 17-03-30 08:19:30 4ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:19:32 1374ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:19:30 CST 2017}
+INFO: 17-03-30 08:19:32 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:20:00 PublishTask定时发布任务
+INFO: 17-03-30 08:20:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:20:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:20:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:20:00 1ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:20:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:20:00 2ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:20:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:20:00 网站群任务耗时：55毫秒
+INFO: 17-03-30 08:20:01 71ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:20:01 210ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:20:01 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:20:01 PublishTask发布任务结束
+INFO: 17-03-30 08:20:01 308ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:20:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:20:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:20:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:20:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:20:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:20:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:20:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:20:01 20ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:20:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:20:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:20:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:20:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:20:01 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:20:01 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:20:01 79ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:20:01 数据库采集任务耗时：630毫秒
+INFO: 17-03-30 08:20:01 447ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:19:02 CST 2017,Thu Mar 30 08:19:02 CST 2017}
+INFO: 17-03-30 08:20:01 347ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:19:02 CST 2017}
+INFO: 17-03-30 08:20:01 建立索引共耗时 1027 毫秒.
+INFO: 17-03-30 08:20:19 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:20:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:20:30 45ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:20:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:20:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:20:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:20:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:20:30 CST 2017}
+INFO: 17-03-30 08:20:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:20:30 CST 2017}
+INFO: 17-03-30 08:20:30 37ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:20:31 1431ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:20:30 CST 2017}
+INFO: 17-03-30 08:20:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:21:00 PublishTask定时发布任务
+INFO: 17-03-30 08:21:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:21:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:21:00 正在更新统计信息......
+INFO: 17-03-30 08:21:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:21:00 440ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCAdvertisement set HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCArticle set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCImage set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCVideo set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:21:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:21:00 2ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:21:00 更新统计信息耗时 445 毫秒.
+WARN: 17-03-30 08:21:00 没有ID=22的全文检索!
+WARN: 17-03-30 08:21:00 没有ID=37的全文检索!
+INFO: 17-03-30 08:21:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:21:00 51ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:21:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:21:00 270ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:21:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:21:01 网站群任务耗时：1004毫秒
+INFO: 17-03-30 08:21:01 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:21:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:21:01 1231ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:21:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:21:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:21:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:21:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:21:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:21:01 40ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:21:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:21:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:21:01 PublishTask发布任务结束
+INFO: 17-03-30 08:21:01 226ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:21:01 19ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:21:01 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:21:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:21:02 416ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:21:02 1025ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:20:01 CST 2017,Thu Mar 30 08:20:01 CST 2017}
+INFO: 17-03-30 08:21:02 数据库采集任务耗时：2257毫秒
+INFO: 17-03-30 08:21:04 2359ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:20:01 CST 2017}
+INFO: 17-03-30 08:21:04 建立索引共耗时 4629 毫秒.
+INFO: 17-03-30 08:21:20 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:21:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:21:30 65ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:21:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:21:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:21:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:21:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:21:30 CST 2017}
+INFO: 17-03-30 08:21:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:21:30 CST 2017}
+INFO: 17-03-30 08:21:30 48ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:21:37 7486ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:21:30 CST 2017}
+INFO: 17-03-30 08:21:37 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:22:00 PublishTask定时发布任务
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:22:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:22:00 网站群任务耗时：98毫秒
+INFO: 17-03-30 08:22:00 52ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:22:00 261ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:22:00 37ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:22:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:22:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:22:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:22:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:22:00 548ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:22:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:22:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:22:00 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:22:00 PublishTask发布任务结束
+INFO: 17-03-30 08:22:01 182ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:22:01 数据库采集任务耗时：983毫秒
+INFO: 17-03-30 08:22:01 779ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:21:04 CST 2017,Thu Mar 30 08:21:04 CST 2017}
+INFO: 17-03-30 08:22:02 1147ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:21:04 CST 2017}
+INFO: 17-03-30 08:22:02 建立索引共耗时 2486 毫秒.
+INFO: 17-03-30 08:22:20 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:22:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:22:30 10ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:22:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:22:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:22:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:22:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:22:30 CST 2017}
+INFO: 17-03-30 08:22:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:22:30 CST 2017}
+INFO: 17-03-30 08:22:30 6ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:22:31 1451ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:22:30 CST 2017}
+INFO: 17-03-30 08:22:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:23:00 PublishTask定时发布任务
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:23:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:23:00 网站群任务耗时：67毫秒
+INFO: 17-03-30 08:23:00 52ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:23:00 257ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:23:00 271ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:23:00 PublishTask发布任务结束
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:23:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:23:00 20ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:23:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:23:00 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:23:00 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:23:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:23:00 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:23:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:23:00 35ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:23:00 数据库采集任务耗时：518毫秒
+INFO: 17-03-30 08:23:00 398ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:22:02 CST 2017,Thu Mar 30 08:22:02 CST 2017}
+INFO: 17-03-30 08:23:01 314ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:22:02 CST 2017}
+INFO: 17-03-30 08:23:01 建立索引共耗时 986 毫秒.
+INFO: 17-03-30 08:23:21 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:23:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:23:30 3ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:23:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:23:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:23:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:23:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:23:30 CST 2017}
+INFO: 17-03-30 08:23:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:23:30 CST 2017}
+INFO: 17-03-30 08:23:30 2ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:23:31 1390ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:23:30 CST 2017}
+INFO: 17-03-30 08:23:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:24:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:24:00 PublishTask定时发布任务
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:24:00 正在更新统计信息......
+INFO: 17-03-30 08:24:00 11ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:24:00 1ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:24:00 2ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:24:00 1ms	select 1 from ZDMaxNo where 1=2	{}
+WARN: 17-03-30 08:24:00 没有ID=22的全文检索!
+INFO: 17-03-30 08:24:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCAdvertisement set HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCArticle set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCImage set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCVideo set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:24:00 1ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:24:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:24:00 更新统计信息耗时 63 毫秒.
+WARN: 17-03-30 08:24:00 没有ID=37的全文检索!
+INFO: 17-03-30 08:24:00 网站群任务耗时：75毫秒
+INFO: 17-03-30 08:24:00 53ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:24:00 232ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:24:00 285ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:24:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:24:00 PublishTask发布任务结束
+INFO: 17-03-30 08:24:00 18ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:24:00 20ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:24:00 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:24:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:24:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:24:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:24:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:24:01 114ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:24:01 数据库采集任务耗时：649毫秒
+INFO: 17-03-30 08:24:01 489ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:23:01 CST 2017,Thu Mar 30 08:23:01 CST 2017}
+INFO: 17-03-30 08:24:01 323ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:23:01 CST 2017}
+INFO: 17-03-30 08:24:01 建立索引共耗时 1076 毫秒.
+INFO: 17-03-30 08:24:21 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:24:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:24:30 10ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:24:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:24:30 2ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:24:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:24:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:24:30 CST 2017}
+INFO: 17-03-30 08:24:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:24:30 CST 2017}
+INFO: 17-03-30 08:24:30 4ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:24:31 1464ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:24:30 CST 2017}
+INFO: 17-03-30 08:24:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:25:00 PublishTask定时发布任务
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:25:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:25:00 网站群任务耗时：56毫秒
+INFO: 17-03-30 08:25:00 52ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:25:00 217ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:25:00 PublishTask发布任务结束
+INFO: 17-03-30 08:25:00 271ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:25:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:25:00 19ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:25:00 18ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:25:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:25:00 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:25:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:25:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:25:00 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:25:00 41ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:25:00 数据库采集任务耗时：512毫秒
+INFO: 17-03-30 08:25:00 370ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:24:01 CST 2017,Thu Mar 30 08:24:01 CST 2017}
+INFO: 17-03-30 08:25:01 322ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:24:01 CST 2017}
+INFO: 17-03-30 08:25:01 建立索引共耗时 924 毫秒.
+INFO: 17-03-30 08:25:21 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:25:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:25:30 2ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:25:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:25:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:25:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:25:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:25:30 CST 2017}
+INFO: 17-03-30 08:25:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:25:30 CST 2017}
+INFO: 17-03-30 08:25:30 3ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:25:31 1365ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:25:30 CST 2017}
+INFO: 17-03-30 08:25:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:26:00 PublishTask定时发布任务
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:26:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:26:00 1ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:26:00 网站群任务耗时：66毫秒
+INFO: 17-03-30 08:26:00 53ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:26:00 219ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:26:00 PublishTask发布任务结束
+INFO: 17-03-30 08:26:00 285ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:26:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:26:00 12ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:26:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:26:00 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:26:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:26:00 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:26:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:26:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:26:01 51ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:26:01 数据库采集任务耗时：546毫秒
+INFO: 17-03-30 08:26:01 395ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:25:01 CST 2017,Thu Mar 30 08:25:01 CST 2017}
+INFO: 17-03-30 08:26:01 438ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:25:01 CST 2017}
+INFO: 17-03-30 08:26:01 建立索引共耗时 1074 毫秒.
+INFO: 17-03-30 08:26:21 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:26:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:26:30 10ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:26:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:26:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:26:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:26:30 0ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:26:30 CST 2017}
+INFO: 17-03-30 08:26:30 0ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:26:30 CST 2017}
+INFO: 17-03-30 08:26:30 4ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:26:31 1401ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:26:30 CST 2017}
+INFO: 17-03-30 08:26:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:27:00 PublishTask定时发布任务
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:27:00 1ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:27:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:27:00 1ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:27:00 正在更新统计信息......
+INFO: 17-03-30 08:27:00 5ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCAdvertisement set HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCArticle set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCImage set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCVideo set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+WARN: 17-03-30 08:27:00 没有ID=37的全文检索!
+INFO: 17-03-30 08:27:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+WARN: 17-03-30 08:27:00 没有ID=22的全文检索!
+INFO: 17-03-30 08:27:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:27:00 4ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:27:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:27:00 更新统计信息耗时 12 毫秒.
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:27:00 网站群任务耗时：67毫秒
+INFO: 17-03-30 08:27:00 52ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:27:00 236ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:27:00 267ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:27:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:27:00 PublishTask发布任务结束
+INFO: 17-03-30 08:27:00 48ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:27:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:27:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:27:00 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:27:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:27:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:27:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:27:01 62ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:27:01 数据库采集任务耗时：588毫秒
+INFO: 17-03-30 08:27:01 419ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:26:01 CST 2017,Thu Mar 30 08:26:01 CST 2017}
+INFO: 17-03-30 08:27:01 331ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:26:01 CST 2017}
+INFO: 17-03-30 08:27:01 建立索引共耗时 1018 毫秒.
+INFO: 17-03-30 08:27:21 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:27:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:27:30 2ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:27:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:27:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:27:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:27:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:27:30 CST 2017}
+INFO: 17-03-30 08:27:30 3ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:27:30 CST 2017}
+INFO: 17-03-30 08:27:30 18ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:27:32 2201ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:27:30 CST 2017}
+INFO: 17-03-30 08:27:32 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:28:00 PublishTask定时发布任务
+INFO: 17-03-30 08:28:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:28:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:28:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:28:00 2ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:28:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:28:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:28:00 网站群任务耗时：59毫秒
+INFO: 17-03-30 08:28:00 53ms	select 1 from admin where 1=2	{}
+INFO: 17-03-30 08:28:01 61ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:28:01 233ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:28:01 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:28:01 PublishTask发布任务结束
+INFO: 17-03-30 08:28:01 266ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:28:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:28:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:28:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:28:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:28:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:28:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:28:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:28:01 18ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:28:01 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:28:01 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:28:01 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:28:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:28:01 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:28:01 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:28:01 322ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:27:01 CST 2017,Thu Mar 30 08:27:01 CST 2017}
+INFO: 17-03-30 08:28:01 100ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:28:01 数据库采集任务耗时：662毫秒
+INFO: 17-03-30 08:28:01 470ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:27:01 CST 2017}
+INFO: 17-03-30 08:28:01 建立索引共耗时 1085 毫秒.
+INFO: 17-03-30 08:28:21 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:28:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:28:30 9ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:28:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:28:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:28:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:28:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:28:30 CST 2017}
+INFO: 17-03-30 08:28:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:28:30 CST 2017}
+INFO: 17-03-30 08:28:30 4ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:28:32 1847ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:28:30 CST 2017}
+INFO: 17-03-30 08:28:32 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:29:00 PublishTask定时发布任务
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:29:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:29:00 网站群任务耗时：69毫秒
+INFO: 17-03-30 08:29:00 52ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:29:00 244ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:29:00 PublishTask发布任务结束
+INFO: 17-03-30 08:29:00 285ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:29:00 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:29:00 17ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:29:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:29:00 9ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:29:00 3ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:29:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:29:00 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:29:00 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:29:00 305ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:28:01 CST 2017,Thu Mar 30 08:28:01 CST 2017}
+INFO: 17-03-30 08:29:00 81ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:29:00 数据库采集任务耗时：680毫秒
+INFO: 17-03-30 08:29:01 421ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:28:01 CST 2017}
+INFO: 17-03-30 08:29:01 建立索引共耗时 1095 毫秒.
+INFO: 17-03-30 08:29:22 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:29:30 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:29:30 3ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:29:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:29:30 1ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:29:30 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:29:30 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:29:30 CST 2017}
+INFO: 17-03-30 08:29:30 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:29:30 CST 2017}
+INFO: 17-03-30 08:29:30 3ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:29:31 1374ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:29:30 CST 2017}
+INFO: 17-03-30 08:29:31 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?
+INFO: 17-03-30 08:30:00 PublishTask定时发布任务
+INFO: 17-03-30 08:30:00 pageSQL:select * from ZCArticle  where publishdate<=? and status =20
+INFO: 17-03-30 08:30:00 8ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:30:00 开始建立索引D:/IdeaProjects/wj/WebContent/WEB-INF/data/index/keyword/......
+WARN: 17-03-30 08:30:00 没有ID=37的全文检索!
+WARN: 17-03-30 08:30:00 没有ID=22的全文检索!
+INFO: 17-03-30 08:30:00 17ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:30:00 pageSQL:select * from ZCAdPosition
+INFO: 17-03-30 08:30:00 正在更新统计信息......
+INFO: 17-03-30 08:30:00 pageSQL:select * from ZCInnerGather
+INFO: 17-03-30 08:30:00 5ms	select 1 from ZDMaxNo where 1=2	{}
+INFO: 17-03-30 08:30:00 pageSQL:select * from ZCInnerDeploy
+INFO: 17-03-30 08:30:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCAdvertisement set HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCArticle set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCImage set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCVideo set StickTime=(HitCount*StickTime+?*?)/(HitCount+?),HitCount=HitCount+? where ID=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:30:00 0ms	update ZCStatItem set Count30=Count30+? where SiteID=? and Period=? and Type=? and SubType=? and Item=?	{}
+INFO: 17-03-30 08:30:00 网站群任务耗时：25毫秒
+INFO: 17-03-30 08:30:00 更新统计信息耗时 28 毫秒.
+INFO: 17-03-30 08:30:00 pageSQL:select * from ZCDBGather
+INFO: 17-03-30 08:30:00 pageSQL:select * from ZCAdvertisement where StartTime<=? and EndTime>=? order by AddTime desc
+INFO: 17-03-30 08:30:00 57ms	select 1 from admin where 1=2	{}
+INFO: 17-03-30 08:30:00 55ms	select count(*) from zcarticle where catalogid='9444'	{}
+INFO: 17-03-30 08:30:00 214ms	select InnerCode,KeywordSetting from ZCCatalog where KeywordFlag='Y'	{}
+INFO: 17-03-30 08:30:00 pageSQL:select * from ZCArticle where downlinedate<=? and status=?
+INFO: 17-03-30 08:30:00 PublishTask发布任务结束
+INFO: 17-03-30 08:30:01 278ms	select * from zcarticle where catalogid='9444' limit ?,? 0,100
+INFO: 17-03-30 08:30:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:30:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:30:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:30:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:30:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:30:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:30:01 pageSQL:select * from ZCArticle where CatalogID=? and ClusterSource=?
+INFO: 17-03-30 08:30:01 29ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:30:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:30:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:30:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:30:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:30:01 2ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:30:01 1ms	update ZCArticle set ID=?,SiteID=?,CatalogID=?,CatalogInnerCode=?,BranchInnerCode=?,Title=?,SubTitle=?,ShortTitle=?,TitleStyle=?,ShortTitleStyle=?,Author=?,Type=?,Attribute=?,URL=?,RedirectURL=?,Status=?,Summary=?,Content=?,TopFlag=?,TopDate=?,TemplateFlag=?,Template=?,CommentFlag=?,CopyImageFlag=?,OrderFlag=?,ReferName=?,ReferURL=?,Keyword=?,Tag=?,RelativeArticle=?,RecommendArticle=?,ReferType=?,ReferSourceID=?,HitCount=?,StickTime=?,PublishFlag=?,Priority=?,LockUser=?,PublishDate=?,DownlineDate=?,ArchiveDate=?,WorkFlowID=?,IssueID=?,Logo=?,PageTitle=?,ClusterSource=?,ClusterTarget=?,ReferTarget=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=?,MetaTitle=?,MetaKeywords=?,MetaDescription=?,SourceSign=?,ContentSign=?,FirstPublishDate=?,EveryDayNo=?,RiskType=?,RiskCompany=? where ID=?
+INFO: 17-03-30 08:30:01 314ms	select distinct CatalogID from ZCArticle where (addtime>=? or modifytime>=?) and status=30	{Thu Mar 30 08:29:01 CST 2017,Thu Mar 30 08:29:01 CST 2017}
+INFO: 17-03-30 08:30:01 49ms	update ZCDBGather set ID=?,SiteID=?,Name=?,DatabaseID=?,TableName=?,CatalogID=?,ArticleStatus=?,PathReplacePartOld=?,PathReplacePartNew=?,NewRecordRule=?,SQLCondition=?,Status=?,MappingConfig=?,Memo=?,Prop1=?,Prop2=?,Prop3=?,Prop4=?,AddUser=?,AddTime=?,ModifyUser=?,ModifyTime=? where ID=?
+INFO: 17-03-30 08:30:01 数据库采集任务耗时：609毫秒
+INFO: 17-03-30 08:30:01 381ms	select id from BZCArticle where status=30 and backuptime>?	{Thu Mar 30 08:29:01 CST 2017}
+INFO: 17-03-30 08:30:01 建立索引共耗时 936 毫秒.
+INFO: 17-03-30 08:30:22 pageSQL:select * from ZDSchedule
+INFO: 17-03-30 08:30:31 pageSQL:select * from ZCDeployConfig
+INFO: 17-03-30 08:30:31 33ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,24}
+INFO: 17-03-30 08:30:31 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:30:31 2ms	select count(*) from ZCDeployJob where RetryCount<5 and status<>? and configID=?	{2,33}
+INFO: 17-03-30 08:30:31 pageSQL:select * from ZCDeployJob where RetryCount<5 and status<>? and configID=?
+INFO: 17-03-30 08:30:31 1ms	delete from ZCDeployJob where RetryCount>=5  and status=3 and addtime<=?	{Thu Mar 30 03:30:31 CST 2017}
+INFO: 17-03-30 08:30:31 1ms	delete from ZCDeployJob where  status=2 and addtime<=?	{Thu Mar 30 03:30:31 CST 2017}
+INFO: 17-03-30 08:30:31 7ms	delete from ZCDeployLog where not exists (select id from ZCDeployJob where  ZCDeployLog.jobid= ZCDeployJob.id)	{}
+INFO: 17-03-30 08:30:32 1429ms	update ZCArticle set TopFlag='0' where topflag='1' and topdate is not null and topdate<=?	{Thu Mar 30 08:30:31 CST 2017}
+INFO: 17-03-30 08:30:32 pageSQL:select * from ZCArticle where topflag='1' and topdate is not null and topdate<=?

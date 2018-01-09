@@ -1,0 +1,183 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb=“http://open.weibo.com/wb”>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<cms:include file="block/bxbk_css.shtml" includetype="virtual"/>
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<cms:include file="block/kxb_custom_header.shtml" includetype="virtual"/>
+</head>
+
+<body> 
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+
+
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<span><cms:link type="currentPosition"></cms:link><span class="separator">></span>${Article.title}</span>
+		</div>
+	</div>
+
+<!--位置信息 结束-->
+<!--主体 开始-->
+<div class="wrap980 mainbgl644">
+	<!--左边 开始-->
+	<div class="left644 up_left">
+		<!--文章 开始-->
+		<div class="article">
+			<h1 class="article">${Article.Title}</h1>
+			<div class="articledate">创建日期：${Article.PublishDate|Format=yyyy-MM-dd}</div>
+			<div class="articlecard">
+				<h3>百科名片</h3>
+				<div class="articlecardcont"><p>${Article.Summary}</p></div>
+			</div>
+			<div id="ajaxad">${Article.Content}</div>
+		</div>	 
+		<!--文章 结束-->
+		<div class="shareandkeyword graybordert">
+			<!--分享到 开始-->
+			<div class="articleshare">
+			<div class="bshare-custom icon-medium"><span class="articlekeyword"><font size="2">分享到:&nbsp;&nbsp;</font><a class="bshare-qzone" title="分享到QQ空间"></a>
+			<a class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+			<a class="bshare-renren" title="分享到人人网"></a>
+			<a class="bshare-douban" title="分享到豆瓣"></a>
+			<a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+			</span></div>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+			</div>
+			<!--分享到 结束-->
+			<!--关键词 开始-->
+			<div class="articlekeyword">关键词：<span>${article.tag|taglink=Y}</span></div>
+			<!--关键词 结束-->
+		</div>
+		<!--上一篇下一篇 开始-->
+		<div class="articlepage"><a href="${Article.PrevLink}">←</a>&nbsp;&nbsp;下一篇：<a href="${Article.PrevLink}">${Article.PrevTitle}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上一篇：<a href="${Article.NextLink}">${Article.NextTitle}</a>&nbsp;&nbsp;<a href="${Article.NextLink}">→</a></div>
+		<!--上一篇下一篇 结束-->
+		<div class="inforandaq">
+			<!--相关资讯 开始-->
+			<div class="relatedinfor">
+				<div class="columntit">相关资讯</div>
+				<ul class="txtlist12">
+					<cms:list item="Article" level="all" tag ="${article.tag}" cmsorder="1" type="rand" count="6" name="保险资讯">	
+                      <li><span><a href="${Site.URL}/${Article.URL}" target="_blank">${Article.title}</a></span></li>
+                    </cms:list>
+				</ul>
+			</div>
+			<!--相关资讯 结束-->
+			<!--精彩问答 开始-->
+			<div class="wonderfulaq">
+				<div class="columntit">精彩问答</div>
+				<ul class="txtlist12">
+					<cms:list item="Article" level="all" tag ="${article.tag}" cmsorder="2" type="rand" count="6" name="保险问答">	
+                      <li><span>问：<a href="${Site.URL}/${Article.URL}" target="_blank">${Article.title}</a></span></li>
+                    </cms:list>
+				</ul>
+			</div>
+			<div class="h30"></div>
+			<!--精彩问答 结束-->
+		</div>
+	</div>
+	<!--左边 结束-->
+	<input type="hidden" id="ArticleID" value="${article.id}"/>
+	<!--右边 开始-->
+	<div class="right336 up_right">
+		<!--图片切换 开始-->
+		<div >
+                <cms:imageplayer code="bxbk_detail_right" type="0" width="320" height="250" />
+        </div>
+		<!--图片切换 结束-->
+		<!--词条分类浏览 开始-->
+		<div class="columntit graybordert">词条分类浏览</div>
+		<ul class="entryclass">
+			 <cms:list item="catalog" type="article" level="child" cmsorder="3" name="保险百科" count="10">
+					<li><a href="${Site.URL}/${catalog.link}" target="_blank">${catalog.name}</a></li>							
+	        </cms:list>	
+		</ul>
+		<div class="h12"></div>
+		<!--词条分类浏览 结束-->
+		<!--搜索词条 开始-->
+		<div class="entrysearch">
+		  	<form name="myformname" action="${site.url}/Search/Result.jsp">
+				<h4><input id="valueid" name="query" type="text" class="entrysearchinput" value="旅游保险" onfocus="if(this.value=='旅游保险'){this.value='';}" onblur="if(this.value==''){this.value='旅游保险';}"/></h4>
+				<h5><input name="" type="submit" value="词条搜索" class="entrysearchbtn" onclick="jQuery.ajaxLoadImg.show('searchResult');" onmouseover="this.className='entrysearchbtnover'" onmouseout="this.className='entrysearchbtn'" /></h5>
+			</form>
+		</div>
+		<!--搜索词条 结束-->
+		<!--热门词条推荐 开始-->
+		<div class="columntit graybordert">热门词条推荐</div>
+		<ul class="txtlist">
+			 <cms:list item="Article" level="all" type="rand" cmsorder="4" count="7" name="保险百科">	
+                <li><span><a href="${Site.URL}/${Article.URL}" target="_blank">${Article.title}</a></span></li>
+           	 </cms:list> 
+		</ul>
+		<div class="h12"></div>
+		<!--热门词条推荐 结束-->
+			<div class="columntit graybordert">热门标签</div>
+			<div class="news_rmbj news_bor_hui news_zsbj">
+				<ul>
+					<li>
+					<cms:list item="hotlabels"  name="热门标签" count="20" type="hot" tag="${Article.tag}">
+						<% if(i%3==0){%>
+								<a class="news_color12" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%3==1){%>
+								<a class="news_color13" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% }else if(i%3==2){%>
+								<a class="news_color14" href="${Site.URL}${hotlabels.linkurl}" >${hotlabels.tag}</a>
+							<% } %>
+					</cms:list>
+					</li>
+				</ul>
+			</div>
+			<div class="h12"></div>
+		<cms:include file="block/bxbk_tpgg.shtml" includetype="virtual"/>
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<div class="clear"></div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  cmsorder="6" name="百科详情页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  cmsorder="7" name="百科详情页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  cmsorder="8" name="百科详情页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" includetype="virtual"/>
+<cms:include file="block/community_v1.shtml" includetype="virtual"/>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.KinSlideshow-1.2.1.min.js"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+jQuery(function(){
+	jQuery('#change_33 div.changeDiv').soChange({
+        thumbObj: '#change_33 .ul_change_a2 span',
+        thumbNowClass: 'on',
+        changeTime: 4000
+    })
+})
+
+</script>
+</body>
+</html>
+     

@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>
+<%
+String title = article.getString("MetaTitle");
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+    <ul class="car_mininav clearfix lyg_nav">                                                       
+			<li><a class="s_car_nav" href="${Site.URL}/chexian/" title="车辆保险首页">车辆保险首页</a></li>
+
+	</ul>
+<div class="car_index_s"><div class="meihua_p">买车险 首选开心保 <b>直降15%</b></div></div>
+<div class="car_gs_box car_border_q no_top_bor cf">
+	<div class="car_bxgs floatl">
+    
+      	<div class="search_bxgs"><div class="car_bxzscon">保险公司:</div>  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+				   <cms:list item="article"  level="all" name="车险对接保险公司" >
+		              <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+		           </cms:list>
+                </div>
+            </div>
+             </div>
+          
+             	<ul  id="car_tag_con" class="car_lipin  cf">
+				   <cms:list item="article" level="all" name="车险对接保险公司" >
+		             <li style="display:none">${Article.Gift}</li>
+		           </cms:list>
+             	</ul>
+            
+                <div class="ljbj_sc"> <input name="" type="button" value="开始报价" onclick="guodu('${Site.URL}/cx/gd/')" class="input_ksbj"></div>
+    </div>
+    <div class="car_adjd floatr">
+     <div class="changeBox_a1" id="change_33">
+     <cms:imageplayer code="CarFlash" type="0" width="700" height="246"  />
+     </div>
+    </div>
+</div>
+<div class="h10 clear"></div>
+<div class="car_left floatl ">
+			<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html " target="_blank">
+			<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165" alt="车险快速报价" title="车险快速报价"></a></div>
+			<cms:list item="Image"  name="车险图片"> 
+		      <div class="car_ad_l clearfix">
+			   <a href="${Image.wangzhi}" target="_blank">
+			       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+			   </a>
+			  </div>
+		    </cms:list> 
+            <div class="car_border_q mar_btn_10">
+            <h2 class="car_l_title">交强险条例、车险法规</h2>
+             <ul class="special_list lipei_lists" >
+			<cms:list item="article" level="all" type="rand" tag="交强险条例" count="1" name="保险百科">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" tag="交强险条例" count="2" name="保险知识">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" tag="交强险条例" count="1" name="保险资讯">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" tag="车险法规" count="2" name="保险百科">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" tag="车险法规" count="1" name="保险知识">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+			<cms:list item="article" level="all" type="rand" tag="车险法规" count="1" name="保险资讯">
+				<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+			</cms:list>
+         </ul>
+          
+            </div>
+            
+              <div class="car_border_q mar_btn_10">
+            <h2 class="car_l_title">交强险理赔案例</h2>
+             <ul class="special_list lipei_lists" >
+				<cms:list item="article" level="all" type="rand" tag="交强险案例" count="8" name="保险理赔">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+            </ul>
+          
+            </div>
+            
+               
+            <div class="car_border_q mar_btn_10">
+            <ul class="car_zx_title zs_list cf">
+            	<li class="zslist_1"><span class="hover" id="zslist1" onclick="setTab('zslist',1,3)">资讯</span></li>
+            	<li class="zslist_1"> <span  id="zslist2"  onclick="setTab('zslist',2,3)">知识</span></li>
+                <li class="zslist_1"> <span  id="zslist3"  onclick="setTab('zslist',3,3)">问答</span></li>
+            </ul>
+             <ul class="zx_list cf " id="con_zslist_1">
+				<cms:list item="article" level="all" type="rand" tag="交强险" count="6" name="保险资讯">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_2" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="交强险" count="6" name="保险知识">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_3" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="交强险" count="6" name="保险问答">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+            </div>
+  </div>
+       <div class="car_right floatr">
+        <div class="car_border_q hzpp_main cf p_cons"> 
+           <h1 class="car_l_title">交强险</h1>
+           <p>交强险全称"机动车交通事故责任强制保险"，是我国法律强制规定的保险制度，属于责任保险的一种，主要保障被保险机动车在发生交通事故时，对本车人员及被保险人之外的受害人造成的人身、财产损失。
+我国强制规定机动车车主必须购买交强险，否则不能办理相关登记。交强险的保险期限为1年，几乎涵盖了所有道路交通责任风险。</p>
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+           <h2 class="car_l_title"><a href="http://www.kaixinbao.com/50000100/AG20130621029.shtml " target="_blank">交强险多少钱</a></h2>
+           <p>交强险的基础费率共分家庭自用车、非营业客车、营业客车、非营业货车、营业货车、特种车、摩托车和拖拉机八个大类42种，每个车型的保险费率各不相同。但同一车型执行全国统一价格。<br>
+以2013年家用车交强险全国统一价格为例：家庭自用汽车6座以下，950元；家庭自用汽车6座及以上，1100元。<br>
+交强险的价格实行浮动费率，其最终保费=基础保费×（1+与道路交通事故相联系的浮动比率）×（1+与交通安全违法行为相联系的浮动比率A），根据上年度交通事故责任浮动10%-30%左右，并设有最高责任限额。</p>
+        </div>
+        <div class="car_border_q hzpp_main cf"> 
+         <div class="car_l_title2 meihua_p">合作品牌</div> 
+		    <cms:list item="article"  level="all" name="车险对接保险公司" >
+				<div class="hzpp_box">
+					<div class="pp_logo"><span class="car_cp_logo icon_C${Article.comcode}"><a href="${Article.link}" title="${Article.title}"></a></span></div>
+					<div class="pp_des"><em class="em_red">${Article.red}</em>${Article.redtext}</div>
+					<div class="pp_des"><em class="em_yel">${Article.yellow}</em>${Article.yellowtext}</div>
+					<div class="pp_des"><em class="em_blue">${Article.blue}</em>${Article.bluetext}</div>
+					<div class="pp_ljbj"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div>
+				</div>
+           </cms:list>
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+           <h2 class="car_l_title"><a href="http://www.kaixinbao.com/50000100/AG20130619039.shtml " target="_blank">交强险赔偿范围</a></h2>
+          <p>凡是对第三方（除本车、本车上的人）造成损失的，无论是否有责任，都是交强险赔偿范围。<br>
+1、有责任时，三方财产损失最高赔偿2000元，三方医疗费最高赔偿10000元，三方死亡伤残最高赔偿110000元。<br>
+2、无责任时，三方财产损失最高赔偿100元，三方医疗费最高赔偿1000元，三方死亡伤残最高赔偿11000元。<br>
+（医疗费包括：医药费、诊疗费、住院费、住院伙食补助费、必要合理的后续治疗费、整容费、营养费。
+死亡伤残费包括：丧葬费、死亡补偿费、办理丧葬事宜的交通费、残疾赔偿金、残疾辅助器具费、护理费、康复费、交通费、被扶养人生活费、住宿费、误工费、通过判决或调解产生的精神损害抚慰金。）</p>
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+           <h2 class="car_l_title"><a href="###">交强险赔偿限额</a></h2>
+           <ul class="lust_cons">
+           	<li>1、死亡伤残赔偿限额为110000元；</li>
+           	<li>2、医疗费用赔偿限额为10000元； </li>
+           	<li>3、财产损失赔偿限额为2000元； </li>
+           	<li>4、被保险人无责任时，无责任死亡伤残赔偿限额为10000元；无责任医疗费用赔偿限额为1000元；无责任财产损失赔偿限额为100元。
+</li>
+           </ul>
+
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+           <h2 class="car_l_title"><a href="http://www.kaixinbao.com/50000100/AF20130620026.shtml " target="_blank">交强险理赔流程</a></h2>
+           <br>
+         	<b> 一、接报案和理赔受理</b>
+<p>接到被保险人或者受害人报案后，应询问有关情况，并立即告知被保险人或者受害人具体的赔偿程序等有关事项。 涉及人员伤亡或事故损失超过交强险分项赔偿限额，或事故一方没有投保交强险的， 应提醒事故当事人立即向当地交通管理部门报案。</p>
+<b>二、查勘和定损</b>
+<p>事故任何一方的估计损失超过交强险赔偿限额的， 应提醒事故各方当事人依法进行责任划分。当事故涉及多方保险人，但存在一方或多方保险人未能进行查勘定损的案件，未能进行查勘定损的保险人，可委托其他保险人代为查勘定损；受委托方保险人可与委托方保险人协商收取一定费用。接受委托的保险人，应向委托方的被保险人提供查勘报告、事故/损失照片和由事故各方签字确认的损失情况确认书。</p>
+<b>三、垫付和追偿</b>
+<p>抢救费用垫付条件 同时满足以下条件的，可垫付受害人的抢救费用。<br>
+1、符合《机动车交通事故责任强制保险条例》第二十二条规定的情形；<br>
+2、接到公安机关交通管理部门要求垫付的通知书；<br>
+3、受害人必须抢救， 且抢救费用已经发生， 抢救医院提供了抢救费用单据和明细项目；<br>
+4、不属于应由道路交通事故社会救助基金垫付的抢救费用。<br>
+</p>
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+           <h2 class="car_l_title"><a href="http://www.kaixinbao.com/50000100/AG20130704048.shtml " target="_blank">交强险查询</a></h2>
+            <p>
+          <strong>1、网上查询</strong><br>      
+交强险上网查询的方式有两种，方法一是通过保单号进行查询，方法二是通过车牌号码+车架号后六位数字进行查询。社会用户查询的结果包括：案件状态、理赔编码、保单号、车牌号、理赔公司、赔款金额、出险时间、报案时间、立案时间、结案时间和险种类型。<br>
+<strong>2、通过保险公司查询</strong><br>
+很多车主的交强险是通过保险代理公司投保的，因此致电保险公司客服，告知对方自己的车牌号码，就可以查到你是否投了车辆强制保险，并且知道具体的投保日期和到期时间。<br>
+<strong>3、到当地车管所查询</strong><br>
+车主可以到当地的车管所进行查询，所有车辆年检时都登记有保险日期，也是可以查询到的。</p>
+
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+           <h2 class="car_l_title"><a href="http://www.kaixinbao.com/50000100/AG20130711023.shtml " target="_blank">交强险如何购买？</a></h2>
+         <ul class="lust_cons">
+         	<li><strong>1、通过车险代理机构购买</strong><br>
+不少汽修厂、养护店、保险公司业务人员都提供交强险购买服务，并以"打折"的噱头吸引消费者。需要注意的是，保监会严禁交强险打折，所谓的折扣大部分是商家佣金的优惠。因此不要被虚假宣传所蒙蔽。
+
+</li>
+         	<li><strong>2、直接代理机构和业务员</strong><br>
+这种方式可以节省不少保费，但要看对方是否具有代理资质，以免遭到欺诈。
+</li>
+         	<li><strong>3、上网购买交强险</strong><br>
+如今，很多网站也提供交强险投保服务。到开心保投保车险，一站投保优惠更多，省钱又省心，是购买车险的最佳选择。</li>
+         </ul>
+        </div>
+         <div class="car_border_q cf"> 
+         	<div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+			<div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="交强险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="交强险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="交强险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+		
+		<cms:include file="block/kxb_footer_new.shtml" />
+		<cms:include file="block/community.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

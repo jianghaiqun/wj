@@ -1,0 +1,1228 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>安心旅游最佳保险Top10推荐-开心保保险网yhy</title>
+<link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/style/commonality.css" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/style/product.css" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/style/listul.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/style/redesign/re_header.css">
+</head>
+<body onload="initProduct();salesVolumeLoad();">
+<!--top头部-->
+        <div class="g-top">
+            <div class="g-weaper1200">
+                <div class="m-login">
+                <div id="NotLogin"><span class="m-login-p f-ib">您好，请</span><span class="m-login-a" id="NotLoginSpan"><a href="javascript:void(0);" id="headerShowLoginWindow"  onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">登录</a><em>/</em>
+                <a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">注册</a>
+                <span class="m-login-x" style="display:none"></span>
+                <!-- 未登录状态 显示图层 -->
+                    <div class="m-login-no" style="display:none;">
+                        <div class="m-lo-p">
+                            <div class="m-lo-img"></div>
+                            <img src="http://localhost:8080/images/redesign/photo_06.gif" alt="">
+                        </div>
+                        <div class="m-login-jf">
+                            <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag">会员专享，<br>积分换优惠</a>
+                        </div>
+                        <div class="clear h12"></div>
+                        <div class="m-integral">
+                            <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                        </div>
+                        <div class="m-Coupon">
+                        <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em>
+                        </div>
+                    </div>
+                <!-- 未登录状态 显示图层 end -->
+                </span></div>
+                <div id="YesLogin" style="display: none"><span class="m-login-p f-ib" id="YesLoginSpan">
+                                                         您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a>
+                                                         <i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                
+                <span class="m-login-x" style="display:none"></span>
+                <!--登录状态显示图层 -->
+                    <div class="m-login-yes z-hover-shadow"  style="display:none;">
+                           <div class="m-login-back">
+                               <span class="m-login-p m-login_p2">您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a><i id="headerLoginMemGradeIcon"  class="vip_k vip_top vip_k1" title=""></i></span><a href="javascript:void(0);" id="headerLogout" class="m-go-back">退出登录</a>
+                           </div> 
+                           <div class="m-lo-p">
+                            <div class="m-lo-img"><a href="###"></a></div>
+                            <img id="memberphoto" alt="">
+                           </div>
+                            <div class="m-login-user">
+                                <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="f_mi m-login-name2"></a><i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                                <p id="gradeinfo"></p>
+                            </div>
+                            <div class="clear h6"></div>
+                            <div class="m-integral2">
+                                <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                                <a id="memberPointsCount" href="http://localhost:8080/wj/shop/point!newList.action" class="m-jf-num"></a>
+                            </div>
+                            <div class="m-Coupon2">
+                            <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em><a id="CouponCount" href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="m-jf-num"></a>
+                            </div>
+                    </div>
+                <!--登录状态显示图层 end -->
+                </span></div>
+                </div>
+                <div class="m-top-fun">
+                      <span class="m-fun-span f-ib m-tel"><em class="i-tel"></em><i class="p-tel">4009-789-789</i></span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-WeChat" id="i-WeChat">
+                            <a href="###" class="m-fun-a hover"><em class="i-WeChat"></em></a>
+                            <div class="m-WeChatImg z-hover-shadow" style="display:none;">
+                                    <img src="http://localhost:8080/images/redesign/wechart.gif" alt="">
+                                    <p>关注微信公众号<br>轻松管理账单</p>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-service" id="i-service">
+                            <a href="###"  class="m-fun-a "><em class="i-service"></em></a>
+                            <div class="m-service_con z-hover-shadow" style="display:none;">
+                                 <ul class="m-service-li">
+                                <li><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单服务</a></li>
+                                <li><a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a></li>
+                                <li><a href="http://localhost:8080/lipei/" target="_blank" rel="nofollow">理赔申请</a></li>
+                            </ul>
+                            </div> 
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-cart" id="i-user-cart-span"><a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-fun-a " onclick="wxsend('gwclogin');">
+                            <em class="i-cart"></em><i class="m-cartNum" id="shopCartNo">0</i></a>
+                              <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-nologin" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>请先登录</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/gwclogin" vlpageid="gwclogin">登录</a>
+                            </div>
+                             <!-- 购物车为空 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>购物车中没有商品</span>
+                                    <a href="http://www.kaixinbao.com" class="m-btn-login">去选购商品</a>
+                            </div>
+                             <!-- 购物车不为空 -->
+                           <div class="m-cart_list z-hover-shadow" id="m-cart-yes" style="display:none;">
+                                <ul class="m-cart-ul" id="shopcartinfo">
+                                
+                                </ul>
+                                <div class="m-cart-go">
+                                    	共计<em id="shoptotal"></em> <a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-cart-to">去购物车</a>
+                                </div>
+                           </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-user" id="i-user-span"><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-fun-a " onclick="wxsend('memlogin');"><em class="i-user"></em></a>
+                            <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-user-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>会员中心</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/memlogin" vlpageid="memlogin">登录</a>
+                            </div>
+                            <!-- 用户已登录状态 -->
+                            <div class="m-user-yes z-hover-shadow" id="m-user-yes" style="display:none;">
+                              <dl class="m-order_dl m-order_dl1">
+                                  <dt>我的保单</dt>
+                                  <dd>
+	                                  <a id="prepay" href="http://localhost:8080/wj/shop/order_query!queryNoPayOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="preeffecitive" href="http://localhost:8080/wj/shop/order_query!queryNoEffectOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="effecitive" href="http://localhost:8080/wj/shop/order_query!queryEffectingOrder.action" class="f-ib" rel="nofollow"></a>
+                                  </dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>账户中心</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/profile!edit.action" class="f-ib" rel="nofollow">账户信息</a>
+                                  <a href="http://localhost:8080/wj/shop/point!newList.action" class="f-ib" rel="nofollow">我的积分</a>
+                                  <a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="f-ib" rel="nofollow">我的优惠券</a></dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>客户服务</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/stow!queryScan.action" class="f-ib" rel="nofollow">我的收藏</a>
+                                  <a href="http://localhost:8080/wj/shop/question!questionList.action" class="f-ib" rel="nofollow">保险问答</a>
+                                  <a href="http://localhost:8080/wj/shop/member_comment!queryComment.action" class="f-ib" rel="nofollow">商品评价</a><a href="http://localhost:8080/wj/shop/my_compare!show.action" class="f-ib">对比记录</a>
+                                  <a href="http://localhost:8080/wj/shop/my_consult!show.action" class="f-ib" rel="nofollow">我的咨询</a></dd>
+                              </dl>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                </div>
+            </div>
+        </div>
+   <!--top头部end-->
+   
+     <!-- header -->
+     <div class="g-header ">
+        <div class="g-weaper">
+        <a href="http://localhost:8080/" class="m-logo-a">
+            <img src="http://localhost:8080/images/redesign/logo.gif" height="70px" class="m-logo" alt="开心保保险网">
+        </a>
+        <img src="http://localhost:8080/images/redesign/f_logo.gif" class="m-flogo" height="70px" alt="保险服务">
+        <div class="clear"></div>
+        <!-- 导航开始 -->
+             <div class="g-nav">
+                <span class="g-nav-title"></span>
+             <div class="qs_boxs"   id="g-nav-box" class="qs_boxs" style="display:none;">
+                <dl class="que_dl que_dl_j1 que_nav_zk" id="que_lv_sf">    
+                <dt class="que_dl_dt"><em class="i-navicon i-nav1 f-ib"></em><a target="_blank" href="http://localhost:8080/lvyou-baoxian/">旅游保险</a><span class="z-que-zd"></span></dt>
+                    <dd class="que_dl_dd">
+                       <a target="_blank" href="http://localhost:8080/lvyou-baoxian/guonei/">境内</a>|<a target="_blank" href="http://localhost:8080/lvyou-baoxian/jingwai/">境外</a>|<a target="_blank" href="http://localhost:8080/lvyou-baoxian/shengenqianzheng/">申根</a>|<a target="_blank" href="http://localhost:8080/huixuan/0000000008.shtml">东南亚</a>
+                    </dd>
+  					 <dd class="que_dl_dd que_dl_dd2">
+                       <a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000024.shtml">美日加澳</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000010.shtml">亚洲</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000007.shtml">港澳</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000244.shtml">台湾</a>
+                    </dd>
+                  <!-- 旅游保险显示层-->
+                        <div class="m-travel-con z-hover-shadow tagshow"  style="display:none;"  id="que_lv_sf">
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">国内旅游险</dt>
+                                      <dd>
+                                         <!--循环：friendlink count：10-->
+
+
+										  		<a href="http://120.55.73.0:81/choose/0000000323.shtml" target="_blank" >户外运动</a>
+										  
+
+										  		<a href="http://120.55.73.0:81/choose/0000000331.shtml" target="_blank" >本市</a>
+										  
+
+										  		<a href="http://120.55.73.0:81/choose/0000000331.shtml" target="_blank" >境内旅游险</a>
+										                                        
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">境外旅游险</dt>
+                                      <dd>
+		                                   <!--循环：friendlink count：10-->
+
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >港澳游</a>
+										   
+
+												<a href="http://www.kaixinbao.com/huixuan/0000000244.shtml" target="_blank" >台湾游</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >东南亚</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >亚洲</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000224.shtml" target="_blank" >全球</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000269.shtml" target="_blank" >旅游险-申根签证</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                     <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特色保障</dt>
+                                      <dd>
+		                                   <!--循环：friendlink count：10-->
+
+
+												<a href="http://120.55.73.0:81/choose/0000000334.shtml" target="_blank" >海外务工</a>
+										   
+
+												<a href="http://" target="_blank" >住院津贴</a>
+										   
+
+												<a href="http://" target="_blank" >全年停留</a>
+										   
+
+												<a href="http://" target="_blank" >高原地区</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000333.shtml" target="_blank" >航班延误</a>
+										   
+
+												<a href="http://" target="_blank" >申根拒签</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000329.shtml" target="_blank" >自驾游</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000328.shtml" target="_blank" >东南亚</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000330.shtml" target="_blank" >安盛保险</a>
+										   
+
+												<a href="http://" target="_blank" >全年多次往返</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+                                       <!--循环：friendlink count：30-->
+
+
+									   		<a href="http://" target="_blank" >路华救援</a>
+									   
+
+									   		<a href="http://" target="_blank" >新华人寿</a>
+									   
+
+									   		<a href="http://" target="_blank" >华泰保险</a>
+									   
+
+									   		<a href="http://" target="_blank" >中国人保</a>
+									   
+
+									   		<a href="http://" target="_blank" >太平保险</a>
+									   
+
+									   		<a href="http://" target="_blank" >安盛天平</a>
+									   
+
+									   		<a href="http://" target="_blank" >太平洋财产险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >平安财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >安联财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/0000000325.shtml" target="_blank" >史带财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/0000000244.shtml" target="_blank" >美亚财险公司</a>
+									                                         
+                                      </dd>
+                                    </dl>
+                              </div>
+                              <div class="m-t-nav-right">
+                                     <dl class="m-travel-navDl">
+                                      <dt class="f-ib">推荐计划</dt>
+                                    </dl>
+                                    <div id="lvyouquick" >
+		                                
+
+											<div class="m-recommend-list">
+												<div class="clear"></div>
+					                            <a href="http://localhost:8080/lvyou-baoxian/282881.shtml" target="_blank" class="m-recommend-a">开心保安联“亚洲”豪华保障计划</a>
+			                                    <ul>
+			                                    	<li><span>紧急送返显关爱</span></li><li><span>旅程延误有补贴</span></li><li><span>宠物责任保障</span></li><li><span>家属探访有补贴</span></li>
+			                                    </ul>		
+			                                    <div class="clear h10"></div>		
+		                                        <div class="m-recommend-money">
+		                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+		                                            <span class="m-xj-money f-ib f_mi">￥20.00</span>
+		                                        </div>	
+		                                       	<a href="http://localhost:8080/lvyou-baoxian/282881.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+					                        </div>
+					                        <div class="clear h20"></div>
+							    		
+
+											<div class="m-recommend-list">
+												<div class="clear"></div>
+					                            <a href="http://localhost:8080/lvyou-baoxian/282838.shtml" target="_blank" class="m-recommend-a">平安畅游天下境外旅游全年保障计划</a>
+			                                    <ul>
+			                                    	<li><span>承保年龄到80岁</span></li><li><span>出行天数自由选</span></li><li><span>旅程延误给补偿</span></li><li><span>24小时紧急搜救</span></li><li><span>航班备降、迫降保险</span></li><li><span>旅行期间家庭财产保障</span></li>
+			                                    </ul>		
+			                                    <div class="clear h10"></div>		
+		                                        <div class="m-recommend-money">
+		                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+		                                            <span class="m-xj-money f-ib f_mi">￥475.00</span>
+		                                        </div>	
+		                                       	<a href="http://localhost:8080/lvyou-baoxian/282838.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+					                        </div>
+					                        <div class="clear h20"></div>
+							    		            
+                                    </div>
+                                    
+                              </div>
+                        </div>
+                  <!-- 旅游保险显示层end-->
+
+                </dl>
+                
+                <dl class="que_dl que_dl_j1 que_nav_zk">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav2 f-ib"></em><a target="_blank" href="http://localhost:8080/yiwai-baoxian/">意外保险</a><span class="z-que-zd"></span></dt>    
+                    <dd class="que_dl_dd">
+                        <a target="_blank" href="http://localhost:8080/yiwai-baoxian/renshen/">人身意外</a>|<a target="_blank" href="http://localhost:8080/yiwai-baoxian/jiaotong/">交通意外</a>|<a target="_blank" href="http://localhost:8080/yiwai-baoxian/hangkong/">航空意外</a>
+                    </dd>
+                    <dd class="que_dl_dd que_dl_dd2">
+                        <a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000014.shtml">少儿</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000015.shtml">老人</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000090.shtml">中青年</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000093.shtml">医疗补偿</a>
+                    </dd>
+                      <!-- 意外保险显示层 -->
+
+                        <div class="m-travel-con m-accident-con z-hover-shadow tagshow " style="display:none"  >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                      <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保障年龄</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特殊保障</dt>
+                                      <dd>
+					                       <!--循环：friendlink count：30-->
+
+
+										   <a href="http://120.55.73.0:81/choose/0000000341.shtml" target="_blank" >高额航空保险</a>
+										   
+
+										   <a href="http://120.55.73.0:81/choose/0000000340.shtml" target="_blank" >百万级综合意外</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000262.shtml" target="_blank" >太平洋财险</a>
+											
+
+											<a href="http://120.55.73.0:81/choose/0000000261.shtml" target="_blank" >太平养老</a>
+											
+
+											<a href="http://120.55.73.0:81/choose/0000000296.shtml" target="_blank" >中国人寿</a>
+											
+                                      </dd>
+                                    </dl>
+                              </div>
+
+                              <div class="m-t-nav-right">
+                                      <dl class="m-travel-navDl"><dt class="f-ib">推荐计划</dt></dl>
+                                    
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/283692.shtml" target="_blank" class="m-recommend-a">昆仑全年自驾无忧保障计划</a>
+		                                    <ul>
+		                                    	<li><span>打发时间佛啊监控</span></li><li><span>发斯蒂芬将阿里山的</span></li><li><span>阿斯顿飞九</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥13.85</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/283692.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/283597.shtml" target="_blank" class="m-recommend-a">富德交通工具空意外保障淘宝专用</a>
+		                                    <ul>
+		                                    	<li><span>fhissdfhsidf</span></li><li><span>dsufosdf</span></li><li><span>u9wrisi</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥4.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/283597.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		                                   
+                            </div>
+                        </div>
+                      <!-- 意外保险显示层 end -->
+                </dl> 
+                <dl class="que_dl que_dl_j1">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav3 f-ib"></em><a target="_blank" href="http://localhost:8080/jiankang-baoxian/">健康保险</a><span class="z-que-zd"></span></dt>        
+                    <dd class="que_dl_dd"><a href="http://www.kaixinbao.com/huixuan/0000000138.shtml" target="_blank">少儿重疾</a>|<a href="http://localhost:8080/jiankang-baoxian/tedingjibing/" target="_blank">特定疾病</a>|<a href="http://localhost:8080/jiankang-baoxian/zhuyuanyiliao/" target="_blank">住院治疗</a></dd>
+                	<dd class="que_dl_dd que_dl_dd2"><a href="http://www.kaixinbao.com/huixuan/0000000226.shtml" target="_blank">老年重疾</a>|<a href="http://www.kaixinbao.com/huixuan/0000000018.shtml" target="_blank">女性特定疾病</a></dd>
+                    <!-- 健康保险显示层 -->
+
+                        <div class="m-travel-con m-health-con z-hover-shadow tagshow " style="display:none"  >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                      <dl class="m-travel-navDl">
+                                      <dt class="f-ib">人群分类</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000339.shtml" target="_blank" >女性疾病保险</a>
+											
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特色保障</dt>
+                                      <dd>
+					                       <!--循环：friendlink count：30-->
+
+
+										   <a href="http://120.55.73.0:81/choose/0000000338.shtml" target="_blank" >低价保障型</a>
+										   
+
+										   <a href="http://120.55.73.0:81/choose/0000000335.shtml" target="_blank" >住院津贴</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000343.shtml" target="_blank" >平安财险</a>
+											
+
+											<a href="http://120.55.73.0:81/yiwai-baoxian/257766.shtml" target="_blank" >中国人寿</a>
+											
+                                      </dd>
+                                    </dl>
+                              </div>
+
+                              <div class="m-t-nav-right">
+                                      <dl class="m-travel-navDl"><dt class="f-ib">推荐计划</dt></dl> 
+                                    
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/yiwai-baoxian/282981.shtml" target="_blank" class="m-recommend-a">安联乐享人生幼儿意外健康计划一</a>
+		                                    <ul>
+		                                    	<li><span>意外健康综合保障</span></li><li><span>紧急救援</span></li><li><span>电话医生服务</span></li><li><span>儿童走失补偿</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥230.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/yiwai-baoxian/282981.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://localhost:8080/jiankang-baoxian/282612.shtml" target="_blank" class="m-recommend-a">大众安享中老年重疾健康保障计划</a>
+		                                    <ul>
+		                                    	<li><span>老年专款意外保障</span></li><li><span>意外医疗住院津贴</span></li><li><span>救护车服务津贴</span></li><li><span>温馨关爱老人健康</span></li><li><span>重疾和意外双重保障</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥1280.00</span>
+	                                        </div>	
+                                        	<a href="http://localhost:8080/jiankang-baoxian/282612.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		                                   
+                            </div>
+                        </div>
+                      <!-- 健康保险显示层 end -->
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav4 f-ib"></em><a target="_blank" href="http://localhost:8080/renshou-baoxian/">人寿保险</a></dt>            
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav5 f-ib"></em><a target="_blank" href="http://localhost:8080/jiacai-baoxian/">家财保险</a></dt>              
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav6 f-ib"></em><a target="_blank" href="http://localhost:8080/tx/">团体保险</a></dt>                 
+                </dl>
+                <dl class="que_dl que_nav_zk">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav7 f-ib"></em><a target="_blank" href="http://localhost:8080/chexian/">车辆保险</a><span class="z-que-zd"></span></dt> 
+                     <!-- 车辆险显示层 -->
+
+                        <div class="m-travel-con m-cars-con z-hover-shadow tagshow" style="display:none;" >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+                                      <a target="_blank" href="http://localhost:8080/chexian/yangguang.shtml">阳光车险</a>|<a target="_blank" href="http://localhost:8080/chexian/dadi.shtml">大地车险</a>
+                                      <a target="_blank" href="http://localhost:8080/chexian/taipingyang.shtml">太平洋车险</a>|<a target="_blank"  href="http://localhost:8080/chexian/tianping.shtml">安盛天平车险</a></dd>
+                                    </dl>
+                                  
+                                   
+                            
+                              </div>
+
+                        </div>
+                      <!-- 车辆保险显示层 end -->          
+                </dl>
+             </div>
+             </div>
+                <ul class="g-nav-main">
+                    <li class="f-ib"><a href="http://localhost:8080" class="nav_1">首页</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/daogou/" class="nav_2">保险快选</a><i class="header-hot"></i></li>
+                    <li class="f-ib"><a href="http://localhost:8080/youhui/" class="nav_3" rel="nofollow">限时抢购</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/jifen/" class="nav_4" rel="nofollow">积分商城</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/huiyuan/" class="nav_5" rel="nofollow">会员部落</a></li>
+                    <li class="f-ib"><a href="http://localhost:8080/lipei/" class="nav_6" rel="nofollow">理赔通道</a></li>
+                </ul> 
+                <div class="m-search">
+                	            <form action="http://localhost:8080/Search/Search.jsp">
+                       <span class="f-search-i" style="display: none;"></span> <div class="m-search-box"><input type="text" name="query" class="m-search-input"><i class="i-search"></i><span class="f-search"><input name="" type="submit" value="搜索" onclick="jQuery.ajaxLoadImg.show('searchLoad');"></span></div>
+                                       </form> 
+                </div> 
+                </div>
+        <!-- 导航结束 -->
+
+     </div>
+    <!-- header end -->
+	<div class="wrapper">
+
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../../' target='_self' ><span class="orange">您的现在位置：首页</span></a><span class="separator">></span><a href='../../top/' target='_self'>保险产品分类专题</a><span class="separator">></span><span class="separator1">安心旅游</span>
+		</div>
+		<div class="clear"></div>
+		<div class="topicpic"><img src="http://localhost:8080/upload/Image/zdtp/2502428668.jpg" width="980px/></div>
+		<div style="height:1px;"></div>
+		<div class="content">
+			<div class="content_left">
+			    <div class="top">
+					<div class="c1">推荐产品</div>
+					
+
+						<div class="c4">
+							<span class="CInsuranceCompany icon_C2007" onclick="hzpp('2007');"></span><a href="../../lvyou-baoxian/258290.shtml">平安全年境内旅游航班延误意外保险</a><br /> <span class="InitPrem">￥120.00</span>
+						</div>
+					
+
+						<div class="c4">
+							<span class="CInsuranceCompany icon_C2049" onclick="hzpp('2049');"></span><a href="../../lvyou-baoxian/283839.shtml">安联安途全球（含申根）旅行-尊贵计划</a><br /> <span class="InitPrem">￥73.00</span>
+						</div>
+					
+
+						<div class="c4">
+							<span class="CInsuranceCompany icon_C2034" onclick="hzpp('2034');"></span><a href="../../lvyou-baoxian/282945.shtml">美亚万国游踪境外旅行申根保障钻石计划</a><br /> <span class="InitPrem">￥170.00</span>
+						</div>
+					
+
+						<div class="c4">
+							<span class="CInsuranceCompany icon_C2071" onclick="hzpp('2071');"></span><a href="../../lvyou-baoxian/282173.shtml">大众海外务工境外旅游保障计划</a><br /> <span class="InitPrem">￥1380.00</span>
+						</div>
+					
+
+						<div class="c4">
+							<span class="CInsuranceCompany icon_C2071" onclick="hzpp('2071');"></span><a href="../../lvyou-baoxian/282166.shtml">大众海外务工境外旅游豪华保障</a><br /> <span class="InitPrem">￥3450.00</span>
+						</div>
+					
+
+				</div>
+				<div class="bottom">
+				     <div class="product_recommend">
+						<div class="part1left">
+								<div class="top5">
+									<h3 class="top5tit"><img src="http://localhost:8080/image/top5tit.gif" width="115" height="19" /></h3>
+									<div class="tab01">
+						                    <ul> 
+						                        <li id="one1" onMouseOver="setTab('one',1,2)" class="hover">意外</li>
+						                        <li id="one2" onMouseOver="setTab('one',2,2)">旅游</li>
+						                    </ul>
+						                    <div class="clear"></div>
+						          </div>
+								  <div id="con_one_1">
+									<ul class="liststyle05">
+						          		
+
+						              	  <li>
+						                      <span class='rank01'><a href="../../yiwai-baoxian/284060.shtml">平安开心保航班延误保障</a></span>
+						                  </li>
+						                
+
+						              	  <li>
+						                      <span class='rank02'><a href="../../yiwai-baoxian/283704.shtml">平安短期7天交通意外保险</a></span>
+						                  </li>
+						                
+
+						              	  <li>
+						                      <span class='rank03'><a href="../../yiwai-baoxian/258334.shtml">平安短期7天交通意外保险</a></span>
+						                  </li>
+						                
+						            </ul>
+						          </div>
+								  <div id="con_one_2" style="display:none;">
+									<ul class="liststyle05">
+						               	
+
+						               	   <li>
+						                       <span class='rank01'><a href="../../lvyou-baoxian/283363.shtml">史带境外旅游自选全球高端保障计划（含澳...</a></span>
+						                   </li>
+						                 
+
+						               	   <li>
+						                       <span class='rank02'><a href="../../lvyou-baoxian/283262.shtml">平安签证拒签补偿保险B款计划二</a></span>
+						                   </li>
+						                 
+
+						               	   <li>
+						                       <span class='rank03'><a href="../../lvyou-baoxian/282937.shtml">美亚乐悠游海外旅行保障计划二</a></span>
+						                   </li>
+						                 
+
+						               	   <li>
+						                       <span class='rank04'><a href="../../lvyou-baoxian/258440.shtml">美亚畅游神州境内旅行保障计划</a></span>
+						                   </li>
+						                 
+
+						               	   <li>
+						                       <span class='rank05'><a href="../../lvyou-baoxian/258098.shtml">平安境内旅游产品（经济型）</a></span>
+						                   </li>
+						                 
+						            </ul>
+						          </div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_right">
+				<div class="top_b">
+				<div id="products">
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2071"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282897.shtml" target="_blank"><h2 class="ziti">史带户外无忧领队意外险</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_207101026">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_207101026"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_207101026" class="CRiskAppFactor"><div  ><span>投保年龄</span><ul id="B0000000000000007336_TextAge"><li class="li_selected"><span id="TextAge_0" class="long_width" name="18Y-65Y" onclick="premRecal('207101026', this, 'B0000000000000007336_TextAge');">18-65周岁</span></li></ul></div><div  ><span>保险期限</span><select id="207101026_Period" name="Period" onchange="premRecal('207101026', this, '207101026_Period');" ><option selected value="1D">1天</option></select></div><div  ><span>计划</span><select id="207101026_Plan" name="Plan" onchange="premRecal('207101026', this, '207101026_Plan');" ><option selected value="1700">计划一</option></select></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span name="Ajax_Prict_207101026" id="productPrem_207101026" ><em>￥</em>8.00</span></li><li class="priceB"><span id="Clear_li_Ajax_Prict_207101026" style="display:none">原价：</span><span name="Clear_Ajax_Prict_207101026" style="display:none" id="productRatePrem_207101026"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282897.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('207101026');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('史带户外无忧领队意外险','/eriskfile/ERiskPic/207101026.jpg','207101026','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">境内旅游及热爱户外运动的领队。</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>特别提供领队责任保障</span></li><li><span>意外医疗</span></li><li><span>中暑医疗补偿</span></li><li><span>高原病医疗补偿</span></li><li><span>紧急医疗运返</span></li></ul></div>
+							<div id="divRiskAppDuty_207101026" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_207101026001" ><span class="CDutyCol1">意外身故、伤残</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026001_B0000000000000007338_1700">10万</span><span class="CDutyCol2" id="207101026001_B0000000000000007338_1701" style="display:none;">20万</span><span class="CDutyCol2" id="207101026001_B0000000000000007338_1702" style="display:none;">30万</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行户外运动及业余体育活动时遭受意外伤害事故导致身故、伤残，保险公司将给付保险金补偿。</span></div><div class="list_2 row0" id="Duty_207101026005" ><span class="CDutyCol1">急性病身故</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026005_B0000000000000007338_1700">1万</span><span class="CDutyCol2" id="207101026005_B0000000000000007338_1701" style="display:none;">1万</span><span class="CDutyCol2" id="207101026005_B0000000000000007338_1702" style="display:none;">1万</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行个人户外运动及业余体育活动时突发急性病，并在该疾病发生之日后30日内因该急性病身故，保险公司将给付保险金补偿。</span></div><div class="list_3 row1" id="Duty_207101026002" ><span class="CDutyCol1">意外医疗</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026002_B0000000000000007338_1700">2万</span><span class="CDutyCol2" id="207101026002_B0000000000000007338_1701" style="display:none;">4万</span><span class="CDutyCol2" id="207101026002_B0000000000000007338_1702" style="display:none;">6万</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行户外运动及业余体育活动时遭受意外伤害事故导致需要进行门诊或住院治疗，保险公司将给付保险金补偿。</span></div><div class="list_4 row0" id="Duty_207101026004" ><span class="CDutyCol1">中暑医疗补偿</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026004_B0000000000000007338_1700">1000</span><span class="CDutyCol2" id="207101026004_B0000000000000007338_1701" style="display:none;">2000</span><span class="CDutyCol2" id="207101026004_B0000000000000007338_1702" style="display:none;">3000</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行户外运动及业余体育活动时遭受中暑导致需要进行门诊或住院治疗，保险公司将给付保险金补偿。</span></div><div class="list_5 row1" id="Duty_207101026006" ><span class="CDutyCol1">高原医药补偿</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026006_B0000000000000007338_1700">1000</span><span class="CDutyCol2" id="207101026006_B0000000000000007338_1701" style="display:none;">2000</span><span class="CDutyCol2" id="207101026006_B0000000000000007338_1702" style="display:none;">3000</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行户外运动及业余体育活动时遭受高原病导致需要进行门诊或住院治疗，保险公司将给付保险金补偿。</span></div><div class="list_5 row0" id="Duty_207101026007" ><span class="CDutyCol1">食物中毒医疗补偿</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026007_B0000000000000007338_1700">1000</span><span class="CDutyCol2" id="207101026007_B0000000000000007338_1701" style="display:none;">2000</span><span class="CDutyCol2" id="207101026007_B0000000000000007338_1702" style="display:none;">3000</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行户外运动或业余体育活动时遭受食物中毒且经当地警方、医疗机构或卫生防疫部门证实，并因此次食物中毒而导致在医疗机构接受治疗的，保险公司将给付保险金补偿。</span></div><div class="list_5 row1" id="Duty_207101026009" ><span class="CDutyCol1">每日意外住院津贴</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026009_B0000000000000007338_1700">-</span><span class="CDutyCol2" id="207101026009_B0000000000000007338_1701" style="display:none;">50元/天</span><span class="CDutyCol2" id="207101026009_B0000000000000007338_1702" style="display:none;">100元/天</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行户外运动或业余体育活动时遭受食物中毒且经当地警方、医疗机构或卫生防疫部门证实，并因此次食物中毒而导致在医疗机构接受治疗的，保险公司将给付保险金补偿。</span></div><div class="list_5 row0" id="Duty_207101026003" ><span class="CDutyCol1">紧急医疗运送与送返</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026003_B0000000000000007338_1700">6万</span><span class="CDutyCol2" id="207101026003_B0000000000000007338_1701" style="display:none;">8万</span><span class="CDutyCol2" id="207101026003_B0000000000000007338_1702" style="display:none;">10万</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行户外运动及业余体育活动时因遭受意外伤害事故导致严重受伤，或罹患突发性重病,保险公司将安排医疗运送和送返，并承担所发生的费用。</span></div><div class="list_5 row1" id="Duty_207101026008" ><span class="CDutyCol1">身故送返</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026008_B0000000000000007338_1700">1.6万</span><span class="CDutyCol2" id="207101026008_B0000000000000007338_1701" style="display:none;">3万</span><span class="CDutyCol2" id="207101026008_B0000000000000007338_1702" style="display:none;">5万</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在进行户外运动及业余体育活动时因遭受意外伤害事故导致严重受伤，或突发急性病，并以此为直接且单独原因导致被保险人于30日内身故，保险公司将承担安排遗体送返所发生的费用。（其中丧葬保险金以16000元为限）</span></div><div class="list_5 row0" id="Duty_207101026010" ><span class="CDutyCol1">领队个人责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101026010_B0000000000000007338_1700">20万</span><span class="CDutyCol2" id="207101026010_B0000000000000007338_1701" style="display:none;">30万</span><span class="CDutyCol2" id="207101026010_B0000000000000007338_1702" style="display:none;">60万</span></span></td><span class="CDutyCol3">被保险人在履行户外运动领队职责，因自身的疏忽或过失造成第三方身故、或主合同列明的伤残的，经法院裁定，而依法应由被保险人向第三方（不包括与被保险人有抚养和赡养关系的人承担赔偿责任。保险公司依据本附加条款约定，以保险单所载明的保险金额为限赔偿被保险人因承担个人责任赔偿而发生的费用损失。（每人意外伤害赔偿限额以10万为限）</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2049"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282881.shtml" target="_blank"><h2 class="ziti">开心保安联“亚洲”豪华保障计划</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_204901050">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_204901050"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_204901050" class="CRiskAppFactor"><div  ><span>投保年龄</span><ul id="B0000000000000006073_TextAge"><li class="li_selected"><span id="TextAge_0" class="long_width3" name="60D-85Y" onclick="premRecal('204901050', this, 'B0000000000000006073_TextAge');">出生60满天-85周岁</span></li></ul></div><div  ><span>保险期限</span><select id="204901050_Period" name="Period" onchange="premRecal('204901050', this, '204901050_Period');" ><option selected value="1D-7D">1-7天</option><option value="8D">8天</option><option value="9D">9天</option><option value="10D">10天</option><option value="11D">11天</option><option value="12D">12天</option><option value="13D">13天</option><option value="14D">14天</option><option value="15D">15天</option><option value="16D-30D">16-30天</option></select></div><div style="display:none;" ><span>计划</span><ul id="B0000000000000006074_Plan"><li class="li_selected"><span id="Plan_0" class="long_width" name="KXBTP1" onclick="premRecal('204901050', this, 'B0000000000000006074_Plan');">境外计划</span></li></ul></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span name="Ajax_Prict_204901050" id="productPrem_204901050" ><em>￥</em>20.00</span></li><li class="priceB"><span id="Clear_li_Ajax_Prict_204901050" style="display:none">原价：</span><span name="Clear_Ajax_Prict_204901050" style="display:none" id="productRatePrem_204901050"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282881.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('204901050');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('开心保安联“亚洲”豪华保障计划','/','204901050','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">适合旅游人群</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>紧急送返显关爱</span></li><li><span>旅程延误有补贴</span></li><li><span>宠物责任保障</span></li><li><span>家属探访有补贴</span></li></ul></div>
+							<div id="divRiskAppDuty_204901050" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_00000000000000010102" ><span class="CDutyCol1">旅行变更</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010102_B0000000000000006074_KXBTP1">3000</span></span></td><span class="CDutyCol3">因被保险人的直系亲属死亡或遭受严重伤病；劫持；严重伤病；旅行出发前7日内或旅行后旅行出发地、途径地或目的地突发暴动、飞机、火车或轮船承运人雇员罢工、恶劣天气、不可抗力的自然灾害或传染病，保险公司赔偿该被保险人预付的实际未使用且不可退还的旅行费用，以及在旅行开始后，返回出发地的费用仅限已被保险人已支付的实际未使用且不可退还的旅行费用。</span></div><div class="list_2 row0" id="Duty_00000000000000010105" ><span class="CDutyCol1">旅行证件损失</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010105_B0000000000000006074_KXBTP1">3000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因旅行证件被盗窃、抢劫所造成补办和因此产生的住宿费用和额外公共交通费用，保险公司负责赔偿.</span></div><div class="list_3 row1" id="Duty_00000000000000010096" ><span class="CDutyCol1">意外身故及伤残</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010096_B0000000000000006074_KXBTP1">30万</span></span></td><span class="CDutyCol3">赔付因意外导致的身故及伤残</span></div><div class="list_4 row0" id="Duty_00000000000000010101" ><span class="CDutyCol1">慰问探访费用</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010101_B0000000000000006074_KXBTP1">5000</span></span></td><span class="CDutyCol3">被保险人因意外事故或身患疾病身故或住院，保险公司安排其一位直系亲属前往探望的交通及食宿费用</span></div><div class="list_5 row1" id="Duty_00000000000000010097" ><span class="CDutyCol1">公共交通工具意外身故及伤残</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010097_B0000000000000006074_KXBTP1">30万</span></span></td><span class="CDutyCol3">赔付因公共交通工具意外导致的身故及伤残</span></div><div class="list_5 row0" id="Duty_00000000000000010098" ><span class="CDutyCol1">医疗费用（含门诊和住院）</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010098_B0000000000000006074_KXBTP1">5万</span></span></td><span class="CDutyCol3">赔偿被保险人因遭受如意外伤害事故或罹患疾病发生在境外而实际支出的医疗费用，含门诊和住院</span></div><div class="list_5 row1" id="Duty_00000000000000010103" ><span class="CDutyCol1">旅行延误（每4小时补偿300元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010103_B0000000000000006074_KXBTP1">600</span></span></td><span class="CDutyCol3">赔偿因恶劣天气、自然灾害、机械故障、恐怖分子行为、航空管制、航班机位超售、罢工、劫持等导致被保险人搭乘的交通工具延误</span></div><div class="list_5 row0" id="Duty_00000000000000010100" ><span class="CDutyCol1">身故遗体运返（丧葬费用以20000元为限）</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010100_B0000000000000006074_KXBTP1">6万</span></span></td><span class="CDutyCol3">因意外事故或身患疾病导致身故，保险公司安排被保险人遗体运返，并支付救援费用</span></div><div class="list_5 row1" id="Duty_00000000000000010104" ><span class="CDutyCol1">行李延误（每6小时补偿500元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010104_B0000000000000006074_KXBTP1">1000</span></span></td><span class="CDutyCol3">赔偿被保险人托运行李因公共交通工具承运人的处理不当延误抵达目的地</span></div><div class="list_5 row0" id="Duty_00000000000000010099" ><span class="CDutyCol1">紧急医疗运送</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010099_B0000000000000006074_KXBTP1">20万</span></span></td><span class="CDutyCol3">因意外事故或身患疾病，保险公司安排被保险人医疗运送及送返，并支付救援费用</span></div><div class="list_5 row1" id="Duty_00000000000000010107" ><span class="CDutyCol1">个人及宠物责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010107_B0000000000000006074_KXBTP1">30万</span></span></td><span class="CDutyCol3">赔偿因被保险人的行为或其饲养的宠物造成他人的身体伤害或财产损失</span></div><div class="list_5 row0" id="Duty_00000000000000010106" ><span class="CDutyCol1">个人随身财物</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000010106_B0000000000000006074_KXBTP1">3000</span></span></td><span class="CDutyCol3">因下列原因致其所有并随身携带、穿着或置于行李箱、手提箱或类似容器内携带的个人物品遭受损失，保险公司按实际损失给付保险金
+(一) 被盗窃、抢劫与抢夺；
+(二) 被保险人所住宿的酒店或所搭乘的飞机、火车、轮船承运人处理失当所致的毁损、损坏或遗失。</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C1065"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282858.shtml" target="_blank"><h2 class="ziti">昆仑吉祥行7日旅游保险</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_106501009">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_106501009"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_106501009" class="CRiskAppFactor"><div  ><span>投保年龄</span><ul id="B0000000000000003084_TextAge"><li class="li_selected"><span id="TextAge_0" class="long_width" name="18Y-65Y" onclick="premRecal('106501009', this, 'B0000000000000003084_TextAge');">18-65周岁</span></li></ul></div><div  ><span>保险期限</span><ul id="B0000000000000003085_Period"><li class="li_selected"><span id="Period_0" class="long_width" name="7D" onclick="premRecal('106501009', this, 'B0000000000000003085_Period');">7天</span></li></ul></div><div  ><span>计划</span><ul id="B0000000000000003087_Plan"><li class="li_selected"><span id="Plan_0" class="long_width" name="NC030309" onclick="premRecal('106501009', this, 'B0000000000000003087_Plan');">7日畅游</span></li></ul></div><div style="display:none;" ><span>职业类别</span><ul id="B0000000000000003086_Occup"><li class="li_selected"><span id="Occup_0" class="long_width" name="1-4" onclick="premRecal('106501009', this, 'B0000000000000003086_Occup');">1-4类</span></li></ul></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span name="Ajax_Prict_106501009" id="productPrem_106501009" ><em>￥</em>7.00</span></li><li class="priceB"><span id="Clear_li_Ajax_Prict_106501009" style="display:none">原价：</span><span name="Clear_Ajax_Prict_106501009" style="display:none" id="productRatePrem_106501009"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282858.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('106501009');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('昆仑吉祥行7日旅游保险','/','106501009','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">境内短期旅行人士。</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>意外及医疗保障</span></li><li><span>救护车、丧葬费用报销</span></li><li><span>保费低廉</span></li></ul></div>
+							<div id="divRiskAppDuty_106501009" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_00000000000000003294" ><span class="CDutyCol1">意外伤害</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000003294_B0000000000000003087_NC030309">20万</span></span></td><span class="CDutyCol3">意外身故、残疾、烧伤保障</span></div><div class="list_2 row0" id="Duty_00000000000000003295" ><span class="CDutyCol1">意外医疗</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000003295_B0000000000000003087_NC030309">2万</span></span></td><span class="CDutyCol3">提供因意外伤害造成的医疗费用，按照保险条款规定金额赔付。</span></div><div class="list_3 row1" id="Duty_00000000000000003293" ><span class="CDutyCol1">住院津贴</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000003293_B0000000000000003087_NC030309">20元/天</span></span></td><span class="CDutyCol3">提供因意外伤害造成的住院治疗，按照保险条款规定金额赔付。</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2007"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282844.shtml" target="_blank"><h2 class="ziti">平安畅游天下境外旅行保障计划</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_200701047">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_200701047"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_200701047" class="CRiskAppFactor"><div  ><span>投保年龄</span><select id="200701047_TextAge" name="TextAge" onchange="premRecal('200701047', this, '200701047_TextAge');" ><option selected value="0Y-65Y">0-65周岁</option><option value="66Y-75Y">66-75周岁</option><option value="76Y-80Y">76-80周岁</option></select></div><div  ><span>保险期限</span><select id="200701047_Period" name="Period" onchange="premRecal('200701047', this, '200701047_Period');" ><option selected value="1D-7D">1-7天</option><option value="8D-10D">8-10天</option><option value="11D-14D">11-14天</option><option value="15D-24D">15-24天</option><option value="22D-28D">22-28天</option><option value="35D">35天</option><option value="42D">42天</option><option value="49D">49天</option><option value="56D">56天</option><option value="63D">63天</option><option value="70D">70天</option><option value="77D">77天</option><option value="84D">84天</option><option value="91D">91天</option><option value="98D">98天</option><option value="105D">105天</option><option value="112D">112天</option><option value="119D">119天</option><option value="126D">126天</option><option value="133D">133天</option><option value="140D">140天</option><option value="147D">147天</option><option value="154D">154天</option><option value="161D">161天</option><option value="168D">168天</option><option value="175D">175天</option><option value="180D">180天</option></select></div><div  ><span>计划</span><select id="200701047_Plan" name="Plan" onchange="premRecal('200701047', this, '200701047_Plan');" ><option selected value="00828">港澳台计划</option><option value="00829">东南亚计划</option><option value="00830">亚洲计划</option><option value="00831">欧洲基础计划</option><option value="00832">欧洲全面计划</option><option value="00833">全球基础计划</option><option value="00834">全球全面计划</option><option value="00880">欧洲无忧计划</option></select></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span name="Ajax_Prict_200701047" id="productPrem_200701047" ><em>￥</em>50.00</span></li><li class="priceB"><span id="Clear_li_Ajax_Prict_200701047" style="display:none">原价：</span><span name="Clear_Ajax_Prict_200701047" style="display:none" id="productRatePrem_200701047"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282844.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('200701047');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('平安畅游天下境外旅行保障计划','/eriskfile/ERiskPic/200701047.jpg','200701047','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">1、专为出行准备，适合有签证需求、保障需求较高的出境游；
+2、自由行、跟团、探亲、求学都适用；
+3、新婚蜜月度假，购物之旅；</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>承保年龄到80岁</span></li><li><span>出行天数自由选</span></li><li><span>旅程延误给补偿</span></li><li><span>交通工具双倍保</span></li><li><span>24小时紧急搜救</span></li><li><span>航班备降、迫降保险</span></li></ul></div>
+							<div id="divRiskAppDuty_200701047" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_200701047001" ><span class="CDutyCol1">意外身故和残疾</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047001_B0000000000000004368_00828">10万</span><span class="CDutyCol2" id="200701047001_B0000000000000004368_00829" style="display:none;">10万</span><span class="CDutyCol2" id="200701047001_B0000000000000004368_00830" style="display:none;">20万</span><span class="CDutyCol2" id="200701047001_B0000000000000004368_00831" style="display:none;">20万</span><span class="CDutyCol2" id="200701047001_B0000000000000004368_00832" style="display:none;">20万</span><span class="CDutyCol2" id="200701047001_B0000000000000004368_00833" style="display:none;">30万</span><span class="CDutyCol2" id="200701047001_B0000000000000004368_00834" style="display:none;">50万</span><span class="CDutyCol2" id="200701047001_B0000000000000004368_00880" style="display:none;">20万</span></span></td><span class="CDutyCol3">意外身故及残疾</span></div><div class="list_2 row0" id="Duty_200701047002" ><span class="CDutyCol1">平安旅行附加特定事故保险</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047002_B0000000000000004368_00828">5万</span><span class="CDutyCol2" id="200701047002_B0000000000000004368_00829" style="display:none;">5万</span><span class="CDutyCol2" id="200701047002_B0000000000000004368_00830" style="display:none;">10万</span><span class="CDutyCol2" id="200701047002_B0000000000000004368_00831" style="display:none;">10万</span><span class="CDutyCol2" id="200701047002_B0000000000000004368_00832" style="display:none;">15万</span><span class="CDutyCol2" id="200701047002_B0000000000000004368_00833" style="display:none;">20万</span><span class="CDutyCol2" id="200701047002_B0000000000000004368_00834" style="display:none;">40万</span><span class="CDutyCol2" id="200701047002_B0000000000000004368_00880" style="display:none;">10万</span></span></td><span class="CDutyCol3">意外身故,残疾及烧烫伤</span></div><div class="list_3 row1" id="Duty_200701047003" ><span class="CDutyCol1">医疗责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047003_B0000000000000004368_00828">1万</span><span class="CDutyCol2" id="200701047003_B0000000000000004368_00829" style="display:none;">5万</span><span class="CDutyCol2" id="200701047003_B0000000000000004368_00830" style="display:none;">10万</span><span class="CDutyCol2" id="200701047003_B0000000000000004368_00831" style="display:none;">35万</span><span class="CDutyCol2" id="200701047003_B0000000000000004368_00832" style="display:none;">35万</span><span class="CDutyCol2" id="200701047003_B0000000000000004368_00833" style="display:none;">50万</span><span class="CDutyCol2" id="200701047003_B0000000000000004368_00834" style="display:none;">50万</span><span class="CDutyCol2" id="200701047003_B0000000000000004368_00880" style="display:none;">35万</span></span></td><span class="CDutyCol3">意外和急性病医疗补偿（含门急诊、住院医疗）(其中辅助设备每次事故限额￥2500，牙科门诊每次事故限额￥4000每次事故免赔额￥800</span></div><div class="list_4 row0" id="Duty_200701047004" ><span class="CDutyCol1">医疗运送和运返</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047004_B0000000000000004368_00828">5万</span><span class="CDutyCol2" id="200701047004_B0000000000000004368_00829" style="display:none;">10万</span><span class="CDutyCol2" id="200701047004_B0000000000000004368_00830" style="display:none;">20万</span><span class="CDutyCol2" id="200701047004_B0000000000000004368_00831" style="display:none;">50万</span><span class="CDutyCol2" id="200701047004_B0000000000000004368_00832" style="display:none;">50万</span><span class="CDutyCol2" id="200701047004_B0000000000000004368_00833" style="display:none;">100万</span><span class="CDutyCol2" id="200701047004_B0000000000000004368_00834" style="display:none;">100万</span><span class="CDutyCol2" id="200701047004_B0000000000000004368_00880" style="display:none;">50万</span></span></td><span class="CDutyCol3">医疗运送和送返</span></div><div class="list_5 row1" id="Duty_200701047005" ><span class="CDutyCol1">身故遗体/骨灰送返（其中丧葬保险金）</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047005_B0000000000000004368_00828">5万</span><span class="CDutyCol2" id="200701047005_B0000000000000004368_00829" style="display:none;">5万</span><span class="CDutyCol2" id="200701047005_B0000000000000004368_00830" style="display:none;">10万</span><span class="CDutyCol2" id="200701047005_B0000000000000004368_00831" style="display:none;">15万</span><span class="CDutyCol2" id="200701047005_B0000000000000004368_00832" style="display:none;">15万</span><span class="CDutyCol2" id="200701047005_B0000000000000004368_00833" style="display:none;">20万</span><span class="CDutyCol2" id="200701047005_B0000000000000004368_00834" style="display:none;">20万</span><span class="CDutyCol2" id="200701047005_B0000000000000004368_00880" style="display:none;">15万</span></span></td><span class="CDutyCol3">身故遗体/骨灰送返 其中丧葬保险金 ￥16000</span></div><div class="list_5 row0" id="Duty_200701047006" ><span class="CDutyCol1">亲属前往处理后事</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047006_B0000000000000004368_00828">8000</span><span class="CDutyCol2" id="200701047006_B0000000000000004368_00829" style="display:none;">8000</span><span class="CDutyCol2" id="200701047006_B0000000000000004368_00830" style="display:none;">1万</span><span class="CDutyCol2" id="200701047006_B0000000000000004368_00831" style="display:none;">1.2万</span><span class="CDutyCol2" id="200701047006_B0000000000000004368_00832" style="display:none;">1.6万</span><span class="CDutyCol2" id="200701047006_B0000000000000004368_00833" style="display:none;">20万</span><span class="CDutyCol2" id="200701047006_B0000000000000004368_00834" style="display:none;">20万</span><span class="CDutyCol2" id="200701047006_B0000000000000004368_00880" style="display:none;">1.2万</span></span></td><span class="CDutyCol3">亲属前往处理后事补偿</span></div><div class="list_5 row1" id="Duty_200701047007" ><span class="CDutyCol1">亲属慰问探访</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047007_B0000000000000004368_00828">8000</span><span class="CDutyCol2" id="200701047007_B0000000000000004368_00829" style="display:none;">8000</span><span class="CDutyCol2" id="200701047007_B0000000000000004368_00830" style="display:none;">1万</span><span class="CDutyCol2" id="200701047007_B0000000000000004368_00831" style="display:none;">1.2万</span><span class="CDutyCol2" id="200701047007_B0000000000000004368_00832" style="display:none;">1.6万</span><span class="CDutyCol2" id="200701047007_B0000000000000004368_00833" style="display:none;">20万</span><span class="CDutyCol2" id="200701047007_B0000000000000004368_00834" style="display:none;">20万</span><span class="CDutyCol2" id="200701047007_B0000000000000004368_00880" style="display:none;">1.2万</span></span></td><span class="CDutyCol3">亲属慰问探访补偿（经济舱往返机票上限￥6500,住宿费每日不超过1600且每次事件该项目最高上限为6500</span></div><div class="list_5 row0" id="Duty_200701047008" ><span class="CDutyCol1">证件遗失</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047008_B0000000000000004368_00830" style="display:none;">4000</span><span class="CDutyCol2" id="200701047008_B0000000000000004368_00832" style="display:none;">4000</span><span class="CDutyCol2" id="200701047008_B0000000000000004368_00833" style="display:none;">8000</span><span class="CDutyCol2" id="200701047008_B0000000000000004368_00834" style="display:none;">1.2万</span><span class="CDutyCol2" id="200701047008_B0000000000000004368_00828">-</span><span class="CDutyCol2" id="200701047008_B0000000000000004368_00829" style="display:none;">-</span><span class="CDutyCol2" id="200701047008_B0000000000000004368_00831" style="display:none;">-</span><span class="CDutyCol2" id="200701047008_B0000000000000004368_00880" style="display:none;">-</span></span></td><span class="CDutyCol3">旅行证件损失</span></div><div class="list_5 row1" id="Duty_200701047009" ><span class="CDutyCol1">旅程延误</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047009_B0000000000000004368_00828">600</span><span class="CDutyCol2" id="200701047009_B0000000000000004368_00829" style="display:none;">1000</span><span class="CDutyCol2" id="200701047009_B0000000000000004368_00830" style="display:none;">2000</span><span class="CDutyCol2" id="200701047009_B0000000000000004368_00831" style="display:none;">1000</span><span class="CDutyCol2" id="200701047009_B0000000000000004368_00832" style="display:none;">2000</span><span class="CDutyCol2" id="200701047009_B0000000000000004368_00833" style="display:none;">2000</span><span class="CDutyCol2" id="200701047009_B0000000000000004368_00834" style="display:none;">5000</span><span class="CDutyCol2" id="200701047009_B0000000000000004368_00880" style="display:none;">1000</span></span></td><span class="CDutyCol3">旅行延误每5小时延误赔偿300</span></div><div class="list_5 row0" id="Duty_200701047010" ><span class="CDutyCol1">行李延误</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047010_B0000000000000004368_00831" style="display:none;">1000</span><span class="CDutyCol2" id="200701047010_B0000000000000004368_00832" style="display:none;">2000</span><span class="CDutyCol2" id="200701047010_B0000000000000004368_00833" style="display:none;">1500</span><span class="CDutyCol2" id="200701047010_B0000000000000004368_00834" style="display:none;">3000</span><span class="CDutyCol2" id="200701047010_B0000000000000004368_00880" style="display:none;">1000</span><span class="CDutyCol2" id="200701047010_B0000000000000004368_00828">-</span><span class="CDutyCol2" id="200701047010_B0000000000000004368_00829" style="display:none;">-</span><span class="CDutyCol2" id="200701047010_B0000000000000004368_00830" style="display:none;">-</span></span></td><span class="CDutyCol3">行李延误每8小时延误赔偿500</span></div><div class="list_5 row1" id="Duty_200701047011" ><span class="CDutyCol1">旅行变更</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047011_B0000000000000004368_00830" style="display:none;">3000</span><span class="CDutyCol2" id="200701047011_B0000000000000004368_00831" style="display:none;">2000</span><span class="CDutyCol2" id="200701047011_B0000000000000004368_00832" style="display:none;">5000</span><span class="CDutyCol2" id="200701047011_B0000000000000004368_00833" style="display:none;">2000</span><span class="CDutyCol2" id="200701047011_B0000000000000004368_00834" style="display:none;">5000</span><span class="CDutyCol2" id="200701047011_B0000000000000004368_00880" style="display:none;">2000</span><span class="CDutyCol2" id="200701047011_B0000000000000004368_00828">-</span><span class="CDutyCol2" id="200701047011_B0000000000000004368_00829" style="display:none;">-</span></span></td><span class="CDutyCol3">旅行变更每次事故免赔额为赔款的20%</span></div><div class="list_5 row0" id="Duty_200701047012" ><span class="CDutyCol1">航班备降、迫降保险</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047012_B0000000000000004368_00828">1000</span><span class="CDutyCol2" id="200701047012_B0000000000000004368_00829" style="display:none;">1000</span><span class="CDutyCol2" id="200701047012_B0000000000000004368_00830" style="display:none;">1000</span><span class="CDutyCol2" id="200701047012_B0000000000000004368_00831" style="display:none;">1500</span><span class="CDutyCol2" id="200701047012_B0000000000000004368_00832" style="display:none;">1500</span><span class="CDutyCol2" id="200701047012_B0000000000000004368_00833" style="display:none;">2000</span><span class="CDutyCol2" id="200701047012_B0000000000000004368_00834" style="display:none;">2000</span><span class="CDutyCol2" id="200701047012_B0000000000000004368_00880" style="display:none;">1500</span></span></td><span class="CDutyCol3">航班备降、迫降</span></div><div class="list_5 row1" id="Duty_200701047013" ><span class="CDutyCol1">托运行李损失</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047013_B0000000000000004368_00830" style="display:none;">2000</span><span class="CDutyCol2" id="200701047013_B0000000000000004368_00832" style="display:none;">2000</span><span class="CDutyCol2" id="200701047013_B0000000000000004368_00834" style="display:none;">6000</span><span class="CDutyCol2" id="200701047013_B0000000000000004368_00828">-</span><span class="CDutyCol2" id="200701047013_B0000000000000004368_00829" style="display:none;">-</span><span class="CDutyCol2" id="200701047013_B0000000000000004368_00831" style="display:none;">-</span><span class="CDutyCol2" id="200701047013_B0000000000000004368_00833" style="display:none;">-</span><span class="CDutyCol2" id="200701047013_B0000000000000004368_00880" style="display:none;">-</span></span></td><span class="CDutyCol3">托运行李损失运动器械及其附件的最高赔付额为总保额的25%。每次事故免赔额为赔款的20%或RMB200元，以高者为准.</span></div><div class="list_5 row0" id="Duty_200701047014" ><span class="CDutyCol1">平安境外旅行附加个人钱财损失保险</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047014_B0000000000000004368_00831" style="display:none;">1500</span><span class="CDutyCol2" id="200701047014_B0000000000000004368_00832" style="display:none;">2000</span><span class="CDutyCol2" id="200701047014_B0000000000000004368_00833" style="display:none;">2000</span><span class="CDutyCol2" id="200701047014_B0000000000000004368_00834" style="display:none;">3000</span><span class="CDutyCol2" id="200701047014_B0000000000000004368_00880" style="display:none;">1500</span><span class="CDutyCol2" id="200701047014_B0000000000000004368_00828">-</span><span class="CDutyCol2" id="200701047014_B0000000000000004368_00829" style="display:none;">-</span><span class="CDutyCol2" id="200701047014_B0000000000000004368_00830" style="display:none;">-</span></span></td><span class="CDutyCol3">个人钱财损失每次事故免赔额为赔款的20%或RMB200元，以高者为准.</span></div><div class="list_5 row1" id="Duty_200701047015" ><span class="CDutyCol1">平安旅行附加银行卡、支票盗抢保险</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047015_B0000000000000004368_00828">3000</span><span class="CDutyCol2" id="200701047015_B0000000000000004368_00829" style="display:none;">3000</span><span class="CDutyCol2" id="200701047015_B0000000000000004368_00830" style="display:none;">5000</span><span class="CDutyCol2" id="200701047015_B0000000000000004368_00831" style="display:none;">5000</span><span class="CDutyCol2" id="200701047015_B0000000000000004368_00832" style="display:none;">8000</span><span class="CDutyCol2" id="200701047015_B0000000000000004368_00833" style="display:none;">8000</span><span class="CDutyCol2" id="200701047015_B0000000000000004368_00834" style="display:none;">1.2万</span><span class="CDutyCol2" id="200701047015_B0000000000000004368_00880" style="display:none;">0.5万</span></span></td><span class="CDutyCol3">银行卡、支票盗抢每次事故免赔额为赔款的20%.</span></div><div class="list_5 row0" id="Duty_200701047016" ><span class="CDutyCol1">平安旅行附加绑架及非法拘禁保险（每天赔3）</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047016_B0000000000000004368_00828">1.5万</span><span class="CDutyCol2" id="200701047016_B0000000000000004368_00829" style="display:none;">1.5万</span><span class="CDutyCol2" id="200701047016_B0000000000000004368_00830" style="display:none;">1.5万</span><span class="CDutyCol2" id="200701047016_B0000000000000004368_00831" style="display:none;">3万</span><span class="CDutyCol2" id="200701047016_B0000000000000004368_00832" style="display:none;">3万</span><span class="CDutyCol2" id="200701047016_B0000000000000004368_00833" style="display:none;">6万</span><span class="CDutyCol2" id="200701047016_B0000000000000004368_00834" style="display:none;">6万</span><span class="CDutyCol2" id="200701047016_B0000000000000004368_00880" style="display:none;">3万</span></span></td><span class="CDutyCol3">绑架及非法拘禁每24小时赔偿3000，限额60000</span></div><div class="list_5 row1" id="Duty_200701047017" ><span class="CDutyCol1">旅行期间家庭财产</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047017_B0000000000000004368_00830" style="display:none;">3000</span><span class="CDutyCol2" id="200701047017_B0000000000000004368_00832" style="display:none;">5000</span><span class="CDutyCol2" id="200701047017_B0000000000000004368_00834" style="display:none;">5000</span><span class="CDutyCol2" id="200701047017_B0000000000000004368_00828">-</span><span class="CDutyCol2" id="200701047017_B0000000000000004368_00829" style="display:none;">-</span><span class="CDutyCol2" id="200701047017_B0000000000000004368_00831" style="display:none;">-</span><span class="CDutyCol2" id="200701047017_B0000000000000004368_00833" style="display:none;">-</span><span class="CDutyCol2" id="200701047017_B0000000000000004368_00880" style="display:none;">-</span></span></td><span class="CDutyCol3">家庭财产损失</span></div><div class="list_5 row0" id="Duty_200701047018" ><span class="CDutyCol1">个人责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701047018_B0000000000000004368_00828">10万</span><span class="CDutyCol2" id="200701047018_B0000000000000004368_00829" style="display:none;">20万</span><span class="CDutyCol2" id="200701047018_B0000000000000004368_00830" style="display:none;">40万</span><span class="CDutyCol2" id="200701047018_B0000000000000004368_00831" style="display:none;">50万</span><span class="CDutyCol2" id="200701047018_B0000000000000004368_00832" style="display:none;">50万</span><span class="CDutyCol2" id="200701047018_B0000000000000004368_00833" style="display:none;">100万</span><span class="CDutyCol2" id="200701047018_B0000000000000004368_00834" style="display:none;">100万</span><span class="CDutyCol2" id="200701047018_B0000000000000004368_00880" style="display:none;">50万</span></span></td><span class="CDutyCol3">个人责任第三者财产损失每次事故免赔额￥800</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2007"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282838.shtml" target="_blank"><h2 class="ziti">平安畅游天下境外旅游全年保障计划</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_200701048">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_200701048"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_200701048" class="CRiskAppFactor"><div  ><span>投保年龄</span><select id="200701048_TextAge" name="TextAge" onchange="premRecal('200701048', this, '200701048_TextAge');" ><option selected value="0Y-65Y">0-65周岁</option><option value="66Y-75Y">66-75周岁</option><option value="76Y-80Y">76-80周岁</option></select></div><div  ><span>保险期限</span><ul id="B0000000000000004412_Period"><li class="li_selected"><span id="Period_0" class="long_width" name="1Y" onclick="premRecal('200701048', this, 'B0000000000000004412_Period');">1年</span></li></ul></div><div  ><span>计划</span><select id="200701048_Plan" name="Plan" onchange="premRecal('200701048', this, '200701048_Plan');" ><option selected value="00835">港澳台计划</option><option value="00836">东南亚计划</option><option value="00837">亚洲计划</option><option value="00838">欧洲基础计划</option><option value="00839">欧洲全面计划</option><option value="00840">全球基础计划</option><option value="00841">全球全面计划</option></select></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span name="Ajax_Prict_200701048" id="productPrem_200701048" ><em>￥</em>475.00</span></li><li class="priceB"><span id="Clear_li_Ajax_Prict_200701048" style="display:none">原价：</span><span name="Clear_Ajax_Prict_200701048" style="display:none" id="productRatePrem_200701048"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282838.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('200701048');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('平安畅游天下境外旅游全年保障计划','/eriskfile/ERiskPic/200701048.jpg','200701048','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">1、专为出行准备，适合有签证需求、保障需求较高的出境游；
+2、自由行、跟团、探亲、求学都适用；
+3、新婚蜜月度假，购物之旅；</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>承保年龄到80岁</span></li><li><span>出行天数自由选</span></li><li><span>旅程延误给补偿</span></li><li><span>24小时紧急搜救</span></li><li><span>航班备降、迫降保险</span></li><li><span>旅行期间家庭财产保障</span></li></ul></div>
+							<div id="divRiskAppDuty_200701048" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_200701048001" ><span class="CDutyCol1">意外身故和残疾</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048001_B0000000000000004413_00835">10万</span><span class="CDutyCol2" id="200701048001_B0000000000000004413_00836" style="display:none;">10万</span><span class="CDutyCol2" id="200701048001_B0000000000000004413_00837" style="display:none;">20万</span><span class="CDutyCol2" id="200701048001_B0000000000000004413_00838" style="display:none;">20万</span><span class="CDutyCol2" id="200701048001_B0000000000000004413_00839" style="display:none;">20万</span><span class="CDutyCol2" id="200701048001_B0000000000000004413_00840" style="display:none;">30万</span><span class="CDutyCol2" id="200701048001_B0000000000000004413_00841" style="display:none;">50万</span></span></td><span class="CDutyCol3">意外身故及残疾</span></div><div class="list_2 row0" id="Duty_200701048002" ><span class="CDutyCol1">平安旅行附加特定事故保险</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048002_B0000000000000004413_00835">5万</span><span class="CDutyCol2" id="200701048002_B0000000000000004413_00836" style="display:none;">5万</span><span class="CDutyCol2" id="200701048002_B0000000000000004413_00837" style="display:none;">10万</span><span class="CDutyCol2" id="200701048002_B0000000000000004413_00838" style="display:none;">10万</span><span class="CDutyCol2" id="200701048002_B0000000000000004413_00839" style="display:none;">15万</span><span class="CDutyCol2" id="200701048002_B0000000000000004413_00840" style="display:none;">20万</span><span class="CDutyCol2" id="200701048002_B0000000000000004413_00841" style="display:none;">40万</span></span></td><span class="CDutyCol3">意外身故,残疾及烧烫伤</span></div><div class="list_3 row1" id="Duty_200701048003" ><span class="CDutyCol1">医疗责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048003_B0000000000000004413_00835">1万</span><span class="CDutyCol2" id="200701048003_B0000000000000004413_00836" style="display:none;">5万</span><span class="CDutyCol2" id="200701048003_B0000000000000004413_00837" style="display:none;">10万</span><span class="CDutyCol2" id="200701048003_B0000000000000004413_00838" style="display:none;">35万</span><span class="CDutyCol2" id="200701048003_B0000000000000004413_00839" style="display:none;">35万</span><span class="CDutyCol2" id="200701048003_B0000000000000004413_00840" style="display:none;">50万</span><span class="CDutyCol2" id="200701048003_B0000000000000004413_00841" style="display:none;">50万</span></span></td><span class="CDutyCol3">意外和急性病医疗补偿（含门急诊、住院医疗）(其中辅助设备每次事故限额￥2500，牙科门诊每次事故限额￥4000每次事故免赔额￥800</span></div><div class="list_4 row0" id="Duty_200701048004" ><span class="CDutyCol1">医疗运送和运返</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048004_B0000000000000004413_00835">5万</span><span class="CDutyCol2" id="200701048004_B0000000000000004413_00836" style="display:none;">10万</span><span class="CDutyCol2" id="200701048004_B0000000000000004413_00837" style="display:none;">20万</span><span class="CDutyCol2" id="200701048004_B0000000000000004413_00838" style="display:none;">50万</span><span class="CDutyCol2" id="200701048004_B0000000000000004413_00839" style="display:none;">50万</span><span class="CDutyCol2" id="200701048004_B0000000000000004413_00840" style="display:none;">100万</span><span class="CDutyCol2" id="200701048004_B0000000000000004413_00841" style="display:none;">100万</span></span></td><span class="CDutyCol3">医疗运送和送返</span></div><div class="list_5 row1" id="Duty_200701048005" ><span class="CDutyCol1">身故遗体/骨灰送返（其中丧葬保险金）</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048005_B0000000000000004413_00835">5万</span><span class="CDutyCol2" id="200701048005_B0000000000000004413_00836" style="display:none;">5万</span><span class="CDutyCol2" id="200701048005_B0000000000000004413_00837" style="display:none;">10万</span><span class="CDutyCol2" id="200701048005_B0000000000000004413_00838" style="display:none;">15万</span><span class="CDutyCol2" id="200701048005_B0000000000000004413_00839" style="display:none;">15万</span><span class="CDutyCol2" id="200701048005_B0000000000000004413_00840" style="display:none;">20万</span><span class="CDutyCol2" id="200701048005_B0000000000000004413_00841" style="display:none;">20万</span></span></td><span class="CDutyCol3">身故遗体/骨灰送返 其中丧葬保险金 ￥16000</span></div><div class="list_5 row0" id="Duty_200701048006" ><span class="CDutyCol1">亲属前往处理后事</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048006_B0000000000000004413_00835">8000</span><span class="CDutyCol2" id="200701048006_B0000000000000004413_00836" style="display:none;">8000</span><span class="CDutyCol2" id="200701048006_B0000000000000004413_00837" style="display:none;">1万</span><span class="CDutyCol2" id="200701048006_B0000000000000004413_00838" style="display:none;">1.2万</span><span class="CDutyCol2" id="200701048006_B0000000000000004413_00839" style="display:none;">1.6万</span><span class="CDutyCol2" id="200701048006_B0000000000000004413_00840" style="display:none;">20万</span><span class="CDutyCol2" id="200701048006_B0000000000000004413_00841" style="display:none;">20万</span></span></td><span class="CDutyCol3">亲属前往处理后事补偿</span></div><div class="list_5 row1" id="Duty_200701048007" ><span class="CDutyCol1">亲属慰问探访</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048007_B0000000000000004413_00835">8000</span><span class="CDutyCol2" id="200701048007_B0000000000000004413_00836" style="display:none;">8000</span><span class="CDutyCol2" id="200701048007_B0000000000000004413_00837" style="display:none;">1万</span><span class="CDutyCol2" id="200701048007_B0000000000000004413_00838" style="display:none;">1.2万</span><span class="CDutyCol2" id="200701048007_B0000000000000004413_00839" style="display:none;">1.6万</span><span class="CDutyCol2" id="200701048007_B0000000000000004413_00840" style="display:none;">20万</span><span class="CDutyCol2" id="200701048007_B0000000000000004413_00841" style="display:none;">20万</span></span></td><span class="CDutyCol3">亲属慰问探访补偿（经济舱往返机票上限￥6500,住宿费每日不超过1600且每次事件该项目最高上限为6500</span></div><div class="list_5 row0" id="Duty_200701048008" ><span class="CDutyCol1">证件遗失</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048008_B0000000000000004413_00837" style="display:none;">4000</span><span class="CDutyCol2" id="200701048008_B0000000000000004413_00839" style="display:none;">4000</span><span class="CDutyCol2" id="200701048008_B0000000000000004413_00840" style="display:none;">8000</span><span class="CDutyCol2" id="200701048008_B0000000000000004413_00841" style="display:none;">1.2万</span><span class="CDutyCol2" id="200701048008_B0000000000000004413_00835">-</span><span class="CDutyCol2" id="200701048008_B0000000000000004413_00836" style="display:none;">-</span><span class="CDutyCol2" id="200701048008_B0000000000000004413_00838" style="display:none;">-</span></span></td><span class="CDutyCol3">旅行证件损失</span></div><div class="list_5 row1" id="Duty_200701048009" ><span class="CDutyCol1">旅程延误</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048009_B0000000000000004413_00835">600</span><span class="CDutyCol2" id="200701048009_B0000000000000004413_00836" style="display:none;">1000</span><span class="CDutyCol2" id="200701048009_B0000000000000004413_00837" style="display:none;">2000</span><span class="CDutyCol2" id="200701048009_B0000000000000004413_00838" style="display:none;">1000</span><span class="CDutyCol2" id="200701048009_B0000000000000004413_00839" style="display:none;">2000</span><span class="CDutyCol2" id="200701048009_B0000000000000004413_00840" style="display:none;">2000</span><span class="CDutyCol2" id="200701048009_B0000000000000004413_00841" style="display:none;">5000</span></span></td><span class="CDutyCol3">旅行延误每5小时延误赔偿300</span></div><div class="list_5 row0" id="Duty_200701048010" ><span class="CDutyCol1">行李延误</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048010_B0000000000000004413_00838" style="display:none;">1000</span><span class="CDutyCol2" id="200701048010_B0000000000000004413_00839" style="display:none;">2000</span><span class="CDutyCol2" id="200701048010_B0000000000000004413_00840" style="display:none;">1500</span><span class="CDutyCol2" id="200701048010_B0000000000000004413_00841" style="display:none;">3000</span><span class="CDutyCol2" id="200701048010_B0000000000000004413_00835">-</span><span class="CDutyCol2" id="200701048010_B0000000000000004413_00836" style="display:none;">-</span><span class="CDutyCol2" id="200701048010_B0000000000000004413_00837" style="display:none;">-</span></span></td><span class="CDutyCol3">行李延误每8小时延误赔偿500</span></div><div class="list_5 row1" id="Duty_200701048011" ><span class="CDutyCol1">旅行变更</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048011_B0000000000000004413_00837" style="display:none;">3000</span><span class="CDutyCol2" id="200701048011_B0000000000000004413_00838" style="display:none;">2000</span><span class="CDutyCol2" id="200701048011_B0000000000000004413_00839" style="display:none;">5000</span><span class="CDutyCol2" id="200701048011_B0000000000000004413_00840" style="display:none;">2000</span><span class="CDutyCol2" id="200701048011_B0000000000000004413_00841" style="display:none;">5000</span><span class="CDutyCol2" id="200701048011_B0000000000000004413_00835">-</span><span class="CDutyCol2" id="200701048011_B0000000000000004413_00836" style="display:none;">-</span></span></td><span class="CDutyCol3">旅行变更每次事故免赔额为赔款的20%</span></div><div class="list_5 row0" id="Duty_200701048012" ><span class="CDutyCol1">航班备降、迫降保险</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048012_B0000000000000004413_00835">1000</span><span class="CDutyCol2" id="200701048012_B0000000000000004413_00836" style="display:none;">1000</span><span class="CDutyCol2" id="200701048012_B0000000000000004413_00837" style="display:none;">1000</span><span class="CDutyCol2" id="200701048012_B0000000000000004413_00838" style="display:none;">1500</span><span class="CDutyCol2" id="200701048012_B0000000000000004413_00839" style="display:none;">1500</span><span class="CDutyCol2" id="200701048012_B0000000000000004413_00840" style="display:none;">2000</span><span class="CDutyCol2" id="200701048012_B0000000000000004413_00841" style="display:none;">2000</span></span></td><span class="CDutyCol3">航班备降、迫降</span></div><div class="list_5 row1" id="Duty_200701048013" ><span class="CDutyCol1">托运行李损失</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048013_B0000000000000004413_00837" style="display:none;">2000</span><span class="CDutyCol2" id="200701048013_B0000000000000004413_00839" style="display:none;">2000</span><span class="CDutyCol2" id="200701048013_B0000000000000004413_00841" style="display:none;">6000</span><span class="CDutyCol2" id="200701048013_B0000000000000004413_00835">-</span><span class="CDutyCol2" id="200701048013_B0000000000000004413_00836" style="display:none;">-</span><span class="CDutyCol2" id="200701048013_B0000000000000004413_00838" style="display:none;">-</span><span class="CDutyCol2" id="200701048013_B0000000000000004413_00840" style="display:none;">-</span></span></td><span class="CDutyCol3">托运行李损失运动器械及其附件的最高赔付额为总保额的25%。每次事故免赔额为赔款的20%或RMB200元，以高者为准.</span></div><div class="list_5 row0" id="Duty_200701048014" ><span class="CDutyCol1">平安境外旅行附加个人钱财损失保险</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048014_B0000000000000004413_00838" style="display:none;">1500</span><span class="CDutyCol2" id="200701048014_B0000000000000004413_00839" style="display:none;">2000</span><span class="CDutyCol2" id="200701048014_B0000000000000004413_00840" style="display:none;">2000</span><span class="CDutyCol2" id="200701048014_B0000000000000004413_00841" style="display:none;">3000</span><span class="CDutyCol2" id="200701048014_B0000000000000004413_00835">-</span><span class="CDutyCol2" id="200701048014_B0000000000000004413_00836" style="display:none;">-</span><span class="CDutyCol2" id="200701048014_B0000000000000004413_00837" style="display:none;">-</span></span></td><span class="CDutyCol3">个人钱财损失每次事故免赔额为赔款的20%或RMB200元，以高者为准.</span></div><div class="list_5 row1" id="Duty_200701048015" ><span class="CDutyCol1">平安旅行附加银行卡、支票盗抢保险</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048015_B0000000000000004413_00835">3000</span><span class="CDutyCol2" id="200701048015_B0000000000000004413_00836" style="display:none;">3000</span><span class="CDutyCol2" id="200701048015_B0000000000000004413_00837" style="display:none;">5000</span><span class="CDutyCol2" id="200701048015_B0000000000000004413_00838" style="display:none;">5000</span><span class="CDutyCol2" id="200701048015_B0000000000000004413_00839" style="display:none;">8000</span><span class="CDutyCol2" id="200701048015_B0000000000000004413_00840" style="display:none;">8000</span><span class="CDutyCol2" id="200701048015_B0000000000000004413_00841" style="display:none;">1.2万</span></span></td><span class="CDutyCol3">银行卡、支票盗抢每次事故免赔额为赔款的20%.</span></div><div class="list_5 row0" id="Duty_200701048016" ><span class="CDutyCol1">平安旅行附加绑架及非法拘禁保险（每天赔3）</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048016_B0000000000000004413_00835">1.5万</span><span class="CDutyCol2" id="200701048016_B0000000000000004413_00836" style="display:none;">1.5万</span><span class="CDutyCol2" id="200701048016_B0000000000000004413_00837" style="display:none;">1.5万</span><span class="CDutyCol2" id="200701048016_B0000000000000004413_00838" style="display:none;">3万</span><span class="CDutyCol2" id="200701048016_B0000000000000004413_00839" style="display:none;">3万</span><span class="CDutyCol2" id="200701048016_B0000000000000004413_00840" style="display:none;">6万</span><span class="CDutyCol2" id="200701048016_B0000000000000004413_00841" style="display:none;">6万</span></span></td><span class="CDutyCol3">绑架及非法拘禁每24小时赔偿3000，限额60000</span></div><div class="list_5 row1" id="Duty_200701048017" ><span class="CDutyCol1">旅行期间家庭财产</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048017_B0000000000000004413_00837" style="display:none;">3000</span><span class="CDutyCol2" id="200701048017_B0000000000000004413_00839" style="display:none;">5000</span><span class="CDutyCol2" id="200701048017_B0000000000000004413_00841" style="display:none;">5000</span><span class="CDutyCol2" id="200701048017_B0000000000000004413_00835">-</span><span class="CDutyCol2" id="200701048017_B0000000000000004413_00836" style="display:none;">-</span><span class="CDutyCol2" id="200701048017_B0000000000000004413_00838" style="display:none;">-</span><span class="CDutyCol2" id="200701048017_B0000000000000004413_00840" style="display:none;">-</span></span></td><span class="CDutyCol3">家庭财产损失</span></div><div class="list_5 row0" id="Duty_200701048018" ><span class="CDutyCol1">个人责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="200701048018_B0000000000000004413_00835">10万</span><span class="CDutyCol2" id="200701048018_B0000000000000004413_00836" style="display:none;">20万</span><span class="CDutyCol2" id="200701048018_B0000000000000004413_00837" style="display:none;">40万</span><span class="CDutyCol2" id="200701048018_B0000000000000004413_00838" style="display:none;">50万</span><span class="CDutyCol2" id="200701048018_B0000000000000004413_00839" style="display:none;">50万</span><span class="CDutyCol2" id="200701048018_B0000000000000004413_00840" style="display:none;">100万</span><span class="CDutyCol2" id="200701048018_B0000000000000004413_00841" style="display:none;">100万</span></span></td><span class="CDutyCol3">个人责任第三者财产损失每次事故免赔额￥800</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2071"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282792.shtml" target="_blank"><h2 class="ziti">大众骑行无忧户外保障计划</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_207101025">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_207101025"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_207101025" class="CRiskAppFactor"><div  ><span>保险期限</span><select id="207101025_Period" name="Period" onchange="premRecal('207101025', this, '207101025_Period');" ><option selected value="1D">1天</option><option value="2D">2天</option><option value="3D">3天</option><option value="4D">4天</option><option value="5D">5天</option><option value="6D">6天</option><option value="7D">7天</option><option value="8D">8天</option><option value="9D">9天</option><option value="10D">10天</option><option value="11D">11天</option><option value="12D">12天</option><option value="13D">13天</option><option value="14D">14天</option><option value="15D">15天</option><option value="16D">16天</option><option value="17D">17天</option><option value="18D">18天</option><option value="19D">19天</option><option value="20D">20天</option><option value="21D">21天</option><option value="22D">22天</option><option value="23D">23天</option><option value="24D">24天</option><option value="25D">25天</option><option value="26D">26天</option><option value="27D">27天</option><option value="28D">28天</option><option value="29D">29天</option><option value="30D">30天</option><option value="31D">31天</option><option value="32D">32天</option><option value="33D">33天</option><option value="34D">34天</option><option value="35D">35天</option><option value="36D">36天</option><option value="37D">37天</option><option value="38D">38天</option><option value="39D">39天</option><option value="40D">40天</option><option value="41D">41天</option><option value="42D">42天</option><option value="43D">43天</option><option value="44D">44天</option><option value="45D">45天</option><option value="46D">46天</option><option value="47D">47天</option><option value="48D">48天</option><option value="49D">49天</option><option value="50D">50天</option><option value="51D">51天</option><option value="52D">52天</option><option value="53D">53天</option><option value="54D">54天</option><option value="55D">55天</option><option value="56D">56天</option><option value="57D">57天</option><option value="58D">58天</option><option value="59D">59天</option><option value="60D">60天</option><option value="365D">365天</option></select></div><div  ><span>投保年龄</span><ul id="B0000000000000004185_TextAge"><li class="li_selected"><span id="TextAge_0" class="long_width" name="1Y-65Y" onclick="premRecal('207101025', this, 'B0000000000000004185_TextAge');">1-65周岁</span></li></ul></div><div  ><span>计划</span><select id="207101025_Plan" name="Plan" onchange="premRecal('207101025', this, '207101025_Plan');" ><option selected value="350">计划A</option><option value="1635">计划B</option><option value="1636">计划C</option></select></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span name="Ajax_Prict_207101025" id="productPrem_207101025" ><em>￥</em>5.00</span></li><li class="priceB"><span id="Clear_li_Ajax_Prict_207101025" style="display:none">原价：</span><span name="Clear_Ajax_Prict_207101025" style="display:none" id="productRatePrem_207101025"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282792.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('207101025');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('大众骑行无忧户外保障计划','/','207101025','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">1-65岁骑行爱好者</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>针对性强,计划灵活</span></li><li><span>骑行人员的首选</span></li><li><span>提供意外伤害、意外医疗</span></li><li><span>价格低廉</span></li><li><span>旅行财产、紧急救援等保障</span></li></ul></div>
+							<div id="divRiskAppDuty_207101025" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_207101025001" ><span class="CDutyCol1">意外身故、伤残</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101025001_B0000000000000004187_350">10万</span><span class="CDutyCol2" id="207101025001_B0000000000000004187_1635" style="display:none;">20万</span><span class="CDutyCol2" id="207101025001_B0000000000000004187_1636" style="display:none;">30万</span></span></td><span class="CDutyCol3">保险期间内，若被保险人在骑行活动期间遭受意外事故导致身故、伤残，保险公司按保险单上所载被保险人相应的保险金额及合同条款约定给付身故保险金、伤残保险金。</span></div><div class="list_2 row0" id="Duty_207101025002" ><span class="CDutyCol1">意外医疗</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101025002_B0000000000000004187_350">1.5万</span><span class="CDutyCol2" id="207101025002_B0000000000000004187_1635" style="display:none;">3万</span><span class="CDutyCol2" id="207101025002_B0000000000000004187_1636" style="display:none;">5万</span></span></td><span class="CDutyCol3">保险期间内，若被保险人在骑行活动期间遭受约定的意外事故，且自发生事故之日起180日内进行必要治疗，保险公司对被保险人已支出的、必需且合理的实际医药费用给付保险金。（A计划免赔额100元，100%赔付）</span></div><div class="list_3 row1" id="Duty_207101025003" ><span class="CDutyCol1">紧急医疗运送与送返</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101025003_B0000000000000004187_1635" style="display:none;">2万</span><span class="CDutyCol2" id="207101025003_B0000000000000004187_1636" style="display:none;">3万</span><span class="CDutyCol2" id="207101025003_B0000000000000004187_350">-</span></span></td><span class="CDutyCol3">保险期间内，若被保险人在骑行活动期间因遭受意外伤害或身患疾病,保险公司将安排医疗运送和送返，并承担所发生的实际费用。</span></div><div class="list_4 row0" id="Duty_207101025004" ><span class="CDutyCol1">中暑医疗补偿</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101025004_B0000000000000004187_1635" style="display:none;">1000元</span><span class="CDutyCol2" id="207101025004_B0000000000000004187_1636" style="display:none;">3000元</span><span class="CDutyCol2" id="207101025004_B0000000000000004187_350">-</span></span></td><span class="CDutyCol3">保险期间内，若被保险人在骑行活动期间遭受中暑导致需要进行门诊或住院治疗，保险公司将给付保险金补偿。</span></div><div class="list_5 row1" id="Duty_207101025005" ><span class="CDutyCol1">急性肠胃炎医疗补偿</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101025005_B0000000000000004187_1635" style="display:none;">1000元</span><span class="CDutyCol2" id="207101025005_B0000000000000004187_1636" style="display:none;">3000元</span><span class="CDutyCol2" id="207101025005_B0000000000000004187_350">-</span></span></td><span class="CDutyCol3">在保险期间内，若被保险人在骑行活动期间突发罹患特别说明中的急性肠胃炎，且自罹患疾病之日起90日内进行必要合理的治疗，保险公司对被保险人已支出的、必需且合理的实际医药费用给付保险金，最高1000元。</span></div><div class="list_5 row0" id="Duty_207101025006" ><span class="CDutyCol1">个人随身财物</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101025006_B0000000000000004187_1635" style="display:none;">2000元</span><span class="CDutyCol2" id="207101025006_B0000000000000004187_1636" style="display:none;">5000元</span><span class="CDutyCol2" id="207101025006_B0000000000000004187_350">-</span></span></td><span class="CDutyCol3">保险期间内，若被保险人在骑行活动期间因条款约定原因致其所有并随身携带、穿着或置于行李箱、手提箱或类似容器内携带的个人物品遭受损失，保险公司依据本附加条款约定，按被保险人实际发生的损失给付保险金，但最高给付保险金额以保险单所载明的金额为限。（每件限额1000元）</span></div><div class="list_5 row1" id="Duty_207101025007" ><span class="CDutyCol1">自行车装备盗抢</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101025007_B0000000000000004187_1635" style="display:none;">1000元</span><span class="CDutyCol2" id="207101025007_B0000000000000004187_1636" style="display:none;">3000元</span><span class="CDutyCol2" id="207101025007_B0000000000000004187_350">-</span></span></td><span class="CDutyCol3">保险期间内，若被保险人在骑行活动期间因条款约定原因致其自行车装备遭遇盗抢，保险公司依据本附加条款约定，按被保险人实际发生的损失给付保险金，但最高给付保险金额以保险单所载明的金额为限。</span></div><div class="list_5 row0" id="Duty_207101025008" ><span class="CDutyCol1">个人责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="207101025008_B0000000000000004187_1635" style="display:none;">3000元</span><span class="CDutyCol2" id="207101025008_B0000000000000004187_1636" style="display:none;">5000元</span><span class="CDutyCol2" id="207101025008_B0000000000000004187_350">-</span></span></td><span class="CDutyCol3">保险期间内，若被保险人在骑行活动期间因自身行为导致第三者人身伤亡或财产损失，依法应承担赔偿责任，并由第三者在保险期间内提出赔偿请求时，保险公司依据本附加条款约定，以保险单所载明的保险金额为限赔偿被保险人因承担个人责任赔偿而发生的费用损失。</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2049"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282746.shtml" target="_blank"><h2 class="ziti">安联安途全球旅行保险</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_204901047">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_204901047"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_204901047" class="CRiskAppFactor"><div  ><span>保险期限</span><select id="204901047_Period" name="Period" onchange="premRecal('204901047', this, '204901047_Period');" ><option selected value="1D-7D">1-7天</option><option value="8D-10D">8-10天</option><option value="11D-14D">11-14天</option><option value="15D-17D">15-17天</option><option value="18D-21D">18-21天</option><option value="22D-24D">22-24天</option><option value="25D-30D">25-30天</option><option value="31D-60D">31-60天</option><option value="61D-90D">61-90天</option><option value="91D-180D">91-180天</option><option value="1Y">1年</option></select></div><div  ><span>投保年龄</span><ul id="B0000000000000005062_TextAge"><li class="li_selected"><span id="TextAge_0" class="long_width3" name="60D-200Y" onclick="premRecal('204901047', this, 'B0000000000000005062_TextAge');">60天-200周岁</span></li></ul></div><div  ><span>计划</span><ul id="B0000000000000005064_Plan"><li class="li_selected"><span id="Plan_0" class="long_width" name="ATQQPLAN01" onclick="premRecal('204901047', this, 'B0000000000000005064_Plan');">计划一</span></li></ul></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceA"><span name="Ajax_Prict_204901047" id="productPrem_204901047" class="CurrentPrice"><em>￥</em>85.00</span></li><li class="priceB"><span id="Clear_li_Ajax_Prict_204901047" style="display:none">原价：</span><span name="Clear_Ajax_Prict_204901047" class="priceB_" style="display:none" id="productRatePrem_204901047"  >121.00</span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282746.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('204901047');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('安联安途全球旅行保险','/','204901047','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">出生60天以上出境旅游出差等人士</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>家庭财产保障</span></li><li><span>航班延误，随身财产损失，旅程变更</span></li><li><span>自驾游，紧急医疗运送</span></li><li><span>个人钱财保障，猝死保障</span></li><li><span>申根拒签保障，信用卡盗刷保障</span></li></ul></div>
+							<div id="divRiskAppDuty_204901047" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_204901047001" ><span class="CDutyCol1">意外身故、伤残</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047001_B0000000000000005064_ATQQPLAN01">400,000</span></span></td><span class="CDutyCol3">被保险人在旅游期间因意外伤害事故导致身故或伤残的，保险公司给付身故保险金，残疾根据残伤程度给付，最高给付至保单保额。未成年人保额不超过保监会规定的限额。71周岁及以上的被保险人，身故、伤残保险金额减半。</span></div><div class="list_2 row0" id="Duty_204901047002" ><span class="CDutyCol1">猝死保障</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047002_B0000000000000005064_ATQQPLAN01">100,000</span></span></td><span class="CDutyCol3">被保险人在旅行时遭遇非意外伤害事故导致被保险人在该非意外伤害事故发生之日起48小时内身故（即猝死），保险公司按保险单所载明的保险金额给付猝死身故保险金。</span></div><div class="list_3 row1" id="Duty_204901047003" ><span class="CDutyCol1">公共交通工具意外</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047003_B0000000000000005064_ATQQPLAN01">400,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间以乘客人身份乘坐公共交通工具（不包括被保险人本人作为公共交通工具的驾驶员、操作人员或机组成员）时，在交通工具内因交通事故导致身故、伤残的，保险公司在给付一般意外伤害保险金的基础上，再给付公共交通工具意外保险金。</span></div><div class="list_4 row0" id="Duty_204901047004" ><span class="CDutyCol1">自驾车意外事故</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047004_B0000000000000005064_ATQQPLAN01">100,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间驾驶四轮机动车（7座以下，含7座）期间因遭受意外伤害事故导致身故、伤残的，保险公司在给付一般意外伤害保险金的基础上，再给付自驾车意外伤害保险金。</span></div><div class="list_5 row1" id="Duty_204901047005" ><span class="CDutyCol1">医疗费用（含门诊和住院，境内医疗费用限额1000元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047005_B0000000000000005064_ATQQPLAN01">300,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因意外伤害事故或罹患疾病，且自意外伤害事故或疾病发生之日起五日内到医院治疗的，保险公司按照实际支出的合理且必要的医疗费用进行赔偿，医疗费用包括住院医疗、门诊医疗（境内医疗费用限额1000元）。</span></div><div class="list_5 row0" id="Duty_204901047006" ><span class="CDutyCol1">紧急医疗运送</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047006_B0000000000000005064_ATQQPLAN01">实际费用</span></span></td><span class="CDutyCol3">被保障人在旅行期间遭受意外事故或罹患突发性疾病时，经救援机构确认需要进行医疗运送和送返的，保险公司向救援机构支付实际发生的医疗运送和送返费用。</span></div><div class="list_5 row1" id="Duty_204901047007" ><span class="CDutyCol1">身故遗体运返（丧葬费用限额20000元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047007_B0000000000000005064_ATQQPLAN01">实际费用</span></span></td><span class="CDutyCol3">被保险人在旅游期间因遭受意外伤害事故或罹患突发性疾病导致三十天内身故的，救援机构安排遗体送返，保险公司将承担所发生实际费用，最高不超过保单保额，其中丧葬费用不超过20000元。</span></div><div class="list_5 row0" id="Duty_204901047008" ><span class="CDutyCol1">慰问探访费用</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047008_B0000000000000005064_ATQQPLAN01">20,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因意外伤害事故或罹患突发性疾病导致身故，或所在地的医生诊断必须住院治疗，住院天数超过7天的，保险公司承担一名成年直系亲属前往探望所发生的往返交通费和合理住宿费用（限三星级酒店标准间）及公共交通费用，最高不超过保单保额。</span></div><div class="list_5 row1" id="Duty_204901047009" ><span class="CDutyCol1">旅行变更</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047009_B0000000000000005064_ATQQPLAN01">5,000</span></span></td><span class="CDutyCol3">被保险人在旅行前和旅行时，因被保险人或其直系亲属死亡或遭受严重伤病或旅行途径地或目的地突发暴动、罢工、自然灾害或传染病等原因取消或缩短行程的，保险公司在限额内赔偿该该被保险人已支付的实际未使用且不可退还的旅行费用。</span></div><div class="list_5 row0" id="Duty_204901047010" ><span class="CDutyCol1">旅行延误（每4小时补偿300元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047010_B0000000000000005064_ATQQPLAN01">600</span></span></td><span class="CDutyCol3">被保险人在旅行期间，由于自然灾害、恶劣天气、机械故障、航空管制、罢工、暴动、劫持或怠工及空运、航运工人的临时性抗议活动而导致旅程延误的，保险公司每4小时延误赔偿300元，最高不超过保单保额。</span></div><div class="list_5 row1" id="Duty_204901047011" ><span class="CDutyCol1">行李延误（每6小时补偿500元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047011_B0000000000000005064_ATQQPLAN01">1,500</span></span></td><span class="CDutyCol3">被保险人在旅行期间，随行托运行李在被保险人所搭乘的公共交通工具抵达目的地后发生延误的，保险公司每6小时赔偿300元，最高不超过保单保额。</span></div><div class="list_5 row0" id="Duty_204901047012" ><span class="CDutyCol1">旅行证件损失</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047012_B0000000000000005064_ATQQPLAN01">8,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因旅行证件遗失、被盗窃、抢劫所造成补办和因此产生的住宿费用（三星级限酒店标准间）和额外公共交通费用，保险公司负责赔偿，最高不超过保单保额。</span></div><div class="list_5 row1" id="Duty_204901047013" ><span class="CDutyCol1">个人随身财物（每件或每套物品限额1000元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047013_B0000000000000005064_ATQQPLAN01">3,000</span></span></td><span class="CDutyCol3">被保险人因任何第三方盗窃、抢劫、企图盗窃行为，公共交通承运人的责任而遗失或意外损坏个人行李、行李中的个人物品及随身物品的，保险公司负责赔偿，每件物品赔付限额1000元，累计不超过保单保额。（现金、票据、证件等不属于随身财产保障范围，详情请看随身财产除外责任）。</span></div><div class="list_5 row0" id="Duty_204901047014" ><span class="CDutyCol1">银行卡盗刷（不适合未成年人）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047014_B0000000000000005064_ATQQPLAN01">10,000</span></span></td><span class="CDutyCol3">赔偿被保险人在旅行期间由于银行卡丢失或失窃而造成非授权人非法使用银行卡所发生的账款损失，最高不超过保单保额。（账款损失须于挂失该丢失或失窃银行卡之前的48小时内发生，且该保险人须在发现银行卡丢失或失窃后立即挂失该银行卡）。（未成年人不适用）</span></div><div class="list_5 row1" id="Duty_204901047015" ><span class="CDutyCol1">个人钱财损失</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047015_B0000000000000005064_ATQQPLAN01">1,500</span></span></td><span class="CDutyCol3">被保险人在旅行期间寄存于登记入住酒店的上锁保险箱内的个人现金因被盗窃或者随身携带的个人现金因被盗窃或被抢劫而遗失的，保险公司负责赔偿，最高不超过保单保额。</span></div><div class="list_5 row0" id="Duty_204901047016" ><span class="CDutyCol1">旅行期间家财保障（每件或每套物品限额1000元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047016_B0000000000000005064_ATQQPLAN01">3,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，其境内日常居住地的室内家庭财产因火灾、雷击、台风、龙卷风、暴风、洪水、水暖管突然破裂、盗窃（在三个月以上未破案）等原因造成损失的，保险公司负责赔偿，每件或每套物品限额1000元，累计赔付以保单保额为限。</span></div><div class="list_5 row1" id="Duty_204901047017" ><span class="CDutyCol1">个人及宠物责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047017_B0000000000000005064_ATQQPLAN01">500,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间因其行为导致第三者人身伤亡或财产损失，或者因被保险人在境内日常居住地住所内饲养的犬类宠物造成第三者人身伤亡或财物损失的，保险公司负责赔偿，最高不超过保单保额（对于由被保险人支付的仲裁或诉讼费用，保险公司也负责赔偿，但最高不超过保险金额的30%）。</span></div><div class="list_5 row0" id="Duty_204901047018" ><span class="CDutyCol1">申根签证拒签保障</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047018_B0000000000000005064_ATQQPLAN01">500</span></span></td><span class="CDutyCol3">若被保险人在保单生效前90天内申请前往申根国家（保险单载明的目的地）旅行的签证被大使馆或领事馆拒签，导致被保险人的签证费用损失，保险公司负责赔偿，以保单保额为限。</span></div><div class="list_5 row1" id="Duty_204901047019" ><span class="CDutyCol1">旅行绑架及非法拘禁每日津贴（30日为限）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901047019_B0000000000000005064_ATQQPLAN01">600</span></span></td><span class="CDutyCol3">被保险人在旅行时遭受遭受绑架或非法拘禁，保险公司向被保险人给付每日绑架及非法拘禁慰问金额，累计赔付30日为限。</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2049"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282740.shtml" target="_blank"><h2 class="ziti">安联安途境外旅行申根保险</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_204901046">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_204901046"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_204901046" class="CRiskAppFactor"><div  ><span>保险期限</span><select id="204901046_Period" name="Period" onchange="premRecal('204901046', this, '204901046_Period');" ><option selected value="1D">1天</option><option value="2D-3D">2-3天</option><option value="4D-5D">4-5天</option><option value="6D-7D">6-7天</option><option value="8D-10D">8-10天</option><option value="11D-14D">11-14天</option><option value="15D-17D">15-17天</option><option value="18D-21D">18-21天</option><option value="22D-24D">22-24天</option><option value="25D-30D">25-30天</option><option value="31D-60D">31-60天</option><option value="61D-90D">61-90天</option><option value="91D-180D">91-180天</option><option value="1Y">1年</option></select></div><div  ><span>投保年龄</span><ul id="B0000000000000005059_TextAge"><li class="li_selected"><span id="TextAge_0" class="long_width3" name="60D-200Y" onclick="premRecal('204901046', this, 'B0000000000000005059_TextAge');">60天-200周岁</span></li></ul></div><div  ><span>计划</span><ul id="B0000000000000005060_Plan"><li class="li_selected"><span id="Plan_0" class="long_width" name="ATSGPLAN01" onclick="premRecal('204901046', this, 'B0000000000000005060_Plan');">计划一</span></li></ul></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span name="Ajax_Prict_204901046" id="productPrem_204901046" ><em>￥</em>29.00</span></li><li class="priceB"><span id="Clear_li_Ajax_Prict_204901046" style="display:none">原价：</span><span name="Clear_Ajax_Prict_204901046" style="display:none" id="productRatePrem_204901046"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282740.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('204901046');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('安联安途境外旅行申根保险','/','204901046','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">出生满60天以上全球出行，特别适合申根区旅游、出差、探亲人士</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>航班延误，交通意外保双倍赔付</span></li><li><span>随身财产损失，旅程变更</span></li><li><span>紧急医疗运送</span></li><li><span>申根拒签保障，保险期间自动延长</span></li><li><span>信用卡盗刷保障，旅行绑架及非法拘禁津贴保障</span></li></ul></div>
+							<div id="divRiskAppDuty_204901046" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_204901046001" ><span class="CDutyCol1">意外身故、伤残</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046001_B0000000000000005060_ATSGPLAN01">500000</span></span></td><span class="CDutyCol3">被保险人在旅游期间因意外伤害事故导致身故或伤残的，保险公司给付身故保险金，残疾根据残伤程度给付，最高给付至保单保额。未成年人保额不超过保监会规定的限额。71周岁及以上的被保险人，身故、伤残保险金额减半。</span></div><div class="list_2 row0" id="Duty_204901046002" ><span class="CDutyCol1">公共交通意外</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046002_B0000000000000005060_ATSGPLAN01">300000</span></span></td><span class="CDutyCol3">被保险人在旅行期间以乘客人身份乘坐公共交通工具（不包括被保险人本人作为公共交通工具的驾驶员、操作人员或机组成员）时，在交通工具内因交通事故导致身故、伤残的，保险公司在给付一般意外伤害保险金的基础上，再给付公共交通工具意外保险金。</span></div><div class="list_3 row1" id="Duty_204901046003" ><span class="CDutyCol1">医疗费用补偿（含门诊和住院，境内医疗费用限额1000元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046003_B0000000000000005060_ATSGPLAN01">300000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因意外伤害事故或罹患疾病，且自意外伤害事故或疾病发生之日起五日内到医院治疗的，保险公司按照实际支出的合理且必要的医疗费用进行赔偿，医疗费用包括住院医疗、门诊医疗（境内医疗费用限额1000元）。</span></div><div class="list_4 row0" id="Duty_204901046004" ><span class="CDutyCol1">旅行绑架及非法拘禁每日津贴（30日为限）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046004_B0000000000000005060_ATSGPLAN01">400</span></span></td><span class="CDutyCol3">被保险人在旅行时遭受遭受绑架或非法拘禁，保险公司向被保险人给付每日绑架及非法拘禁慰问金额，累计赔付30日为限。</span></div><div class="list_5 row1" id="Duty_204901046005" ><span class="CDutyCol1">紧急医疗运送及送返</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046005_B0000000000000005060_ATSGPLAN01">实际费用</span></span></td><span class="CDutyCol3">被保障人在旅行期间遭受意外事故或罹患突发性疾病时，经救援机构确认需要进行医疗运送和送返的，保险公司向救援机构支付实际发生的医疗运送和送返费用。</span></div><div class="list_5 row0" id="Duty_204901046006" ><span class="CDutyCol1">身故遗体运返（丧葬费用限额20000元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046006_B0000000000000005060_ATSGPLAN01">实际费用</span></span></td><span class="CDutyCol3">被保险人在旅游期间因遭受意外伤害事故或罹患突发性疾病导致三十天内身故的，救援机构安排遗体送返，保险公司将承担所发生实际费用，最高不超过保单保额，其中丧葬费用不超过20000元。</span></div><div class="list_5 row1" id="Duty_204901046007" ><span class="CDutyCol1">家属慰问探访费用</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046007_B0000000000000005060_ATSGPLAN01">10000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因意外伤害事故或罹患突发性疾病导致身故，或所在地的医生诊断必须住院治疗，住院天数超过7天的，保险公司承担一名成年直系亲属前往探望所发生的往返交通费和合理住宿费用（限三星级酒店标准间）及公共交通费用，最高不超过保单保额。</span></div><div class="list_5 row0" id="Duty_204901046008" ><span class="CDutyCol1">未成年人送返费用</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046008_B0000000000000005060_ATSGPLAN01">10000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因意外伤害事故或罹患突发性疾病导致其随行的未成年子女无人照料的，救援机构确认、安排其随行的未成年子女返回中国境内的日常居住地，由保险公司向救援机构支付送返费用，索赔需提供原始回程机票或电子机票凭证。</span></div><div class="list_5 row1" id="Duty_204901046009" ><span class="CDutyCol1">申根签证拒签保障</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046009_B0000000000000005060_ATSGPLAN01">500</span></span></td><span class="CDutyCol3">若被保险人在保单生效前90天内申请前往申根国家（保险单载明的目的地）旅行的签证被大使馆或领事馆拒签，导致被保险人的签证费用损失，保险公司负责赔偿，以保单保额为限。</span></div><div class="list_5 row0" id="Duty_204901046010" ><span class="CDutyCol1">旅行变更</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046010_B0000000000000005060_ATSGPLAN01">12000</span></span></td><span class="CDutyCol3">被保险人在旅行前和旅行时，因被保险人或其直系亲属死亡或遭受严重伤病或旅行途径地或目的地突发暴动、罢工、自然灾害或传染病等原因取消或缩短行程的，保险公司在限额内赔偿该该被保险人已支付的实际未使用且不可退还的旅行费用。</span></div><div class="list_5 row1" id="Duty_204901046011" ><span class="CDutyCol1">旅行延误（每4小时赔偿300元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046011_B0000000000000005060_ATSGPLAN01">900</span></span></td><span class="CDutyCol3">被保险人在旅行期间，由于自然灾害、恶劣天气、机械故障、航空管制、罢工、暴动、劫持或怠工及空运、航运工人的临时性抗议活动而导致旅程延误的，保险公司每4小时延误赔偿300元，最高不超过保单保额。</span></div><div class="list_5 row0" id="Duty_204901046012" ><span class="CDutyCol1">行李延误（每6小时赔偿300元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046012_B0000000000000005060_ATSGPLAN01">1200</span></span></td><span class="CDutyCol3">被保险人在旅行期间，随行托运行李在被保险人所搭乘的公共交通工具抵达目的地后发生延误的，保险公司每6小时赔偿300元，最高不超过保单保额。</span></div><div class="list_5 row1" id="Duty_204901046013" ><span class="CDutyCol1">旅行证件损失</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046013_B0000000000000005060_ATSGPLAN01">2000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因旅行证件遗失、被盗窃、抢劫所造成补办和因此产生的住宿费用（三星级限酒店标准间）和额外公共交通费用，保险公司负责赔偿，最高不超过保单保额。</span></div><div class="list_5 row0" id="Duty_204901046014" ><span class="CDutyCol1">个人随身财物（每件或每套物品限额1000元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046014_B0000000000000005060_ATSGPLAN01">3000</span></span></td><span class="CDutyCol3">被保险人因任何第三方盗窃、抢劫、企图盗窃行为，公共交通承运人的责任而遗失或意外损坏个人行李、行李中的个人物品及随身物品的，保险公司负责赔偿，每件物品赔付限额1000元，累计不超过保单保额。（现金、票据、证件等不属于随身财产保障范围，详情请看随身财产除外责任）。</span></div><div class="list_5 row1" id="Duty_204901046015" ><span class="CDutyCol1">银行卡盗刷损失</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046015_B0000000000000005060_ATSGPLAN01">6000</span></span></td><span class="CDutyCol3">赔偿被保险人在旅行期间由于银行卡丢失或失窃而造成非授权人非法使用银行卡所发生的账款损失，最高不超过保单保额。（账款损失须于挂失该丢失或失窃银行卡之前的48小时内发生，且该保险人须在发现银行卡丢失或失窃后立即挂失该银行卡）。（未成年人不适用）</span></div><div class="list_5 row0" id="Duty_204901046016" ><span class="CDutyCol1">个人及宠物责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901046016_B0000000000000005060_ATSGPLAN01">500000</span></span></td><span class="CDutyCol3">被保险人在旅行期间因其行为导致第三者人身伤亡或财产损失，或者因被保险人在境内日常居住地住所内饲养的犬类宠物造成第三者人身伤亡或财物损失的，保险公司负责赔偿，最高不超过保单保额（对于由被保险人支付的仲裁或诉讼费用，保险公司也负责赔偿，但最高不超过保险金额的30%）。</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2049"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282736.shtml" target="_blank"><h2 class="ziti">安联安途国内旅行保障计划</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_204901045">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_204901045"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_204901045" class="CRiskAppFactor"><div  ><span>投保年龄</span><ul id="B0000000000000004120_TextAge"><li class="li_selected"><span id="TextAge_0" class="long_width3" name="60D-200Y" onclick="premRecal('204901045', this, 'B0000000000000004120_TextAge');">出生60天以上</span></li></ul></div><div  ><span>保险期限</span><select id="204901045_Period" name="Period" onchange="premRecal('204901045', this, '204901045_Period');" ><option selected value="1D">1天</option><option value="2D-3D">2-3天</option><option value="4D-7D">4-7天</option><option value="8D-15D">8-15天</option><option value="16D-30D">16-30天</option></select></div><div  ><span>计划</span><select id="204901045_Plan" name="Plan" onchange="premRecal('204901045', this, '204901045_Plan');" ><option selected value="KATDTSTPP1">计划一</option><option value="KATDTSTPP2">计划二</option></select></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span id="productPrem_204901045" ><em>￥</em>5.00</span><span style="display:none" id="productRatePrem_204901045"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282736.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('204901045');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('安联安途国内旅行保障计划','//','204901045','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">出生60天以上人群</div>
+							
+							<div class="productFeature"></div>
+							<div id="divRiskAppDuty_204901045" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_204901045001" ><span class="CDutyCol1">意外身故、伤残</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045001_B0000000000000004122_KATDTSTPP1">300,000</span><span class="CDutyCol2" id="204901045001_B0000000000000004122_KATDTSTPP2" style="display:none;">500,000</span></span></td><span class="CDutyCol3">被保险人在旅游期间因意外伤害事故导致身故或伤残的，保险公司给付身故保险金，残疾根据残伤程度给付，最高给付至保单保额。未成年人保额不超过保监会规定的限额。71周岁及以上的被保险人，身故、伤残保险金额减半。</span></div><div class="list_2 row0" id="Duty_204901045002" ><span class="CDutyCol1">公共交通意外</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045002_B0000000000000004122_KATDTSTPP1">200,000</span><span class="CDutyCol2" id="204901045002_B0000000000000004122_KATDTSTPP2" style="display:none;">200,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间以乘客人身份乘坐公共交通工具（不包括被保险人本人作为公共交通工具的驾驶员、操作人员或机组成员）时，在交通工具内因交通事故导致身故、伤残的，保险公司在给付一般意外伤害保险金的基础上，再给付公共交通工具意外保险金。</span></div><div class="list_3 row1" id="Duty_204901045003" ><span class="CDutyCol1">意外医疗</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045003_B0000000000000004122_KATDTSTPP1">20,000</span><span class="CDutyCol2" id="204901045003_B0000000000000004122_KATDTSTPP2" style="display:none;">30,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间，因发生意外伤害事故，且发生之日五日内到医院治疗的，保险公司按照实际支出的合理且必要的医疗费用进行赔偿，最高不超过保单保额。</span></div><div class="list_4 row0" id="Duty_204901045004" ><span class="CDutyCol1">急性病医疗</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045004_B0000000000000004122_KATDTSTPP1">5,000</span><span class="CDutyCol2" id="204901045004_B0000000000000004122_KATDTSTPP2" style="display:none;">10,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间突发急性病，并在事故发生之日起180日内在医院或保险公司认可的医疗机构进行治疗，保险公司对于被保险人在每次事故中所支出的必要且合理的医疗费用在扣除社会基本医疗保险或任何第三方（包括任何商业医疗保险）已经补偿或给付部分后进行赔付，最高不超过保单保额，保险期间届满被保险人治疗仍未结束的，保险期间自动延长，门诊以15日为限，住院以90日为限。</span></div><div class="list_5 row1" id="Duty_204901045005" ><span class="CDutyCol1">意外每日住院津贴（30日为限）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045005_B0000000000000004122_KATDTSTPP1">100</span><span class="CDutyCol2" id="204901045005_B0000000000000004122_KATDTSTPP2" style="display:none;">100</span></span></td><span class="CDutyCol3">被保险人在旅行时因遭受合同约定的意外伤害事故，在二级以上（含二级）医院或保险人认可的医疗机构接受住院治疗，保险公司按其住院日数给付每日住院津贴，累加最高给付30天。</span></div><div class="list_5 row0" id="Duty_204901045006" ><span class="CDutyCol1">紧急医疗运送和送返</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045006_B0000000000000004122_KATDTSTPP1">100,000</span><span class="CDutyCol2" id="204901045006_B0000000000000004122_KATDTSTPP2" style="display:none;">100,000</span></span></td><span class="CDutyCol3">被保障人在旅行期间遭受意外事故或罹患突发性疾病时，经救援机构确认需要进行医疗运送和送返的，保险公司向救援机构支付实际发生的医疗运送和送返费用。</span></div><div class="list_5 row1" id="Duty_204901045007" ><span class="CDutyCol1">旅行延误（每4小时赔偿300元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045007_B0000000000000004122_KATDTSTPP1">600</span><span class="CDutyCol2" id="204901045007_B0000000000000004122_KATDTSTPP2" style="display:none;">600</span></span></td><span class="CDutyCol3">被保险人在旅行期间，由于自然灾害、恶劣天气、机械故障、航空管制、罢工、暴动、劫持或怠工及空运、航运工人的临时性抗议活动而导致旅程延误的，保险公司每4小时延误赔偿300元，最高不超过保单保额。</span></div><div class="list_5 row0" id="Duty_204901045008" ><span class="CDutyCol1">自驾车意外伤害</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045008_B0000000000000004122_KATDTSTPP1">100,000</span><span class="CDutyCol2" id="204901045008_B0000000000000004122_KATDTSTPP2" style="display:none;">100,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间驾驶四轮机动车（7座以下，含7座）期间因遭受意外伤害事故导致身故、伤残的，保险公司在给付一般意外伤害保险金的基础上，再给付自驾车意外伤害保险金。</span></div><div class="list_5 row1" id="Duty_204901045009" ><span class="CDutyCol1">紧急拖车服务（50公里为限）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045009_B0000000000000004122_KATDTSTPP1">包含</span><span class="CDutyCol2" id="204901045009_B0000000000000004122_KATDTSTPP2" style="display:none;">包含</span></span></td><span class="CDutyCol3">被保险人在驾驶7座（含）以下非营运车辆期间，因机械或电子故障、驾驶员错误而导致享权车辆不能行驶的，保险公司免费提供50公里以内车程的拖车服务（免费拖车距离内产生的路桥费被保险人自付）。（道路救援必须是保险公司指定的救援公司提供，保险期内没有次数限制）</span></div><div class="list_5 row0" id="Duty_204901045010" ><span class="CDutyCol1">路边快修服务</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045010_B0000000000000004122_KATDTSTPP1">包含</span><span class="CDutyCol2" id="204901045010_B0000000000000004122_KATDTSTPP2" style="display:none;">包含</span></span></td><span class="CDutyCol3">保险公司协助安排汽车维修技师至被保险人现场；全国范围现场路边维修包括充电、送油、加水和其他小于30分钟的机械修理；紧急送油服务每次最多5升，被保险人自付油费，同时所有第三方费用由被保险人自付。钥匙问题，优先协助取备用钥匙；也可建议顾客拨打110协调开锁，或顾客自取备用钥匙，保险公司报销同城100公里内出租车费；所有救援服务过程中产生的路桥费，需由被保险人自行支付。（保险期内不限救援次数）</span></div><div class="list_5 row1" id="Duty_204901045011" ><span class="CDutyCol1">紧急换胎服务</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045011_B0000000000000004122_KATDTSTPP1">包含</span><span class="CDutyCol2" id="204901045011_B0000000000000004122_KATDTSTPP2" style="display:none;">包含</span></span></td><span class="CDutyCol3">保险公司协助安排汽车维修技师至被保险人现场，帮助被保险人换胎；同时所有第三方费用由被保险人支付。（道路救援必须是保险公司指定的救援公司提供，保险期内没有次数限制）</span></div><div class="list_5 row0" id="Duty_204901045012" ><span class="CDutyCol1">修车期间酒店住宿服务</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045012_B0000000000000004122_KATDTSTPP1">包含</span><span class="CDutyCol2" id="204901045012_B0000000000000004122_KATDTSTPP2" style="display:none;">包含</span></span></td><span class="CDutyCol3">因车辆（享权车辆）机械或电子故障而抛锚，维修的当天不能继续使用的，且坏车地点和被保险人的居住地不在同一城市，保险公司将提供住宿，费用包括酒店房费，税费和早餐（如果其包含在房费中），电话费，房间服务等（酒店住宿期限最多为3天且住宿酒店最高为4星级标准）。 注：修车期间酒店住宿服务和修车期间继续旅行服务，被保险人只能选择其中一项。（保险期内不限救援次数）</span></div><div class="list_5 row1" id="Duty_204901045013" ><span class="CDutyCol1">修车期间继续旅行服务</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045013_B0000000000000004122_KATDTSTPP1">包含</span><span class="CDutyCol2" id="204901045013_B0000000000000004122_KATDTSTPP2" style="display:none;">包含</span></span></td><span class="CDutyCol3">因车辆（享权车辆）机械或电子故障而抛锚，维修的当天不能继续使用的，且坏车地点和被保险人的居住地不在同一城市，保险公司将提供相应交通工具，费用如下：继续旅行距离小于1000公里，提供头等厢火车票；继续旅行距离大于1000公里，提供经济舱机票。 注：修车期间酒店住宿服务和修车期间继续旅行服务，被保险人只能选择其中一项。（保险期内不限救援次数）</span></div><div class="list_5 row0" id="Duty_204901045014" ><span class="CDutyCol1">个人及宠物责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901045014_B0000000000000004122_KATDTSTPP1">100,000</span><span class="CDutyCol2" id="204901045014_B0000000000000004122_KATDTSTPP2" style="display:none;">100,000</span></span></td><span class="CDutyCol3">被保险人在旅行期间因其行为导致第三者人身伤亡或财产损失，或者因被保险人在境内日常居住地住所内饲养的犬类宠物造成第三者人身伤亡或财物损失的，保险公司负责赔偿，最高不超过保单保额（对于由被保险人支付的仲裁或诉讼费用，保险公司也负责赔偿，但最高不超过保险金额的30%）。</span></div></div>
+						</div>
+					
+
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C2049"  ></span> <span class="productName"> <a href="../../lvyou-baoxian/282728.shtml" target="_blank"><h2 class="ziti">安联畅享神州境内旅行保障计划三</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_204901044">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_204901044"></span>
+						</div>
+						<div class="product_condition">
+							<div id="divRiskAppFactor_204901044" class="CRiskAppFactor"><div  ><span>保险期限</span><select id="204901044_Period" name="Period" onchange="premRecal('204901044', this, '204901044_Period');" ><option selected value="1D">1天</option><option value="2D-3D">2-3天</option><option value="4D-7D">4-7天</option><option value="8D-15D">8-15天</option><option value="16D-30D">16-30天</option><option value="31D-45D">31-45天</option><option value="365D">365天</option></select></div><div  ><span>投保年龄</span><select id="204901044_TextAge" name="TextAge" onchange="premRecal('204901044', this, '204901044_TextAge');" ><option selected value="60D-17Y">出生满60天-17周岁</option><option value="18Y-200Y">18-200周岁</option></select></div><div  ><span>计划</span><ul id="00000000000000004113_Plan"><li class="li_selected"><span id="Plan_0" class="long_width" name="CYSZPLAN03" onclick="premRecal('204901044', this, '00000000000000004113_Plan');">计划三</span></li></ul></div></div>
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" ><li class="priceC"> <span id="productPrem_204901044" ><em>￥</em>16.00</span><span style="display:none" id="productRatePrem_204901044"></span></li></ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('../../lvyou-baoxian/282728.shtml')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('204901044');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('安联畅享神州境内旅行保障计划三','///','204901044','http://localhost:8080/wj','');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">1、国内旅游、自驾游、随团出行首选； 2、滑雪、潜水、骑马、自行车等娱乐活动； 3、新疆、西藏出行首选</div>
+							
+							<div class="productFeature"><ul class="ld_list_box"><li><span>住院补贴高标准</span></li><li><span>保热门娱乐活动</span></li><li><span>旅程延误有补贴</span></li><li><span>宠物责任保障</span></li></ul></div>
+							<div id="divRiskAppDuty_204901044" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_204901044001" ><span class="CDutyCol1">意外身故、残疾及烧烫伤</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044001_00000000000000004113_CYSZPLAN03">60万</span></span></td><span class="CDutyCol3">赔付因意外导致的身故、残疾及烧烫伤；</span></div><div class="list_2 row0" id="Duty_204901044002" ><span class="CDutyCol1">公共交通意外伤害</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044002_00000000000000004113_CYSZPLAN03">10万</span></span></td><span class="CDutyCol3">被保险人遭遇非意外伤害事故导致被保险人在该非意外伤害事故发生之日起48小时内身故，赔付保险金</span></div><div class="list_3 row1" id="Duty_204901044003" ><span class="CDutyCol1">意外医疗</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044003_00000000000000004113_CYSZPLAN03">5万</span></span></td><span class="CDutyCol3">赔偿被保险人因遭受意外伤害事故而实际支出的医疗费用，含门诊和住院</span></div><div class="list_4 row0" id="Duty_204901044004" ><span class="CDutyCol1">意外每日住院津贴（30日为限）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044004_00000000000000004113_CYSZPLAN03">100</span></span></td><span class="CDutyCol3">若被保险人住院治疗, 保险公司将每日赔付约定的保险金。</span></div><div class="list_5 row1" id="Duty_204901044005" ><span class="CDutyCol1">猝死保障</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044005_00000000000000004113_CYSZPLAN03">10万</span></span></td><span class="CDutyCol3">被保险人遭遇非意外伤害事故导致被保险人在该非意外伤害事故发生之日起48小时内身故，赔付保险金</span></div><div class="list_5 row0" id="Duty_204901044006" ><span class="CDutyCol1">紧急医疗运送和送返</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044006_00000000000000004113_CYSZPLAN03">30万</span></span></td><span class="CDutyCol3">因意外事故或身患疾病，保险公司安排被保险人医疗运送及送返，并支付救援费用</span></div><div class="list_5 row1" id="Duty_204901044007" ><span class="CDutyCol1">身故遗体运返（丧葬费用以20000元为限）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044007_00000000000000004113_CYSZPLAN03">5万</span></span></td><span class="CDutyCol3">因意外事故或身患疾病导致身故，保险公司安排被保险人遗体运返，并支付救援费用</span></div><div class="list_5 row0" id="Duty_204901044008" ><span class="CDutyCol1">家属慰问探访费用</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044008_00000000000000004113_CYSZPLAN03">0.8万</span></span></td><span class="CDutyCol3">被保险人因意外事故或身患疾病身故或住院，保险公司安排其一位直系亲属前往探望的交通及食宿费用</span></div><div class="list_5 row1" id="Duty_204901044009" ><span class="CDutyCol1">未成年人送返费用</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044009_00000000000000004113_CYSZPLAN03">0.8万</span></span></td><span class="CDutyCol3">被保险人因意外事故或罹患突发急性病导致其随行的未成年子女无人照料，保险公司安排其随行未成年子女返回中国境内的日常居住地的运返费用</span></div><div class="list_5 row0" id="Duty_204901044010" ><span class="CDutyCol1">绑架及非法拘禁每日津贴（30日为限）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044010_00000000000000004113_CYSZPLAN03">150</span></span></td><span class="CDutyCol3">被保险人在旅行期间遭受绑架，根据实际被绑架的日数获得赔偿</span></div><div class="list_5 row1" id="Duty_204901044011" ><span class="CDutyCol1">旅行变更</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044011_00000000000000004113_CYSZPLAN03">0.3万</span></span></td><span class="CDutyCol3">因被保险人的直系亲属死亡或遭受严重伤病；劫持；严重伤病；旅行出发前7日内或旅行后旅行出发地、途径地或目的地突发暴动、飞机、火车或轮船承运人雇员罢工、恶劣天气、不可抗力的自然灾害或传染病，保险公司赔偿该被保险人预付的实际未使用且不可退还的旅行费用，以及在旅行开始后，为前往旅行目的地或返回日常居住地或日常工作地而额外支出的合理且必须的旅行费用。</span></div><div class="list_5 row0" id="Duty_204901044012" ><span class="CDutyCol1">旅行延误（每4小时赔偿300元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044012_00000000000000004113_CYSZPLAN03">900</span></span></td><span class="CDutyCol3">赔偿因恶劣天气、自然灾害、机械故障、恐怖分子行为、航空管制、航班机位超售、罢工、劫持等导致被保险人搭乘的交通工具延误</span></div><div class="list_5 row1" id="Duty_204901044013" ><span class="CDutyCol1">行李延误（每6小时赔偿500元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044013_00000000000000004113_CYSZPLAN03">0.15万</span></span></td><span class="CDutyCol3">赔偿被保险人托运行李因公共交通工具承运人的处理不当延误抵达目的地</span></div><div class="list_5 row0" id="Duty_204901044014" ><span class="CDutyCol1">个人随身财物（每件物品限额1000元）</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044014_00000000000000004113_CYSZPLAN03">0.3万</span></span></td><span class="CDutyCol3">因下列原因致其所有并随身携带、穿着或置于行李箱、手提箱或类似容器内携带的个人物品遭受损失，保险公司按实际损失给付保险金
+(一) 被盗窃、抢劫与抢夺；
+(二) 被保险人所住宿的酒店或所搭乘的飞机、火车、轮船承运人处理失当所致的毁损、损坏或遗失。</span></div><div class="list_5 row1" id="Duty_204901044015" ><span class="CDutyCol1">旅行期间家财保障</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044015_00000000000000004113_CYSZPLAN03">0.3万</span></span></td><span class="CDutyCol3">赔偿旅行期间被保险人境内日常住所因盗窃、火灾、水管破裂等造成的家具物品损坏而遭受的损失</span></div><div class="list_5 row0" id="Duty_204901044016" ><span class="CDutyCol1">个人及宠物责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="204901044016_00000000000000004113_CYSZPLAN03">20万</span></span></td><span class="CDutyCol3">赔偿因被保险人的行为或其饲养的宠物造成他人的身体伤害或财产损失</span></div></div>
+						</div>
+					
+				</div>
+				<div id="productsPageBar"><table width='100%' border='0' class='noBorder' align='center'><tr><td height='18' align='center' valign='middle' style='border-width: 0px;color:#525252'>共273条记录，每页10条，当前第<span class='fc_ch1'>15</span>/<span class='fc_ch1'>28</span>页&nbsp;&nbsp;&nbsp;&nbsp;<a href='.'><span class='fc_ch1'>第一页</span></a>|<a href='index_14.shtml'><span class='fc_ch1'>上一页</span></a>|<a href='index_16.shtml'><span class='fc_ch1'>下一页</span></a>|<a href='index_28.shtml'><span class='fc_ch1'>最末页</span></a>&nbsp;&nbsp;转到第<input id='_PageBar_Index_0' type='text' size='4' style='width:30px' style='' onKeyUp="value=value.replace(/\D/g,'')">页&nbsp;&nbsp;<input type='button' onclick="if(/[^\d]/.test(document.getElementById('_PageBar_Index_0').value)){alert('错误的页码');$('_PageBar_Index_0').focus();}else if(document.getElementById('_PageBar_Index_0').value>28){alert('错误的页码');document.getElementById('_PageBar_Index_0').focus();}else{var PageIndex = (document.getElementById('_PageBar_Index_0').value)>0?document.getElementById('_PageBar_Index_0').value:1;if(PageIndex==1){window.location='index.shtml'}else{window.location='index_'+PageIndex+'.shtml';}}" style='' value='跳转'></td></tr></table></div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="clear"></div>
+	<!-- 公共底部 -->
+    <div class="g-main-con">
+       <div class="clear h20"></div>  
+            <!-- foot -->
+            <div class="g-weaper1200">
+                <div class="g-footer">
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon1 "></em>正品保险</dt>
+                      <dd>中国保监会监制</dd>
+                      <dd>保险公司专供</dd>
+                      <dd>高性价比产品</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon2 "></em>快捷投保</dt>
+                      <dd>全方位一键对比</dd>
+                      <dd>1对1保险顾问指导</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon3 "></em>省心服务</dt>
+                      <dd>电子保单快捷变更</dd>
+                      <dd>满200元发票包邮</dd>
+                      <dd>免费协助理赔无差异</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon4 "></em>安全可靠</dt>
+                      <dd>7x24小时客服不间断</dd>
+                      <dd>风险提示保障安全</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon5 "></em>品牌实力</dt>
+                      <dd>3年200万用户选择</dd>
+                      <dd>2013年最佳保险中介</dd>
+                      <dd>30家知名保险公司合作</dd>
+                    </dl>
+
+                    <div class="clear h20"></div>
+                </div>
+              </div>
+                  <div class="clear h20"></div>
+                        <div class="g-footer-bg">
+                <div class="g-weaper1200">
+                     <div class="g-footer2">
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon6 "></em>新手指南</dt>
+                            <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn1" target="_blank" rel="nofollow">如何注册</a>
+                            <a href="http://localhost:8080/about//xszn/index.shtml#xszn4" target="_blank" rel="nofollow">如何投保</a>
+                            <a href="http://localhost:8080/about/xszn/index.shtml#xszn3" target="_blank" rel="nofollow">找回密码</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon7 "></em>支付帮助</dt>
+                            <dd><a href="http://localhost:8080/about/4/index.shtml#zfbz2" target="_blank" rel="nofollow">支付方式</a><a href="http://localhost:8080/about/4/index.shtml#zfbz1" target="_blank" rel="nofollow">支付说明</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon8 "></em>保单服务</dt>
+                            <dd><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单查询</a>
+                            <a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg2" target="_blank" rel="nofollow">保单变更</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg3" target="_blank" rel="nofollow">保单取消</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg1" target="_blank" rel="nofollow">保单寄送</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon9 "></em>理赔服务</dt>
+                            <dd><a href="http://localhost:8080/about/2/index.shtml#lpbz1" target="_blank" rel="nofollow">理赔指南</a><a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔报案</a>
+                            <a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔案例</a></dd>
+                          </dl>
+                           <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon10 "></em>服务中心</dt>
+                            <dd><a href="http://localhost:8080/wj/shop/bill_query!queryBill.action" target="_blank" rel="nofollow">发票索取</a>
+                            <a href="http://localhost:8080/about/3/dayizonghui/index.shtml" target="_blank" rel="nofollow">常见问题</a></dd>
+                          </dl>
+                          <div class="clear h20"></div>
+                     </div>
+                     
+                    <div class="clear h20"></div>
+                     <!-- 热门专题 -->
+                </div>
+              </div>
+             <!-- 底部 -->
+                <div class="g-btn-footer">
+                <div class="g-weaper1200">
+                        <div class="g-f-left">
+                          <div class="botlink02">
+                <ul  class="clearfix">
+					<li><a href="http://localhost:8080/other/about/" rel="nofollow">关于开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/news/" rel="nofollow">开心保要闻</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/jobs/" rel="nofollow">加入开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/sitemap/" >网站地图</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/legal/" rel="nofollow">法律声明</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/contact/" rel="nofollow">联系我们</a></li>
+					<li>|</li>
+					<li><a href="http://u.kaixinbao.com/" target="_blank" rel="nofollow">分销联盟</a></li>
+					<li>|</li>
+					<!-- <li><a href="http://kaixinbao.tmall.com/" target="_blank" rel="nofollow">开心保天猫店</a></li>
+					<li>|</li>
+					<li><a href="http://temai.kaixinbao.com/" target="_blank" rel="nofollow">特价机票</a></li>
+					<li><a href="http://wap.kaixinbao.com/" target="_blank" >移动版</a></li> -->
+					<li><a href="http://www.kaixinbao.com/yxhd/isl-tra/" target="_blank" rel="nofollow">微信版</a></li>                
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="copyright">		
+				<div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+				<div class="copyrightleft">Copyright 2012-2016 版权所有 网金保险销售服务有限公司</div>
+			</div>
+                        </div>
+                        <div class="g-f-right">
+                            <ul class="sl-floatcenter">
+          					
+ 
+				      			<li class="sl-floatcenter-item" ><a href="../../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36" height="33"/></a></li>
+				    		
+ 
+				      			<li class="sl-floatcenter-item" ><a href="../../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69" height="33"/></a></li>
+				    		 
+                          </ul>
+                        </div>
+                        <div class="clear"></div>
+                </div>
+          </div>
+    </div>
+  <div id="fix_nav" class="fix_nav">
+       <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" >在线客服</a>
+       <span class="fix-RichScan ">保单查询<div style="display: none;" class="weixinDiv tagshow"><img src="http://localhost:8080/images/wxnew.png">微信查保单</div></span>
+       <span class="fix-top" id="gotop">回到顶部</span>
+  </div>
+    <!-- 公共底部 -->
+	<script type="text/javascript" src="http://localhost:8080/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jqueryupdate.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_header.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/xiaoneng_CustomerService.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/artDialog.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/login.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/iframeTools.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+	<div class="clear"></div>
+	<div id="cpdiv" class="cpdiv">
+		<div class="comparediv">
+			<h3>产品比较</h3>
+			<div class="closebtn">
+				<span onclick="closecp()"><img src="http://localhost:8080/images/closebtn.gif" width="20" height="20" /></span>
+			</div>
+			<div class="comparedivcont">
+				<div class="comparedetail" style="display: none;" id="cpprodu1">
+					<input type="hidden" name="productCodeA" id="productCodeA" />
+					<p>
+						<span id="productnameA"></span><br /> <span class="dblue cpdelico" onclick="closecp1()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu2">
+					<input type="hidden" name="productCodeB" id="productCodeB" />
+					<p>
+						<span id="productnameB"></span><br /> <span class="dblue cpdelico" onclick="closecp2()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu3">
+					<input type="hidden" name="productCodeC" id="productCodeC" />
+					<p>
+						<span id="productnameC"></span><br /> <span class="dblue cpdelico" onclick="closecp3()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu4">
+					<input type="hidden" name="productCodeD" id="productCodeD" />
+					<p>
+						<span id="productnameD"></span><br /> <span class="dblue cpdelico" onclick="closecp4()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparebtn">
+					<span><img src="http://localhost:8080/images/btncp.gif" width="72" height="28" alt="提交对比" onclick="javascript:begincompare('http://localhost:8080/wj');subclosecp();" /></span>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">    
+    jQuery(function(){
+          jQuery("#divSearchConditions li span,.top_aa a").click(
+          function(){
+        	  	   jQuery("#load_con").show();
+                   jQuery("#load_con").html("<img src='http://localhost:8080/images/loading.gif' />");
+              
+          });
+          jQuery("#divSearchConditions .li_selected").click(
+                  function(){
+                           jQuery("#load_con").html(" ");
+          });
+     });
+    
+		function salesVolumeLoad() {
+			var list=jQuery('span[id^=SalesV_]');
+			var id = new Array(list.length);
+			for (var i = 0; i < list.length; i++) {
+		           id[i] = list[i].id;
+			}
+			jQuery.ajax({
+				type: 'post',
+				url: 'http://localhost:8080/wj/shop/sales_volume!search.action?productIds='+id,
+				dataType: "json",
+				async: false,
+				success: function(data) {
+					jQuery.each(data, function(index, object) {
+						document.getElementById(index).innerHTML="(累计销量：" + object + ")";
+					});
+				}
+			});
+		}
+	
+		function chakan(str)
+			{
+				window.open(str);
+				
+			}
+	
+		function submitp(str) {
+			jQuery.ajax({
+				type : 'get',
+				url : 'http://localhost:8080/wj/shop/favorites!add.action?productId='
+						+ str,
+				dataType : 'html',
+				success : function(de) {
+
+					if (de == 'notlogin') {
+						artLogin();//使用弹出窗口登录
+					} else {
+						alert(de);
+					}
+				}
+			});
+		}
+		var productType = "";
+		var catID = "9484";
+	 
+
+		function doBuy(str,sup) {
+			var selectID = str+"_Period";
+			var value = jQuery("#"+selectID).val();
+			if(value == null || value == "undefined"){
+				value = "";
+			}
+			var Period = "&Period="+value; 
+
+			var Plan_value = jQuery("#"+(str+"_Plan")).val();
+			if(Plan_value == null || Plan_value == "undefined"){
+				Plan_value = "";
+			}
+			var Plan = "&Plan="+Plan_value; 
+			var TextAge_value = jQuery("#"+(str+"_TextAge")).val();
+			if(TextAge_value == null || TextAge_value == "undefined"){
+				TextAge_value = "";
+			}
+			var TextAge = "&TextAge="+TextAge_value; 
+			
+			if(sup=='1015'){
+				window.location.href = "http://localhost:8080/wj/shop/order_config!buyNow.action?productId="
+					+ str+Period+Plan+TextAge;
+			}else{
+				window.location.href = "http://localhost:8080/wj/shop/order!buyNow.action?productId="
+					+ str+Period+Plan+TextAge;     
+			}
+		}
+	</script>
+	<script type="text/javascript" src="http://localhost:8080/js/Framework/Main.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/js/premcalculate.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/js/productCompare.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/js/tabchange.js"></script>
+</body>
+</html>
+<!-- Powered by CMS(中科软科技股份有限公司) 1.3.1.0 PublishDate 2016-09-26 10:00:42-->

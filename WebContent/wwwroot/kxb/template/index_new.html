@@ -1,0 +1,746 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${Site.Meta_Keywords}" />
+<meta name="description" content="${Site.Meta_Description}" />
+<script  type="text/javascript" src="${Site.JsResourcePath}/js/mobile.js"></script>
+<script type="text/javascript">
+uaredirect('${site.WapURL}', 'home');
+</script>
+<title>${Site.name}</title>
+<link href="${Site.StaticResourcePath}/style/redesign/re_header.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/new_main.css?" rel="stylesheet" type="text/css" />
+<link id="controlCss" rel="stylesheet" type="text/css" href="javascript:void(0);">
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body id="max_style">
+<!-- 顶部 开始 -->
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!-- 顶部 结束 -->
+<div class="wrapper ">
+<!-- 旅游地点 -->
+<div id='suggest' class="ac_results"> </div> 
+<!--快速导航及保险速查--> 
+<div class="que_left que_navss">
+	<div class="qs_boxs">
+    	<h3 class="qu_title">快速导航</h3>
+        <dl class="que_dl que_dl_j1 que_nav_zk">    
+            <dt class="que_dl_dt"><a href="${Site.URL}/lvyou-baoxian/" target="_blank">旅游保险</a></dt>
+            <dd class="que_dl_dd"><a href="${Site.URL}/lvyou-baoxian/guonei/" target="_blank">境内旅游</a><a href="${Site.URL}/lvyou-baoxian/jingwai/" target="_blank">境外旅游</a><a href="${Site.URL}/lvyou-baoxian/shengenqianzheng/" target="_blank">申根旅游</a></dd>
+             <div class="que_lv_box" style="display:none" id="que_lv_sf">
+               <div class="que_zd"></div>
+                <div class="que_lv_left">
+                    <div class="que_lv_list que_yw_list cf" >
+                        <b>境内旅游险</b>                                       
+                        <cms:list item="friendlink" name="首页旅游险境内" count="5">
+						<a href="${friendlink.URL}" target="_blank" >${friendlink.Name}</a>
+						</cms:list>
+                    </div>
+                    <div class="que_lv_list que_yw_list3 cf">                        
+                        <b>境外旅游险</b>                              
+                        <cms:list item="friendlink" name="首页旅游险境外" count="10">
+						<a href="${friendlink.URL}" target="_blank" >${friendlink.Name}</a>
+						</cms:list>
+                    </div>
+                    <div class="que_lv_list que_yw_list3 cf">
+                        <b>保险品牌</b>                              
+                        <cms:list item="friendlink" name="首页旅游险品牌" count="30">
+						<a href="${friendlink.URL}" target="_blank" >${friendlink.Name}</a>
+						</cms:list>
+                    </div>
+                </div>
+                 <div class="que_lv_right">
+                   
+				 <b class="que_shai_t">旅行者年龄</b>
+				                            <div class="que_shai cf">
+				                                 <div class="que_shai_l ">
+				                                    <ul class="que_age cf" id="select_age">
+				                                    <li id="Age1" >0-17</li>
+				                                    <li id="Age2" class="age_select">18-60</li>
+				                                    <li id="Age3" >60以上</li>
+				                                  </ul>
+				                                </div>
+				
+				                            </div>
+                            <b class="que_shai_t cf">旅行地点（请填写国家）</b>
+                            	<div class="que_shai_bs cf">
+                            	<input type="hidden" name="arrcity_3word" id="arrcity_3word" value="" />
+								<input type="text" name="arrcity" id="travelAddress" class="que_shai_txt que_shai_ts"/>
+                            	</div>
+                            <b class="que_shai_t cf">停留天数</b>
+                            <div class="que_shai_bs cf"><input id="period" type="text" class="que_shai_txt que_shai_ts"></div>
+                            <a href="javascript:void(0)" id="lookplan" class="que_tj_go que_chakan">查看计划</a>
+                   
+                 </div>
+                 <div class="clear"></div>
+                 <!-- 首页旅游险推荐-开始 -->
+                  <div class="que_cp_tj">
+                        <b>热门推荐</b>
+                        <cms:list item="article"  name="产品中心/旅游保险" level="current" count="1" hasAttribute="QuickReLY" >
+							<div class="que_cp_tj_box">
+	                            <a href="${article.link}" target="_blank"><img src="${article.LogoLink}" width="74px" height="74px" class="que_tj_img"></a>
+	                            <dl class="que_cp_dls">
+	                                <dt><a href="${article.link}" target="_blank" class="que_cp_t">${article.title}</a></dt>
+	                                <dd><span class="que_cp_tctitile">产品特色：</span>
+	                                    <ul class="que_cp_tclist">
+	                                    	${article.FEMRiskBrightSpotNew}
+	                                    </ul>
+	                                </dd>
+	                                <dd class="que_cp_tj_money">
+	                                		 <i class="que_priceA"><span  class="que_money">${Article.BasePremV3}</span></i>
+                                 			 <i class="que_priceB"><span  class="que_money">￥${Article.BasePremValue}</span></i>
+	                                		<a href="${article.link}"  target="_blank" class="que_tj_go">查看详情</a></dd>
+	                            </dl>
+	                        </div>
+			    		</cms:list>
+                  </div>
+                  <!-- 首页旅游险推荐-结束 -->
+                      <div class="index_aadd" style="display:none">
+                         <cms:ad name="首页旅游险广告" custom="false" size="602*142" type="1"></cms:ad>
+                    </div>
+            </div>
+        </dl>
+            
+        <dl class="que_dl que_bg_h que_dl_j2 que_nav_zk">    
+            <dt class="que_dl_dt"><a href="${Site.URL}/yiwai-baoxian/" target="_blank">意外保险</a></dt>    
+            <dd class="que_dl_dd"><a href="http://www.kaixinbao.com/huixuan/0000000014.shtml" target="_blank">少儿意外</a><a href="http://www.kaixinbao.com/huixuan/0000000015.shtml" target="_blank">老人意外</a><a href="http://www.kaixinbao.com/huixuan/0000000016.shtml" target="_blank">驾驶员</a></dd>
+            <div class="que_lv_box que_yw_box"  style="display:none" >
+               <div class="que_zd que_zd2"></div>
+                    <div class="que_lv_list cf">
+                        <b>保障类型</b>                  
+                        <cms:list item="friendlink" name="首页意外险保障类型" count="30">
+						<a href="${friendlink.URL}" target="_blank" >${friendlink.Name}</a>
+						</cms:list>
+                    </div>
+                    <div class="que_lv_list cf">
+                        <b>特殊保障</b>                              
+                        <cms:list item="friendlink" name="首页意外险特殊保障" count="30">
+						<a href="${friendlink.URL}" target="_blank" >${friendlink.Name}</a>
+						</cms:list>
+                    </div>
+                    <div class="que_lv_list cf">
+                        <b>保险品牌</b>                              
+                        <cms:list item="friendlink" name="首页意外险品牌" count="30">
+						<a href="${friendlink.URL}" target="_blank" >${friendlink.Name}</a>
+						</cms:list>
+                    </div>
+                    <div class="index_aadd" style="display:none">
+                         <cms:ad name="首页意外险广告" custom="false" size="602*142" type="1" ></cms:ad>
+                    </div>
+
+					<!-- 首页意外险推荐-开始 -->
+                  <div class="que_cp_tj" >
+                       <b>热门推荐</b>
+                        <cms:list item="article"  name="产品中心/意外保险" level="current" count="1" hasAttribute="QuickReYY" >
+							<div class="que_cp_tj_box">
+	                            <a href="${article.link}" target="_blank"><img src="${article.LogoLink}" width="74px" height="74px" class="que_tj_img"></a>
+	                            <dl class="que_cp_dls">
+	                                <dt><a href="${article.link}" target="_blank" class="que_cp_t">${article.title}</a></dt>
+	                                <dd><span class="que_cp_tctitile">产品特色：</span>
+	                                    <ul class="que_cp_tclist">
+	                                    	${article.FEMRiskBrightSpotNew}
+	                                    </ul>
+	                                </dd>
+	                                <dd class="que_cp_tj_money">
+	                                	 <i class="que_priceA"><span  class="que_money">${Article.BasePremV3}</span></i>
+                                 	     <i class="que_priceB"><span  class="que_money">￥${Article.BasePremValue}</span></i>
+	                                	<a href="${article.link}"  target="_blank" class="que_tj_go">查看详情</a></dd>
+	                            </dl>
+	                        </div>
+			    		</cms:list>
+                  </div>
+				<!-- 首页意外险推荐-结束 -->
+
+            </div>
+        </dl>
+            
+        <dl class="que_dl">    
+            <dt class="que_dl_dt"><a href="${Site.URL}/jiankang-baoxian/" target="_blank">健康保险</a></dt>        
+            <dd class="que_dl_dd"><a href="${Site.URL}/jiankang-baoxian/zhongdajibing/" target="_blank">特大疾病</a><a href="${Site.URL}/jiankang-baoxian/tedingjibing/" target="_blank">特定疾病</a><a href="${Site.URL}/jiankang-baoxian/zhuyuanyiliao/" target="_blank">住院医疗</a></dd>
+        </dl>
+        <dl class="que_dl que_bg_h">    
+            <dt class="que_dl_dt"><a href="${Site.URL}/renshou-baoxian/" target="_blank">人寿保险</a></dt>            
+            <dd class="que_dl_dd"><a href="${Site.URL}/renshou-baoxian/yanglaoxian/" target="_blank" style="display:none">养老保险</a><a href="${Site.URL}/renshou-baoxian/dingqi/" target="_blank">定期保险</a><a href="${Site.URL}/renshou-baoxian/jiaoyu/" target="_blank" style="display:none">教育险</a></dd>
+        </dl>
+        <dl class="que_dl">    
+            <dt class="que_dl_dt"><a href="${Site.URL}/jiacai-baoxian/" target="_blank">家财保险</a></dt>              
+            <dd class="que_dl_dd"><a href="${Site.URL}/jiacai-baoxian/" target="_blank">家电安全</a><a href="${Site.URL}/jiacai-baoxian/" target="_blank">盗抢损失</a></dd>
+        </dl>
+        <dl class="que_dl que_bg_h">    
+            <dt class="que_dl_dt"><a href="${Site.URL}/tx/" target="_blank">团体保险</a></dt>                 
+            <dd class="que_dl_dd"><a href="${Site.URL}/tx/" target="_blank">团体境外游</a><a href="${Site.URL}/tx/" target="_blank">团体意外</a><a href="${Site.URL}/tx/" target="_blank">团体境内游</a></dd>
+        </dl>
+        <dl class="que_dl que_cal_dl">    
+            <dt class="que_dl_dt"><a href="${Site.URL}/chexian/" target="_blank">车辆保险</a><span class="que_car_z">多省15%</span></dt>              
+            <dd class="que_dl_dd que_car_dl_dd"><a href="${Site.URL}/chexian/pingan.shtml" target="_blank">平安车险</a>  <a href="${Site.URL}/chexian/yangguang.shtml" target="_blank">阳光车险</a><br>
+            <a href="${Site.URL}/chexian/dadi.shtml" target="_blank">大地车险</a><a href="${Site.URL}/chexian/taipingyang.shtml" target="_blank">太平洋车险</a></dd>
+        </dl>
+         <dl class="que_dl que_bg_h">    
+            <dt class="que_dl_dt"><a href="${Site.URL}/touzi-licai/" target="_blank">理财保险</a></dt>              
+            <dd class="que_dl_dd"><a href="${Site.URL}/touzi-licai/" target="_blank">最高年化收益率6.7%</a></dd>
+        </dl>
+    </div>
+    
+</div>
+<!--快速导航及保险速查结束-->
+<!--AD及车险-->
+<div class="ad_center">
+
+
+<cms:imageplayer code="index_ad" type="0" width="230" height="255" />
+
+  <div class="in_news_list">
+	   <!-- <div class="service_con cf">
+	   	 <i class="service_1">全新体验</i>
+	     <i class="service_2">VIP服务</i>
+	     <i class="service_3">放心投保</i>
+	   </div> -->
+  		<span class="main_news">最新动态</span>
+  		<cms:list item="friendlink" name="最新公告" count="3">
+  		<a href="${friendlink.URL}"  target="_blank">${friendlink.Name|charWidth=15}</a>
+  		</cms:list>
+  </div>
+<div class="index_test">
+       <a href="${Site.Prop6}/shop/insurance_test!insuranceTest.action" class="index_test_ks" target="_blank"></a>
+       <a href="${Site.Prop6}/shop/insurance_test!searchInsuranceTestList.action" class="index_test_sc" target="_blank"></a>
+</div>
+  <div class="car_box bor_b_hui">
+  <a href="${Site.URL}/chexian/"  target="_blank" class="car_box_links"></a> 
+  	<div class="search_bxgs"><div class="car_bxzscon">保险公司</div>  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+                	<cms:list item="article" level="all"  name="车险对接保险公司" >
+                   		<a onclick="getlink('${Article.CpsLink}','${article.Link}')">${Article.title}</a>
+                    </cms:list>
+                </div>
+            </div>
+             <input name="" type="button" value="查  看" class="input_ksbj" onclick="guoduNew()"> </div>
+          
+             	<ul  id="car_tag_con" class="car_lipin">
+             		<cms:list item="article"  level="all"  name="车险对接保险公司" >
+             		<li  style="display:none">${Article.Gift}</li>
+             		</cms:list>
+             		
+             	</ul>
+             	<div class="main_car_tb">
+	                <h3 class="car_sf_tit">车险投保</h3>
+	                <div id="corpBar" class="index_tb_right pr">
+	                            <a rel="pa" class="car_tb_corp tb_active" href="javascript:;">平安</a>
+	                            <a rel="tpy" class="car_tb_corp" href="javascript:;">太平洋</a>
+	                            <a rel="yg" class="car_tb_corp" href="javascript:;">阳光</a>
+	                            <a rel="dd" class="car_tb_corp" href="javascript:;">大地</a>
+	                            <a rel="tp" class="car_tb_corp" href="javascript:;">安盛天平</a>
+	                 </div>
+	                 <div class="car_input"><span class="car_name">车主姓名：</span><input type="text" class="car_input_c car_input_a" id="carUser" name="carUser"></div>
+			         <div class="car_input"><span class="car_name">联系电话：</span><input type="text" class="car_input_c car_input_b" id="carPhone" name="carPhone"></div>
+			         <div class="car_input"><span class="car_name">车牌号：</span><input type="text" class="car_input_c car_input_d" id="carNO" name="carNO"><input type="button" class="car_input_btn" value="获取报价" onclick="gainQuote()" ></div>
+         		</div>
+         
+  </div>
+  
+  
+  <!--热销排行榜-->
+<div class="hot_list up_980">
+  <div class="bor_b_hui hot_boxis">
+  	<h3 class=" hot_title3"><em class="qus_reds">热销</em>排行榜</h3>
+    <ul class="hot_bang clearfix" id="hot_nav">      
+    	<li><span id="hot1"  class="selected">旅游</span></li>
+    	<li><span id="hot2"  class=" ">意外</span></li>
+<!--     	<li><span id="hot3"  class=" " onMouseOver="setTab('hot',3,4)">家财</span></li>   --> 
+    	<li><span id="hot3"  class=" ">健康</span></li>
+    </ul>
+    <div id="hot_con">
+       <div id="con_hot_1">
+       <cms:list item="article"  name="9409" level="current" count="5"  condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'">
+    	
+		            <%if(i==0){%>
+		            <dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class="title_num select_num"><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content"  >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}else{%>
+					<dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class=" title_num "><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content" style="display:none"   >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}%>
+    	
+    	</cms:list>
+    </div>
+       <div id="con_hot_2" style="display:none;">
+    	 <cms:list item="article"  name="9385" level="current" count="5" condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'" >
+    	
+		            <%if(i==0){%>
+		            <dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class="title_num select_num"><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content"  >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}else{%>
+					<dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class=" title_num "><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content" style="display:none"   >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}%>
+    	
+    	</cms:list>
+    </div>
+<!--        
+	<div id="con_hot_3" style="display:none;">
+    	<cms:list item="article"  name="9413" level="current" count="5" hasAttribute="hot" >
+    	<dl class="hot_lists">
+	    		<dt class="hot_titiles"><em class="title_num select_num"><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <%if(i==0){%>
+		            <dd class="hot_content"  >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					<%}else{%>
+					<dd class="hot_content" style="display:none"  >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					<%}%>
+    	</dl>
+    	</cms:list>
+    </div>
+--> 
+       <div id="con_hot_3" style="display:none;">
+         <div class="clear"></div>
+    	 <cms:list item="article"  name="9424" level="current" count="5" condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'" >
+    	
+		            <%if(i==0){%>
+		            <dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class="title_num select_num"><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content"  >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}else{%>
+					<dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class=" title_num "><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content" style="display:none"   >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}%>
+    	
+    	</cms:list>
+    </div>
+    </div>
+  </div>
+  </div>
+<!--热销排行榜结束-->
+  </div>
+<!--AD及车险结束-->
+
+</div>
+<div class="clear"></div>
+
+<!--首页改版-->
+	<div class="in_s_box cf lv_bor_btn">
+  	<div class="in_s_l"><img src="${Site.StaticResourcePath}/images/i_s_box_03s.png" width="218" height="326"  alt=""/></div>
+    <div class="in_s_r">
+    	<div class="in_s_nav" ><ul id="in_s_navs1"><li ><span class="selected">申根签证</span></li><li><span>境外旅游</span></li><li><span>国内旅游</span></li></ul>    </div>
+        <div id="lv_box" class="main_s_box">
+        	<div class="in_s_gs">
+            <a class="in_s_more" href="${Site.URL}/lvyou-baoxian/shengenqianzheng/" target="_blank">查看更多</a>
+            <cms:list item="article" count="3" level="all" name="9416" hasAttribute="hp_topical">
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des">
+            <span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+       		</dl>
+			</cms:list>
+       		</div>
+            <div style="display:none;" class="in_s_gs">
+            <a class="in_s_more" href="${Site.URL}/lvyou-baoxian/jingwai/" target="_blank">查看更多</a>
+            <cms:list item="article" count="3" level="all" name="9415" hasAttribute="hp_topical">     
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des"><span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+      		</dl>
+			</cms:list>
+       		</div>
+            <div style="display:none;" class="in_s_gs">
+            <a class="in_s_more" href="${Site.URL}/lvyou-baoxian/guonei/" target="_blank">查看更多</a>
+            <cms:list item="article" count="3" level="all" name="9414" hasAttribute="hp_topical">      
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des"><span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+       		</dl>
+			</cms:list>
+       		</div>
+       </div>
+    </div>
+    
+    <div class="hot_list_box">
+    <h3 class="hot_title2"><span class="hot_title_red">热销</span>排行榜</h3>
+    <cms:list item="article"  name="9409" level="current" count="5"  condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'">
+    	
+		            <%if(i==0){%>
+		            <dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class="title_num select_num"><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content"  >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}else{%>
+					<dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class=" title_num "><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content" style="display:none"   >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}%>
+    	
+    	</cms:list>
+    	</div>
+    
+</div>
+
+	<div class="in_s_box cf yw_bor_btn">
+  	<div class="in_s_l"><img src="${Site.StaticResourcePath}/images/i_s_box_08s.png" width="218" height="326"  alt=""/></div>
+    <div class="in_s_r">
+    	<div class="in_s_nav" ><ul id="in_s_navs2"><li><span class="selected">航空意外</span></li><li><span>交通意外</span></li><li><span>人身意外</span></li></ul>     </div>
+     <div id="lv_box2" class="main_s_box">
+        	<div class="in_s_gs">
+        	<a class="in_s_more" href="${Site.URL}/yiwai-baoxian/hangkong/" target="_blank">查看更多</a>
+      	 	<cms:list item="article" count="3" level="all" name="9422" hasAttribute="hp_topical">     
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des"><span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+      		</dl>
+			</cms:list>
+       		</div>
+            <div style="display:none;" class="in_s_gs">
+      	    <a class="in_s_more" href="${Site.URL}/yiwai-baoxian/jiaotong/" target="_blank">查看更多</a>
+      	 	<cms:list item="article" count="3" level="all" name="9420" hasAttribute="hp_topical">     
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des"><span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+      		</dl>
+			</cms:list>
+       		</div>
+            <div style="display:none;" class="in_s_gs">
+      	    <a class="in_s_more" href="${Site.URL}/yiwai-baoxian/renshen/" target="_blank">查看更多</a>
+      	 	<cms:list item="article" count="3" level="all" name="9421" hasAttribute="hp_topical">     
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des"><span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+      		</dl>
+			</cms:list>
+       		</div>
+       </div>
+
+    </div>
+     <div class="hot_list_box">
+    <h3 class="hot_title2"><span class="hot_title_red">热销</span>排行榜</h3>
+    <cms:list item="article"  name="9385" level="current" count="5"  condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'">
+    	
+		            <%if(i==0){%>
+		            <dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class="title_num select_num"><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content"  >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+<!--								<em class="hot_price">${Article.BasePremV3}</em>-->
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}else{%>
+					<dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class=" title_num "><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content" style="display:none"   >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}%>
+    	
+    	</cms:list>
+    	</div>
+</div>
+
+	<div class="in_s_box cf jk_bor_btn">
+  	<div class="in_s_l"><img src="${Site.StaticResourcePath}/images/i_s_box_09s.png" width="218" height="326"  alt=""/></div>
+    <div class="in_s_r">
+    <div class="in_s_nav"><ul id="in_s_navs3"><li><span class="selected">重大疾病</span></li><li><span>特定疾病</span></li><li><span>住院医疗</span></li></ul>     </div>
+     <div id="lv_box3" class="main_s_box">
+        	<div class="in_s_gs">
+      	 	<a class="in_s_more" href="${Site.URL}/jiankang-baoxian/zhongdajibing/" target="_blank">查看更多</a>
+      	 	<cms:list item="article" count="3" level="all" name="9430" hasAttribute="hp_topical">     
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des"><span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+      		</dl>
+			</cms:list>
+       		</div>
+            <div style="display:none;" class="in_s_gs">
+      	 	<a class="in_s_more" href="${Site.URL}/jiankang-baoxian/tedingjibing/" target="_blank">查看更多</a>
+      	 	<cms:list item="article" count="3" level="all" name="9432" hasAttribute="hp_topical">     
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des"><span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+      		</dl>
+			</cms:list>
+       		</div>
+            <div style="display:none;" class="in_s_gs">
+      	 	<a class="in_s_more" href="${Site.URL}/jiankang-baoxian/zhuyuanyiliao/" target="_blank">查看更多</a>
+      	 	<cms:list item="article" count="3" level="all" name="9769" hasAttribute="hp_topical">     
+      	 	<dl class="in_s_list">
+            <dt><a href="${Article.link}" target="_blank" rel="nofollow"><img data-original="${Site.ProductResourcePath}/${article.logo}"  class="lazy" src="${Site.StaticResourcePath}/images/grey.gif" width="190" height="190"  alt="${Article.shorttitle}"/></a></dt>
+            <dd class="in_s_des"><a href="${Article.link}" target="_blank">${Article.shorttitle}</a></dd>
+            <dd class="in_s_des"><span class="in_s_pay">￥${Article.BasePremValue}</span><a href="${Article.link}" class="in_s_go" target="_blank" rel="nofollow">去看看>></a></dd>
+      		</dl>
+			</cms:list>
+       		</div>
+       </div>
+    </div>
+    <div class="hot_list_box">
+    <h3 class="hot_title2"><span class="hot_title_red">热销</span>排行榜</h3>
+    <cms:list item="article"  name="9424" level="current" count="5"  condition=" cataloginnercode like '002313%' and Attribute is not null and  concat(',',Attribute,',')  like '%,hot,%'">
+    	
+		            <%if(i==0){%>
+		            <dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class="title_num select_num"><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content"  >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：
+					<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					
+					
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}else{%>
+					<dl class="hot_lists">
+	    			<dt class="hot_titiles"><em class=" title_num "><% if(i<6) write(i+1);%></em><a href="${Article.Link}"  target="_blank">${Article.Title|CharWidth=12}</a></dt>
+		            <dd class="hot_content" style="display:none"   >适合人群：${Article.AdaptPeopleInfo|CharWidth=12}
+					<span>价格：<em>￥${Article.BasePremValue}</em>
+									<em class="hot_price">${Article.BasePremV3}</em></span>
+					<a href="${Article.Link}" class="hot_more"  target="_blank">查看详情</a>
+					</dd>
+					</dl>
+					<%}%>
+    	
+    	</cms:list>
+    	</div>
+</div>
+
+	<div class="wrapper cf">
+        <div class="i_news_b"> 
+        <ul id="in_s_nav" class="in_s_nav in_s_nav2"><li><span class="selected">认识保险</span></li>
+        <li><span>购买保险</span></li></ul>
+        <div id="i_new_max" class="i_new_max">
+         <div class="sub-con">
+        <ul class="i_news_list">
+        	<cms:list item="article" count="6" level="all" name="9519" hasAttribute="index_show" type="modifyzx">
+					<li><a href="${article.Link}" target="_blank">${article.title}</a></li>
+			</cms:list>
+        </ul>
+        <a href="<cms:link type='Catalog' name='9519'/>" class="i_new_more" target="_blank" rel="nofollow"><查看更多></a>
+        </div>
+         <div class="sub-con" style="display:none;">
+        <ul class="i_news_list">
+        	<cms:list item="article" count="6" name="9520" level="all" hasAttribute="index_show" type="modifyzx">
+					<li><a href="${article.Link}" target="_blank">${article.title}</a></li>
+			</cms:list>
+        </ul>
+        <a href="<cms:link type='Catalog' name='9520'/>" class="i_new_more" target="_blank" rel="nofollow"><查看更多></a>
+        </div>
+        </div>
+        </div>
+       
+       <div class="i_news_b"> 
+        <ul id="in_s_nav2" class="in_s_nav in_s_nav2"><li><span class="selected">车险资讯</span></li>
+        <li><span>车险理赔</span></li></ul>
+        <div id="i_new_max2" class="i_new_max">
+         <div class="sub-con">
+        <ul class="i_news_list">
+        	<cms:list item="article" count="6" level="all" name="车险俱乐部" hasAttribute="index_carshow" type="modifyzx">
+					<li><a href="${article.Link}" target="_blank">${article.title}</a></li>
+			</cms:list>
+        </ul>
+        <a href="<cms:link type='Catalog' name='车险资讯'/>" class="i_new_more" target="_blank" rel="nofollow"><查看更多></a>
+        </div>
+         <div class="sub-con" style="display:none;">
+        <ul class="i_news_list">
+        	<cms:list item="article" count="6" level="all" name="理赔技巧" hasAttribute="index_show" type="modifyzx">
+					<li><a href="${article.Link}" target="_blank">${article.title}</a></li>
+			</cms:list>
+        </ul>
+        <a href="<cms:link type='Catalog' name='理赔技巧'/>" class="i_new_more" target="_blank" rel="nofollow"><查看更多></a>
+        </div>
+        </div>
+        </div>
+        
+        <div class="i_news_b clear_m"> 
+        <ul id="in_s_nav3" class="in_s_nav in_s_nav2"><li><span class="selected">理财资讯</span></li>
+        <li><span>理财技巧</span></li></ul>
+        <div id="i_new_max3" class="i_new_max">
+         <div class="sub-con">
+        <ul class="i_news_list">
+        	<cms:list item="article" count="6" level="all" name="理财资讯" hasAttribute="index_moneyshow" type="modifyzx">
+					<li><a href="${article.Link}" target="_blank">${article.title}</a></li>
+			</cms:list>
+        </ul>
+        <a href="<cms:link type='Catalog' name='理财资讯'/>" class="i_new_more" target="_blank" rel="nofollow"><查看更多></a>
+        </div>
+         <div class="sub-con" style="display:none;">
+        <ul class="i_news_list">
+        	<cms:list item="article" count="6" level="all" name="理财技巧"  hasAttribute="index_show" type="modifyzx">
+					<li><a href="${article.Link}" target="_blank">${article.title}</a></li>
+			</cms:list>
+        </ul>
+        <a href="<cms:link type='Catalog' name='理财技巧'/>" class="i_new_more" target="_blank" rel="nofollow"><查看更多></a>
+        </div>
+        </div>
+        </div>
+        
+        <div class=" tag_yun">
+        	<ul>
+        	<cms:list item="friendlink" name="首页标签云" count="30">
+        		<% if(i%9==0){%>
+						<a href="${friendlink.URL}" class="main_tag_1">${friendlink.Name}</a>
+					<% }else if(i%9==1){%>
+						<a href="${friendlink.URL}" class="main_tag_2">${friendlink.Name}</a>
+					<% }else if(i%9==2){%>
+						<a href="${friendlink.URL}" class="main_tag_3">${friendlink.Name}</a>
+					<% }else if(i%9==3){%>
+						<a href="${friendlink.URL}" class="main_tag_4">${friendlink.Name}</a>
+					<% }else if(i%9==4){%>
+						<a href="${friendlink.URL}" class="main_tag_5">${friendlink.Name}</a>
+					<% }else if(i%9==5){%>
+						<a href="${friendlink.URL}" class="main_tag_6">${friendlink.Name}</a>
+					<% }else if(i%9==6){%>
+						<a href="${friendlink.URL}" class="main_tag_7">${friendlink.Name}</a>
+					<% }else if(i%9==7){%>
+						<a href="${friendlink.URL}" class="main_tag_8">${friendlink.Name}</a>
+					<% }else if(i%9==8){%>
+						<a href="${friendlink.URL}" class="main_tag_9">${friendlink.Name}</a>
+				<% } %>
+			</cms:list>
+            </ul>
+        </div>
+        
+    </div>
+
+<div class="part5">
+		<h3 class="cooperationtit" ><img src="${Site.StaticResourcePath}/image/cooptit.gif" width="211" height="18" />
+			<span class="brand_more" ><a href="<cms:link type='Catalog' name='9475'/>">更多</a></span>
+		</h3>
+		<div class="cooprationcont">
+			<div class="rollBox">  
+     <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>  
+     <div class="Cont" id="ISL_Cont">  
+      <div class="ScrCont">  
+       <div id="List1">  
+        <div class="crcont" id="crcont">
+			<cms:list item="article" level="all" condition=" exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='是' and z1.columncode='HasPartnership')" name="保险品牌">
+				<a href="${article.Link}"><img src="${Site.StaticResourcePath}/${article.CompanyLogo}" width="126" height="62" title="${article.LogoAlt}" /></a>
+			</cms:list>
+        </div>  
+          
+       </div>  
+       <div id="List2"></div>  
+      </div>  
+     </div>  
+     <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>   
+   </div>
+		</div>
+</div>
+
+<div class="part6"> 
+	<h3 class="frdlinktit in_frdlink"><img src="${Site.StaticResourcePath}/image/frdlinktit.gif" width="131" height="19" /></h3>
+       <div class="more04"></div>
+        <ul class="in_s_nav in_s_nav2 in_s_navd" id="in_s_nav4">
+	        <cms:list item="hotopic"  name="首页友情链接分类" >
+	        	 <li><span class="<% if(i==0) write("selected");%>">${hotopic.name}<img src="${Site.StaticResourcePath}/images/sf_j.png"  class="frdlink_j"/></span></li>
+	        </cms:list>
+        </ul>
+        <div class="frdlinkcont clearfix">
+		        <div class="i_new_max" id="i_new_max4">
+		        	<cms:list item="hotopic"  name="首页友情链接分类" >
+		        	 	<div class="sub-con" style="<% if(i!=0) write("display: none;");%>">
+		        	 		<ul class="liststyle03">
+		        	 			<cms:sublist item="friendlink" count="50" >
+		        	 				<li><a target="_blank" href="${friendlink.url}">${friendlink.name}</a></li>
+		        	 			</cms:sublist>
+		        	 		</ul>
+		        	 	</div>
+		        	</cms:list>
+		        </div>
+		 </div>
+ </div>
+
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="首页热点专题" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="首页热点专题" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="首页热点专题" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/shouye.js?v=1204"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/lazyload.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.form.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/template/common/js/base.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/header1.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/artDialog.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/login.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/footer.js"></script>
+<script	type="text/javascript" src="${Site.JsResourcePath}/js/suggest.js"></script>
+
+
+</body>
+</html>
+

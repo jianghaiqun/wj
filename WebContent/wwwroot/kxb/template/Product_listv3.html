@@ -1,0 +1,310 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<script	type="text/javascript" src="${Site.JsResourcePath}/js/mobile.js"></script>
+<script type="text/javascript">
+var WapListNid = '${Catalog.WapListNid}';
+if (WapListNid != null && WapListNid != '') {
+	uaredirect("${site.WapURL}/mobile/blankpage.ashx?PageType=B&PageID=" + WapListNid , "list");
+}
+</script>
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="${Site.URL}/${Catalog.URL}" />
+
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_listv2.css?v=1225"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css" />
+<%
+if(catalog.getString("ProductType").length()>0){
+String aa = catalog.getString("ProductType").substring(0,1);
+%>
+<style type="text/css">
+	#hovers_<%write(aa);%> {background:none repeat scroll 0 0 #CD4800}
+	#hovers_{background:none repeat scroll 0 0 }
+</style>
+<%}%>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body>
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	
+	<div class="wrapper">
+	<!-- 旅游地点 -->
+	<div id='suggest' class="ac_results"> </div> 
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+		<div class="content">
+	        <div class="grid-c2-s6f">
+				<div class="col-main">
+					<div class="main-wrap">
+					         
+					<div class="top_b">
+					<div id="load_con" style="display:none;"></div>
+						<div class="top_aa">
+							<h1 class="shaixuan" >${catalog.name}产品列表</h1><a href="${Site.URL}/${catalog.URL}">恢复默认条件</a>
+						</div>
+						${catalog.Catalog_SearchConditions}
+					<input id="hdn_page" type="hidden"  value="-1" name="hdn_page" />
+					<input id="prop6" type="hidden" value="${Site.prop6}" name="prop6" />
+					<input id="ProductType" type="hidden" value="${Catalog.ProductGroupType}" name="ProductType" />
+					<input id="ChiProductType" type="hidden" value="${Catalog.ProductType}" name="ChiProductType" />
+					<input id="FrontServer" type="hidden" value="${Site.URL}" name="FrontServer" />
+					<input id="searchProductFlag" type="hidden" value="listv3" name="searchProductFlag" />
+					</div>
+					 <div class="zd_sx_list" id="zd_click" title="展开筛选条件"></div>
+					 
+					<div class="recommend_shop cf">
+						<input type="hidden" id="catalogName" value="${catalog.name}"/>
+	                	<div class="recommend_titile recommend_titile_up"><div class="reconmend_img_up"></div><b><span id="recommendTitle">${catalog.name}</span>推荐产品</b><div class="recommend_kong">收起&nbsp;>></div></div>
+	                    <div id="shop_bosf">
+	                    <cms:list  item="article" level="current" count="2" hasAttribute="newRecommend">
+	                    		<% if((i+1)==2){%>
+	                    			 <div class="recommend_con floatl">
+								<% }else{%>
+		                   			 <div class="recommend_con floatl bor_leftsf">
+								<% }%>
+							<div class="hot_tj_img">
+							<% if (article.getString("RecommendImg") != null && article.getString("RecommendImg").indexOf("nopicture.jpg")==-1 && !article.getString("RecommendImg").endsWith("/") && !"".equals(article.getString("RecommendImg"))) {%>
+	                    			 <img src="${Site.StaticResourcePath}/${article.RecommendImg}" width="74px" height="74px" alt="" />
+							<% }%>
+							</div>
+		                    <div class="recommend_box ">
+		                       <div class="recommend_top cf">
+		                       <!-- 推荐产品缩略图 -->
+		                     <span class="list_zd_img floatl"  >
+		                         <a target="_blank" class="cp_tj_logo_a" href="${article.link}?link_id=recom" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/recommend" vlpageid="recommend">
+                                   <div class="icon_C${article.SupplierCode} tj_cp_logos"></div>
+                                 </a>
+		                     </span>
+		                     <div class="floatl shop_sfs "> 
+		                     <span class="shop_titile"><a href="${article.link}?link_id=recom" target="_blank" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/recommend" vlpageid="recommend">${article.title}</a></span>
+		                     <!-- 推荐产品特殊保障 -->
+                             <p class="shop_tj_shrq">
+                                 <span class="shop_shrq_bg">推荐理由</span>
+                                 ${article.AdaptPeopleInfoV3}
+                             </p>
+		                     </div>
+		                       </div>
+		                       <div class="recommend_cen cf">
+		                           <div class="tj_cp_dess">
+                                      <p>${article.RecommendInfo}</p>
+                                   </div>
+		                       <div class="recom_price cf">
+		                        <div class="price_tj">
+		                        <span id="SalesU_${Article.RiskCode}" class="recom_xl">(累计销量：加载中...)</span>
+                                <span class="recom_xl"> <i>(
+                                        <a href="javascript:void(0)" onclick="openCommnet('${Article.link}','link_id=recom');return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/recommend" vlpageid="recommend" class="shop_tj_num" id="CommentU_${Article.RiskCode}">评论加载中...</a>
+                                        )</i>条评论
+                                </span>
+                                </div>
+			         				<ul class="crcom_pric">
+										<li class="new_priceA"><span name="R_Ajax_Prict_${Article.RiskCode}">${Article.InitPrem}</span></li>
+										<li class="new_priceB"><span name="Clear_Ajax_Prict_${Article.RiskCode}">
+										 <% 
+					                        String initPrem = "￥"+article.getString("InitPrem");
+					                        String basePrem = article.getString("BasePremV3");
+					                        if(!initPrem.equals(basePrem)){
+					                        	write(basePrem);
+					                        }
+							        	 %>
+										</span></li>
+									</ul>
+		                       <span class="remcon_desmore">
+		                       <a href="${article.link}?link_id=recom" target="_blank" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/recommend" vlpageid="recommend">去看看>></a></span>
+		                       </div>
+		                       </div>
+		                    </div>
+		                    </div>
+		                 </cms:list>
+	                    </div>
+	                    <div class="clear"></div>
+	                </div>
+					
+					
+					<div id="divSearchOrder">
+						<span id="order_default" class="one" onclick="doOrder1(this);">默认排序</span><span id="order_Popular" class="two" onclick="doOrder1(this);">人气</span><span id="order_SalesVolume" class="two" onclick="doOrder1(this);">销量</span><span id="order_InitPrem"
+							class="two" onclick="doOrder1(this);">价格</span>
+					</div>
+					<div class="s_noshop cf"  id="s_noshop" ></div>
+					<div id="products" class="shop_img_list cf">
+						<cms:list item="article" level="current" pagesize="10" page="true" condition="catalogid='${Catalog.ID}'>
+						
+						 <div class="nlist_con cf">
+                    	    <div class="shop_nlist_img">
+		                       <p id="Activity_${Article.RiskCode}">
+		                         ${article.ProductActive}
+		                       </p>
+	                        	<a rel="nofollow" target="_blank" href="${article.Link}"><img width="190" height="190" alt="${article.title}" src="${article.LogoLink}" class="lazy" data-original="${article.LogoLink}" style="display: inline;"></a>
+	                        </div>
+	                        <div class="nlist_des">
+	                        	<a href="${article.link}" target="_blank" class="nlist_title">${article.title}</a>
+	                        	<!-- 自定义活动 -->
+	                        	<em class="list_hddes" style="display: none;" id="Diy_em_Activity_${Article.RiskCode}" > <i class="list_hd_t" id="Diy_Title_Activity_${Article.RiskCode}"></i><span id="Diy_Activity_${Article.RiskCode}"></span></em>
+	                        	<div class="shop_tj_shrq cf">
+                                        <span class="shop_shrq_bg">适合人群</span>
+                                        <p class="shop_shrd_con">
+                                           ${article.AdaptPeopleInfoListV3}
+                                        </p>
+                                </div>
+                                <div class="clear"></div>
+                               <ul class="recommend_list">
+		                           ${article.DutyHTMLV3}
+		                       </ul>
+                                <div class="nlist_price">
+                                        <span class="nlist_pay moneys" name="Ajax_Prict_${Article.RiskCode}">￥${article.InitPrem}</span><em class="nlist_pay_t moneys">
+                                        <span name="Clear_Ajax_Prict_${Article.RiskCode}">
+                                         <% 
+					                        String initPrem = "￥"+article.getString("InitPrem");
+					                        String basePrem = article.getString("BasePremV3");
+					                        if(!initPrem.equals(basePrem)){
+					                        	write(basePrem);
+					                        }
+							        	 %>
+                                        
+                                        </span></em>
+                                        <div class="price_tj">
+                                            <span class="recom_xl" id="SalesV_${Article.RiskCode}">(累计销量：加载中...)</span>
+                                            <span class="recom_xl">
+	                                           <i>(
+	                                               	<a href="javascript:void(0)" onclick="openCommnet('${Article.link}')" class="shop_tj_num" id="CommentV_${Article.RiskCode}">评论加载中...</a>
+	                                         ) </i> 条评论
+                                            </span>
+                                        </div>
+
+                                        <span class="remcon_desmore">
+                                            <label class="nlist_add_db">
+                                                <input type="checkbox" onclick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.producttype}','${Article.logolink}','${Article.InitPrem}');">加入对比</label>
+                                            <a target="_blank" href="${Article.link}">去看看</a>
+                                        </span>
+                                    </div>
+                      </div>
+                    </div>
+						</cms:list>
+					</div>
+					<div class="plpage">
+					<!--    翻页    -->
+					<div id="productsPageBar">${PageBar1}</div>
+					<div class="clear"></div>
+				</div>
+				   
+			   </div>
+			   	</div>
+			       <div class="col-sub">
+			
+					  <div class="l_boxss">
+        			  <div class="c1">${catalog.name}概述</div>
+         			  <img src="${Site.StaticResourcePath}/${catalog.describeImg}" width="228" height="60"/>
+         			 
+         	          <div class="l_box_p"><p>${catalog.productDescribe}</p></div>
+         		      </div>
+         		      				
+			           <div class="l_boxss">
+					   <%
+						  String pl = catalog.getString("guanggaowei") ;
+						  if("yiwai".equals(pl)){
+					   %>
+			          	   <cms:imageplayer code="kxb_product_yiwai" type="0"  width="230" height="255" />
+			           <%} else if ("lvyou".equals(pl)) {%>
+			        	   <cms:imageplayer code="kxb_product_lvyou" type="0"  width="230" height="255" />
+			           <% } else if ("renshou".equals(pl)) {%>
+			               <cms:imageplayer code="kxb_product_renshou" type="0"  width="230" height="255" />
+			           <% } else if ("jiacai".equals(pl)) {%>
+			               <cms:imageplayer code="kxb_product_jiacai" type="0"  width="230" height="255" />
+			           <% } else if ("jiankang".equals(pl)) {%>
+			               <cms:imageplayer code="kxb_product_jiankang" type="0"  width="230" height="255" />
+			           <% } else {%>
+			               <cms:imageplayer code="kxb_product" type="0"  width="230" height="255" />
+			           <% }%>
+					   </div>
+
+				<div class="l_boxss">
+                <div class="c1" id="c1">${catalog.name}热销产品</div>
+           		<ul class="usershop_box" id="usershop_box">
+           			<cms:list item="article" level="current" count="5" hasAttribute="hot">
+           			    <li class="usershop_list">
+							  <h4><a href="${Article.Link}" target="_blank"><img width="70" height="70" alt="${article.title}" src="${Article.LogoLink}"></a></h4>
+							 	 <div class="user_shop">
+							 	 	<a href="${Article.Link}" target="_blank">${article.title}</a> <span class="red shop_m moneys" name="Ajax_Prict_${Article.RiskCode}">￥${Article.InitPrem}</span><span name="Clear_Ajax_Prict_${Article.RiskCode}" class="moneys price_ymoneys">
+							 	 	     <% 
+					                        String initPrem = "￥"+article.getString("InitPrem");
+					                        String basePrem = article.getString("BasePremV3");
+					                        if(!initPrem.equals(basePrem)){
+					                        	write(basePrem);
+					                        }
+							        	 %>
+							 	 	</span>
+				 			 	 </div>
+				 		 </li>
+            		</cms:list>
+          	    </ul>
+                </div>
+                
+                <div class="l_boxss kf_box">
+         		  <a href="javascript:void(0);" vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap2" onclick="return(VL_FileDL(this));return false;" rel="nofollow"><img width="228" height="48" title="投保遇到问题？马上咨询在线客服" alt="投保遇到问题？马上咨询在线客服" src="${Site.StaticResourcePath}/images/group_11.jpg"></a>
+           		</div>
+				
+			<div class="l_boxss">
+            	 <div class="c1">保险知识</div>
+		          <ul class="zx_list">
+		          		<cms:list item="article"  level="all" count="5"  type="rand" name="9443" condition="${catalog.Catalog_insknowledge}">
+		          			<li>
+		          		<a target="_blank" href="${Article.Link}">${Article.Title|CharWidth=16}</a>
+		          			</li>
+		          		</cms:list>
+		          </ul>
+           </div>
+				
+			<div class="l_boxss">
+             <div class="c1">保险问答</div>
+             	<ul class="zx_list">
+		             <cms:list item="article"  level="all" count="5"  type="rand" name="9445" condition="${catalog.Catalog_insqa}">
+			          	<li>
+			         		<a target="_blank" href="${Article.Link}">${Article.Title|CharWidth=16}</a>
+			          	</li>
+					</cms:list>
+           	    </ul>
+           </div>
+			</div>
+		   </div>
+		</div>
+		
+		</div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="产品列表页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="产品列表页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="产品列表页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+	<cms:include file="block/community_v1.shtml" />
+	<cms:include file="block/kxb_product_compare.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-hcheckbox.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.qtip.js"></script>
+	<script	type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/productCompare.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script	type="text/javascript" src="${Site.JsResourcePath}/js/productlistv3.js"></script>
+	
+</body>
+</html>

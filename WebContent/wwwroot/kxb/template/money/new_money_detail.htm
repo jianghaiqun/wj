@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="${article.MetaKeywords}" />
+	<meta name="description" content="${article.MetaDescription}" />
+	<title>
+	<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+	%>
+	</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css" />
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_list.css?1=1" />
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css"  />
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_detail.css" />
+	<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/money/new_money.css"/>
+   <script type=""> 
+       var isCpsProduct = '${Article.isCpsProduct}'; 
+       var riskCode = '${Article.RiskCode}';
+   </script>
+   <cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body onload="salesVolumeLoad();queryProductRec();weixinFun();">
+	<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="wrapper">
+		<div class="money_nav cf">
+			<ul class="money_main_nav cf">
+				<li class="mon_nav1">
+					<a href="${Site.URL}/touzi-licai/" >理财首页</a>
+				</li>
+				<li class="mon_nav2">
+					<a href="${Site.URL}/touzi-licai/zhishi/">如何理财</a>
+				</li>
+				<li class="mon_nav3">
+					<a href="${Site.URL}/touzi-licai/guihua/">理财规划</a>
+				</li>
+			</ul>
+		</div>
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link>
+			<span class="separator">></span><span class="separator1">
+				${Article.title}</span>
+		</div>
+		<div class="content">
+			<div class="content_left">
+
+				<!-- meijunfeng add start -->
+				<!-- TODO -->
+				<div class="l_boxss">
+					<!--循环：catalog count：1-->
+
+					<div class="c1">公司简介</div>
+					<div class="max_icon_C${Article.SupplierCode} money_logo"></div>
+					<div class="l_box_p">
+						<p>
+							${Article.CompanyDesc}
+						</p>
+					</div>
+
+				</div>
+
+				 <div class="l_boxss"> 
+					<div class="caculator_box">
+						<dl class="clearfix caculator">
+							<dt>购买金额</dt>
+							<dd>
+								<input type="text" id="buyAmount" autocomplete="off" value="1" class="input_de1" name="" />
+								万
+							</dd>
+						</dl>
+						<dl class="clearfix caculator">
+							<dt>投资天数</dt>
+							<dd>
+								<input type="text" id="buyDay" autocomplete="off" value="1" class="input_de1" name=""/>
+								天
+							</dd>
+						</dl>
+						<dl class="clearfix caculator">
+							<dt>预期结算率</dt>
+							<dd>
+								<input type="text" id="buyRate" autocomplete="off" value="1" class="input_de1" name=""/>
+								%
+							</dd>
+						</dl>
+						<div id="cal_rsPart" class="cal_result pt10">
+							<p class="slider_ca"></p>
+							<div class="result_info">
+								<p id="cal_tip" class="gray5" >点击按钮可计算收益</p>
+								<div class="hide" id="cal_rs"  style="display: none;">
+									<p class="money_jsq_p">
+										收益金额：
+										<span id="getAmount"> <strong>10115.85 元</strong></span>
+									</p>
+									<p class="money_jsq_p">
+										 总计金额：
+										<span id="allAmount"> 10115.85 元</span>
+									</p>
+								</div>
+								<p class="t_c">
+									<input type="button" id="toCaculate" class="btn_caculator" onclick="getMonney();" alt="开始计算" value=""/></p>
+								<p id="cal_err"  style="display: none;"><strong style="color: red;">购买金额在大于等于0.1有效数字</strong></p>
+									<p id="cal_err1" style="display: none;"><strong style="color: red;">投资天数大于等于0的有效数字</strong></p>
+									<p id="cal_err2" style="display: none;"><strong style="color: red;">预期结算率为有效数字</strong></p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="l_boxss" >
+				<div class="c1" >购买该产品的用户还买了</div>
+				<ul id="products" class="usershop_box">
+					   <img src="${Site.StaticResourcePath}/images/loading2.gif" width="70" height="70"
+						class="jz_con_box"/>
+				</ul> 
+				</div>
+				<!-- 
+				<div class="l_boxss">
+					<div class="c1">您最近浏览过的商品</div>
+					<ul id="RecentView" class="zjll_list">
+					   <img src="${Site.StaticResourcePath}/images/loading2.gif" width="70" height="70"
+						class="jz_con_box"/>
+					</ul>
+				</div> -->
+				<div class="l_boxss kf_box">
+					<a  onClick="return(VL_FileDL(this))" exturl="http://www.kaixinbao.com/xiaoneng" vlpageid="xiaoneng"
+						href="javascript:openChat('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDExODA2Nl8yNzg4MDVfODAwMTE4MDY2XzJf');"
+						rel="nofollow"><img width="228" height="48"
+						title="投保遇到问题？马上咨询在线客服" alt="投保遇到问题？马上咨询在线客服"
+						src="${Site.StaticResourcePath}/images/group_11.jpg"/>
+					</a>
+				</div>
+				<!-- <div class="l_boxss"> -->
+				<div style="display: none;">
+					<div class="c1">退保流程图</div>
+					<img src="${Site.StaticResourcePath}/images/money/licai_lc_03.gif" width="186" class="money_lct" alt=""/>
+				</div>
+
+			</div>
+			<!-- 侧边栏结束 -->
+			<input type="hidden" name="RiskCode" id="RiskCode" value="${Article.RiskCode}" />
+			<input type="hidden" name="price" id="price" value="${Article.InitPrem}" />
+			<input type="hidden" name="pTypeName" id="pTypeName" value="${Article.RiskBreadcrumb}" />
+			
+			<div class="content_right">
+				<div class="cp_gscon">
+					<img width="190" height="190" style="display: inline;"  class="money_img_con" src="${Site.ProductResourcePath}${article.ProductLogo}" alt="${article.title}"/>
+					<div class="share_link">
+						<a onclick="submitp('${Article.RiskCode}');" class="add_sc">加入收藏</a>
+						<div class="shareto ">
+							<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"
+								data="{'text':'我刚刚在#开心保#发现了一款产品挺不错的，推荐你也看一下【${Article.title}】>>>'}">
+								<span class="share_p">分享到：</span><a href="" class="bds_tsina"></a><a href="" class="bds_tqq"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cp_descon">
+					<div class="cp_titile_con">
+						<h1>${Article.title}</h1>
+						<em><span class="SalesVolume" id="SalesV_${Article.RiskCode}">销量：加载中...</span></em>
+					</div>
+					<div class="clear"></div>
+					<div class="crowd clearfix">
+						<em class="cp_title_ms">适合人群：</em>
+						<p>${Article.AdaptPeopleInfo}</p>
+					</div>
+					<div class="clear"></div>
+				<!--<div class="tb_yh clearfix">-->
+					<div style="display: none;">
+						<em class="cp_title_ms">优惠信息：</em>
+						<p>
+							您将获得<span id="productIntegral_${Article.RiskCode}" class="jf_red"><span >${Article.ProductInt}</span></span>个积分
+						</p>
+					</div>
+					<div class="clear"></div>
+					<div id="content">${Article.CalHTML}</div>
+					<!--  <div class="tb_age clearfix" >-->
+					<div style="display: none;">
+	                     <em class="cp_title_ms">购买分数：</em>
+	                     <div class="gm_num_txt"><input type="number" id="gm_nums" class="gm_num" value="1"/>&nbsp;份 <i class="gm_dess">每人被保人最多够2000份</i> </div>
+                     </div>
+                     <!--<div class="tb_age clearfix" >-->
+                     <div style="display: none;">
+                    	 <em class="cp_title_ms">&nbsp;&nbsp;</em>
+		                 <ul id="gm_nums_page">
+		                 	<li><span name="Share1" onclick="update_nums(1)">1份</span></li>
+		                 	<li><span name="Share5" onclick="update_nums(5)">5份</span></li>
+		                    <li><span name="Share10" onclick="update_nums(10)">10份</span></li>
+		                    <li><span name="Share50" onclick="update_nums(50)">50份</span></li>
+		                    <li><span name="Share100" onclick="update_nums(100)">100份</span></li>
+		                    <li><span name="Share1000" onclick="update_nums(1000)">1000份</span></li>
+		                 </ul>
+                     </div>
+                    <div class="clear"></div>
+                    
+					<div class="price_con clearfix">
+						<em class="cp_title_ms">价格：</em>
+						<ul class="price">
+							${Article.prodcutMarkPrice}
+						</ul>
+					</div>
+					<div class="clear"></div>
+					<div class="button_b clearfix" id="button_b clearfix">
+						<span  onClick="doBuy();" class="button_b1">直接购买</span>
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+				<div class="clear"></div>
+
+				<div class="cp_contents">
+					<p id="min_tag" class="title">
+						<em><a class="selects_tag" href="javascript:void(0);">产品详情</a>
+						</em><em><a href="javascript:void(0);" class="">投保示例</a> </em><em><a
+							class="" href="javascript:void(0);">理赔服务</a> </em><em><a id="count" class=""
+							href="javascript:void(0);">客户评价(载入中...)</a> </em><em><a class=""
+							href="javascript:void(0);">常见问题</a> </em>
+					</p>
+					<div class="cp_des" id="tag_box">
+						<div class="money_ad">
+							${Article.Content}
+						<div class="ccp_box_con">
+							<h3 class="n_title ">保险条款</h3>
+							<p>
+								保险责任请参考产品对应条款，并敬请特别留意条款中的 <span class="col_reds">"责任免除"</span>
+								部分。
+							</p>
+							<ul class="bxtk_list_box">
+								${Article.Doc1}
+							</ul>
+						</div>
+						</div>
+					<div class="cp_tbsl_con" style="display: none">
+						<div class="ccp_box_con">
+							<h3 class="n_title ">投保示例</h3>
+							<p>${Article.toubaoshili}
+							</p>
+						</div>
+					</div>
+					<div class="cp_lpfu_con" style="display: none">
+						<div class="ccp_box_con">
+							<h3 class="n_title ">理赔服务</h3>
+							<img src="${Site.StaticResourcePath}/style/shop/images/desc_03.jpg" width="678"
+								height="225" alt="一站式服务，理赔更安心" title="一站式服务，理赔更安心">
+								<h4 class="bllc_title">理赔办理流程</h4> <img
+								src="${Site.StaticResourcePath}/style/shop/images/desc_07.gif" width="431" height="27">
+									<div class="clear"></div>
+									<p class="bz_list_con">
+										<b>第一步：</b>发生保险事故后，请第一时间理赔报案。您可以直接向保险公司报案，也可以请开心保协助报案。开心保为您开通客服专线4009-789-789、在线客服以及客服邮箱
+										kf@kaixianbao.com等多种报案协助申请方式；<br>
+									</p>
+									<p class="bz_list_con">
+										<b style="float: left;">第二步：</b>请您根据<帮助中心>-<理赔帮助>中关于理赔材料说明，收集、整理、提交理赔材料进行理赔申请。为了最大程度缩短理赔时间，理赔材料齐全后，可直接快递至相应保险公司。<br>
+									</p>
+									<p class="bz_list_con">
+										<b>第三步：</b>保险公司收到申请材料以后，会开启"开心保理赔特别通道"，会很快的完成理赔案件的审核。<br>
+									</p>
+									<p class="bz_list_con">
+										<b>第四步：</b>理赔审核完成后，理赔结果会及时通知您！也请您及时查看您申请理赔的银行账户，确认钱款是否及时到帐。<br>
+									</p>
+									<h4 class="bllc_title2">理赔申请指引</h4>
+									<p>
+										保险公司报案理赔专线：${Article.Phone}<br>
+									</p>
+									<h4 class="bllc_title3">理赔温馨提示</h4>
+									<p>
+										出于对客户健康的关怀，保险公司通常都会要求客户选择医疗质量高的公立二级甲等（县区级）以上医院进行就诊治疗，在接诊医生询问事故经过或者伤病历史时，应如实说明并请医生在病历上记录。（若特殊原因无法按照要求选择医院时，请拨打报案电话向保险公司垂询）<br>
+											发生交通工具等意外伤害事故，如有公安交警、急救中心、司法鉴定等相关机构介入处理的，请注意索要和保管好相应的证明、急救病历和鉴定报告等书面材料，作为事后申请理赔的重要依据。
+									</p>
+						</div>
+					</div>
+
+					<div class="cp_pj_con" style="display: none">
+						<cms:comment count="5">{ZCMS:评论区域}</cms:comment>
+					</div>
+
+
+
+
+					<div style="display: none">
+						${Article.FAQ}
+						<div class="xg_news_list">
+							<h3>相关保险知识:</h3>
+							<ul class="xg_news_list_con">
+							<cms:list item="article"  level="all" count="5"  type="rand" name="9443" condition="${catalog.Catalog_insknowledge}">
+							<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></li>
+					       </cms:list>
+							</ul>
+						</div>
+						<div class="xg_news_list">
+							<h3>相关保险问答：</h3>
+							<ul class="xg_news_list_con">
+							<cms:list item="article"  level="all" count="5"  type="rand" name="9445" condition="${catalog.Catalog_insqa}">
+							<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></li>
+					        </cms:list>
+							</ul>
+						</div>
+						<div class="link_kf_box">
+
+							<p>
+								尊敬的用户，如果您需要帮助请联系【<a
+									href="javascript:openChat('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDExODA2Nl8yNzg4MDVfODAwMTE4MDY2XzJf');"
+									rel="nofollow">在线客服</a>】，谢谢
+							</p>
+							<br/>
+							<a href="javascript:openChat('http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDExODA2Nl8yNzg4MDVfODAwMTE4MDY2XzJf');"
+								rel="nofollow"/><img src="${Site.StaticResourcePath}/images/group_15.jpg" width="192" height="49"/>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="ligm_consf" id="ligm_consf">
+					<div class="button_b clearfix">
+						<span class="button_b1" onClick="doBuy();">直接购买</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+<div class="h20"></div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="产品详情页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="产品详情页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="产品详情页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+</div>
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+	<div class="clear"></div>
+	<div id="cpdiv" class="cpdiv">
+		<div class="comparediv">
+			<h3>产品比较</h3>
+			<div class="closebtn">
+				<span onclick="closecp()"><img
+					src="${Site.StaticResourcePath}/images/closebtn.gif" width="20" height="20" /> </span>
+			</div>
+			<div class="comparedivcont">
+				<div class="comparedetail" style="display: none;" id="cpprodu1">
+					<input type="hidden" name="productCodeA" id="productCodeA" />
+					<p>
+						<span id="productnameA"></span><br /> <span
+							class="dblue cpdelico" onclick="closecp1()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu2">
+					<input type="hidden" name="productCodeB" id="productCodeB" />
+					<p>
+						<span id="productnameB"></span><br /> <span
+							class="dblue cpdelico" onclick="closecp2()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu3">
+					<input type="hidden" name="productCodeC" id="productCodeC" />
+					<p>
+						<span id="productnameC"></span><br /> <span
+							class="dblue cpdelico" onclick="closecp3()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu4">
+					<input type="hidden" name="productCodeD" id="productCodeD" />
+					<p>
+						<span id="productnameD"></span><br /> <span
+							class="dblue cpdelico" onclick="closecp4()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparebtn">
+					<span><img src="${Site.StaticResourcePath}/images/btncp.gif" width="72"
+						height="28" alt="提交对比"
+						onclick="javascript:begincompare('${Site.prop6}');subclosecp();" />
+					</span>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<cms:include file="block/community_v1.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script src="${Site.JsResourcePath}/js/money.js"></script>
+	<!--WdatePicker.js 日期控件 调用原日期控件-->
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/template/shop/js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+<!-- 	<script type="text/javascript" src="${Site.JsResourcePath}/js/Framework/premcalculateNew.js"></script> 与小能冲突 -->
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.qtip.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/productCompare.js"></script>    
+    <script type="text/javascript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+     <script type="text/javascript" src="${Site.JsResourcePath}/js/verification.js"></script>
+    <!--detail.js 详细页独有样式-->
+    <script type="text/javascript" src="${Site.JsResourcePath}/js/detail.js"></script>
+    
+    
+      <!--jquery.poshytip.js 责任描述tip提示-->
+    <script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.poshytip.js"></script>
+	<!-- Baidu Button BEGIN -->
+	<script type="text/javascript" id="bdshare_js" data="type=tools&amp;mini=1&amp;uid=1265131" ></script>
+	<script type="text/javascript" id="bdshell_js"></script>
+	<script type="text/javascript"> 
+        		function doBuy(){
+        			var rootEle = document.getElementById("divRiskAppFactor_" + "${Article.RiskCode}");
+        			var tempURL = "";
+        			if (rootEle != null) {
+        				var dc = new DataCollection();
+        				var ulNodeList = rootEle.getElementsByTagName("UL");
+        				for ( var i = 0; i < ulNodeList.length; i++) {
+        					for ( var j = 0; j < ulNodeList[i].childNodes.length; j++) {
+        						if (ulNodeList[i].childNodes[j].className == "li_selected") {
+        							var param = ulNodeList[i].id;
+        							param = param.substring(param.indexOf("_")+1);
+        							var nameval = ulNodeList[i].childNodes[j].firstChild.getAttribute("name");
+        						    tempURL += "&"+param + "="+encodeURIComponent(encodeURIComponent(ulNodeList[i].childNodes[j].firstChild.getAttribute("name")));
+        							continue;
+        						}
+        					}
+
+        				}
+        			}
+        			var gm_nums = jQuery("#gm_nums");
+        			if (gm_nums != null) {
+        				tempURL += "&buyNum=" + parseInt(gm_nums.val());
+        			}
+        			
+        			var isCpsProduct = '${Article.isCpsProduct}';
+        			if(isCpsProduct=="01"){
+        				_gaq.push(['_trackEvent', 'CPS','TO']);
+        				window.location.href="${Site.prop6}/shop/order_cps!recordJump.action?productId=${Article.RiskCode}";
+        				
+        				
+        			}else{
+        				window.location.href="${Site.prop6}/shop/order_config_new!buyNow.action?productId=${Article.RiskCode}"+tempURL     ;
+        			}
+        		}
+        		
+	</script>	
+	<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+	</script>
+	<!-- Baidu Button END -->
+
+</body>
+</html>

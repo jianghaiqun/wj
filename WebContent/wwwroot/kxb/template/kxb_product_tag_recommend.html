@@ -1,0 +1,10 @@
+				<div class="l_boxss">
+                <div class="c1">推荐产品</div>
+           		<ul class="zjll_list">
+				<cms:list item="article" level="all" count="5" hasAttribute="newRecommend"  name="9385" condition="type = 1">
+                    	<li class="clearfix">
+            			<a href="../${Article.Link}">${Article.Title|CharWidth=16}</a>
+                		<em class="list_xls">销量：${Article.SalesVolume}</em><em class="list_pays">${Article.InitPrem}</em></li>
+	            </cms:list>
+          	    </ul>
+                </div>

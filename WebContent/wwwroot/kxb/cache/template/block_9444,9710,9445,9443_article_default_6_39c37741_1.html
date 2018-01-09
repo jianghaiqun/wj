@@ -1,0 +1,11 @@
+<% DataTable dt_0 = TemplateData.getDocList("article","保险资讯,保险百科,保险问答,保险知识","all","null","null","6","zcarticle.title like '%"+article.getString("titleword1")+"%' and zcarticle.title like  '%"+article.getString("titleword2")+"%'","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"保险资讯,保险百科,保险问答,保险知识");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+
+				<li><h3><a href="${article_0.Link}" target="_blank">${article_0.Title|CharWidth=23}</a></h3>${article_0.Content|CharWidth=40}</li>
+			<%}}%>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>热门话题-世界杯</title>
+</head>
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/redesign/re_header.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/reset-grids.css"/>
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/stencil.css"/>
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/style/new_logo.css"/>
+<style>
+.g-resale-nav{display:none; }
+</style>
+<body>
+<!--top头部-->
+		<div class="g-top">
+            <div class="g-weaper1200">
+                <div class="m-login">
+                <div id="NotLogin"><span class="m-login-p f-ib">您好，请</span><span class="m-login-a" id="NotLoginSpan"><a href="javascript:void(0);" id="headerShowLoginWindow" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">登录</a><em>/</em><a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">注册</a>
+                <span class="m-login-x" style="display:none"></span>
+                <!-- 未登录状态 显示图层 -->
+                    <div class="m-login-no" style="display:none;">
+                        <div class="m-lo-p">
+                            <div class="m-lo-img"></div>
+                            <img src="http://localhost:8080/images/redesign/photo_06.gif" alt="">
+                        </div>
+                        <div class="m-login-jf">
+                            <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag">会员专享，<br>积分换优惠</a>
+                        </div>
+                        <div class="clear h12"></div>
+                        <div class="m-integral">
+                            <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                        </div>
+                        <div class="m-Coupon">
+                        <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em>
+                        </div>
+                    </div>
+                <!-- 未登录状态 显示图层 end -->
+                </span></div>
+                <div id="YesLogin" style="display: none"><span class="m-login-p f-ib" id="YesLoginSpan">
+                                                         您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a>
+                                                         <i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                
+                <span class="m-login-x" style="display:none"></span>
+                <!--登录状态显示图层 -->
+                    <div class="m-login-yes z-hover-shadow"  style="display:none;">
+                           <div class="m-login-back">
+                               <span class="m-login-p m-login_p2">您好<a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a><i id="headerLoginMemGradeIcon"  class="vip_k vip_top vip_k1" title=""></i></span><a href="javascript:void(0);" id="headerLogout" class="m-go-back">退出登录</a>
+                           </div> 
+                           <div class="m-lo-p">
+                            <div class="m-lo-img"><a href="###"></a></div>
+                            <img id="memberphoto" alt="">
+                           </div>
+                            <div class="m-login-user">
+                                <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="f_mi m-login-name2"></a><i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                                <p id="gradeinfo"></p>
+                            </div>
+                            <div class="clear h6"></div>
+                            <div class="m-integral2">
+                                <em class="i-integral f-ib"><a href="http://localhost:8080/wj/shop/point!newList.action">积分</a></em>
+                                <a id="memberPointsCount" href="http://localhost:8080/wj/shop/point!newList.action" class="m-jf-num"></a>
+                            </div>
+                            <div class="m-Coupon2">
+                            <em class="i-Coupon f-ib"><a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action">优惠券</a></em><a id="CouponCount" href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="m-jf-num"></a>
+                            </div>
+                    </div>
+                <!--登录状态显示图层 end -->
+                   
+                </span></div>
+                </div>
+                <div class="m-top-fun">
+                      <span class="m-fun-span f-ib m-tel"><em class="i-tel"></em><i class="p-tel">4009-789-789</i></span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-WeChat" id="i-WeChat">
+                            <a href="###" class="m-fun-a hover"><em class="i-WeChat"></em></a>
+                            <div class="m-WeChatImg z-hover-shadow" style="display:none;">
+                                    <img src="http://localhost:8080/images/redesign/wechart.gif" alt="">
+                                    <p>关注微信公众号<br>轻松管理账单</p>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-service" id="i-service">
+                            <a href="###"  class="m-fun-a "><em class="i-service"></em></a>
+                            <div class="m-service_con z-hover-shadow" style="display:none;">
+                                 <ul class="m-service-li">
+                                <li><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单服务</a></li>
+                                <li><a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a></li>
+                                <li><a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔申请</a></li>
+                            </ul>
+                            </div> 
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-cart" id="i-user-cart-span"><a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-fun-a " onclick="wxsend('gwclogin');">
+                            <em class="i-cart"></em><i class="m-cartNum" id="shopCartNo">0</i></a>
+                              <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-nologin" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>请先登录</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/gwclogin" vlpageid="gwclogin">登录</a>
+                            </div>
+                             <!-- 购物车为空 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>购物车中没有商品</span>
+                                    <a href="http://www.kaixinbao.com" class="m-btn-login">去选购商品</a>
+                            </div>
+                             <!-- 购物车不为空 -->
+                           <div class="m-cart_list z-hover-shadow" id="m-cart-yes" style="display:none;">
+                                <ul class="m-cart-ul" id="shopcartinfo">
+                                
+                                </ul>
+                                <div class="m-cart-go">
+                                    	共计<em id="shoptotal"></em> <a href="http://localhost:8080/wj/shop/member_shopcart!getShopCartINF.action" class="m-cart-to">去购物车</a>
+                                </div>
+                           </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-user" id="i-user-span"><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-fun-a " onclick="wxsend('memlogin');"><em class="i-user"></em></a>
+                            <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-user-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>会员中心</span>
+                                    <a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/memlogin" vlpageid="memlogin">登录</a>
+                            </div>
+                            <!-- 用户已登录状态 -->
+                            <div class="m-user-yes z-hover-shadow" id="m-user-yes" style="display:none;">
+                              <dl class="m-order_dl m-order_dl1">
+                                  <dt>我的保单</dt>
+                                  <dd>
+	                                  <a id="prepay" href="http://localhost:8080/wj/shop/order_query!queryNoPayOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="preeffecitive" href="http://localhost:8080/wj/shop/order_query!queryNoEffectOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="effecitive" href="http://localhost:8080/wj/shop/order_query!queryEffectingOrder.action" class="f-ib" rel="nofollow"></a>
+                                  </dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>账户中心</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/profile!edit.action" class="f-ib" rel="nofollow">账户信息</a>
+                                  <a href="http://localhost:8080/wj/shop/point!newList.action" class="f-ib" rel="nofollow">我的积分</a>
+                                  <a href="http://localhost:8080/wj/shop/coupon!queryCoupon.action" class="f-ib" rel="nofollow">我的优惠券</a></dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>客户服务</dt>
+                                  <dd><a href="http://localhost:8080/wj/shop/stow!queryScan.action" class="f-ib" rel="nofollow">我的收藏</a>
+                                  <a href="http://localhost:8080/wj/shop/question!questionList.action" class="f-ib" rel="nofollow">保险问答</a>
+                                  <a href="http://localhost:8080/wj/shop/member_comment!queryComment.action" class="f-ib" rel="nofollow">商品评价</a><a href="http://localhost:8080/wj/shop/my_compare!show.action" class="f-ib" rel="nofollow">对比记录</a>
+                                  <a href="http://localhost:8080/wj/shop/my_consult!show.action" class="f-ib" rel="nofollow">我的咨询</a></dd>
+                              </dl>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                </div>
+                <div class="g-resale-nav">
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/jiankang-baoxian/">健康险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/lvyou-baoxian/">旅游险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/yiwai-baoxian/">意外险</a></span>
+                     <span class="m-fun-span f-ib "><a class="m-fun-a" target="_blank" href="http://localhost:8080/">首页</a></span>
+                </div>
+            </div>
+        </div>
+<!--top头部end-->
+  <div class="topic_warper">
+    <div class="topic_nav">
+      <h2 class="topic_logo">
+        <a href="http://localhost:8080/"></a>
+      </h2>
+      <div class="topic_top">
+        <a href="http://localhost:8080/about/2/index.shtml#lpbz2" class="topic_tel" target="_blank"></a>
+        <div class="clear"></div>
+        <ul class="topic_main_nav">
+          <li>
+            <a href="http://localhost:8080/">首页</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/lvyou-baoxian/">旅游险</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/yiwai-baoxian/">意外险</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/jiankang-baoxian/">健康险</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/renshou-baoxian/">人寿险</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/jiacai-baoxian/">家财险</a>
+          </li>
+           <li>
+            <a href="http://localhost:8080/chexian/">车险</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/tx/">团体险</a>
+          </li>
+          <li class="clear_r_bor">
+            <a href="http://localhost:8080/touzi-licai/">理财险</a>
+          </li>
+        </ul>
+      </div>
+      <div class="clear h30"></div>
+      <h1 class="topic_titile">如火如荼的世界杯</h1>
+      <p class="topic_des">
+       灯泡灭了 我仔细检查了下 钨丝并没有断 我重新按了下开关 灯泡闪了两下又灭了 我问 怎么了 不开心么 灯泡回答 等会儿 有个蛾子在窗外看我好久了 我说 那不挺好 有人看得上你 灯泡说 我不是火 别让他看错了 误了一辈子…
+
+阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷
+      </p>
+    </div>
+    <div class="topic_box_c">
+      <div class="clearfix">
+        <div class="topic_box_l">
+          <h2 class="topic_n_t clearfix">
+            <span class="topic_ti">阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿</span>
+            <a href="http://www.baidu.com" class="topic_more" target="_blank"></a>
+          </h2>
+          <div class="topic_news_con">
+            <div class="topic_new_ts bg_ws"></div>
+            <span class="jiao1"></span>
+            <span class="jiao2"></span>
+            <p class="news_p_con margin_p1">
+            阿根廷最棒！灯泡灭了 我仔细检查了下 钨丝并没有断 我重新按了下开关 灯泡闪了两下又灭了 我问 怎么了 不开心么 灯泡回答 等会儿 有个蛾子在窗外看我好久了 我说 那不挺好 有人看得上你 灯泡说 我不是火 别让他看错了 误了一辈子…
+            </p>
+            <span class="jiao3"></span>
+            <span class="jiao4"></span>
+          </div>
+        </div>
+        <div class="topic_box_r">
+          <h2 class="topic_n_t clearfix">
+            <span class="topic_ti topic_ti2">热门图片</span>
+          </h2>
+          <div class="topic_news_con topic_r_news">
+            <div class="topic_new_ts bg_ws2"></div>
+            <span class="jiao1"></span>
+            <span class="jiao2"></span>
+            <a href="http://www.baidu.com" target="_blank">
+              <img src="http://localhost:8080/upload/Image/cxzmlb/2014/04/2821408828.jpg" width="318px" height="170px" alt="阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿"></a>
+            <span class="jiao3"></span>
+            <span class="jiao4"></span>
+          </div>
+        </div>
+      </div>
+      <div class="clear h20"></div>
+      <div class="clearfix">
+        <h2 class="topic_n_t clearfix">
+          <span class="topic_ti">巴西阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿</span>
+        </h2>
+        <div class="topic_news_con2">
+          <div class="topic_new_ts bg_ws3"></div>
+          <span class="jiao1"></span>
+          <span class="jiao2"></span>
+          <div class="copic_img_list">
+            <div class="topic_img">
+              <div class="topic_new_ts bg_ws4"></div>
+              <span class="jiao1"></span>
+              <span class="jiao2"></span>
+              <a href="http://www.baidu.com" target="_blank">
+                <img width="175px" height="138px" alt="巴西阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿" src="http://localhost:8080/upload/Image/pptj/2014/04/2821258053.jpg"></a>
+              <span class="jiao3"></span>
+              <span class="jiao4"></span>
+
+            </div>
+            <div class="topic_list_s">
+              <a href="http://www.baidu.com" target="_blank" class="topic_tsf">蓝白军团</a>
+              <p class="news_p_con margin_p1 margin_p2">
+             灯泡灭了 我仔细检查了下 钨丝并没有断 我重新按了下开关 灯泡闪了两下又灭了 我问 怎么了 不开心么 灯泡回答 等...
+                <a href="http://www.baidu.com" class="topic_new_mores" target="_blank">...详情</a>
+              </p>
+            </div>
+          </div>
+          <div class="copic_img_list">
+            <div class="topic_img">
+              <div class="topic_new_ts bg_ws4"></div>
+              <span class="jiao1"></span>
+              <span class="jiao2"></span>
+              <a href="http://www.baidu.com" target="_blank">
+                <img width="175px" height="138px" alt="" src="http://localhost:8080/upload/Image/pptj/2014/04/2821237550.JPG"></a>
+              <span class="jiao3"></span>
+              <span class="jiao4"></span>
+
+            </div>
+            <div class="topic_list_s">
+              <a href="http://www.baidu.com" target="_blank" class="topic_tsf">德国队</a>
+              <p class="news_p_con margin_p1 margin_p2">
+                黑色战服 灯泡灭了 我仔细检查了下 钨丝并没有断 我重新按了下开关 灯泡闪了两下又灭了 我问 怎么了 不开心么 灯...
+                <a href="http://www.baidu.com" class="topic_new_mores" target="_blank">...详情</a>
+              </p>
+            </div>
+          </div>
+          <div class="clear "></div>
+          <div class="  clearfix cp_dy_box topic_con_ss">
+
+
+            <div class="cp_stencil_title clearfix ">
+              <div class="cp_box_logo">
+                <span class="CInsuranceCompany icon_C2071"></span>
+              </div>
+              <div class="cp_title_s">
+                <h2>
+                  <a href="http://localhost:8080/yiwai-baoxian/258474.shtml" target="_blank">大众骑行天下保障计划</a>
+                </h2>
+                <p>
+                  自行车运动运动爱好者、专业骑行运动员。
+                </p>
+              </div>
+            </div>
+            <ul class="stencil_td ">
+              <ul class="ld_list_box">
+                <ul class="ld_list_box"><li><span>保障适中</span></li><li><span>针对性强</span></li><li><span>专为骑行爱好者设计的保障产品</span></li></ul>
+              </ul>
+            </ul>
+            <div class="stencil_cp_des_list">
+              <p>
+              <div id="divRiskAppDuty_207101002" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_00000000000000001411" ><span class="CDutyCol1">意外身故、残疾及烧烫伤</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000001411_B0000000000000001108_350">10万</span></span></td><span class="CDutyCol3">赔付因意外导致的身故、残疾及烧烫伤</span></div><div class="list_2 row0" id="Duty_00000000000000001412" ><span class="CDutyCol1">意外医药补偿</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000001412_B0000000000000001108_350">1万</span></span></td><span class="CDutyCol3">赔偿被保险人因遭受意外伤害事故或身患疾病而实际支出的医疗费用，免赔额100元。</span></div><div class="list_3 row1" id="Duty_00000000000000001413" ><span class="CDutyCol1">个人责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000001413_B0000000000000001108_350">2万</span></span></td><span class="CDutyCol3">补偿因被保险人的行为造成的他人身体伤害或财产损失。</span></div></div>
+              </p>
+            </div>
+            <div class="cp_price_con"> 
+            <em>RMB</em><span name="Ajax_Prict_207101002">5.00</span>
+		     <a href="http://localhost:8080/yiwai-baoxian/258474.shtml" target="_blank">查看详情</a>
+            </div>
+
+          </div>
+    <div class="  clearfix cp_dy_box topic_con_ss">
+
+
+            <div class="cp_stencil_title clearfix ">
+              <div class="cp_box_logo">
+                <span class="CInsuranceCompany icon_C2071"></span>
+              </div>
+              <div class="cp_title_s">
+                <h2>
+                  <a href="http://localhost:8080/yiwai-baoxian/258474.shtml" target="_blank">大众骑行天下保障计划</a>
+                </h2>
+                <p>
+                 自行车运动运动爱好者、专业骑行运动员。
+                </p>
+              </div>
+            </div>
+            <ul class="stencil_td ">
+              <ul class="ld_list_box">
+                <ul class="ld_list_box"><li><span>保障适中</span></li><li><span>针对性强</span></li><li><span>专为骑行爱好者设计的保障产品</span></li></ul>
+              </ul>
+            </ul>
+            <div class="stencil_cp_des_list">
+              <p>
+                <div id="divRiskAppDuty_207101002" class="CRiskAppDuty" ><div class="title"><span class="CDutyCol_1">责任项目</span><span class="CDutyCol_2">保额</span><span class="CDutyCol_3">责任描述</span></div><div class="list_1 row1" id="Duty_00000000000000001411" ><span class="CDutyCol1">意外身故、残疾及烧烫伤</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000001411_B0000000000000001108_350">10万</span></span></td><span class="CDutyCol3">赔付因意外导致的身故、残疾及烧烫伤</span></div><div class="list_2 row0" id="Duty_00000000000000001412" ><span class="CDutyCol1">意外医药补偿</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000001412_B0000000000000001108_350">1万</span></span></td><span class="CDutyCol3">赔偿被保险人因遭受意外伤害事故或身患疾病而实际支出的医疗费用，免赔额100元。</span></div><div class="list_3 row1" id="Duty_00000000000000001413" ><span class="CDutyCol1">个人责任</span><td class="CDutyCol2"><span class="CDutyCol2" id="00000000000000001413_B0000000000000001108_350">2万</span></span></td><span class="CDutyCol3">补偿因被保险人的行为造成的他人身体伤害或财产损失。</span></div></div>
+              </p>
+            </div>
+            <div class="cp_price_con">
+             <em>RMB</em><span name="Ajax_Prict_207101002">5.00</span>
+		     <a href="http://localhost:8080/yiwai-baoxian/258474.shtml" target="_blank">查看详情</a>
+            </div>
+            
+          </div>
+          <span class="jiao3"></span>
+          <span class="jiao4"></span>
+        </div>
+      </div>
+      <div class="clear h20"></div>
+      <div class="clearfix">
+        <h2 class="topic_n_t clearfix">
+          <span class="topic_ti">荷兰阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿</span>
+        </h2>
+        <div class="topic_news_con2">
+          <div class="topic_new_ts bg_ws3"></div>
+          <span class="jiao1"></span>
+          <span class="jiao2"></span>
+          <div class="copic_img_list">
+            <div class="topic_img">
+              <div class="topic_new_ts bg_ws4"></div>
+              <span class="jiao1"></span>
+              <span class="jiao2"></span>
+              <a target="_blank" href="http://www.baidu.com">
+                <img width="175px" height="138px" src="http://localhost:8080/upload/Image/lcbjsx/2820151424.jpg" alt="荷兰阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿"></a>
+              <span class="jiao3"></span>
+              <span class="jiao4"></span>
+
+            </div>
+            <div class="topic_list_s">
+              <a class="topic_tsf" target="_blank" href="http://www.baidu.com">日本</a>
+              <p class="news_p_con margin_p1 margin_p2">
+                钓鱼岛是中国的！灯泡灭了 我仔细检查了下 钨丝并没有断 我重新按了下开关 灯泡闪了两下又灭了 我问 怎么了 不开心么 灯泡回答 等...
+                <a class="topic_new_mores" href="http://www.baidu.com" target="_blank">...详情</a>
+              </p>
+            </div>
+          </div>
+          <div class="copic_img_list">
+            <div class="topic_img">
+              <div class="topic_new_ts bg_ws4"></div>
+              <span class="jiao1"></span>
+              <span class="jiao2"></span>
+              <a target="_blank" href="http://www.baidu.com">
+                <img width="175px" height="138px" src="http://localhost:8080/upload/Image/lcbjsx/2820166173.jpg" alt=""></a>
+              <span class="jiao3"></span>
+              <span class="jiao4"></span>
+
+            </div>
+            <div class="topic_list_s">
+              <a class="topic_tsf" target="_blank" href="http://www.baidu.com">巴西热不热</a>
+              <p class="news_p_con margin_p1 margin_p2">
+               巴西有什么美食 灯泡灭了 我仔细检查了下 钨丝并没有断 我重新按了下开关 灯泡闪了两下又灭了 我问 怎么了 不开心么 灯泡回答 等...
+                <a class="topic_new_mores" href="http://www.baidu.com" target="_blank">...详情</a>
+              </p>
+            </div>
+          </div>
+          <div class="clear "></div>
+            <div class="topic_new_dnew">
+             	<h3 class="topic_new_tsc">你看呢</h3>
+            <ul class="hot_topics up_hot_topic">
+	            
+				
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			             
+            </ul>
+            </div>
+               <div class="clear "></div>
+          <span class="jiao3"></span>
+          <span class="jiao4"></span>
+        </div>
+      </div>
+      <div class="clear h20"></div>
+      <div class="clearfix">
+        <h2 class="topic_n_t clearfix">
+          <span class="topic_ti">英格兰阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿</span>
+        </h2>
+        <div class="topic_news_con2">
+          <div class="topic_new_ts bg_ws3"></div>
+          <span class="jiao1"></span>
+          <span class="jiao2"></span>
+         <div class="topic_lm4">
+            <div class="topic_img">
+              <div class="topic_new_ts bg_ws4"></div>
+              <span class="jiao1"></span>
+              <span class="jiao2"></span>
+              <a href="http://www.baidu.com" target="_blank">
+                <img width="175px" height="138px" alt="英格兰阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿" src="http://localhost:8080/upload/Image/lcbjsx/2820145671.jpg"></a>
+              <span class="jiao3"></span>
+              <span class="jiao4"></span>
+
+            </div>
+            <div class="topic_new_dnew up_date_pw up_date_shg">
+             <a href="http://www.baidu.com" target="_blank" class="topic_tsf ">小贝</a>
+              <p class="news_p_con margin_p1 margin_p2">
+               小贝有那么多孩子 灯泡灭了 我仔细检查了下 钨丝并没有断 我重新按了下开关 灯泡闪了两下又灭了 我问 怎么了 不开心么 灯泡回答 等会儿 有个蛾子在窗外看我好久了 我说 那不挺好 有人看得上你 灯泡说 我不是火 别让他看错了 误了一辈子…
+                <a href="http://www.baidu.com" class="topic_new_mores" target="_blank">...详情</a>
+              </p>
+            </div>
+         </div>
+          <span class="jiao3"></span>
+          <span class="jiao4"></span>
+        </div>
+      </div>
+      <div class="clear h20"></div>
+      <div class="clearfix">
+        <div class="topic_box_l">
+          <h2 class="topic_n_t clearfix">
+            <span class="topic_ti">美国阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿</span>
+          </h2>
+          <div class="topic_news_con">
+            <div class="topic_new_ts bg_ws"></div>
+            <span class="jiao1"></span>
+            <span class="jiao2"></span>
+            <ul class="hot_topics up_hot_topic2">
+			 
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			             
+         </ul>
+            <span class="jiao3"></span>
+            <span class="jiao4"></span>
+          </div>
+        </div>
+        <div class="topic_box_r">
+          <h2 class="topic_n_t clearfix">
+            <span class="topic_ti topic_ti2">产品图片</span>
+          </h2>
+          <div class="topic_news_con topic_r_news">
+            <div class="topic_new_ts bg_ws2"></div>
+            <span class="jiao1"></span>
+            <span class="jiao2"></span>
+            <a href="http://www.baidu.com" target="_blank">
+              <img src="http://localhost:8080/upload/Image/cxzmm/2014/04/2821139057.jpg" width="318px" height="170px" alt=""></a>
+            <span class="jiao3"></span>
+            <span class="jiao4"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="clear h20"></div>
+      <div class="clearfix">
+        <h2 class="topic_n_t clearfix">
+          <span class="topic_ti">喀麦隆阿根廷阿根廷阿根廷阿阿根廷阿根廷阿根廷阿</span>
+          <a href="http://localhost:8080/huati/" class="topic_more" target="_blank"></a>
+        </h2>
+        <div class="topic_news_con2">
+          <div class="topic_new_ts bg_ws3"></div>
+          <span class="jiao1"></span>
+          <span class="jiao2"></span>
+         <ul class="hot_topics">
+           
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			             <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			            <li>
+			              <a href="" target="_blank">></a>
+			            </li>
+			             
+         </ul>
+          <span class="jiao3"></span>
+          <span class="jiao4"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="g-weaper"></div>
+<!-- 公共底部 -->
+    <div class="g-main-con">
+       <div class="clear h20"></div>  
+            <!-- foot -->
+            <div class="g-weaper1200">
+                <div class="g-footer">
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon1 "></em>正品保险</dt>
+                      <dd>中国保监会监制</dd>
+                      <dd>保险公司专供</dd>
+                      <dd>高性价比产品</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon2 "></em>快捷投保</dt>
+                      <dd>全方位一键对比</dd>
+                      <dd>1对1保险顾问指导</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon3 "></em>省心服务</dt>
+                      <dd>电子保单快捷变更</dd>
+                      <dd>满200元发票包邮</dd>
+                      <dd>免费协助理赔无差异</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon4 "></em>安全可靠</dt>
+                      <dd>7x24小时客服不间断</dd>
+                      <dd>风险提示保障安全</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon5 "></em>品牌实力</dt>
+                      <dd>3年200万用户选择</dd>
+                      <dd>2013年最佳保险中介</dd>
+                      <dd>30家知名保险公司合作</dd>
+                    </dl>
+
+                    <div class="clear h20"></div>
+                </div>
+              </div>
+                  <div class="clear h20"></div>
+                        <div class="g-footer-bg">
+                <div class="g-weaper1200">
+                     <div class="g-footer2">
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon6 "></em>新手指南</dt>
+                            <dd><a href="http://localhost:8080/about/xszn/index.shtml#xszn1" target="_blank" rel="nofollow">如何注册</a>
+                            <a href="http://localhost:8080/about//xszn/index.shtml#xszn4" target="_blank" rel="nofollow">如何投保</a>
+                            <a href="http://localhost:8080/about/xszn/index.shtml#xszn3" target="_blank" rel="nofollow">找回密码</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon7 "></em>支付帮助</dt>
+                            <dd><a href="http://localhost:8080/about/4/index.shtml#zfbz2" target="_blank" rel="nofollow">支付方式</a><a href="http://localhost:8080/about/4/index.shtml#zfbz1" target="_blank" rel="nofollow">支付说明</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon8 "></em>保单服务</dt>
+                            <dd><a href="http://localhost:8080/ddkscx/" target="_blank" rel="nofollow">保单查询</a>
+                            <a href="http://localhost:8080/bdyz/" target="_blank" rel="nofollow">保单验真</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg2" target="_blank" rel="nofollow">保单变更</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg3" target="_blank" rel="nofollow">保单取消</a>
+                            <a href="http://localhost:8080/about/1/index.shtml#yxxg1" target="_blank" rel="nofollow">保单寄送</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon9 "></em>理赔服务</dt>
+                            <dd><a href="http://localhost:8080/about/2/index.shtml#lpbz1" target="_blank" rel="nofollow">理赔指南</a><a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔报案</a>
+                            <a href="http://localhost:8080/lpzs/index.shtml" target="_blank" rel="nofollow">理赔案例</a></dd>
+                          </dl>
+                           <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon10 "></em>服务中心</dt>
+                            <dd><a href="http://localhost:8080/wj/shop/bill_query!queryBill.action" target="_blank" rel="nofollow">发票索取</a>
+                            <a href="http://localhost:8080/about/3/dayizonghui/index.shtml" target="_blank" rel="nofollow">常见问题</a></dd>
+                          </dl>
+                          <div class="clear h20"></div>
+                     </div>
+                     
+                    <div class="clear h20"></div>
+                     <!-- 热门专题 -->
+                </div>
+              </div>
+             <!-- 底部 -->
+                <div class="g-btn-footer">
+                <div class="g-weaper1200">
+                        <div class="g-f-left">
+                          <div class="botlink02">
+                <ul  class="clearfix">
+					<li><a href="http://localhost:8080/other/about/" rel="nofollow">关于开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/news/" rel="nofollow">开心保要闻</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/jobs/" rel="nofollow">加入开心保</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/sitemap/" >网站地图</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/legal/" rel="nofollow">法律声明</a></li>
+					<li>|</li>
+					<li><a href="http://localhost:8080/other/contact/" rel="nofollow">联系我们</a></li>
+					<li>|</li>
+					<li><a href="http://u.kaixinbao.com/" target="_blank" rel="nofollow">分销联盟</a></li>
+					<li>|</li>
+					<!-- <li><a href="http://kaixinbao.tmall.com/" target="_blank" rel="nofollow">开心保天猫店</a></li>
+					<li>|</li>
+					<li><a href="http://temai.kaixinbao.com/" target="_blank" rel="nofollow">特价机票</a></li>
+					<li><a href="http://wap.kaixinbao.com/" target="_blank" >移动版</a></li> -->
+					<li><a href="http://www.kaixinbao.com/yxhd/isl-tra/" target="_blank" rel="nofollow">微信版</a></li>                
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="copyright">		
+				<div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+				<div class="copyrightleft">Copyright 2012-2016 版权所有 网金保险销售服务有限公司</div>
+			</div>
+                        </div>
+                        <div class="g-f-right">
+                            <ul class="sl-floatcenter">
+          					
+ 
+				      			<li class="sl-floatcenter-item" ><a href="../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36" height="33"/></a></li>
+				    		
+ 
+				      			<li class="sl-floatcenter-item" ><a href="../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69" height="33"/></a></li>
+				    		 
+                          </ul>
+                        </div>
+                        <div class="clear"></div>
+                </div>
+          </div>
+    </div>
+  <div id="fix_nav" class="fix_nav">
+       <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" >在线客服</a>
+       <span class="fix-RichScan ">保单查询<div style="display: none;" class="weixinDiv tagshow"><img src="http://localhost:8080/images/wxnew.png">微信查保单</div></span>
+       <span class="fix-top" id="gotop">回到顶部</span>
+  </div>
+    <!-- 公共底部 -->
+<script type="text/javascript" src="http://localhost:8080/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jqueryupdate.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_header.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/xiaoneng_CustomerService.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/artDialog.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/login.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/iframeTools.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+<!--通用footer-->
+<script type="text/javascript" src="http://localhost:8080/js/jquery.soChange-min.js"></script>
+
+</body>
+</html>

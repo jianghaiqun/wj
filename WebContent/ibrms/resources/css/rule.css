@@ -1,0 +1,11 @@
+#Link {font-size:20px;color:#057154;font-weight:bold;cursor:hand}
+#BOM {font-size:16px;color:#B81B01;cursor:hand}
+#BOMItem {font-size:16px;color:#DF5D06;cursor:hand}
+#Operator{font-size:16px;color:#FF8400;cursor:hand}
+#Input {font-size:16px;color:#D40C07;cursor:hand}
+#Pathesise {font-size:20px;color:#057154;font-weight:bold}
+#Delete {font-size:16px;cursor:hand}
+#AddInput {font-size:16px;cursor:hand}
+.checked{background-image:url(../images/default/menu/checked.gif)}
+.unchecked{background-image:url(../images/default/menu/unchecked.gif)}
+

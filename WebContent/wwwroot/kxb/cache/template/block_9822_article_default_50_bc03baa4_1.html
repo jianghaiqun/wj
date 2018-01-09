@@ -1,0 +1,11 @@
+<% DataTable dt_0 = TemplateData.getDocList("article","保险品牌","all","null","null","50","exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='是' and z1.columncode='HasPartnership')","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"保险品牌");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	    	  <li><a href="#${article_0.id}">${article_0.CollaborateDate}</a></li>
+	     <%}}%>

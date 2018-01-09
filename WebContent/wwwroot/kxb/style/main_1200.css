@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*
+#@des:窄屏样式
+*@maker:dongqi.guo
+*@time:2014-06-11-16:55
+*/
+.nav_box,.wrapper,.in_s_box,.part5,.part6,.frdlinkcont,.cooprationcont,.rollBox{ width:980px;}
+.rollBox .Cont{ width:904px;}
+.ad_jiaodian{ height:280px;}
+.ad_center,.changeDiv h3{ width:750px; }
+.changeDiv img{ width:740px; height:280px;}
+.changeBox_a1{ width:748px;height:288px;}
+.search_bxgs{  margin-top:106px; padding-left:70px; margin-left:0px;}
+.ul_change_a2{ bottom: 8px;}
+.a_last {   top: 100px;}
+.a_next {top: 100px;}
+.hot_list{ display:block;}
+.nav_bgs{ margin-left:20px;}
+.input_soso{ padding:0 4px;}
+.clear_m{ float:right;}
+.main_s_box{    height: 277px; width: 734px; }
+.hot_list_box{ display:none;}
+.hot_titiles{ height:21px; line-height:21px;}
+.tag_yun{ display:none;}
+.car_lipin li{ padding-left:162px; background-position:135px -678px; }
+.in_news_list{ display: block;height: 30px; margin-top: 12px;width: 750px;    float:right; border:none;}
+.service_con{ display:block;}
+.in_news_list a:link,.in_news_list a:visited,.in_news_list a:active{ width:140px; display:block;color:#797979; line-height:24px; padding-left:10px; margin-top:4px;}
+.in_news_list a:hover{ color:#FF7400;}
+.main_news{  float:left;}
+.up_980{ margin-top:-30px;}
+.car_box{   background: url("../images/car_sf_07.jpg") no-repeat scroll 0 -10px rgba(0, 0, 0, 0);float: left; height: 215px;margin-top: 12px; width: 538px;}
+.car_box_links{ position: absolute; display: block; width:167px; height: 215px; top: 0px; right: 0px;}
+.index_test{ display: none;}
+.servfloat { right: 40px!important;}
+.foot_wx,.authenticate,.copyright,.botlink02{width: 637px;}
+.botlink02 ul{ padding-left: 0px;}
+.new_botlink{ width: 980px;}
+.new_botlinkcont{ margin-left: 45px; margin-right: 0px;}
+.car_box_links{ right: 210px;}
+.main_car_tb{ display: none;}
+
+.nav_main .tmall_nav a:link, .nav_main .tmall_nav a:visited, .nav_main .tmall_nav a:active {
+    width: 34px;
+}
+
+.nav_searchbd{ width: 93px; float: right; height: 100px; margin-top: 10px; margin-right: 0px;}
+.nav_searchbd a{ background: url(../images/search_bd_01.png) no-repeat  -20px -29px ;  width:93px; height: 100px; display: block; outline:none; -moz-outline:none;}
+.nav_searchbd a:hover{ background-position:-142px -29px ;}

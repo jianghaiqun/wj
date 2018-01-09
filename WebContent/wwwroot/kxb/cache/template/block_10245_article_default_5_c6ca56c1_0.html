@@ -1,0 +1,45 @@
+<% DataTable dt_24 = TemplateData.getDocList("article","首页理赔案例","all","null","null","5","null","null","null");
+  if(dt_24==null){write("没有找到栏目。parent：null  catalog："+"首页理赔案例");}else{
+ int rdCnt=dt_24.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_24  = dt_24.getDataRow(i);
+ int rdIdx=i;
+%>
+
+									<div class="swiper-slide swiper-slide-duplicate" style="width: 568px; height: 320px;">
+										<div class="f-left"> 
+											<p class="t-ttl">
+												<%if(article_24.getString("TitleLink") != null && !"".equals(article_24.getString("TitleLink"))){%>
+													<a href="${article_24.TitleLink}" target="_blank" class="case-title">${article_24.title}</a>
+												<% } else { %>
+													<span class="case-title">${article_24.title}</span>
+												<% } %>
+											</p>
+											<dl class="t-list">
+												<div>
+												<dt>理赔时间：</dt>
+												<dd>${article_24.ClaimDate}</dd>
+												</div>
+												<div>
+												<dt>保险公司：</dt>
+												<dd>${article_24.ComName}</dd>
+												</div>
+												<div>
+												<dt>保险产品：</dt>
+												<dd>${article_24.ProductName}</dd>
+												</div>
+												<div>
+												<dt>理赔项目：</dt>
+												<dd>${article_24.ClaimItem1}</dd>
+												</div>
+												<div>
+												<dt>理赔详情：</dt>
+												<dd class="more-text">${article_24.ClaimItem2}</dd>
+												</div>
+											</dl>
+										</div>
+										<div class="p-img"><img src="${Site.StaticResourcePath}/${article_24.ClaimPic}" alt="${article_24.ClaimPicDesc}" /></div>
+										<div class="f-icon"><img src="${Site.StaticResourcePath}/images/redesign/icon_triangle.png" alt="" /></div>
+									</div>							    
+								<%}}%>

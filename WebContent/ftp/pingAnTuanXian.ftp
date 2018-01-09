@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ftpInfo>
+	<ftpName>RateFTP</ftpName>
+	<ftpDesc>汇率文件</ftpDesc>
+	<ftpEnDesc>RateFTP</ftpEnDesc>
+	<ip>222.68.184.181</ip>
+	<port>22</port>
+	<user>sftp4fkxb</user>
+	<password>Paic1234</password>
+	<workDir>work</workDir>
+	<workBackupDir>workBack</workBackupDir>
+	<isExistFile flag="N"/>
+	<errorBackupDir>workError</errorBackupDir>
+	<taxis>10</taxis>
+</ftpInfo>

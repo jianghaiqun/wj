@@ -1,0 +1,21 @@
+<% DataTable dt_8 = TemplateData.getDocList("article","旅游保险知识","all","hot","modifyzx","5","null","null","null");
+  if(dt_8==null){write("没有找到栏目。parent：null  catalog："+"旅游保险知识");}else{
+ int rdCnt=dt_8.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_8  = dt_8.getDataRow(i);
+ int rdIdx=i;
+%>
+
+                        		<% if(i==0){%>
+                        			<li class="cur">
+		                                <a class="rnews_tl" href="${article_8.Link}" >${article_8.Title}</a>
+		                                <p class="rnews_prg">${article_8.Summary|CharWidth=45}</p>
+		                                <a class="more_detail" href="${article_8.Link}">【详情】</a>
+		                            </li>
+                        		<% } else {%>
+                        			<li>
+		                                <a href="${article_8.Link}" >${article_8.Title}</a>
+		                            </li>
+                        		<% }%>
+							<%}}%>

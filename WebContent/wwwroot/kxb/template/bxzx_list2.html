@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href="${Site.StaticResourcePath}/style/commonality.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/infor.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<cms:include file="block/kxb_header.shtml" />
+	<div class="clear"></div>
+	<!--  主体 开始 -->
+	<div class="wrap1000">
+		<!--  导航-->
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+
+		<div class="newpart">
+			<div class="newleft02">
+				<h3 class="titnew01">${catalog.name}</h3>
+
+				<div class="newtxtarea02">
+					<ul class="newlist02">
+						<cms:list item="article" level="all" pagesize="20" page="true">
+							<li><div class="n01">
+									<a href="${Article.Link}">${Article.title}</a>
+								</div>
+								<div class="n02">${Article.FirstPublishDate|Format=yyyy-MM-dd}</div>
+								<div class="clear"></div></li>
+						</cms:list>
+					</ul>
+
+				</div>
+				<div class="PageArea">
+					<!--    翻页    -->
+					<ul>
+						<li class="Num">共${Page.Total}条</li>
+						<li><a href="${Page.PrevPage}">&lt;&lt;</a></li>
+						<li class="Active">${Page.PageList}</li>
+						<li><a href="${Page.NextPage}">&gt;&gt;</a></li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+
+			</div>
+			<div class="newright02">
+				<h3 class="titnew04">产品目录</h3>
+				<div class="morenew02"></div>
+				<div class="newtxtarea01">
+					<ul class="newlist01">
+						<cms:list item="catalog" type="article" level="child" count="5" name="产品中心">
+							<li><a href="${catalog.link}" target="_blank">${catalog.name}</a></li>
+						</cms:list>
+					</ul>
+				</div>
+
+				<h3 class="titnew04 mt10">产品推荐</h3>
+				<div class="morenew02"></div>
+				<div class="newtxtarea01">
+					<ul class="newlist01">
+						<cms:list item="article" level="all" count="5" hasAttribute="newRecommend" name="产品中心">
+							<li><a target="_blank" href="${Article.Link}">${Article.Title}</a></li>
+						</cms:list>
+					</ul>
+				</div>
+
+				<h3 class="titnew04 mt10">频道推荐</h3>
+				<div class="morenew02"></div>
+				<div class="newtxtarea01">
+					<ul class="newlist01">
+						<cms:list item="article" level="all" count="5" hasAttribute="newRecommend" name="实事资讯">
+							<li><a target="_blank" href="${Article.Link}">${Article.Title}</a></li>
+						</cms:list>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<!-- 频道推荐   end    -->
+
+				<h3 class="titnew04 mt10">热门文章</h3>
+				<div class="morenew02"></div>
+				<div class="newtxtarea01">
+					<ul class="newlist01">
+						<cms:list item="article"  count="5" hasAttribute="hot" type="hitcount" >
+								<li><a target="_blank" href="${Article.Link}">${Article.Title|CharWidth=12}</a></li>
+						</cms:list>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<!-- 热门文章   end    -->
+				<div class="mb10">
+					<cms:ad name="保险资讯广告位" custom="false" size="468*60" type="1">
+					</cms:ad>
+				</div>
+
+				<!------- 标签云   ----- -->
+
+
+
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	</div>
+	<!--底部 开始-->
+<cms:include file="block/kxb_footer_new_common.shtml"></cms:include>
+ <cms:include file="block/community_v1.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/tagcloud.js"></script>
+	<script>
+		window.onload = function() {
+			//createXMLHttpRequest();
+			getTagCloud();
+		};
+		function getTagCloud() {
+			var now = new Date().getTime();
+			var data = {
+				count : "15",
+				like : "保险",
+				operate : "TagCloud",
+				method : "save"
+			};
+			jQuery.getJSON('${site.prop6}/shop.jsp?now=' + now, data, function(
+					json) {//now表示每次点击都会发送新的请求
+				createTagCloud(json.test);
+			});
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

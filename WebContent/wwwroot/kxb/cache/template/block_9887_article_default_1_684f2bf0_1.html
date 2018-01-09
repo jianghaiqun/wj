@@ -1,0 +1,16 @@
+<% DataTable dt_2 = TemplateData.getDocList("article","生育保险专题","current","null","null","1","null","null","null");
+  if(dt_2==null){write("没有找到栏目。parent：null  catalog："+"生育保险专题");}else{
+ int rdCnt=dt_2.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_2  = dt_2.getDataRow(i);
+ int rdIdx=i;
+%>
+ 
+		<li class="sl-floatcenter-item"><a href="#part1"  >${article_2.Section1}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part2"  >${article_2.Section2}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part3"  >${article_2.Section3}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part4"  >${article_2.Section4}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part5"  >${article_2.Section5}</a></li>
+		<li class="sl-floatcenter-item"><a href="#part6"  >${article_2.Section6}</a></li>
+	<%}}%>

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="${Site.URL}/bxsc/ " />
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css"/>
+<link rel="stylesheet"
+	href="${Site.StaticResourcePath}/style/redesign/re_list.css" />
+<link rel="stylesheet" type="text/css"
+	href="${Site.StaticResourcePath}/style/redesign/re_detail.css" />
+<%
+if(catalog.getString("ProductType").length()>0){
+String aa = catalog.getString("ProductType").substring(0,1);
+%>
+<style type="text/css">
+	#hovers_Z {background:none repeat scroll 0 0 #CD4800}
+	#hovers_{background:none repeat scroll 0 0 }
+	#content {
+		width:100%;
+		margin: 0 auto;
+	}
+
+	.shop_img_list{ border: 1px solid #ccc; width: 737px;}
+	.nlist_con{ border-bottom: 1px dashed #ccc;}
+  .content_right {
+    float: right;
+    height: auto;
+    margin-left: 10px;
+    width: 739px;
+  
+}
+  .shop_img_list{ padding-top:10px;}
+  
+.top_aa {
+    background: #f4f4f4 none repeat scroll 0 0;
+    border-left: 2px solid #ed6d00;
+    color: #f30;
+    font-family: "宋体";
+    font-size: 13px;
+    height: 36px;
+    position: relative;
+    text-align: left;
+    text-indent: 20px;
+    top: 10px;
+}
+  
+.top_aa {
+    color: #df762c;
+    height: 30px;
+    line-height: 30px;
+    top: 0;
+}
+  
+.top_aa .shaixuan {
+    color: #767676;
+    display: inline;
+    font-size: 14px;
+    line-height: 30px;
+}
+  .top_b {
+    border: 1px solid #ccc;
+    padding-bottom: 15px;
+    position: relative;
+}
+.top_b {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+.plpage{margin-top:10px; height:56px; text-align:center; padding-top:1px;}
+.tabcont .plpage{margin-top:5px;padding-top:0px;}
+.plpagecont{padding-bottom:6px;}
+.plpage01{margin-right:3px;}.plpage01 a:link,.plpage01 a:visited,.plpage01 a:active{padding:4px 7px; border:1px solid #ccc; background:#fff; color:#0066CC; line-height:14px;}.plpage01 a:hover{padding:4px 7px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#0066CC; line-height:14px;}
+.plpage02{margin-right:3px;}.plpage02 a:link,.plpage02 a:visited,.plpage02 a:active{padding:5px 7px 4px 7px; border:1px solid #ccc; background:#fff; color:#999; height:22px;}.plpage02 a:hover{padding:5px 7px 4px 7px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#999; height:22px;}
+.plpage03{padding-left:24px; color:#999;}
+.plpage04{padding:4px 6px 3px 6px; border:1px solid #EC6C00; background:#F9BE00; text-decoration:none; color:#999; height:22px;}.plpage04 a:active{color:#FFFFFF}
+.shop_img_list{  margin-top: 10px;} 
+</style>
+
+<%}%>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<script type="">
+var complicatedFlag = 'N';
+</script>
+<body onload="mysethash();">
+	<iframe id="iframeA" name="iframeA" src="" width="0" height="0"
+		style="display: none;"></iframe>
+	<div id="content" class="content">
+		<div class="content_right">
+			<div class="top_b">
+				<div id="load_con" style="display: none;"></div>
+				<div class="top_aa">
+					<h1 class="shaixuan">${catalog.name}</h1>
+					-筛选
+				</div>
+				${catalog.Catalog_SearchConditions} 
+				<input id="hdn_page" type="hidden" value="-1" name="hdn_page" /> 
+				<input id="prop6" type="hidden" value="${Site.prop6}" name="prop6" /> 
+				<input id="ProductType" type="hidden" value="${Catalog.ProductType}" name="ProductType" /> 
+				<input id="FrontServer" type="hidden" value="${Site.URL}" name="FrontServer" />
+			</div>
+			<div id="divSearchOrder">
+				<span id="order_default" class="one" onclick="doOrder1(this);">默认排序</span>
+				<span id="order_Popular" class="two" onclick="doOrder1(this);">人气</span>
+				<span id="order_SalesVolume" class="two" onclick="doOrder1(this);">销量</span>
+				<span id="order_InitPrem" class="two" onclick="doOrder1(this);">价格</span>
+			</div>
+			<div class="s_noshop cf" id="s_noshop"></div>
+			<div id="products" class="shop_img_list cf">
+				<cms:list item="article" level="current" pagesize="10" page="true" condition="catalogid='${Catalog.ID}'>
+				<div class="nlist_con cf">
+					<div class="nlist_des">
+						<div class="icon_C${article.SupplierCode} m-list-logo"></div>
+						<div class="m-list-cn">
+							<a  href="###" onclick="chakan('${Site.prop3}productId=${Article.RiskCode}')" class="nlist_title">${article.title}</a>
+							<div class="shop_tj_shrq cf">
+								<p class="shop_shrd_con">
+									<span class="shop_shrq_bg">适合人群</span>
+										${article.AdaptPeopleInfoListV3}
+								</p>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<ul class="recommend_list">${article.DutyHTMLV3}</ul>
+						<div class="price_tj">
+						</div>
+					</div>
+					<div class="nlist_price">
+						<p class="list_Sale tribe-action" id="Activity_${Article.RiskCode}">
+							<span id="Diy_Title_Activity_${Article.RiskCode}" style="display: none;"></span><em id="Diy_Activity_${Article.RiskCode}" style="display: none;"></em>
+						</p>
+						<span class="nlist_pay moneys" name="Ajax_Prict_${Article.RiskCode}"><em>￥</em>${article.InitPremCPS}</span>
+						<em class="nlist_pay_t moneys"> 
+							<span name="Clear_Ajax_Prict_${Article.RiskCode}"><%
+								String initPrem = "￥"+article.getString("InitPrem"); String
+								basePrem = article.getString("BasePremV3");
+								//if(!initPrem.equals(basePrem) && basePrem!=null &&!"".equals(basePrem)){ write("原价 "+basePrem); }
+								 %> 
+								</span>
+						</em>
+						<div class="remcon_desmore">
+							<a   href="###" onclick="chakan('${Site.prop3}productId=${Article.RiskCode}')">去看看</a>
+						</div>
+					</div>
+				</div>
+				</cms:list>
+			</div>
+		<div class="plpage">
+			<div id="productsPageBar">${PageBar1}</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.form.js"></script>
+	<script type="text/javascript" src="${Site.URL}/js/jqueryupdate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/template/common/js/base.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-bxhcheckbox.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/productCompare.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/iframe.js"></script>
+	
+	<script type="text/javascript">
+		jQuery('.radiolist div.bznx-no').removeClass().addClass("bznx-z");
+		var bxhzUrl = window.location.search;
+		bxhzUrl = bxhzUrl.replace("?", "");
+		var pp_url = document.referrer;
+		function chakan(str) {
+			if (bxhzUrl != null && bxhzUrl != '' && bxhzUrl.indexOf("@") != -1 && bxhzUrl.split("@").length >= 3) {
+				bxhzUrl = "channel=" + bxhzUrl.split("@")[0] + "&LastUrl=" + bxhzUrl.split("@")[2];
+			}
+			str = str + "&" + bxhzUrl;
+			window.open(str);
+		}
+		var _bdhmProtocol = "https:" == document.location.protocol ? " https://" :" http://";
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2d7e032a5f8d4e609feb9e22c0cb83f8' type='text/javascript'%3E%3C/script%3E"));
+		/*活动展示*/
+		jQuery(function(){
+			var list=jQuery('p[id^=Activity_]');
+			var id = new Array(list.length);
+			var idStr="";
+			for (var i = 0; i < list.length; i++) {
+		           id[i] = list[i].id;
+		           idStr+= list[i].id;
+			}
+			if(idStr==""){
+				return;
+			}
+			var cpsUserId = jQuery.cookie('cpsUserId');
+			var channelsn = "wj";
+			if(typeof(cpsUserId)!="undefined" && cpsUserId!=null && cpsUserId!=""){
+				channelsn = "cps";
+			}
+			jQuery.ajax({
+				type: 'post',
+				url: sinosoft.base+'/shop/sales_volume!searchProductListAvtivityRe.action?productId='+id+'&channelSn='+channelsn,
+				dataType: "json",
+				async: false,
+				success: function(data) {
+					jQuery.each(data, function(index, object) {
+						var index_productid=index.substring(0,index.indexOf("@"));
+						if  (object != null && object != '') {
+							var obj_str=object+"";
+							var activity_title=obj_str.substring(0,obj_str.indexOf("@"));
+							var activity_description=obj_str.substring(obj_str.indexOf("@")+1,obj_str.length);
+							jQuery('#Diy_'+index_productid).show();
+							jQuery('#Diy_Title_'+index_productid).show();
+							document.getElementById("Diy_"+index_productid).innerHTML=activity_description;
+							document.getElementById("Diy_Title_"+index_productid).innerHTML=activity_title;
+							
+						}
+					});
+				}
+			});
+
+				
+		});
+	</script>
+</body>
+</html>

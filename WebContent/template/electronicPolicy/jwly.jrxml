@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="jwly"
+
+		 language="groovy"		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="930"
+		 pageHeight="1230"
+		 columnWidth="900"
+		 columnSpacing="0"
+		 leftMargin="15"
+		 rightMargin="15"
+		 topMargin="15"
+		 bottomMargin="15"
+		 whenNoDataType="AllSectionsNoDetail"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.zoom" value="0.75" />
+	<property name="ireport.x" value="0" />
+	<property name="ireport.y" value="0" />
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Crosstab Data Text"
+		isDefault="false"
+		hAlign="Center"
+	>
+	</style>
+
+	<parameter name="Name" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[投保人姓名]]></parameterDescription>
+	</parameter>
+	<parameter name="Address" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[签单公司名称]]></parameterDescription>
+	</parameter>
+	<parameter name="Relationship" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[与被保人的关系]]></parameterDescription>
+	</parameter>
+	<parameter name="Num" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[身份证号/护照号]]></parameterDescription>
+	</parameter>
+	<parameter name="Beneficiary" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[身故保险受益人]]></parameterDescription>
+	</parameter>
+	<parameter name="Destination" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[目的地国家或地区]]></parameterDescription>
+	</parameter>
+	<parameter name="Plan" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[保险计划]]></parameterDescription>
+	</parameter>
+	<parameter name="Total" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[保险费合计]]></parameterDescription>
+	</parameter>
+	<parameter name="InsurancePeriod" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[保险期间（自YYYY/MM/DD至YYYY/MM/DD）]]></parameterDescription>
+	</parameter>
+	<parameter name="Birthday" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[出生日期]]></parameterDescription>
+	</parameter>
+	<parameter name="Plicy" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[合同号]]></parameterDescription>
+	</parameter>
+	<parameter name="Code" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[业务员代码]]></parameterDescription>
+	</parameter>
+	<parameter name="Insuron" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[被保险人]]></parameterDescription>
+	</parameter>
+	<parameter name="CAPTCHA" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[验真码]]></parameterDescription>
+	</parameter>
+	<parameter name="IssueDate" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[签单日期]]></parameterDescription>
+	</parameter>
+	<parameter name="EInsurancePeriod" isForPrompting="true" class="java.lang.String">
+		<parameterDescription><![CDATA[英文保险期间]]></parameterDescription>
+	</parameter>
+	<parameter name="OrderId" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[select (case when dutyEnName is null or dutyEnName='' then  DutyFullName else dutyEnName end) as Service from SDInformationDuty where OrderSn=$P{OrderId}
+group by dutyEnName order by orderFlag+0 asc]]></queryString>
+
+	<field name="SERVICE" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="400"  isSplitAllowed="true" >
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="350"
+						height="65"
+						key="image"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["logo.jpg"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement
+						x="0"
+						y="65"
+						width="900"
+						height="63"
+						key="staticText"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="20" isBold="true" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[中国平安保险股份有限公司
+Ping An Property & Casualty Insurance Company of China, Ltd.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="750"
+						y="364"
+						width="150"
+						height="36"
+						key="staticText"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="11" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[保险/服务金额(人民币)
+Maxinum limit(RMB)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="300"
+						y="364"
+						width="450"
+						height="36"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="11" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[保障内容 Benefits]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="525"
+						y="207"
+						width="136"
+						height="15"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[保险计划 Insurance Plan:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="235"
+						y="222"
+						width="665"
+						height="47"
+						key="textField"
+						stretchType="RelativeToTallestObject"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Destination}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="50"
+						y="269"
+						width="650"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{InsurancePeriod}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="284"
+						width="140"
+						height="15"
+						key="staticText"/>
+					<box>					<leftPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[Insurance Period:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="329"
+						width="175"
+						height="15"
+						key="textField"/>
+					<box>					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Insuron}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="150"
+						y="129"
+						width="560"
+						height="30"
+						key="staticText"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="12" isBold="true" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[平安境外保险产品保险单
+Ping An Oversea Insurance Policy]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="807"
+						y="269"
+						width="93"
+						height="30"
+						key="textField"/>
+					<box>					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Total}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="525"
+						y="299"
+						width="175"
+						height="30"
+						key="staticText"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[出生日期（年/月/日）
+Date of Birth(YYYY/MM/DD)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="661"
+						y="207"
+						width="239"
+						height="15"
+						key="textField"/>
+					<box>					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Plan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="140"
+						y="284"
+						width="560"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{EInsurancePeriod}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="350"
+						y="299"
+						width="175"
+						height="30"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[身份证/护照号码
+ID No./Passport No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="344"
+						width="900"
+						height="20"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="13" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[保险计划 Schedule of Benefits:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="110"
+						y="207"
+						width="415"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="710"
+						y="159"
+						width="200"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Plicy}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="207"
+						width="110"
+						height="15"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[投保人 Policyholder:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="535"
+						y="159"
+						width="175"
+						height="15"
+						key="staticText"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isBold="false" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[保险合同号码Policy NO. ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="700"
+						y="329"
+						width="200"
+						height="15"
+						key="textField"/>
+					<box>					<leftPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Beneficiary}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="525"
+						y="329"
+						width="175"
+						height="15"
+						key="textField"/>
+					<box>					<leftPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Birthday}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="710"
+						y="144"
+						width="50"
+						height="15"
+						key="staticText"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[验真码：]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="269"
+						width="50"
+						height="15"
+						key="staticText"/>
+					<box>					<leftPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[保险期间：]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="175"
+						y="329"
+						width="175"
+						height="15"
+						key="textField"/>
+					<box>					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Relationship}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="760"
+						y="144"
+						width="150"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{CAPTCHA}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="364"
+						width="300"
+						height="36"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="11" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[险种/服务Insurance/Service]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="175"
+						y="299"
+						width="175"
+						height="30"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[与被保人的关系
+Relationship of Policyholder]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="299"
+						width="175"
+						height="30"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[被保险人
+Name of Insured Person]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="700"
+						y="269"
+						width="107"
+						height="30"
+						key="staticText"/>
+					<box>					<leftPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[保险费合计/人民币
+Total Premium:RMB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="222"
+						width="235"
+						height="47"
+						key="staticText"
+						stretchType="RelativeToTallestObject"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[目的地国家或地区 Destination Coumtry/Area:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="700"
+						y="299"
+						width="200"
+						height="30"
+						key="staticText"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[身故保险金受益人
+Beneficiary of Death Benefit]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="350"
+						y="329"
+						width="175"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Num}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="174"
+						width="900"
+						height="33"
+						key="staticText"/>
+					<box>					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="13" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[本公司依据投保人申请，按以下条件承保：
+Herby we confirm to form the imsurance contract with the applicamt with below terms and conditions:]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="20"  isSplitAllowed="true" >
+				<elementGroup><!--  Start: 1 !-->
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="300"
+						height="20"
+						key="textField"
+						stretchType="RelativeToBandHeight"/>
+					<box>					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{SERVICE}]]></textFieldExpression>
+				</textField>
+				</elementGroup><!-- End 1 !-->
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="300"
+						y="0"
+						width="600"
+						height="20"
+						key="subreport"
+						stretchType="RelativeToBandHeight"
+						isPrintWhenDetailOverflows="true"/>
+					<subreportParameter  name="Service">
+						<subreportParameterExpression><![CDATA[$F{SERVICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="OrderId">
+						<subreportParameterExpression><![CDATA[$P{OrderId}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "PolicySubReport.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="20"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="278"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="350"
+						y="204"
+						width="175"
+						height="30"
+						key="staticText"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[董事长：
+Board Chairman:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="525"
+						y="144"
+						width="175"
+						height="30"
+						forecolor="#000000"
+						key="staticText"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[签单公司：
+Issuing Company:]]></text>
+				</staticText>
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="700"
+						y="144"
+						width="200"
+						height="132"
+						key="image"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["红章.jpg"]]></imageExpression>
+				</image>
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="525"
+						y="174"
+						width="175"
+						height="60"
+						key="image"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["sjp.jpg"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="131"
+						y="144"
+						width="394"
+						height="15"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Address}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="131"
+						y="204"
+						width="219"
+						height="30"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{Code}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="131"
+						y="174"
+						width="219"
+						height="30"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{IssueDate}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="234"
+						width="700"
+						height="43"
+						key="staticText"/>
+					<box></box>
+					<textElement verticalAlignment="Top">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[保单查询：1、查询电话：95511
+	  2、个人网络查询：请访问http://one.pingan.com,注册并登陆平安一账通
+	  3、企业网络查询：请访问http://www.pingan.com/pa18Portal/login_group.jsp,注册并登陆企业客户网上理财]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="144"
+						width="131"
+						height="30"
+						key="staticText"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[签单公司地址：
+Issuing Company Address:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="174"
+						width="131"
+						height="30"
+						key="staticText"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[签单日期：
+Issuing Date:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="204"
+						width="131"
+						height="30"
+						key="staticText"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[业务员代码：
+Salesman No.:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="900"
+						height="144"
+						key="staticText"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体" pdfFontName="STSong-Light" size="10" isPdfEmbedded ="true" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[特别约定 Special Agreement:
+*24小时全球援助热线（欧乐救援）24hr Global Assist Service Hotline（Euro-Alarm）：+86-10-84416504。
+*无其他特别约定。No other special agreement.
+备注 Notes:
+*任何年龄在18周岁以下的被保险人，如果其以死亡为给付责任的保险金额（包括在所有商业保险公司所购买的保险）超出中国保监会所规定的限额（人民币10万元,航空意外死亡保险金不受此限），保险公司就超过限额部分不承担保险金给付责任。For any Insured under 18 years old, the death benefit (including benefits from all insurance underwritten by commercial insurance companies) shall not exceed the amount of RMB100,000 which is stipulated t by china insurance regulatory commission (aviation personal accidental death benefit does not apply). Any amount in excess of this limit shall not be paid.
+*本保险不承保前往处于战争状态或已被宣布为紧急状态的国家或地区, 除非本合同另有约定(最新详细信息以登陆www.pingan.com/riskzone的查询结果为准)。 This policy does not cover any loss, injury, damage or legal liability arising directly or indirectly from the travelling in, to, through any countries and/or regions which are already in war or are announced to be in state of emergency (hearafter referred as “war and risk zones”) subject to otherwise agreed in the contract. The Applicant and Insured Person(s) should obtain the most updated list of “war and risk zones” through the website www.pingan.com/riskzone before applying for insurance or travelling.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="131"
+						y="158"
+						width="394"
+						height="16"
+						key="staticText-1"/>
+					<box></box>
+					<textElement>
+						<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding ="UniGB-UCS2-H"/>
+					</textElement>
+				<text><![CDATA[Ping An Property & Casualty Insurance Company of China, Ltd.Shanghai Branch]]></text>
+				</staticText>
+			</band>
+		</summary>
+</jasperReport>

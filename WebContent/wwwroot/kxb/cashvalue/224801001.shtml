@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+ 
+<title>
+百年康惠保重大疾病保险-开心保保险网 
+</title>
+<link rel="stylesheet" href="http://resource35.kaixinbao.com/style/redesign/re_header.css"/>
+<link rel="stylesheet" type="text/css"  href="http://resource35.kaixinbao.com/style/skins/default.css" />
+<link rel="stylesheet" href="http://resource35.kaixinbao.com/style/wj_kxb/mod_intro.css"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+
+<script type="">
+var specialPremCalFlag = '1';
+var isCpsProduct = '';
+var riskCode = '224801001';
+var artTitle = '百年康惠保重大疾病保险';
+var catID = '10339';
+var productDetailFlag="true";
+var complicatedFlag = 'Y';
+var AppFacDutyRela = {"B0000000000000014860_TextAge_27_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_27_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_37_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_37_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_20_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_25_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_20_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_25_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_26_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_26_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_53_Sex_1":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_53_Sex_0":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_17_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_17_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_14":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_15":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_16":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_17":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_11_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_18":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_19":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_34_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_23_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_34_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_23_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_11_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_10":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_11":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_12":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_9_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_13":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_9_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_11":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_12":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_33_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_10":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_19":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_17":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_18":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_15":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_38_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_38_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_33_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_16":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_13":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_14":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_40_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_40_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_20":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_0_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_21":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_22":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_0_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_23":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_28":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_29":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_24":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_25":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_26":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_27":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_18_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_18_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_14_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_14_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_6_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_30":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_33":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_34":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_30_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_31":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_22_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_30_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_32":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_37":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_38":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_22_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_35":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_36":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_39":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_16_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_16_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_28_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_28_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_6_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_31_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_4":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_5":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_40":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_2":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_41":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_31_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_3":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_42":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014862_Period_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_43":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014862_Period_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_44":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_45":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_46":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_47":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_48":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_49":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_29_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_29_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_45_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_45_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_9":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_8":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_7":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_6":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_51_Sex_0":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_52_Sex_0":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_52_Sex_1":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_51_Sex_1":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_39_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_39_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_5_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_5_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_19_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_10_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_10_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_55_Sex_1":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_55_Sex_0":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_19_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_50":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_52":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_51":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_54":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_4_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_53":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_0_TextAge_55":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_4_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_6":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_5":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_8":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_7":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_9":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_43_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_43_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_13_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_13_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_41_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_50_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_41_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_50_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_2":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_3":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_4":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_15_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_15_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014864_Plan_3":{"dutyList":[["40万"],["不投保","投保"]],"cascade":{"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014864_Plan_2":{"dutyList":[["30万"],["不投保","投保"]],"cascade":{"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014864_Plan_1":{"dutyList":[["20万"],["不投保","投保"]],"cascade":{"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014864_Plan_0":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014864_Plan_4":{"dutyList":[["50万"],["不投保","投保"]],"cascade":{"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_22":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_24_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_21":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_24":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_23":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_24_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_20":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_21_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_21_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_29":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_26":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_46_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_25":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_28":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_46_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_27":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_12_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_32_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_12_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_32_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014863_FeeYear_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"]}},"B0000000000000014860_TextAge_35_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_36_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014863_FeeYear_2":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"]}},"B0000000000000014860_TextAge_36_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014863_FeeYear_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"]}},"B0000000000000014860_TextAge_35_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014863_FeeYear_3":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"]}},"B0000000000000014861_Sex_1_TextAge_35":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_34":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_33":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_32":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_31":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_30":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_49_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_49_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_39":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_38":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_37":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_36":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_7_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_7_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_40":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_42":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_41":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_3_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_44_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_44":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_43":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_3_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_46":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_45":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_48":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_47":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_49":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_44_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_2_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_54_Sex_1":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_2_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_54_Sex_0":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_1_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_1_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_8_Sex_1":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_8_Sex_0":{"dutyList":[["10万","20万","30万","40万","50万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2","Plan_3","Plan_4"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_53":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_52":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_51":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_50":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_55":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014861_Sex_1_TextAge_54":{"dutyList":[["10万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_47_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_47_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_42_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_42_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_48_Sex_1":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}},"B0000000000000014860_TextAge_48_Sex_0":{"dutyList":[["10万","20万","30万"],["不投保","投保"]],"cascade":{"B0000000000000014864_Plan":["Plan_0","Plan_1","Plan_2"],"B0000000000000014861_Sex":["Sex_1","Sex_0"],"B0000000000000014862_Period":["Period_1","Period_0"],"B0000000000000014863_FeeYear":["FeeYear_0","FeeYear_1","FeeYear_2","FeeYear_3"]}}};
+var AppFacDutyDef = {Plan_1:[{0:'20万',1:'不投保'},[]],Plan_2:[{0:'30万',1:'不投保'},[]],Plan_3:[{0:'40万',1:'不投保'},[]],Plan_4:[{0:'50万',1:'不投保'},[]],Plan_0:[{0:'10万',1:'不投保'},[]]};
+var LongInsurance = 'L';
+
+</script>
+<!-- <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDExODA2Nl8zMDEwNThfODAwMTE4MDY2Xw"></script> -->
+</head>
+
+<body class="detail">
+<!--top头部-->
+        <div class="g-top">
+            <div class="g-weaper1200">
+                <div class="m-login">
+                <div id="NotLogin"><span class="m-login-p f-ib">您好，请</span><span class="m-login-a" id="NotLoginSpan"><a href="javascript:void(0);" id="headerShowLoginWindow"  onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">登录</a><em>/</em>
+                <a href="http://login.kxb.com:81/wj/shop/member!newLogin.action?tagid=regtag" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toplogin" vlpageid="toplogin">注册</a>
+                <span class="m-login-x" style="display:none"></span>
+                <!-- 未登录状态 显示图层 -->
+                    <div class="m-login-no" style="display:none;">
+                        <div class="m-lo-p">
+                            <div class="m-lo-img"></div>
+                            <img src="http://resource35.kaixinbao.com/images/redesign/photo_06.gif" alt="">
+                        </div>
+                        <div class="m-login-jf">
+                            <a href="http://www.kxb.com:81/wj/shop/member_center!index.action?tagid=logintag">会员专享，<br>积分换优惠</a>
+                        </div>
+                        <div class="clear h12"></div>
+                        <div class="m-integral">
+                            <em class="i-integral f-ib"><a href="http://www.kxb.com:81/wj/shop/point!newList.action">积分</a></em>
+                        </div>
+                        <div class="m-Coupon">
+                        <em class="i-Coupon f-ib"><a href="http://www.kxb.com:81/wj/shop/coupon!queryCoupon.action">优惠券</a></em>
+                        </div>
+                    </div>
+                <!-- 未登录状态 显示图层 end -->
+                </span></div>
+                <div id="YesLogin" style="display: none"><span class="m-login-p f-ib" id="YesLoginSpan">
+                                                         您好<a href="http://www.kxb.com:81/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a>
+                                                         <i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                
+                <span class="m-login-x" style="display:none"></span>
+                <!--登录状态显示图层 -->
+                    <div class="m-login-yes z-hover-shadow"  style="display:none;">
+                           <div class="m-login-back">
+                               <span class="m-login-p m-login_p2">您好<a href="http://www.kxb.com:81/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="m-loing-name"></a><i id="headerLoginMemGradeIcon"  class="vip_k vip_top vip_k1" title=""></i></span><a href="javascript:void(0);" id="headerLogout" class="m-go-back">退出登录</a>
+                           </div> 
+                           <div class="m-lo-p">
+                            <div class="m-lo-img"><a href="###"></a></div>
+                            <img id="memberphoto" alt="">
+                           </div>
+                            <div class="m-login-user">
+                                <a href="http://www.kxb.com:81/wj/shop/member_center!index.action?tagid=logintag" id="headerLoginMemberUsername" class="f_mi m-login-name2"></a><i id="headerLoginMemGradeIcon" class="vip_k vip_top vip_k1" title=""></i>
+                                <p id="gradeinfo"></p>
+                            </div>
+                            <div class="clear h6"></div>
+                            <div class="m-integral2">
+                                <em class="i-integral f-ib"><a href="http://www.kxb.com:81/wj/shop/point!newList.action">积分</a></em>
+                                <a id="memberPointsCount" href="http://www.kxb.com:81/wj/shop/point!newList.action" class="m-jf-num"></a>
+                            </div>
+                            <div class="m-Coupon2">
+                            <em class="i-Coupon f-ib"><a href="http://www.kxb.com:81/wj/shop/coupon!queryCoupon.action">优惠券</a></em><a id="CouponCount" href="http://www.kxb.com:81/wj/shop/coupon!queryCoupon.action" class="m-jf-num"></a>
+                            </div>
+                    </div>
+                <!--登录状态显示图层 end -->
+                </span></div>
+                </div>
+                <div class="m-top-fun">
+                      <span class="m-fun-span f-ib m-tel"><em class="i-tel"></em><i class="p-tel">4009-789-789</i></span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-WeChat" id="i-WeChat">
+                            <a href="###" class="m-fun-a hover"><em class="i-WeChat"></em></a>
+                            <div class="m-WeChatImg z-hover-shadow" style="display:none;">
+                                    <img src="http://resource35.kaixinbao.com/images/redesign/wechart.gif" alt="">
+                                    <p>关注微信公众号<br>轻松管理账单</p>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-service" id="i-service">
+                            <a href="###"  class="m-fun-a "><em class="i-service"></em></a>
+                            <div class="m-service_con z-hover-shadow" style="display:none;">
+                                 <ul class="m-service-li">
+                                <li><a href="http://www.kxb.com:81/ddkscx/" target="_blank" rel="nofollow">保单服务</a></li>
+                                <li><a href="http://www.kxb.com:81/bdyz/" target="_blank" rel="nofollow">保单验真</a></li>
+                                <li><a href="http://www.kxb.com:81/lipei/" target="_blank" rel="nofollow">理赔申请</a></li>
+                            </ul>
+                            </div> 
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-cart" id="i-user-cart-span"><a href="http://www.kxb.com:81/wj/shop/member_shopcart!getShopCartINF.action" class="m-fun-a " onclick="wxsend('gwclogin');">
+                            <em class="i-cart"></em><i class="m-cartNum" id="shopCartNo">0</i></a>
+                              <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-nologin" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>请先登录</span>
+                                    <a href="http://www.kxb.com:81/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/gwclogin" vlpageid="gwclogin">登录</a>
+                            </div>
+                             <!-- 购物车为空 -->
+                            <div class="m-user-no z-hover-shadow" id="m-cart-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>购物车中没有商品</span>
+                                    <a href="http://www.kaixinbao.com" class="m-btn-login">去选购商品</a>
+                            </div>
+                             <!-- 购物车不为空 -->
+                           <div class="m-cart_list z-hover-shadow" id="m-cart-yes" style="display:none;">
+                                <ul class="m-cart-ul" id="shopcartinfo">
+                                
+                                </ul>
+                                <div class="m-cart-go">
+                                    	共计<em id="shoptotal"></em> <a href="http://www.kxb.com:81/wj/shop/member_shopcart!getShopCartINF.action" class="m-cart-to">去购物车</a>
+                                </div>
+                           </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                      <span class="m-fun-span f-ib m-user" id="i-user-span"><a href="http://www.kxb.com:81/wj/shop/member_center!index.action?tagid=logintag" class="m-fun-a " onclick="wxsend('memlogin');"><em class="i-user"></em></a>
+                            <!-- 用户未登录 -->
+                            <div class="m-user-no z-hover-shadow" id="m-user-no" style="display:none;">
+                                    <div class="m-user-noImg"></div>
+                                    <span>会员中心</span>
+                                    <a href="http://www.kxb.com:81/wj/shop/member_center!index.action?tagid=logintag" class="m-btn-login" onclick="javascript:void(0);return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/memlogin" vlpageid="memlogin">登录</a>
+                            </div>
+                            <!-- 用户已登录状态 -->
+                            <div class="m-user-yes z-hover-shadow" id="m-user-yes" style="display:none;">
+                              <dl class="m-order_dl m-order_dl1">
+                                  <dt>我的保单</dt>
+                                  <dd>
+	                                  <a id="prepay" href="http://www.kxb.com:81/wj/shop/order_query!queryNoPayOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="preeffecitive" href="http://www.kxb.com:81/wj/shop/order_query!queryNoEffectOrder.action" class="f-ib" rel="nofollow"></a>
+	                                  <a id="effecitive" href="http://www.kxb.com:81/wj/shop/order_query!queryEffectingOrder.action" class="f-ib" rel="nofollow"></a>
+                                  </dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>账户中心</dt>
+                                  <dd><a href="http://www.kxb.com:81/wj/shop/profile!edit.action" class="f-ib" rel="nofollow">账户信息</a>
+                                  <a href="http://www.kxb.com:81/wj/shop/point!newList.action" class="f-ib" rel="nofollow">我的积分</a>
+                                  <a href="http://www.kxb.com:81/wj/shop/coupon!queryCoupon.action" class="f-ib" rel="nofollow">我的优惠券</a></dd>
+                              </dl>
+                               <dl class="m-order_dl">
+                                  <dt>客户服务</dt>
+                                  <dd><a href="http://www.kxb.com:81/wj/shop/stow!queryScan.action" class="f-ib" rel="nofollow">我的收藏</a>
+                                  <a href="http://www.kxb.com:81/wj/shop/question!questionList.action" class="f-ib" rel="nofollow">保险问答</a>
+                                  <a href="http://www.kxb.com:81/wj/shop/member_comment!queryComment.action" class="f-ib" rel="nofollow">商品评价</a><a href="http://www.kxb.com:81/wj/shop/my_compare!show.action" class="f-ib">对比记录</a>
+                                  <a href="http://www.kxb.com:81/wj/shop/my_consult!show.action" class="f-ib" rel="nofollow">我的咨询</a></dd>
+                              </dl>
+                            </div>
+                      </span>
+                      <em class="m-bor-l f-ib"></em>
+                </div>
+            </div>
+        </div>
+   <!--top头部end-->
+   
+     <!-- header -->
+     <div class="g-header ">
+        <div class="g-weaper">
+        <a href="http://www.kxb.com:81/" class="m-logo-a">
+            <img src="http://resource35.kaixinbao.com/images/redesign/logo.gif" height="70px" class="m-logo" alt="开心保保险网">
+        </a>
+        <img src="http://resource35.kaixinbao.com/images/redesign/f_logo.gif" class="m-flogo" height="70px" alt="保险服务">
+        <div class="clear"></div>
+        <!-- 导航开始 -->
+             <div class="g-nav">
+                <span class="g-nav-title"></span>
+             <div class="qs_boxs"   id="g-nav-box" class="qs_boxs" style="display:none;">
+                <dl class="que_dl que_dl_j1 que_nav_zk" id="que_lv_sf">    
+                <dt class="que_dl_dt"><em class="i-navicon i-nav1 f-ib"></em><a target="_blank" href="http://www.kxb.com:81/lvyou-baoxian/">旅游保险</a><span class="z-que-zd"></span></dt>
+                    <dd class="que_dl_dd">
+                       <a target="_blank" href="http://www.kxb.com:81/lvyou-baoxian/guonei/">境内</a>|<a target="_blank" href="http://www.kxb.com:81/lvyou-baoxian/jingwai/">境外</a>|<a target="_blank" href="http://www.kxb.com:81/lvyou-baoxian/shengenqianzheng/">申根</a>|<a target="_blank" href="http://www.kxb.com:81/huixuan/0000000008.shtml">东南亚</a>
+                    </dd>
+  					 <dd class="que_dl_dd que_dl_dd2">
+                       <a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000024.shtml">美日加澳</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000010.shtml">亚洲</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000007.shtml">港澳</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000244.shtml">台湾</a>
+                    </dd>
+                  <!-- 旅游保险显示层-->
+                        <div class="m-travel-con z-hover-shadow tagshow"  style="display:none;"  id="que_lv_sf">
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">国内旅游险</dt>
+                                      <dd>
+                                         <!--循环：friendlink count：30-->
+
+
+										  		<a href="http://120.55.73.0:81/choose/0000000323.shtml" target="_blank" >户外运动</a>
+										  
+
+										  		<a href="http://120.55.73.0:81/choose/0000000331.shtml" target="_blank" >本市</a>
+										  
+
+										  		<a href="http://120.55.73.0:81/choose/0000000331.shtml" target="_blank" >境内旅游险</a>
+										                                        
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">境外旅游险</dt>
+                                      <dd>
+		                                   <!--循环：friendlink count：30-->
+
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >港澳游</a>
+										   
+
+												<a href="http://www.kaixinbao.com/huixuan/0000000244.shtml" target="_blank" >台湾游</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >东南亚</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >亚洲</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000224.shtml" target="_blank" >全球</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000269.shtml" target="_blank" >旅游险-申根签证</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                     <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特色保障</dt>
+                                      <dd>
+		                                   <!--循环：friendlink count：30-->
+
+
+												<a href="http://120.55.73.0:81/choose/0000000334.shtml" target="_blank" >海外务工</a>
+										   
+
+												<a href="http://" target="_blank" >住院津贴</a>
+										   
+
+												<a href="http://" target="_blank" >全年停留</a>
+										   
+
+												<a href="http://" target="_blank" >高原地区</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000333.shtml" target="_blank" >航班延误</a>
+										   
+
+												<a href="http://" target="_blank" >申根拒签</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000329.shtml" target="_blank" >自驾游</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000328.shtml" target="_blank" >东南亚</a>
+										   
+
+												<a href="http://120.55.73.0:81/choose/0000000330.shtml" target="_blank" >安盛保险</a>
+										   
+
+												<a href="http://" target="_blank" >全年多次往返</a>
+										   
+
+												<a href="http://" target="_blank" >高风险运动</a>
+										   
+
+												<a href="http://" target="_blank" >随身财产损失</a>
+										   
+
+												<a href="http://" target="_blank" >医疗保障</a>
+										   
+
+												<a href="http://baidu.com" target="_blank" >留学</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+                                       <!--循环：friendlink count：30-->
+
+
+									   		<a href="http://" target="_blank" >路华救援</a>
+									   
+
+									   		<a href="http://" target="_blank" >新华人寿</a>
+									   
+
+									   		<a href="http://" target="_blank" >华泰保险</a>
+									   
+
+									   		<a href="http://" target="_blank" >中国人保</a>
+									   
+
+									   		<a href="http://" target="_blank" >太平保险</a>
+									   
+
+									   		<a href="http://" target="_blank" >安盛天平</a>
+									   
+
+									   		<a href="http://" target="_blank" >太平洋财产险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >平安财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/wp0000000001.shtml" target="_blank" >安联财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/0000000325.shtml" target="_blank" >史带财险</a>
+									   
+
+									   		<a href="http://120.55.73.0:81/choose/0000000244.shtml" target="_blank" >美亚财险公司</a>
+									                                         
+                                      </dd>
+                                    </dl>
+                              </div>
+                              <div class="m-t-nav-right">
+                                     <dl class="m-travel-navDl">
+                                      <dt class="f-ib">推荐计划</dt>
+                                    </dl>
+                                    <div id="lvyouquick" >
+		                                
+
+											<div class="m-recommend-list">
+												<div class="clear"></div>
+					                            <a href="http://www.kxb.com:81/lvyou-baoxian/282838.shtml" target="_blank" class="m-recommend-a">平安畅游天下境外旅游全年保障计划</a>
+			                                    <ul>
+			                                    	<li><span>承保年龄到80岁</span></li><li><span>出行天数自由选</span></li><li><span>旅程延误给补偿</span></li><li><span>24小时紧急搜救</span></li><li><span>航班备降、迫降保险</span></li><li><span>旅行期间家庭财产保障</span></li>
+			                                    </ul>		
+			                                    <div class="clear h10"></div>		
+		                                        <div class="m-recommend-money">
+		                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+		                                            <span class="m-xj-money f-ib f_mi">￥475.00</span>
+		                                        </div>	
+		                                       	<a href="http://www.kxb.com:81/lvyou-baoxian/282838.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+					                        </div>
+					                        <div class="clear h20"></div>
+							    		
+
+											<div class="m-recommend-list">
+												<div class="clear"></div>
+					                            <a href="http://www.kxb.com:81/lvyou-baoxian/282708.shtml" target="_blank" class="m-recommend-a">美亚小探险家全年保险</a>
+			                                    <ul>
+			                                    	<li><span>24小时全球紧急医疗救援和旅行支援服务</span></li>
+			                                    </ul>		
+			                                    <div class="clear h10"></div>		
+		                                        <div class="m-recommend-money">
+		                                            <span class="m-re-money f-ib f_mi" style="display:none">￥315.00</span>
+		                                            <span class="m-xj-money f-ib f_mi">￥25.20</span>
+		                                        </div>	
+		                                       	<a href="http://www.kxb.com:81/lvyou-baoxian/282708.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+					                        </div>
+					                        <div class="clear h20"></div>
+							    		            
+                                    </div>
+                                    
+                              </div>
+                        </div>
+                  <!-- 旅游保险显示层end-->
+
+                </dl>
+                
+                <dl class="que_dl que_dl_j1 que_nav_zk">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav2 f-ib"></em><a target="_blank" href="http://www.kxb.com:81/yiwai-baoxian/">意外保险</a><span class="z-que-zd"></span></dt>    
+                    <dd class="que_dl_dd">
+                        <a target="_blank" href="http://www.kxb.com:81/yiwai-baoxian/renshen/">人身意外</a>|<a target="_blank" href="http://www.kxb.com:81/yiwai-baoxian/jiaotong/">交通意外</a>|<a target="_blank" href="http://www.kxb.com:81/yiwai-baoxian/hangkong/">航空意外</a>
+                    </dd>
+                    <dd class="que_dl_dd que_dl_dd2">
+                        <a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000014.shtml">少儿</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000015.shtml">老人</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000090.shtml">中青年</a>|<a target="_blank" href="http://www.kaixinbao.com/huixuan/0000000093.shtml">医疗补偿</a>
+                    </dd>
+                      <!-- 意外保险显示层 -->
+
+                        <div class="m-travel-con m-accident-con z-hover-shadow tagshow " style="display:none"  >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                      <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保障年龄</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特殊保障</dt>
+                                      <dd>
+					                       <!--循环：friendlink count：30-->
+
+
+										   <a href="http://120.55.73.0:81/choose/0000000341.shtml" target="_blank" >高额航空保险</a>
+										   
+
+										   <a href="http://120.55.73.0:81/choose/0000000340.shtml" target="_blank" >百万级综合意外</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000262.shtml" target="_blank" >太平洋财险</a>
+											
+
+											<a href="http://120.55.73.0:81/choose/0000000261.shtml" target="_blank" >太平养老</a>
+											
+
+											<a href="http://120.55.73.0:81/choose/0000000296.shtml" target="_blank" >中国人寿</a>
+											
+                                      </dd>
+                                    </dl>
+                              </div>
+
+                              <div class="m-t-nav-right">
+                                      <dl class="m-travel-navDl"><dt class="f-ib">推荐计划</dt></dl>
+                                    
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://www.kxb.com:81/yiwai-baoxian/283692.shtml" target="_blank" class="m-recommend-a">昆仑全年自驾无忧保障计划</a>
+		                                    <ul>
+		                                    	<li><span>打发时间佛啊监控</span></li><li><span>发斯蒂芬将阿里山的</span></li><li><span>阿斯顿飞九</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥13.85</span>
+	                                        </div>	
+                                        	<a href="http://www.kxb.com:81/yiwai-baoxian/283692.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://www.kxb.com:81/yiwai-baoxian/283597.shtml" target="_blank" class="m-recommend-a">富德交通工具空意外保障淘宝专用</a>
+		                                    <ul>
+		                                    	<li><span>fhissdfhsidf</span></li><li><span>dsufosdf</span></li><li><span>u9wrisi</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥4.00</span>
+	                                        </div>	
+                                        	<a href="http://www.kxb.com:81/yiwai-baoxian/283597.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		                                   
+                            </div>
+                        </div>
+                      <!-- 意外保险显示层 end -->
+                </dl> 
+                <dl class="que_dl que_dl_j1">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav3 f-ib"></em><a target="_blank" href="http://www.kxb.com:81/jiankang-baoxian/">健康保险</a><span class="z-que-zd"></span></dt>        
+                    <dd class="que_dl_dd"><a href="http://www.kaixinbao.com/huixuan/0000000263.shtml" target="_blank">重大疾病</a>|<a href="http://www.kxb.com:81/jiankang-baoxian/tedingjibing/" target="_blank">特定疾病</a>|<a href="http://www.kaixinbao.com/huixuan/0000000264.shtml" target="_blank">高端医疗</a></dd>
+                	<dd class="que_dl_dd que_dl_dd2"><a href="http://www.kaixinbao.com/huixuan/0000000138.shtml" target="_blank">少儿重疾</a>|<a href="http://www.kaixinbao.com/huixuan/0000000247.shtml" target="_blank">门急诊医疗</a></dd>
+                    <!-- 健康保险显示层 -->
+
+                        <div class="m-travel-con m-health-con z-hover-shadow tagshow " style="display:none"  >
+                        <div class="z-travel-zd"></div>
+                              <div class="m-t-nav-left">
+                                      <dl class="m-travel-navDl">
+                                      <dt class="f-ib">人群分类</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000339.shtml" target="_blank" >女性疾病保险</a>
+											
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">特色保障</dt>
+                                      <dd>
+					                       <!--循环：friendlink count：30-->
+
+
+										   <a href="http://120.55.73.0:81/choose/0000000338.shtml" target="_blank" >低价保障型</a>
+										   
+
+										   <a href="http://120.55.73.0:81/choose/0000000335.shtml" target="_blank" >住院津贴</a>
+										                                         
+                                      </dd>
+                                    </dl>
+                                    <dl class="m-travel-navDl">
+                                      <dt class="f-ib">保险品牌</dt>
+                                      <dd>
+					                        <!--循环：friendlink count：30-->
+
+
+											<a href="http://120.55.73.0:81/choose/0000000343.shtml" target="_blank" >平安财险</a>
+											
+
+											<a href="http://120.55.73.0:81/yiwai-baoxian/257766.shtml" target="_blank" >中国人寿</a>
+											
+                                      </dd>
+                                    </dl>
+                              </div>
+
+                              <div class="m-t-nav-right">
+                                      <dl class="m-travel-navDl"><dt class="f-ib">推荐计划</dt></dl> 
+                                    
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://www.kxb.com:81/yiwai-baoxian/282981.shtml" target="_blank" class="m-recommend-a">安联乐享人生幼儿意外健康计划一</a>
+		                                    <ul>
+		                                    	<li><span>意外健康综合保障</span></li><li><span>紧急救援</span></li><li><span>电话医生服务</span></li><li><span>儿童走失补偿</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥230.00</span>
+	                                        </div>	
+                                        	<a href="http://www.kxb.com:81/yiwai-baoxian/282981.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		
+
+										<div class="m-recommend-list">
+											<div class="clear"></div>
+				                            <a href="http://www.kxb.com:81/jiankang-baoxian/282612.shtml" target="_blank" class="m-recommend-a">大众安享中老年重疾健康保障计划</a>
+		                                    <ul>
+		                                    	<li><span>老年专款意外保障</span></li><li><span>意外医疗住院津贴</span></li><li><span>救护车服务津贴</span></li><li><span>温馨关爱老人健康</span></li><li><span>重疾和意外双重保障</span></li>
+		                                    </ul>		
+		                                    <div class="clear h10"></div>		
+	                                        <div class="m-recommend-money">
+	                                            <span class="m-re-money f-ib f_mi" style="display:none"></span>
+	                                            <span class="m-xj-money f-ib f_mi">￥1280.00</span>
+	                                        </div>	
+                                        	<a href="http://www.kxb.com:81/jiankang-baoxian/282612.shtml" class="f-submit-btn m-recommend-go" target="_blank">查看详情</a>	                                        	                                                                
+				                        </div>
+				                         <div class="clear h20"></div>
+						    		                                   
+                            </div>
+                        </div>
+                      <!-- 健康保险显示层 end -->
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav4 f-ib"></em><a target="_blank" href="http://www.kxb.com:81/renshou-baoxian/">人寿保险</a></dt>            
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav5 f-ib"></em><a target="_blank" href="http://www.kxb.com:81/jiacai-baoxian/">家财保险</a></dt>              
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav6 f-ib"></em><a target="_blank" href="http://www.kxb.com:81/tx/">团体保险</a></dt>                 
+                </dl>
+                <dl class="que_dl">    
+                    <dt class="que_dl_dt"><em class="i-navicon i-nav8 f-ib"></em><a target="_blank" href="http://www.kxb.com:81/chexian/">车辆保险</a></dt>
+                </dl>
+             </div>
+             </div>
+                <ul class="g-nav-main">
+                    <li class="f-ib"><a href="http://www.kxb.com:81" class="nav_1">首页</a></li>
+                    <li class="f-ib"><a href="http://www.kxb.com:81/daogou/" class="nav_2">保险快选</a><i class="header-hot"></i></li>
+                    <li class="f-ib"><a href="http://www.kxb.com:81/youhui/" class="nav_3" rel="nofollow">限时抢购</a></li>
+                    <li class="f-ib"><a href="http://www.kxb.com:81/jifen/" class="nav_4" rel="nofollow">积分商城</a></li>
+                    <li class="f-ib"><a href="http://www.kxb.com:81/huiyuan/" class="nav_5" rel="nofollow">会员部落</a></li>
+                    <li class="f-ib"><a href="http://www.kxb.com:81/lipei/" class="nav_6" rel="nofollow">理赔通道</a></li>
+                </ul> 
+                <div class="m-search">
+                	            <form action="http://www.kxb.com:81/Search/Search.jsp">
+                       <span class="f-search-i" style="display: none;"></span> <div class="m-search-box"><input type="text" name="query" class="m-search-input"><i class="i-search"></i><span class="f-search"><input name="" type="submit" value="搜索" onclick="jQuery.ajaxLoadImg.show('searchLoad');"></span></div>
+                                       </form> 
+                </div> 
+                </div>
+        <!-- 导航结束 -->
+
+     </div>
+    <!-- header end -->
+
+<!-- ========================= begin ======================== -->
+<input type="hidden" name="RiskCode" id="RiskCode" value="224801001" />
+<input type="hidden" name="price" id="price" value="" />
+<input type="hidden" name="pTypeName" id="pTypeName" value="<a href='../renshou-baoxian/dingqi/'  target='_self' >定期险</a>" />
+<input id="ProductType" type="hidden" value="" name="ProductType" />
+<input id="isLcx" type="hidden" value="" name="isLcx" />
+<div class="wrapper">
+
+	<div class="daohang">
+			<span class="daohang_home"></span>
+			<a href='../' target='_self' ><span class="orange">您所在的位置：首页</span></a>
+			<span class="separator">></span><span><a href='../renshou-baoxian/dingqi/'  target='_self' >定期险</a></span><span
+				class="separator">></span><span class="separator1">
+				百年康惠保重大疾病保险</span><span class="separator">></span><span class="separator1">现金价值计算</span>
+	</div>
+	
+	<div class="content_head">
+		<h4 class="xj_title">现金价值计算</h4>
+		<div class="cp_descon">
+			<div id="content">
+				     <div id="divRiskAppFactor_224801001" class="bz_time clearfix"><div class="tb_age_nocon clearfix"><em class="cp_title_ms">投保年龄</em><p class="cp_yh_mes">28天-55周岁</p></div><input id="qhuserAge" type="hidden" value="0" name="qhuserAge"><input id="qhuserMaxAge" type="hidden" value="55" name="qhuserMaxAge"><input id="qhDayOrYear" type="hidden" value="1" name="qhDayOrYear"><div class="clear"></div><div class="tb_age clearfix"><em class="cp_title_ms">出生日期</em><ul id="applicantBirthday" style="width:100px;" ><li id="birthday_li_id"><input type="text" class="text_age" id="inpRiskAppFactor_TextAge" name="inpRiskAppFactor_TextAge" value="1987-09-20"" data-id='224801001' data-area='B0000000000000014860_TextAge' onfocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd',minDate:'1900-01-01',maxDate:'2200-12-31'});"/><em class="icon"></em></li></ul><ul id="B0000000000000014860_TextAge" class="up_li_width"><li class="li_selected"><span id="TextAge_0" class="tb_span_aga" name="30Y" >30周岁</span></li></ul></div><div class="clear"></div><div  class="tb_age clearfix" ><em class="cp_title_ms">性别</em><ul id="B0000000000000014861_Sex"><li><span id="Sex_0" class="long_width" name="M" onclick="premRecal('224801001', this, 'B0000000000000014861_Sex');">男</span></li><li class="li_selected"><span id="Sex_1" class="long_width" name="F" onclick="premRecal('224801001', this, 'B0000000000000014861_Sex');">女</span></li></ul></div><div class="clear"></div><div  id='UlDayBelongs' class="tb_age clearfix" ><em class="cp_title_ms">保险期限</em><ul id="B0000000000000014862_Period"><li class="li_selected" onclick="Dayclear()"><span id="Period_0" class="long_width" name="70A" onclick="premRecal('224801001', this, 'B0000000000000014862_Period');">至70周岁</span></li><li onclick="Dayclear()"><span id="Period_1" class="long_width" name="0L" onclick="premRecal('224801001', this, 'B0000000000000014862_Period');">终身</span></li></ul></div><div class="clear"></div><div  class="tb_age clearfix" ><em class="cp_title_ms">缴费年期</em><ul id="B0000000000000014863_FeeYear"><li><span id="FeeYear_0" class="long_width" name="10Y" onclick="premRecal('224801001', this, 'B0000000000000014863_FeeYear');">10年</span></li><li><span id="FeeYear_1" class="long_width" name="15Y" onclick="premRecal('224801001', this, 'B0000000000000014863_FeeYear');">15年</span></li><li><span id="FeeYear_2" class="long_width" name="20Y" onclick="premRecal('224801001', this, 'B0000000000000014863_FeeYear');">20年</span></li><li class="li_selected"><span id="FeeYear_3" class="long_width" name="30Y" onclick="premRecal('224801001', this, 'B0000000000000014863_FeeYear');">30年</span></li></ul></div><div class="clear"></div><div class="paln_con clearfix" ><em class="cp_title_ms">基本保额</em><ul id="B0000000000000014864_Plan"><li class="li_selected"><span id="Plan_0" class="long_width" name="100000" onclick="premRecal('224801001', this, 'B0000000000000014864_Plan');">10万</span></li><li><span id="Plan_1" class="long_width" name="200000" onclick="premRecal('224801001', this, 'B0000000000000014864_Plan');">20万</span></li><li><span id="Plan_2" class="long_width" name="300000" onclick="premRecal('224801001', this, 'B0000000000000014864_Plan');">30万</span></li><li><span id="Plan_3" class="long_width" name="400000" onclick="premRecal('224801001', this, 'B0000000000000014864_Plan');">40万</span></li><li><span id="Plan_4" class="long_width" name="500000" onclick="premRecal('224801001', this, 'B0000000000000014864_Plan');">50万</span></li></ul></div><input id="periodFlag" type="hidden" value="N" /><div class="clear"></div></div>
+			</div>
+		</div>
+	<!-- end content_head --></div>
+	<div class="content" style="display: none">
+		<div class="content_left_up">
+			<div class="cp_contents">
+				<div class="cp_des">
+					<div class="bx_area_cont">
+						<!-- 保障权益 -->
+						<div class="area_cont">
+							<p class="ttl"><span>保障权益</span></p>
+							<div id="divRiskAppDuty_224801001" class="bzzz_boxtable" > <table width="100%" border="0" id="gh_tables"> <colgroup><col width="30%"></col><col width="15%"></col><col width="55%"></col></colgroup><tr><td colspan="3" class="td_ttl"><b>健康医疗保障</b></td></tr><tr ><div class="list_1 row1" id="Duty_224801001001" ><td class="CDutyCol1"> <span>重大疾病保险金</span></td><td class="CDutyCol2 ruleSelectUp " data-title="重大疾病" data-tip="产品中心的新功能"><select class="CDutyCol2" id="224801001001_01" name="224801001001_01" value="10万"><option name="100000">10万</option><option name="200000">20万</option><option name="300000">30万</option><option name="400000">40万</option><option name="500000">50万</option></select></td><td class="CDutyCol3"><span>在本合同有效期间内，被保险人在等待期内初次患本合同所约定的重大疾病中一种或多种，经公司承认的医疗机构和医师诊断确认，我们返还所交保险费（不计利息），本合同效力终止；
+在本合同有效期间内，被保险人因遭受意外伤害事故或在等待期后初次患本合同所约定的重大疾病中一种或多种，经公司承认的医疗机构和医师诊断确认，我们给付基本保额，本合同效力终止。
+若被保险人因本合同所约定的重大疾病以外的原因身故，我们返还身故当时的保单现金价值，本合同效力终止。</span></td></div></tr><tr ><div class="list_2 row0" id="Duty_224801001002" ><td class="CDutyCol1"> <span>轻症疾病保险金轻症疾病豁免保险费</span></td><td class="CDutyCol2 ruleSelectUp " data-title="特定疾病" data-tip="附加轻症保障（基本保额*<b>25%</b>）含豁免责任"><select class="CDutyCol2" id="224801001002_02" name="224801001002_02" value="不投保"><option name="0">不投保</option><option name="0">不投保</option><option name="0">不投保</option><option name="0">不投保</option><option name="0">不投保</option><option name="100000">投保</option><option name="200000">投保</option><option name="300000">投保</option><option name="400000">投保</option><option name="500000">投保</option></select></td><td class="CDutyCol3"><span>在本附加合同有效期内，被保险人于本附加合同持续生效180天（若本附加合同中止后复效，则以最后复效日起持续生效180天为准）以后（不含当日）首次确诊患本附加合同约定的特定疾病中的一种或多种，经公司承认的医疗机构和医师诊断确认，我们给付主合同基本保额的25%作为特定疾病保险金，且基本保额不变。同时我们将豁免主合同和本附加合同缴费期间内的首次确诊日以后各期保险费，本附加合同终止，主合同继续有效。</span></td></div></tr></table></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content_right_up">
+			<div class="bnr_box">
+				<p class="ttl"><em class="icon"></em><span>保费试算</span></p>
+				<div class="bnr_price">
+					<em>价格</em>
+					<span id="txt_price"><em>￥</em>-</span>
+				</div>
+				<p class="btn"><a onClick="doBuy();return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toubao2" href="javascript:void(0);" rel="nofollow" vlpageid="toubao2">立即投保</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- 现金价值开始 -->
+	<div class="xj_list" id="tag_box">
+		<p class="count_tip">*注：现金价值为试算值，退保金额以实际为准</p>
+		<table class="xj_table">
+			<thead>
+			<tr>
+				<th>保单年度末</th>
+				<th>被保人年龄</th>
+				<th>累计保费(元)</th>
+				<th>现金价值(元)</th>
+			</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<!-- 现金价值结束 -->
+</div>
+<!-- 底部开始 -->
+	<!-- 公共底部 -->
+    <div class="g-main-con">
+       <div class="clear h20"></div>  
+            <!-- foot -->
+            <div class="g-weaper1200">
+                <div class="g-footer">
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon1 "></em>正品保险</dt>
+                      <dd>中国保监会监制</dd>
+                      <dd>保险公司专供</dd>
+                      <dd>高性价比产品</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon2 "></em>快捷投保</dt>
+                      <dd>全方位一键对比</dd>
+                      <dd>1对1保险顾问指导</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon3 "></em>省心服务</dt>
+                      <dd>电子保单快捷变更</dd>
+                      <dd>满200元发票包邮</dd>
+                      <dd>免费协助理赔无差异</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon4 "></em>安全可靠</dt>
+                      <dd>7x24小时客服不间断</dd>
+                      <dd>风险提示保障安全</dd>
+                    </dl>
+                     <dl class="m-footer-dl">
+                      <dt class="f_mi"><em class="i-f-icon i-f-icon5 "></em>品牌实力</dt>
+                      <dd>5年400万用户选择</dd>
+                      <dd>2013年最佳保险中介</dd>
+                      <dd>30家知名保险公司合作</dd>
+                    </dl>
+
+                    <div class="clear h20"></div>
+                </div>
+              </div>
+                  <div class="clear h20"></div>
+                        <div class="g-footer-bg">
+                <div class="g-weaper1200">
+                     <div class="g-footer2">
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon6 "></em>新手指南</dt>
+                            <dd><a href="http://www.kxb.com:81/about/xszn/index.shtml#xszn1" target="_blank" rel="nofollow">如何注册</a>
+                            <a href="http://www.kxb.com:81/about//xszn/index.shtml#xszn4" target="_blank" rel="nofollow">如何投保</a>
+                            <a href="http://www.kxb.com:81/about/xszn/index.shtml#xszn3" target="_blank" rel="nofollow">找回密码</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon7 "></em>支付帮助</dt>
+                            <dd><a href="http://www.kxb.com:81/about/4/index.shtml#zfbz2" target="_blank" rel="nofollow">支付方式</a><a href="http://www.kxb.com:81/about/4/index.shtml#zfbz1" target="_blank" rel="nofollow">支付说明</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon8 "></em>保单服务</dt>
+                            <dd><a href="http://www.kxb.com:81/ddkscx/" target="_blank" rel="nofollow">保单查询</a>
+                            <a href="http://www.kxb.com:81/bdyz/" target="_blank" rel="nofollow">保单验真</a>
+                            <a href="http://www.kxb.com:81/about/1/index.shtml#yxxg2" target="_blank" rel="nofollow">保单变更</a>
+                            <a href="http://www.kxb.com:81/about/1/index.shtml#yxxg3" target="_blank" rel="nofollow">保单取消</a>
+                            <a href="http://www.kxb.com:81/about/1/index.shtml#yxxg1" target="_blank" rel="nofollow">保单寄送</a></dd>
+                          </dl>
+                          <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon9 "></em>理赔服务</dt>
+                            <dd><a href="http://www.kxb.com:81/about/2/index.shtml#lpbz1" target="_blank" rel="nofollow">理赔指南</a><a href="http://www.kxb.com:81/lpzs/index.shtml" target="_blank" rel="nofollow">理赔报案</a>
+                            <a href="http://www.kxb.com:81/lpzs/index.shtml" target="_blank" rel="nofollow">理赔案例</a></dd>
+                          </dl>
+                           <dl class="m-footer-dl">
+                            <dt><em class="i-f-icon i-f-icon10 "></em>服务中心</dt>
+                            <dd><a href="http://www.kxb.com:81/wj/shop/bill_query!queryBill.action" target="_blank" rel="nofollow">发票索取</a>
+                            <a href="http://www.kxb.com:81/about/3/dayizonghui/index.shtml" target="_blank" rel="nofollow">常见问题</a></dd>
+                          </dl>
+                          <div class="clear h20"></div>
+                     </div>
+                     
+                    <div class="clear h20"></div>
+                     <!-- 热门专题 -->
+                </div>
+              </div>
+             <!-- 底部 -->
+                <div class="g-btn-footer">
+                <div class="g-weaper1200">
+                        <div class="g-f-left">
+                          <div class="botlink02">
+                <ul  class="clearfix">
+					<li><a href="http://www.kxb.com:81/other/about/" rel="nofollow">关于开心保</a></li>
+					<li>|</li>
+					<li><a href="http://www.kxb.com:81/other/news/" rel="nofollow">开心保要闻</a></li>
+					<li>|</li>
+					<!--<li><a href="http://www.kxb.com:81/other/jobs/" rel="nofollow">加入开心保</a></li>
+					<li>|</li>-->
+					<li><a href="http://www.kxb.com:81/other/sitemap/" >网站地图</a></li>
+					<li>|</li>
+					<li><a href="http://www.kxb.com:81/other/legal/" rel="nofollow">法律声明</a></li>
+					<li>|</li>
+					<li><a href="http://www.kxb.com:81/other/contact/" rel="nofollow">联系我们</a></li>
+					<li>|</li>
+					<li><a href="http://u.kaixinbao.com/" target="_blank" rel="nofollow">分销联盟</a></li>
+					<li>|</li>
+					<!-- <li><a href="http://kaixinbao.tmall.com/" target="_blank" rel="nofollow">开心保天猫店</a></li>
+					<li>|</li>
+					<li><a href="http://temai.kaixinbao.com/" target="_blank" rel="nofollow">特价机票</a></li>
+					<li><a href="http://wap.kaixinbao.com/" target="_blank" >移动版</a></li> -->
+					<li><a href="http://www.kaixinbao.com/yxhd/isl-tra/" target="_blank" rel="nofollow">微信版</a></li>                
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="copyright">		
+				<div class="copyrightright"><a href="http://resource35.kaixinbao.com/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://resource35.kaixinbao.com/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://resource35.kaixinbao.com/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+				<div class="copyrightleft">Copyright 2012-2017 版权所有 网金保险销售服务有限公司</div>
+        <div class="clear h20"></div>
+        <ul class="sl-floatcenter">
+                    <li class="sl-floatcenter-item" ><a href="http://www.circ.gov.cn/tabid/5171/InfoID/210753/frtid/4491/Default.aspx" target="_blank" rel="nofollow"><img src="http://resource.kaixinbao.com/upload/Image/xrwz/2012/12/2582921308.png" width="90" height="37"/></a></li>
+
+                    <li class="sl-floatcenter-item" ><a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1594416088" target="_blank" rel="nofollow"><img src="http://resource.kaixinbao.com/upload/Image/xrwz/2012/12/2582937061.png" width="37" height="37"/></a></li>
+
+                    <li class="sl-floatcenter-item" ><a href="http://wljg.lngs.gov.cn/iciaicweb/dzbscheck.do?method=change&id=E2014111300054343" target="_blank" rel="nofollow"><img src="http://resource.kaixinbao.com/upload/Image/xrwz/2014/12/298851182.png" width="37" height="37"/></a></li>
+
+                    <li class="sl-floatcenter-item" ><a href="http://si.trustutn.org/info?sn=618161121025629572164&certType=1" target="_blank" rel="nofollow"><img src="http://resource.kaixinbao.com/upload/Image/xrwz/2016/11/3061644601.png" width="90" height="37"/></a></li>
+
+                          </ul>
+			</div>
+                        </div>
+                        <div class="g-f-right_new">
+                            <img src="http://resource35.kaixinbao.com/images/redesign/codes_03.png" class="code_wechar"  alt="开心保二维码" />
+                            <div class="codewechar">
+                              <h3 class="f_mi">扫一扫，微信关注开心保保险</h3>
+                              <p>精选最优惠保险产品，了解最新保险资讯！</p>
+                              <span><i class="code_tel"></i>服务热线：4009-789-789</span>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                </div>
+          </div>
+    </div>
+    <div id="fix_nav" class="fix_nav">
+        <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" >
+            <img class="anim_fade_image" src="http://resource35.kaixinbao.com/images/wj_kxb/icon_isp_01.jpg" />
+            <img  src="http://resource35.kaixinbao.com/images/wj_kxb/icon_isp_01_on.jpg" />
+        </a>
+        <span class="fix-RichScan">
+                <img class="anim_fade_image" src="http://resource35.kaixinbao.com/images/wj_kxb/icon_isp_02.jpg" />
+                <img  src="http://resource35.kaixinbao.com/images/wj_kxb/icon_isp_02_on.jpg" />
+                <div style="display: none;" class="weixinDiv tagshow"><img src="http://resource35.kaixinbao.com/images/wxnew.png">微信查保单</div>
+            </span>
+        <span class="fix-top" id="gotop">
+                <img class="anim_fade_image" src="http://resource35.kaixinbao.com/images/wj_kxb/icon_isp_03.jpg" />
+                <img  src="http://resource35.kaixinbao.com/images/wj_kxb/icon_isp_03_on.jpg" />
+            </span>
+    </div>
+    <!-- 公共底部 -->
+<!-- 底部结束 -->
+	<div id="fix_vs" class="fix_vs">
+     <span class="g-vs-num" id="g-vs-num">0</span>
+      <div id="cpdiv" class="cpdiv">
+            <div class="comparediv">
+                <div class="closebtn">
+                    <span onclick="close_h()" class="close_compare"></span>
+                </div>
+                <div class="comparedivcont">
+                    <div class="comparedetail" style="display: none;" id="cpprodu1">
+
+                        <input type="hidden" name="productCodeA" id="productCodeA" />
+                        <p>
+                            <span id="productnameA" class="compare_name"></span>
+                            <span id="productPremA" class="compare_pric" id=""></span>
+                            <span class="dblue cpdelico" onclick="closecp1()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail" style="display:none;"  id="cpprodu2">
+
+                        <input type="hidden" name="productCodeB" id="productCodeB" />
+                       
+                        <p>
+                            <span id="productnameB" class="compare_name"></span>
+                            <span id="productPremB" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp2()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail"  style="display:none;" id="cpprodu3">
+                        <input type="hidden" name="productCodeC" id="productCodeC" />
+
+                        <p>
+                            <span id="productnameC"  class="compare_name"></span>
+                            <span id="productPremC" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp3()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparedetail" style="display:none;"  id="cpprodu4">
+                        <input type="hidden" name="productCodeD" id="productCodeD" />
+
+                        <p>
+                            <span id="productnameD" class="compare_name"></span>
+                            <span id="productPremD" class="compare_pric"></span>
+                            <span class="dblue cpdelico" onclick="closecp4()"></span>
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="comparebtn">
+                        <a class="compare_submit" href="javascript:void(0);" vlpageid="tjdb01" exturl="http://www.kaixinbao.com/tjdb01" onClick="javascript:begincompare('http://www.kxb.com:81/wj');subclosecp();return(VL_FileDL(this));return false;">提交对比</a>
+                        <span class="compare_none" onclick="close_all();">清空</span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <span class="cpdiv_jao"></span>
+            </div>
+        </div>
+      <a class="fixVs" href="javascript:void(0);" vlpageid="comp03" exturl="http://www.kaixinbao.com/comp03" onclick="return(VL_FileDL(this));return false;">
+          <img class="anim_fade_image" src="http://resource35.kaixinbao.com/images/wj_kxb/icon_fix_contrast.jpg" />
+          <img  src="http://resource35.kaixinbao.com/images/wj_kxb/icon_fix_contrast_on.jpg" />
+      </a>
+  </div>
+<!-- ========================= /end ========================= -->
+<script type="text/javascript">VLTrace_custom_getparam='u1=productdetail';</script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/weixitrack.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401"></script>
+<script type="text/javascript" src="http://localhost:8080/js/wj_kxb/require.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/wj_kxb/require.config.js"></script>
+<script type="text/javascript">
+    require(["cashValue"], function(index) {
+        if(index && index.init) {
+            index.init();
+        }
+    });
+</script>
+</body>
+</html>

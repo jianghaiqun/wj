@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*
+#@des:保单查询
+*@maker:dongqi.guo
+*@time:2013-10-10-16：00
+*/
+.chaxun_bg{ background:url(../images/ques_03.jpg) no-repeat top right; overflow:hidden; min-height:417px;  _height:417px; height:auto; }
+.kscx_box{ width:400px; height:210px; margin-top:100px; margin-left:70px;}
+.nav_bgs{ margin-bottom:0px;}
+.kscx_titile{ background:#515151; height:50px;-moz-border-radius: 8px 8px 0px 0px;-webkit-border-radius: 8px 8px 0px 0px;
+border-radius: 8px 8px 0px 0px;text-align:center; color:#fff; line-height:46px; font-size:24px;font-family:"微软雅黑"; }
+.kscx_con{ background:#F6F6F5; border:1px solid #EAEAEA;  height:160px; -moz-border-radius: 8px 8px 8px 8px;-webkit-border-radius:8px 8px 8px 8px;
+border-radius: 8px 8px 8px 8px; margin-top:-4px;}
+.kscx_table{ margin-top:20px;}
+.qscx_input{ border:1px solid #E6E6E6; height:35px; line-height:35px;  
+background-color: #FCFCFC;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#ffffff)); 
+  background-image: -webkit-linear-gradient(top, #FCFCFC, #ffffff); 
+  background-image:    -moz-linear-gradient(top, #FCFCFC, #ffffff); 
+  background-image:      -o-linear-gradient(top, #FCFCFC, #ffffff); 
+  background-image:         linear-gradient(to bottom, #FCFCFC, #ffffff);
+  width:232px; color:#7D7D7D; 
+}
+.qscx_input2{ width:136px;padding-left:4px; margin-right:6px;}
+.kscx_table td{ height:50px; color:#515151;}
+.qscx_btn{ width:81px; height:35px; background:url(../images/qscx_btn_11.gif) no-repeat; text-indent:-2000em; border:none; cursor:pointer; display:block;}
+.n_footwrap{ margin-top:0;}
+.qscx_jg{ width:848px; margin-left:68px; margin-top:63px;  margin-bottom:35px;}
+.qscx_titile{ width:138px; height:44px; background:#ED6D00; color:#fff; text-align:center; line-height:40px; font-size:2em; font-family:"微软雅黑"; -moz-border-radius: 8px 8px 0px 0px;-webkit-border-radius: 8px 8px 0px 0px;
+border-radius: 8px 8px 0px 0px;}
+.qscx_jg_con{ border:1px solid #EAEAEA; background:#fff;  -moz-border-radius: 8px 8px 8px 8px;-webkit-border-radius: 8px 8px 8px 8px;
+border-radius:8px 8px 8px 8px; margin-top:-4px;}
+.qscx_jg_con p{ text-align:center; font-size:1.5em; text-align:center; line-height:2em; padding:30px 0; font-family:"微软雅黑";}
+.c_font{ color:#ED7006;}
+.cx_jg_table{ border:none; text-align:center;color:#525252;}
+.cx_jg_table td,.cx_jg_table th{border:1px solid #EFEFEF; }
+.cx_jg_table th{ height:44px; background:#F4F4F4;}
+.cx_jg_table td{ height:50px; }
+.qscx_tishi{ text-align:center; padding-top:20px; color:#999; line-height:1.7em;}
+.qscx_tishi a:link,.qscx_tishi a:visited,.qscx_tishi a:active{ color:#ED6D00;}
+/* 
+*去掉快速查询页面的面包屑
+*/
+.daohang{display:none}

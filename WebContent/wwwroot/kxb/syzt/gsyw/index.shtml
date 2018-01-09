@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/new/main.css" rel="stylesheet" type="text/css" />
+<link href="../../style/new/istory.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/style_index/new/main.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/wj/template/shop/css/login.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/wj/template/shop/css/login1.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/wj/template/shop/css/register.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/wj/template/common/css/base.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/wj/template/common/css/jquery.datepicker.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8080/wj/template/common/css/jquery.zoomimage.css" rel="stylesheet" type="text/css" />
+<style type="text/css">	
+.sezjacleft img{ margin-top:18px;}
+</style>
+<link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+<title>首页故事 意外险</title>
+</head>
+<body onload="start();">
+		<!-- 顶部 开始 -->
+		<div class="toplink">
+			<div class="toplinkleft" id="NotLogin">
+				<em>欢迎来开心保！请</em>
+				<span><a href="#" id="headerShowLoginWindow" class="showLoginWindow">登录</a></span>
+				<span>|</span>
+				<span><a href="http://localhost:8080/wj/shop/member_register!home.action" id="headerRegister">免费注册</a></span>
+			</div>
+			<div class="toplinkleft" id="YesLogin" style="display: none;">
+				<em>您好<span id="headerLoginMemberUsername"></span>,欢迎来开心保</em>
+				<span><a href="http://localhost:8080/wj/shop/member_center!index.action" id="headerMemberCenter">会员中心</a></span>
+				<span>|</span>
+				<span><a href="http://localhost:8080/wj/shop/member!logout.action" id="headerLogout">退出</a></span>
+			</div>
+			<div class="toplinkright">
+				<span><a href="http://localhost:8080/zhishi/">保险知识</a></span>
+				<span>|</span>
+				<span><a href="http://localhost:8080/zixun/">资讯</a></span>
+				<span>|</span>
+				<span><a href="http://localhost:8080/wenda/">问答</a></span>
+				<span>|</span>
+				<span><a href="http://localhost:8080/baike/">百科</a></span>
+				<span>|</span>
+				<span><a href="http://localhost:8080/jifen/" rel="nofollow">积分商城</a></span>
+				<span>|</span>
+				<span><a href="http://localhost:8080/about/">帮助中心</a></span>
+			</div>
+		</div>
+		<!-- 顶部 结束 -->
+		<!-- head 开始 -->
+		<div class="head">
+			<div class="logo"><a href="http://localhost:8080/"><img src="http://localhost:8080/image/logo.gif" alt="开心保保险网，一站式服务，省钱更省心" title="开心保保险网，一站式服务，省钱更省心" width="278" height="60" /></a></div>
+			<div class="headsearch">
+				<div class="headsearchinputarea">
+					<form name="myformname" action="http://localhost:8080/Search/Result.jsp">
+					  		<!-- input type="hidden" name="id" value="20" id="id" />
+				  			<input type="hidden" name="site" value="221" />
+				  			<input type="hidden" name="order"  value="time" / -->
+							<input id="valueid" name="query" type="text" class="headsearchinput" value="旅游保险" onfocus="if(this.value=='旅游保险'){this.value='';}" onblur="if(this.value==''){this.value='旅游保险';}"/><input type="submit" value="搜 索" class="headsearchbtn" />
+					</form>
+					<div class="headsearchkeyword">热门搜索：<span class="gray"><a href="#" onclick="document.getElementById('valueid').value='旅游险';myformname.submit()">旅游险</a></span><span class="dred"><a href="#" onclick="document.getElementById('valueid').value='航空意外险';myformname.submit()">航空意外险</a></span><span class="gray"><a href="#" onclick="document.getElementById('valueid').value='签证保险';myformname.submit()">签证保险</a></span><span class="gray"><a href="#" onclick="document.getElementById('valueid').value='申根保险';myformname.submit()">申根保险</a></span></div>
+				</div>
+			</div>
+			<div class="headserv"></div>
+			<div class="headbuy">
+				<span class="headbuybtn02"><a href="javascript:void(0);" vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap2" onclick="return(VL_FileDL(this));return false;" rel="nofollow"><img src="../../image/headbtnserv.gif" width="99" height="29" /></a></span>
+			</div>
+		</div>
+		<!-- head 结束 -->
+<div class="storyac01wrap">
+	<div class="stracarea01"></div>
+	<div class="stracarea02"></div>
+	<div class="stracarea03"></div>
+	<div class="stracarea04">
+		<div class="sezjac" id="con_one_1" style="display:none;">
+			<div class="sezjacleft"><img src="../../image/istory/cpic_logo.gif" width="97" height="48" align="absmiddle" /></div>
+			<div class="sezjacright">
+				<h3 style="font-family:'Microsoft YaHei'!important;">太平洋财险驾意人生</h3>
+				<h4><span>多种组合 </span><span>保障全面</span></h4>
+				<h5><a href="http://localhost:8080/yiwai-baoxian/255432.shtml"><img src="../../image/istory/istorybtn01.jpg" width="86" height="25" align="absmiddle" /></a></h5>
+				<p>为非营运机动车驾驶人员提供的专业指向性保险。</p>
+			</div>
+		</div>		
+		<div class="sezjac" id="con_one_2">
+			<div class="sezjacleft"><img src="../../image/istory/pingan_logo.gif" width="97" height="48" align="absmiddle" /></div>
+			<div class="sezjacright">
+				<h3 style="font-family:'Microsoft YaHei'!important;">平安财险交通意外险</h3>
+				<h4><span>保障全面 </span><span>旅行必备</span></h4>
+				<h5><a href="http://localhost:8080/yiwai-baoxian/251351.shtml"><img src="../../image/istory/istorybtn01.jpg" width="86" height="25" align="absmiddle" /></a></h5>
+				<p>涵盖飞机、火车、地铁、轻轨、轮船、汽车意外伤害责任，保障额度高，保费低，短期旅行必备。限购4份。</p>
+			</div>
+		</div>
+		
+		<div class="sezjac" id="con_one_3" style="display:none;">
+			<div class="sezjacleft"><img src="../../image/istory/companylogoa02.jpg" width="96" height="46" align="absmiddle" /></div>
+			<div class="sezjacright">
+				<h3 style="font-family:'Microsoft YaHei'!important;">晚年安顺意外险A款</h3>
+				<h4><span>老年专享</span><span>意外医疗</span></h4>
+				<h5><a href="http://localhost:8080/yiwai-baoxian/251352.shtml"><img src="../../image/istory/istorybtn01.jpg" width="86" height="25" align="absmiddle" /></a></h5>
+				<p>专为中晚年设计，保障乘坐交通工具期间以及公园内意外伤害责任，保费低。限购2份。</p>
+			</div>
+		</div>		
+	</div>	
+	<div class="tabstrwrap02">		
+		<div class="tabstr02">
+                    <ul> 
+                        <li id="one1" onMouseOver="setTabSYGS('one',1,3)"></li>
+                        <li id="one2" onMouseOver="setTabSYGS('one',2,3)" class="hover"></li>
+						<li id="one3" onMouseOver="setTabSYGS('one',3,3)"></li>
+                    </ul>
+                    <div class="clear"></div>
+          </div>
+	</div>
+<div class="tabcontstr">
+	<div class="stracarea05" style="font-family:'Microsoft YaHei'!important;">生活安全要重视!</div>
+	<div class="stracarea06">
+		<div class="stracarea06cont">
+			<h3>　　有资料显示，在全球范围内，每年约有350万人死于意外伤害事故，约占人类死亡总数的6%，是除自然死亡以外人类生命与健康的第一杀手。在我们的生活中要培养安全意识，尤其是儿童，提高警惕非常重要。以下常识请时时注意：</h3>
+			<div class="straclistcont">
+				<table width="100%">
+				<tbody>
+					<tr>
+						<th valign="middle">1.</th>
+						<td valign="middle">离家前或入睡前，抽出几分钟时间对家中进行一次安全检查，看水龙头是否关好、电器、煤气是否关闭、防盗门是否锁好、车辆是否放好等等。</td>
+					</tr>
+					<tr>
+						<th valign="middle">2.</th>
+						<td valign="middle">离家外出遇到陌生人递烟敬酒送饮料或请你吃饭时要婉言谢绝，警惕其中有麻醉药，以防麻醉后被害。</td>
+					</tr>
+					<tr>
+						<th valign="middle">3.</th>
+						<td valign="middle">家长要尽早教会儿童自己保护自己的如下一些本领。孩子应记住自己及家长的姓名、居住地址、家庭电话，以便丢失后不致无路可去。</td>
+					</tr>
+					<tr>
+						<th valign="middle">4.</th>
+						<td valign="middle">儿童独自在家，要关闭好防盗门及窗户，不给陌生人开门。</td>
+					</tr>
+					<tr>
+						<th valign="middle">5.</th>
+						<td valign="middle">教育孩子家长不在身边或自行外出时，不接受陌生人的礼品及玩物，不接受陌生人的各种邀请，以防止上当受骗。</td>
+					</tr>
+					<tr>
+						<th valign="middle">6.</th>
+						<td valign="middle">儿童不要自行点燃煤气、开电器，过马路要走过街天桥，学会马路上红绿灯使用的规定。</td>
+					</tr>
+					<tr>
+						<th valign="middle">7.</th>
+						<td valign="middle">天空闪电，雷雨即至，必须采取预防措施，不可在雨中行走，不能站在孤立的大树下和高处，不要依在墙壁旁边，不站在电灯的正下面，停止使用电话等。</td>
+					</tr>
+					<tr>
+						<th valign="middle">8.</th>
+						<td valign="middle">狂犬病是对人类危害最大的急性传染病，死亡率几乎１００％，不少人的误区，认为疯狗咬伤会得狂犬病，外观健康的狗咬伤无害，其实，一些健康狗的唾液中也带有狂犬病毒，不可麻痹大意。</td>
+					</tr>
+					<tr>
+						<th valign="middle">9.</th>
+						<td valign="middle">上下楼梯或走路不小心扭伤了脚脖，切不可进行热敷或对创伤部位用力按摩，应首先用冷水敷，以减少破裂血管出血或向外渗液，然后再加压包扎，并减少活动，最好将患脚抬高。</td>
+					</tr>
+					<tr>
+						<th valign="middle">10.</th>
+						<td valign="middle">小虫不小心钻入耳道，应迅速用手电筒照射耳朵，小虫见光后往往会自动爬出，倘若不行，可用手紧紧捂住耳朵，使小虫缺氧闷死，然后向耳内滴２～３滴麻油并将耳朵朝下，死亡的小虫随油流出，切不可用火柴棒、耳挖等物乱掏，使小虫受惊继续深钻，穿破鼓膜，引起耳聋。</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="stracarea07">
+		<h3 style="font-family:'Microsoft YaHei'!important;">给您一个解决方案，让您更安心舒心！</h3>
+		<h4>
+			<p>张先生，今年32岁，为家中的经济支柱。投保意外伤害保险6万元、附加意外医疗5000元，年交保费306元。11月18日上午张先生接到朋友的电话，朋友家准备盖房子，但需要先拆除原来的老宅子，张先生欣然答应。下午大家伙干的热火朝天，张先生这时接了一个电话，因为房前人多太吵，张先生到屋子后侧接电话，这时突然一声巨响，已经拆除了一半的后窗户垂直砸到张先生的左腰部及腿部，随后张先生眼前一黑晕倒在地……</p><p>醒来时张先生已经躺在医院病房中，医生诊断为左股骨粗隆间骨折，住院8天。客户住院后因经济原因保守治疗未行手术治疗，合计花费5900余元。出院后客户及时收集理赔申请资料，客户12月16日提出理赔申请，保险公司，12月21日出具理赔结论并快速理赔，本案合计给付金额5000元。</p>
+		</h4>
+	</div>
+	<div class="stracarea08">
+ <h3>开心保提示您</h3>
+		<h4>
+		<p>	生活中，常常有些意外事故毫无征兆地不期而至，虽然事故的发生与否与购买保险毫无关系，但事故一旦发生，是否购买了保险的结果却不大一样。没有保险保障，整个家庭不但要遭受精神上的打击，同时还将面临经济上的窘迫与困境。如果事先都准备了适当的保险，就无疑筑起了一道坚固的经济保障防线。</p>
+		</h4>
+	</div>
+</div>	
+</div>
+<div class="footwrap">
+	<div class="botlink">
+		<div class="botlinkcont">
+			<h3>网站操作</h3>
+			<ul class="liststyle04">
+				<li><a href="../../about/5/toubaosm/">在线投保说明</a></li>
+				<li><a href="../../about/5/kaixinguosm/">开心果说明</a></li>
+				<li><a href="../../about/5/kaixinzhism/">开心值说明</a></li>
+			</ul>
+		</div>
+		<div class="botlinkcont">
+			<h3>业务相关</h3> 
+			<ul class="liststyle04">
+				<li><a href="../../about/1/baodansongda/">保单送达说明</a></li>
+				<li><a href="../../about/1/baodanbiangeng/">保单变更说明</a></li>
+				<li><a href="../../about/1/baodanquxiao/">保单取消说明</a></li>
+			</ul>
+		</div>
+		<div class="botlinkcont">
+			<h3>理赔帮助</h3>
+			<ul class="liststyle04">
+				<li><a href="../../about/2/lipeifuwu/">理赔服务说明</a></li>
+				<li><a href="../../about/2/lipeianli/">理赔案例</a></li>
+				<li><a href="../../about/2/lipeibaoan/">理赔报案电话</a></li>
+			</ul>
+		</div>
+		<div class="botlinkcont">
+			<h3>支付帮助</h3>
+			<ul class="liststyle04">
+				<li><a href="../../about/4/ruhekaitong/">如何开通网银</a></li>
+				<li><a href="../../about/4/zhifusm/">支付说明及演示</a></li>
+				<li><a href="../../about/4/zhifuwenti/">支付问题联系方式</a></li>
+			</ul>
+		</div>
+		<div class="botlinkcont" style="border-right:none;">
+			<h3>服务中心</h3>
+			<ul class="liststyle04">
+				<li><a href="../../about/3/guanyukefu/">关于在线客服</a></li>
+				<li><a href="../../about/3/danzhengxiazai/">业务单证下载</a></li>
+				<li><a href="../../about/3/dayizonghui/">产品答疑总汇</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="authenticate">
+   		<ul class="sl-floatcenter">
+			
+  
+		      <li class="sl-floatcenter-item"><a href="../../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850521767.jpg" width="36" height="33" /></a></li>
+		    
+  
+		      <li class="sl-floatcenter-item"><a href="../../" target="_blank" rel="nofollow"><img src="http://localhost:8080/upload/Image/xrwz/2016/04/2850537520.jpg" width="69" height="33" /></a></li>
+		     
+   		</ul>
+    </div>
+	<div class="botlink02">
+		<ul>
+		<li><a href="http://localhost:8080/other/about/">关于网金</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/news/">网金要闻</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/jobs/">加入网金</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/sitemap/">网站地图</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/legal/">法律声明</a></li>
+			<li>|</li>
+			<li><a href="http://localhost:8080/other/contact/">联系我们</a></li>
+			<li>|</li>
+			<li><a href="http://www.kaixinbao.com/other/union/" target="_blank" rel="nofollow">分销平台</a></li>
+			<div class="clear"></div>
+		</ul>
+		<!--   <div class="rz_list"><a href="http://trust.360.cn/search.php" target="_blank" title="360绿色网站"><img src="http://trust.360.cn/img.php?sn=1017&id=3" border="0" /></a></div> -->
+	</div>
+	<div class="copyright">		
+		<div class="copyrightright"><a href="http://localhost:8080/images/bxdlywxkz.jpg" target="_blank" rel="nofollow">保险代理业务许可证</a>&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">辽ICP备12007009号-1</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/qyfryyzz.jpg" target="_blank" rel="nofollow">企业营业执照</a>&nbsp;&nbsp;<a href="http://localhost:8080/images/icp.jpg" target="_blank" rel="nofollow">ICP经营许可证(辽B2-20120076)</a></div>
+		<div class="copyrightleft">Copyright 2012-2016 版权所有 网金保险销售服务有限公司</div>
+	</div>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.cookie.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.form.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.metadata.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.validate.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.validate.methods.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.validate.cn.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.dimensions.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.jqDnR.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.jqModal.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.tools.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.qtip.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.pager.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.livequery.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.superfish.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.hoverIntent.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.datepicker.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.bCheckbox.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.lSelect.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.ajaxfileupload.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/jquery.zoomimage.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/tiny_mce/jquery.tinymce.js"></script>
+			<!--[if lte IE 6]>
+			<script type="text/javascript" src="http://localhost:8080/js/template/common/js/belatedPNG.js"></script>
+			<![endif]-->
+		    <script type="text/javascript" src="http://localhost:8080/js/template/common/js/base.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/shop/js/login.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/template/shop/js/header1.js"></script>
+			<script type="text/javascript" src="http://localhost:8080/js/footer.js"></script>
+</div>
+
+<!-- 产品分类浮动层 开始 -->
+<!-- <div class="ClassificationArea">
+	<h1>保险产品分类</h1>
+	<ul>
+    	<li><a href="http://localhost:8080/bxcpfl/jcyz/index.shtml">驾车一族</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/axly/index.shtml">安心旅游</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/jkbx/index.shtml">健康保险</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/gahz/index.shtml">关爱孩子</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/xjfm/index.shtml">孝敬父母</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/jcwy/index.shtml">家财无忧</a></li>
+    	<li><a href="http://localhost:8080/bxcpfl/gazj/index.shtml">关爱自己</a></li>
+        <li class="ShowAll"><a href="http://localhost:8080/bxcpfl/index.shtml"><img src="http://localhost:8080/image/showall.gif" width="30" height="30" /></a></li>
+    </ul>
+</div> -->
+<!--产品分类浮动层 结束-->
+<!-- 客服类浮动层 开始 -->
+<!--<div class="servfloat">
+	<span><a href="http://chat10.live800.com/live800/chatClient/chatbox.jsp?companyID=200975&jid=6736147584&enterurl=http%3A%2F%2Fwww%2Ekaixinbao%2Ecom%2F&pagereferrer=&tm=1347850489403"><img src="http://localhost:8080/image/floatserv01.gif" width="28" height="70" target="_blank"/></a></span>
+	<span class="guanzhu"><a href="#"></a></span>
+	<span><a href="#top" id="returntop"><img src="http://localhost:8080/image/floatserv03.gif" width="28" height="70" /></a></span>
+</div>-->
+<!-- <script type="text/javascript">
+/*
+	window.onscroll=function(){
+		if(document.documentElement.scrollTop){
+			getDiv.style.display="block";
+		}else if(document.body.scrollTop){
+			getDiv.style.display="block";
+		}else{
+			getDiv.style.display="none";	
+		}
+	}
+	function getWinSize(){
+		var winHeight=window.innerHeight,winWidth=window.innerWidth;
+		if(document.documentElement.clientHeight){
+			winHeight=document.documentElement.clientHeight;
+			winWidth=document.documentElement.clientWidth;
+		}else{
+			winHeight=document.body.clientHeight;
+			winWidth=document.body.clientWidth;
+		}
+	    var height=winHeight-50;
+		var width=winWidth-100;
+		getDiv.style.top=height+"px";
+		getDiv.style.left=width+"px";
+	}
+	getWinSize();
+	window.onresize=getWinSize;
+	*/
+</script> -->
+<!-- 客服类浮动层 结束 -->
+<script type="text/javascript" src="http://localhost:8080/js/footer.js"></script>
+<script language="JavaScript" src="../../js/tabchange.js"></script>
+<!-- 分享浮动层 开始 -->
+<!-- <div class="sharefloats">
+	<span><a href="#top"><img src="../../image/istory/floatshare.gif" width="28" height="70" /></a></span></div> -->
+<!-- 分享部浮动层 结束 -->
+<!-- 回顶部浮动层 开始 -->
+<!-- <div class="servfloats">
+	<span><a href="#top"><img src="../../image/istory/floatservs.gif" width="28" height="70" /></a></span></div> -->
+<!-- 回顶部浮动层 结束 -->
+
+</body>
+</html>

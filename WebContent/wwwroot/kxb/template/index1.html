@@ -1,0 +1,427 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${Site.Meta_Keywords}" />
+<meta name="description" content="${Site.Meta_Description}" />
+<title>${Site.name}</title>
+<link href="${Site.URL}/style/commonality.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- 顶部 开始 -->
+	<cms:include file="block/kxb_header_index.shtml" />
+<!-- 顶部 结束 -->
+
+<div class="part1">
+	<div class="part1left">
+		<div class="top5">
+			<h3 class="top5tit"><img src="${Site.URL}/image/top5tit.gif" width="115" height="19" /></h3>
+			<div class="tab01">
+                    <ul> 
+                        <li id="one1" onMouseOver="setTab('one',1,2)" class="hover">意外</li>
+                        <li id="one2" onMouseOver="setTab('one',2,2)">旅游</li>
+                    </ul>
+                    <div class="clear"></div>
+          </div>
+		  <div id="con_one_1">
+			<ul class="liststyle05">
+          		<cms:list item="article"  name="9385" level="current" count="5" hasAttribute="hot" >
+              	  <li>
+                      <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span>
+                  </li>
+                </cms:list>
+            </ul>
+          </div>
+		  <div id="con_one_2" style="display:none;">
+			<ul class="liststyle05">
+               	<cms:list item="article"  name="9409" level="current" count="5" hasAttribute="hot" >
+               	   <li>
+                       <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span>
+                   </li>
+                 </cms:list>
+            </ul>
+          </div>
+		</div>
+	</div>
+	<div class="part1center">
+		<div class="ad06">
+			<cms:ad name="开心保首页_中上" custom="false" size="480*240" type="1"> 
+			 {ZCMS:广告版位 矩形横幅 名称：开心保首页_中上}  
+			</cms:ad>
+		</div>
+	</div>
+	<div class="part1right add_news">
+		<h3 class="tjcp">最新动态</h3>
+		<div class="tjcpcont">
+			<div class="tjcpone">
+				<ul class="liststyle06">
+							<cms:list item="friendlink" name="最新公告">
+								<% if(i<3){%>
+								<li class='add_${friendlink.Prop1}'><a href="${friendlink.URL}">${friendlink.Name|charWidth=13}</a></li>
+							<%}else{%>	
+								<li><a href="${friendlink.URL}">${friendlink.Name|charWidth=15}</a></li>
+							<%}%>	
+					   		</cms:list>
+	                
+				</ul>
+			</div>
+		</div>
+        
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div class="part2">
+	<div class="part2left">
+		<h3 class="tjcp">推荐产品</h3>
+		<div class="tjcpcont">
+			<div class="tjcpone">
+				<ul class="liststyle06">
+					<cms:list item="article" count="7" name="产品中心" level="all" hasAttribute="hp_recommend">
+						 <li><a href="${Article.Link}">${article.title|charwidth=24}</a></li>
+	                </cms:list>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="part2center">
+		<div class="ad08">
+			<cms:ad name="开心保首页_中下1" custom="false" size="480*120" type="1"> 
+			 {ZCMS:广告版位 矩形横幅 名称：开心保首页_中下1}  
+			</cms:ad>
+		</div>
+		<div class="ad09">
+			<cms:ad name="开心保首页_中下2" custom="false" size="480*120" type="1"> 
+			 {ZCMS:广告版位 矩形横幅 名称：开心保首页_中下2}  
+			</cms:ad>
+		</div>
+	</div>
+	<div class="part2right">
+		<div id="KinSlideshow_3">
+                <cms:imageplayer code="kxb_homePic_3" type="0" width="230" height="255" />
+        </div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+	<div class="clear"></div>
+	<cms:include file="block/kxb_quicksearch1.shtml" />
+
+
+<!-- 保险速查 结束 -->
+<!--一生呵护 开始-->
+<center onmouseout="hidwlc();">
+<div class="wholelife">
+   
+<div id="con_two_1" class="wlcont position01" style="display:none;" onmouseout="hidwlc(1)" onmouseover="showwlc(1)">
+  	<div class="wlleft"><span>幼有所护</span><em>0-10岁</em></div>
+	<div class="wlright">
+		<ul class="wllist">
+			<li><span><a href="${Site.URL}/yiwai-baoxian/251336.shtml">平安成长</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='住院医疗险'/>">健康快乐</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='教育险'/>">教育无忧</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='理财险'/>">理财趁早</a></span></li>
+		</ul>		
+	</div>
+</div>
+  <div id="con_two_2" class="wlcont position02" style="display:none;" onmouseout="hidwlc(2)" onmouseover="showwlc(2)">
+  	<div class="wlleft"><span>钱有所积</span><em>10-20岁</em></div>
+	<div class="wlright">
+		<ul class="wllist">
+			<li><span><a href="${Site.URL}/sjzzt/qysj/yw/">平安成长</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='住院医疗险'/>">健康快乐</span></a></li>
+			<li><span><a href="<cms:link type='Catalog' name='理财险'/>">赢在起跑</span></a></li>
+		</ul>		
+	</div>
+  </div>
+
+  <div id="con_two_3" class="wlcont position03" style="display:none;" onmouseout="hidwlc(3)" onmouseover="showwlc(3)">
+  	<div class="wlleft"><span>壮有所倚</span><em>20-30岁</em></div>
+	<div class="wlright">
+		<ul class="wllist">
+			<li><span><a href="<cms:link type='Catalog' name='意外保险'/>">平安无忧</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='住院医疗险'/>">健康生活</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='定期险'/>">安心创业</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='理财险'/>">规划未来</a></span></li>
+		</ul>		
+	</div>
+  </div>
+  
+  <div id="con_two_4" class="wlcont position04" style="display:none;" onmouseout="hidwlc(4)" onmouseover="showwlc(4)">
+  	<div class="wlleft"><span>亲有所奉</span><em>30-40岁</em></div>
+	<div class="wlright">
+		<ul class="wllist">
+			<li><span><a href="<cms:link type='Catalog' name='意外保险'/>">平安生活</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='住院医疗险'/>">健康生活</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='定期险'/>">安心生活</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='理财险'/>">财务规划</a></span></li>
+		</ul>		
+	</div>
+  </div>
+
+  <div id="con_two_5" class="wlcont position05" style="display:none;" onmouseout="hidwlc(5)" onmouseover="showwlc(5)">
+  	<div class="wlleft"><span>爱有所继</span><em>40-50岁</em></div>
+	<div class="wlright">
+		<ul class="wllist">
+			<li><span><a href="<cms:link type='Catalog' name='意外保险'/>">平安生活</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='住院医疗险'/>">健康生活</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='定期险'/>">安享人生</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='理财险'/>">财富规划</a></span></li>
+		</ul>		
+	</div>
+  </div>
+
+  <div id="con_two_6" class="wlcont position06" style="display:none;" onmouseout="hidwlc(6)" onmouseover="showwlc(6)">
+  	<div class="wlleft"><span>老有所养</span><em>50-60岁</em></div>
+	<div class="wlright">
+		<ul class="wllist">
+			<li><span><a href="<cms:link type='Catalog' name='意外保险'/>">平安幸福</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='住院医疗险'/>">医疗无忧</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='理财险'/>">财产规划</a></span></li>
+		</ul>		
+	</div>
+  </div>
+
+  <div id="con_two_7" class="wlcont position07" style="display:none;" onmouseout="hidwlc(7)" onmouseover="showwlc(7)">
+  	<div class="wlleft"><span>财有所承</span><em>60-70岁</em></div>
+	<div class="wlright">
+		<ul class="wllist">
+			<li><span><a href="<cms:link type='Catalog' name='意外保险'/>">平安幸福</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='住院医疗险'/>">特别关爱</a></span></li>
+			<li><span><a href="<cms:link type='Catalog' name='理财险'/>">财产规划</a></span></li>
+		</ul>		
+	</div>
+  </div>
+
+<div class="tabwl">
+                    <ul> 
+                        <li id="two1" onMouseOver="setTab('two',1,7)"></li>
+                        <li id="two2" onMouseOver="setTab('two',2,7)"></li>
+						<li id="two3" onMouseOver="setTab('two',3,7)"></li>
+                        <li id="two4" onMouseOver="setTab('two',4,7)"></li>
+						<li id="two5" onMouseOver="setTab('two',5,7)"></li>
+                        <li id="two6" onMouseOver="setTab('two',6,7)"></li>
+						<li id="two7" onMouseOver="setTab('two',7,7)"></li>
+                    </ul>
+                    <div class="clear"></div>
+          </div>
+  </div>
+ </center>
+ 
+  <!--一生呵护 结束-->
+<div class="adarea" onmouseover="hidwlc();">
+	<div class="ad01" onmouseover="hidwlc();"><img src="${Site.URL}/image/ad01.jpg" width="320" height="80" /></div>
+	<div class="ad02" onmouseover="hidwlc();"><img src="${Site.URL}/image/ad02.jpg" width="320" height="80" /></div>
+	<div class="ad03" onmouseover="hidwlc();"><img src="${Site.URL}/image/ad03.jpg" width="320" height="80" /></div>
+	<div class="clear" onmouseover="hidwlc();"></div>
+</div>
+
+<div class="part3" onmouseover="hidwlc();">
+	<div class="part3left">
+		<div class="produ01">
+			<div class="proleft"><a href="<cms:link type='Catalog' name='9415'/>"></a></div>
+			<div class="proright">
+				<cms:list item="article" count="2" level="all" name="境外旅游险" hasAttribute="hp_topical">
+					<div class="produli">
+						<p class="h11"><a href="${Article.Link}">${article.Title}</a></p>
+						<p class="h22"><span class="sp01"><img src="${Site.Prop5}/${article.logo}" width="46" height="46" /></span><span class="sp02"><img src="${Site.URL}/${article.companylogo}" width="96" height="46" /></span><span class="sp03"><img src="${Site.URL}/image/produlevel01.gif" width="46" height="46" /></span></p>
+						<p class="h33">${Article.ERiskFeatures|charwidth=40}</p>
+					</div>
+                </cms:list>
+			</div>
+		</div>
+		
+		<div class="produ02">
+			<div class="proleft"><a href="<cms:link type='Catalog' name='9414'/>"></a></div>
+			<div class="proright">
+				<cms:list item="article" count="2" level="all" name="国内旅游险" hasAttribute="hp_topical">
+					<div class="produli">
+						<p class="h11"><a href="${Article.Link}">${article.Title}</a></p>
+						<p class="h22"><span class="sp01"><img src="${Site.Prop5}/${article.logo}" width="46" height="46" /></span><span class="sp02"><img src="${Site.URL}/${article.companylogo}" width="96" height="46" /></span><span class="sp03"><img src="${Site.URL}/image/produlevel01.gif" width="46" height="46" /></span></p>
+						<p class="h33">${Article.ERiskFeatures|charwidth=40}</p>
+					</div>
+                </cms:list>
+			</div>
+		</div>
+		
+		<div class="produ03">
+			<div class="proleft"><a href="<cms:link type='Catalog' name='9385'/>"></a></div>
+			<div class="proright">
+				<cms:list item="article" count="2" level="all" name="9385" hasAttribute="hp_topical">
+					<div class="produli">
+						<p class="h11"><a href="${Article.Link}">${article.Title}</a></p>
+						<p class="h22"><span class="sp01"><img src="${Site.Prop5}/${article.logo}" width="46" height="46" /></span><span class="sp02"><img src="${Site.URL}/${article.companylogo}" width="96" height="46" /></span><span class="sp03"><img src="${Site.URL}/image/produlevel01.gif" width="46" height="46" /></span></p>
+						<p class="h33">${Article.ERiskFeatures|charwidth=40}</p>
+					</div>
+                </cms:list>
+			</div>
+		</div>
+	</div>
+	<div class="part3right">
+		<div class="insinfortit"><span class="gray"><a href="<cms:link type='Catalog' name='保险资讯'/>">更多</a></span></div>
+		<div class="insinfor">
+			<div class="insinforone">
+				<cms:list item="article" level="child"  count="1" name="保险资讯" hasAttribute="index_show" type="modifyzx">
+	                 <h3><a href="${Article.Link}">${Article.title}</a></h3>
+	                 <p>${Article.content|charwidth=40}</p>
+                </cms:list>
+			</div>
+			<ul class="liststyle01">
+           		<cms:list item="article" level="child"  count="8" name="保险资讯" hasAttribute="index_show" type="modifyzx">
+           			<% if(i>=1){%>
+					<li><a href="${Article.Link}">${Article.title}</a></li>
+					<% }%>
+           		</cms:list>
+			</ul>
+		</div>
+		
+		<div class="ad04">
+			<cms:ad name="开心保首页_下" custom="false" size="230*250" type="1"> 
+			 {ZCMS:广告版位 矩形横幅 名称：开心保首页_下}  
+			</cms:ad>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div class="ad05">
+	<cms:ad name="开心保首页_下长" custom="false" size="980*80" type="1"> 
+			 {ZCMS:广告版位 矩形横幅 名称：开心保首页_下长}  
+	</cms:ad>
+</div>
+
+<div class="part4">
+	<div class="part4left">
+		<div class="infor01">
+			<h3 class="infortit01"><img src="${Site.URL}/image/infortit01.gif" width="72" height="18" /></h3>
+			<div class="more01"><span class="gray"><a href="<cms:link type='Catalog' name='认识保险'/>">更多</a></span></div>
+			<ul class="liststyle02">
+				<cms:list item="article" count="8" name="9519" hasAttribute="index_show" type="modifyzx">
+					<li><a href="${article.Link}">${article.title}</a></li>
+				</cms:list>
+			</ul>
+		</div>
+		
+		<div class="infor02">
+			<h3 class="infortit01"><img src="${Site.URL}/image/infortit02.gif" width="72" height="18" /></h3>
+			<div class="more01"><span class="gray"><a href="<cms:link type='Catalog' name='购买保险'/>">更多</a></span></div>
+			<ul class="liststyle02">
+				<cms:list item="article" count="8" name="购买保险" hasAttribute="index_show" type="modifyzx">
+					<li><a href="${article.Link}">${article.title}</a></li>
+				</cms:list>
+			</ul>
+		</div>
+		
+		<div class="infor03">
+			<h3 class="infortit01"><img src="${Site.URL}/image/infortit03.gif" width="72" height="18" /></h3>
+			<div class="more01"><span class="gray"><a href="<cms:link type='Catalog' name='9521'/>">更多</a></span></div>
+			<ul class="liststyle02">
+				<cms:list item="article" count="8" name="9521" hasAttribute="index_show" type="modifyzx">
+					<li><a href="${article.Link}">${article.title}</a></li>
+				</cms:list>
+			</ul>
+		</div>
+	</div>
+	<div class="part4right">
+		<div class="qa">
+			<div class="qa01">
+				<div class="more02"><span class="white"><a href="<cms:link type='Catalog' name='保险问答'/>">更多</a></span></div>
+				<p class="qaq">经常出差乘坐飞机、火车、交通意外险怎么买？</p>
+				<p class="qaa">买份意外保险可获得意外身故保险，随时随地.</p>
+				<div class="more03"><span class="white"><a href="<cms:link type='Catalog' name='我要提问'/>">提问题</a></span></div>
+			</div>
+			<ul class="liststyle01">
+				<!-- <li>[<a href="#">理财</a>] <a href="#">万能保险结算利率公告</a></li> -->
+				<cms:list item="article" count="3" name="保险问答" level="all" hasAttribute="index_show" type="modifyzx">
+                    <li><a href="${Article.Link}">${article.Title|charWidth=20}</a></li>
+				</cms:list>
+			</ul>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div class="part5">
+		<h3 class="cooperationtit" ><img src="${Site.URL}/image/cooptit.gif" width="211" height="18" />
+			<span class="brand_more" ><a href="<cms:link type='Catalog' name='9475'/>">更多</a></span>
+		</h3>
+		<div class="cooprationcont">
+			<div class="rollBox">  
+     <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>  
+     <div class="Cont" id="ISL_Cont">  
+      <div class="ScrCont">  
+       <div id="List1">  
+        <div class="crcont" id="crcont">
+			<cms:list item="article" level="all" condition=" exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='是' and z1.columncode='HasPartnership')" name="保险品牌">
+				<a href="${article.Link}"><img src="${article.CompanyLogo}" width="126" height="62" title="${article.LogoAlt}" /></a>
+			</cms:list>
+        </div>  
+          
+       </div>  
+       <div id="List2"></div>  
+      </div>  
+     </div>  
+     <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>   
+   </div>
+		</div>
+</div>
+
+<div class="part6">
+		<h3 class="frdlinktit"><img src="${Site.URL}/image/frdlinktit.gif" width="131" height="19" /></h3>
+		<div class="more04"></div>
+		<div class="frdlinkcont clearfix">
+			<ul class="liststyle03">
+				<cms:list item="friendlink" name="首页友情链接">
+					<li><a href="${friendlink.URL}" class="mr20" target="_blank">${friendlink.Name}</a></li>
+		   		</cms:list>
+			</ul>
+		</div>
+</div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="首页热点专题" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="首页热点专题" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="首页热点专题" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<script language="JavaScript" src="${Site.URL}/js/tabchange.js"></script>
+<script language="JavaScript" src="${Site.URL}/js/select.js"></script>
+<script type="text/javascript" src="${Site.url}/js/shouye.js"></script>
+<script type="text/javascript">
+		function quick_search() {
+			var dc = new DataCollection();
+			dc.add("_CurrentSiteID", "${Site.ID}");
+			dc.add("ProductType", document.getElementById("search_ProductType").value);
+			dc.add("SupplierCode", document.getElementById("search_SupplierCode").value);
+			//dc.add("Age", document.getElementById("search_Age").value);
+			dc.add("Sex", document.getElementById("search_Sex").value);
+			dc.add("SearchType", "quick");
+			Server.sendRequest("com.sinosoft.product.ProductSearch.quicksearch", dc,
+					function(response) {
+						if (response.Status == 0) {
+							// 错误处理
+						} else if (response.Status == 1) {
+							window.open(response.get("resultPageURL"));
+						}
+					});
+		}
+	</script>
+</body>
+
+</html>
+

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<%
+	String RiskCode = article.getString("RiskCode");
+	String WapURL = site.getString("WapURL");
+	
+	cn.com.sinosoft.action.shop.SalesVolumeAction sv = new cn.com.sinosoft.action.shop.SalesVolumeAction();
+	String wapFlag = sv.isWapProduct(RiskCode);
+	String canonicalProduct = article.getString("CanonicalProduct");
+	if (canonicalProduct != null && !"".equals(canonicalProduct)) {
+		String path = com.sinosoft.product.Filtrate.getUrl(canonicalProduct, "1");
+		if (path != null && !"".equals(path)) {
+			String link = "<link rel='canonical' href='" + path + "'/>";
+		    write(link);
+		}
+	}
+	
+	String _description = article.getString("AdaptPeopleInfo");
+	_description = _description.replaceAll("\r|\n", "");
+	
+	String specialPremCalFlag = com.sinosoft.product.Filtrate.getSpecialPremCalFlag(RiskCode);
+%> 
+<title>
+<%
+	String title = article.getString("MetaTitle");  
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%> 
+</title>
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+<link rel="stylesheet" type="text/css"  href="${Site.StaticResourcePath}/style/skins/default.css" />
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/wj_kxb/mod_intro.css"/>
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/wj_kxb/calendar.css" />
+<link rel="stylesheet" href="${Site.StaticResourcePath}/style/new_logo.css" />
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<script type="">
+var specialPremCalFlag = '<%=specialPremCalFlag%>';
+var isCpsProduct = '${Article.isCpsProduct}'; 
+var riskCode = '${Article.RiskCode}';
+var artTitle = '${Article.title}';
+var artSalesVolume = '${Article.SalesVolume}';
+var productType = '${Catalog.ProductType}';
+var catID = '${Catalog.ID}';
+var productDetailFlag="true";
+var complicatedFlag = '${Article.ComplicatedFlag}';
+var AppFacDutyRela = ${Article.AppFacDutyRela};
+var AppFacDutyDef = ${Article.AppFacDutyDef};
+var LongInsurance = '${Article.LongInsurance}';
+var yearCashFlag = '${Article.yearCashFlag}';
+
+</script>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body class="detail">
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+
+<!-- ========================= begin ======================== -->
+<input type="hidden" name="RiskCode" id="RiskCode" value="${Article.RiskCode}" />
+<input type="hidden" name="price" id="price" value="${Article.InitPrem}" />
+<input type="hidden" name="pTypeName" id="pTypeName" value="${Article.RiskBreadcrumb}" />
+<input id="ProductType" type="hidden" value="${Catalog.ProductType}" name="ProductType" />
+<input id="isLcx" type="hidden" value="" name="isLcx" />
+<div class="wrapper">
+
+	<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPosition"></cms:link>
+			<span class="separator">></span><span>${Article.RiskBreadcrumb}</span><span
+				class="separator">></span><span class="separator1">
+				${Article.title}</span>
+	</div>
+	
+	<div class="content_head">
+		<div class="cp_titile_con">
+			<h1>${Article.title}</h1>
+			<span class="cp_title_adapt">适用人群：${Article.AdaptPeopleInfo}</span>
+			<em>产品销量<span class="SalesVolume" id="SalesV_${Article.RiskCode}">加载中...</span></em>
+			<p class="share_link">
+				<a class="add_sc had_add no_add_sc" id="favorite" onclick="submitp('${Article.RiskCode}');"><em></em>收藏</a>
+				<a id="InContrast" href="javascript:void(0);" vlpageid="comp01" exturl="http://www.kaixinbao.com/comp01" onClick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.producttype}','${Article.logolink}','${Article.InitPrem}');return(VL_FileDL(this));return false;"><em></em>对比</a>
+			</p>
+		</div>
+		<div class="cp_gscon">
+			<div class="cp_img_show">
+				<p id="Activity_${Article.RiskCode}">${article.ProductActive}</p>
+				<img width="190" height="190" style="display: inline;" data-original="${article.LogoLink}" class="lazy" src="${article.LogoLink}" alt="${article.title}" />
+			</div>
+			<div class="ensure_list">
+				${Article.ProductDetailBright}
+			</div>
+		</div>
+		
+		<div class="cp_descon">
+			<div id="content">
+				     <%
+		            	String tCalHTML = article.getString("CalHTML");
+		            	String tRiskCode = article.getString("RiskCode");
+		            	String tSplitRiskCode = article.getString("SplitRiskCode");
+		            	if(tSplitRiskCode!=null && tSplitRiskCode!=""){
+			            	String newPlanHTML = com.sinosoft.product.Filtrate.getCalHTML(tRiskCode,tSplitRiskCode,"1");
+			            	if(tCalHTML.indexOf("sinosofttfosonis")!=-1){
+			            	   tCalHTML=tCalHTML.replace("sinosofttfosonis",newPlanHTML);
+			            	}
+		            	}
+		            	if (tCalHTML.indexOf("_ProductUrl")!=-1) {
+		            		tCalHTML = com.sinosoft.product.Filtrate.getProductUrl(tCalHTML,"1");
+		            	}
+		            	
+		            	write(tCalHTML);
+		        	 %>
+		        <% 
+ 				if (!"".equals(article.getString("limcountNumber")) && !"0".equals(article.getString("limcountNumber")) && "N".equals(article.getString("yearCashFlag"))) {
+				%>
+				    <div class="crowd clearfix"><em class="cp_title_ms">可购份数</em><p>每名被保险人最多可购买${Article.limcountNumber}份</p></div>
+				<% 
+				}
+				%>
+			</div>
+			<div class="price_con clearfix">
+				<em class="cp_title_ms cp_price">价格</em>
+				<ul class="price">
+					${Article.prodcutMarkPrice}
+					<li class="integral_li" ><div class="integral_tip" id="maxIntegralPrice_${Article.RiskCode}" ></div></li>
+				</ul>
+				<%
+				if ("Y".equals(article.getString("yearCashFlag"))) {
+				%>
+					<em class="cp_title_ms">基本保额</em>
+					<ul class="price">
+						<li class="priceM"><span>￥155.00</span></li>
+					</ul>
+				<%
+				}
+				%>
+			</div>
+			<div class="tb_yh clearfix">
+			    <ul class="at_list" id="yhinfo">
+					<li><span class="tb_icon active_01">积分</span><span id="pointdes" class="tb_text">购买您将获得<span id="productIntegral_${Article.RiskCode}">${Article.ProductInt}</span>个积分</span>	
+					   <em id="demo-form-name" class="detail_sm_tip" title="购买产品按实际支付金额获得积分，在积分商城兑换商品或在开心保支付保费时抵值现金，10积分=1元">说明</em>
+					</li>					
+				</ul>  
+			</div>
+			<div class="button_b clearfix" id="button_b">
+				<a class="button_b1" href="javascript:void(0);" vlpageid="toubao1" exturl="http://www.kaixinbao.com/toubao1" onClick="doBuy();return(VL_FileDL(this));return false;">立即投保</a>
+				<%
+				if ("Y".equals(article.getString("yearCashFlag"))) {
+				%>
+					<a class="pri_data" href="#">利益演示</a>
+				<%
+				}
+				%>
+				<p class="vip_logins" id="integer_login" style="display:none"><a id="PointShowLoginWindow" href="javascript:void(0);" onclick="return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/dltc01" vlpageid="dltc01">登录</a>可享受更多会员权益</p>
+			</div>
+			<div class="clear"></div>
+				
+			<!-- 立即预约按钮开始 -->
+			<div class="button_b cf" id="button_b cf" style="display:none;">
+				<span class="yueyue_btns" id="yuyue_bsfa"></span>
+			</div>
+			<!-- 立即预约按钮结束 -->
+		</div>
+		
+		<div class="cp_descon" id="productUnder" style="display:none">
+			<div class="tip_under">
+				<p class="image"><img src="${Site.JsResourcePath}/images/redesign/img_tip_under.jpg" /></p>
+				<p class="text">该产品已下架</p>
+			</div>
+			<div class="rmd_cont">
+				<p class="ttl"><em class="icon"></em>相似产品推荐</p>
+				<div>
+				<ul class="rmd_list" id="ajaxProduct">
+				</ul>
+				</div>
+				<p class="rmd_more"><a id="gengduo" href="###" target="_blank">更多推荐>></a></p>
+			</div>
+		</div>
+		
+	<!-- end content_head --></div>
+	
+	<div class="content" >
+		<div class="content_left_up">
+			<div class="cp_contents">
+					<%
+						if (article.getString("ProductPresentation") != null && !"".equals(article.getString("ProductPresentation"))) {
+					%>
+						<p id="min_tag" class="nav_5tab title fixed_nav">
+							<em class="bor_fst"><a class="selects_tag" href="javascript:void(0);">产品介绍</a></em>
+							<em><a href="javascript:void(0);">保障详情</a></em>
+					<%
+						} else {
+					%>
+						<p id="min_tag" class="nav_4tab title fixed_nav">
+							<em class="bor_fst"><a class="selects_tag" href="javascript:void(0);">保障详情</a></em>
+					<%
+						}
+					%>
+					<em class="bor_scr"><a data-id="area_qa" href="javascript:void(0);">常见问题</a></em>
+					<em class="bor_scr"><a data-id="guide_clm" href="javascript:void(0);">理赔服务</a></em>
+					<em><a id="count" href="javascript:void(0);">用户评价(<span>加载中...</span>)</a></em>
+				</p>
+				<div id="tag_box" class="cp_des">
+					<%
+					if (article.getString("ProductPresentation") != null && !"".equals(article.getString("ProductPresentation"))) {
+					%>
+					<div class="bx_area_cont" style="display:block;">
+						<!-- 产品介绍图片 -->
+						${Article.ProductPresentation}
+						<div class="clear"></div>
+						<!-- 常见问题 -->
+						<div id="area_qa" class="area_qa">
+							<h3><img src="${Site.StaticResourcePath}/images/redesign/re_detail/ttl_cont_qa.jpg" /></h3>
+							<div class="qa_btm">
+								<div class="qa_up">
+									<ul class="qa_list">
+										${Article.FAQ}
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- 理赔流程 -->
+						<%
+						String complateDate = article.getString("ClaimsComplateDate");
+						if ("1".equals(complateDate)) {
+						%>
+						<!-- 拍拍速赔 -->
+						<div id="guide_clm" class="guide_clm"><img src="${Site.StaticResourcePath}/images/redesign/re_detail/img_guide_pai.jpg" /></div>
+						<div class="claim_tips">
+							<p class="ttl">理赔提示</p>
+							<ul>
+								<li><em>*</em>本产品支持<span class="ppsp_icons" id="fun_ppsp">
+										<img class="tagshow" src="${Site.StaticResourcePath}/images/redesign/codes_ppsp.png" alt="">
+									</span></li>
+								<li>开心保客服电话报案<span>4009-789-789</span></li>
+							</ul>
+						</div>
+						<%} else {%>
+						<!-- 正常理赔 -->
+						<div id="guide_clm" class="guide_clm"><img src="${Site.StaticResourcePath}/images/redesign/re_detail/img_guide_clm.jpg" /></div>
+						<%}%>
+						<!-- 理赔辅助材料 -->
+						<div class="list_clm">
+							<p class="ttl"><span class="icon"></span>理赔辅助材料</p>
+							<ul>
+								<cms:list item="attachment"  name="理赔申请书/${Article.CompanyShortName}">
+									<li><a rel="nofollow"  target="_blank" href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}<em class="icon"></em></a></li>
+								</cms:list>
+							</ul>
+						</div>
+						<!-- 索赔项目所需理赔资料 -->
+						<div class="claim_cont">
+							<%
+							String ClaimData = article.getString("ClaimData");
+							if(ClaimData!=null && !"".equals(ClaimData)){
+							write("<p class='ttl_cont'><em class='icon'></em>索赔项目所需理赔资料</p>");
+							}
+							%>
+							<dl>
+								${Article.ClaimData}
+							</dl>
+						</div>
+						<div class="goto_buy">
+							<p><a href="javascript:void(0);" vlpageid="toubao3" exturl="http://www.kaixinbao.com/toubao3" onclick="doBuy();return(VL_FileDL(this));return false;">立即投保</a></p>
+						</div>
+					</div>
+					<div class="bx_area_cont" >
+						<!-- 投保前请您仔细阅读 -->
+						<div class="read_list">
+							<p class="ttl"><span>投保前请您仔细阅读</span></p>
+							<ul>
+								${Article.SortDoc}
+								<!-- 现金价值计算 暂时只有康惠宝有，后期做成共通 -->
+								<%
+								if ("Y".equals(article.getString("cashValueFlag"))) {
+								%>
+								<li>
+									<a href="javascript:;" onclick="goCashValuePage()">
+										现金价值计算
+										<em class="r_icon"></em>
+									</a>
+								</li>
+								<%
+								}
+								%>
+							</ul>
+						</div>
+						<!-- 保障权益 -->
+						<div class="area_cont">
+							<p class="ttl"><span>保障权益</span></p>
+							${Article.DutyHTML1}
+						</div>
+						<!-- 产品特色 -->
+						<div class="area_cont">
+							<p class="ttl"><span>产品特色</span></p>
+							<ol class="notice_feature">
+								<li>${Article.ERiskFeatures}</li>
+							</ol>
+						</div>
+						<!-- 投保须知 -->
+						<div class="area_cont">
+							<%
+							String Instruction = article.getString("Instruction");
+							if(null==Instruction || "".equals(Instruction))  {
+							%>
+							<p class="ttl"><span>开心保提示</span></p>
+							<ol class="notice_list">
+								<li>1、开心保网站上的投保责任描述仅供了解产品使用，详细内容请参阅相关条款。</li>
+								<li>2、18周岁以下的被保险人，其以死亡为给付责任的保险金额不得超出中国保监会所规定的10万元限额。</li>
+								<li>3、经开心保购买的产品，将提供电子保单，若需要纸质保单请联系客服人员。</li>
+								<li>4、对于办理签证使用的产品，其电子保单彩色打印后可用于办理签证。根据签证实际情况，建议您提前准备一份保单复印件给使馆备份；</li>
+								<li>5、对于保障期在一年以内的非寿险产品，不办理撤保、退保和加保，敬请谅解。</li>
+								<li>6、对于签证使用的产品，不承保处于战乱国家。</li>
+								<li>7、经开心保购买产品的顾客，若发生保险事故，开心保将尽全力协助办理理赔服务（4009-789-789）。</li>
+							</ol>
+							<%} else {
+							write(article.getString("Instruction") );
+							} %>
+						</div>
+						<!-- 条款信息 -->
+						<div class="area_cont">
+							${Article.termInformation}
+						</div>
+						<div class="goto_buy">
+							<p><a href="javascript:void(0);" vlpageid="toubao3" exturl="http://www.kaixinbao.com/toubao3" onclick="doBuy();return(VL_FileDL(this));return false;">立即投保</a></p>
+						</div>
+					</div>
+					<%
+					} else {
+					%>
+					<div class="bx_area_cont" style="display:block;">
+						<!-- 投保前请您仔细阅读 -->
+						<div class="read_list">
+							<p class="ttl"><span>投保前请您仔细阅读</span></p>
+							<ul>
+								${Article.SortDoc}
+								<!-- 现金价值计算 暂时只有康惠宝有，后期做成共通 -->
+								<%
+								if ("Y".equals(article.getString("cashValueFlag"))) {
+								%>
+								<li>
+									<a href="javascript:;" onclick="goCashValuePage()">
+										现金价值计算
+										<em class="r_icon"></em>
+									</a>
+								</li>
+								<%
+								}
+								%>
+							</ul>
+						</div>
+						<!-- 保障权益 -->
+						<div class="area_cont">
+							<p class="ttl"><span>保障权益</span></p>
+							${Article.DutyHTML1}
+						</div>
+						<!-- 产品特色 -->
+						<div class="area_cont">
+							<p class="ttl"><span>产品特色</span></p>
+							<ol class="notice_feature">
+								<li>${Article.ERiskFeatures}</li>
+							</ol>
+						</div>
+						<!-- 投保须知 -->
+						<div class="area_cont">
+							<%
+							String Instruction = article.getString("Instruction");
+							if(null==Instruction || "".equals(Instruction))  {
+							%>
+							<p class="ttl"><span>开心保提示</span></p>
+							<ol class="notice_list">
+								<li>1、开心保网站上的投保责任描述仅供了解产品使用，详细内容请参阅相关条款。</li>
+								<li>2、18周岁以下的被保险人，其以死亡为给付责任的保险金额不得超出中国保监会所规定的10万元限额。</li>
+								<li>3、经开心保购买的产品，将提供电子保单，若需要纸质保单请联系客服人员。</li>
+								<li>4、对于办理签证使用的产品，其电子保单彩色打印后可用于办理签证。根据签证实际情况，建议您提前准备一份保单复印件给使馆备份；</li>
+								<li>5、对于保障期在一年以内的非寿险产品，不办理撤保、退保和加保，敬请谅解。</li>
+								<li>6、对于签证使用的产品，不承保处于战乱国家。</li>
+								<li>7、经开心保购买产品的顾客，若发生保险事故，开心保将尽全力协助办理理赔服务（4009-789-789）。</li>
+							</ol>
+							<%} else {
+							write(article.getString("Instruction") );
+							} %>
+						</div>
+						<!-- 条款信息 -->
+						<div class="area_cont">
+							${Article.termInformation}
+						</div>
+						<!-- 常见问题 -->
+						<div id="area_qa" class="area_qa">
+							<h3><img src="${Site.StaticResourcePath}/images/redesign/re_detail/ttl_cont_qa.jpg" /></h3>
+							<div class="qa_btm">
+								<div class="qa_up">
+									<ul class="qa_list">
+										${Article.FAQ}
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- 理赔流程 -->
+						<%
+						String complateDate = article.getString("ClaimsComplateDate");
+						if ("1".equals(complateDate)) {
+						%>
+						<!-- 拍拍速赔 -->
+						<div id="guide_clm" class="guide_clm"><img src="${Site.StaticResourcePath}/images/redesign/re_detail/img_guide_pai.jpg" /></div>
+						<div class="claim_tips">
+							<p class="ttl">理赔提示</p>
+							<ul>
+								<li><em>*</em>本产品支持<span class="ppsp_icons" id="fun_ppsp">
+										<img class="tagshow" src="${Site.StaticResourcePath}/images/redesign/codes_ppsp.png" alt="">
+									</span></li>
+								<li>开心保客服电话报案<span>4009-789-789</span></li>
+							</ul>
+						</div>
+						<%} else {%>
+						<!-- 正常理赔 -->
+						<div id="guide_clm" class="guide_clm"><img src="${Site.StaticResourcePath}/images/redesign/re_detail/img_guide_clm.jpg" /></div>
+						<%}%>
+						<!-- 理赔辅助材料 -->
+						<div class="list_clm">
+							<p class="ttl"><span class="icon"></span>理赔辅助材料</p>
+							<ul>
+								<cms:list item="attachment"  name="理赔申请书/${Article.CompanyShortName}">
+									<li><a rel="nofollow"  target="_blank" href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}" title="${attachment.Name}">${attachment.Name}<em class="icon"></em></a></li>
+								</cms:list>
+							</ul>
+						</div>
+						<!-- 索赔项目所需理赔资料 -->
+						<div class="claim_cont">
+							<%
+							String ClaimData = article.getString("ClaimData");
+							if(ClaimData!=null && !"".equals(ClaimData)){
+							write("<p class='ttl_cont'><em class='icon'></em>索赔项目所需理赔资料</p>");
+							}
+							%>
+							<dl>
+								${Article.ClaimData}
+							</dl>
+						</div>
+						<div class="goto_buy">
+							<p><a href="javascript:void(0);" vlpageid="toubao3" exturl="http://www.kaixinbao.com/toubao3" onclick="doBuy();return(VL_FileDL(this));return false;">立即投保</a></p>
+						</div>
+					</div>
+					<%
+					}
+					%>
+					<div class="bx_area_cont">
+						<cms:comment count="10">{ZCMS:评论区域}</cms:comment>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content_right_up">
+			<div class="l_boxss" id="box_service">
+				<div class="c1"><em class="l_icon"></em>售后服务保障</div>
+				<div class="l_box_service"> 
+					<a href="${Site.URL}/about/2/index.shtml#lpbz1" target="_blank" rel="nofollow"><img src="${Site.JsResourcePath}/images/redesign/re_detail/img_ads_service.jpg" width="220" height="233"  alt="售后服务保障"></a>
+				</div>
+			</div>
+			
+			<div class="bnr_box">
+				<p class="ttl"><em class="icon"></em><span>保费试算</span></p>
+				<div class="bnr_price">
+					<em>价格</em>
+					<span id="txt_price"><em>￥</em>-</span>
+				</div>
+				<p class="btn"><a onClick="doBuy();return(VL_FileDL(this));return false;" exturl="http://www.kaixinbao.com/toubao2" href="javascript:void(0);" rel="nofollow" vlpageid="toubao2">立即投保</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 底部开始 -->
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+<!-- 底部结束 -->
+	<cms:include file="block/kxb_product_compare_v1.shtml" />
+<!-- ========================= /end ========================= -->
+<script type="text/javascript">VLTrace_custom_getparam='u1=productdetail';</script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/weixitrack.js"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/wj_kxb/require.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/wj_kxb/require.config.js"></script>
+<script type="text/javascript">
+    require(["detail"], function(index) {
+        if(index && index.init) {
+            index.init();
+        }
+    });
+</script>
+</body>
+</html> 

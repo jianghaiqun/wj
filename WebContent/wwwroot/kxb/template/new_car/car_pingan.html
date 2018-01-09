@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link href="${Site.StaticResourcePath}/style/new/global.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/base.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/information.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/howbuy.css" rel="stylesheet" type="text/css"/>
+</head>      
+<body onload="navHeight();">
+<cms:include file="block/car_header.shtml" />
+<!--mainbody start-->
+<div class="mainbody">
+	<div class="wrapper">
+	<input id="type" type="hidden" value="B01"/>
+    	<div class="your_site"><cms:link type="currentPositionList"></cms:link></div>
+        <!--主体部分 左侧边栏 开始-->
+        <div class="buyleftbar">
+        	<!--获取报价 开始-->
+        	<div class="price_pa">
+                <ul>
+                    <li><span class="bg07 white">车主姓名</span><input id="carUser" name="carUser" type="text" class="text" maxlength="30"/></li>
+                    <li><span class="bg08 white">联系电话</span><input id="carPhone" name="carPhone" type="text" class="text" maxlength="11"/></li>
+                    <li><span class="bg09 white">车牌号</span><input id="carNO" name="carNO" type="text" class="text" maxlength="9"/></li>
+                    <li><input name="" type="checkbox" value="" id="guidtype" align="absmiddle"/><label for="guidtype">新车未上牌</label></li>
+                    <li><input name="" type="button" onclick="getComNowCpslinkNew('${catalog.CpsUrl}','${catalog.ComName}','${Article.carGoto}')" class="btn" value="获取报价" /></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <!--获取报价 结束-->
+            <div class="right_banner mt10 border_gray"><a href="${catalog.LeftHref}" target="_blank"><img src="${Site.StaticResourcePath}/${catalog.LeftAd}" width="223" height="113" /></a></div>
+            <!--常见问题 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>常见问题</h2>
+                    <h6><a href="${Site.URL}/chexian/club/wenda/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险问答" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--常见问题 结束-->
+            <!--投保案例 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>投保案例</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="投保案例" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--投保案例 结束-->
+            <!--理赔技巧 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>理赔技巧</h2>
+                    <h6><a href="${Site.URL}/chexian/club/zhishi/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="理赔技巧" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--理赔技巧 结束-->
+            <!--理赔案例 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>理赔案例</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险案例" count="5" tag="${catalog.tag}">
+				 		<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--理赔案例 结束--> 
+        </div>
+        <!--主体部分 左侧边栏 开始-->
+        <!--主体部分 右侧 开始-->
+    	<div class="buymain"> 
+        	<!--焦点图片 end-->
+        	<div class="pinganpic">
+            	<cms:imageplayer code="com_pingan" type="0" width="745" height="175" />
+            </div>
+            <!--焦点图片 end-->
+   	    	<!--平安车险简介 开始-->
+        	<div class="howbuy mt10">
+            	<div class="pinganh2">
+                    <h1>平安车险</h1>
+                    <img src="${Site.StaticResourcePath}/images/new_car/pinganimg01.jpg" width="228" height="108" />
+                </div>
+                <div class="pingantit">
+                	<img src="${Site.StaticResourcePath}/images/new_car/pinganimg06.jpg" width="282" height="43" />
+                    <p>平安车险是备受用户信赖和喜爱的车险品牌，平安电话车险及网上车险，价格较传统私家车商业车险低15%，价格更透明，投保更优惠。平安车险提供在线报价及市场价格对比服务，网上投保更尊享一站支付、快速理赔、车船税代缴等特色服务。</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--平安车险简介 结束-->
+        	<!--详细理赔步骤 开始-->
+            <table width="100%" border="1" cellspacing="0" cellpadding="0" class="claimstable">
+              <tr>
+                <td colspan="2" class="claimstit center"><h2><span>免手续费</span><span>多款组合</span><span>一站报价</span></h2></td>
+              </tr>
+              <tr>
+                <td width="101" class="center claimsred"><h2>平安车险<br />特色服务</h2></td>
+                <td width="638">
+                	<div class="youshi_list">
+                        <p class="ys_ps pa_ps"><span>快</span><em><i class="p_i_cuowei2">万元以下</i><i>当日赔付</i></em></p>
+                        <p class="ys_ps pa_ps"><span>易</span><em><i class="p_i_cuowei1">单证齐全</i><i class="p_i_cuowei2">异地可理赔</i></em></p>
+                        <p class="ys_ps pa_ps"><span>免</span><em><i class="p_i_cuowei1">无限次非事故</i><i class="p_i_cuowei2">道路救援</i></em></p>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="center claimsred"><h2>平安车险<br />投保优势</h2></td>
+                <td>
+                	<div class="youshi_list">
+                        <dl class="fuwu_sf pa_fuwu_sf">
+                            <dt class="meihua_p">一站式服务</dt>
+                            <dd>省：免费车船税代缴服务、<br>免费故障抢修服务<br>全：支持全国各大银行卡网上支付、<br>信用卡无卡支付、<br>POS机上门刷卡缴费服务<br>送：48小时内免费送单服务；</dd>
+                        </dl>
+                        <dl class="fuwu_sf pa_fuwu_sf">
+                            <dt class="meihua_p">投保有礼</dt>
+                            <dd>指定银行支付，可获丰厚豪礼；<br>平安汽车保险买哪些？<br>多组合车险套餐，<br>网上比价更划算<br>老客户独享续保快捷通道，<br>价格优惠，更有多重礼品赠送<br></dd>
+                        </dl>
+                        <dl class="fuwu_sf pa_fuwu_sf">
+                            <dt class="meihua_p">开心保用户尊享</dt>
+                            <dd>凡通过平安电话车险或网上车险投保，<br>可免费享受非事故道路救援无限次！<br>服务项目：<br>·接电服务 ·更换轮胎 ·紧急送油<br>·紧急加水 ·现场抢修 ·拖车牵引<br>·吊装救援</dd>
+                        </dl>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="center claimsred"><h2>平安车险<br />理赔服务</h2></td>
+                <td>
+                	<div class="youshi_list">                
+                        <ul class="serivce_list">
+                            <li>7×24小时车险理赔报案电话95511</li>
+                            <li>车险专家现场办公，迅速查勘定损</li>
+                            <li>全国通赔，单证齐全即可当地理赔</li>
+                            <li>万元以内车险责任事故，资料齐全，一个工作日内完成赔付</li>
+                            <li>"一袋式"理赔服务，服务案件类型范围内，专属快递上门收取理赔资料，赠送"理赔资料专用快递袋"</li>
+                        </ul>
+                        <div class="want_claims">
+                        	<h2>我要理赔</h2>
+                            <p><a href="http://www.kaixinbao.com/chexian/club/zhishi/A6F20140327035.shtml" target="_blank">了解理赔救援</a></p>
+                            <p><a href="http://www.pingan.com/property_insurance/pa18AutoInquiry/mapIndex.do" target="_blank">理赔网点查询</a></p>
+                            <p><a href="http://www.kaixinbao.com/chexian/club/zhishi/A07F20140328001.shtml" target="_blank">常见索赔单证下载</a></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </td>
+              </tr>
+            </table>
+            <!--详细理赔步骤 结束-->
+            <!--平安车险理赔流程 开始-->
+       	    <div class="howbuy">
+                <div class="buymaintit"><h2>平安车险理赔流程</h2></div>
+                <div class="claims_lc">
+                	<ul>
+                    	<li>95511报案</li>
+                        <li>事故勘察</li>
+                        <li>确认损失修复方案</li>
+                        <li>修车店修车</li>
+                        <li>提交理赔资料</li>
+                        <li>领取赔款</li>
+                	</ul>
+                </div>
+            </div>
+            <!--平安车险理赔流程 结束-->
+            <!--专题解读 开始-->
+       	    <div class="howbuy">
+                <div class="buymaintit"><h2>专题解读</h2></div>
+                <div class="topic">
+                	<ul>
+                    	<cms:list item="Image"  name="车险理赔" >
+							<li><a href="${Image.wangzhi}" title="${Image.title}" target="_blank"><img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="133" height="78" align="absmiddle" /><span>${Image.title}</span></a></li>
+                        </cms:list>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--专题解读 结束-->
+        </div>
+        <!--主体部分 右侧 结束-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mainbody end--> 
+<cms:include file="block/car_footer.shtml" /> 
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/bigpicroll.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/car.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript"> 
+    DD_belatedPNG.fix('div, ul, img, li, input , a');
+</script>
+<![endif]-->
+</body>
+</html>
+
+
+

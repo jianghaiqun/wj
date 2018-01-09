@@ -1,0 +1,157 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title>${article.title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href="${Site.StaticResourcePath}/style/commonality.css" rel="stylesheet" type="text/css" />
+<link href="${Site.StaticResourcePath}/style/InsuranceQA.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="wrapper">
+		<cms:include file="block/kxb_header.shtml"></cms:include>
+
+		<div class="InsuQAMiddArea">
+			<div class="InsuQANavGreyArea">
+				<ul>
+					<li class="IcoHome"><a href="${Site.URL}"><img src="${Site.StaticResourcePath}/images/Ico_Home.gif" />首页</a></li>
+					<li>问题详细内容</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+
+			<div class="InsuQALeft w190">
+				<div class="InsuQAColumnArea_2 mb10">
+					<!--    精彩问题推荐   begin     -->
+					<div class="TitleArea">精彩问题推荐</div>
+					<div class="ColumnCont">
+						<div class="TxtListArea">
+							<ul>
+								<cms:list item="article" count="8" hasAttribute="hot">
+									<li><a target="_blank" href="${Article.Link}" class="sys_url">${Article.Title|CharWidth=12}</a></li>
+								</cms:list>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--    精彩问题推荐   end     -->
+
+				<div class="mb10">
+					<!--  <a href="#"><img src="images/Pic_12.gif" /> </a> -->
+					<cms:ad name="测试广告" custom="false" size="468*60" type="1"> 
+	 						{ZCMS:广告版位 矩形横幅 名称：中间横幅广告}  
+						</cms:ad>
+				</div>
+
+				<div class="InsuQAColumnArea_2 mb10">
+					<!--    产品推荐   begin     -->
+					<div class="TitleArea">
+						<div class="TitleTxt">产品推荐</div>
+						<div class="TitleMore">
+							<a href="#">更多>></a>
+						</div>
+					</div>
+
+					<div class="ColumnCont">
+						<div class="TxtListArea">
+							<ul>
+								<cms:list item="article" count="8" hasAttribute="newRecommend" name="产品中心">
+									<li><a target="_blank" href="${Article.Link}" class="sys_url">${Article.Title|CharWidth=12}</a></li>
+								</cms:list>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!--    产品推荐   end     -->
+			</div>
+
+			<div class="InsuQARight w800">
+				<div class="InsuQAColumnArea_5 mb10">
+					<div class="TitleArea">
+						<input type="hidden" name="QuestionId" id="QuestionId" value="${article.ID}" /> <input type="hidden" name="QuestionTitle" id="QuestionTitle" value="${article.title}" />
+						<h3>${article.title}</h3>
+						<div class="Status_1"></div>
+						<div class="clear"></div>
+
+					</div>
+					<div class="ColumnCont">
+						<h5>${article.content}</h5>
+						<div class="PersonArea">${article.author}</div>
+						<div class="TimeArea">提问时间：${Article.PublishDate|Format=yyyy-MM-dd HH:mm}</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<div class="InsuQAColumnArea_3 mb10">
+					<!--     我来回答   begin   -->
+					<div class="ColumnCont">
+						<h1>我来回答</h1>
+						<div class="TxtArea" align="center">
+							<form action="#" id="f1">
+								<table cellpadding="0" cellspacing="5" align="center">
+									<tr height="120">
+										<td valign="top" align="right">我来回答：</td>
+										<td valign="top" align="left"><textarea name="content" id="content" style="width: 300px; height: 150px">
+											</textarea>
+											<h5>回答字数在10000字以内</h5></td>
+									</tr>
+									<tr height="50">
+										<td colspan="2" align="center"><input type="button" class="Btn_1" id="add" name="add" /></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!--    我来回答  end    -->
+
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+	</div>
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+	<cms:include file="block/community_v1.shtml" />
+	<script type="text/javascript">
+		$(document)
+				.ready(
+						function() {
+							$("#add").click(
+											function() {
+												var tContent = document
+														.getElementById("content").value;
+												var tQuestionId = document
+														.getElementById("QuestionId").value;
+												var tQuestionTitle = document
+														.getElementById("QuestionTitle").value;
+
+												var now = new Date().getTime();
+												var data = {
+													QuestionId : encodeURI(
+															tQuestionId, "UTF8"),
+													Content : encodeURI(
+															tContent, "UTF-8"),
+													QuestionTitle : encodeURI(
+															tQuestionTitle,
+															"UTF-8"),
+													operate : "Answer",
+													method : "save"
+												};
+												$.post(
+														'http://localhost:8080/wzking/shop.jsp?now='
+																+ now, data,
+														function(json) {//now表示每次点击都会发送新的请求
+															alert(json);
+															$('#f1')[0].reset()
+														});
+											});
+						});
+	</script>
+</body>
+</html>

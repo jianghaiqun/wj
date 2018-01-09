@@ -1,0 +1,34 @@
+<% DataTable dt_26 = TemplateData.getDocList("article","保险问答","all","null","firstpublish","8","null","null","null");
+  if(dt_26==null){write("没有找到栏目。parent：null  catalog："+"保险问答");}else{
+ int rdCnt=dt_26.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_26  = dt_26.getDataRow(i);
+ int rdIdx=i;
+%>
+
+	            			<li>
+	                            <div class="question">
+	                                <div class="ans_tit"><a href="${article_26.link}">${article_26.title}</a></div><i class="icon"></i>
+	                            </div>
+	                            <div class="answer">
+	                            <%if("solve".equals(article_26.getString("isOk")) && StringUtil.isNotEmpty(article_26.getString("metadescription"))){%>
+	                            	<div class="answer_p">
+	                            		${article_26.metadescription|CharWidth=100}
+	                            		<br>                    
+	                                    <a class="more" href="${article_26.link}">【详情】</a>
+	                                </div> <i class="icon"></i>
+	                            <%}else if(!"solve".equals(article_26.getString("isOk")) && StringUtil.isNotEmpty(article_26.getString("cainadaan"))){%>
+	                            	<div class="answer_p">
+	                            		${article_26.cainadaan|CharWidth=100}
+	                            		<br>                    
+	                                    <a class="more" href="${article_26.link}">【详情】</a>
+	                                </div> <i class="icon"></i>
+								<%}%>
+	                                    
+	                                <%if("solve".equals(article_26.getString("isOk"))){%>
+	                                  <div class="ok_icon"></div>
+	                                <%}%>
+	                            </div>
+	                        </li>
+                        <%}}%>

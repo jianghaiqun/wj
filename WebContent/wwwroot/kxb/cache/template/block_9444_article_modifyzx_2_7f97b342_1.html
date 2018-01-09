@@ -1,0 +1,14 @@
+<% DataTable dt_0 = TemplateData.getDocList("article","9444","all","hp_recommend","modifyzx","2","null","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"9444");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+
+					<div class="news_zxText">
+						<h2 class="news_zsTitleB news_jcct "><a href="${article_0.Link}" >${article_0.Title}</a></h2> 
+						<p class="news_zxover rnews_prg">${article_0.Summary|CharWidth=100}</p> 
+					</div>
+				<%}}%>

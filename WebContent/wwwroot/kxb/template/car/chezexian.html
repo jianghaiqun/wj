@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title><%
+String title = article.getString("MetaTitle"); 
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%></title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+<ul class="car_mininav clearfix lyg_nav">                                                       
+		<li><a  href="${Site.URL}/chexian/"  title="车辆保险首页">返回车险首页</a></li>
+	</ul>
+<div class="car_index_s"><div class="meihua_p">买车险 首选开心保 <b>直降15%</b></div></div>
+<div class="car_gs_box car_border_q no_top_bor cf">
+	<div class="car_bxgs floatl">
+    
+      	<div class="search_bxgs"><div class="car_bxzscon">保险公司:</div>  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+				   <cms:list item="article"  level="all" name="车险对接保险公司" >
+		              <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+		           </cms:list>
+                </div>
+            </div>
+             </div>
+          
+             	<ul  id="car_tag_con" class="car_lipin  cf">
+				   <cms:list item="article" level="all" name="车险对接保险公司" >
+		             <li style="display:none">${Article.Gift}</li>
+		           </cms:list>
+             	</ul>
+            
+                <div class="ljbj_sc"> <input name="" type="button" value="开始报价" onclick="guodu('${Site.URL}/cx/gd/')" class="input_ksbj"></div>
+    </div>
+    <div class="car_adjd floatr">
+    <img src="${Site.StaticResourcePath}/images/car/huahen_07.jpg" width="700" height="246" alt="车辆刮损不发愁">
+    </div>
+</div>
+<div class="h10 clear"></div>
+<div class="car_left floatl ">
+<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html" target="_blank">
+<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165" alt="车险快速报价" title="车险快速报价"></a></div>
+            <cms:list item="Image"  name="车险图片"> 
+		      <div class="car_ad_l clearfix">
+			   <a href="${Image.wangzhi}" target="_blank">
+			       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+			   </a>
+			  </div>
+		    </cms:list> 
+            
+            <div class="car_border_q mar_btn_10">
+            <ul class="car_zx_title zs_list cf">
+            	<li class="zslist_1"><span class="hover" id="zslist1" onclick="setTab('zslist',1,3)">资讯</span></li>
+            	<li class="zslist_1"> <span  id="zslist2"  onclick="setTab('zslist',2,3)">知识</span></li>
+                <li class="zslist_1"> <span  id="zslist3"  onclick="setTab('zslist',3,3)">问答</span></li>
+            </ul>
+            <ul class="zx_list cf " id="con_zslist_1">
+				<cms:list item="article" level="all" type="rand" tag="车上人员责任险" count="6" name="保险资讯">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_2" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="车上人员责任险" count="6" name="保险知识">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_3" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="车上人员责任险" count="6" name="保险问答">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+            </div>
+           <div class="car_border_q mar_btn_10">
+             <h2 class="car_l_title3">商业车险种类</h2>
+             <ul class="car_gs_list xz_list cf ">
+			   <cms:list item="friendlink" name="商业车险种类">
+				 <li><a href="${friendlink.URL}" target='<%String url = friendlink.getString("url");if(url.startsWith("h"))write("_blank");%>'>${friendlink.Name|CharWidth=7}</a></li>
+		       </cms:list>
+             </ul>
+            </div>
+               <div class="car_border_q mar_btn_10">
+              	 <h3 class="car_l_title3">理赔案例资讯</h3>
+                 <ul class="car_gs_list lp_list cf">
+                  <cms:list item="article" level="all" type="rand" tag="车上人员责任险案例" count="10" name="保险知识,保险资讯">
+						<li>
+							<a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a>
+	                		<%if(i==0){
+	                		write("<p class='p_text_des'>");
+	                		String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>50){
+							description = description.substring(0,50);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>50){
+							summary = summary.substring(0,50);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==50){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==50){
+							write("...");
+							}
+						    write("</p>");
+						    }%>
+						</li>
+					</cms:list>
+                 </ul>
+              </div>
+  </div>
+       <div class="car_right floatr">
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h1 class="car_l_title">车上人员责任险</h1>
+			<p >
+      车上人员责任险，也被称为车上座位责任险或者车上责任险，是一种车辆商业险附加险。可保障被保险车辆发生交通意外而造成的本车人员伤亡。车上责任险一般按照座位投保，可分为司机座位和乘客座位两种。
+有以下任一情况建议投保车上人员责任险：<br>
+1、新手及经常开车的人，必须购买司机座位责任险。<br>
+2、经常载人出行的人，必须投保乘客座位责任险。<br>
+3、家庭车辆，建议为所有座位都投保该险种。<br>
+            </p>
+
+            
+        </div>
+        
+         <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/CF20130723037.shtml" target="_blank">车上人员责任险购买须知</a></h2>
+			
+            <p>车上人员责任险购买须知一：车上人员责任险责任限额与保费<br>
+车上人员责任险购买须知二：乘客与司机座位一样重要 <br>
+车上人员责任险购买须知三：后排座位也需要投保<br>
+车上人员责任险购买须知四：责任免除范围需牢记<br>
+</p>
+            
+        </div>
+        
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A03G20130603008.shtml" target="_blank">什么是车上人员责任险</a></h2>
+			
+            <p>什么是车上人员责任险？车上座位责任险又叫车上人员责任险或车上责任险，主要功能是赔偿车辆因交通事故造成的车内人员的伤亡的保险。这个保险对于车主们很重要，因为在车内人员一般都是自己身边重要的人，为他们买一份保险保障意外伤害，也是非常必要的。</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/renshi/A03G20130603021.shtml" target="_blank">车上责任险多少钱 </a></h2>
+			
+            <p>车上人员责任险的保费与投保的档次有关，投保档次高保费就贵；同时还和座位数量有关，比如三人座与五人座的座位险价格各不相等；另外，投保人在投保座位险时指定驾驶人或不指定驾驶人所执行的费率也不相同。通常，保险金额是由被保险人和保险公司协商确定的，一般每个座位保额按1-5万。司机座位每万元40元左右，其他座位每万元25元左右，非常简单便可计算出车上人员责任险多少钱。
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/CF20130723039.shtml" target="_blank">车上责任险理赔限额</a></h2>
+			
+            <p>发生车上人员的人身伤亡后，按以下方法计算车上人员的赔偿金额：<br>
+（一）当被保险人按事故责任比例应负的赔偿金额高于每座赔偿限额时：<br>
+赔款=每座赔偿限额×（1－事故责任免赔率）×（1－绝对免赔率） <br>
+（二）当被保险人按事故责任比例应负的赔偿金额等于或低于每座赔偿限额时：<br>
+赔款=应负赔偿金额×（1－事故责任免赔率）×（1－绝对免赔率）<br>
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/renshi/A03G20130603020.shtml" target="_blank">车上责任险赔偿范围</a></h2>
+			
+            <p>车上责任险的理赔范围是比较广泛的，保障的是车上人员的人身伤亡，分为司机座位和乘客座位。不同事故有不同的赔偿范围，具体理赔内容包括：1、合格驾驶员在使用被保险车辆过程中发生意外事故而造成第三者的财产直接损失与人员伤亡的。2、朋友乘坐被保险车辆发生的意外情况。
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/baike/tiaokuan/260861.shtml" target="_blank">车上人员责任险条款 	</a></h2>
+			
+            <p>车上人员责任保险合同（以下称：本合同）由车上人员责任保险条款（以下称：本条款）、投保单、保险单、批单组成。凡涉及本合同的约定，均应采用书面形式。
+</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/C02E20130723032.shtml" target="_blank">车上人员责任险保额费率 	</a></h2>
+			
+            <p>第三者责任险限额共有6个档次，不同档次的赔偿限额差距很大，相应保费的差距并不大。建议如需求在两保额之间的话，可以上浮一个档次投保。关于保额，目前常见的保额有每人1万，2万，5万和10万四个档可选，乘客的保额必须统一，驾驶员可以单独选择保额。
+车上人员责任险保费= 保险金额*保险费率 * 座位数，不同保险公司费率可能不同。
+
+</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/CF20130723038.shtml" target="_blank">车上人员责任险理赔流程 	</a></h2>
+			
+            <p>一、 被保险人索赔时，应当向保险人提供：<br>
+（一）保险单；<br>
+（二）被保险人和车上人员的有效身份证明、保险车辆行驶证、驾驶人驾驶证；<br>
+（三）公安机关交通管理部门出具的交通事故责任认定书或法院等机构出具的有关法律文书及其他证明；<br>
+（四）车上人员人身伤残程度证明以及有关费用单据；<br>
+（五）其他能够确认保险事故的性质、原因、损失程度等有关的证明和资料。<br>
+
+</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title">保险公司对比板块</h2>
+		<table width="100%" border="0" class="huahen_table">
+  <tr>
+    <th scope="col" class="table_no_bor_l" style="width:134px;">&nbsp;</th>
+    <cms:list item="article" level="all" name="太平洋车险" >
+         <th scope="col">太平洋车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="平安车险" >
+         <th scope="col">平安车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="阳光车险" >
+        <th scope="col">阳光车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="大地车险" >
+        <th scope="col">大地车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+  </tr>
+  <tr>
+    <td  class="table_no_bor_l">车损险保障范围</td>
+    <td colspan="4">保险期间内，被保险人或其允许的合法驾驶人在使用被保险机动车过程中发生意外事故，致使车上人员遭受人身伤亡，依法应当由被保险人承担的损害赔偿责任，保险公司依照本保险合同的约定负责赔偿。</td>
+    </tr>
+  <tr>
+    <td  class="table_no_bor_l">免责范围</td>
+    <td colspan="4">因违章搭乘造成的人身伤亡，被保险人、驾驶人的故意行为造成的损失</td>
+    </tr>
+  <tr>
+    <td valign="top"  class="table_no_bor_l table_no_bor_btn">不同公司免责条款对比</td>
+    <td valign="top" class="table_no_bor_btn">1、保险机动车正常行驶时车门没有完全闭合或车门闭合过程中<br>
+2、持学习驾驶证及实习期在高速公路上驾车；<br>
+3、实习期驾驶执行任务的警车、消防车、工程救险车、救护车和载运危险品的车辆;<br>
+
+</td>
+    <td valign="top" class="table_no_bor_btn">1、牵引其他未投保交强险的车辆或被该类车辆牵引<br>
+2、学习驾驶时无教练员随车指导造成的意外事故<br>
+3、一个记分周期内记分达12分仍驾驶造成的损失<br>
+</td>
+    <td valign="top" class="table_no_bor_btn">1、持学习驾驶证学习驾车时，无教练员随车指导，或不按指定时间、路线学习驾车;<br>
+2、实习期驾驶执行任务的警车、消防车、工程救险车、救护车和载运危险品的车辆;<br>
+
+</td>
+    <td valign="top" class="table_no_bor_btn">
+
+</td>
+  </tr>
+</table>
+ 
+        </div>
+        
+        
+         <div class="car_border_q cf"> 
+         	<div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+       <div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="车上人员责任险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="车上人员责任险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="车上人员责任险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+	<cms:include file="block/kxb_footer_new.shtml" />
+	<cms:include file="block/community.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

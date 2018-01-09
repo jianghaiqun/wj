@@ -1,0 +1,311 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/mobile.js"></script>
+<%
+	String RiskCode = article.getString("RiskCode");
+	String WapURL = site.getString("WapURL");
+	
+	cn.com.sinosoft.action.shop.SalesVolumeAction sv = new cn.com.sinosoft.action.shop.SalesVolumeAction();
+	String wapFlag = sv.isWapProduct(RiskCode);
+	if ("Y".equals(wapFlag)) {
+		 
+		
+		String meth = "<script type='text/javascript'>uaredirect('" + WapURL + "/mobile/blankpage.ashx?PageType=D&PageID=" + RiskCode + "','detail');</script>";
+		write(meth);
+	}
+%> 
+<title>
+<%
+	String title = article.getString("MetaTitle");  
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%> 
+</title>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_detail.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css"  />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_integral.css" />
+<style type="text/css">
+.cp_title_ms {
+
+    width: 65px;
+}
+.g-nav-main li a.nav_4{ color:#f08225; }
+</style>
+<script type="">
+var isCpsProduct = '${Article.isCpsProduct}'; 
+var riskCode = '${Article.RiskCode}';
+var artTitle = '${Article.title}';
+var artSalesVolume = '${Article.SalesVolume}'; 
+var productType = "A02";
+var catID = "9415";
+var productDetailFlag="true";
+var complicatedFlag = '${Article.ComplicatedFlag}';
+var AppFacDutyRela = ${Article.AppFacDutyRela};
+var AppFacDutyDef = ${Article.AppFacDutyDef};
+var LongInsurance = '${Article.LongInsurance}';
+</script>
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+<body class="detail">
+
+	   <!-- 区分产品详细页面添加判断标志 -->
+		<input type="hidden" name="pointproducttype" id="pointproducttype" value="point" />
+	
+	
+		<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<input type="hidden" name="RiskCode" id="RiskCode" value="${Article.RiskCode}" />
+	<input type="hidden" name="price" id="price" value="${Article.InitPrem}" />
+	<input type="hidden" name="pTypeName" id="pTypeName" value="${Article.RiskBreadcrumb}" />
+	<input id="ProductType" type="hidden" value="${Catalog.ProductType}" name="ProductType" />
+	<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			
+			<a target="_self" href="${Site.URL}"><span class="orange">您的现在位置：首页</span></a>
+			<a target="_self" href="${Site.URL}/jifen/" rel="nofollow"><span class="separator">&gt;</span><span class="separator">积分商城</span></a>
+			
+			<span class="separator">></span> 
+			<span class="separator1">${Article.title}</span>
+			
+		</div>
+		<div class="content_head">
+			<div class="cp_titile_con">
+				<h1>${Article.title}</h1>
+				<span class="cp_title_adapt">适用人群：${Article.AdaptPeopleInfo}</span>
+			</div>
+			<div class="cp_gscon">
+				<div class="cp_img_show">
+					<p id="Activity_${Article.RiskCode}">${article.ProductActive}</p>
+					<img width="190" height="190" style="display: inline;" data-original="${article.LogoLink}" class="lazy" src="${article.LogoLink}" alt="${article.title}" />
+				</div>
+			</div>
+			<div class="cp_descon" id="descon_publish">
+				<div id="content">
+					<div id="divRiskAppFactor_${Article.RiskCode}" class="bz_time clearfix">
+					     <% 
+			            	String tCalHTML = article.getString("CalHTML");
+			            	String tRiskCode = article.getString("RiskCode");
+			            	String tSplitRiskCode = article.getString("SplitRiskCode");
+			            	if(tSplitRiskCode!=null && tSplitRiskCode!=""){
+				            	String newPlanHTML = com.sinosoft.product.Filtrate.getCalHTML(tRiskCode,tSplitRiskCode,"1");
+				            	if(tCalHTML.indexOf("sinosofttfosonis")!=-1){
+				            	   tCalHTML=tCalHTML.replace("sinosofttfosonis",newPlanHTML);
+				            	}
+			            	}
+			            	if (tCalHTML.indexOf("_ProductUrl")!=-1) {
+			            		tCalHTML = com.sinosoft.product.Filtrate.getProductUrl(tCalHTML,"1");
+			            	}
+			            	
+			            	write(tCalHTML);
+			        	 %>
+					    <div class="crowd clearfix"><em class="cp_title_ms">可购份数</em><p>每名被保险人最多可购买${Article.limcountNumber}份</p></div>
+					</div>
+				</div>
+				<div class="bxshop-mes">
+					<dl class="bxshop-mes-dl">
+						<dt>库存数量：</dt>
+						<dd id="productLashNum_${Article.RiskCode}">-份</dd>
+						<dt>价    格：</dt>
+						<dd id="productPrem_${Article.RiskCode}">-积分</dd>
+					</dl>	
+				</div>
+				<div class="button_b clearfix" id="button_b clearfix">
+					<span  onClick="doPoints();" class="button_gotos">立即兑换</span>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="cp_descon" id="descon_under" style="display:none;">
+				<div class="tip_under">
+					<p class="image"><img src="${Site.StaticResourcePath}/images/redesign/img_tip_under.jpg" /></p>
+					<p class="text">该产品已下架</p>
+				</div>
+				<a href="${Site.URL}/jifen/" class="tip_orter_shop rborder4" target="_blank">去看看其他可兑换商品</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_left_up">
+				<div class="cp_contents">
+					<p id="min_tag" class="title fixed_nav">
+						<em class="bor_fst"><a class="selects_tag" href="javascript:void(0);">产品详情</a></em>
+						<em><a href="javascript:void(0);">理赔指南</a></em>
+						<em><a href="javascript:void(0);">常见问题</a></em>
+						<em></em>
+					</p>
+					<div id="tag_box" class="cp_des">
+						<div class="bx_area_cont">
+							<div class="area_head">
+								${Article.ProductDetailBright}
+							</div>
+							<div class="area_cont">
+								<h3>保障权益</h3>
+									${Article.DutyHTML1}
+							</div>
+							<div class="area_cont">
+								<h3>产品特色</h3>
+								<ol class="notice_list">
+									<li>${Article.ERiskFeatures}</li>
+								</ol>
+							</div>
+							<div class="area_cont">
+								<%
+									String Instruction = article.getString("Instruction");
+									if(null==Instruction || "".equals(Instruction))  {  
+							    %>
+							    <h3>开心保提示</h3>
+								<ol class="notice_list">
+									<li>1、开心保网站上的投保责任描述仅供了解产品使用，详细内容请参阅相关条款。</li>
+									<li>2、18周岁以下的被保险人，其以死亡为给付责任的保险金额不得超出中国保监会所规定的10万元限额。</li>
+									<li>3、经开心保购买的产品，将提供电子保单，若需要纸质保单请联系客服人员。</li>
+									<li>4、对于办理签证使用的产品，其电子保单彩色打印后可用于办理签证。根据签证实际情况，建议您提前准备一份保单复印件给使馆备份；</li>
+									<li>5、对于保障期在一年以内的非寿险产品，不办理撤保、退保和加保，敬请谅解。</li>
+									<li>6、对于签证使用的产品，不承保处于战乱国家。</li>
+									<li>7、经开心保购买产品的顾客，若发生保险事故，开心保将尽全力协助办理理赔服务（4009-789-789）。</li>
+								</ol>
+								<%} else { 
+								    write(article.getString("Instruction") );
+						        } %>
+								<div class="read_list">
+									<p class="ttl">投保前请您仔细阅读：</p>
+									<ul>
+										${Article.Doc1}${Article.Doc5}
+									</ul>
+								</div>
+							</div>
+							<div class="area_cont">
+							${Article.termInformation}
+							</div>
+							<div class="area_cont">
+								<div class="guide_clm">
+									<p class="ttl">理赔指引</p>
+									<p class="img"><img src="${Site.StaticResourcePath}/images/redesign/img_guide_clm.jpg" alt="" /></p>
+									<ol>
+										<li>
+											<strong>1 出险报案</strong>
+											发生保险事故后，请第一时间拨打开心保客服电话报案。开心保为您开通客服专线<span>4009-789-789</span>、在线客服以及客服邮箱<span><a href="mailto:kf@kaixinbao.com">kf@kaixinbao.com</a></span>等多种报案协助申请方式。
+										</li>
+										<li>
+											<strong>2 理赔申请</strong>
+											收集并提交相关材料办理理赔事项。
+										</li>
+										<li class="last">
+											<strong>3 结案赔付</strong> 等待理赔结果通知（一般案件会在10个工作日左右结案）。
+										</li>
+									</ol>
+								</div>
+								<div class="claim_tips">
+									<p class="ttl">理赔提示</p>
+									<ul>
+										<li>开心保客服电话报案<span>4009-789-789</span></li>
+										<li>根据提示将需要当地出具的理赔资料收集齐全，如当地就医的就医报告、当地酒店遭遇盗窃的警方或酒店提供的事故证明等。</li>
+									</ul>
+								<!-- 	<p class="btn"><a href="#">理赔申请表</a></p> -->
+									<li>
+										<cms:list item="attachment"  name="理赔申请书/${Article.CompanyShortName}"> 
+										     <p class="btn"><a rel="nofollow" href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}<em class="icon"></em></a></p>
+										</cms:list>
+								    </li>
+								</div>
+							</div>
+							<div class="goto_buy">
+								<p><a href="#"  onClick="doPoints();">立即兑换</a></p>
+							</div>
+						</div>
+						<div class="bx_area_cont">
+							<div class="area_guide">
+								<h3>理赔指南</h3>
+								<ul class="guide_show">
+									<li class="guide_01"><p>当您在旅行途中遭遇意外伤害事故或突发急性病，或者发生保单中其他约定的保险责任事故，请立即拨打开心保的客服热线：<span>4009-789-789</span></p></li>
+									<li class="guide_02"><p>若遇意外人身受伤，请第一时间就医，确保生命安全后报案理赔；</p></li>
+									<li class="guide_03"><p>若遇到盗抢、财物丢失，请第一时间报警，清查受损财物，确定损失金额，尽可能对事故现场及受损财产拍摄照片。</p></li>
+									<li class="guide_04"><p>若遇航班延误、取消，请至航空公司柜台获取航班延误、取消证明。</p></li>
+								</ul>
+								<div class="guide_list">
+								<% 
+					            	String ClaimData = article.getString("ClaimData");
+					            	if(ClaimData!=null && !"".equals(ClaimData)){
+						            	write("<p class='ttl'>索赔项目所需理赔资料 !</p>");
+					            	}
+					            	
+					        	 %>
+									${Article.ClaimData}
+								</div>
+							</div>
+						</div>
+						<div class="bx_area_cont">
+							<div class="area_qa">
+								<h3>常见问题</h3>
+								<p class="ser_link">如有疑惑，请联系在线客服为您解答<a href="javascript:void(0);" id="qqwap4" vlpageid="xiaoneng" exturl="http://www.kaixinbao.com/xiaoneng" onclick="return(VL_FileDL(this));return false;">在线客服 ></a></p>
+								<ul class="qa_list">
+									${Article.FAQ}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_right_up">
+				<div class="l_boxss">
+					<div id="c1" class="c1"><em class="l_icon"></em>推荐礼品</div>
+		          	<ul class="new_shopli" id="recgiftlist">
+						<!-- 推荐内容 -->
+		 			</ul>
+				</div>
+				<div class="l_boxss">
+					<div class="c1"><em class="l_icon"></em>热销礼品</div>
+					<div id="hotgiftlist">
+					</div>
+				</div>
+				<div class="l_boxss kf_box">
+					<a href="${Site.URL}/about/xszn/index.shtml#xszn5"><img src="${Site.StaticResourcePath}/images/jifen/imgs_03.gif" alt="" /></a>
+				</div>
+				<div class="l_boxss kf_box">
+         			 <a onclick="return(VL_FileDL(this));return false;" id="qqwap2" exturl="http://www.kaixinbao.com/xiaoneng" vlpageid="xiaoneng" href="javascript:void(0);" rel="nofollow"><img width="220" height="48" title="投保遇到问题？马上咨询在线客服" alt="投保遇到问题？马上咨询在线客服" src="${Site.JsResourcePath}/images/jifen/imgs2_06.gif"></a>
+           		</div>
+			</div>
+		</div>
+	</div>
+	
+	<cms:include file="block/kxb_footer_new_common.shtml" />
+	<div class="clear"></div>
+		<!-- 维析分组代码   -->
+<script type="text/javascript">VLTrace_custom_getparam='u1=productdetail';</script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/LAB.min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/weixitrack.js"></script>
+
+<script type="text/javascript">
+$LAB = $LAB.script("${Site.JsResourcePath}/js/jquery-1.4.2.min.js").wait()//确保顺序加载
+.script("${Site.JsResourcePath}/js/jquery.cookie.js").wait()
+.script("${Site.JsResourcePath}/js/jquery.form.js").wait()
+.script("${Site.JsResourcePath}/js/jqueryupdate.js").wait()
+.script("${Site.JsResourcePath}/js/redesign/re_base.js").wait()
+.script("${Site.JsResourcePath}/js/redesign/re_header.js").wait()
+.script("${Site.JsResourcePath}/js/redesign/re_footer.js").wait()
+.script("${Site.JsResourcePath}/js/artDialog.js").wait()
+.script("${Site.JsResourcePath}/js/login.js").wait()
+.script("${Site.JsResourcePath}/js/template/shop/js/My97DatePicker/WdatePicker.js").wait()
+.script("${Site.JsResourcePath}/js/iframeTools.js").wait()
+.script("${Site.JsResourcePath}/js/jquery.qtip.js").wait()
+.script("${Site.JsResourcePath}/js/premcalculate.js").wait()
+.script("${Site.JsResourcePath}/js/productCompare.js").wait()
+.script("${Site.JsResourcePath}/js/jquery.poshytip.js").wait()
+.script("${Site.JsResourcePath}/js/redesign/xiaoneng_CustomerService.js").wait()
+.script("http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401").wait()
+.script("${Site.JsResourcePath}/js/pointsinfo.js").wait()
+.script("${Site.JsResourcePath}/js/detailLong.js").wait(function(){
+	jQuery(".fixed_nav").fixedNavigation();
+	jQuery(".bnr_box").fixedBanner({ navElm : "#box_service",nBtm:"0",fixTop: 150 }).selectDropDown();
+	jQuery(".bz_time").complexProduct();
+	premDocal('${Article.RiskCode}');		
+});
+</script>
+ 
+
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<title>有爱保险节</title>
+<meta name="keyword" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet"  href="http://resource.kaixinbao.com/style/redesign/re_header.css" />
+<link rel="stylesheet" type="text/css"  href="http://resource.kaixinbao.com/style/skins/default.css"/>
+<link rel="stylesheet" type="text/css"  href="http://resource.kaixinbao.com/style/activity.css"/>
+<link rel="stylesheet" type="text/css"  href="http://resource.kaixinbao.com/style/redesign/animate.css"/>
+<style>
+    body{
+        background: #483c6c;
+    }
+    .g-weaper{
+        width:1000px;
+        margin: 0 auto;
+    }
+    .s1{
+        height: 501px;
+        background: url("http://resource.kaixinbao.com/active_file/images/ss12/s12s_01.jpg") no-repeat center center;
+        position:relative;
+        z-index: 2;
+    }
+    .s2{
+        height: 705px;
+        background: url("http://resource.kaixinbao.com/active_file/images/ss12/s12s_02.jpg") no-repeat center center;
+        position:relative;
+        z-index: 2;
+    }
+    .s3{
+        min-height: 574px;;
+        background: url("http://resource.kaixinbao.com/active_file/images/ss12/s12s_03.jpg") no-repeat top center;
+         position:relative;
+        z-index: 2;
+    }
+    .tit{
+        display: block;
+        height: 194px;
+        background: url("http://resource.kaixinbao.com/active_file/images/ss12/s122_03.png") no-repeat center center;
+        width: 868px;
+        margin: 0 auto;
+    }
+    .sbg{
+        width: 1147px;
+        height: 349px;
+        margin: 0 auto;
+    }
+    .s3_ul{
+
+    }
+    .s3_ul li{
+        float: left;
+        width: 300px;
+        height: 194px;
+        margin: 0 24px;
+        padding-top: 24px;
+        padding-left: 6px;
+        position: relative;
+    }
+    .li1{
+        background: url("http://resource.kaixinbao.com/active_file/images/ss12/s122_06.png") no-repeat center center;
+    }
+    .li2{
+        background: url("http://resource.kaixinbao.com/active_file/images/ss12/spc_08.png") no-repeat center center;
+    }
+    .li3{
+        background: url("http://resource.kaixinbao.com/active_file/images/ss12/spc_10.png") no-repeat center center;
+    }
+    .s3_ul li span{
+        display: block;
+        width: 213px;
+        height: 61px;
+        background: url("http://resource.kaixinbao.com/active_file/images/ss12/s122_16.png") no-repeat center center;
+        position: absolute;
+        bottom: -91px;
+        left: 47px;
+        cursor:pointer;
+    }
+    .selnav{
+        background:#1376b9;
+        height:74px;
+        z-index: 2;
+        position:relative;
+    }
+    .selnav ul{
+        width:1104px;
+        margin:0 auto;
+    }
+    .g-main-con{
+         z-index: 2;
+        position:relative;
+    }
+     .selnav ul li{
+        display:block;
+        float:left;
+        text-align: center;
+        line-height: 67px;
+        width:368px;
+     }
+      .selnav ul li a{
+        font-size: 30px;
+        color: #fff;
+      }
+      .cp_list{
+        padding: 30px 0 60px;
+        margin: 0 auto;
+        width:1050px;
+  
+      }
+      .cp_list img{
+        display:block;
+        margin:0 auto;
+      }
+      .tits{
+        width:746px;
+        margin:40px auto 30px;
+        position:relative;
+        z-index: 2;
+      }
+      .cp_con{
+        width:1000px;
+        height:736px;
+        margin:0 auto;
+        background:url("http://resource.kaixinbao.com/active_file/images/ss12/s12c_03.png") no-repeat top center;
+      }
+      .cp_con2{
+        width:1000px;
+        height:748px;
+        margin:40px auto;
+        background:url("http://resource.kaixinbao.com/active_file/images/ss12/spc_19.png") no-repeat top center;
+      }
+      .cp_on1{
+        position:relative;
+        z-index: 2;
+      }
+      .cp_con,.cp_con2{
+        padding-top: 84px;
+        position:relative;
+        z-index: 2;
+      }
+      .cp_con a,.cp_con2 a{
+        display:block;
+        margin-bottom: 30px;
+        height:208px;
+      }
+
+      .img1{
+        position:fixed;
+        display:block;
+        right:200px;
+        top:42px;
+        z-index: 1;
+      }
+      .img2{
+        position:fixed;
+        display:block;
+        left:149px;
+        top:200px;
+        z-index: 1;
+      }
+       .img3{
+        position:fixed;
+        display:block;
+        right:0px;
+        bottom:0px;
+        z-index: 1;
+      }
+      .imgs_s{
+        position:relative;
+        z-index: 2;
+      }
+      .imgsc{
+        position:relative;
+        z-index: 2;
+      }
+      .selnav span{
+        border: 2px solid #fff;
+        font-size: 20px;
+        margin-right: 8px;
+        display:inline-block;
+        width:25px;
+        height:25px;
+        line-height: 25px;
+        text-align: center;
+        border-radius: 4px 4px 4px 4px;
+        vertical-align: middle;
+      }
+      .selnav .sel{
+        background:url(http://resource.kaixinbao.com/active_file/images/ss12/selbtn_03.png) no-repeat 0px bottom;
+        color:#ffe700;
+      }
+      .selnav ul li.sel a{
+        color:#ffe700;
+      }
+       .selnav ul li.sel span{
+         border-color:#ffe700; 
+       }
+       .fixed{
+        position:fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+       }
+       .s3_ul li.li2  span{
+         background:url("http://resource.kaixinbao.com/active_file/images/ss12/s122_19.png") no-repeat scroll center center;
+       }
+       .s3_ul li.li3  span{
+         background:url("http://resource.kaixinbao.com/active_file/images/ss12/s122_22.png") no-repeat scroll center center;
+       }
+       .zbox{
+        background:#2d244a;
+        font-size: 16px;
+        width:269px;
+        height:165px;
+        margin-left: 12px;
+        margin-top: 2px;
+        text-align: center;
+        color:#fff;
+        line-height: 1.6em;
+       }
+       .zbox b{
+        font-size: 20px;
+        display:block;
+        padding-bottom: 4px;
+        color:#f2e018;
+        padding-top: 12px;
+       }
+       .zbox em{
+        color:#d3a524;
+        font-style: normal;
+        font-weight: normal;
+        }
+        .li2  .zbox b{
+            color:#b0e733;
+        }
+         .li2  .zbox em{
+            color:#94c03a;
+         }
+          .li3  .zbox b{
+            color:#ff51b6;
+        }
+         .li3  .zbox em{
+            color:#ff51b6;
+         }
+         .cp_on1{
+           height:1111px;
+           width:980px;
+           background:url("http://resource.kaixinbao.com/active_file/images/ss12/spc_07.png") no-repeat center center;
+           overflow: hidden;
+           margin:0 auto;
+         }
+         .cp_on1 a{
+          width:50%;
+          height:350px;
+          margin-top: 680px;
+          display:block;
+          float:left;
+         }
+</style>
+</head>
+
+<body>
+
+    <!-- 发布的时候开启静态头 开启公共头 -->
+    <cms:include file="block/kxb_header_index_new_promotion.shtml" />
+    <div class="s1">
+
+    </div>
+    <div class="s2">
+
+    </div>
+    <div class="s3">
+        <h2 class="tit"></h2>
+        <div class="sbg">
+            <ul class="s3_ul">
+                <li class="li1">
+                    <span></span>
+                </li>
+                <li class="li2">
+                    <span></span>
+                </li>
+                <li class="li3">
+                    <span></span>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="selnav">
+        <ul>
+            <li class="sel"><a href="#tag1"><span>比</span>聪明选择会搭配</a></li>
+            <li><a href="#tag2"><span>添</span>家人的爱不能少</a></li>
+            <li><a href="#tag3"><span>学</span>大神带你打通关</a></li>
+        </ul>
+    </div>
+    <div class="cp_list" id="tag1">
+        <div class="cp_on1">
+          <a href="http://www.kaixinbao.com/jiankang-baoxian/310797.shtml" target="_blank" ></a>
+          <a href="http://www.kaixinbao.com/renshou-baoxian/307418.shtml" target="_blank"></a>
+        </div>
+         <span id="tag2"></span>
+         <h3 class="tits" >
+             <img src="http://resource.kaixinbao.com/active_file/images/ss12/tit_11.png" alt="">
+         </h3>
+         <div class="cp_con">
+             <a href="http://www.kaixinbao.com/jiankang-baoxian/301479.shtml" target="_blank"></a>
+             <a href="http://www.kaixinbao.com/jiankang-baoxian/309974.shtml" target="_blank"></a>
+             <a href="http://www.kaixinbao.com/jiankang-baoxian/307507.shtml" target="_blank"></a>
+         </div>
+         <div class="cp_con2">
+             <a href="http://www.kaixinbao.com/jiankang-baoxian/307435.shtml" target="_blank"></a>
+             <a href="http://www.kaixinbao.com/jiankang-baoxian/311620.shtml" target="_blank"></a>
+             <a href="http://www.kaixinbao.com/jiankang-baoxian/293439.shtml" target="_blank"></a>
+         </div>
+         <img src="http://resource.kaixinbao.com/active_file/images/ss12/spc_23.png" id="tag3" class="imgsc" alt="">
+         <div class="clear h40"></div>
+           <img src="http://resource.kaixinbao.com/active_file/images/ss12/pchds.png" alt="" class="imgsc" >
+         <img src="http://resource.kaixinbao.com/active_file/images/ss12/s12s_06.png" class="img1" alt="">
+         <img src="http://resource.kaixinbao.com/active_file/images/ss12/s12s_10.png" class="img2" alt="">
+         <img src="http://resource.kaixinbao.com/active_file/images/ss12/s12s_14.png" class="img3" alt="">
+       
+    </div>
+        <input id="activitysn" type="hidden" value="HD3cbf9bcf3611408a9508d9f059d9d95c,HD708ab6c9ae334db5c82300fc1f51a99a,HDc5101e566e9e84cdc303d274bd0f968f" >
+
+    <!-- 发布的时候注释掉公共尾部 开启公共尾部 -->
+    <cms:include file="block/kxb_footer_new_v2.shtml" />
+
+
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/login.js"></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/redesign/re_header.js"></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/artDialog.js"></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/iframeTools.js" ></script>
+<script type="text/javascript" src="http://resource.kaixinbao.com/js/redesign/xiaoneng_CustomerService.js?version=20160930"></script>
+<script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9401" charset="utf-8"></script>
+<script type="text/javascript">
+jQuery.fn.fixedNavigation = function(opt) {
+    var _opt, jWin, jNav, nNavOffTop;
+    
+    return this.each(function() {
+        _opt = jQuery.extend({
+        navElm: this,
+        fixName: "fixed"
+        }, opt);
+
+        _init();
+        _monitor();
+    });
+    
+    /* init */
+    function _init() {
+        jWin = jQuery(window);      
+        jNav = jQuery(_opt.navElm);
+        nNavOffTop = jNav.offset().top;
+    }
+
+    /* bind event */
+    function _monitor() {
+        jWin.bind("scroll", function() {
+            var nWinTop = jWin.scrollTop();
+
+            if(nWinTop >= nNavOffTop) {
+                jNav.addClass(_opt.fixName);
+            } else{
+                jNav.removeClass(_opt.fixName);
+            }
+        });
+        
+
+    }
+};
+
+function activityCoupon() {
+    var activitysn = jQuery("#activitysn").val();  // activitysn活动号 
+    jQuery.ajax({
+        type: 'post',
+        url: sinosoft.base+'/shop/member_send_coupon!sendCouponDeal.action?callback=?&activitysn='+activitysn,
+        dataType: "json",
+        async: true,
+        success: function(data) {
+            if (data.status == 'notLogin') {
+                art.dialog.data('base', sinosoft.base);
+                art.dialog.data('front', sinosoft.front);
+                art.dialog.open(sinosoft.front+'/block/art_login.shtml',     {id: 'loginArtWindow',title: '登录窗口',width:363,height:510,fixed:true}, false);
+            }else {
+                art.dialog({
+                    content : data.message,
+                    id : 'error_id',
+                    title : '提示'
+                });
+
+
+                 jQuery(this).addClass("sel");
+                 jQuery(this).siblings('.zbox').remove();
+                 jQuery(this).parent().append('<p class="zbox"><b>恭喜你获得</b>开心保健康保 <em>50元直减券</em> <br>瑞泰瑞和定期寿险 <em>50元直减券</em>  <br>一年期健康险 <em>8折优惠券</em> <br>（限专题内产品使用)</p>');
+            }
+        }
+    });
+}
+
+    jQuery(document).ready(function($) {
+        jQuery(".selnav li").click(function(){
+             jQuery(this).siblings().removeClass('sel').end().addClass('sel');
+        });
+
+        jQuery(".selnav").fixedNavigation({
+            fixName: "fixed"
+         });
+
+        jQuery(".s3_ul span").click(function(){
+
+            var s =  jQuery(".s3_ul li").find('.zbox');
+            if(s.length==0){
+                 activityCoupon();
+                
+                
+            }else{
+               art.dialog({
+                    id:"message",
+                    opacity: 0.8,  // 透明度
+                    content: '一次就抽到给力优惠，手气真棒<br />只能抽取一次，机会也给别人留一份',
+                    button: [{
+                        name: '关闭',
+                        callback: function () {},
+                        focus: true
+                    }]
+                });
+            }
+        })
+    });
+</script>
+</body>
+</html>

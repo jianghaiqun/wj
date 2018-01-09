@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>帮助中心</title>
+<link href="${Site.StaticResourcePath}/style/new_information.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_help.css">
+<cms:include file="block/kxb_custom_header.shtml" />
+</head> 
+
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!--导航开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link><span class="separator">></span><span class="separator1">常见问题</span>
+		</div>
+<!--导航结束-->
+<cms:include file="block/help_common_header.shtml" />        
+        <div class="grid-c3f help_m">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="help_bor_h">
+                    	<h3 class="help_titile2">常见问题</h3>
+                       <div class="help_con">
+                       
+                       	<ul class="help_question">
+                        	<cms:list item="article" type="Recent" pageSize="10" page="true"> 
+								<li><a target="_blank" href="${article.link}" >${article.title}</a></li>
+							</cms:list>
+                        </ul>
+                        <div class="clear h20"></div>
+                        <div class="plpage">
+							<div id="productsPageBar" class="page_area">
+								<div id="pagination">${pageBarNew}</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+                       
+                       </div>
+                    </div>
+				</div>
+			</div>
+			<cms:include file="block/help_common_sidebar.shtml" />
+			
+		</div>
+      </div>
+
+
+
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+ 
+<script src="${Site.JsResourcePath}/js/sidebar-follow-jquery.js"></script>
+<script>
+/*侧边栏跟随配置*/
+(new SidebarFollow()).init({
+	element: jQuery('#sidebar_help'),
+	distanceToTop: 10
+});
+  
+  jQuery(document).ready(function() {
+	  jQuery(".help_tree").each(function(i, v) {
+		  jQuery(v).find("dd").each(function(j, o) {
+			 if (jQuery(o).find("a").attr("href").indexOf(window.location.href) >=0) {
+				 jQuery(v).addClass("help_select").siblings().removeClass("help_select");
+			 }
+		  })
+	  });
+	  jQuery(".help_tree dt").click(function(){
+	        var jPar = jQuery(this).parent();
+
+	        if(!jPar.hasClass("help_select")){
+	            jPar.addClass("help_select")
+	                .siblings()
+	                .removeClass("help_select");
+	        }
+	    });
+  });
+</script>
+ 
+
+</body>
+</html>

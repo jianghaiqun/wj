@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+	<class name="com.alipay.util.fpfClient.FtpInfo">
+		<map-to xml="ftpInfo" />
+		<field name="ftpName">
+			<bind-xml name="ftpName" />
+		</field>
+		<field name="ftpDesc">
+			<bind-xml name="ftpDesc" />
+		</field>
+		<field name="ftpEnDesc">
+			<bind-xml name="ftpEnDesc" />
+		</field>
+		<field name="ip">
+			<bind-xml name="ip" />
+		</field>
+		<field name="port">
+			<bind-xml name="port" />
+		</field>
+		<field name="user">
+			<bind-xml name="user" />
+		</field>
+		<field name="password">
+			<bind-xml name="password" />
+		</field>
+		<field name="workDir">
+			<bind-xml name="workDir" />
+		</field>
+		<field name="workBackupDir">
+			<bind-xml name="workBackupDir" />
+		</field>
+		<field name="errorBackupDir">
+			<bind-xml name="errorBackupDir" />
+		</field>
+		
+	</class>
+</mapping>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:cms="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+    <%
+        String title = article.getString("MetaTitle");
+        write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+    %>
+    </title>
+    <meta name="keywords" content="${article.MetaKeywords}" />
+    <meta name="description" content="${article.MetaDescription}" />
+    <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css"/>
+    <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_information.css"/>
+    <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/skins/default.css" />
+    <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_evaluating.css"/>
+</head>
+<body class="re-bg">
+
+
+<!-- 顶部 开始 -->
+<cms:include file="block/kxb_header_evaluating.shtml" />
+<!-- 顶部 结束 -->
+<div class="nav_box">
+    <div class="eav_nav">
+        <div class="eav_box">
+            <a href="${Site.URL}/" >
+                <h2 class="eavlogo">
+                </h2>
+            </a>
+            ${catalog.navigationBarTag}
+        </div>
+    </div>
+</div>
+<!--位置信息 开始-->
+<div class="wrapper">
+    <div class="daohang">
+        <span class="daohang_home"></span>
+        <cms:link type="currentPosition"></cms:link> <span class="separator">></span>保险评测
+    </div>
+</div>
+<!--位置信息 结束-->
+<!--正文 开始-->
+<div class="wrapper" id="pc_box">
+    <div class="eav_left">
+        <div class="posright_box">
+            <!--正文 开始-->
+            <div class="article">
+                <h1 class="articletit">${article.title}</h1>
+                <div class="articledate02">
+                    发布日期：${Article.PublishDate}
+                    <span class="artic_time">分类：${Article.classify}&nbsp;&nbsp;
+                        阅读(<em id="readCount">0</em>)&nbsp;&nbsp;
+                        评论(<em id="commentNum">0</em>)
+                    </span>
+                </div>
+                <div id="ajaxad">
+                    <cms:list item="page">
+                        <div id="article_${page.rownum}">${page.content}</div>
+                    </cms:list>
+                </div>
+            </div>
+            <!--正文 结束-->
+            <!--分页 开始-->
+            <div class="plpage">
+                <div id="pagination"><input id="listProductCount" value="129" type="hidden">
+                    <ul id="page_nav" class="pagenav">
+                        <cms:list item="page">
+                            <%if(count > 1){if(i==0){%>
+                            <li class="now"><span datafont="${page.title}">${page.rownum}</span></li>
+                            <%}else{%>
+                            <li><span datafont="${page.title}">${page.rownum}</span></li>
+                            <%}}%>
+                        </cms:list>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--分页 结束-->
+            <div class="share_tag">
+                <!--分享到 开始-->
+                <div class="articleshare">
+                    <div class="bshare-custom icon-medium">
+                      <span class="articlekeyword"><font size="2">分享到：</font>
+                        <a class="bshare-qzone" title="分享到QQ空间"></a>
+                        <a class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+                        <a class="bshare-renren" title="分享到人人网"></a>
+                        <a class="bshare-douban" title="分享到豆瓣"></a>
+                        <a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+                      </span>
+                    </div>
+                    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+                    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                </div>
+                <!--分享到 结束-->
+                <div class="clear"></div>
+                <!--SEO标签 开始-->
+                <div class="articlekeyword">关键词：<span>${article.tag|taglink=N}</span></div>
+                <!--SEO标签 结束-->
+            </div>
+        </div>
+        <!--用户讨论区 开始-->
+        <div class="userabout">
+            <cms:comment name="evaluating" count="10">{ZCMS:评论区域}</cms:comment>
+        </div>
+        <!--用户讨论区 结束-->
+    </div>
+    <div class="eav_right">
+        <div class="post_right">
+            <div class="columntit graybordert">精选推荐</div>
+            <ul class="txtlist hot_txtlist">
+
+                <cms:list item="article" level="current" type="rand" count="5" hasAttribute="hot">
+                    <li><a href="${Article.Link}" target="_blank">${article.SubTitle}</a></li>
+                </cms:list>
+            </ul>
+            <div class="h12"></div>
+            <div class="columntit graybordert">热门直达</div>
+            <div class="hot_tagsc">
+                <cms:list item="friendlink" name="评测热门直达" count="12">
+                    <a href="${friendlink.URL}" class="tage<%=i%>">${friendlink.Name}</a>
+                </cms:list>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
+<div id="fix_nav" class="fix_nav">
+    <a class="fix-onlineqq " href="javascript:void(0);" vlpageid="xiaoneng" rel="nofollow" exturl="http://www.kaixinbao.com/xiaoneng" id="qqwap1" onclick="return(VL_FileDL(this));return false;" >
+        <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_01.jpg" />
+        <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_01_on.jpg" />
+    </a>
+    <span class="fix-RichScan">
+                    <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_02.jpg" />
+                    <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_02_on.jpg" />
+                    <div style="display: none;" class="weixinDiv tagshow"><img src="${Site.StaticResourcePath}/images/wxnew.png">微信查保单</div>
+                </span>
+    <span class="fix-top" id="gotop">
+                    <img class="anim_fade_image" src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_03.jpg" />
+                    <img  src="${Site.StaticResourcePath}/images/wj_kxb/icon_isp_03_on.jpg" />
+                </span>
+</div>
+
+<!-- 底部 开始 -->
+<cms:include file="block/kxb_footer_evaluating.shtml" />
+<!-- 底部 结束 -->
+
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.form.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_base.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_header.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/login.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/artDialog.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/iframeTools.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_footer.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/redesign/re_evaluating.js"></script>
+<script>
+    var loginPopupFlag = true;
+    jQuery("#page_nav li").tagclickbind({con:'ajaxad',addstyle:'now',nav:'page_nav'});
+    new praise({mestxtFn:showtip,mesbtnFn:submes,tagtnFn:praisefun,deltnFn:delComment});
+    new loadpagetip();
+    new showCommentNum();
+    new autoReadCount();
+
+    jQuery(".eav_nav").fixedNavigation({
+        fixName: "pcfixed"
+    });
+
+    jQuery(".post_right").fixedNavigation({
+        fixName: "pcfixed",
+        boxElm:".posright_box"
+    });
+
+    /**
+     * 阅读数增加
+     *
+     */
+    function autoReadCount() {
+        // 文章ID
+        var relaID = jQuery("#RelaID").val();
+        jQuery.ajax({
+            url: sinosoft.base+"/shop/eval_comment!autoReadCount.action?relaID="+relaID,
+            type: "post",
+            dataType: "json",
+            success: function(data) {
+                if (data.status == "success") {
+                    jQuery("#readCount").html(data.message);
+                }
+            }
+        });
+    }
+    /**
+     * 点赞回调函数
+     *
+     */
+    function praisefun(dom){
+        var commentId = jQuery(dom).attr('name');
+        var flag;
+       // 判断当前点赞状态
+        if(jQuery(".praise").hasClass('pressed')) {
+            // 取消点赞
+            flag = "P";
+        } else {
+            // 点赞
+            flag = "C";
+        }
+        jQuery.ajax({
+                url: sinosoft.base+"/shop/eval_comment!dealPraised.action?commentId="+commentId+"&flag="+flag,
+                type: "post",
+                dataType: "json",
+                success: function(data) {
+                    if (data.status == "success") {
+                        jQuery("#praised_"+commentId).html(data.message);
+                    } else {
+                        art.dialog({
+                            title:'消息',
+                            follow: document.getElementById('user_text'),
+                            content: data.message
+                        });
+                    }
+                }
+            });
+    }
+    /**
+     * 评论数刷新
+     *
+     */
+    function showCommentNum() {
+        jQuery.ajax({
+            url: sinosoft.base+"/shop/eval_comment!getCommentNum.action?relaID=${article.id}",
+            type: "post",
+            dataType: "json",
+            success: function(data) {
+                if (data.status == "success") {
+                    jQuery("#commentNum").html(data.message);
+                }
+            }
+        });
+    }
+    /**
+     * 鼠标移动到评论框中
+     *
+     */
+    function showtip(){
+        var display = jQuery("#YesLogin").css('display');
+        if(display == 'none' && loginPopupFlag == true) {
+            loginPopupFlag = false;
+            art.dialog({
+                title: '提示',
+                follow: document.getElementById('user_text'),
+                content: '游客身份无法收到评论回复哦~',
+                button: [
+                    {
+                        name: '登陆/注册',
+                        callback: function () {
+                            artLogin();
+                            return;
+                        },
+                        focus: true
+                    }
+                ]
+                ,
+                close: function () {
+                    jQuery("#user_text").focus();
+                }
+            });
+        }
+    }
+    /**
+     * 评论
+     *
+     */
+    function submes(){
+        // 文章ID
+        var relaID = jQuery("#RelaID").val();
+        // 评论内容
+        var comContent = jQuery("#user_text").val();
+        // CatalogID
+        var catalogID  = jQuery("#CatalogID").val();
+        // SiteID
+        var siteID  = jQuery("#SiteID").val();
+        // catalogType
+        var catalogType = jQuery("#CatalogType").val();
+
+        if (comContent == '') {
+            art.dialog({
+                title:'消息',
+                follow: document.getElementById('user_text'),
+                content: '请填写评论内容'
+            });
+            return;
+        }
+        jQuery.ajax({
+            url: sinosoft.base+"/shop/eval_comment!subComment.action",
+            data: {"relaID":relaID,"comContent":comContent,"catalogID":catalogID,"catalogType":catalogType,"siteID":siteID,"title":"${article.title}"},
+            type: "post",
+            dataType: "json",
+            success: function(data) {
+                if (data.status == "success") {
+                    art.dialog({
+                        title:'消息',
+                        follow: document.getElementById('user_text'),
+                        content: '评论已提交，待审核~'
+                    });
+                    jQuery("#user_text").val("");
+                } else {
+                    art.dialog({
+                        title:'消息',
+                        follow: document.getElementById('user_text'),
+                        content: '评论失败了呦，请重新评论吧'
+                    });
+                }
+            }
+        });
+    }
+
+    /**
+     * 删除评论
+     *
+     * @param id
+     */
+    function delComment(dom) {
+        var id = jQuery(dom).attr('name');
+        art.dialog({
+            title:'提示',
+            content: '是否删除此条评论？',
+            button: [
+                {
+                    name: '删除',
+                    callback: function () {
+                        jQuery.ajax({
+                            url: sinosoft.base+"/shop/eval_comment!delComment.action?commentId="+id,
+                            type: "post",
+                            dataType: "json",
+                            success: function(data) {
+                                if (data.status == "success")
+                                {
+                                    art.dialog({
+                                        title:'消息',
+                                        follow: document.getElementById('user_text'),
+                                        content: '评论删除'
+                                    });
+                                    jQuery(dom).parents(".user_mes").slideUp(300, function() {
+                                        jQuery(dom).parents(".user_mes").remove();
+                                    })
+                                } else {
+                                    art.dialog({
+                                        title:'消息',
+                                        follow: document.getElementById('user_text'),
+                                        content: '评论删除发生错误'
+                                    });
+                                }
+                            }
+                        });
+                    },
+                    focus: true
+                },
+                {
+                    name: '取消'
+
+                }
+
+            ]
+
+        });
+
+    }
+</script>
+</body>
+</html> 

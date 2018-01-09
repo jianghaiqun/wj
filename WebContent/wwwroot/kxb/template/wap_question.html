@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb=“http://open.weibo.com/wb”>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<meta id="viewport" name="viewport" content="width=640,initial-scale=0.5,maximum-scale=0.5" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="applicable-device" content="mobile">
+<link rel="stylesheet" href="${Site.WapURL}/mobile/css/def_import.css" media="screen">
+<link rel="stylesheet" href="css/information.css" media="screen">
+<title>
+<%
+	String title = article.getString("MetaTitle");
+	write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%>
+</title>
+<script type="text/javascript">
+	function BestA() {
+		if ("${Article.isok}" == "solve") { 
+			document.getElementById("BestA").style.display = "block";
+		}
+	}
+</script>
+</head>
+<body id="information" onload="BestA()">
+	<header class="headBox">
+		<div class="headBox-wrap">
+			<h1><a href="${article.EmptyString}tel:4009789789"></a></h1>
+			<div class="headBox-wrap-right">
+				<div style="display: none" class="login-index">
+					<a class="member-center" href="${Site.WapURL}/mobile/member.html"></a>
+				</div>
+				<div class="notlogin">
+					<a class="mem" href="${Site.WapURL}/mobile/login.html"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="main">
+		<div class="content">
+			<ul class="banners">
+				<li class="first"><a href="${Site.WapURL}/mobile/filter.html?nid=wp0000000001&nType=A00&nName=%25E6%2597%2585%25E6%25B8%25B8%25E9%2599%25A9"><img src="images/btn_banner_01.jpg" alt="旅游险"></a></li>
+				<li><a href="${Site.WapURL}/mobile/filter.html?nid=wp0000000002&nType=B00&nName=%25E6%2584%258F%25E5%25A4%2596%25E9%2599%25A9"><img src="images/btn_banner_02.jpg" alt="意外险"></a></li>
+				<li class="last"><a href="${Site.WapURL}/mobile/filter.html?nid=wp0000000003&nType=D00&nName=%25E5%2581%25A5%25E5%25BA%25B7%25E9%2599%25A9"><img src="images/btn_banner_03.jpg" alt="健康险"></a></li>
+			</ul>
+			<h2 class="question">
+				${Article.title}
+				<span>${article.author} | 发起于 ${Article.AskTime|Format=yyyy-MM-dd }</span>
+			</h2>
+			<p>${article.cainadaan}</p>
+			<div class="answerdetailbg" id="BestA" style="display: none">
+				<br />
+				<h3 class="question">回答
+					<span>${article.ReplyUser} | 回复于 ${Article.ReplyTime|Format=yyyy-MM-dd }</span>
+				</h3>
+				<p>${Article.content}</p>
+				<p class="other_question">${Article.qitadaan}</p>
+			</div>
+			<div class="text">
+					<cms:ad name="wap站资讯类广告" custom="false" size="1424*407" type="1"> </cms:ad>
+			</div>
+			<div class="otherList">
+				<h3>相关问题</h3>
+				<ul class="linkList">
+					<cms:list item="article" tag="${Article.tag}" cmsorder="5" level="none" condition=" type = 1 and cataloginnercode like '002308%'  and status in (30,60) and title !='${Article.title}'" count="5" >
+						<%
+							String url = article.getString("URL");
+							int level = url.split("/").length - 1;
+							String prefix = "";
+							for (int i = 0; i != level; i++) {
+								 prefix += "../";
+							}
+						%>
+						<li><a href="<%=prefix%>${Article.URL}" target="_blank">${Article.title|substrwidth=30}</a></li>
+				  	</cms:list>	
+				</ul>
+				<h3>相关资讯</h3>
+				<ul class="linkList">
+					<cms:list item="article" tag="${Article.tag}" cmsorder="6" level="none" condition=" type = 1 and (cataloginnercode like '002306%' or cataloginnercode like '002307%') and status in (30,60)" count="6" >
+						<%
+							String url = article.getString("URL");
+							int level = url.split("/").length - 1;
+							String prefix = "";
+							for (int i = 0; i != level; i++) {
+								 prefix += "../";
+							}
+						%>
+						<li><a href="<%=prefix%>${Article.URL}" target="_blank">${Article.title|substrwidth=19}</a></li>
+				  	</cms:list>	
+				</ul>
+				<div class="icon"><img src="images/qubiezhen.png" alt=""></div>
+			</div>
+		</div>
+	</section>
+	<div class="first-boot">
+		<div class="first-boot-wrap" style="position: relative;">
+			<p class="wel">
+				<a href="${Site.WapURL}/index.html"><img src="images/logo_footer.png" alt="开心保"></a>
+				<a href="${Site.WapURL}/mobile/member.html" class="username" style="display: none;"></a>
+				<a href="${Site.WapURL}/mobile/login.html" class="member-content" style="position: absolute; top: 1%; right: 1%; display: none;" onclick="logOutDo();">退出</a>
+			</p>
+			<p class="loginout">
+				<div class="notlogin"><a href="${Site.WapURL}/mobile/register.html">免费注册</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="${Site.WapURL}/mobile/login.html">登录</a></div>
+			</p>
+		</div>
+	</div>
+	<div class="channel-wrap"></div>
+	<footer class="footer">
+		<a href="${Site.WapURL}/mobile/content.html?name=%25E5%2585%25B3%25E4%25BA%258E%25E6%2588%2591%25E4%25BB%25AC">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="${Site.WapURL}/mobile/content.html?name=%25E5%25BC%2580%25E5%25BF%2583%25E4%25BF%259D%25E8%25A6%2581%25E9%2597%25BB">开心保要闻</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="${Site.WapURL}/mobile/content.html?name=%25E8%2581%2594%25E7%25B3%25BB%25E6%2588%2591%25E4%25BB%25AC">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="${Site.WapURL}/mobile/content.html?name=%25E7%2594%25A8%25E6%2588%25B7%25E5%258D%258F%25E8%25AE%25AE">用户协议</a>&nbsp;&nbsp;<p>网金保险销售服务有限公司</p>
+	</footer>
+</body>
+</html>

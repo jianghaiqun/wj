@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_help.css">
+<cms:include file="block/kxb_custom_header.shtml" />
+</head> 
+
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+<!--导航开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+<!--导航结束-->
+ <cms:include file="block/help_common_header.shtml" />         
+        <div class="grid-c3f help_m">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="help_bor_h">
+                    	<h3 class="help_titile2">支付帮助</h3>
+                          <div class="help_con">
+                          	<b >热点问题</b>
+                       <div class="help_hot cf">
+                        <ul class="help_que cf">
+                        <cms:list item="Article"  count="4" name="产品答疑总汇" hasAttribute="hot" >
+						<li><a target="_blank" href="${article.link}">${article.title}</a></li>
+					    </cms:list>
+                        </ul>
+                        <div class="clear"></div>
+                       </div>
+                       <div class="clear"></div>
+<b id="zfbz1">支付方式</b>
+<p>开心保为您提供支付平台、网银支付、信用卡支付、企业网银，保证您方便快捷地购买到产品。
+<br>
+
+<span class="help_red">支付平台</span>
+<br>
+<img src="${Site.StaticResourcePath}/images/help_logo_14.gif" width="248" height="124"  alt=""/> 
+支付宝（中国）网络技术有限公司是国内领先的独立第三方支付平台，由阿里巴巴集团创办。支付宝致力于为中国电子商务提供"简单、安全、快速"的在线支付解决方案。 <br>
+支付宝支付帮助中心：<a class="help_asf" rel="nofollow"  href="http://help.lab.alipay.com/lab/index.htm" >http://help.lab.alipay.com/lab/index.htm</a>
+<br>
+<br>
+<img src="${Site.StaticResourcePath}/images/help_logo_06.gif" width="248" height="124"  alt=""/> 
+易宝支付致力于成为世界一流的电子支付应用和服务提供商，专注于金融增值服务领域，创新并推广多元化、低成本、安全有效的支付服务。<br>
+易宝付帮助中心：<a class="help_asf" rel="nofollow"   href="http://www.yeepay.com/category/help/53b2774e0edc911a14ff6f8e">http://www.yeepay.com/category/help/53b2774e0edc911a14ff6f8e </a>
+<br><br>
+<img src="${Site.StaticResourcePath}/images/help/ltzf.jpg" width="248" height="124px">
+通联支付经政府部门批准，经营范围是：“为企业、个人的支付、转账等业务提供技术平台、软件开发和相关专业化服务等”。<br><br>
+<span class="help_red">网银支付</span><br>
+支持已经开通网银的储蓄卡或信用卡(如果未开通，需在银行柜台办理开通网银业务)<br>
+支持网银支付的银行如下：<br>
+<img src="http://resource.kaixinbao.com/images/help_yh.png" width="490"  alt=""/>
+ <span class="help_red">信用卡支付</span><br>
+无需开通网银，无需携带信用卡。输入您的信息，即可立即付款。易宝支付提供信用卡无卡支付，支持十二家银行：中国银行、工商银行、建设银行、中信银行、民生银行、广发银行、农业银行、北京银行、上海银行、招商银行、锦州银行、光大银行<br><br>
+1、如果您选择招商银行信用卡付款，请保持手机畅通，招商银行（95555）将进行电话回访确认，请按照语音提示操作。招行电话回访时间为8:00—22:00，其他时段暂不提供无卡支付服务，建议该时段选择其他银行进行付款。
+<br><br>
+2、如果您选择信用卡无卡支付，将在银行确认扣款成功后1个小时之内为您处理投保事宜。<br><br>
+
+信用卡支付帮助中心：<a class="help_asf" rel="nofollow"    href="https://www.yeepay.com/html/help/b/index.shtml">https://www.yeepay.com/html/help/b/index.shtml</a><br>
+
+</p>
+<b  id="zfbz2">支付说明</b>
+<p>
+如果您在支付过程中遇到任何问题，请拨打客服电话4009-789-789<br>
+
+发票说明：<br>
+
+购买成功后，如需开具保险发票，请致电开心保客户服务热线申请，客服人员登记后将为您申请并寄送发票。<br>
+
+
+1、发票为正规保险发票，由各家保险公司提供，因不同保险公司提供的发票形式不同，申请和寄送时效也有较大差距，请您谅解，如有其他要求请申请发票时与客服沟通。<br><br>
+2、如在申请发票后需办理变更或退保，需将收到的发票寄回。<br><br>
+</p>
+<table width="100%" border="1" class="help_table">
+  <tr>
+    <td>银行</td>
+    <td>客服电话</td>
+    <td>银行网站</td>
+  </tr>
+  <tr><td>工商银行</td><td>95588</td><td>www.icbc.com.cn </td></tr>
+  <tr><td>建设银行</td><td>95533</td><td>www.ccb.com </td></tr>
+  <tr><td>中国银行</td><td>95566</td><td>www.boc.cn </td></tr>
+  <tr><td>邮政储蓄银行</td><td>95580</td><td>www.psbc.com </td></tr>
+  <tr><td>交通银行</td><td>95559</td><td>www.bankcomm.com </td></tr>
+  <tr><td>农业银行</td><td>95599</td><td>www.abchina.com/cn/ </td></tr>
+  <tr><td>招商银行</td><td>95555</td><td>www.cmbchina.com </td></tr>
+  <tr><td>浦东发展银行</td><td>95528</td><td>www.spdb.com.cn </td></tr>
+  <tr><td>民生银行</td><td>95568</td><td>www.cmbc.com.cn </td></tr>
+  <tr><td>深圳发展银行</td><td>95501</td><td>http://www.cngold.org/hao/c62132.html </td></tr>
+  <tr><td>兴业银行</td><td>95561</td><td>www.cib.com.cn/ </td></tr>
+  <tr><td>北京银行</td><td>95526</td><td>www.bankofbeijing.com.cn </td></tr>
+  <tr><td>光大银行</td><td>95595</td><td>www.cebbank.com </td></tr>
+  <tr><td>中信银行</td><td>95558</td><td>www.bank.ecitic.com </td></tr>
+  <tr><td>广东发展银行</td><td>95508</td><td>www.cgbchina.com.cn/ </td></tr>
+  <tr><td>平安银行</td><td>95511-3</td><td>www.bank.pingan.com/ </td></tr>
+  <tr><td>宁波银行</td><td>0574-96528</td><td>www.nbcb.com.cn </td></tr>
+  <tr><td>杭州银行</td><td>4008888508</td><td>www.hzbank.com.cn/ </td></tr>
+  <tr><td>上海银行</td><td>021-962888</td><td>www.bankofshanghai.com/ </td></tr>
+  <tr><td>温州银行</td><td>0577-96699</td><td>www.wzcb.com.cn </td></tr>
+  <tr><td>上海农商银行</td><td>021-962999</td><td>www.srcb.com/ </td></tr>
+  <tr><td>北京农商银行</td><td>010-96198</td><td>www.bjrcb.com/ </td></tr>
+  <tr><td>富滇银行</td><td>0871-96533</td><td>www.fudian-bank.com/ </td></tr>
+</table>
+
+
+                  
+                      </div>
+                    </div>
+				</div>
+			</div>
+			<cms:include file="block/help_common_sidebar.shtml" />
+		</div>
+        
+        
+        
+        </div>
+
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+
+<script src="${Site.JsResourcePath}/js/sidebar-follow-jquery.js"></script>
+<script>
+/*侧边栏跟随配置*/
+(new SidebarFollow()).init({
+	element: jQuery('#sidebar_help'),
+	distanceToTop: 10
+});
+  
+  jQuery(document).ready(function() {
+	  jQuery(".help_tree").each(function(i, v) {
+		  jQuery(v).find("dd").each(function(j, o) {
+			 if (jQuery(o).find("a").attr("href").indexOf(window.location.href) >=0) {
+				 jQuery(v).addClass("help_select").siblings().removeClass("help_select");
+			 }
+		  })
+	  });
+	  jQuery(".help_tree dt").click(function(){
+	        var jPar = jQuery(this).parent();
+
+	        if(!jPar.hasClass("help_select")){
+	            jPar.addClass("help_select")
+	                .siblings()
+	                .removeClass("help_select");
+	        }
+	    });
+  });
+</script>
+
+</body>
+</html>

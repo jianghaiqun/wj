@@ -1,0 +1,15 @@
+<div class="ste_nav">
+	<div class="wrapper  g-weaper">
+	<div class="mini_logo"><a href="http://localhost:8080/"></a></div>
+		<ul class="ste_nav_list">
+			<li class="ste_nav_home"><a href="http://localhost:8080/">首页</a></li>
+			<li><a href="http://localhost:8080/lvyou-baoxian/" target="_blank" >旅游险</a></li>
+			<li><a href="http://localhost:8080/yiwai-baoxian/" target="_blank" >意外险</a></li>
+			<li><a href="http://localhost:8080/jiankang-baoxian/" target="_blank" >健康险</a></li>
+			<li><a href="http://localhost:8080/renshou-baoxian/" target="_blank" >人寿险</a></li>
+			<li><a href="http://localhost:8080/jiacai-baoxian/" target="_blank" >家财险</a></li>
+			<li><a href="http://localhost:8080/tx/" target="_blank" >团体险</a></li>
+			<li><a href="http://localhost:8080/chexian/" target="_blank" >车险</a></li>
+		</ul>
+	</div>
+</div>

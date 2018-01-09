@@ -1,0 +1,30 @@
+<% DataTable dt_0 = TemplateData.getDocList("article","保险百科","all","hp_recommend","modifyzx","4","null","null","null");
+  if(dt_0==null){write("没有找到栏目。parent：null  catalog："+"保险百科");}else{
+ int rdCnt=dt_0.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_0  = dt_0.getDataRow(i);
+ int rdIdx=i;
+%>
+
+				<% if(i==0){%>
+				<div id="con_top_Lv_<%=(i+1) %>" class="news_cttop">
+				<% }else{%>
+				<div id="con_top_Lv_<%=(i+1) %>" class="news_cttop" style="display: none;">
+				<% }%>
+	                <div class="news_ctImg">
+	                    <a href="${article_0.Link}" alt="" rel="nofollow">
+	                        <img src="${Site.StaticResourcePath}/${article_0.logo}" width="210" height="160"/>
+	                    </a>
+	                </div>
+	                <div class="news_ctText">
+	                    <h2 class="news_ctTitle news_jcct rnews_tl">
+	                        <a href="${article_0.Link}" >${article_0.Title}</a>
+	                    </h2>
+	                    <p class="news_ctover rnews_prg">${article_0.Summary|CharWidth=180}</p>
+	                    <span class="news_more">
+	                        <a href="${article_0.Link}" rel="nofollow" >阅读全文&nbsp;&gt;</a>
+	                    </span>
+	                </div>
+	            </div>
+	        	<%}}%>

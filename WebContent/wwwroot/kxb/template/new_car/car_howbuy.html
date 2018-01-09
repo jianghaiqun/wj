@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link href="${Site.StaticResourcePath}/style/new/global.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/base.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/information.css" rel="stylesheet" type="text/css"/>
+<link href="${Site.StaticResourcePath}/style/car/howbuy.css" rel="stylesheet" type="text/css"/>
+<style>
+.ad_jiaodian { float:left; height:270px; overflow:hidden; padding-right:10px; position:relative; width:510px;  }
+</style>
+</head>
+<body onload="navHeight();">
+<!--mini_nav start-->
+<cms:include file="block/car_header.shtml" />
+<!--mainbody start-->
+<div class="mainbody">
+	<div class="wrapper">
+	<input id="type" type="hidden" value="C"/>
+    	<div class="your_site"><cms:link type="currentPositionList"></cms:link></div>
+        <!--主体部分 左侧边栏 开始-->
+        <div class="buyleftbar">
+        	<!--车主车险 开始-->
+            <div class="role">
+            	<div class="roletit borbottom"><img src="${Site.StaticResourcePath}/images/new_car/role_ico01.jpg" width="26" height="26" align="absmiddle" /><h2>车主</h2><span>Hi选择适合您的角色吧！</span></div>
+                <div class="rolelist">
+                    <ul class="borbottom">
+                        <li><strong>特征：</strong><a href="${Site.URL}/chexian/man.shtml" target="_blank">男性</a>｜<a href="${Site.URL}/chexian/woman.shtml" target="_blank">女性</a>｜<a href="${Site.URL}/chexian/oldman.shtml" target="_blank">老人</a></li>
+                        <li><strong>技术：</strong><a href="${Site.URL}/chexian/newdrivers.shtml" target="_blank">新手</a>｜<a href="${Site.URL}/chexian/skilleddrivers.shtml" target="_blank">老手</a></li>
+                        <li><strong>车况：</strong><a href="${Site.URL}/chexian/newcar.shtml" target="_blank">新车</a>｜<a href="${Site.URL}/chexian/usedcar.shtml" target="_blank">二手车</a></li>
+                        <li><strong>场景：</strong><a href="${Site.URL}/chexian/forwork.shtml" target="_blank">上下班</a>｜<a href="${Site.URL}/chexian/business.shtml" target="_blank">商务</a>｜<a href="${Site.URL}/chexian/longdistancedriving.shtml" target="_blank">自驾游</a></li>
+                        <li><strong>环境：</strong><a href="${Site.URL}/chexian/severecold.shtml" target="_blank">高寒</a>｜<a href="${Site.URL}/chexian/heat.shtml" target="_blank">酷暑</a></li>
+                    </ul>
+                </div>
+                <div class="roletit borbottom"><img src="${Site.StaticResourcePath}/images/new_car/role_ico02.jpg" width="26" height="26" align="absmiddle" /><h2>车险</h2><span>您了解车险商业险么？</span></div>
+                <div class="rolelist">
+                    <ul>
+                        <li><strong>基本险：</strong><br/><a href="${Site.URL}/chexian/chesunxian.shtml" target="_blank">车损险</a>｜<a href="${Site.URL}/chexian/sanzexian.shtml" target="_blank">三者险</a>｜<a href="${Site.URL}/chexian/daoqiangxian.shtml" target="_blank">盗抢险</a>｜<a href="${Site.URL}/chexian/chezexian.shtml" target="_blank">司机座位险</a>｜<a href="${Site.URL}/chexian/chezexian.shtml" target="_blank">乘客座位险</a></li>
+                        <li><strong>附加险种：</strong><br/><a href="${Site.URL}/chexian/huahenxian.shtml" target="_blank">划痕险</a>｜<a href="${Site.URL}/chexian/bolixian.shtml" target="_blank">玻璃破碎险</a>｜<a href="${Site.URL}/chexian/sheshuixian.shtml" target="_blank">涉水险</a>｜<a href="${Site.URL}/chexian/ziranxian.shtml" target="_blank">自燃险</a>｜<a href="${Site.URL}/chexian/bujimianpeixian.shtml" target="_blank">不计免赔险</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--车主车险 结束-->
+            <!--常见问题 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>常见问题</h2>
+                    <h6><a href=" ${Site.URL}/chexian/club/wenda/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险问答" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--常见问题 结束-->
+            <!--案例解读 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>案例解读</h2>
+                    <h6><a href="${Site.URL}/chexian/club/anli/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险案例" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--案例解读 结束-->
+        </div>
+        <!--主体部分 左侧边栏 开始-->
+        <!--主体部分 右侧 开始-->
+    	<div class="buymain">
+        	<div class="picmain">
+            	<!--焦点图片 开始-->
+            	 <div class="picscroll">
+                    <cms:imageplayer code="car_howBuy" type="0" width="300" height="250" />
+                </div> 
+                <!--焦点图片 结束-->
+                <!--获取报价 start-->
+            <div class="price">
+                <ul>
+                    <li><span class="bg07 white">车主姓名</span><input id="carUser" name="carUser" type="text" class="text" maxlength="30"/></li>
+                    <li><span class="bg08 white">联系电话</span><input id="carPhone" name="carPhone" type="text" class="text" maxlength="11"/></li>
+                    <li><span class="bg09 white">车牌号</span><input id="carNO" name="carNO" type="text" class="text" maxlength="9"/></li>
+                    <li><input name="" type="checkbox" value="" id="guidtype" align="absmiddle"/><label for="guidtype">新车未上牌</label></li>
+                    <li><span class="mt_6">保险公司</span>
+                        <div class="index_tb_right pr" id="corpBar">
+                            <a href="javascript:;" class="car_tb_corp tb_active" rel="pa">平安</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="tpy">太平洋</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="yg">阳光</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="dd">大地</a>
+                            <a href="javascript:;" class="car_tb_corp" rel="tp">安盛天平</a>
+                        </div>
+                    </li>
+                    <li><input name="" onclick="guoduNew()" type="button" class="btn" value="获取报价" /></li>
+                </ul>
+              <div class="clear"></div>
+            </div>
+            <!--获取报价 end-->
+            </div>
+        	<!--菜鸟开车 开始-->
+        	<div class="rolenav">
+            	<ul>
+                	<li>
+                    	<h2><a href="${Site.URL}/chexian/newdrivernewcar.shtml" target="_blank" >菜鸟开新车</a></h2>
+                        <p>男性，新手，刚买的新车，每天上下班，有固定停车位，适合买什么样的车险？<a href="${Site.URL}/chexian/newdrivernewcar.shtml" class="colorblue" rel="nofollow" target="_blank">详细&gt;&gt;</a></p>
+                    </li>
+                    <li>
+                    	<h2><a href="${Site.URL}/chexian/skilleddriveruesdcar.shtml" target="_blank" >老手开老车</a></h2>
+                        <p>男性，三年驾龄，淘得二手车，路途较远，没有固定停车位，买什么样的车险好？<a href="${Site.URL}/chexian/skilleddriveruesdcar.shtml" class="colorgreen" rel="nofollow" target="_blank">详细&gt;&gt;</a></p>
+                    </li>
+                    <li>
+                    	<h2><a href="${Site.URL}/chexian/woman.shtml"  target="_blank" >女人开车</a></h2>
+                        <p>女性，天生卓尔不群的空间感，新手和老手之外的驾驶人群，适合什么样的车险？<a href="${Site.URL}/chexian/woman.shtml" class="colorred" rel="nofollow" target="_blank">详细&gt;&gt;</a></p>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--菜鸟开车 结束-->
+        	<!--车险怎么买 开始-->
+            <div class="howbuy">
+                <div class="buymaintit"><h1>车险怎么买 ?</h1></div>
+                <ul class="buymainlist">
+                    <li><a href="${Site.URL}/chexian/man.shtml" target="_blank" rel="nofollow">-男人-</a></li>
+                    <li><a href="${Site.URL}/chexian/woman.shtml" target="_blank" rel="nofollow">-女人-</a></li>
+                    <li><a href="${Site.URL}/chexian/oldman.shtml" target="_blank" rel="nofollow">-老人-</a></li>
+                    <li><a href="${Site.URL}/chexian/newdrivers.shtml" target="_blank" rel="nofollow">-新手-</a></li>
+                    <li><a href="${Site.URL}/chexian/skilleddrivers.shtml" target="_blank" rel="nofollow">-老手-</a></li>
+                    <li><a href="${Site.URL}/chexian/newcar.shtml" target="_blank" rel="nofollow">-新车-</a></li>
+                    <li><a href="${Site.URL}/chexian/usedcar.shtml" target="_blank" rel="nofollow">-二手车/老车-</a></li>
+                    <li><a href="${Site.URL}/chexian/forwork.shtml" target="_blank" rel="nofollow">-上班下班-</a></li>
+                    <li><a href="${Site.URL}/chexian/business.shtml" target="_blank" rel="nofollow">-商务用车-</a></li>
+                    <li><a href="${Site.URL}/chexian/longdistancedriving.shtml" target="_blank" rel="nofollow">-自驾游/长途-</a></li>
+                    <li><a href="${Site.URL}/chexian/limousine.shtml" target="_blank" rel="nofollow">-高档车-</a></li>
+                    <li><a href="${Site.URL}/chexian/intermediate.shtml" target="_blank" rel="nofollow">-中档车-</a></li>
+                    <li><a href="${Site.URL}/chexian/severecold.shtml" target="_blank" rel="nofollow">-冰雪严寒-</a></li>
+                    <li><a href="${Site.URL}/chexian/heat.shtml" target="_blank" rel="nofollow">-酷暑暴雨-</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--车险怎么买 结束-->
+        </div>
+        <!--主体部分 右侧 结束-->
+        <div class="clear"></div>
+        <div class="buybanner mt10"><a href="${catalog.CenterHref}" target="_blank" ><img src="${Site.StaticResourcePath}/${catalog.CenterAd}" width="980" height="100" /></a></div>
+        <!--主体部分 左侧边栏 开始-->
+        <div class="buyleftbar">
+            <!--车险资讯 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>车险资讯</h2>
+                    <h6><a href="${Site.URL}/chexian/club/zixun/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article" name="车险资讯" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}" target="_blank">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--车险资讯 结束-->
+            <div class="right_banner mt10 border_gray"><a href="${catalog.LeftHref}" target="_blank"><img src="${Site.StaticResourcePath}/${catalog.LeftAd}" width="223" height="82" /></a></div>
+            <!--车险知识 开始-->
+            <div class="hotnews">
+            	<div class="hotnews_title">
+                	<h2>车险知识</h2>
+                    <h6><a href="${Site.URL}/chexian/club/zhishi/" target="_blank">更多&gt;&gt;</a></h6>
+                </div>
+                <ul class="hotnews_list">
+                	<cms:list item="article"  name="车险知识" count="5" tag="${catalog.tag}">
+				 			<li><a href="${Site.URL}/${Article.Link}" target="_blank" title="${Article.title|substrwidth=18}" target="_blank">${Article.title|substrwidth=18}</a></li>
+					</cms:list>
+                </ul>
+            </div>
+            <!--车险知识 结束-->
+        </div>
+        <!--主体部分 左侧边栏 开始-->
+        <!--主体部分 右侧 开始-->
+    	<div class="buymain">
+        	<div class="buymaintit"><h2>了解商业车险种类</h2></div>
+            <!--车险模拟 开始-->
+            <div class="carspecies">
+            	<ul id="car_xian">
+                    <li class="car_clssx">
+                        <span class="carxiantit">车辆损失险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        车辆因意外事故或自然灾害遭受到任何损失，车损险都可以进行赔付。包括车辆碰撞、车子受损、意外损害等等。车损险保障范围广泛，是驾驶员最佳保险选择。<br/>
+                        <strong>我需要买吗？</strong><br/>
+                        1、新手新车最易发生事故，十分有必要购买<br/>
+                        2、任何车辆都有投保车损险的必要性。如今修车费用动辄数千元，购买车损险都可获得赔付，性价比极高。<br/>
+                        <a href="${Site.URL}/chexian/chesunxian.shtml" target="_blank">更多&gt;&gt;</a>
+                        </div>
+                    </li>
+                    <li class="car_blddpsx">
+                        <span class="carxiantit">玻璃单独破碎险</span>
+                        <div class="p_conss">
+                    	<strong>保什么？</strong><br/>
+                        该险种承保挡风玻璃和车窗玻璃破碎造成的损失，如高速行驶被石子击碎车窗、高空坠物造成玻璃破碎等情况。需注意，车灯、车镜玻璃、天窗玻璃、车窗贴膜损失不在保障范围内。<br/>
+                        <strong>我需要买吗？</strong><br/>
+                        1、新车上路备受呵护，建议投保<br/>
+                        2、高速公路行车频繁的，建议投保<br/>
+                        3、露天停放，担心高空坠物损伤的，建议投保<br/>
+                        <a href="${Site.URL}/chexian/bolixian.shtml" target="_blank">更多&gt;&gt;</a>
+                    	</div>
+                    </li>
+                    <li class="car_sjzwzrx">
+                        <span class="carxiantit">司机座位责任险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        该险种为附加险，主要赔偿车辆因交通事故造成的车内人员的伤亡。分为司机座位责任险和乘客座位责任险。<br/>
+                        <strong>我需要买吗？</strong><br/>
+                        1、新手及经常开车的人，容易发生意外事故，建议购买司机座位责任险。<br/>
+                        2、经常载人出行的人，建议投保乘客座位责任险。<br/>
+                        3、家庭车辆，建议为所有座位都投保该险种。<br/>
+                        <a href="${Site.URL}/chexian/chezexian.shtml" target="_blank">更多&gt;&gt;</a>
+                        </div>
+                    </li>
+                    <li class="car_ckzwzrx">
+                        <span class="carxiantit">乘客座位责任险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        车辆由于发生碰撞等意外事故而造成的车上新增设备的直接损失，包括：加装制冷设备、CD及电视录像设备、真皮或电动座椅等等的直接损毁时，保险公司按实际损失赔偿。<br />
+                        <strong>我需要买吗？</strong><br/>
+                        以下任一情况建议投保<br/>
+                        1、车上设备较多的车辆<br/>
+                        2、重新装修过并新增加设备的车辆<br/>
+                        3、车上设备价值较高的车辆<br/>
+                        <a href="${Site.URL}/chexian/chezexian.shtml" target="_blank">更多&gt;&gt;</a>
+                        </div>
+                    </li>
+                    <li class="car_cshhx">
+                        <span class="carxiantit">车身划痕险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        车身划痕险可保障车身因尖锐物体如小刀、石子、钥匙等造成的车漆破坏。而与其他物体发生碰撞造成的损失如车辆碰撞、剐蹭到固定物体等情况，不包含在划痕险的保障范围内。<br/>
+                        <strong>我需要买吗？</strong><br/>
+                        以下情况建议投保划痕险<br/>
+                        1、新车上路，建议购买划痕险<br/>
+                        2、长期露天停放的车辆<br/>
+                        3、所在小区孩子较多，玩耍易造成车漆刮花，建议购买<br/>
+                        <a href="${Site.URL}/chexian/huahenxian.shtml" target="_blank">更多&gt;&gt;</a>
+                        </div>
+                    </li>
+                    <li class="car_ssxsssx">
+                        <span class="carxiantit">涉水行驶损失险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        涉水险也成为发动机特别损失险，当保险车辆在积水路面涉水行驶或被水淹后致使发动机损坏可给予赔偿。但车主在水中"二次打火"造成损失，该险种不予理赔。<br />
+                        <strong>我需要买吗？</strong><br/>
+                        以下情况建议购买：<br/>
+                        1、洪涝灾害、暴雨频发地区的车主<br/>
+                        2、常年停放在地下车库，排水系统较差的情况<br/>
+                        3、南方夏季雨水较多，车辆很容易被淹，有必要投保<br/>
+                        4、所在城市排水系统不好，且露天停放的车辆。北京暴雨之后，该险种的需求明显上升，建议大家投保，有备无患。<br/>
+                        <a href="${Site.URL}/chexian/sheshuixian.shtml" target="_blank">更多&gt;&gt;</a>
+                        </div>
+                    </li>
+                    <li class="car_qcfdx">
+                        <span class="carxiantit">全车防盗险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        全车被盗窃、被抢劫、被抢夺造成的车辆损失以及在被盗窃、被抢劫、被抢夺期间受到损坏或车上零部件、附属设备丢失需要修复的合理费用，保险公司予以赔付。<br/>
+                        <strong>我需要买吗？</strong><br/>
+                        以下情况建议投保盗抢险<br/>
+                        1、新车盗抢风险较大，建议两年之内的车都购买盗抢险<br/>
+                        2、本田雅阁、桑塔纳、丰田凯美瑞等车型极易被盗，建议投保<br/>
+                        3、露天停放或者无固定停车点的车主<br/>
+                        4、周遭治安环境不好，建议购买<br/>
+                        5、价格较贵的车，建议购买盗抢险<br/>
+                        <a href="${Site.URL}/chexian/daoqiangxian.shtml" target="_blank">更多&gt;&gt;</a>
+                        </div>
+                    </li>
+                    <li class="car_zrssx">
+                        <span class="carxiantit">自燃损失险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        因本车电器、线路、供油系统发生故障及运载货物自身原因起火燃烧，造成保险车辆的损失，保险公司按照条款规定进行赔付。<br/>
+                        <strong>我需要买吗？</strong><br/>
+                        1、车辆行驶超过3万公里后，车辆内部零件磨损严重，建议投保。<br/>
+                        2、行驶多年的车辆，油路跟电路老化，建议投保。<br/>
+                        3、夏季高温，露天停放的车子建议投保自燃险<br/>
+                        4、公共营运车辆建议投保<br/>
+                        5、长途运营车辆或者货车，都建议投保自燃险。<br/>
+                        <a href="${Site.URL}/chexian/ziranxian.shtml" target="_blank">更多&gt;&gt;</a>
+                    </div>
+                    </li>
+                    <li class="car_bjmpx">
+                        <span class="carxiantit">不计免赔险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        不计免赔特约险是指经特别约定之后，当发生保险事故，对应投保的险种可以提高保险赔偿限额。如三者险的免赔额是15%，投保不计免赔特约险之后，15%的免赔由保险公司承担。<br/>
+                        <strong>我需要买吗？</strong><br/>
+                        该险种保费低，但能全面的降低车险赔付标准，轻微损失也可获得全额赔偿，是车险最佳搭配险种，特别推荐购买。<br/>
+                        <a href="${Site.URL}/chexian/bujimianpeixian.shtml" target="_blank">更多&gt;&gt;</a>
+                        </div>
+                    </li>
+                    <li class="car_sydszzrx">
+                        <span class="carxiantit">商业第三者责任险</span>
+                        <div class="p_conss">
+                        <strong>保什么？</strong><br/>
+                        当驾驶员在使用车辆过程中发生意外事故，导致第三者遭受人身伤亡或财产直接损毁，依法应当由被保险人承担的经济责任，保险公司负责赔偿。<br/>
+                        <strong>我需要买吗？</strong><br/>
+                        1、交强险对于第三者财产损失及医疗费用赔偿较低，因此担心赔付能力不足的，都建议购买三责险。<br/>
+                        2、意外撞车、车辆伤人等严重交通事故，三者险都可以弥补一定的经济损失。<br/>
+                        <a href="${Site.URL}/chexian/sanzexian.shtml" target="_blank">更多&gt;&gt;</a>
+                        </div>
+                    </li>
+                 </ul>
+            </div>
+            <!--车险模拟 结束-->
+        </div>
+        <!--主体部分 右侧 结束-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--mainbody end-->
+
+
+<cms:include file="block/car_footer.shtml" />
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/bigpicroll.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car/car.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('div, ul, img, li, input , a');
+</script>
+<![endif]-->
+</body>
+</html>
+
+

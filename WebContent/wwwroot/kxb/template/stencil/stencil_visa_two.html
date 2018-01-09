@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>${catalog.meta_title}</title>
+</head>
+  <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+  <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/reset-grids.css"/>
+  <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/stencil.css"/>
+  <link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_logo.css"/>
+
+<body>
+<cms:include file="block/kxb_header_index_new_v2.shtml" includetype="virtual"/>
+  <div class="wrapper">
+    <div class="visa_banner">
+      <img src="${Site.StaticResourcePath}/${Catalog.zhuantibanner}" alt="${Catalog.name}签证保险办理攻略" width="978px" height="230px">
+      <h1 class="visa_banner_t">${Catalog.name}签证保险办理攻略</h1>
+    </div>
+    <div class="visa_min_nav visa_border_h">
+      <div class="visa_nav_t">所有地区分类</div>
+      <ul>
+        <li class="visa_nav_one">
+          <a href="${Site.URL}/60000102/" class="visa_nav_a">欧洲申根签证保险</a>
+          <div class="main_nav_sbox main_nav_sbox1" style="display:none">
+            <ul class="visa_nav_two main_nav_sbox1" >
+            <cms:list item="article" level="all" name="欧洲申根">
+              <li>
+                <a href="${article.link}" target="_blank">${article.title}签证保险办理</a>
+              </li>
+              </cms:list>
+            </ul>
+          </div>
+        </li>
+        <li  class="visa_nav_one">
+          <a href="${Site.URL}/60000202/" class="visa_nav_a ">亚洲签证保险</a>
+          <div class="main_nav_sbox main_nav_sbox2" style="display:none">
+            <ul class="visa_nav_two">
+              <cms:list item="article" level="all" name="亚洲">
+              <li>
+                <a href="${article.link}" target="_blank">${article.title}签证保险办理</a>
+              </li>
+              </cms:list>
+            </ul>
+          </div>
+        </li>
+        <li  class="visa_nav_one">
+          <a href="${Site.URL}/60000302/" class="visa_nav_a ">北美洲签证保险</a>
+          <div class="main_nav_sbox main_nav_sbox3" style="display:none">
+            <ul class="visa_nav_two">
+              <cms:list item="article" level="all" name="北美洲">
+              <li>
+                <a href="${article.link}" target="_blank">${article.title}签证保险办理</a>
+              </li>
+              </cms:list>
+            </ul>
+          </div>
+        </li>
+        <li  class="visa_nav_one">
+          <a href="${Site.URL}/60000402/" class="visa_nav_a ">南美洲签证保险</a>
+          <div class="main_nav_sbox main_nav_sbox4" style="display:none">
+            <ul class="visa_nav_two">
+              <cms:list item="article" level="all" name="南美洲">
+              <li>
+                <a href="${article.link}" target="_blank">${article.title}签证保险办理</a>
+              </li>
+              </cms:list>
+            </ul>
+          </div>
+        </li>
+        <li  class="visa_nav_one">
+          <a href="${Site.URL}/60000502/" class="visa_nav_a ">非洲签证保险</a>
+          <div class="main_nav_sbox main_nav_sbox5" style="display:none">
+            <ul class="visa_nav_two">
+               <cms:list item="article" level="all" name="非洲">
+              <li>
+                <a href="${article.link}" target="_blank">${article.title}签证保险办理</a>
+              </li>
+              </cms:list>
+            </ul>
+          </div>
+        </li>
+        <li  class="visa_nav_one">
+          <a href="${Site.URL}/60000602/" class="visa_nav_a ">大洋洲签证保险</a>
+          <div class="main_nav_sbox main_nav_sbox6" style="display:none">
+            <ul class="visa_nav_two">
+              <cms:list item="article" level="all" name="大洋洲">
+              <li>
+                <a href="${article.link}" target="_blank">${article.title}签证保险办理</a>
+              </li>
+              </cms:list>
+            </ul>
+          </div>
+        </li>
+        <li  class="visa_nav_one">
+          <a href="${Site.URL}/60000702/" class="visa_nav_a ">南极洲签证保险</a>
+          <div class="main_nav_sbox main_nav_sbox7" style="display:none">
+            <ul class="visa_nav_two">
+              <cms:list item="article" level="all" name="南极洲">
+              <li>
+                <a href="${article.link}" target="_blank">${article.title}签证保险办理</a>
+              </li>
+              </cms:list>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <a href="" target="_blank">
+        <img src="${Site.StaticResourcePath}/${Catalog.daohangxiatupian}" width="190px" height="190px" class="visa_l_ads" alt=""></a>
+    </div>
+    <div class="visa_r ">
+      <div class="visa_bg_box visa_border_h cf">
+        <div class="visa_bg_l">
+          <h2 class="visa_d_title">
+            <a href="${Catalog.lanmuyilianjie}" target="_blank">${Catalog.lanmuyibiaoti}</a>
+          </h2>
+          <p  class="visa_d_p1">
+           ${Catalog.lanmuyizhaiyao|CharWidth=250}
+            <a href="${Catalog.lanmuyilianjie}" class="visa_bg_more" target="_blank">...更多</a>
+          </p>
+        </div>
+        <div class="visa_img_ad">
+          <a href="${Catalog.lanmuyilianjie}" target="_blank">
+            <img src="${Site.StaticResourcePath}/${Catalog.lanmuyitupian}" width="246px" height="206px" alt=""></a>
+        </div>
+
+      </div>
+      <div class="visa_border_h visa_r_box cf">
+        <h2 class="visa_title_2"> <b>${Catalog.name}签证办理注意事项</b>
+        </h2>
+        <div class="visa_ss_bxo">
+          <h3 class="visa_d_title">
+            <a href="${Catalog.lanmuerlianjie}" target="_blank">${Catalog.lanmuerbiaoti}</a>
+          </h3>
+          <p>
+           ${Catalog.lanmuerzhaiyao|CharWidth=250}
+           <a href="${Catalog.lanmuerlianjie}" class="visa_bg_more" target="_blank">...更多</a>
+          </p>
+          <div class="visa_xx_bor"></div>
+          <h3 class="visa_d_title">办理流程</h3>
+          <img src="${Site.StaticResourcePath}/images/stencil/visa_lc_07.jpg" width="692px" height="71px" alt="">
+          <div class="visa_xx_bor"></div>
+          <h3 class="visa_d_title">${Catalog.lanmuerInvokTitle}</h3>
+          <ul class="visa_zd_list">
+            <li>
+              <a href="${Catalog.lanmuerurl1}" target="_blank">>${Catalog.lanmuerInvok1}</a>
+            </li>
+            <li>
+              <a href="${Catalog.lanmuerurl2}" target="_blank">>${Catalog.lanmuerInvok2}</a>
+            </li>
+            <li>
+              <a href="${Catalog.lanmuerurl3}" target="_blank">>${Catalog.lanmuerInvok3}</a>
+            </li>
+            <li>
+              <a href="${Catalog.lanmuerurl4}" target="_blank">>${Catalog.lanmuerInvok4}</a>
+            </li>
+            <li>
+              <a href="${Catalog.lanmuerurl5}" target="_blank">>${Catalog.lanmuerInvok5}</a>
+            </li>
+            <li>
+              <a href="${Catalog.lanmuerurl6}" target="_blank">>${Catalog.lanmuerInvok6}</a>
+            </li>
+            <li>
+              <a href="${Catalog.lanmuerurl7}" target="_blank">>${Catalog.lanmuerInvok7}</a>
+            </li>
+            <li>
+              <a href="${Catalog.lanmuerurl8}" target="_blank">>${Catalog.lanmuerInvok8}</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="visa_border_h visa_r_box cf">
+        <h2 class="visa_title_2"> <b>${Catalog.name}签证保险产品</b>
+        </h2>
+        <div class="visa_shop cf">
+        <cms:list item="article" level="all" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Catalog.product1}' and type='1' and status=30 limit 1  ">
+          <div class="visa_shop_l">
+            <div class="visa_box_logo">
+              <span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span>
+            </div>
+            <div class="cp_title_s">
+              <h2>
+                <a href="${Site.url}/${Article.url}" target="_blank">${Article.title}</a>
+              </h2>
+              <p>
+                ${Article.AdaptPeopleInfo}
+              </p>
+            </div>
+            <ul class="stencil_td ">
+              <ul class="ld_list_box">
+                ${Article.FEMRiskBrightSpot}
+              </ul>
+            </ul>
+
+          </div>
+          <div class="visa_shop_c">
+            <div class="stencil_cp_des_list">
+              <p>
+               ${Article.DutyHTML}
+              </p>
+            </div>
+          </div>
+          <div class="visa_shop_r">
+            <div class="cp_price_con"> <em>RMB</em>
+              <span name="Ajax_Prict_${Article.RiskCode}">${Article.InitPrem}</span>
+              <a href="${Site.url}/${Article.url}" target="_blank">查看详情</a>
+            </div>
+          </div>
+          </cms:list>
+        </div>
+        <div class="visa_shop cf">
+        <cms:list item="article" level="all" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Catalog.product2}' and type='1' and status=30 limit 1 ">
+          <div class="visa_shop_l">
+            <div class="visa_box_logo">
+              <span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span>
+            </div>
+            <div class="cp_title_s">
+              <h2>
+                <a href="${Site.url}/${Article.url}" target="_blank">${Article.title}</a>
+              </h2>
+              <p>
+                ${Article.AdaptPeopleInfo}
+              </p>
+            </div>
+            <ul class="stencil_td ">
+              <ul class="ld_list_box">
+                ${Article.FEMRiskBrightSpot}
+              </ul>
+            </ul>
+
+          </div>
+          <div class="visa_shop_c">
+            <div class="stencil_cp_des_list">
+              <p>
+               ${Article.DutyHTML}
+              </p>
+            </div>
+          </div>
+          <div class="visa_shop_r">
+            <div class="cp_price_con"> <em>RMB</em>
+              <span name="Ajax_Prict_${Article.RiskCode}">${Article.InitPrem}</span>
+              <a href="${Site.url}/${Article.url}" target="_blank">查看详情</a>
+            </div>
+          </div>
+          </cms:list>
+        </div>
+        <div class="visa_shop cf">
+        <cms:list item="article" level="all" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Catalog.product3}' and type='1' and status=30 limit 1 ">
+          <div class="visa_shop_l">
+            <div class="visa_box_logo">
+              <span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span>
+            </div>
+            <div class="cp_title_s">
+              <h2>
+                <a href="${Site.url}/${Article.url}" target="_blank">${Article.title}</a>
+              </h2>
+              <p>
+                ${Article.AdaptPeopleInfo}
+              </p>
+            </div>
+            <ul class="stencil_td ">
+              <ul class="ld_list_box">
+                ${Article.FEMRiskBrightSpot}
+              </ul>
+            </ul>
+
+          </div>
+          <div class="visa_shop_c">
+            <div class="stencil_cp_des_list">
+              <p>
+               ${Article.DutyHTML}
+              </p>
+            </div>
+          </div>
+          <div class="visa_shop_r">
+            <div class="cp_price_con"> <em>RMB</em>
+              <span name="Ajax_Prict_${Article.RiskCode}">${Article.InitPrem}</span>
+              <a href="${Site.url}/${Article.url}" target="_blank">查看详情</a>
+            </div>
+          </div>
+          </cms:list>
+        </div>
+        <div class="visa_shop cf">
+        <cms:list item="article" level="all" condition="select * from ZCArticle where ZCArticle.cataloginnercode like '002313%' and  prop4 = '${Catalog.product4}' and type='1' and status=30 limit 1 ">
+          <div class="visa_shop_l">
+            <div class="visa_box_logo">
+              <span class="CInsuranceCompany icon_C${Article.SupplierCode2}"></span>
+            </div>
+            <div class="cp_title_s">
+              <h2>
+                <a href="${Site.url}/${Article.url}" target="_blank">${Article.title}</a>
+              </h2>
+              <p>
+                ${Article.AdaptPeopleInfo}
+              </p>
+            </div>
+            <ul class="stencil_td ">
+              <ul class="ld_list_box">
+                ${Article.FEMRiskBrightSpot}
+              </ul>
+            </ul>
+
+          </div>
+          <div class="visa_shop_c">
+            <div class="stencil_cp_des_list">
+              <p>
+               ${Article.DutyHTML}
+              </p>
+            </div>
+          </div>
+          <div class="visa_shop_r">
+            <div class="cp_price_con"> <em>RMB</em>
+              <span name="Ajax_Prict_${Article.RiskCode}">${Article.InitPrem}</span>
+              <a href="${Site.url}/${Article.url}" target="_blank">查看详情</a>
+            </div>
+          </div>
+          </cms:list>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+<!--通用footer-->
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/stencil/stencil_visa.js"></script>
+
+</body>
+</html>

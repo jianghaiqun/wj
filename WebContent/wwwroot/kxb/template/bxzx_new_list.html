@@ -1,0 +1,122 @@
+
+<!--位置信息 开始-->
+<div class="wrapper">
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+	</div>
+<!--主体 开始-->
+<div class="wrap980  mainbgl644">
+	<!--左边 开始-->
+	<div class="left644">
+		<!--列表 开始-->
+		<ul class="contentlist">
+			<cms:list item="article" level="all" pagesize="10" page="true">
+				<li>
+					<h3><a href="${article.link}" target="_blank" >${Article.title}</a></h3>
+					<h4><%
+							String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>100){
+							description = description.substring(0,100);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>100){
+							summary = summary.substring(0,100);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==100){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==100){
+							write("...");
+							}
+								
+						%><a href="${article.link}" target="_blank" rel="nofollow">阅读全文</a>
+					</h4>
+					<h5>发布日期：${Article.FirstPublishDate}</h5>
+				</li>
+			</cms:list>	
+		</ul>
+		<!--列表 结束-->
+		<!--页码 开始-->
+			<div class="plpage">
+				<div id="plpagecont">${PageBar1}</div>
+				<div class="clear"></div>
+			</div>
+			<!--页码 结束-->
+			<!--人气产品搜索词 开始-->
+			<div class="hotprodukeywordtit graybordert">人气产品搜索词</div>
+			<ul class="hotprodukeyword">
+				<cms:list item="friendlink" name="人气产品搜索词">
+					<li><a href="${friendlink.URL}" target="_blank">${friendlink.Name|CharWidth=7}</a></li>
+				</cms:list>
+			</ul>
+			<div class="h20"></div>
+			<!--人气产品搜索词 结束-->
+	</div>
+	<!--左边 结束-->
+	<!--右边 开始-->
+	<div class="right336">
+		<!--栏目分类 开始-->
+		<div class="columntit">栏目分类</div>
+		<ul class="columnclass">
+			<cms:list item="catalog" level="child"  name="保险知识" condition="Prop2='Y'">
+				<li><a href="${Site.URL}/${Catalog.URL}" target="_blank">${Catalog.Name}</a></li>
+			</cms:list>
+           <cms:list item="catalog" level="child"  name="保险资讯" condition="Prop2='Y'">
+				<li><a href="${Site.URL}/${Catalog.URL}" target="_blank">${Catalog.Name}</a></li>
+			</cms:list>		
+		</ul>
+		<div class="h20"></div>
+		<!--栏目分类 结束-->
+		<!--热销保险产品 开始-->
+		<div class="columntit graybordert">热销保险产品</div>
+		<ul class="hotprodu">
+			<cms:list item="article" level="none" count="5" hasAttribute="hot" condition=" (cataloginnercode like '002313000002%' or cataloginnercode like '002313000003%') and status='30'">
+				<li>
+					<h4><a href="${article.link}" title="${article.title}"><img src="${Site.ProductResourcePath}${Article.ProductLogo}" alt="${Article.title}" width="50" height="50"/></a></h4>
+				  	<div class="hotproduright">
+						<h5><a href="${article.link}" title="${article.title}" >${article.title}</a></h5>
+						<h6>${Article.AdaptPeopleInfo|substrwidth=17}</h6>
+					</div>
+				</li>
+			</cms:list>
+		</ul>
+		<!--热销保险产品 结束-->
+		<!--热门标签 开始-->
+		<div class="columntit graybordert">热门标签</div>
+		<ul class="hottag">
+			<cms:list item="customtable" name="zctag"  condition="order by rand()" count="12">
+				<li><span class="${customtable.css}"><a href="${customtable.linkurl}" target="_blank">${customtable.tag}</a></span></li>
+			</cms:list>		
+		</ul>
+		<!--热门标签 结束-->
+		<cms:include file="/block/kxb_zs_right.shtml" />
+	</div>
+	<div class="h10"></div>
+	<!--右边 结束-->
+</div>
+<!--主体 结束-->
+<div class="clear"></div>
+<div class="part6">
+	<ul>
+	<cms:list item="hotopic"  name="资讯列表页" >
+		 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+	</cms:list>	
+		<cms:list item="hotopic"  name="资讯列表页" >
+			<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+		</cms:list>
+	</ul>
+	<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+		<cms:list item="hotopic"  name="资讯列表页" >
+			<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+		 		<cms:sublist item="friendlink" count="50" >
+			 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+				</cms:sublist>		
+			</ul>
+		</cms:list>
+	</div>
+</div>
+
+
+<cms:include file="block/community_v1.shtml" />

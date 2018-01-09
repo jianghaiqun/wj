@@ -1,0 +1,350 @@
+@charset "utf-8";
+/*
+#@des:车险调用样式
+*@maker:dongqi.guo
+*@time:2013-5-28-15:20
+*/
+/* 现代浏览器 */
+.cf:before,
+.cf:after { content:"";display:table;}
+.cf:after {clear:both;}
+/* IE 6/7浏览器 (触发hasLayout) */
+.cf { *zoom:1;}
+/*首页样式*/
+.car_index_s { height:46px; line-height:46px; border:1px solid #D9D9D9; background:#F2F2F2;}
+.car_index_s div,.car_index_s h1{ font-size:2em;  height:46px; line-height:46px; padding-left:15px; color:#424242;}
+.car_bxgs{ width:275px;}
+.car_adjd{ width:700px; border-left:1px solid #D9D9D9; height:246px;}
+/*焦点图切换*/
+.changeBox_a1{position:relative;float:left;width:700px;height:246px; z-index:2; background:url(../../images/index_adloding.gif) center center no-repeat;}
+.changeBox_a1 .a_bigImg{position:absolute;top:0px;left:0px;display:none;z-index:55;}
+.changeDiv{position:absolute;top:0px;left:0px;display:none;}
+.changeDiv h3{position:absolute;bottom:5px;   *bottom: 0px;left:0px;width:700px;height:30px;background:#000000;line-height:30px;opacity:0.4;filter:alpha(opacity=40);}
+.changeDiv h3 a{display:block;padding-left:15px;color:#fff;}
+.ul_change_a2{position:absolute;right:5px;bottom:5px;overflow:hidden;padding-left:19px}
+.ul_change_a2 li{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1}
+.ul_change_a2 span{display:-moz-inline-stack;display:inline-block;margin-right:2px;padding:0px 5px;border:1px solid #999;background:#fff;font-size:1em;opacity:0.85;cursor:hand;cursor:pointer;*display:inline;*zoom:1;filter:alpha(opacity=85)}
+.ul_change_a2 span.on{border:1px solid #CC0000;background:#ED6D00;color:#fff;}
+.car_l_title2{ border-left:2px solid #ED6D00; height:40px; line-height:40px; color:#ED6D00;  padding-left:15px; font-size:1.5em;
+background: #f3f5f7;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzZjVmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGRjZGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDhkY2RmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  #F3F5F7 0%, #D8DCDF 100%, #D8DCDF 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3F5F7), color-stop(100%,#D8DCDF), color-stop(100%,#D8DCDF)); 
+background: -webkit-linear-gradient(top,  #F3F5F7 0%,#D8DCDF 100%,#D8DCDF 100%);
+background: -o-linear-gradient(top,  #F3F5F7 0%,#D8DCDF 100%,#D8DCDF 100%);
+background: -ms-linear-gradient(top,  #F3F5F7 0%,#D8DCDF 100%,#D8DCDF 100%);
+background: linear-gradient(to bottom,  #F3F5F7 0%,#D8DCDF 100%,#D8DCDF 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f5f7', endColorstr='#d8dcdf',GradientType=0 ); 
+ }
+/*大地车险样式*/
+.meihua_p{ font-family:"微软雅黑",Arial, Helvetica, sans-serif}
+.car_mininav{ margin-bottom:5px; width:980px; height:40px;}
+.car_mininav li{ width:139px; height:39px; text-align:center; line-height:39px; border:1px solid #D9D9D9; float:left; margin-right:6px;}
+.car_mininav li a:link,.car_mininav li a:visited,.car_mininav li a:active{ font-size:14px; color:#9B9B9B; display:block;}
+.lp_box{ display:block; float:left; height:24px; overflow:hidden;}
+.lp_box1{ background:url(../../images/car/lp_bg_03.png) no-repeat;width:22px; }
+.lp_box2{ background:url(../../images/car/lp_bg_04.png) repeat-x; line-height:24px; color:#fff; padding-left:10px;}
+.lp_box3{ background:url(../../images/car/lp_bg_06.png) no-repeat; width:6px;}
+.car_mininav li a:hover,.car_mininav li a.s_car_nav{
+	color:#7C7B7B;
+	background: #fefefe; 
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWVlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWVlZWVlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(top,  #FEFEFE 0%, #EEEEEE 100%, #EEEEEE 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#EEEEEE), color-stop(100%,#EEEEEE)); 
+background: -webkit-linear-gradient(top,  #FEFEFE 0%,#EEEEEE 100%,#EEEEEE 100%); 
+background: -o-linear-gradient(top,  #FEFEFE 0%,#EEEEEE 100%,#EEEEEE 100%); 
+background: -ms-linear-gradient(top,  #FEFEFE 0%,#EEEEEE 100%,#EEEEEE 100%);
+background: linear-gradient(to bottom,  #FEFEFE 0%,#EEEEEE 100%,#EEEEEE 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#eeeeee',GradientType=0 );
+	*background:#F3F3F3;
+
+}
+.hzpp_box{ border-bottom:1px solid #D9D9D9; overflow:hidden;height:107px;}
+.pp_logo,.pp_des,.pp_ljbj{ float:left; height:61px;}
+.pp_logo{ width:130px;}
+.pp_des{ width:157px; padding-top:46px;color:#767676; padding-left:10px;}
+.pp_ljbj{ width:94px; float:right; padding-top:42px;}
+.em_red{ padding:2px 3px; margin-right:4px; background:#FF604E; color:#fff;}
+.em_yel{ padding:2px 3px; margin-right:4px; background:#FFC600; color:#fff;}
+.em_blue{ padding:2px 3px; margin-right:4px; background:#80C2FF; color:#fff;}
+.car_banners{ height:286px; position:relative; z-index:0;}
+.dadi_titile{ position:absolute; top:22px; left:155px; font-size:1.5em; font-weight:bold; color:#0472A1;}
+.libaojia{ width:500px; position:absolute; height:79px; bottom:0px; right:4px;}
+.bapjia_btn{ width:129px; height:43px; background:url(../../images/car/dadi_bnt_03.png) no-repeat; display:block; text-indent:-2000em;  transition: background  0.2s ease-in;-moz-transition: background  0.2s ease-in;-o-transition: background  0.2s ease-in;
+-webkit-transition: background  0.2s ease-in;}
+.bapjia_btn:hover{ background-position:0px -43px;  transition: background  0.2s ease-in;-moz-transition: background  0.2s ease-in;-o-transition: background  0.2s ease-in;-webkit-transition: background  0.2s ease-in;}
+.car_desp{ height:37px; background:#0076B4; color:#fff; font-weight:bold; font-size:1.8em; line-height:37px; text-align:center;}
+.car_border{ border:1px solid #B8B8B8;}
+.car_border_q{ border:1px solid #D9D9D9; }
+.hzpp_main{ margin-bottom:10px;}
+.no_top_bor{ border-top:none;}
+.lyg_nav li{ border-bottom:none;}
+.lyg_nav{ margin-bottom:0px;}
+
+.col_list{ width:252px; height:165px; padding-top:80px; text-align:center; font-size:3em; color:#0076B4; line-height:1.2em; font-weight:bold;}
+.youshi_list{ width:720px;}
+.ys_ps{ width:210px; height:110px; float:left; position:relative; margin-top:5px;}
+.ys_ps em{ display:block; position:absolute; left:67px; top:48px; width:135px; background:url(../../images/car/p_bg.png) no-repeat; height:35px; padding-left:22px;}
+.ys_ps span{ display:block; color:#69C5FF; font-family:"微软雅黑",Arial, Helvetica, sans-serif; font-weight:bold; font-size:5em; margin-left:45px; margin-top:20px; height:58px; line-height:58px;}
+.ys_ps span:hover{ color:#0099EC;transition: color  0.2s ease-in;-moz-transition: color  0.2s ease-in;-o-transition: color  0.2s ease-in;
+-webkit-transition:color  0.2s ease-in; cursor:default;}
+.ys_ps i{ display:block; color:#8A8A8A; }
+.p_i_cuowei2{ text-indent:1em;}
+.p_i_cuowei1{ text-indent:2em;}
+.fuwu_sf{ width:256px; float:left; margin-top:40px;}
+.fuwu_sf_s{ width:206px; }
+.fuwu_sf dt{ font-size:2.2em; font-weight:bold; color:#69C5FF; text-align:center; line-height:1.2em; margin:7px 0;}
+.fuwu_sf dd{ text-align:center; color:#8A8A8A;}
+.col_list2{ height:155px; padding-top:60px;}
+.col_list3{ height:120px; padding-top:30px;}
+.col_list4{ height:120px; padding-top:20px;}
+.serivce_list{ margin-top:27px;}
+.no_bor_btn{ border-bottom:none;}
+.serivce_list li{ width:268px; float:left; background:url(../../images/car/gous_06.gif) no-repeat 14px 9px; padding-left:45px; color:#8A8A8A; height:33px; line-height:33px; font-size:14px;}
+.js_con{ color:#8A8A8A; line-height:2em; padding:24px 0 20px 50px; }
+.car_desp2{ font-size:1.5em;}
+.car_left{ width:220px;}
+.car_ad_l{ margin-bottom:5px; width:220px; overflow:hidden;}
+.car_ad_l a{ display:block ; }
+.car_right{ width:750px;}
+.car_box1{ height:245px;}
+.car_box2{ height:215px;}
+.car_box3{ height:150px;}
+.car_box4{ height:140px;}
+.car_l_title{ height:40px; line-height:40px; border-left:2px solid #ED6D00; background:#F4F4F4; color:#616161; padding-left:15px; font-size:14px; font-weight:bold;}
+.car_gs_list{ margin-left:20px; padding:10px 0; width:198px; overflow:hidden;}
+.car_gs_list li{ float:left; width:94px; margin-right:5px; height:24px; line-height:24px; overflow:hidden;display:inline; margin-bottom:8px;}
+.car_gs_list a:link,.car_gs_list a:visited,.car_gs_list a:active{ color:#8B8B8B;}
+.car_gs_list a:hover{ color:#ED6D00;}
+.cp_list_so{  width:374px; float:left; _display:inline; height:110px;}
+.car_cp_logo{ width:97px; height:48px; float:left; margin:30px 22px;}
+.car_cp_logo a{ display:block; width:97px; height:48px;}
+.car_cp_des{ margin-top:25px; width:225px; float:left;}
+.car_cp_des dt{ font-weight:bold; }
+.car_cp_des dd{ color:#B6B6B6; padding:3px 0;}
+.car_see:link,.car_see:visited,.car_see:active{ display:block; width:74px; height:25px; border:1px solid #C85B00; background:#FF7400; color:#fff; text-align:center; line-height:23px;}
+a.car_see:hover{ background:#FF9C4A; transition: background  0.2s ease-in;-moz-transition: background  0.2s ease-in;-o-transition: background  0.2s ease-in;
+-webkit-transition: background  0.2s ease-in;}
+/*select模拟*/
+
+.search_bxgs{ padding-top:40px; padding-left:40px;}
+.car_bxzscon{}
+.car_bxzscon{ width:70px;  font-size:14px; height:29px; line-height:29px;  font-weight:bold;overflow:hidden; margin-bottom:10px;}
+.car_mod_select{position:absolute;left:30%;top:100px;font-familY:Arial, Helvetica, sans-serif;}
+	.car_mod_select ul{margin:0;padding:0;}
+	.car_mod_select ul li{list-style-type:none;float:left;margin-left:20px;height:24px;}
+	.car_select_label{color:#982F4D;float:left;line-height:24px;padding-right:10px;font-size:12px;font-weight:700;}
+	.car_select_box{border:solid 2px #CBCBCB;color:#9C9C9C;position:relative;cursor:pointer;width:180px;background:url(../../images/re_car_07.gif) repeat-x;font-size:14px; height:37px; line-height:37px; margin-right:4px;}
+	.car_selet_open{display:inline-block; position:absolute;right:0;top:0;width:30px;height:37px;background:url(../../images/isprint_03.png) no-repeat 1px -596px;}
+	.car_select_txt{display:inline-block;padding-left:10px;width:135px;line-height:37px;height:37px;cursor:text;overflow:hidden;}
+	.car_option{width:180px;border:solid 1px #CBCBCB;position:absolute;top:37px;left:-1px;z-index:2;overflow:hidden;display:none;}
+	.car_option a{display:block;height:26px;line-height:26px;text-align:left;padding:0 10px;width:100%;background:#fff;}
+	.car_option a:hover{background:#F4F4F4; text-decoration:none;}
+	.car_lipin { overflow:hidden; margin-top:8px; margin-bottom:8px;}
+	.car_lipin li{ padding-left:58px; background:url(../../images/isprint_03.png) no-repeat 33px -682px;  line-height:1.6em;  color:#EA7C0F; margin-top:2px;}
+	.ljbj_sc{ padding-left:83px;}
+	.input_ksbj{ width:90px; height:32px; border:1px solid #C85B00; background:#FF7400; color:#fff; text-align:center; line-height:30px; font-size:14px; cursor:pointer; font-weight:bold;}
+	.input_ksbj:hover{ background:#FF8B2D;}
+.car_l_title3{ height:30px; line-height:30px; font-weight:bold; padding-left:15px; color:#868686; border-bottom:1px solid #D9D9D9;}
+.xz_list li{ margin-bottom:2px;}
+.mar_btn_10{ margin-bottom:10px;}
+.zx_list { margin-left:16px;}
+.zx_list li{line-height:24px;}
+.zx_list li a:link,.zx_list li a:visited,.zx_list li a:active{ color:#868686 ;}
+.zx_list li a:hover{ color:#FF7400;}
+.tag_1{ width:120px;}
+.tag_2{ width:98px;}
+.zx_list{ padding:5px 0;}
+.car_zx_title li{  float:left; height:38px; line-height:38px; font-size:14px; text-align:center; font-weight:bold; background:#F4F4F4; cursor:pointer;}
+.car_zx_title .hover{ background:#fff; display:block;}
+
+/*车险哪家好*/
+.service_duibi{ border:none;}
+.service_duibi th{ height:37px; background:#F4F4F4; line-height:37px; border-left:1px solid #D9D9D9; border-top:1px solid #D9D9D9; }
+.service_duibi td{ height:30px; line-height:1.6em; border-left:1px solid  #D9D9D9; border-bottom:1px solid #D9D9D9;  color:#616161;}
+.lv_bgs{ background:#F9FFFA;}
+.bs_bgs{ background:#FEFFF8;}
+.fs_bgs{ background:#FFFCF7;}
+.service_sel{ display:block; width:15px; height:15px; background:url(../../images/car/good_14.gif) no-repeat; margin:0 auto;}
+.car_hdbj_btn{ width:81px; height:28px; display:block; text-indent:-1000em; background:url(../../images/car/car_gdbj_18.gif) no-repeat; margin:5px auto;}
+.car_hdbj_btn:hover{ background-position:0px -28px;}
+.clear_bnt_bo td{ border-bottom:none;}
+.service_des{ padding-left:15px;}
+.zslist_1{ width:72.5px;}
+.zs_list li span{ border-top:2px solid #F4F4F4; display:block;}
+.zs_list .hover{ border-top:2px solid #ED6D00;}
+/*车险理赔流程*/
+.lc_img{ display:block; margin:20px 0;}
+.car_logo{ width:111px; height:42px; float:left; margin-right:5px; background-repeat:no-repeat; background-position:6px -3px; margin-bottom:1px;}
+.car_logo span{ display:block; border:1px solid #D9D9D9; height:41px; border-bottom:none;  cursor:pointer;}
+.car_logo .hover{ border-top:2px solid #ED6D00; border-bottom:1px solid #fff;}
+.car_caliao{ padding:30px 30px;}
+.car_caliao a:link,.car_caliao a:visited,.car_caliao a:active{ color:#525252;}
+.car_caliao a:hover{ text-decoration:underline;}
+.car_cailiaob{ color:#525252;}
+.car_cailiaob th{ width:74px; font-weight:bold;}
+.pdf{  background: url(../../images/car/car_sprint_02.png) no-repeat scroll -2px -6px transparent;display: block;height: 22px; line-height: 22px; padding-left: 25px; float:left;}
+.doc{  background: url(../../images/car/car_sprint_02.png) no-repeat scroll -2px -53px transparent;display: block;height: 22px; line-height: 22px; padding-left: 25px; float:left;}
+.execl{  background: url(../../images/car/car_sprint_02.png) no-repeat scroll -2px -183px transparent;display: block;height: 22px; line-height: 22px; padding-left: 25px; float:left;}
+.cx_js_box{ margin-bottom:10px;}
+.car_miaoshu{ width:759px; border-right:1px solid #D9D9D9;}
+.news_tag{width:218px;}
+.bor_xian{border-bottom:1px solid #D9D9D9; line-height:0px; height:0;}
+.car_imgss img{ display:block; margin:20px;}
+.lipei_list dt{ font-weight:bold; color:#616161; font-size:14px; margin-bottom:4px;}
+.lipei_list { color:#8B8B8B; margin:10px 0; width:592px;}
+.lipei_lists{ border:none;}
+.car_des_con{ height:130px;}
+.lipei_lists li{ width:192px;}
+.lipei_lists li a{width:180px;}
+a.car_linksss:link,a.car_linksss:visited,a.car_linksss:active{  color:#0095C6;}
+a.car_linksss:hover{color:#00AEEB;}
+.car_des_con2{ height:148px;}
+/*过渡页面*/
+.guodu_box{ width:420px; margin:125px auto;  text-align:center; overflow:hidden; }
+.guodu_logo{ width:210px; height:73px; background:url(../../images/logo_guodu.gif) no-repeat -8px 0px; margin:0 auto;}
+.guodu_box p{ font-size:24px; line-height:1.3em; margin:5px 0}
+.font_guodu_p{ color:#ED6D00;}
+ /*划痕险*/
+ .p_cons p{ padding:20px 15px; color:#616161; line-height:1.6em;}
+  .p_cons b{ padding-left:15px; color:#616161;}
+ .lust_cons{ padding-left:20px; color:#616161; margin-bottom:20px; padding-top:12px;}
+ .huahen_table td{ border-left:1px solid #D9D9D9;   border-bottom:1px solid #D9D9D9; color:#616161; line-height:1.6em; padding:20px 10px;}
+ .huahen_table th{ border-left:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;  border-top:none;  color:#616161;line-height:1.6em; padding:10px 10px;}.huahen_table td.table_no_bor_l, .huahen_table th.table_no_bor_l{border-left:none;text-align: center;}
+   .huahen_table td.table_no_bor_btn{ border-bottom:none;}
+  .ljbj_csf{ margin:5px auto 5px; width:76px;}
+  .car_l_title2 .xiaozi{ font-size:12px; color:#616161;}
+  
+  /*商业车险*/
+.car_sf{ width:750px; height:525px; background:url(../../images/car/car_is_07.jpg) no-repeat; position:relative;}
+.car_hhx{  position:absolute; top:455px; left:398px;  z-index:100;}
+.car_ssx{position:absolute; top:382px; left:502px;  z-index:92;}
+.car_clssx{ position:absolute; top:327px; left:570px;  z-index:93;}
+.car_qcdqx{ position:absolute; top:224px; left:646px; z-index:101;}
+.car_xzjsbssx{ position:absolute; top:110px; left:545px;  z-index:98;}
+.car_cszrx{ position:absolute; top:56px; left:234px;  z-index:88;}
+.car_dfblddpsx{ position:absolute; top:106px; left:68px;  z-index:96;}
+.car_zrssx{ position:absolute; top:212px; left:74px;  z-index:95;}
+.car_bjmptyx{ position:absolute; top:337px; left:82px;  z-index:94;}
+.car_dszzrx{ position:absolute; top:400px; left:222px;  z-index:93;}
+.car_hhx span,.car_ssx span,.car_clssx span,.car_qcdqx span,.car_xzjsbssx span,.car_cszrx span,.car_dfblddpsx span,.car_zrssx span,.car_bjmptyx span,.car_dszzrx span{ width:74px; height:29px; display:block; background:#636273; color:#fff; text-align:center; line-height:28px;-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+border-radius: 7px; cursor:pointer;}
+#car_xian .car_hover{ background:#9B8764;}
+.car_clssx span{ width:74px;}
+.car_qcdqx span{ width:74px; }
+.car_xzjsbssx span{ width:117px;}
+.car_cszrx span{ width:282px;}
+.car_dfblddpsx span{ width:140px;}
+.car_zrssx span{ width:80px;}
+.car_bjmptyx span{ width:80px;}
+.car_dszzrx span{ width:87px;}
+.p_conss{ position:absolute; top:29px; left:0px; background:#80725B;
+    filter:alpha(opacity=90); background:rgba(128, 114, 91, 0.9); color:#fff; width:270px; padding:20px; -moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;  }
+.car_hhx .p_conss{ top:-238px; left:-89px;}
+.car_ssx .p_conss{ top:-274px; left:-236px;}
+.car_clssx .p_conss{ top:-165px; left:-310px;}
+.car_qcdqx .p_conss{ top:29px; left:-236px;}
+.car_xzjsbssx .p_conss{ top:29px; left:-209px;}
+.car_cszrx .p_conss{ top:29px; left:-27px;}
+.car_dfblddpsx .p_conss{ top:29px; left:0px;}
+.car_zrssx .p_conss{ top:29px; left:0px;}
+.car_bjmptyx  .p_conss{ top:-173px; left:80px;}
+.car_dszzrx .p_conss{ top:-220px; left:0px;}
+.car_hhx span.car_hover{ background:#9B8764;}
+
+.car_l_title4{ font-size:16px; color:#616161; font-weight:bold; margin-bottom:10px;}
+.car_news{ padding:20px 0 20px 15px;}
+.car_news li{ float:left; width:210px; margin-left:20px; height:24px; line-height:24px; overflow:hidden;}
+.car_news_title li{ float:left; height:32px; line-height:31px; text-align:center;  border-top:1px solid #D9D9D9; border-bottom:none; margin-top:-1px; }
+.first_bor_left{border-left:1px solid #D9D9D9;}
+.car_news_title li span{ color:#616161; padding:0 10px; background: #F0F0F0; display:block; border-top:1px solid #F0F0F0; cursor:pointer; border-bottom:1px solid #fff; border-right:1px solid #D9D9D9; }
+.car_news_title li span.hover{ background:#fff; border-top:1px solid #ED6D00; }
+/*太平洋*/
+.baojia_tpy{ right:380px;}
+.car_tpy_btn{ background:url(../../images/car/tpy_car_03.gif) no-repeat; height:41px;}
+.car_tpy_btn:hover{ background-position:0 -41px;}
+.bjjz_lckj{ height:37px; font-size:1.6em; text-align:center; line-height:37px; background:#0265B7; color:#fff;}
+.tpy_youshi{ background:#F1F1F1; color:#76A6E6; font-size:4em; height:120px; text-align:center; line-height:120px;}
+.tpy_youshi b,.tpy_ts_p b{ color:#0265B7;}
+.tpy_ts_p{ font-size:3em; color:#76A6E6; text-align:center; margin-top:30px; margin-bottom:20px;}
+.tpy_car_youshi{ margin:0 auto; width:770px; margin-bottom:20px;}
+.tpy_car_youshi p{ margin-left:43px;}
+
+.tpy_car_youshi .ys_ps span{ font-size:6em; color:#76A6E6; height:70px; line-height:70px;}
+.tpy_car_youshi .ys_ps em{ top:59px; left:78px;}
+.tpy_cn{ border:1px dashed #DFDFDF; border-left:none; border-right:none; padding-bottom:48px; }
+.tpy_cn_list{ width:650px; margin:0 auto;}
+.tpy_cn_list li{ width:200px; height:50px; border:1px dashed #FCE0B5; background: #FFFFFF; line-height:1.6em; text-align:center; color:#8A8A8A; float:left; margin:23px 14px 0 0; padding-top:10px;}
+.tpy_cn_list li b{ font-size:14px; color:#0265B7;}
+.tpy_cn_list li:hover{ border:1px dashed #F59A12;}
+.tpy_zc li{ height:22px; line-height:22px; background:url(../../images/car/cardiansc_03.gif) no-repeat 8px -47px; padding-left:25px; float:left; color:#8A8A8A; margin-bottom:25px;}
+.tpy_zc{ width:612px; margin:40px auto; }
+.tpy_lpfw{ background-position:8px 7px;}
+.tpy_lpfw li{ background-position:8px 7px;}
+.firstf{ margin-left:78px;}
+.tpy_car_js{ line-height:1.8em; color:#8A8A8A; padding:30px 140px;}
+.tpy_car_tel{ height:45px; line-height:45px; background:#76A6E6; color:#fff; text-align:center; font-size:1.5em;}
+.tpy_car_tel span{ color:#0265B7; font-size:1em;}
+.firstt{ width:270px;}
+.tpy_car{ height:291px;}
+/*阳光车险*/
+.yangguang_img{ height:434px; }
+.yangguang_title{ left:175px; top:7px;  color:#F6891E;}
+.yg_baojia{ right:47px; bottom:30px;}
+.yangguang_btn{ background:url(../../images/car/yg_btn_03.gif) no-repeat 0px 0px; height:41px;}
+.yangguang_btn:hover{ background-position:0px -41px;}
+.yanggas p{ height:37px; line-height:37px; text-align:center;  font-size:2em; background:#FFEBBD; color:#F87941;}
+.yanggas{ background:url(../../images/car/yangguang_car_03.gif) no-repeat center bottom; padding-bottom:10px; margin-bottom:10px;}
+.yangguang_youshi{ height:491px; background:url(../../images/car/yangguang_car_06.gif) no-repeat  center center; position:relative;}
+.meihua_s{ text-align:center; color:#fff;  text-shadow: 1px 1px 1px #CE771A; font-size:14px; position:absolute; width:78px; height:69px;  line-height:1.2em;}
+.yg_titile1{  width:78px; height:100px; top:186px; left: 431px; font-size:3em; width:156px; }
+.yg_titile2{ left:332px; top:89px;}
+.yg_titile3{ left:616px; top:73px;}
+.yg_titile4{ left:241px; top:248px;}
+.yg_titile5{ left:646px; top:324px;}
+.yg_titile6{ left:379px; top:386px;}
+.youshi_cadf{ position:absolute; width:194px; color:#F8B640;}
+.yg_con1{ top:35px; left: 138px; text-align:right;}
+.yg_con2{ top:51px; left: 715px; text-align:left;}
+.yg_con3{ top:182px; left: 60px; text-align:right;}
+.yg_con4{ top:247px; left: 739px; text-align:left;}
+.yg_con5{ top:419px; left: 189px; text-align:right;}
+.yangguang_service{ color:#F87941; text-align:center; line-height:1.3em; font-style:oblique; font-size:4em; font-weight:bold; margin:50px 0 40px;}
+.car_service_list{ float:left; width:225px; text-align:center; height:86px; margin:0 20px; margin-bottom:20px; }
+.car_service_list dt{ font-size:2.5em; color:#FABB56; font-style:oblique; font-weight:bold; height:35px; line-height:35px; margin-bottom:5px;}
+.car_service_list dd{ color:#AAAAAA; font-size:14px;}
+.yg_service_box{ width:800px; margin:0 auto; margin-bottom:30px;}
+.yg_big_title{ font-size:4em; color:#F87941; text-align:center; height:65px; line-height:65px; font-weight:bold;} 
+.yg_liserivce{ width:570px; margin:30px auto 40px;}
+.yg_liserivce dt{ font-style:normal;}
+.yg_jieshao{ line-height:1.6em; text-align:center; font-size:14px; color:#8F8F8F; margin-top:10px; }
+.yg_tel{ width:190px; height:30px; text-align:center; line-height:30px; background:#F87941; color:#fff; margin:30px auto 40px; font-size:16px;   -webkit-border-radius: 12px; border-radius: 12px;  background-clip: padding-box;}
+.pingan_titile{ left:123px; top:10px; color:#DF5426;}
+.pa_libaojia{ width:402px; bottom:10px;}
+/*平安车险*/
+.pa_desp{ background:#6DAA26;}
+.pingan_p_col{ padding-top:20px; height:120px; color:#DF5426;}
+.pa_ps span{ color:#6DAA26;}
+.pa_ps span:hover{ color:#609421;}
+.pa_fuwu_sf dt{ color:#6DAA26;}
+.pa_fuwu_sf{ margin-top:30px;}
+.pa_p_color{color:#DF5426}
+.serivce_list2 li{ width:238px;}
+.serivce_list2 li.serivece1{ width:365px;}
+.serivce_list2 li.serivece2{ width:670px;}
+.pa_tel{ background:#DF5426; height:42px;}
+.pa_desp3{ text-align:right;}
+.youshi_cson{ margin-top:8px;}
+.yg_big_title span{ font-weight:normal; font-size:20px;}
+.yg_titilesfssf1{ background:url(../../images/car/carsf_03.gif) no-repeat center center; font-size:37px;}
+.yg_titilesfssf2{ background:url(../../images/car/carsf_07.png) no-repeat center center; font-size:37px;}
+.xz_boxsf{ height:192px; overflow:hidden;}
+/*add 13-8-28*/
+.lp_list li{ width:180px; margin-bottom:0px; overflow:hidden; height:auto;}
+.lp_list a:link, .lp_list a:visited, .lp_list a:active{ color:#666;}
+.lp_list a:hover{ color:#FF7400;}
+.p_text_des{ border-bottom: 1px dashed #CCCCCC; color: #8B8B8B;  padding-bottom: 7px;
+text-indent: 2em; overflow:hidden}
+.lipei_list dt a:link,.lipei_list dt a:visited,.lipei_list dt a:active{color: #616161;
+    font-size: 14px;font-weight: bold; margin-bottom: 4px;}
+.lipei_list dt a:hover{ color:#FF7400;  font-size: 14px;font-weight: bold;}

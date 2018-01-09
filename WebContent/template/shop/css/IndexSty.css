@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+.IndexColumnArea_1{width:244px;}
+.IndexColumnArea_1 .TitleArea{background:url(../images/IndexImg.gif) 0 0 no-repeat; width:244px; height:43px;}
+.IndexColumnArea_1 .ColumnCont{border:1px solid #4d4d4d;}
+.IndexColumnArea_1 .ColumnCont .TabTitleArea{background:url(../images/IndexImgBgLine.gif) 0 0 repeat-x; height:25px; line-height:25px; border-bottom:1px solid #4d4d4d;}
+.IndexColumnArea_1 .ColumnCont .TabTitleArea li{float:left; padding-left:6px; padding-right:6px; font-family:'黑体'; font-size:14px; color:#666666; font-weight:bold; cursor:pointer;}
+.IndexColumnArea_1 .ColumnCont .TabTitleArea li.Active{color:#000; background:#fff; border:1px solid #4d4d4d; border-width:0 1px; border-bottom:1px solid #fff; position:relative; cursor:default;}
+.IndexColumnArea_1 .ColumnCont .TxtListArea ul{margin:0; padding:0;}
+.IndexColumnArea_1 .ColumnCont .TxtListArea li{line-height:44px; border-bottom:1px solid #e6e6e6; text-align:center;}
+.IndexColumnArea_1 .ColumnCont .TxtListArea li .ListNumberID_1{width:20px; float:left; background:#fc6f1f; color:#fff;}
+.IndexColumnArea_1 .ColumnCont .TxtListArea li .ListNumberID_2{width:20px; float:left; background:#fd9524; color:#fff;}
+.IndexColumnArea_1 .ColumnCont .TxtListArea li .ListNumberID_3{width:20px; float:left; background:#fbc63c; color:#fff;}
+.IndexColumnArea_1 .ColumnCont .TxtListArea li .ListNumberID{width:20px; float:left;}
+.IndexColumnArea_1 .ColumnCont .TxtListArea li .ListTxt{float:left; border-left:1px solid #cccccc; text-align:left; width:210px; height:44px; padding-left:10px; font-family:'黑体'; font-size:15px; overflow:hidden;}
+
+.IndexColumnArea_2{width:244px;}
+.IndexColumnArea_2 .TitleArea{background:url(../images/IndexImg.gif) 0 -63px no-repeat; width:242px; height:35px; border:1px solid #94451a; border-width:1px 1px 0 1px; line-height:35px; font-family:'黑体'; font-size:15px; color:#fff; text-shadow:-1px -1px 1px #6D2908; text-indent:20px;}
+.IndexColumnArea_2 .ColumnCont{border:1px solid #94451a; border-width:0px 1px 1px 1px;}
+.IndexColumnArea_2 .ColumnCont h4{font-size:15px; font-weight:bold; padding:10px 15px;}
+.IndexColumnArea_2 .ColumnCont h5{color:#FF0000;font-size:12px; font-weight:bold; text-indent:25px; background:url(../images/IndexImg.gif) 0 -120px no-repeat; height:20px; line-height:20px; margin-left:15px;}
+.IndexColumnArea_2 .ColumnCont h6{background:url(../images/IndexImg.gif) 0 -160px no-repeat; height:40px; line-height:40px; text-indent:50px; margin-left:15px; padding-bottom:0px;}
+.IndexColumnArea_2 .ColumnCont h6 span{padding:3px 10px;border:1px solid #666666; margin-left:15px; text-decoration:line-through; color:#B3B3B3;}
+.IndexColumnArea_2 .ColumnCont h6 strong{padding:3px 10px;border:1px solid #666666; border-width:1px 1px 1px 0; background:#FFF3D6; color:#ED1C24;}
+
+.IndexColumnArea_3{}
+.IndexColumnArea_3 .FocusPicArea_1{margin-top:15px;}
+.KSS_titleBar{display:none;}
+.IndexColumnArea_3 .FocusPicArea_2{margin-top:10px;}
+
+.IndexColumnArea_4{background:url(../images/IndexImg.gif) 0 -242px no-repeat; width:496px; height:135px; margin-top:10px;}
+.IndexColumnArea_4 h4{color:#2E368E; font-size:14px; font-weight:bold; padding-top:70px; padding-left:190px;}
+.IndexColumnArea_4 h5{padding-left:190px; padding-top:10px;}
+.IndexColumnArea_4 h5 .InputTxtArea{border:1px solid #676767; height:29px; line-height:29px; color:#58595B; font-size:14px; font-weight:bold; text-indent:5px; margin-right:3px;}
+.IndexColumnArea_4 h5 .Btn_1{background:url(../images/BtnImg.gif) 0 -421px no-repeat; width:107px; height:31px; border:none; cursor:pointer;}
+
+.IndexColumnArea_5{border:5px solid #FAAF40; background:#FFFCC7; height:125px; overflow:hidden;margin-top:15px;}
+.IndexColumnArea_5 h2{margin-top:10px; margin-left:15px; color:#F05A28; font-size:15px; font-weight:bold;}
+.IndexColumnArea_5 h5{float:left; margin-top:10px; padding-left:15px; width:90px; color:#58595B;}
+.IndexColumnArea_5 h5 .Btn_2{background:url(../images/BtnImg.gif) 0 -481px no-repeat; width:69px; height:24px; border:none; margin-top:5px;}
+.IndexColumnArea_5 .ImgArea{float:left; width:110px;}
+
+.InquiryArea{background:url(../images/cha_bg.gif) -8px 0 no-repeat; width:996px; height:65px; margin-top:10px;}
+.InquiryArea .ColumnCont{padding-top:23px; padding-left:214px;}
+.InquiryArea .ColumnCont select{width: 134px;height: 25px;line-height: 25px;border: 1px solid #666;margin-left: 15px; float:left;}
+.InquiryArea .ColumnCont input{width:100px; height:35px; float:right; margin-right:5px; background:none; border:none; cursor:pointer;}
+
+.IndexColumnArea_6{background:url(../images/IndexImg.gif) 0 -400px no-repeat; width:1000px; height:199px;}
+
+.IndexColumnArea_7{}
+
+.IndexColumnArea_8{margin-bottom:5px;}
+.IndexColumnArea_8 .ColumnBg_1{background:url(../images/IndexImg.gif) 0 -634px no-repeat; width:757px; height:265px;}
+.IndexColumnArea_8 .ColumnBg_2{background:url(../images/IndexImg.gif) 0 -925px no-repeat; width:757px; height:265px;}
+.IndexColumnArea_8 .ColumnBg_3{background:url(../images/IndexImg.gif) 0 -1214px no-repeat; width:757px; height:265px;}
+.IndexColumnArea_8 .TitleArea{float:left; width:200px; height:265px; position:relative;}
+.IndexColumnArea_8 .TitleArea h1{font-size:20px; color:#fff; text-shadow:-1px -1px 1px #351804; text-indent:40px; font-weight:bold; padding-top:22px;}
+.IndexColumnArea_8 .TitleArea .Btn_3{bottom:10px; position: absolute; background:url(../images/BtnImg.gif) 0 -528px no-repeat; width:117px; height:35px; border:none; left:40px; cursor:pointer;}
+.IndexColumnArea_8 .TitleArea .Btn_4{bottom:10px; position: absolute; background:url(../images/BtnImg.gif) -146px -528px no-repeat; width:117px; height:35px; border:none; left:40px; cursor:pointer;}
+.IndexColumnArea_8 .TitleArea .Btn_5{bottom:10px; position: absolute; background:url(../images/BtnImg.gif) -283px -528px no-repeat; width:117px; height:35px; border:none; left:40px; cursor:pointer;}
+.IndexColumnArea_8 .ColumnCont{padding-top:35px; padding-left:30px; float:left;}
+.IndexColumnArea_8 .ColumnCont .ContListArea{}
+.IndexColumnArea_8 .ColumnCont .ContListArea .PhotoArea{float:left; margin-right:13px;}
+.IndexColumnArea_8 .ColumnCont .ContListArea .TxtListArea{float:left; width:400px; margin-bottom:20px; margin-top:5px;}
+.IndexColumnArea_8 .ColumnCont .ContListArea .TxtListArea h3{font-size:15px; font-weight:bold; margin-bottom:5px;}
+.IndexColumnArea_8 .ColumnCont .ContListArea .TxtListArea .valueStar{}
+.IndexColumnArea_8 .ColumnCont .ContListArea .TxtListArea .valueStar, .valueStar i{background:url(../images/StarImg.gif) no-repeat 0 -30px; width:62px; height:12px; overflow:hidden; display: inline-block; margin:0px 0px 0 0px; padding-right: 5px; Font-size:1.08em}
+.IndexColumnArea_8 .ColumnCont .ContListArea .TxtListArea .valueStar i{ background-position:0 0px; overflow:hidden;}
+.IndexColumnArea_8 .ColumnCont .ContListArea .TxtListArea .PhotoImg{float:right; margin-right:20px;}
+.IndexColumnArea_8 .ColumnCont .ContListArea .TxtListArea .TxtArea{line-height:20px; color:#4D4D4D; font-size:15px; margin-top:5px;}
+
+.IndexColumnArea_9{}
+.IndexColumnArea_9 .TitleArea{background:url(../images/Bg_2.gif) 0 -197px no-repeat; height:34px; line-height:34px; font-family:'微软雅黑';font-size:16px; color:#fff;text-shadow: -1px -1px 1px #810C0C; text-indent:25px;}
+.IndexColumnArea_9 .TitleArea .TitleTxt{float:left;}
+.IndexColumnArea_9 .TitleArea .TitleMore{float:right; padding-right:5px; font-family:'宋体';}
+.IndexColumnArea_9 .TitleArea .TitleMore a{font-size:12px; font-weight:normal; text-shadow:none; color:#333333;}
+.IndexColumnArea_9 .ColumnCont{border:1px solid #4d4d4d;}
+.IndexColumnArea_9 .ColumnCont .TxtListArea{padding-top:5px; padding-bottom:5px;}
+.IndexColumnArea_9 .ColumnCont .TxtListArea ul{}
+.IndexColumnArea_9 .ColumnCont .TxtListArea li{height:35px; line-height:35px; border-top:1px dashed #dddddd; padding-left:15px; padding-right:10px; color:#404041;}
+.IndexColumnArea_9 .ColumnCont .TxtListArea li.FirstTitleArea{border:none; height:auto; padding-left:10px; line-height:20px; padding-bottom:5px;}
+.IndexColumnArea_9 .ColumnCont .TxtListArea li.FirstTitleArea h4{color:#000; font-weight:bold; line-height:25px;}
+.IndexColumnArea_9 .ColumnCont .TxtListArea li.FirstTitleArea h5{color:#6D6E70;}
+
+.IndexColumnArea_10{width:746px; float:left; border:1px solid #4d4d4d;}
+.IndexColumnArea_10 .TitleArea{background:url(../images/IndexImgBgLine.gif) 0 -55px repeat-x; height:32px; line-height:32px; border:1px solid #c2272d;}
+.IndexColumnArea_10 .TitleArea li{float:left; color:#fff; font-weight:bold; font-size:16px; text-shadow: -1px -1px 1px #810C0C; width:146px; text-align:center; margin-right:20px; cursor:pointer;}
+.IndexColumnArea_10 .TitleArea li.Active{background:url(../images/Bg_2.gif) 0 -264px no-repeat; cursor:default;}
+.IndexColumnArea_10 .ContListArea ul{}
+.IndexColumnArea_10 .ContListArea ul.ListLeft{float:left; border-right:2px solid #cccccc; width:320px; margin:15px 10px; padding-right:30px;}
+.IndexColumnArea_10 .ContListArea ul.ListRight{float:left; width:330px; margin:15px 10px;}
+.IndexColumnArea_10 .ContListArea li{border-bottom:1px dashed #cccccc; height:38px; line-height:38px; text-align:left; text-indent:20px; font-size:14px; color:#808080;}
+.IndexColumnArea_10 .ContListArea li a{color:#808080;}
+
+.IndexColumnArea_11{width:244px;float:right;}
+.IndexColumnArea_11 .TitleArea{background:url(../images/Bg_2.gif) 0 -320px no-repeat; height:34px; line-height:34px; font-family:'微软雅黑';font-size:16px; color:#fff;text-shadow: -1px -1px 1px #810C0C; text-indent:25px;}
+.IndexColumnArea_11 .TitleArea .TitleTxt{float:left;}
+.IndexColumnArea_11 .TitleArea .TitleMore{float:right; padding-right:5px; font-family:'宋体';}
+.IndexColumnArea_11 .TitleArea .TitleMore a{font-size:12px; font-weight:normal; text-shadow:none; color:#333333;}
+.IndexColumnArea_11 .ColumnCont{border:1px solid #4d4d4d; border-top:0; background:url(../images/Bg_2.gif) -1px -355px no-repeat; height:265px; overflow:hidden; text-align:left;}
+.IndexColumnArea_11 .ColumnCont .TxtListArea li.FirstTitleArea{border:none; height:125px; padding-left:50px; padding-top:28px; line-height:20px; padding-bottom:5px;}
+.IndexColumnArea_11 .ColumnCont .TxtListArea li.FirstTitleArea h5{color:#fff; font-weight:bold; width:160px; height:40px; margin-bottom:12px; overflow:hidden;}
+.IndexColumnArea_11 .ColumnCont .TxtListArea li{height:35px; line-height:35px; border-bottom:1px dashed #dddddd; padding-left:25px; padding-right:10px; color:#404041;}
+
+.IndexColumnArea_12{border:1px solid #b3b3b3; background:#fff;}
+.IndexColumnArea_12 .TitleArea{height:34px; line-height:34px; font-family:'微软雅黑';font-size:16px; color:#F15A24; text-indent:25px;}
+.IndexColumnArea_12 .TitleArea .TitleTxt{float:left; font-weight:bold;}
+.IndexColumnArea_12 .TitleArea .TitleMore{float:right; padding-right:5px; font-family:'宋体'; font-size:14px; color:#666666; font-weight:bold;}
+.IndexColumnArea_12 .TitleArea .TitleMore strong{color:#F15A24;}
+.IndexColumnArea_12 .TitleArea .TitleMore a{font-size:14px; font-weight:bold; text-shadow:none; color:#333333;}
+.IndexColumnArea_12 .ColumnCont{ text-align:left; margin-left:40px; margin-top:15px; margin-bottom:15px;}
+.IndexColumnArea_12 .ColumnCont img{margin-right:30px; margin-bottom:10px;}
+.IndexColumnArea_12 .ColumnCont a{height:30px; line-height:30px;}
+
+
+.ClassificationArea{width:104px;height:300px;background-color:#FFF;position:fixed;_position:absolute;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||200)-(parseInt(this.currentStyle.marginBottom,10)||0)));left:12px;bottom:25%;/*border-radius:5px;box-shadow:0 0 2px #6E6E6E*/}
+.ClassificationArea h1{background:url(../images/Bg_1.gif) 0 -913px repeat-x; height:24px; line-height:24px; color:#fff; text-align:center; border:1px solid #9a9997;}
+.ClassificationArea ul{border:1px solid #b3b3b3; border-top:0; background:#fff; padding:2px;}
+.ClassificationArea ul li{border-bottom:1px solid #e6e6e6; height:34px; line-height:34px; text-align:center; font-size:13px; color:#666666; background:url(../images/Ico_Arrow_3.gif) center right no-repeat;}
+.ClassificationArea ul li.ShowAll{background:none; border:none; color:#F7931E; font-size:12px;}
+.ClassificationArea ul li.ShowAll a{color:#F7931E;}

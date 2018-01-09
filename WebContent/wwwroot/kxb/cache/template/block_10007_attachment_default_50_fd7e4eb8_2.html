@@ -1,0 +1,11 @@
+<% DataTable dt_2 = TemplateData.getDocList("attachment","理赔申请","current","null","null","50","null","null","null");
+  if(dt_2==null){write("没有找到栏目。parent：null  catalog："+"理赔申请");}else{
+ int rdCnt=dt_2.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow attachment_2  = dt_2.getDataRow(i);
+ int rdIdx=i;
+%>
+ 
+				   <li><a href="${Site.URL}/${attachment_2.Path}${attachment_2.SrcFileName}">${attachment_2.Name}</a></li>
+		       <%}}%>

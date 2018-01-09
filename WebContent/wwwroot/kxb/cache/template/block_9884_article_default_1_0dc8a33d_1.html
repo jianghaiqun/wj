@@ -1,0 +1,28 @@
+<% DataTable dt_7 = TemplateData.getDocList("article","车辆违章查询","current","null","null","1","null","null","null");
+  if(dt_7==null){write("没有找到栏目。parent：null  catalog："+"车辆违章查询");}else{
+ int rdCnt=dt_7.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_7  = dt_7.getDataRow(i);
+ int rdIdx=i;
+%>
+
+			<span class="floatlpic"><a href="${article_7.Section2question1href}" target="_blank"><img src="${Site.StaticResourcePath}/${article_7.Section2image}" width="267" height="200" /></a></span>
+			<h3 class="zx_news_title"><a href="${article_7.Section2question1href}" target="_blank">${article_7.Section2question1}</a></h3>
+			<p class="p01"> ${article_7.Section2question1answer|CharWidth=105}
+			<span class="orange"><a href="${article_7.Section2question1href}" rel="nofollow"target="_blank">更多</a></span>
+			</p>
+			<div class="dashbor_bnor"></div>
+			<h3 class="zx_news_title"><a href="${article_7.Section2question2href}" target="_blank">${article_7.Section2question2}</a></h3>
+			<p class="p01">${article_7.Section2question2answer|CharWidth=105}
+			 <span class="orange"><a href="${article_7.Section2question2href}" rel="nofollow" target="_blank">更多</a></span>
+			</p>
+			<div class="dashbor_bnor"></div>
+			<h3 class="zx_news_title"><a href="${article_7.Section2question3href}" target="_blank">${article_7.Section2question3}</a></h3>
+			<p class="p01"> ${article_7.Section2question3answer|CharWidth=180}
+			</p>
+			<p class="p01">
+			<span class="orange"><a href="${article_7.Section2question3href}" rel="nofollow" target="_blank">更多</a></span>
+			
+			</p>
+			<%}}%>

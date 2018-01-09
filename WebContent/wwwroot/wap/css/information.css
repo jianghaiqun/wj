@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+body#information {
+background-color: #dfdfdf;
+}
+#main {
+margin-bottom: -25px;
+padding: 15px;
+}
+#main .content {
+position: relative;
+background-color: #fff;
+border: 1px solid #c9c9c9;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+-o-border-radius: 10px;
+border-radius: 10px; 
+}
+.content .banners {
+width: 94%;
+margin: 20px auto 0;
+overflow: hidden;
+}
+.content .banners  li {
+float: left;
+width: 32%;
+margin-left: 2%;
+background-color: #92da6a;
+}
+.content .banners  li.first {
+margin-left: 0;
+background-color: #599bd8;
+}
+.content .banners  li.last {
+background-color: #e46f9c;
+}
+.content .banners  li a {
+display: block;
+}
+.content h2,h3,h4,h5 {
+width: 84%;
+margin: 30px auto 0;
+border-bottom: 1px solid #bcbdbe;
+line-height: 36px;
+font-size: 26px;
+color: #505050;
+text-align: center;
+}
+.content h2 span, .content h3 span {
+display: block;
+padding: 10px 0 20px;
+font-size: 18px;
+color: #bbbcbd;
+}
+.content h3 {
+	font-size: 24px;
+}
+.content h4 {
+	font-size: 22px;
+}
+.content h5 {
+	font-size: 20px;
+}
+.content p {
+width: 84%;
+margin: 20px auto 0;
+line-height: 34px;
+font-size: 24px;
+color: #989696;
+}
+.content p img {
+width: 100%;
+}
+.content .otherList {
+position: relative;
+width: 94%;
+margin: 30px auto 45px;
+border: 1px solid #a9a9a9;
+line-height: 36px;
+font-size: 26px;
+}
+.content .otherList h3 {
+height: 45px;
+padding-left: 38px;
+background: url("../images/bg_other_list.gif") repeat-x left top;
+line-height: 40px;
+font-weight: normal;
+font-size: 24px;
+color: #fff;
+}
+.content .otherList .linkList {
+margin: 15px 35px;
+}
+.content .otherList .linkList li {
+border-top: 1px dashed #e4e4e4;
+line-height: 50px;
+}
+.content .otherList .linkList li:first-child {
+border-top: none;
+}
+.content .otherList .linkList li a {
+color: #989696;
+}
+.content .otherList .icon {
+position: absolute;
+top: -11px;
+right: 15px;
+}
+.content .text {
+width: 84%;
+margin: 20px auto 0;
+line-height: 34px;
+font-size: 24px;
+color: #989696;
+}
+.content .text img {
+width: 100%;
+}
+.content .question {
+text-align: left;
+}
+.other_question {
+border-top: 1px dashed #bcbdbe;
+margin: 20px auto 0;
+padding-top: 20px;
+}

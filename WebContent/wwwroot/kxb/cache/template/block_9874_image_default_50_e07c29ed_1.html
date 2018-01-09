@@ -1,0 +1,16 @@
+<% DataTable dt_4 = TemplateData.getDocList("image","排名-栏目五","current","null","null","50","null","null","null");
+  if(dt_4==null){write("没有找到栏目。parent：null  catalog："+"排名-栏目五");}else{
+ int rdCnt=dt_4.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow image_4  = dt_4.getDataRow(i);
+ int rdIdx=i;
+%>
+ 
+			<li class="<% if ((i+1)%5==0){write("bodert");}else{write("boderr");}%>">
+				<div class="pic"><a href="${image_4.CompanyLink}" target="_blank"><img src="${Site.StaticResourcePath}/${image_4.Path}${image_4.SrcFileName}" width="97" height="48" /><a href="${image_4.CompanyLink}" target="_blank"></div>
+				<h3><a href="${image_4.CompanyLink}" target="_blank">${image_4.Name|substrwidth=10}</a></h3>
+				<p>${image_4.Info|substrwidth=50}</p>
+				<span class="more10 orange"><a href="${image_4.CompanyLink}" rel="nofollow" target="_blank">更多</a></span>
+			</li>
+		<%}}%>

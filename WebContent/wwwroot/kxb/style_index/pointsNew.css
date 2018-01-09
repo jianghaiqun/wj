@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+.wrappx{ width:1020px; margin:0 auto;height:300px;}
+
+.wrappointlist{ width:745px; border:1px solid #CCCCCC; float:right;}
+.pointlist .picwrap{width:129px;margin-bottom:6px;}
+.pointlist .picwrap img{width:120px;height:120px;padding:3px;border:1px solid #ccc;background:#fff;margin-bottom:6px;}
+.pointlist{ margin-top:20px;}
+.pointlist li{text-align:center;width:186px;float:left;padding-bottom:26px;}
+.pointlist p{line-height:21px;padding-left:20px;padding-right:20px;height:21px;overflow:hidden;}
+.pointlist .txt300{ color:#FF6600}
+.pointlist .btn{ padding-top:3px;}
+
+.pointdetailwrap{}
+.pointdetailwrap .pdleft{ width:344px; float:left; text-align:center; padding-top:12px;}
+.pointdetailwrap .pdleft img{width:306px;height:306px;padding:1px;border:1px solid #ccc;background:#fff;}
+.pointdetailwrap .pdright{width:400px; float:left; padding-top:12px;}
+.pointdetailwrap .pdright h3{width:400px; float:left; padding-top:12px; font-size:18px; font-family:"黑体";}
+.pointprice{ background:url(../images/pricepoint.gif) no-repeat; display:block; width:78px; height:42px; text-align:center; padding-top:40px; font-size:18px; font-weight:bold; color:#CC0000; }
+
+.pd01{ font-size:14px; line-height:28px; text-indent:12px;}
+	.pd01 b{ color:#FF6600}
+.pd02{ font-size:14px; line-height:28px; border:1px solid #FF8102; background:#FEF8C2; padding:6px 10px 6px 10px; margin-top:4px;margin-bottom:4px; margin-right:16px;}
+	.pd02 em{ color:#B54800}
+.pd03{ padding-top:6px;}
+	.pd03 p{ float:left; color:#666; padding-right:9px;}
+.titpoint{background:url(../images/titpointbg.jpg) repeat-x; height:27px; line-height:27px; font-size:14px; font-weight:bold; text-indent:12px; margin:12px 6px; color:#333; margin-bottom:3px; }
+.pddetail{ padding:12px 18px;}
+.pddetail p{line-height:24px;font-size:14px;}
+.titex{background:url(../images/ico02.gif) no-repeat; height:27px; line-height:27px; font-size:14px;  text-indent:19px; margin:12px 6px; color:#E66111; margin-bottom:3px; margin-left:20px; }
+
+.table03{padding-left:54px;padding-bottom:6px;padding-top:6px;font-size:14px;}
+.table03 table th{background:#F6f6f6;color:#000;font-weight:normal;font-size:14px;}
+.table03 table th,.table03 table td{border:none;padding:3px 6px;font-size:14px;line-height:21px; border:1px solid #D7D7D7;}
+.table03 table a:link,.table03 table a:visited,.table03 table a:active{font-size:14px;text-decoration:none;}
+	.table03 table a:hover{font-size:14px;text-decoration:underline;}
+	
+.tableimg{ float:left;width:80px;}
+.tableimg img{height:80px; width:80px; margin-left:10px; margin-top:10px;}
+.tabletit{float:left; vertical-align:middle; padding-top:20px; padding-left:6px;height:80px;width: 250px;}
+.tabletit01{float:left; vertical-align:middle; padding-top:20px; padding-left:6px;height:80px;width: 360px; text-align:left;}
+.tabletit02{float:left; vertical-align:middle; padding-top:20px; padding-left:6px;height:80px; width: 160px;}
+
+.table04{padding-left:54px;padding-bottom:6px;font-size:14px; margin-top:-6px;}
+.table04 table {border:1px solid #D7D7D7;}
+.table04 table th{background:#F6f6f6;color:#000;font-weight:normal;font-size:14px;border:none;}
+.table04 table th,.table04 table td{border:none;padding:3px 6px;font-size:14px;line-height:21px; border:none;}
+.table04 table a:link,.table04 table a:visited,.table04 table a:active{font-size:14px;text-decoration:none;}
+	.table04 table a:hover{font-size:14px;text-decoration:underline;}
+.btnare500{ text-align:right; padding:10px 70px 10px 10px; margin-bottom:20px;}
+
+

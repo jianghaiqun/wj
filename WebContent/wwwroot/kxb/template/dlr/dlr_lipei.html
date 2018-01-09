@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+</title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css"/>
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css"/>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/iframe.js"></script>
+<style type="text/css">
+.floatr {
+	float: left;
+}
+</style>
+</head>
+ 
+<body onload="mysethash()">
+<iframe id="iframeA" name="iframeA" src="" width="0" height="0" style="display:none;" ></iframe> 
+<div class="h10 clear" style="width:748px;"></div>
+<div class="car_border_q cf" style="border:1px solid #D9D9D9;width:748px;">
+    <h1 class="car_l_title">车险理赔流程</h1>
+    <img src="${Site.StaticResourcePath}/images/car/lipei_03.gif" width="748" height="55" class="lc_img">
+  </div>
+<div class="h10 clear" style="width:748px;"></div>
+<div class="cx_js_box" style="width:748px;">
+	<ul class="cf">
+	    <li class="car_logo icon_C1008"><span class="hover" id="car_s1" onclick="setTab('car_s',1,4)"></span></li>
+		<li class="car_logo icon_C2011 "><span class="" id="car_s2" onclick="setTab('car_s',2,4)"></span></li>
+		<li class="car_logo icon_C2021"><span class="" id="car_s3" onclick="setTab('car_s',3,4)"></span></li>
+		<li class="car_logo icon_C2019"><span class="" id="car_s4" onclick="setTab('car_s',4,4)"></span></li>
+    </ul>
+    <div class=" car_border_q car_caliao">
+     <table width="100%" border="0"   class="car_cailiaob"  id="con_car_s_1" >
+          <tbody><tr>
+            <th>报案电话：</th>
+            <td>95511</td>
+          </tr>
+          <tr>
+            <th>理赔材料：</th>
+            <td>
+               <cms:list item="attachment"  name="平安保险公司"> 
+				   <span class="${attachment.geshi}"><a target="_blank" href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}.${attachment.geshi}</a></span>
+		       </cms:list>
+            </td>
+          </tr>
+          <tr>
+            <th>理赔查询：</th>
+            <td><a  target="_blank" rel="nofollow" href="http://chexian.pingan.com/fuwu/service/lipei.jsp"  class="car_linksss">查询地址&gt;</a></td>
+          </tr>
+          <tr>
+            <th>理赔特色：</th>
+            <td>1、7×24小时车险理赔报案电话95511；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>2、专家现场迅速查勘定损；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>3、全国通赔，单证齐全即可当地理赔；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>4、平安承诺，1万元以内车险责任事故，资料齐全，一个工作日内完成赔付。</td>
+          </tr>
+        </tbody>
+      </table>
+    <table width="100%" border="0" style="display: none;"  class="car_cailiaob"  id="con_car_s_2">
+          <tbody><tr>
+            <th>报案电话：</th>
+            <td>95500</td>
+          </tr>
+          <tr>
+            <th>理赔材料：</th>
+            <td>
+               <cms:list item="attachment"  name="太平洋保险公司"> 
+				   <span class="${attachment.Suffix}"><a target="_blank" href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}.${attachment.geshi}</a></span>
+		       </cms:list>
+            </td>
+          </tr>
+          <tr>
+            <th>理赔查询：</th>
+            <td><a class="car_linksss" target="_blank" rel="nofollow" href="http://www.cpic.com.cn/cx/ho/servicehall/claimsguide/">查询地址&gt;</a></td>
+          </tr>
+          <tr>
+            <th>理赔特色：</th>
+            <td>1、无限次免费道路救援；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>2、非事故100公里内拖车免费；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>3、3G现场快速定损；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>4、专享"快易赔"上门收取理赔资料服务；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>5、1万元以下、无人伤案件，资料齐全1天内结案赔付。</td>
+          </tr>
+        </tbody></table>
+        
+        <table width="100%" border="0" style="display: none;" class="car_cailiaob"  id="con_car_s_3">
+          <tbody><tr>
+            <th>报案电话：</th>
+            <td>95590</td>
+          </tr>
+          <tr>
+            <th>理赔材料：</th>
+            <td>
+               <cms:list item="attachment"  name="大地保险公司"> 
+				   <span class="${attachment.Suffix}"><a target="_blank" href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}.${attachment.geshi}</a></span>
+		       </cms:list>
+            </td>
+          </tr>
+
+          <tr>
+            <th>理赔查询：</th>
+            <td><a target="_blank" rel="nofollow" href="http://www.95590.cn/ebiz/view/onlineBusiness/onlineServiceMain.jsp?page=sguide" class="car_linksss">查询地址&gt;</a></td>
+          </tr>
+          <tr>
+            <th>理赔特色：</th>
+            <td>1、理赔实时查询；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>2、RAS快速定损；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>3、全国通赔；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>4、零单证理赔。</td>
+          </tr>
+        </tbody>
+       </table>
+        
+        <table width="100%" border="0" class="car_cailiaob"  id="con_car_s_4" style="display: none;">
+          <tbody><tr>
+            <th>报案电话：</th>
+            <td>95510</td>
+          </tr>
+          <tr>
+            <th>理赔材料：</th>
+            <td>
+               <cms:list item="attachment"  name="阳光保险公司"> 
+				   <span class="${attachment.Suffix}"><a target="_blank" href="${Site.URL}/${attachment.Path}${attachment.SrcFileName}">${attachment.Name}.${attachment.geshi}</a></span>
+		       </cms:list>
+             </td>
+          </tr>
+          <tr>
+            <th>理赔查询：</th>
+            <td><a  target="_blank" rel="nofollow" class="car_linksss" href="http://chexian.sinosig.com/service/1966.shtml">查询地址&gt;</a></td>
+          </tr>
+          <tr>
+            <th>理赔特色：</th>
+            <td>1、报案后，理赔倒计时，真快真无忧阳光"闪赔"保证金，真心承诺，全国通赔；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>2、10分钟内专职理赔员联系客户；结案100%回访；</td>
+          </tr>
+          <tr>
+            <th>&nbsp;</th>
+            <td>3、5000元以下小额案件定损时间不超过30分钟；不限制送修地点。</td>
+          </tr>
+
+        </tbody>
+       </table>
+    </div>
+</div>
+<div class="car_border_q cf"  style="width:748px;">
+  <div class="car_miaoshu floatl "  style="width:748px;">
+	<div class="car_des_con cf" >
+    	<div class="car_imgss floatl"><img src="${Site.StaticResourcePath}/images/car/lc5_07.jpg" width="100" height="75"/></div>
+        <dl class="floatl lipei_list">
+        	<dt>车险理赔注意事项</dt>
+            <dd>1、及早报案。应在24小时之内通知派出所或者刑警队，在48小时内通知保险公司。</dd>
+	        <dd>2、多种方式报案。可以采用电话报案、网上报案、理赔员转达报案或直接到保险公司报案。</dd>
+	        <dd>3、备齐理赔资料。理赔材料准备越完善，越容易尽早获得赔偿。</dd>
+	        <dd>4、保管维修票据。无论是到指定4S店进行维修还是其他维修厂，都要妥善保管维修发票。</dd>
+	        <dd>5、严重交通事故需要借助权威部门的事故认定。</dd>
+        </dl>
+       
+    </div>
+    <div class="bor_xian"></div>
+    <div class="car_des_con cf">
+    	<div class="car_des_con cf">
+    	<div class="car_imgss floatl"><img src="${Site.StaticResourcePath}/images/car/lc5_07-02.jpg" width="100" height="75"/></div>
+        <dl class="floatl lipei_list">
+        	<dt>车险理赔技巧</dt>
+            <dd>1、定损单是车险理赔依据，要妥善保管。</dd>
+	        <dd>2、异地出险要及时报案，不要拖延报案时间。</dd>
+	        <dd>3、发生车辆事故不要私了，尽早通过交警及保险公司解决。</dd>
+	        <dd>4、小剐蹭、损失尽量不要报案。车险有一定赔付率，出险过多会影响次年保费。</dd>
+	        <dd>5、熟悉车险条款，了解哪些是免赔范围，以防出险之后得不到保障。</dd>
+        </dl>
+       
+    </div>
+       
+    </div>
+  </div>
+</div>
+
+        
+<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>

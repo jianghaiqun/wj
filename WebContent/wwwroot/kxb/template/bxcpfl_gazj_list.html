@@ -1,0 +1,244 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${catalog.Meta_Keywords}" />
+<meta name="description" content="${catalog.Meta_Description}" />
+<title>${catalog.meta_title}-${site.Meta_Keywords}</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/commonality.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/product.css" />
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/listul.css"/>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/redesign/re_header.css">
+</head>
+<body onload="initProduct();salesVolumeLoad();">
+<cms:include file="block/kxb_header_index_new_v2.shtml" />
+	<div class="wrapper">
+
+		<div class="daohang">
+			<span class="daohang_home"></span>
+			<cms:link type="currentPositionList"></cms:link>
+		</div>
+		<div class="clear"></div>
+		<div class="topicpic"><img src="../../upload/Image/zdtp/2502449170.jpg" width="980px/></div>
+		<div style="height:1px;"></div>
+		<div class="content">
+			<div class="content_left">
+			    <div class="top">
+					<div class="c1">推荐产品</div>
+					<cms:list item="article" level="current" count="5" hasAttribute="newRecommend" name="9420">
+						<div class="c4">
+							<span class="CInsuranceCompany icon_C${Article.SupplierCode2}" onclick="hzpp('${Article.SupplierCode2}');"></span><a href="${article.link}">${article.title}</a><br /> <span class="InitPrem">￥${Article.InitPrem}</span>
+						</div>
+					</cms:list>
+
+				</div>
+				<div class="bottom">
+				     <div class="product_recommend">
+						<div class="part1left">
+								<div class="top5">
+									<h3 class="top5tit"><img src="${Site.StaticResourcePath}/image/top5tit.gif" width="115" height="19" /></h3>
+									<div class="tab01">
+						                    <ul> 
+						                        <li id="one1" onMouseOver="setTab('one',1,2)" class="hover">意外</li>
+						                        <li id="one2" onMouseOver="setTab('one',2,2)">旅游</li>
+						                    </ul>
+						                    <div class="clear"></div>
+						          </div>
+								  <div id="con_one_1">
+									<ul class="liststyle05">
+						          		<cms:list item="article"  name="9385" level="current" count="5" hasAttribute="hot" >
+						              	  <li>
+						                      <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span>
+						                  </li>
+						                </cms:list>
+						            </ul>
+						          </div>
+								  <div id="con_one_2" style="display:none;">
+									<ul class="liststyle05">
+						               	<cms:list item="article"  name="旅游保险" level="current" count="5" hasAttribute="hot" >
+						               	   <li>
+						                       <span class='rank<% if(i<6) write("0"+(i+1));%>'><a href="${Article.Link}">${Article.Title|CharWidth=20}</a></span>
+						                   </li>
+						                 </cms:list>
+						            </ul>
+						          </div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_right">
+				<div class="top_b">
+				<div id="products">
+					<cms:list item="article" level="current" pagesize="10" page="true" name="9424">
+						<div class="product_title">
+							<span class="CInsuranceCompany icon_C${Article.SupplierCode2}"  ></span> <span class="productName"> <a href="${Article.Link}" target="_blank"><h2 class="ziti">${Article.title}</h2></a>
+							</span> <span class="SalesVolume" id="SalesV_${Article.RiskCode}">(累计销量：加载中...)</span><span style="display: none;" id="productIntegral_${Article.RiskCode}">${Article.Prop2}</span>
+						</div>
+						<div class="product_condition">
+							${Article.CalHTML2}
+						</div>
+						<div class="product_info">
+						<div class="product_info_bor">
+							<div class="prodcutMark">
+								<ul class="price" >${Article.prodcutMarkPrice}</ul>
+								<ul class="btn">
+									<li class="btn1"><span onclick="chakan('${Article.Link}')">查看详情</span></li>
+									<li class="btn2"><span onclick="submitp('${Article.RiskCode}');">加入收藏</span><span class="add_cp_list" style="margin-left: 6px;"
+										onclick="showcp('${Article.title}','${Article.logo}','${Article.riskcode}','${Site.prop6}','${catalog.producttype}');">加入对比</span></li>
+								</ul>
+							</div>
+							</div>
+							<div class="AdaptPeopleInfo">${Article.AdaptPeopleInfo}</div>
+							
+							<div class="productFeature">${Article.FEMRiskBrightSpot}</div>
+							${Article.DutyHTML}
+						</div>
+					</cms:list>
+				</div>
+				<div id="productsPageBar">${PageBar}</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="clear"></div>
+	<div class="clear"></div>
+	<div id="cpdiv" class="cpdiv">
+		<div class="comparediv">
+			<h3>产品比较</h3>
+			<div class="closebtn">
+				<span onclick="closecp()"><img src="${Site.StaticResourcePath}/images/closebtn.gif" width="20" height="20" /></span>
+			</div>
+			<div class="comparedivcont">
+				<div class="comparedetail" style="display: none;" id="cpprodu1">
+					<input type="hidden" name="productCodeA" id="productCodeA" />
+					<p>
+						<span id="productnameA"></span><br /> <span class="dblue cpdelico" onclick="closecp1()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu2">
+					<input type="hidden" name="productCodeB" id="productCodeB" />
+					<p>
+						<span id="productnameB"></span><br /> <span class="dblue cpdelico" onclick="closecp2()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu3">
+					<input type="hidden" name="productCodeC" id="productCodeC" />
+					<p>
+						<span id="productnameC"></span><br /> <span class="dblue cpdelico" onclick="closecp3()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparedetail" style="display: none;" id="cpprodu4">
+					<input type="hidden" name="productCodeD" id="productCodeD" />
+					<p>
+						<span id="productnameD"></span><br /> <span class="dblue cpdelico" onclick="closecp4()">移除</span>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="comparebtn">
+					<span><img src="${Site.StaticResourcePath}/images/btncp.gif" width="72" height="28" alt="提交对比" onclick="javascript:begincompare('${Site.prop6}');subclosecp();" /></span>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+<cms:include file="block/kxb_footer_new_common.shtml" />
+<cms:include file="block/community_v1.shtml" />
+	<script type="text/javascript">    
+    jQuery(function(){
+          jQuery("#divSearchConditions li span,.top_aa a").click(
+          function(){
+        	  	   jQuery("#load_con").show();
+                   jQuery("#load_con").html("<img src='${Site.StaticResourcePath}/images/loading.gif' />");
+              
+          });
+          jQuery("#divSearchConditions .li_selected").click(
+                  function(){
+                           jQuery("#load_con").html(" ");
+          });
+     });
+</script>
+	<script type="text/javascript">
+		function salesVolumeLoad() {
+			var list=jQuery('span[id^=SalesV_]');
+			var id = new Array(list.length);
+			for (var i = 0; i < list.length; i++) {
+		           id[i] = list[i].id;
+			}
+			jQuery.ajax({
+				type: 'post',
+				url: '${Site.prop6}/shop/sales_volume!search.action?productIds='+id,
+				dataType: "json",
+				async: false,
+				success: function(data) {
+					jQuery.each(data, function(index, object) {
+						document.getElementById(index).innerHTML="(累计销量：" + object + ")";
+					});
+				}
+			});
+		}
+		
+		function chakan(str)
+			{
+				window.open(str);
+				
+			}
+	
+		function submitp(str) {
+			jQuery.ajax({
+				type : 'get',
+				url : '${Site.prop6}/shop/favorites!add.action?productId='
+						+ str,
+				dataType : 'html',
+				success : function(de) {
+
+					if (de == 'notlogin') {
+						artLogin();//使用弹出窗口登录
+					} else {
+						alert(de);
+					}
+				}
+			});
+		}
+		var productType = "${Catalog.ProductType}";
+		var catID = "${Catalog.ID}";
+	 
+
+		function doBuy(str,sup) {
+			var selectID = str+"_Period";
+			var value = jQuery("#"+selectID).val();
+			if(value == null || value == "undefined"){
+				value = "";
+			}
+			var Period = "&Period="+value; 
+
+			var Plan_value = jQuery("#"+(str+"_Plan")).val();
+			if(Plan_value == null || Plan_value == "undefined"){
+				Plan_value = "";
+			}
+			var Plan = "&Plan="+Plan_value; 
+			var TextAge_value = jQuery("#"+(str+"_TextAge")).val();
+			if(TextAge_value == null || TextAge_value == "undefined"){
+				TextAge_value = "";
+			}
+			var TextAge = "&TextAge="+TextAge_value; 
+			
+			if(sup=='1015'){
+				window.location.href = "${Site.prop6}/shop/order_config!buyNow.action?productId="
+					+ str+Period+Plan+TextAge;
+			}else{
+				window.location.href = "${Site.prop6}/shop/order!buyNow.action?productId="
+					+ str+Period+Plan+TextAge;     
+			}
+		}
+	</script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/Framework/Main.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/premcalculate.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/productCompare.js"></script>
+<script language="JavaScript" src="${Site.JsResourcePath}/js/tabchange.js"></script>
+</body>
+</html>

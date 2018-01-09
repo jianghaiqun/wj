@@ -1,0 +1,92 @@
+<!--mini nav 开始-->
+
+  <div class="min_nav">
+   <div class="nav_box">
+     <div class="login_box" id="NotLogin"><span>您好，欢迎来到开心保！请 </span ><a href="###" id="headerShowLoginWindow">登录</a> <span>|</span> <a href="http://localhost:8080/wj/shop/member!newLogin.action?tagid=regtag">免费注册</a> </div>
+     <div class="login_box" id="YesLogin" style="display: none;"><span>您好<span id="headerLoginMemberUsername"></span><span class="vip_jf">(<em id="memberPointsCount"></em>)<div class="goto_jifen" id="pointsChange" style="display: none;">快到<a href="http://localhost:8080/jifen/">商城消费</a><span class="colse_sc"></span></div></span>，欢迎来到开心保！<a href="javascript:void(0);" id="headerLogout" class="headerLogout">退出</a></span> </div>
+     <div class="q_link"> 
+     <ul class="top_nav_link" id="topnav_link">
+          <li><a href="http://localhost:8080/wj/shop/member_center!index.action?tagid=logintag" class="q_link_c ">会员中心</a></li>
+          <li><a href="http://localhost:8080/about/" class="q_link_c"  target="_blank">帮助中心</a></li>
+          <li class="topNavDropMenuBox"><a href="javascript:void(0);" class="q_link_c q_link_d " id="wz_nav">网站导航<b id="nav_wfs" class="nav_wf switch"></b></a>
+           <div id="topNavDropMenu" class="wz_nav_box topNavDropMenu " style="display:none;" >   
+     	<dl class="clearfix">
+     		<dt>保险产品</dt>
+     		<dd class="navmin1"><a href="http://localhost:8080/lvyou-baoxian/" target="_blank" rel="nofollow">旅游险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/yiwai-baoxian/" target="_blank" rel="nofollow">意外险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/jiankang-baoxian/" target="_blank" rel="nofollow">健康险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/renshou-baoxian/" target="_blank" rel="nofollow">人寿险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/jiacai-baoxian/"  target="_blank" rel="nofollow">家财险</a></dd>
+         	<dd class="navmin1"><a href="http://localhost:8080/chexian/"  target="_blank" rel="nofollow">车险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/tx/"  target="_blank" rel="nofollow">团体险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/touzi-licai/"  target="_blank" rel="nofollow">理财险</a></dd>
+            <dd class="navmin1"><a href="http://localhost:8080/jifen/"  target="_blank" rel="nofollow">积分商城</a></dd>
+            <!--  <dd class="navmin1"><a href="###"  target="_blank">车险</a></dd>  --> 
+     	</dl>
+        <dl class="clearfix">  
+     		<dt>保险社区</dt>
+            <dd class="navmin2"><a href="http://localhost:8080/zhishi/"  target="_blank">保险知识</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/zixun/"  target="_blank">保险资讯</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/wenda/"  target="_blank">保险问答</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/baike/"  target="_blank">保险百科</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/zhuanti/"  target="_blank">保险专题</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/gongsi/"  target="_blank">保险公司</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/jifen/"  target="_blank" rel="nofollow">积分商城</a></dd>
+            <dd class="navmin2"><a href="http://localhost:8080/huati/"  target="_blank">热门话题</a></dd>
+     	</dl>
+         <dl class=" clearfix clear_bors">    
+     		<dt>服务中心</dt>
+            <dd class="navmin3"><a href="http://localhost:8080/group/"  target="_blank">合作商入口</a></dd>
+     	</dl>
+     </div>
+       </li>
+     </ul>
+
+     </div>
+   </div>
+  </div>
+
+<!--mini nav 结束-->
+<!--导航开始-->
+<div class="main_nav">
+	<div class="nav_box clearfix nav_logs">
+    <div class="new_logo">  <a href="http://localhost:8080/"><img src="http://localhost:8080/images/logo_03.gif" alt="开心保保险网，一站式服务，省钱更安心" title="开心保保险网，一站式服务，省钱更安心" width="447" height="72"></a></div> <div class="nav_tel"><img src="http://localhost:8080/images/logo_06.gif" width="142" height="39"></div>
+    </div>
+    <div class="main_navs">
+	    <div class="nav_box main_nav_box">
+		     <ul class="nav_main">                                   
+		     	<li class="hovers_d" id="hovers_"><a href="http://localhost:8080/">首页</a></li>
+		     	<li id="hovers_A"><a href="http://localhost:8080/lvyou-baoxian/">旅游险</a>
+                
+                </li>
+		     	<li id="hovers_B"><a href="http://localhost:8080/yiwai-baoxian/">意外险</a>
+              
+                </li>
+		     	<li id="hovers_D"><a href="http://localhost:8080/jiankang-baoxian/">健康险</a>
+                 
+                </li>
+		     	<li id="hovers_E"><a href="http://localhost:8080/renshou-baoxian/">人寿险</a>
+               
+                </li>
+		 		<li id="hovers_C"><a href="http://localhost:8080/jiacai-baoxian/" target="_blank">家财险</a></li> 
+		     	<li id="hovers_F"><a href="http://localhost:8080/chexian/">车险</a> 
+                 
+                </li>
+		    	<li><a href="http://localhost:8080/tx/" target="_blank">团体险</a> 
+		    	
+		    	</li>
+		    	<li><a href="http://localhost:8080/touzi-licai/"  target="_blank" rel="nofollow">理财险</a>
+		    	
+		    	</li>
+		    	<li><a href="http://localhost:8080/jifen/"  target="_blank" rel="nofollow">积分商城</a>
+		    	
+		    	</li>
+		    	
+		     </ul>
+	    </div>
+          
+    </div>
+
+    	 
+</div>
+<!--导航结束-->

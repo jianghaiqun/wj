@@ -1,0 +1,9 @@
+<!--循环：friendlink count：5-->
+<% DataTable dt_27 = TemplateData.getFriendLinkList("friendlink","首页专题友情链接","5","null","null");
+if(dt_27==null){write("没有找到友情链接："+"首页专题友情链接");}else{
+for(int i=0;i<dt_27.getRowCount();i++){
+DataRow friendlink_27  = dt_27.getDataRow(i);
+%>
+
+								<li><a href="${friendlink_27.URL}">${friendlink_27.Name}</a></li>
+						<%}}%>

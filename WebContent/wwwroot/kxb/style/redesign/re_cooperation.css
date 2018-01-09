@@ -1,0 +1,241 @@
+.cooperation{background-color:#f5f5f5}
+#timeline{margin-top:0;background:#f5f5f5}
+#dates{height:65px}
+#dates li{width:90px;height:100%}
+#dates li a{width:85px;height:35px;line-height:30px;margin-top:30px;padding:5px 0 0 0;border-radius:15px 15px 0 0;font-size:16px;color:#fff;background:#fd8824}
+#dates a:hover,a.selected{color:#fff}
+#dates a.selected{margin-top:0;padding:22px 0 13px;font-size:16px;color:#fff}
+#issues{height:165px;margin-top:0;padding-top:50px;background-color:#fff}
+#issues li img{border:1px solid #e8e8e8; margin-right:32px;}
+#issues li h2{overflow:visible}
+#issues li h2 span,#issues li h2 em,#issues li p{line-height:22px;font-size:14px;font-weight:normal;color:#888}
+#issues li h2 span{height:150px;margin-right:25px}
+#issues li h2 em{padding:0}
+#issues li p{width:410px}
+#grad_left,#grad_right{height:65px}
+#grad_left{background-image:url("../../images/redesign/grad_left.png")}
+#grad_right{background-image:url("../../images/redesign/grad_right.png")}
+#next,#prev{top:160px;width:10px;height:19px;background:url("../../images/redesign/cooperation_icon.png") no-repeat 0 0}
+#prev{left:40px}
+#prev:hover{background-position:0 0}
+#next,#next:hover{right:40px;background-position:-11px 0}
+.show_data{margin:20px 0;padding:40px 0;background-color:#fff}
+.show_data ul{overflow:hidden}
+.show_data li{float:left;width:240px;border-left:1px solid #e8e8e8}
+.show_data li.first{margin-left:12px;border:none}
+.show_data li .icon{float:left;display:block;width:64px;height:55px;margin:5px 10px;background:url("../../images/redesign/cooperation_icon.png") no-repeat 0 -20px}
+.show_data .buy .icon{background-position:-65px -20px}
+.show_data .year .icon{background-position:0 -75px}
+.show_data .certification .icon{background-position:-57px -75px}
+.show_data li p{font-size:14px;color:#888}
+.show_data li .data_title{margin-bottom:10px;font-family:"Microsoft Yahei";color:#ed6d00}
+.data_title em{font-size:24px;font-weight:normal}
+h2.brand_title{height:auto;border:none;border-bottom:1px solid #fb8834;font-size:14px;font-weight:normal;line-height:45px;color:#222;background-color:#fff}
+h2.brand_title .icon{float:left;display:block;width:4px;height:16px;margin:15px 10px;background:url("../../images/redesign/rehelp/icon.png") no-repeat -63px 0}
+.brand_box{margin:0;padding-top:16px;background-color:#fff}
+.brand_box li img{border:1px solid #e8e8e8}
+.brand_box li a:hover img{border:none}
+.contact_box{background-color:#fff;overflow:hidden; padding-bottom: 20px;}
+.contact_box li{float:left;width:33%;font-size:14px}
+.contact_box .contact_title{margin:30px 0 20px;color:#222;text-align:center}
+.contact_box li dl{line-height:23px}
+.contact_box li dt,.contact_box li dd{float:left;color:#888}
+.contact_box li dt{width:40%;text-align:right}
+.contact_box li dd{width:60%;margin-bottom:8px;text-align:left}
+.contact_box li dd em{font-weight:normal;color:#ed6d00}
+.contact_box .qq{position:relative;padding-left:30px}
+.contact_box .qq a{ color:#ed6d00;}
+.contact_box .qq a:hover{ text-decoration: underline;}
+.contact_box .qq .icon{position:absolute;top:-2px;left:0;display:inline-block;width:18px;height:20px;margin:0 5px 0 8px;background:url("../../images/redesign/query_qq.png") no-repeat 0 0;}
+.introduce{position:relative;margin-bottom:20px;padding:30px 60px 45px;background:url("../../images/redesign/stamp.png") no-repeat 780px 10px #fff;overflow:hidden}
+.introduce .thumb_wrap{float:left;margin-top:25px; width:160px;}
+.introduce .thumb_wrap img{border:1px solid #e8e8e8}
+.introduce .thumb_wrap p{margin-top:15px;color:#888;text-align:center}
+.introduce .thumb_wrap p em{font-size:16px;font-weight:normal;color:#eb6d1f}
+.introduce .detail{position:relative;width:638px;float:right}
+.introduce .detail h2{margin-bottom:15px;font-size:14px;font-weight:normal;color:#222}
+.introduce .detail p{line-height:23px;color:#888}
+.introduce .detail p .points{display:none;position:absolute;bottom:0;right:0;width:20px;height:23px;background-position:-75px 0}
+.introduce .hide{max-height:146px;overflow:hidden}
+.introduce .arrow{position:absolute;bottom:16px;left:490px;margin-left:-9px;width:18px;height:10px;background-position:-22px 0;cursor:pointer}
+.introduce .up{background-position:-22px -10px}
+.detail_page1 .main-wrap{margin-right:230px;padding:20px 0px 10px;background-color:#fff}
+.detail_page1 .col-sub{width:220px;margin:-10px 0 0 -220px}
+.nlist_con{margin-bottom:10px;border:1px solid #ebebeb;padding:0;background-color:#fafafa}
+.nlist_des{float:left;background-color:#fff}
+.shop_nlist_img{width:105px;margin-right:25px}
+.shop_nlist_img img{border:none}
+.nlist_title{width:auto}
+.nlist_des .shop_tj_shrq{height:auto}
+.nlist_des .rec_list_s{width:65%}
+.nlist_des .rec_list_money{border:none;text-align:right}
+.nlist_price{text-align:center}
+.nlist_price .promition{margin-bottom:10px;line-height:20px;color:#888;text-align:left}
+.promition span{float:left;display:block;width:40px;height:20px;margin-right:5px;color:#fff;background-color:#f8bd2c;text-align:center}
+.nlist_pay{font-size:30px;font-weight:normal;color:#fb7e2a}
+.price_tj{ width:auto;padding-left:35px;overflow:hidden}
+.recom_xl{float:left;padding-left:20px;background:url("../../images/redesign/cooperation_icon.png") no-repeat -111px 11px}
+.recom_xl em{font-weight:normal;color:#eb6d1f}
+.page_area{width:750px;margin:30px 0 10px}
+.new_bottom{border:none;background-color:#fff}
+.con_box_left{border:none;padding:0 25px}
+.bx_l_list{margin:20px 0;padding:0}
+.bx_l_list dt a{font-weight:normal;color:#191919}
+.bx_l_list dd a{color:#888;background:url("../../images/redesign/cooperation_icon.png") no-repeat -116px -114px}
+.bx_l_list dd em{font-weight:normal;color:#eb6d1f}
+.choose ul{background:url("../../images/redesign/cooperation_bg.png") no-repeat 18px 0}
+.choose li{border-bottom:1px solid #e8e8e8;padding:11px 25px 11px 80px}
+.choose li.last{border:none}
+.choose li p{margin-bottom:10px;color:#191919}
+.choose li span{color:#888}
+.service p{color:#888}
+.service ul{padding-left:65px;background:url("../../images/redesign/service_list.png") no-repeat 30px 8px}
+.service ul li{margin:20px 0;line-height:36px; height: 38px;}
+.service li i{float:left;margin-left:-30px;color:#fff}
+.service li p{width:77px;border:1px solid #ffe1cc;padding:0 25px;background-color:#fff1e7}
+.service li p .icon{width:10px;height:20px;margin:6px 0 0 -35px;background-position:-55px 0}
+.service .on_time{margin-bottom:20px;text-align:center}
+.service .s_info{border-top:1px solid #ebebeb;padding:10px 10px}
+.service .s_info p{margin:10px 0;line-height:18px}
+.service .s_info p em{font-weight:normal;color:#222}
+.hots .nav{width:224px;border-bottom:1px solid #ebebeb;overflow:hidden}
+.hots .nav li{float:left;width:33%;font-size:14px;text-align:center;cursor:pointer}
+.hots .nav li span{display:block;height:15px;padding:12px 0;border-right:1px solid #ebebeb;color:#888}
+.hots .nav li.cur{background-color:#fb8834}
+.hots .nav li.cur span{border:none;color:#fff}
+.hots .detail_list{padding:20px 10px 0}
+.hots .detail_list li{position:relative;line-height:18px;margin-bottom:20px;color:#888}
+.hots .dl_title{display:block;width:100%;}
+.hots .dl_title:hover{ color:#FD8823;}
+.hots .detail_list .price{display:inline-block;width:60px;color:#eb6d1f}
+.hots .detail_list .icon{position:absolute;top:27px;right:0;width:8px;height:14px;text-indent:-999em;background-position:-66px 0}
+.news .nav{width:230px;margin-left:-1px;overflow:hidden}
+.news .nav li{float:left;width:24%;border-bottom:1px solid #fb8834;text-align:center;background-color:#fbfbfb;cursor:pointer}
+.news .nav li.cur{border:none;border:1px solid #fb8834;border-bottom:none}
+.news .nav li span{display:block;margin:15px 0;border-right:1px solid #ebebeb; font-size: 14px;}
+.news .detail_list{padding:20px 10px 0}
+.news .detail_list a{display:block;width:180px;margin-bottom:15px;padding-left:20px;color:#888;background:url("../../images/redesign/cooperation_icon.png") no-repeat -116px -118px;}
+.news .detail_list a:hover{ color:#FD8823;}
+.detail_page2 .main-wrap{margin-right:240px}
+.detail_page2 .col-sub{width:230px;margin:-10px 0 0 -230px}
+.detail_page2 .box_title{height:40px;line-height:40px;border:none;background-color:#fff; position:relative;}
+.detail_page2 .box_title .icon{margin:12px 10px}
+.detail_one{padding:20px 30px;background-color:#fef6f0;border-top:1px solid #ffeada;border-bottom:1px solid #ffeada;overflow:hidden}
+.detail_one .detail_title{margin-bottom:20px;font-size:14px;color:#222;}
+.detail_one .detail_title a:hover{ color:#FD8823;}
+.detail_one .detail_info{margin-bottom:10px;line-height:18px;color:#888;}
+.detail_page2 .more{ display:block; text-align: right; font-size:12px;}
+.detail_page2 .more:hover{ color:#FF9E41;}
+.insurance_news{margin-bottom:20px;overflow:hidden}
+.sub_main{overflow:hidden}
+.insurance_qa .box_title,.insurance_know .box_title{border-top:5px solid #ff9e4c}
+.insurance_qa{float:left;width:365px;background-color:#ffffff;}
+.insurance_qa ul{padding:0 10px}
+.insurance_qa li{border-bottom:1px solid #e8e8e8;}
+.insurance_qa li.last{border:none;}
+.insurance_qa li .con{width:265px;margin:20px 0;border:1px solid #e4e4e4;padding:10px 20px;line-height:18px;color:#222;background-color:#fff}
+.insurance_qa div{position:relative;}
+.insurance_qa .question{padding-left:38px;}
+.insurance_qa .question  .con{ height:18px; overflow:hidden; line-height: 1.8em;  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;} .question a{ color:#222222;}
+.question a:hover{ color:#FF9E41;}
+.insurance_qa div .icon{position:absolute;top:0;width:38px;height:24px;background:url("../../images/redesign/qa.jpg") no-repeat 0 0}
+.insurance_qa .question .icon{left:1px;}
+.insurance_qa .answer .con{padding-bottom:14px;border-color:#ffe6d6;color:#888;background-color:#fffbf8; height:90px; overflow:hidden;}
+.insurance_qa .answer .more{color:#888;}
+.insurance_qa .answer .more:hover{ color:#FD8823;}
+.insurance_qa .answer .icon{right:1px;background-position:-38px 0}
+.insurance_know{float:right;width:365px}
+.insurance_know ul{background-color:#fff;padding:0px 25px 3px;overflow:hidden;}
+.insurance_know li{padding:30px 0 30px;border-bottom:1px solid #ebebeb;overflow:hidden}
+.insurance_know li.last{border:none}
+.insurance_know .list_title{display:block;width:295px;margin-bottom:15px;padding-left:20px;font-size:14px;color:#222;background:url("../../images/redesign/cooperation_icon.png") no-repeat -116px -118px}
+.insurance_know .list_title:hover{color:#FD8823; }
+.insurance_know li .descon{line-height:17px;color:#888; height:55px; line-height: 1.6em; overflow:hidden}
+.insurance_wiki{margin:20px 0}
+.insurance_wiki .detail_one{overflow:hidden}
+.insurance_wiki .detail_one img{float:left;display:block;margin-right:25px;border:1px solid #e8e8e8}
+.insurance_wiki .detail_one .more{color:#888}
+.insurance_wiki .detail_one .more:hover{ color:#FD8823;}
+.detail_page2 .hots .nav{width:233px}
+.intro li a{padding:0 10px;line-height:40px}
+.intro li p{padding:5px 10px;line-height:18px;color:#888;background-color:#fffbf8}
+.others{clear:both}
+.others .box_title{border-bottom:1px solid #fdb55d}
+.others ul{padding:20px 10px 0;background-color:#fff;overflow:hidden}
+.others li{float:left}
+.others li a{display:block;width:100px;margin-bottom:20px;padding-left:20px;color:#888;background:url("../../images/redesign/cooperation_icon.png") no-repeat -116px -118px}
+.others li a:hover{ color:#FD8823;}
+.icon{float:left;display:block;background:url("../../images/redesign/cooperation_icon.png") no-repeat 0 0}
+.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.title_left,.box_title{height:45px;border-bottom:1px solid #fb8834;padding:0;font-size:14px;font-weight:normal;line-height:45px;color:#222;background-color:#fbfbfb}
+.title_left .icon,.box_title .icon{width:4px;height:16px;margin:15px 10px;background:url("../../images/redesign/rehelp/icon.png") no-repeat -63px 0}
+.insurance_news .box_title,.insurance_wiki .box_title{border-top:5px solid #67c6f3;}
+.sub_main .box_title .more{ position:absolute; right:10px; top:2px;}
+.sub_main .box_title .more:hover{color:#FD8823;}
+.insurance_news ul,.insurance_wiki ul{ padding:30px 0;background-color:#fff;overflow:hidden}
+.insurance_news li,.insurance_wiki li{float:left;width:328px;margin-left:40px;}
+.insurance_news li:nth-of-type(odd),.insurance_wiki li:nth-of-type(odd){ border-right:1px solid #e8e8e8}
+.insurance_news li a,.insurance_wiki li a{display:block;width:300px;padding-left:20px;line-height:25px;font-size:14px;color:#888;background:url("../../images/redesign/cooperation_icon.png") no-repeat -116px -114px;}
+.insurance_news li a:hover,.insurance_wiki li a:hover{ color:#FF9E41;}
+.page_area{text-align:center}
+.page_area #pagination{display:inline-block;*display:inline}
+#pagination ul{width:auto;margin:0}
+#pagination ul li,#pagination ul li span{*float:none;*display:inline;*zoom:1;}
+#pagination .now{*line-height:30px;}
+.changeBox_a1{ height:255px;}
+.companies_logo_hz{   border: 1px solid #e8e8e8; width:180px; height:80px; background-position: center center; background-size: 100%;}
+.content{ width:980px; margin:0 auto;}
+.content_left{ width:320px; float:left; }
+.content_right{ width:650px; float:right; background:#fff;}
+.l_boxss { margin-bottom: 20px; padding-bottom: 0px; overflow: hidden; background-color: #fff; }
+.c1 { color: #222; font-size: 14px; height: 44px; line-height: 44px; padding: 0 10px; border-bottom: 1px solid #fb8834; text-align: left; }
+.c1 em { float: left; width: 4px; height: 16px; margin-top: 14px; margin-right: 10px; background: url("../../images/redesign/icon_detail_cont.png") no-repeat -9px -260px; }
+.l_boxss {
+    background-color: #fff;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-bottom: 4px;
+}
+.product_Insure{ padding:10px 0 ;}
+.product_Insure .c5{  height:30px; line-height: 30px;  padding:0px 15px; overflow:hidden;  text-overflow: ellipsis;  white-space: nowrap;}
+.product_Insure .c5 a{ color:#888888; font-size: 14px;}
+.product_Insure .c5 a:hover{ color:#f88602;}
+.zjll_list {background: #fff; padding-top: 14px; margin-bottom: 12px; width:auto; padding:14px 0 0px; }
+.zjll_list li { padding-left:14px; height:84px; clear:both; }
+.zjll_list li h4 { width:66px;  float:left; margin-right: 10px; }
+.zjll_list li h4 img { width:65px; height:65px; border: 1px solid #F4F4F4;}
+.zjll_list li .hotproduright { width:230px; float:left; position:relative; }
+.zjll_list li h5 { line-height:22px; margin-top: 2px; margin-bottom: 0px; height:46px; overflow:hidden; width:206px;}
+.zjll_list li h5 a { color:#323232; font-size:14px; text-decoration:none; line-height:18px;  font-weight: normal; }
+.zjll_list li h5 a:hover { color:#F88602; font-size:14px; text-decoration:underline; line-height:18px; }
+.zjll_list li h6 { height:18px; overflow:hidden; color:#bdbdbd; line-height:18px; width:220px; white-space:nowrap; text-overflow:ellipsis; font-weight: normal; }
+.tj_payNum{ width:50%; float:left; color:#888888;}
+.productName a{ color:#222222;}
+.productName a:hover{ color:#f88602;}
+.tj_paymoney{ width:36%; float:right; color:#FF0000; text-align: right;  padding-right: 32px;}
+.brand_list_top{ padding: 24px 18px;}
+.brand_list_info{ border-bottom: 1px dashed #E8E8E8; padding:10px 0;}
+.productName{ height:30px; line-height: 30px; font-size: 14px; color:#222222;}
+.brand_list_info .content{ width:100%; line-height: 1.8em; color:#888888;}
+.content_right .page_area{ width:650px; margin-top: 10px; margin-bottom: 20px;}
+
+
+.changeBox_a1{float:left;width:320px;height:310px;position:relative;}
+.changeBox_a1 .a_bigImg{position:absolute;top:0px;left:0px;display:none}
+.changeDiv{position:absolute;top:0px;left:0px;display:none}
+.changeDiv h3{position:absolute;left:0px;bottom:0;width:320px;height:30px;line-height:30px;background:#fff;filter:alpha(opacity=70);opacity:0.7}
+.changeDiv h3 a{display:block;padding-left:15px;color:#FF6600}
+.ul_change_a1{position:absolute;right:1px;bottom:6px;padding-left:19px;overflow:hidden}
+.ul_change_a1 li{float:left;margin-right:12px}
+.ul_change_a1 img{border:1px solid #ddd}
+.ul_change_a1 img.now{border:1px solid #FF6600}
+.a_last,.a_next{position:absolute;top:10px;width:16px;height:16px;background:url(../../images/redesign/bot.png) no-repeat;text-indent:-999em;overflow:hidden}
+.a_last{right:30px;background-position:0 0}
+.a_next{right:12px;background-position:100% 0}
+.ul_change_a2{position:absolute;right:20px;bottom:7px;padding-left:19px;overflow:hidden}
+.ul_change_a2 li{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1}
+.ul_change_a2 span{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;font-size:0.8em;padding:5px; margin-right:2px; filter:alpha(opacity=85);opacity:0.85;cursor:hand;cursor:pointer;  width: 10px; height: 10px; text-indent: -2000em; background:url(../../images/sales/ispf_03.png) no-repeat -1px -231px; }
+.ul_change_a2 span.on{ background:url(../../images/sales/ispf_03.png) no-repeat -25px -231px;  color:#CC0000;}
+.new_bottom .changeBox_a1{ width:230px; height:310px;}
+.new_bottom  .changeDiv h3{ width:230px;}
+.detail_imgs{border: 1px solid #e8e8e8;float: left;height: 105px; margin-right: 25px; width: 200px;}

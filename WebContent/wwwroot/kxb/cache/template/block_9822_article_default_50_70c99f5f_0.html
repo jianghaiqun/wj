@@ -1,0 +1,11 @@
+<% DataTable dt_30 = TemplateData.getDocList("article","保险品牌","all","null","null","50","exists(select 1 from zdcolumnvalue z1 where ZCArticle.id=z1.relaid and z1.textvalue='是' and z1.columncode='HasPartnership')","null","null");
+  if(dt_30==null){write("没有找到栏目。parent：null  catalog："+"保险品牌");}else{
+ int rdCnt=dt_30.getRowCount();
+ int pageCnt=0;
+ for(int i=0;i<rdCnt;i++){
+DataRow article_30  = dt_30.getDataRow(i);
+ int rdIdx=i;
+%>
+
+							<a href="${Site.URL}/${article_30.URL}" target="_blank" ><img height="50" width="113" src="${Site.StaticResourcePath}/${article_30.CompanyLogo}" width="126" height="62" title="${article_30.LogoAlt}" class="f-ib"/></a>
+						<%}}%>

@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="${article.MetaKeywords}" />
+<meta name="description" content="${article.MetaDescription}" />
+<title><%
+String title = article.getString("MetaTitle"); 
+write(((null==title || "".equals(title)) ? article.getString("title"):title) + "-" + site.getString("Meta_Keywords"));
+%></title>
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/new_header.css">
+<link rel="stylesheet" type="text/css" href="${Site.StaticResourcePath}/style/car/car_style.css">
+<link href="${Site.StaticResourcePath}/style/new_logo.css" rel="stylesheet" type="text/css" />
+<cms:include file="block/kxb_custom_header.shtml" />
+</head>
+
+<body>A
+<cms:include file="block/kxb_header_index_new.shtml" />
+<div class="wrapper cf">
+<ul class="car_mininav clearfix lyg_nav">                                                       
+		<li><a  href="${Site.URL}/chexian/"  title="车辆保险首页">返回车险首页</a></li>
+	</ul>
+<div class="car_index_s"><div class="meihua_p">买车险 首选开心保 <b>直降15%</b></div></div>
+<div class="car_gs_box car_border_q no_top_bor cf">
+	<div class="car_bxgs floatl">
+    
+      	 <div class="search_bxgs"><div class="car_bxzscon">保险公司:</div>  <div class="car_select_box">
+            	<span class="car_select_txt">请选择</span><a class="car_selet_open"><b></b></a>
+            	<div class="car_option" id="car_tag">
+				   <cms:list item="article"  level="all" name="车险对接保险公司" >
+		              <a onclick="getlink('${Article.CpsLink}','${Article.title}')">${Article.title}</a>
+		           </cms:list>
+                </div>
+            </div>
+             </div>
+          
+             	<ul  id="car_tag_con" class="car_lipin  cf">
+				   <cms:list item="article" level="all" name="车险对接保险公司" >
+		             <li style="display:none">${Article.Gift}</li>
+		           </cms:list>
+             	</ul>
+            
+                <div class="ljbj_sc"> <input name="" type="button" value="开始报价" onclick="guodu('${Site.URL}/cx/gd/')" class="input_ksbj"></div>
+    </div>
+    <div class="car_adjd floatr">
+    <img src="${Site.StaticResourcePath}/images/car/huahen_09.jpg" width="700" height="246" alt="车辆刮损不发愁">
+    </div>
+</div>
+<div class="h10 clear"></div>
+<div class="car_left floatl ">
+<div class="car_ad_l clearfix"><a href="http://www.axatp.com/bannerPage/LPQuoteCalc.html" target="_blank">
+<img src="${Site.StaticResourcePath}/images/car/car_ad_03.jpg" width="220" height="165" alt="车险快速报价" title="车险快速报价"></a></div>
+            <cms:list item="Image"  name="车险图片"> 
+		      <div class="car_ad_l clearfix">
+			   <a href="${Image.wangzhi}" target="_blank">
+			       <img src="${Site.StaticResourcePath}/${Image.Path}${Image.SrcFileName}" width="220" height="58" alt="${Image.title}" title="${Image.title}">
+			   </a>
+			  </div>
+		    </cms:list>
+            
+            <div class="car_border_q mar_btn_10">
+            <ul class="car_zx_title zs_list cf">
+            	<li class="zslist_1"><span class="hover" id="zslist1" onclick="setTab('zslist',1,3)">资讯</span></li>
+            	<li class="zslist_1"> <span  id="zslist2"  onclick="setTab('zslist',2,3)">知识</span></li>
+                <li class="zslist_1"> <span  id="zslist3"  onclick="setTab('zslist',3,3)">问答</span></li>
+            </ul>
+            <ul class="zx_list cf " id="con_zslist_1">
+				<cms:list item="article" level="all" type="rand" tag="第三者责任险" count="6" name="保险资讯">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_2" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="第三者责任险" count="6" name="保险知识">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+              <ul class="zx_list cf " id="con_zslist_3" style="display:none;">
+				<cms:list item="article" level="all" type="rand" tag="第三者责任险" count="6" name="保险问答">
+					<li><a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a></li>
+				</cms:list>
+             </ul>
+            </div>
+           <div class="car_border_q mar_btn_10">
+             <h2 class="car_l_title3">商业车险种类</h2>
+             <ul class="car_gs_list xz_list cf ">
+			   <cms:list item="friendlink" name="商业车险种类">
+				 <li><a href="${friendlink.URL}" target='<%String url = friendlink.getString("url");if(url.startsWith("h"))write("_blank");%>'>${friendlink.Name|CharWidth=7}</a></li>
+		       </cms:list>
+             </ul>
+            </div>
+               <div class="car_border_q mar_btn_10">
+              	 <h3 class="car_l_title3">理赔案例资讯</h3>
+                 <ul class="car_gs_list lp_list cf">
+                 <cms:list item="article" level="all" type="rand" tag="第三者责任险案例" count="10" name="保险知识,保险资讯">
+						<li>
+							<a href="${Article.link}" target="_blank">${Article.title|CharWidth=15}</a>
+	                		<%if(i==0){
+	                		write("<p class='p_text_des'>");
+	                		String summary = article.getString("summary");
+							String description = article.getString("MetaDescription");
+							if(description.length()>50){
+							description = description.substring(0,50);
+							}
+							if(summary!=null && !"".equalsIgnoreCase(summary.trim()) && summary.length()>50){
+							summary = summary.substring(0,50);
+							}
+							write(  ( ( null==summary || summary.trim().length() == 0 || "null".equalsIgnoreCase(summary.trim()) )) ? description : summary ) ;
+							if(summary.length()==50){
+							write("...");
+							}else if(( null==summary || summary.trim().length() == 0|| "null".equalsIgnoreCase(summary.trim())) && description.length()==50){
+							write("...");
+							}
+						    write("</p>");
+						    }%>
+						</li>
+					</cms:list>
+                 </ul>
+              </div>
+  </div>
+       <div class="car_right floatr">
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h1 class="car_l_title">第三者责任险</h1>
+			<p >
+    第三者责任险是指被保险人或其允许的驾驶人员在使用保险车辆过程中发生意外事故，致使第三者遭受人身伤亡或财产直接损毁，依法应当由被保险人承担的经济责任，保险公司负责赔偿。第三者责任险也被称为“三者险”或者“第三者险”。以往很多地区都曾将第三者险列为强制保险险种，但新交强险公布实施后，三者险成为非强制性规定购买的保险。<br>
+因为第三者险能够充分补充交强险中对于第三者财产损失、医疗赔付不足的情况，因此建议车主都能够购买三者险，为爱车提供更周全保障。
+
+
+            </p>
+
+            
+        </div>
+        
+         <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/renshi/AF20130819012.shtml" target="_blank">三者险购买流程</a></h2>
+			
+            <p>三者险和交强险各家保险公司都推出了网销和电销两种直销平台，１分钟即可报出准确报价。如开心保就提供了多家保险公司的价格在线对比服务，只需要根据提示录入基本信息，就可以获得最精准的报价。比价后，大家可以根据自己的经济情况选择投保方式。车主通过各家保险公司的车险直销平台在线投保，商业三者险费率不仅可享受多省更多的优惠，还可享受和线下同样优质的理赔服务。
+</p>
+            
+        </div>
+        
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A03G20130626040.shtml" target="_blank">三者险是什么意思</a></h2>
+			
+            <p>三者险全称第三者责任险属于商业险，是指在保险期间内，被保险机动车行驶过程中发生意外事故，致使第三者遭受人身伤亡和财产的直接损毁，依法应由被保险公司承担的经济赔偿责任，保险公司对于超过交强险各项赔偿限额以上的部分，按照保险合同的规定负责赔偿。
+第三者责任险中的第三者，是指机动车辆保险合同当事人以外的他人。在保险合同中，一方是保险人，另一方是被保险人，两者以外的第三方就是这里所说的第三者。
+</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/renshi/C03G20130513088.shtml" target="_blank">第三者责任险多少钱</a></h2>
+			
+            <p>第三者责任险的保费计算与车辆购置价无关，车主只要根据费率表，就可以得到固定费率，然后乘以保险公司折扣幅度，就是最终的保费额度。商业三责险价格因不同的保险公司、不同的渠道投保而不同，具体多少钱还要看最高赔偿限额对应的档次，保费也由此低到高变化。举例来说，普通家庭汽车（6座以下）投保第三者责任险五十万保额，一年固定费用为1721元，然后乘以保险公司折扣幅度进行计算，就是第三者责任险的最终价格。
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/renshi/A03G20130729001.shtml" target="_blank">第三者责任险理赔限额</a></h2>
+			
+            <p>第三者责任理赔限额即保险金额，亦即保险人承担赔偿或给付保险金责任之最高限额。依保监发[2000]16号文件“机动车辆保险条款”第九条，第三者责任险每次事故最高赔偿限额应根据不同车辆种类选择确定：在不同区域内，摩托车、拖拉机之最高赔偿限额有2万元、5万元、10万元和20万元四个档次；其他车辆之最高赔偿限额分为5万元、10万元、20万元、50万元、100万元和100万元以上六个档次，且最高不超过1000万元。
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/baike/zhishi/269816.shtml" target="_blank">第三者责任险条款</a></h2>
+			
+            <p>第三者责任险条款总则<br>
+第一条 本保险合同由保险条款、投保单、保险单、批单和特别约定组成。凡涉及本保险合同的约定，均应采用书面形式。<br>
+第二条 本保险合同中的机动车辆是指在中华人民共和国境内（不含港、澳、台 地区）行驶的汽车、电车及约定的其他车辆。<br>
+第三条 本保险合同中的第三者是指除投保人、被保险人、保险人以外的，因保险车辆发生意外事故遭受人身伤亡或财产损失的保险车辆下的受害者。<br>
+
+</p>
+            
+        </div>
+        
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/renshi/A03G20130729005.shtml" target="_blank">第三者责任险费率 	</a></h2>
+			
+            <p>多年来，第三者责任险费率在保险政策的影响下曾多次调整。如今，在新版的交强险费用标准实施的同时，新版的商业第三者责任险的费率，在赔付金额不变的情况下也开始有不同程度的下调，其中最高下调15.02%，6座以下家庭用车车主较关心的私家车费率，最高也下调了9.54%。据了解，这次调整的第三者责任险，5万、10万、15万、20万、30万、50万、100万的保额费率的都有不同程度的下调，没有一个车型提高费率。
+</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title"><a href="http://www.kaixinbao.com/zhishi/cheliangbaoxian/A03G20130729039.shtml" target="_blank">第三者责任险理赔注意事项 	</a></h2>
+			
+            <p>在处理第三者责任时，应注意以下事项：<br>
+1、第三者的范围。第三者是指被保险人及其财产和保险车辆上所有人员与财产以外的他人、他物。<br>
+2、保险车辆。第三者责任险的保险车辆种类不受限制，即各种机动车辆或专业用途车辆均可投保，但无照驾驶汽车除外。<br>
+3、碰撞责任。保险车辆与未保险车辆相撞，致使未保险车辆上的司机、乘客伤亡或车上装载的货物损坏，属第三者赔偿责任。<br>
+4、装卸货物发生的责任。保险车辆在装卸货物时发生事故造成他人的人身伤亡和财产损失，不属于第三者责任。<br>
+5、赔偿限额。机动车辆保险的第三者责任，一般不规定赔偿限额。通常在发生第三者责任事故时，保险人按照出险地公安、交通部门的规定或赔偿裁决，经保险人核定后确定赔偿金额。<br>
+
+</p>
+            
+        </div>
+        <div class="car_border_q hzpp_main cf p_cons"> 
+          <h2 class="car_l_title">保险公司对比板块</h2>
+		<table width="100%" border="0" class="huahen_table">
+  <tr>
+    <th scope="col" class="table_no_bor_l" style="width:134px;">&nbsp;</th>
+    <cms:list item="article" level="all" name="太平洋车险" >
+         <th scope="col">太平洋车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')"class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="平安车险" >
+         <th scope="col">平安车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="阳光车险" >
+        <th scope="col">阳光车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+    <cms:list item="article" level="all" name="大地车险" >
+        <th scope="col">大地车险<div class="ljbj_csf"><a href="###" onclick="getNowCpslink('${Article.CpsLink}','${Article.title}','${Site.URL}/cx/gd/')" class="car_see">立即报价</a></div></th>
+    </cms:list>
+  </tr>
+  <tr>
+    <td  class="table_no_bor_l">三者险保障范围</td>
+    <td colspan="4">被保险人或其允许的驾驶人员在使用保险车辆过程中发生意外事故，致使第三者遭受人身伤亡或财产直接损毁，依法应当由被保险人承担的经济责任，保险公司负责赔偿。</td>
+    </tr>
+  <tr>
+    <td  class="table_no_bor_l">免责范围</td>
+    <td colspan="4">（1）被保险人及其家庭成员的人身伤亡、所有或代管的财产的损失。<br>
+（2）本车驾驶人及其家庭成员的人身伤亡、所有或代管的财产的损失。私有车辆、个人承包车辆的被保险人或其允许的驾驶人及其家庭成员，以及他们所有或代管的财产。<br>
+（3）本车上其他人员的人身伤亡或财产损失。<br>
+（4）保险车辆拖带未投保第三者责任保险的车辆（含挂车）或被未投保第三者责任保险的其他车辆拖带。<br>
+（5）保险车辆发生意外事故，致使被保险人或第三者停业、停驶、停电、停水、停气、停产、通信中断的损失以及其他各种间接损失。<br>
+（6）指因保险事故引起的、无论是否依法应由被保险人承担的任何有关精神损害的赔偿。<br>
+</td>
+    </tr>
+  <tr>
+    <td valign="top"  class="table_no_bor_l table_no_bor_btn">不同公司免责条款对比</td>
+    <td valign="top" class="table_no_bor_btn">1、保险机动车在行驶过程中翻斗突然升起，没有放下翻斗，自卸系统（含机件）失灵导致的人身伤亡、财产损失和费用的赔偿责任；<br>
+2、不赔偿律师费、诉讼费、仲裁费，罚款、罚金或者惩罚性赔款，以及未经保险人事先书面同意的检验费、鉴定费、评估费；<br>
+
+</td>
+    <td valign="top" class="table_no_bor_btn">1、被保险人及其家庭成员、其允许的驾驶员及其家庭成员、保险车辆车上人员的人身伤亡及财产损失的赔偿责任；<br>
+2、免除对车载货物泄漏、腐蚀造成的任何人身伤亡、损失及费用的赔偿；<br>
+3、不赔偿停车费、保管费、扣车费以及各种罚款；<br>
+4、一个记分周期内记分达12分仍驾驶造成的损失的为除外责任<br>
+
+</td>
+    <td valign="top" class="table_no_bor_btn">1、被保险人或其允许的驾驶员及他们的家庭成员；<br>
+2、车辆所载货物掉落、泄漏、腐蚀造成的损失；<br>
+3、保险事故引起的任何有关精神损害赔偿。<br>
+4、机动车辆拖带车辆（含挂车）或其他拖带物，二者当中至少有一个未投保第三者责任险；<br>
+
+</td>
+    <td valign="top" class="table_no_bor_btn">1、被保险人及其家庭成员、其允许的驾驶员及其家庭成员、保险车辆车上人员的人身伤亡及财产损失的赔偿责任；<br>
+</td>
+  </tr>
+</table>
+ 
+        </div>
+        
+        
+         <div class="car_l_title">意外保障 畅行无忧</div> 
+			<cms:list item="article" level="all" type="rand" count="6" hasAttribute="CarRecommend" name="产品中心">
+				<div class="cp_list_so">
+				    <div class="car_cp_logo icon_C${Article.SupplierCode2}"></div>
+			    	<dl class="car_cp_des">
+		                <dt><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=16}</a></dt>
+			            <dd class="hot_content"  >${Article.AdaptPeopleInfo|CharWidth=16}</dd>
+						<dd><a href="${Article.Link}" class="car_see"  target="_blank">查看详情</a></dd>
+			    	</dl>
+				</div>
+		    </cms:list>
+         </div>
+           
+       </div>
+        <div class="clear"></div>
+        
+        <div class="part6">
+				<ul>
+				<cms:list item="hotopic"  name="第三者责任险" >
+					 <% if(i==0) write("<ul class=\"special_u1 clearfix special_li_21\" id=\"min_tag_hzpp1\" >");%> 
+				</cms:list>	
+					<cms:list item="hotopic"  name="第三者责任险" >
+						<li class="special_li" ><em class="<% if(i==0) write("select_tab_hzpp1 first");%>"><span class="">${hotopic.name}</span></em></li>	
+					</cms:list>
+				</ul>
+				<div class="new_special_box clearfix" id="tag_box_hzpp1"  >
+					<cms:list item="hotopic"  name="第三者责任险" >
+						<ul class="special_list clearfix" style="<% if(i!=0) write("display:none;");%>">
+					 		<cms:sublist item="friendlink" count="50" >
+						 		<li><a href="${friendlink.url}" >${friendlink.name}</a></li>
+							</cms:sublist>		
+						</ul>
+					</cms:list>
+				</div>
+			</div>
+</div>
+
+	<div class="clear"></div>
+    <cms:include file="block/kxb_footer_new.shtml" />
+	<cms:include file="block/community.shtml" />
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/jquery.soChange-min.js"></script>
+	<script type="text/javascript" src="${Site.JsResourcePath}/js/car.js"></script>
+</body>
+</html>
