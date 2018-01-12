@@ -131,6 +131,43 @@ function pro(){
 	});
 }
 
+function copy(){
+    var arr = DataGrid.getSelectedValue("module_dg3");
+    if(!arr||arr.length==0||arr.length>1){
+        Dialog.alert("请先选择一行要复制的模块！");
+        return;
+    }
+    var diag = new Dialog("Diag1");
+    diag.Width = 350;
+    diag.Height = 150;
+    diag.Title = "复制模块" ;
+    diag.URL = "Module/ModuleManageCopyDialog.jsp";
+    diag.onLoad = function(){
+        $DW.$("ModuleName").focus();
+    };
+    diag.CancelEvent = CancelClose;
+    diag.OKEvent = copyEvent;
+    diag.show();
+    diag.CancelButton.value = "关  闭";
+}
+
+function copyEvent() {
+    var arr = DataGrid.getSelectedValue("module_dg3");
+    var dc = $DW.Form.getData("form2");
+    dc.add("id",arr[0]);
+    if($DW.Verify.hasError()){
+        return;
+    }
+    Server.sendRequest("com.sinosoft.module.ModuleManage.moduleCopy",dc,function(response){
+        Dialog.alert(response.Message,function(){
+            if(response.Status==1){
+                $D.close();
+                DataGrid.loadData("module_dg3");
+            }
+        })
+    });
+}
+
 </script>
 </head>
 <body>
@@ -144,11 +181,12 @@ function pro(){
               		    <z:tbutton onClick="edit()"><img src="../Icons/icon022a4.gif" width="20" height="20"/>编辑</z:tbutton>
              		    <z:tbutton onClick="del()"><img src="../Icons/icon022a3.gif" width="20" height="20"/>删除</z:tbutton>
              		    <z:tbutton onClick="pro()"><img src="../Icons/icon022a3.gif" width="20" height="20"/>生成模块</z:tbutton>
+             		    <z:tbutton onClick="copy()"><img src="../Icons/icon022a3.gif" width="20" height="20"/>复制模块</z:tbutton>
 	            	</td>
 	           </tr>
           <tr>
 				<td style="padding:2px 10px;">
-					<div style="float:left;"> 
+					<div style="float:left;">
 			    		 模块类型&nbsp;<z:select id='ModuleType'>${ModuleTypeList}</z:select>&nbsp;
 						 模块名称&nbsp;<input name="ModuleName" type="text" id="ModuleName"> &nbsp;
 						 生成标记&nbsp;

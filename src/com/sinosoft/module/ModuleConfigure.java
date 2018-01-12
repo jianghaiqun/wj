@@ -20,7 +20,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 页面初始化
-	 * 
+	 *
 	 * @param params
 	 * @return
 	 */
@@ -36,7 +36,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 模版配置-修改页面初始化
-	 * 
+	 *
 	 * @param params
 	 * @return
 	 */
@@ -61,7 +61,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 模块信息表数据查询
-	 * 
+	 *
 	 * @param dga
 	 */
 	public static void dg1DataBind(DataGridAction dga) {
@@ -93,7 +93,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 模块信息表数据查询
-	 * 
+	 *
 	 * @param dga
 	 */
 	public static void dg2DataBind(DataGridAction dga) {
@@ -121,7 +121,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 模版配置-修改-模版数据查询
-	 * 
+	 *
 	 * @param dga
 	 */
 	public static void dg3DataBind(DataGridAction dga) {
@@ -136,7 +136,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 模版配置-修改-添加模版数据查询
-	 * 
+	 *
 	 * @param dga
 	 */
 	public static void dg4DataBind(DataGridAction dga) {
@@ -166,7 +166,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 模版配置-添加
-	 * 
+	 *
 	 * @param dga
 	 */
 	public void addSave() {
@@ -287,7 +287,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 模版配置-修改-数据保存
-	 * 
+	 *
 	 * @param dga
 	 */
 	public void saveModuleConfigure() {
@@ -358,7 +358,7 @@ public class ModuleConfigure extends Page {
 
 	/**
 	 * 模版配置-修改-添加模块信息
-	 * 
+	 *
 	 */
 	public void addModuleConfigure() {
 		try {
@@ -398,9 +398,55 @@ public class ModuleConfigure extends Page {
 		}
 	}
 
+    /**
+     * 模版复制
+     *
+     */
+    public void templateCopy () {
+        String factorId = $V("factorId");
+        if (StringUtil.isEmpty(factorId)) {
+            Response.setStatus(0);
+            Response.setMessage("传入ID不能为空!");
+            return;
+        }
+        if (!StringUtil.checkID(factorId)) {
+            Response.setStatus(0);
+            Response.setMessage("传入ID时发生错误!");
+            return;
+        }
+
+        ProductToTemplateSchema productToTemplateSchema = new ProductToTemplateSchema();
+        ProductToTemplateSet set = productToTemplateSchema.query(new QueryBuilder("where FactorId = ?", factorId));
+
+        if (set == null || set.size() == 0) {
+            Response.setLogInfo(0, "复制失败!");
+            return;
+        }
+        Transaction trans = new Transaction();
+        String factorIdCopy = NoUtil.getMaxIDLocal("PttFactorId") + "";
+        for (int i = 0; i < set.size(); i++) {
+            productToTemplateSchema = set.get(i);
+            ProductToTemplateSchema productToTemplateCopy = (ProductToTemplateSchema)productToTemplateSchema.clone();
+            String productToTemplateID = NoUtil.getMaxIDLocal("ProductToTemplateID") + "";
+            productToTemplateCopy.setId(productToTemplateID);
+            productToTemplateCopy.setFactorId(factorIdCopy);
+            productToTemplateCopy.setFactorName($V("ModuleName"));
+            productToTemplateCopy.setCreateDate(new Date());
+            productToTemplateCopy.setModifyDate(new Date());
+
+            trans.add(productToTemplateCopy, Transaction.INSERT);
+
+        }
+        if (trans.commit()) {
+            Response.setLogInfo(1, "复制成功!");
+        } else {
+            Response.setLogInfo(0, "复制失败!");
+        }
+    }
+
 	/**
 	 * 获取模版大类内容
-	 * 
+	 *
 	 * @param type
 	 * @param code
 	 * @return

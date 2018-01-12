@@ -26,7 +26,7 @@ public class ModuleManage extends Page {
 
 	/**
 	 * 页面初始化
-	 * 
+	 *
 	 * @param params
 	 * @return
 	 */
@@ -38,7 +38,7 @@ public class ModuleManage extends Page {
 
 	/**
 	 * 模块元素管理生成按钮，页面初始化
-	 * 
+	 *
 	 * @param params
 	 * @return
 	 */
@@ -57,7 +57,7 @@ public class ModuleManage extends Page {
 
 	/**
 	 * 模块元素数据
-	 * 
+	 *
 	 * @param dga
 	 */
 	public void addSave() {
@@ -103,7 +103,7 @@ public class ModuleManage extends Page {
 
 	/**
 	 * 模版元素数据查询
-	 * 
+	 *
 	 * @param dga
 	 */
 	public static void dg2DataBind(DataGridAction dga) {
@@ -136,7 +136,7 @@ public class ModuleManage extends Page {
 
 	/**
 	 * 数据查询
-	 * 
+	 *
 	 * @param dga
 	 */
 	public static void editDataBind(DataGridAction dga) {
@@ -200,7 +200,7 @@ public class ModuleManage extends Page {
 
 	/**
 	 * 添加模块元素数据
-	 * 
+	 *
 	 * @param dga
 	 */
 	public void addModuleElement() {
@@ -362,7 +362,7 @@ public class ModuleManage extends Page {
 
 	/**
 	 * 模版信息数据保存
-	 * 
+	 *
 	 * @param dga
 	 */
 	public void saveModuleMessage() {
@@ -485,4 +485,43 @@ public class ModuleManage extends Page {
 		}
 	}
 
+    /**
+     * 模块复制
+     *
+     */
+	public void moduleCopy () {
+        String id = $V("id");
+        if (StringUtil.isEmpty(id)) {
+            Response.setStatus(0);
+            Response.setMessage("传入ID不能为空!");
+            return;
+        }
+        if (!StringUtil.checkID(id)) {
+            Response.setStatus(0);
+            Response.setMessage("传入ID时发生错误!");
+            return;
+        }
+
+        ModuleInfoSchema moduleInfo = new ModuleInfoSchema();
+        moduleInfo.setId(id);
+        if (moduleInfo.fill()) {
+            ModuleInfoSchema moduleInfoCopy = (ModuleInfoSchema)moduleInfo.clone();
+            String copyId = NoUtil.getMaxIDLocal("ModuleInfoID") + "";
+            moduleInfoCopy.setId(copyId);
+            moduleInfoCopy.setModuleName($V("ModuleName"));
+            moduleInfoCopy.setCreateDate(new Date());
+            moduleInfoCopy.setModifyDate(new Date());
+
+            Transaction trans = new Transaction();
+            trans.add(moduleInfoCopy, Transaction.INSERT);
+
+            if (trans.commit()) {
+                Response.setLogInfo(1, "复制成功!");
+            } else {
+                Response.setLogInfo(0, "复制失败!");
+            }
+        } else {
+            Response.setLogInfo(0, "复制失败!");
+        }
+    }
 }

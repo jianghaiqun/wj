@@ -129,7 +129,43 @@ function show(){
 	diag.OKButton.hide();
 	diag.CancelButton.value = "关  闭";
 }
+function copy(){
+    var dt = DataGrid.getSelectedData("module_dg3");
+    if(dt.getRowCount()==0||dt.getRowCount()>1){
+        Dialog.alert("请先选择一行要复制的模板！");
+        return;
+    }
+    var diag = new Dialog("Diag1");
+    diag.Width = 350;
+    diag.Height = 150;
+    diag.Title = "复制模板" ;
+    diag.URL = "Module/TemplateCopyDialog.jsp";
+    diag.onLoad = function(){
+        $DW.$("ModuleName").focus();
+    };
+    diag.CancelEvent = CancelClose;
+    diag.OKEvent = copyEvent;
+    diag.show();
+    diag.CancelButton.value = "关  闭";
+}
 
+function copyEvent() {
+    var dt = DataGrid.getSelectedData("module_dg3");
+    var dr = dt.getDataRow(0);
+    var dc = $DW.Form.getData("form2");
+    dc.add("factorId",dr.get("FactorId"));
+    if($DW.Verify.hasError()){
+        return;
+    }
+    Server.sendRequest("com.sinosoft.module.ModuleConfigure.templateCopy",dc,function(response){
+        Dialog.alert(response.Message,function(){
+            if(response.Status==1){
+                $D.close();
+                DataGrid.loadData("module_dg3");
+            }
+        })
+    });
+}
 </script>
 </head>
 <body>
@@ -148,14 +184,16 @@ function show(){
 						onClick="del()">
 						<img src="../Icons/icon022a3.gif" width="20" height="20" />删除</z:tbutton> <z:tbutton
 						onClick="show()">
-						<img src="../Icons/icon022a1.gif" width="20" height="20" />预览</z:tbutton></td>
+						<img src="../Icons/icon022a1.gif" width="20" height="20" />预览</z:tbutton>
+                        <z:tbutton onClick="copy()"><img src="../Icons/icon022a4.gif" width="20" height="20" />复制</z:tbutton>
+                    </td>
 				</tr>
 				<tr>
 					<td style="padding: 2px 10px;">
 						<div style="float: left;">
-							投保模板名称&nbsp;<input name="FactorName" type="text" id="FactorName">&nbsp;  
+							投保模板名称&nbsp;<input name="FactorName" type="text" id="FactorName">&nbsp;
 							要素类型&nbsp;<z:select id='FactorType'>${FactorTypeList}</z:select>&nbsp;
-							要素编码&nbsp;<input name="FactorCode" type="text" id="FactorCode">&nbsp;  
+							要素编码&nbsp;<input name="FactorCode" type="text" id="FactorCode">&nbsp;
 						 	 <input type="button" name="Submitbutton" id="Submitbutton" value="查询" onClick="search()">
 					 	</div>
 					</td>
