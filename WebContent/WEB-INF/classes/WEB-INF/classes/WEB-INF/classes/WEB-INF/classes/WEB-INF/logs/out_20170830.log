@@ -1,4 +1,0 @@
-ERROR: 17-08-30 08:37:03 Unsuccessful: alter table Area add index FK1F44AD3D321BEB (parent_id), add constraint FK1F44AD3D321BEB foreign key (parent_id) references Area (id)
-ERROR: 17-08-30 08:37:03 Cannot add or update a child row: a foreign key constraint fails (`kaixinbao20130711`.`#sql-dd7_19ea`, CONSTRAINT `FK1F44AD3D321BEB` FOREIGN KEY (`parent_id`) REFERENCES `area` (`id`))
-ERROR: 17-08-30 08:37:03 Unsuccessful: alter table Member add index FK892776BA78AA11FB (mBindInfoForLogin_id), add constraint FK892776BA78AA11FB foreign key (mBindInfoForLogin_id) references bindInfoForLogin (id)
-ERROR: 17-08-30 08:37:03 Can't create table 'kaixinbao20130711.#sql-dd7_19ea' (errno: 150)
